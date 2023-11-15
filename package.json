@@ -1,0 +1,74 @@
+{
+  "name": "fitnesslook-page",
+  "version": "1.0.0",
+  "description": "Pages for FitnessLook https://www.fitnesslook.ru/",
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChipRose/fitnesslook.git"
+  },
+  "author": "Yana Rozova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChipRose/fitnesslook/issues"
+  },
+  "homepage": "https://github.com/ChipRose/fitnesslook#readme",
+  "dependencies": {
+    "normalize.scss": "0.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.17.5",
+    "@babel/preset-env": "7.16.11",
+    "@htmlacademy/editorconfig-cli": "1.0.0",
+    "autoprefixer": "10.4.2",
+    "babel-loader": "8.2.3",
+    "browser-sync": "2.26.14",
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "10.2.4",
+    "cross-env": "7.0.3",
+    "css-loader": "6.7.1",
+    "css-minimizer-webpack-plugin": "3.4.1",
+    "eslint": "7.18.0",
+    "eslint-config-htmlacademy": "2.0.0",
+    "file-loader": "6.2.0",
+    "html-minimizer-webpack-plugin": "3.5.0",
+    "html-webpack-plugin": "5.5.0",
+    "image-minimizer-webpack-plugin": "3.2.3",
+    "imagemin": "8.0.1",
+    "imagemin-gifsicle": "7.0.0",
+    "imagemin-jpegtran": "7.0.0",
+    "imagemin-optipng": "8.0.0",
+    "imagemin-svgo": "10.0.1",
+    "imagemin-webp-webpack-plugin": "3.3.6",
+    "mini-css-extract-plugin": "2.6.0",
+    "sass": "1.49.9",
+    "sass-loader": "12.6.0",
+    "stylelint": "13.12.0",
+    "stylelint-config-htmlacademy": "0.1.4",
+    "svg-sprite-loader": "6.0.11",
+    "svgo-loader": "3.0.0",
+    "terser-webpack-plugin": "5.3.1",
+    "webpack": "5.70.0",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.7.4"
+  },
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/scss/**/*.scss"
+  ],
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/scss/**/*.scss\"",
+    "eslint": "eslint \"source/**/*.js\"",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development"
+  },
+  "engines": {
+    "node": "20.9.0"
+  }
+}
