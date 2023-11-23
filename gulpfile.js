@@ -5,6 +5,7 @@ import gulpSass from "gulp-sass";
 import terser from 'gulp-terser';
 import { deleteAsync } from 'del';
 import webp from 'gulp-webp';
+import webpack from 'webpack-stream';
 
 // import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
@@ -22,17 +23,33 @@ export function processMarkup() {
 export function processStyles() {
   return gulp.src('./style/resource/prof-trainers/*.scss', { sourcemaps: isDevelopment })
     .pipe(plumber())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+    }).on('error', sass.logError))
     .pipe(gulp.dest('./style/modules/', { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
 
 export function processScripts() {
-  return gulp.src('./js/common/**/*.js')
-    .pipe(terser())
+  return gulp.src('./js/common/prof-trainers/prof-trainers.js')
+    .pipe(webpack({
+      mode: 'none',
+      module: {
+        rules: [
+          { test: /\.js$/i, exclude: '/node_modules/', use: ['babel-loader'] },
+        ],
+      },
+    }))
+    .pipe(rename('bundle.js'))
     .pipe(gulp.dest('./js/modules/'))
     .pipe(browser.stream());
-}
+  }
+
+// export function processScripts() {
+//   return gulp.src('./js/common/**/*.js')
+//     .pipe(terser())
+//     .pipe(gulp.dest('./js/modules/'))
+//     .pipe(browser.stream());
+// }
 
 // export function optimizeImages() {
 //   return gulp.src('./i/stat/img/**/*.{png,jpg}')
@@ -90,6 +107,7 @@ function reloadServer(done) {
 
 function watchFiles() {
   gulp.watch('./style/resource/**/*.scss', gulp.series(processStyles));
+  gulp.watch('./i/media-resource/**/*.{jpg,png}', gulp.series(copyAssets, createWebp));
   gulp.watch('./js/common/**/*.js', gulp.series(processScripts));
   gulp.watch('./*.html', gulp.series(processMarkup, reloadServer));
 }

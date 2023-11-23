@@ -1,5 +1,5 @@
-// @import "./../../../node_modules/normalize.scss/normalize.scss";
-
+@import "global/normalize.scss";
+@import "global/global.scss";
 @import "global/variables.scss";
 @import "global/font-size.scss";
 @import "global/colors.scss";
@@ -7,4 +7,6 @@
 @import "global/visually-hidden.scss";
 
 //Blocks
+@import "blocks/wrapper.scss";
 @import "blocks/text-main.scss";
+@import "blocks/intro.scss"
