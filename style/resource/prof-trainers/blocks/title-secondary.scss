@@ -1,0 +1,16 @@
+.title-secondary {
+  font-family: 'Natasha', Arial, sans-serif;
+  font-size: var(--fz-main);
+  line-height: var(--lh-main);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title-secondary__line {
+  margin-bottom: var(--indent-small);
+  display: block;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

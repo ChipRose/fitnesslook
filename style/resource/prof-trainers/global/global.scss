@@ -1,5 +1,39 @@
 .page-prof-trainers {
   #wmc {
-    background-color: var(--cl-contrast);
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: var(--fz-main);
+    line-height: var(--lh-main);
+    font-weight: 400;
+    background: var(--cl-contrast);
+    color: var(--cl-main);
   }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+.text {
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
 }

@@ -1,3 +1,4 @@
+//Global
 @import "global/normalize.scss";
 @import "global/global.scss";
 @import "global/variables.scss";
@@ -5,8 +6,23 @@
 @import "global/colors.scss";
 @import "global/fonts.scss";
 @import "global/visually-hidden.scss";
+@import "global/container.scss";
+
 
 //Blocks
 @import "blocks/wrapper.scss";
+@import "blocks/intro.scss";
+@import "blocks/slider-intro.scss";
+@import "blocks/advantage.scss";
+@import "blocks/contact.scss";
+@import "blocks/buttons-block.scss";
+
+// Components
 @import "blocks/text-main.scss";
-@import "blocks/intro.scss"
+@import "blocks/link-main.scss";
+@import "blocks/button-tab.scss";
+@import "blocks/button-accordion.scss";
+@import "blocks/button-social.scss";
+@import "blocks/title-main.scss";
+@import "blocks/title-simple.scss";
+@import "blocks/title-secondary.scss";

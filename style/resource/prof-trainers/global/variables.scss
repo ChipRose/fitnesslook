@@ -5,6 +5,11 @@ $tablet-width-only: 1439px;
 $desktop-width: 1440px;
 
 :root {
-  --main-indent: 16px;
-  --main-radius: 20px;
+  --indent-small: 4px;
+  --indent-basic: 8px;
+  --indent-main: 16px;
+  --indent-big: 32px;
+  --radius-basic: 12px;
+  --radius-main: 20px;
+  --transition-main: all 0.3s ease-out;
 }

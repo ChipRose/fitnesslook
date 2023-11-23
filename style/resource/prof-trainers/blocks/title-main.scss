@@ -1,0 +1,11 @@
+.title-main {
+  margin: 0 auto;
+  font-size: var(--fz-big);
+  line-height: var(--lh-big);
+  text-transform: uppercase;
+}
+
+.title-main__last {
+  margin-left: var(--indent-big);
+  color: var(--cl-accent);
+}

@@ -1,3 +1,7 @@
-.main-text{
-  color: red;
+.text-main{
+  margin-bottom: var(--indent-main);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

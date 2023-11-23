@@ -1,3 +1,3 @@
-import { slider } from './slider.js';
-slider();
+import setSlider from './slider.js';
+setSlider('.slider-intro');
 console.log('hi');

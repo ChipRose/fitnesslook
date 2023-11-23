@@ -1,0 +1,19 @@
+.button-accordion {
+  padding: var(--indent-basic);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  transform: rotate(180deg);
+  transition: var(--transition-main);
+
+  svg {
+    fill: var(--cl-accent);
+  }
+}
+
+.active-accordion {
+  transform: rotate(0deg);
+}

@@ -1,5 +1,3 @@
-.intro {}
-
 .intro__cover {
   display: flex;
   justify-content: center;
@@ -11,4 +9,18 @@
     height: auto;
     object-fit: cover;
   }
+}
+
+.intro__button-block {
+  margin: calc(var(--indent-main) - var(--indent-basic)) calc(-1*var(--indent-basic));
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.intro__button-tab {
+  margin: var(--indent-basic);
+}
+
+.intro__advantage {
+  margin-bottom: var(--indent-main);
 }
