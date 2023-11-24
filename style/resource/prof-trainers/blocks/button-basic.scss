@@ -1,4 +1,4 @@
-.button-tab {
+.button-basic {
   padding: var(--indent-small) var(--indent-main);
   border: 1px solid var(--cl-accent);
   min-width: 90px;
@@ -8,9 +8,20 @@
   color: var(--cl-accent);
   border-radius: var(--radius-basic);
   transition: var(--transition-main);
+  text-align: center;
 
   &:hover, &:active{
     color: var(--cl-contrast);
     background: var(--cl-accent);
   }
+
+  &--accent {
+    color: var(--cl-contrast);
+    background: var(--cl-accent);
+  }
+}
+
+.button-basic.tns-nav-active{
+  background: var(--cl-accent);
+  color: var(--cl-contrast);
 }

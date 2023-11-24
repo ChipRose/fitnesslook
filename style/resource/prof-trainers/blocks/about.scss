@@ -1,0 +1,30 @@
+.about {
+  background: var(--cl-dark);
+  border-radius: var(--radius-main) var(--radius-main) 0 0;
+}
+
+.about .container {
+  padding-top: var(--indent-main);
+}
+
+.about__title-block {
+  margin-bottom: var(--indent-main);
+  display: flex;
+  justify-content: center;
+}
+
+.about__buttons-block {
+  margin-bottom: var(--indent-main);
+}
+
+.about__img-sticker {
+  margin-bottom: var(--indent-main);
+}
+
+.about__service{
+  margin-bottom: var(--indent-main);
+}
+
+.about__decoration {
+  margin-bottom: var(--indent-main);
+}

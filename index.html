@@ -3545,19 +3545,21 @@
     <div class="wrapper wrapper--prof-trainers">
       <div id="main_content_template">
         <h1 class="visually-hidden">Профессиональные тренажеры от FitnessLook</h1>
-        <section class="intro page-prof-trainers__intro">
-          <picture class="intro__cover">
-            <source type="image/webp" srcset="/i/media/stat/prof-trains/img/intro/cover.webp">
-            <img src="/i/media/stat/prof-trains/img/intro/cover.png"
-              srcset="/i/media/stat/prof-trains/img/intro/cover@2x.png 2x"></img>
-          </picture>
+        <section class="intro page-prof-trainers__intro section">
+          <div class="image-block intro__cover">
+            <picture>
+              <source type="image/webp" srcset="/i/media/stat/prof-trains/img/intro/cover.webp">
+              <img src="/i/media/stat/prof-trains/img/intro/cover.png"
+                srcset="/i/media/stat/prof-trains/img/intro/cover@2x.png 2x"></img>
+            </picture>
+          </div>
           <div class="container">
             <div class="intro__slider">
-              <div class="intro__button-block">
-                <button class="button button-tab intro__button-tab" type="button" id="fitness-intro">Fitness -
+              <div class="intro__buttons-block buttons-block">
+                <button class="button button-basic buttons-block__item" type="button" id="fitness-intro">Fitness -
                   зал</button>
-                <button class="button button-tab intro__button-tab" type="button" id="health-intro">ЛФК</button>
-                <button class="button button-tab intro__button-tab" type="button" id="private-intro">Fitness -
+                <button class="button button-basic buttons-block__item" type="button" id="health-intro">ЛФК</button>
+                <button class="button button-basic buttons-block__item" type="button" id="private-intro">Fitness -
                   единица</button>
               </div>
               <ul class="list slider-intro">
@@ -3576,7 +3578,7 @@
                     </p>
                   </div>
                   <svg class="decorative-icon slider-intro__decoration" width="81" height="14" role="img"
-                    aria-label="Бейдж CSS" focusable="false">
+                    aria-label="Разделитель" focusable="false">
                     <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-divider-basic"></use>
                   </svg>
                   <div class="slider-intro__description">
@@ -3586,7 +3588,7 @@
                         оборудования, проектируем спортивные комплексы и открываем залы под ключ.
                       </p>
                     </div>
-                    <div class="slider-intro__image-block">
+                    <div class="image-block">
                       <picture>
                         <source type="image/webp" srcset="/i/media/stat/prof-trains/img/intro/intro-gym.webp">
                         <img src="/i/media/stat/prof-trains/img/intro/intro-gym.jpg"
@@ -3600,11 +3602,11 @@
               </ul>
             </div>
             <ul class="list advantage accordion intro__advantage">
-              <li class="advantage__item ac">
-                <h3 class="title advantage__title ac-header">
+              <li class="ac">
+                <h3 class="title ac-header">
                   <button class="ac-trigger">проверенные бренды</button>
                 </h3>
-                <div class="advantage__text-block ac-panel">
+                <div class="ac-panel">
                   <p class="text text-main">
                     Мы являемся дилерами самых востребованных и проверенных временем брендов - от демократичного
                     российского <a href="" class="link link-main">MB Barbell</a>, и таких популярных брендов как <a
@@ -3615,15 +3617,62 @@
                   </p>
                 </div>
               </li>
-              <li class="advantage__item ac">
-                <h3 class="title advantage__title ac-header">
+              <li class="ac">
+                <h3 class="title  ac-header">
                   <button class="ac-trigger">премиум оборудование</button>
                 </h3>
-                <div class="advantage__text-block ac-panel">
+                <div class=" ac-panel">
                   <p class="text text-main">
                     В нашем арсенале есть премиум сегмент спортивного оборудования - <a href=""
                       class="link link-main">Precor</a>, <a href="" class="link link-main">Hoist</a>,<a href=""
                       class="link link-main">Matrix</a>.
+                  </p>
+                </div>
+              </li>
+              <li class="ac">
+                <h3 class="title  ac-header">
+                  <button class="ac-trigger">скидки и бонусы</button>
+                </h3>
+                <div class=" ac-panel">
+                  <p class="text text-main">
+                    Для всех наших клиентов предусмотрены накопительные системы скидок и бонусов.
+                  </p>
+                  <p class="text text-main">
+                    Получайте самые выгодные цены и сервис, сотрудничая с FitnessLook. Ваша скидка привязывается к
+                    номеру телефона.
+                  </p>
+                </div>
+              </li>
+              <li class="ac">
+                <h3 class="title  ac-header">
+                  <button class="ac-trigger">зал под ключ + 2D</button>
+                </h3>
+                <div class=" ac-panel">
+                  <p class="text text-main">
+                    Мы можем реализовать проект спортивного зала под ключ от подбора тренажеров и плантирования зала в
+                    2D, до сборки и установки тренажеров, с последующим обслуживанием.
+                  </p>
+                </div>
+              </li>
+              <li class="ac">
+                <h3 class="title  ac-header">
+                  <button class="ac-trigger">Гарантия и сервис</button>
+                </h3>
+                <div class=" ac-panel">
+                  <p class="text text-main">
+                    Все спортивное оборудование, приобретенное в FitnessLook имеет официальную гарантию и сервисное
+                    обслуживание.
+                  </p>
+                </div>
+              </li>
+              <li class="ac">
+                <h3 class="title  ac-header">
+                  <button class="ac-trigger">Сертификация РФ</button>
+                </h3>
+                <div class=" ac-panel">
+                  <p class="text text-main">
+                    Все оборудование напрямую от производителей и ввозится по белом импорту и имеет сертификаты РФ и
+                    официальную гарантию.
                   </p>
                 </div>
               </li>
@@ -3635,19 +3684,19 @@
                     href="" class="link link-main">Telegram</a> или <a href="" class="link link-main">WhatsUp</a>.
                 </p>
               </div>
-              <div class="contact__communicate-block">
+              <div class="contact-block">
                 <a href="" class="link link-main link-main--bold">@FL - PRO</a>
-                <ul class="list buttons-block">
-                  <li class="buttons-block__item">
-                    <a href="" class="link button-block__link button-social">
+                <ul class="list contact-block__social-block">
+                  <li>
+                    <a href="" class="link button-social">
                       <svg class="icon" width="29" height="30" role="img" aria-label="Звоните" focusable="false">
                         <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#phone-icon"></use>
                       </svg>
                     </a>
                   </li>
-                  <li class="buttons-block__item">
-                    <a href="" class="link button-block__link button-social button-social--connect">
-                      <svg class="icon" width="17" height="14" role="img" aria-label="Звоните" focusable="false">
+                  <li>
+                    <a href="" class="link button-social button-social--connect">
+                      <svg class="icon" width="17" height="14" role="img" aria-label="Пишите" focusable="false">
                         <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#connect-icon"></use>
                       </svg>
                     </a>
@@ -3658,6 +3707,131 @@
           </div>
         </section>
 
+        <section class="about page-prof-trainers__about section section--dark">
+          <div class="container">
+            <div class="about__title-block">
+              <h2 class="title title-main">
+                <span>О компании</span><br>
+                <span class="title-main__last">FitnessLOOK</span>
+              </h2>
+            </div>
+            <div class="about__buttons-block buttons-block">
+              <a class="link button-basic buttons-block__item" href="about">О FL</a>
+              <a class="link button-basic buttons-block__item" href="projects">Наши проекты</a>
+              <a class="link button-basic buttons-block__item" href="garantee">Гарантия и сервис</a>
+            </div>
+            <div class="about__img-sticker img-sticker">
+              <div class="img-sticker__img-block">
+                <picture>
+                  <source type="image/webp" srcset="/i/media/stat/prof-trains/img/about/cover.webp">
+                  <img src="/i/media/stat/prof-trains/img/about/cover.png"
+                    srcset="/i/media/stat/prof-trains/img/about/cover@2x.png 2x"></img>
+                </picture>
+              </div>
+              <svg class="img-sticker__icon" width="183" height="181" role="img" aria-label="Звоните" focusable="false">
+                <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-img"></use>
+              </svg>
+            </div>
+            <ul class="list service accordion about__service">
+              <li class="ac">
+                <h3 class="title ac-header">
+                  <button class="ac-trigger"><span class="accordion__number">1|1</span>Всегда на связи</button>
+                </h3>
+                <div class=" ac-panel">
+                  <p class="text text-main">
+                    С первого звонка к вам будет прикреплен персональный менеджер, который поможет разобраться в выборе
+                    нужных профессиональных тренажеров, проконтролирует доставку и сборку тренажеров.
+                  </p>
+                </div>
+              </li>
+              <li class="ac">
+                <h3 class="title ac-header">
+                  <button class="ac-trigger"><span class="accordion__number">1|2</span>оборудование в наличии</button>
+                </h3>
+                <div class=" ac-panel">
+                  <p class="text text-main">
+                    Самое востребованное оборудование всегда есть на складе, поэтому мы можем доставить его в самые
+                    короткие сроки.
+                  </p>
+                </div>
+              </li>
+              <li class="ac">
+                <h3 class="title ac-header">
+                  <button class="ac-trigger"><span class="accordion__number">1|3</span>программа лояльности</button>
+                </h3>
+                <div class=" ac-panel">
+                  <p class="text text-main">
+                    Мы предлагаем наиболее выгодные финансовые решения при оборудовании зала, и предлагаем скидки с
+                    учетом уровня затрат на открытие зала.
+                  </p>
+                  <p class="text text-main">
+                    Так же мы закрепляем индивидуальную скидку после первой покупки.
+                  </p>
+                </div>
+              </li>
+              <li class="ac">
+                <h3 class="title ac-header">
+                  <button class="ac-trigger"><span class="accordion__number">1|4</span>2d - зал бесплатно
+                  </button>
+                </h3>
+                <div class=" ac-panel">
+                  <p class="text text-main">
+                    Для любого проекта мы бесплатно разработаем 2D-визуализацию расстановки спортивного оборудования.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <svg class="decorative-icon about__decoration" width="81" height="14" role="img" aria-label="Разделитель"
+              focusable="false">
+              <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-divider-basic"></use>
+            </svg>
+            <div class="order">
+              <div class="image-block order__image-block">
+                <picture>
+                  <source type="image/webp" srcset="/i/media/stat/prof-trains/img/about/sale.webp">
+                  <img src="/i/media/stat/prof-trains/img/about/sale.jpg"
+                    srcset="/i/media-resource/stat/prof-trains/img/about/sale@2x.jpg 2x" alt="">
+                </picture>
+              </div>
+              <h3 class="title title-secondary order__title-block">
+                <span class=""title-secondary__line>ЗНАЕте, что вам нужно, и</span>
+                <span class="title-secondary__line title-secondary--accent">
+                  хотите скидку?
+                </span>
+              </h3>
+              <div class="order__text-block">
+                <p class="text text-main">
+                  А если вы сами изучили все тренажеры, необходимое вам спортивное оборудование, и имеете список
+                  тренажеров на руках?
+                </p>
+                <p class="text text-main">
+                  Просто <a href="" class="link link-main">присылайте список</a> нам, и мы рассчитаем стоимость и
+                  предложим индивидуальные условия и скидки!
+                </p>
+              </div>
+              <div class="contact-block">
+                <button type="button" href="" class="button button-basic button-basic--accent">Прикрепить
+                  список</button>
+                <ul class="list contact-block__social-block">
+                  <li>
+                    <a href="" class="link button-social">
+                      <svg class="icon" width="29" height="30" role="img" aria-label="Звоните" focusable="false">
+                        <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#phone-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="" class="link button-social button-social--connect">
+                      <svg class="icon" width="17" height="14" role="img" aria-label="Пишите" focusable="false">
+                        <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#connect-icon"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <div class="clear"></div>
     </div><!-- #wrapper -->

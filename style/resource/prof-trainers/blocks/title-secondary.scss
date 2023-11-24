@@ -4,6 +4,10 @@
   line-height: var(--lh-main);
   font-weight: 700;
   text-transform: uppercase;
+
+  &--accent {
+    color: var(--cl-accent);
+  }
 }
 
 .title-secondary__line {

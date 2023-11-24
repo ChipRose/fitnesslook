@@ -3,8 +3,8 @@ import Accordion from 'accordion-js';
 import settingAccordion from './accordion.js';
 
 
-setSlider('.slider-intro');
+setSlider('.slider-intro','.intro__buttons-block');
 
-new Accordion('.advantage', settingAccordion());
+new Accordion(['.advantage','.service'], settingAccordion());
 
 console.log('hi');

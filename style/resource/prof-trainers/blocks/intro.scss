@@ -1,24 +1,9 @@
 .intro__cover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
+  margin-bottom: var(--indent-main);
 }
 
-.intro__button-block {
-  margin: calc(var(--indent-main) - var(--indent-basic)) calc(-1*var(--indent-basic));
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.intro__button-tab {
-  margin: var(--indent-basic);
+.intro .intro__buttons-block {
+  margin-bottom: var(--indent-big);
 }
 
 .intro__advantage {

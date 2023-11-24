@@ -1,0 +1,8 @@
+.section {
+  color: var(--cl-main);
+
+  &--dark {
+    color: var(--cl-contrast);
+  }
+}
+

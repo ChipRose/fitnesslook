@@ -1,0 +1,27 @@
+.img-sticker {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-sticker__img-block {
+  margin-top: 40px;
+  margin-right: 40px;
+  width: calc(100% - 40px);
+  height: auto;
+  overflow: hidden;
+  border-radius: var(--radius-main);
+
+  img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.img-sticker__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  fill: var(--cl-contrast);
+}

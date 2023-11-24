@@ -1,11 +1,11 @@
 import { tns } from "tiny-slider";
 
-const setSlider = (container)=>{
+const setSlider = (container, navContainer)=>{
   return tns({
     container,
     items: 1,
     controls: false,
-    navContainer: ".intro__button-block"
+    navContainer
   })
 }
 

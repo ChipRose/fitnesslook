@@ -1,0 +1,11 @@
+.image-block {
+    border-radius: var(--radius-main);
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+}

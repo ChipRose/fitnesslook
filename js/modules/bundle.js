@@ -11,12 +11,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 
-const setSlider = container => {
+const setSlider = (container, navContainer) => {
   return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
     container,
     items: 1,
     controls: false,
-    navContainer: ".intro__button-block"
+    navContainer
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (setSlider);
@@ -3546,8 +3546,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.slider-intro');
-new accordion_js__WEBPACK_IMPORTED_MODULE_1__('.advantage', (0,_accordion_js__WEBPACK_IMPORTED_MODULE_2__["default"])());
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.slider-intro', '.intro__buttons-block');
+new accordion_js__WEBPACK_IMPORTED_MODULE_1__(['.advantage', '.service'], (0,_accordion_js__WEBPACK_IMPORTED_MODULE_2__["default"])());
 console.log('hi');
 })();
 

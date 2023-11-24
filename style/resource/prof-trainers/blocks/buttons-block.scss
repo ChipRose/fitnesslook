@@ -1,8 +1,9 @@
 .buttons-block {
-  margin: calc(-1*var(--indent-main));
   display: flex;
+  flex-wrap: wrap;
+  margin: calc(-1*var(--indent-basic));
 }
 
 .buttons-block__item {
-  margin: var(--indent-main);
+  margin: var(--indent-basic);
 }
