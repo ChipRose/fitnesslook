@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css"
     href="https://www.fitnesslook.ru/style/compress/show_aux_page.css?t=1699630948" />
   <link rel="stylesheet" type="text/css" href="https://www.fitnesslook.ru/js/tiny_slider/tiny-slider.css" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css  " />
   <link rel="stylesheet" type="text/css" href="/style/modules/prof-trainers.css" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -3544,7 +3545,7 @@
     <div class="wrapper wrapper--prof-trainers">
       <div id="main_content_template">
         <h1 class="visually-hidden">Профессиональные тренажеры от FitnessLook</h1>
-        <section class="intro">
+        <section class="intro page-prof-trainers__intro">
           <picture class="intro__cover">
             <source type="image/webp" srcset="/i/media/stat/prof-trains/img/intro/cover.webp">
             <img src="/i/media/stat/prof-trains/img/intro/cover.png"
@@ -3598,17 +3599,12 @@
                 <li class="slider-intro__item">3 слайд</li>
               </ul>
             </div>
-            <ul class="list advantage intro__advantage">
-              <li class="advantage__item">
-                <div class="advantage__title-block">
-                  <h3 class="title title-simple">проверенные бренды</h3>
-                  <button class="button button-accordion active-accordion" type="button">
-                    <svg class="icon-accordion" width="9" height="6" role="img" aria-label="Звоните" focusable="false">
-                      <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="advantage__text-block">
+            <ul class="list advantage accordion intro__advantage">
+              <li class="advantage__item ac">
+                <h3 class="title advantage__title ac-header">
+                  <button class="ac-trigger">проверенные бренды</button>
+                </h3>
+                <div class="advantage__text-block ac-panel">
                   <p class="text text-main">
                     Мы являемся дилерами самых востребованных и проверенных временем брендов - от демократичного
                     российского <a href="" class="link link-main">MB Barbell</a>, и таких популярных брендов как <a
@@ -3619,16 +3615,11 @@
                   </p>
                 </div>
               </li>
-              <li class="advantage__item">
-                <div class="advantage__title-block">
-                  <h3 class="title title-simple">премиум оборудование</h3>
-                  <button class="button button-accordion active-accordion" type="button">
-                    <svg class="icon-accordion" width="9" height="6" role="img" aria-label="Звоните" focusable="false">
-                      <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow"></use>
-                    </svg>
-                  </button>
-                </div>
-                <div class="advantage__text-block">
+              <li class="advantage__item ac">
+                <h3 class="title advantage__title ac-header">
+                  <button class="ac-trigger">премиум оборудование</button>
+                </h3>
+                <div class="advantage__text-block ac-panel">
                   <p class="text text-main">
                     В нашем арсенале есть премиум сегмент спортивного оборудования - <a href=""
                       class="link link-main">Precor</a>, <a href="" class="link link-main">Hoist</a>,<a href=""

@@ -33,11 +33,9 @@
 }
 
 .slider-intro__image-block {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   img {
+    display: block;
     width: 100%;
     height: auto;
     object-fit: cover;
