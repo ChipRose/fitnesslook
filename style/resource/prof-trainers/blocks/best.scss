@@ -1,7 +1,5 @@
-.best {
-}
-
 .best__header {
+  margin-bottom: var(--indent-main);
   background: var(--cl-dark);
   border-radius: 0 0 var(--radius-main) var(--radius-main);
 
@@ -15,7 +13,7 @@
   justify-content: space-between;
 }
 
-.best__cover{
+.best__cover {
   margin: var(--indent-main) auto;
   width: 280px;
   min-height: 430px;
@@ -27,4 +25,8 @@
   position: absolute;
   right: 0;
   bottom: 0;
+}
+
+.best__decoration {
+  margin-bottom: var(--indent-main);
 }

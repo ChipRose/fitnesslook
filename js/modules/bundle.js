@@ -3546,9 +3546,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.slider-intro', '.intro__buttons-block');
-new accordion_js__WEBPACK_IMPORTED_MODULE_1__(['.advantage', '.service'], (0,_accordion_js__WEBPACK_IMPORTED_MODULE_2__["default"])());
-console.log('hi');
+if (document.querySelector('.slider-intro') && document.querySelector('.intro__buttons-block')) {
+  (0,_slider_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.slider-intro', '.intro__buttons-block');
+}
+if (document.querySelector('.slider-best') && document.querySelector('.best__buttons-block')) {
+  (0,_slider_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.slider-best', '.best__buttons-block');
+}
+new accordion_js__WEBPACK_IMPORTED_MODULE_1__(Array.from(document.querySelectorAll('.accordion')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_2__["default"])());
 })();
 
 /******/ })()

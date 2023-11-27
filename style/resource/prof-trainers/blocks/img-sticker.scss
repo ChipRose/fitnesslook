@@ -25,3 +25,16 @@
   right: 0;
   fill: var(--cl-contrast);
 }
+
+.img-sticker--dark {
+  .img-sticker__img-block {
+    margin-top: 40px;
+    margin-left: 40px;
+  }
+
+  .img-sticker__icon {
+    left: 0;
+    fill: var(--cl-dark);
+    z-index: -1;
+  }
+}

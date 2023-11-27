@@ -4,4 +4,8 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &--accent {
+    color: var(--cl-accent);
+  }
 }
