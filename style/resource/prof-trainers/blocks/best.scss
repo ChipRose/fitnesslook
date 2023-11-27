@@ -1,0 +1,30 @@
+.best {
+}
+
+.best__header {
+  background: var(--cl-dark);
+  border-radius: 0 0 var(--radius-main) var(--radius-main);
+
+  .container {
+    padding-bottom: var(--indent-main);
+  }
+}
+
+.best__divider-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.best__cover{
+  margin: var(--indent-main) auto;
+  width: 280px;
+  min-height: 430px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.best__extra-cover {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

@@ -1,0 +1,27 @@
+.img-logo {
+  min-height: 359px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-logo__image-block {
+  width: 269px;
+  height: 269px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  video{
+    height: 100%;
+  }
+}
+
+.img-logo__sticker{
+  padding: var(--indent-main) 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: var(--cl-dark);
+}
