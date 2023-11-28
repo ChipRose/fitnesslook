@@ -1,0 +1,26 @@
+.slider-why__image-block {
+  margin-bottom: var(--indent-main);
+  position: relative;
+  height: 235px;
+}
+
+.slider-why__sticker {
+  fill: var(--cl-contrast);
+  position: absolute;
+  left: var(--indent-big);
+  bottom: var(--indent-big);
+}
+
+.slider-why__title-block {
+  margin-bottom: var(--indent-main);
+}
+
+.slider-why__text-block {
+  margin-bottom: var(--indent-main);
+  flex: 1 1 auto;
+}
+
+.slider-why__decoration {
+  margin-bottom: var(--indent-main);
+}
+

@@ -1,0 +1,11 @@
+.questions {}
+
+.questions__title {
+  margin-bottom: var(--indent-main);
+  display: flex;
+  justify-content: center;
+}
+
+.questions__buttons-block {
+  margin-bottom: var(--indent-main);
+}

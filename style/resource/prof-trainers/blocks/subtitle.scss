@@ -1,0 +1,9 @@
+.subtitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--cl-main);
+
+  &--accent{
+    color: var(--cl-accent);
+  }
+}

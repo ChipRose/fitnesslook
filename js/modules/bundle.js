@@ -7,7 +7,8 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   setMobSlider: () => (/* binding */ setMobSlider),
+/* harmony export */   setSlider: () => (/* binding */ setSlider)
 /* harmony export */ });
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 
@@ -19,7 +20,16 @@ const setSlider = (container, navContainer) => {
     navContainer
   });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (setSlider);
+const setMobSlider = (container, controlsContainer, props) => {
+  return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+    container,
+    items: 1,
+    nav: false,
+    controlsContainer,
+    ...props
+  });
+};
+
 
 /***/ }),
 /* 2 */
@@ -3547,11 +3557,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 if (document.querySelector('.slider-intro') && document.querySelector('.intro__buttons-block')) {
-  (0,_slider_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.slider-intro', '.intro__buttons-block');
+  (0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setSlider)('.slider-intro', '.intro__buttons-block');
 }
 if (document.querySelector('.slider-best') && document.querySelector('.best__buttons-block')) {
-  (0,_slider_js__WEBPACK_IMPORTED_MODULE_0__["default"])('.slider-best', '.best__buttons-block');
+  (0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setSlider)('.slider-best', '.best__buttons-block');
 }
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setSlider)('.slider-questions', '.questions__buttons-block');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setMobSlider)('.slider-with-button__slider', '.slider-with-button__buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setMobSlider)('.slider-why', '.why__buttons-block');
 new accordion_js__WEBPACK_IMPORTED_MODULE_1__(Array.from(document.querySelectorAll('.accordion')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_2__["default"])());
 })();
 

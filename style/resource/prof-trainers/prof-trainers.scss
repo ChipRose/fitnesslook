@@ -8,22 +8,6 @@
 @import "global/visually-hidden.scss";
 @import "global/container.scss";
 
-
-//Blocks
-@import "blocks/page-prof-trainers.scss";
-@import "blocks/wrapper.scss";
-@import "blocks/buttons-block.scss";
-@import "blocks/section.scss";
-@import "blocks/intro.scss";
-@import "blocks/slider-intro.scss";
-@import "blocks/slider-best.scss";
-@import "blocks/advantage.scss";
-@import "blocks/contact.scss";
-@import "blocks/about.scss";
-@import "blocks/contact-block.scss";
-@import "blocks/order.scss";
-@import "blocks/best.scss";
-
 // Components
 @import "blocks/text-main.scss";
 @import "blocks/link-main.scss";
@@ -40,3 +24,27 @@
 @import "blocks/img-logo.scss";
 @import "blocks/img-round-sticker.scss";
 @import "blocks/button-link.scss";
+@import "blocks/button-slider.scss";
+@import "blocks/subtitle.scss";
+
+//Blocks
+@import "blocks/page-prof-trainers.scss";
+@import "blocks/wrapper.scss";
+@import "blocks/buttons-block.scss";
+@import "blocks/section.scss";
+@import "blocks/intro.scss";
+@import "blocks/slider-intro.scss";
+@import "blocks/slider-best.scss";
+@import "blocks/advantage.scss";
+@import "blocks/contact.scss";
+@import "blocks/about.scss";
+@import "blocks/contact-block.scss";
+@import "blocks/order.scss";
+@import "blocks/best.scss";
+@import "blocks/slider-with-button.scss";
+@import "blocks/questions.scss";
+@import "blocks/questions-block.scss";
+@import "blocks/slider-questions.scss";
+@import "blocks/slider-why.scss";
+@import "blocks/why.scss";
+

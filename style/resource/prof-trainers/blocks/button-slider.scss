@@ -1,0 +1,20 @@
+.button-slider {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--cl-accent);
+  border-radius: 50%;
+}
+
+.button-slider__icon {
+  fill: var(--cl-accent);
+}
+
+.button-slider--prev {
+  display: none;
+  .button-slider__icon {
+    transform: rotate(180deg);
+  }
+}
