@@ -1,11 +1,12 @@
 import { tns } from "tiny-slider";
 
-const setSlider = (container, navContainer) => {
+const setSlider = (container, navContainer, props) => {
   return tns({
     container,
     items: 1,
     controls: false,
-    navContainer
+    navContainer,
+    ...props
   })
 }
 

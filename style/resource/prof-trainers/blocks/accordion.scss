@@ -38,6 +38,10 @@
   box-sizing: border-box;
 }
 
+.accordion--decor-image.accordion .accordion__number-title{
+  align-items: center;
+}
+
 .accordion .accordion__number-title{
   display: flex;
 }

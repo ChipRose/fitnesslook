@@ -79,7 +79,7 @@ export function createStack() {
 
 export function copyAssets() {
   return gulp.src([
-    './i/media-resource/**/*'
+    './i/media-resource/**/*',
   ], { base: "i/media-resource" })
     .pipe(gulp.dest('./i/media'));
 }

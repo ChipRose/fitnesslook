@@ -4285,7 +4285,7 @@
           </div>
         </section>
 
-        <section class="section projects">
+        <section class="section projects page-prof-trainers__projects">
           <div class="container">
             <div class="projects__title-block">
               <h2 class="title title-main">
@@ -4311,7 +4311,8 @@
                 проектов.
               </p>
             </div>
-            <svg class="decorative-icon projects__decorative" width="81" height="14" role="img" aria-label="Разделитель" focusable="false">
+            <svg class="decorative-icon projects__decorative" width="81" height="14" role="img" aria-label="Разделитель"
+              focusable="false">
               <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-divider-basic"></use>
             </svg>
             <div class="slider-with-button slider-mob-projects">
@@ -4344,10 +4345,11 @@
                 </li>
                 <li class="slider-with-button__item">
                   <div class="slider-with-button__text-block">
-                  <p class="text text-main">
-                    Разрабатывая проект расстановки тренажеров мы учитываем удобство тренировок, и технику безопасности
-                    в помещении зала.
-                  </p>
+                    <p class="text text-main">
+                      Разрабатывая проект расстановки тренажеров мы учитываем удобство тренировок, и технику
+                      безопасности
+                      в помещении зала.
+                    </p>
                   </div>
                   <div class="contact-block slider-with-button__contact-block">
                     <a href="" class="link link-main link-main--bold">@FL - PRO</a>
@@ -4368,6 +4370,36 @@
                       </li>
                     </ul>
                   </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="section projects-detail">
+          <div class="container">
+            <div class="projects__title-block">
+              <h2 class="title title-main">
+                <span>ПОДРОБНО</span><br>
+                <span class="title-main__last">о проектах</span>
+              </h2>
+            </div>
+            <div class="image-block projects__image-block">
+              <picture>
+                <source type="image/webp" srcset="/i/media/stat/prof-trains/img/details/cover.webp">
+                <img src="/i/media/stat/prof-trains/img/details/cover.jpg"
+                  srcset="/i/media-resource/stat/prof-trains/img/details/cover.jpg@2x.jpg 2x" alt="">
+              </picture>
+            </div>
+            <div class="slider-project">
+              <ul class="list slider-project__slider">
+                <li>
+                  <h4 class="title-info">
+                    sdds
+                  </h4>
+                  <ul class="list accordion accordion--decor accordion--decor-image projects-list" id="projects-list">
+                    <!-- Projects -->
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -4433,6 +4465,36 @@
       <!--/noindex-->
     </div>
   </div>
+
+  <!-- Project part template -->
+  <template id="project-part">
+    <li class="slider-project__part">
+      <p class="text type"></p>
+      <p class="text model">
+        <span class="model__name"></span>
+        <span class="model__type"></span>
+      </p>
+    </li>
+  </template>
+
+  <!-- Project item template -->
+  <template id="project-item">
+    <li class="ac projects-list__item">
+      <h3 class="title ac-header">
+        <button class="ac-trigger accordion__number-title">
+          <span class="accordion__number">
+          </span>
+          <span class="accordion__title">
+          </span>
+        </button>
+      </h3>
+      <div class="ac-panel">
+        <ul class="list slider-project" id="slider-projects">
+          <!-- Place for content list -->
+        </ul>
+      </div>
+    </li>
+  </template>
 
   <div id="footer">
     <div class="wrapper">
@@ -4628,7 +4690,9 @@
     var unimet = '';
   </script>
   <script src="/js/modules/bundle.js"></script>
-</body>
 
+
+
+</body>
 
 </html>
