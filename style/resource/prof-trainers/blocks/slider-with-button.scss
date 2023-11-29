@@ -7,11 +7,7 @@
 .slider-with-button__item {
   padding-right: var(--indent-big);
   z-index: 1;
-}
-
-.slider-with-button__container {
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .slider-with-button__buttons {
@@ -24,10 +20,6 @@
   z-index: 2;
 }
 
-.slider-with-button__slider {
-  flex: 1 1 auto;
-}
-
 .slider-with-button--image .slider-with-button__buttons {
   top: auto;
   bottom: 15%;
@@ -35,11 +27,6 @@
 }
 
 .slider-with-button__text-block {
+  margin-bottom: var(--indent-main);
   min-height: 150px;
-  flex: 1 1 auto;
 }
-
-.slider-with-button__link {
-  margin-top: auto;
-}
-

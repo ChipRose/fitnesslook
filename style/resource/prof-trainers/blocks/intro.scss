@@ -1,5 +1,8 @@
 .intro__cover {
   margin-bottom: var(--indent-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro .intro__buttons-block {

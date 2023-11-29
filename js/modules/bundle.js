@@ -3563,8 +3563,9 @@ if (document.querySelector('.slider-best') && document.querySelector('.best__but
   (0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setSlider)('.slider-best', '.best__buttons-block');
 }
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setSlider)('.slider-questions', '.questions__buttons-block');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setMobSlider)('.slider-with-button__slider', '.slider-with-button__buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setMobSlider)('.slider-why', '.why__buttons-block');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setMobSlider)('.slider-mob-best__slider', '.slider-mob-best__buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setMobSlider)('.slider-mob-why__slider', '.slider-mob-why__buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_0__.setMobSlider)('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
 new accordion_js__WEBPACK_IMPORTED_MODULE_1__(Array.from(document.querySelectorAll('.accordion')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_2__["default"])());
 })();
 

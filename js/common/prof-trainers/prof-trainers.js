@@ -12,8 +12,9 @@ if (document.querySelector('.slider-best') && document.querySelector('.best__but
 
 setSlider('.slider-questions', '.questions__buttons-block');
 
-setMobSlider('.slider-with-button__slider', '.slider-with-button__buttons');
-setMobSlider('.slider-why', '.why__buttons-block');
+setMobSlider('.slider-mob-best__slider', '.slider-mob-best__buttons');
+setMobSlider('.slider-mob-why__slider', '.slider-mob-why__buttons');
+setMobSlider('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
 
 new Accordion(Array.from(document.querySelectorAll('.accordion')), settingAccordion());
 
