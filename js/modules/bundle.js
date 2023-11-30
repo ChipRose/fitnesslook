@@ -5,7 +5,7 @@
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('[{"projectId":"№60552  |  001  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-treadmill\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-iron\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]},{"projectId":"№60552  |  002  |  спб","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-treadmill\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-iron\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]}]');
+module.exports = JSON.parse('[{"projectId":"№60552  |  001  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#iron-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]},{"projectId":"№60552  |  002  |  спб","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#iron-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"мультистанции","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]},{"projectId":"№60552  |  003  |  спб","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#iron-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"мультистанции","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]}]');
 
 /***/ }),
 /* 2 */
@@ -57,8 +57,8 @@ const renderProjectGallery = projects => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   setMobSlider: () => (/* binding */ setMobSlider),
-/* harmony export */   setSlider: () => (/* binding */ setSlider)
+/* harmony export */   setSlider: () => (/* binding */ setSlider),
+/* harmony export */   setSmallSlider: () => (/* binding */ setSmallSlider)
 /* harmony export */ });
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
 
@@ -71,7 +71,7 @@ const setSlider = (container, navContainer, props) => {
     ...props
   });
 };
-const setMobSlider = (container, controlsContainer, props) => {
+const setSmallSlider = (container, controlsContainer, props) => {
   return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
     container,
     items: 1,
@@ -3228,6 +3228,28 @@ exports.tns = tns;
 
 /***/ }),
 /* 5 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   formatNumber: () => (/* binding */ formatNumber),
+/* harmony export */   getProjectsIndex: () => (/* binding */ getProjectsIndex)
+/* harmony export */ });
+const getProjectsIndex = slider => {
+  return {
+    current: slider.getInfo().displayIndex,
+    next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? '...' : slider.getInfo().displayIndex + 1,
+    prev: slider.getInfo().displayIndex === 1 ? '...' : slider.getInfo().displayIndex - 1
+  };
+};
+const formatNumber = number => {
+  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
+};
+
+
+/***/ }),
+/* 6 */
 /***/ ((module) => {
 
 /**
@@ -3524,7 +3546,7 @@ exports.tns = tns;
 }(window);
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3604,8 +3626,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _json_projects_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _project_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
-/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
+
 
 
 
@@ -3619,10 +3643,26 @@ if (document.querySelector('.slider-best') && document.querySelector('.best__but
   (0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setSlider)('.slider-best', '.best__buttons-block');
 }
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setSlider)('.slider-questions', '.questions__buttons-block');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setMobSlider)('.slider-mob-best__slider', '.slider-mob-best__buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setMobSlider)('.slider-mob-why__slider', '.slider-mob-why__buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setMobSlider)('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
-new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__["default"])());
+const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setSmallSlider)('.slider-projects__slider', '.slider-projects__buttons', {
+  loop: false
+});
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setSmallSlider)('.slider-mob-best__slider', '.slider-mob-best__buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setSmallSlider)('.slider-mob-why__slider', '.slider-mob-why__buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setSmallSlider)('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
+const sliderProjectsButtons = document.querySelector('.slider-projects__buttons');
+const slideNumber = document.querySelector('.slider-projects-index');
+const slidePrevNumber = slideNumber.querySelector('#slider-projects-prev');
+const slideCurrentNumber = slideNumber.querySelector('#slider-projects-current');
+const slideNextNumber = slideNumber.querySelector('#slider-projects-next');
+slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_3__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_3__.getProjectsIndex)(progectsGallery).current);
+slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_3__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_3__.getProjectsIndex)(progectsGallery).prev);
+slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_3__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_3__.getProjectsIndex)(progectsGallery).next);
+sliderProjectsButtons.addEventListener('click', evt => {
+  slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_3__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_3__.getProjectsIndex)(progectsGallery).current);
+  slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_3__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_3__.getProjectsIndex)(progectsGallery).prev);
+  slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_3__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_3__.getProjectsIndex)(progectsGallery).next);
+});
+new accordion_js__WEBPACK_IMPORTED_MODULE_4__(Array.from(document.querySelectorAll('.accordion')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__["default"])());
 })();
 
 /******/ })()

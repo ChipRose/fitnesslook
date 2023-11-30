@@ -4392,8 +4392,29 @@
               </picture>
             </div>
             <div class="slider-projects">
+              <div class="slider-projects-pagination slider-projects__pagination">
+                <div class="text slider-projects-index slider-projects-pagination__index">
+                  <p class="text slider-projects-index__item slider-projects-index__item--prev" id="slider-projects-prev"></p>
+                  <p class="text slider-projects-index__item slider-projects-index__item--current" id="slider-projects-current"></p>
+                  <p class="text slider-projects-index__item slider-projects-index__item--next" id="slider-projects-next"></p>
+                </div>
+                <div class="slider-projects__buttons slider-projects-pagination__buttons">
+                  <button class="button button-simple-slider button-simple-slider--prev" id="project-prev" type="button">
+                    <svg class="button-simple-slider__icon" width="8" height="11" role="img"
+                      aria-label="Переход к предыдущему слайду" focusable="false">
+                      <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+                    </svg>
+                  </button>
+                  <button class="button button-simple-slider button-simple-slider--next" id="project-next" type="button">
+                    <svg class="button-simple-slider__icon" width="8" height="11" role="img"
+                      aria-label="Переход к следующему слайду" focusable="false">
+                      <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
               <ul class="list slider-projects__slider projects-gallery">
-
+                <!-- Projects gallery -->
               </ul>
             </div>
           </div>
@@ -4491,9 +4512,8 @@
 
   <!-- Projects template -->
   <template id="project-full">
-    <li class="projects-gallery__item">
-      <h4 class="title-info">
-      
+    <li class="projects-gallery__item project-full">
+      <h4 class="title title-info project-full__title">
       </h4>
       <ul class="list accordion accordion--decor accordion--decor-image projects-list" id="projects-list">
         <!-- Projects -->

@@ -10,7 +10,7 @@ const setSlider = (container, navContainer, props) => {
   })
 }
 
-const setMobSlider = (container, controlsContainer, props) => {
+const setSmallSlider = (container, controlsContainer, props) => {
   return tns({
     container,
     items: 1,
@@ -20,4 +20,4 @@ const setMobSlider = (container, controlsContainer, props) => {
   })
 }
 
-export { setSlider, setMobSlider };
+export { setSlider, setSmallSlider };
