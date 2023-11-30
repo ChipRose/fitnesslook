@@ -3545,6 +3545,8 @@
     <div class="wrapper wrapper--prof-trainers">
       <div id="main_content_template">
         <h1 class="visually-hidden">Профессиональные тренажеры от FitnessLook</h1>
+
+        <a id="top"></a>
         <section class="intro page-prof-trainers__intro section">
           <div class="image-block intro__cover">
             <video autoplay loop>
@@ -3705,6 +3707,7 @@
           </div>
         </section>
 
+        <a id="about"></a>
         <section class="about page-prof-trainers__about section section--dark">
           <div class="container">
             <div class="about__title-block">
@@ -3714,9 +3717,9 @@
               </h2>
             </div>
             <div class="about__buttons-block buttons-block">
-              <a class="link button-basic buttons-block__item" href="about">О FL</a>
-              <a class="link button-basic buttons-block__item" href="projects">Наши проекты</a>
-              <a class="link button-basic buttons-block__item" href="garantee">Гарантия и сервис</a>
+              <a class="link button-basic buttons-block__item" href="#about">О FL</a>
+              <a class="link button-basic buttons-block__item" href="#projects">Наши проекты</a>
+              <a class="link button-basic buttons-block__item" href="#garantee">Гарантия и сервис</a>
             </div>
             <div class="about__img-sticker img-sticker">
               <div class="img-sticker__img-block">
@@ -4020,7 +4023,8 @@
               <li class="slider-best__item">2 слайд</li>
               <li class="slider-best__item">3 слайд</li>
             </ul>
-            <a href="" class="link button-link button-link--accent button-link--center slider-best__button">ПРИМЕР
+            <a href=""
+              class="link button-link button-link--arrow button-link--accent button-link--center slider-best__button">ПРИМЕР
               ПОДБОРА в PDF</a>
             <div class="img-sticker img-sticker--dark slider-best__image-extra">
               <div class="img-sticker__img-block">
@@ -4285,6 +4289,7 @@
           </div>
         </section>
 
+        <a id="projects"></a>
         <section class="section projects page-prof-trainers__projects">
           <div class="container">
             <div class="projects__title-block">
@@ -4376,36 +4381,41 @@
           </div>
         </section>
 
-        <section class="section projects-detail">
+        <section class="section projects-detail page-prof-trainers__projects-detail">
           <div class="container">
-            <div class="projects__title-block">
+            <div class="projects-detail__title-block">
               <h2 class="title title-main">
                 <span>ПОДРОБНО</span><br>
                 <span class="title-main__last">о проектах</span>
               </h2>
             </div>
-            <div class="image-block projects__image-block">
+            <div class="image-block projects-detail__image-block">
               <picture>
                 <source type="image/webp" srcset="/i/media/stat/prof-trains/img/details/cover.webp">
                 <img src="/i/media/stat/prof-trains/img/details/cover.jpg"
                   srcset="/i/media-resource/stat/prof-trains/img/details/cover.jpg@2x.jpg 2x" alt="">
               </picture>
             </div>
-            <div class="slider-projects">
+            <div class="slider-projects projects-detail__projects">
               <div class="slider-projects-pagination slider-projects__pagination">
                 <div class="text slider-projects-index slider-projects-pagination__index">
-                  <p class="text slider-projects-index__item slider-projects-index__item--prev" id="slider-projects-prev"></p>
-                  <p class="text slider-projects-index__item slider-projects-index__item--current" id="slider-projects-current"></p>
-                  <p class="text slider-projects-index__item slider-projects-index__item--next" id="slider-projects-next"></p>
+                  <p class="text slider-projects-index__item slider-projects-index__item--prev"
+                    id="slider-projects-prev"></p>
+                  <p class="text slider-projects-index__item slider-projects-index__item--current"
+                    id="slider-projects-current"></p>
+                  <p class="text slider-projects-index__item slider-projects-index__item--next"
+                    id="slider-projects-next"></p>
                 </div>
                 <div class="slider-projects__buttons slider-projects-pagination__buttons">
-                  <button class="button button-simple-slider button-simple-slider--prev" id="project-prev" type="button">
+                  <button class="button button-simple-slider button-simple-slider--prev" id="project-prev"
+                    type="button">
                     <svg class="button-simple-slider__icon" width="8" height="11" role="img"
                       aria-label="Переход к предыдущему слайду" focusable="false">
                       <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
                     </svg>
                   </button>
-                  <button class="button button-simple-slider button-simple-slider--next" id="project-next" type="button">
+                  <button class="button button-simple-slider button-simple-slider--next" id="project-next"
+                    type="button">
                     <svg class="button-simple-slider__icon" width="8" height="11" role="img"
                       aria-label="Переход к следующему слайду" focusable="false">
                       <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
@@ -4417,6 +4427,96 @@
                 <!-- Projects gallery -->
               </ul>
             </div>
+            <div class="projects-detail__links">
+              <a href="" class="link button-link button-link--arrow button-link--accent">PDF</a>
+              <a href="" class="link button-link button-link--arrow ">Все проекты в <span
+                  class="text-main text-main--accent">PDF</span> </a>
+            </div>
+          </div>
+        </section>
+
+        <a id="garantee"></a>
+        <section class="section garantee page-prof-trainers__garantee">
+          <div class="image-block image-block--frame">
+            <picture>
+              <source type="image/webp" srcset="/i/media/stat/prof-trains/img/garantee/cover.webp">
+              <img src="/i/media/stat/prof-trains/img/garantee/cover.jpg"
+                srcset="/i/media-resource/stat/prof-trains/img/garantee/cover@2x.jpg 2x" alt="">
+            </picture>
+            <div class="image-block__frame">
+              <svg width="259" height="102" role="img" aria-label="Рамка" focusable="false">
+                <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#frame"></use>
+              </svg>
+            </div>
+            <p class="image-block__text">
+              для фитнес залов
+            </p>
+          </div>
+          <div class="container">
+            <ul class="list accordion garantee-list">
+              <li class="ac">
+                <h3 class="title ac-header">
+                  <button class="ac-trigger">
+                    гАРАНТИЙНОЕ ОБСЛУЖИВАНИЕ
+                  </button>
+                </h3>
+                <div class="ac-panel">
+                  <div class="garantee-list__description">
+                    <p class="text text-main">
+                      Все оборудование, представленное в FitnessLook, сертифицировано и имеет гарантийный срок.
+                    </p>
+                    <p class="text text-main">
+                      Гарантийный срок обеспечит вам ремонт, замену тренажера или возврат денежных средств в случае
+                      наступления гарантийного случая.
+                    </p>
+                    <p class="text text-main">
+                      Гарантийным случаем является выявленный в ходе эксплуатации производственный дефект.
+                    </p>
+                    <p class="text text-main">
+                      Гарантийные обязательства выполняются сервисной службой дистрибьютора и собственной сервисной
+                      службой компании «FitnessLook».
+                    </p>
+                    <a href="" class="link button-link button-link--accent">Гарантийный талон>></a>
+                  </div>
+                </div>
+              </li>
+              <li class="ac">
+                <h3 class="title ac-header">
+                  <button class="ac-trigger">
+                    ПОСТгАРАНТИЙНОЕ ОБСЛУЖИВАНИЕ
+                  </button>
+                </h3>
+                <div class="ac-panel">
+                  <div class="garantee-list__description">
+                    <p class="text text-main">
+                      После окончания гарантийного периода и в течении срока службы оборудования компания FitnessLook,
+                      готова осуществить постгарантийное обслуживание - диагностика, поставка деталей, запасных частей,
+                      и ремонт оборудования. </p>
+                    <p class="text text-main">
+                      Постгарантийное обслуживание осуществляется за счет средств заказчика.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="ac">
+                <h3 class="title ac-header">
+                  <button class="ac-trigger">
+                    сЕРВИСНОЕ ОБСЛУЖИВАНИЕ
+                  </button>
+                </h3>
+                <div class="ac-panel">
+                  <div class="garantee-list__description">
+                    <p class="text text-main">
+                      В сервисное обслуживание входит диагностика, чистка от загрязнения узлов и механизмов
+                      оборудования, замена деталей, смазка, регулировка и настройка механических и электрических узлов.
+                    </p>
+                    <p class="text text-main">
+                      Проводя периодическое сервисное обслуживание вы минимизируете риски крупных поломок, и продлеваете срок экспуатации оборудования.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
 
