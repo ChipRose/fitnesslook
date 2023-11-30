@@ -4520,6 +4520,21 @@
           </div>
         </section>
 
+        <section class="section trainers">
+          <div class="container">
+            <div class="trainers__title-block">
+              <h2 class="title title-main">
+                <span>тренажеры</span><br>
+                <span class="title-main__last">в фитнесс-зал</span>
+              </h2>
+            </div>
+            <div class="products-slider">
+              <ul class="list products-gallery products-slider__slider" id="hit-products">
+
+              </ul>
+            </div>
+          </div>
+        </section>
 
       </div>
     </div><!-- #wrapper -->
@@ -4620,6 +4635,40 @@
       </ul>
     </li>
   </template>
+
+  <!-- Hits list template -->
+  <template id="products-full">
+    <li class="products-gallery__item">
+      <h3 class="title title-info"></h3>
+      <ul class="list products-content">
+
+      </ul>
+    </li>
+  </template>
+
+    <!-- Product content template -->
+    <template id="products-content">
+      <li class="product-card products-content__item">
+        <div class="image-block product-card__image-block">
+          <picture>
+            <source type="image/webp" id="product-img-webp" srcset="">
+            <img id="product-img" src=""
+              srcset="" alt="">
+          </picture>
+        </div>
+        <div class="product-card__title-block">
+          <h4 class="title product-card__title"></h4>
+          <div class="price-block">
+            <p class="text price price--old"></p>
+            <p class="text price price--new"></p>
+          </div>
+        </div>
+        <div class="product-card__text-block">
+          <p class="text text-main"></p>
+          <a href="" class="link button-basic button-basic--accent">Подробнее</a>
+        </div>
+      </li>
+    </template>
 
   <div id="footer">
     <div class="wrapper">

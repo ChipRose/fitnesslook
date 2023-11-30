@@ -5,7 +5,7 @@ const projectsFullTemplate = document.querySelector("#project-full").content.que
 
 const projectGallery = document.querySelector('.projects-gallery');
 
-const renderProjectGallery = (projects) => {
+const renderProjectsGallery = (projects) => {
   const projectsFragment = document.createDocumentFragment();
   const slideProjectsFragment = document.createDocumentFragment();
   const projectsFullFragment = document.createDocumentFragment();
@@ -14,7 +14,6 @@ const renderProjectGallery = (projects) => {
     const projectFull = projectsFullTemplate.cloneNode(true);
 
     projectFull.querySelector('.title-info').textContent = project.projectId;
-
     projectsFullFragment.appendChild(projectFull);
     const projectsList = projectFull.querySelector('#projects-list');
 
@@ -41,4 +40,4 @@ const renderProjectGallery = (projects) => {
   projectGallery.appendChild(projectsFullFragment);
 }
 
-export { renderProjectGallery };
+export { renderProjectsGallery };
