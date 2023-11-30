@@ -84,7 +84,7 @@ const renderProductsGallery = products => {
       productContent.querySelector('#product-img').srcset = item.image2x;
       productContent.querySelector('#product-img-webp').srcset = item.imageWebp;
       productContent.querySelector('.price--old').textContent = item.oldPrice;
-      productContent.querySelector('.price--new').textContent = item.newPrice;
+      productContent.querySelector('.price--new').textContent = `${item.newPrice} ₽`;
       productContentFragment.appendChild(productContent);
     });
     const productsContent = productFull.querySelector('.products-content');

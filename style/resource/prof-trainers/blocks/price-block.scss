@@ -1,0 +1,8 @@
+.price-block {
+  display: flex;
+  width: fit-content;
+}
+
+.price-block__old{
+  margin-right: var(--indent-main);
+}

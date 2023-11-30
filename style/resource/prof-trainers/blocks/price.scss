@@ -1,0 +1,20 @@
+.price {
+  color: var(--cl-accent);
+  width: fit-content;
+
+  &--old {
+    font-size: var(--fz-small);
+    position: relative;
+  }
+
+  &--old::after {
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 1px;
+    background: var(--cl-accent);
+  }
+}
