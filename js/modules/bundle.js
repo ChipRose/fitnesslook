@@ -5,7 +5,7 @@
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('[{"projectId":1,"content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-treadmill\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-iron\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]}]');
+module.exports = JSON.parse('[{"projectId":"№60552  |  001  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-treadmill\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-iron\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]},{"projectId":"№60552  |  002  |  спб","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-treadmill\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#icon-iron\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]}]');
 
 /***/ }),
 /* 2 */
@@ -14,30 +14,39 @@ module.exports = JSON.parse('[{"projectId":1,"content":[{"type":"Кардиот�
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderSlide: () => (/* binding */ renderSlide)
+/* harmony export */   renderProjectGallery: () => (/* binding */ renderProjectGallery)
 /* harmony export */ });
-const slideProjectItemTemplate = document.querySelector("#project-part").content.querySelector('.slider-project__part');
+const slideProjectItemTemplate = document.querySelector("#project-part").content.querySelector('.project-content__item');
 const slideProjectTemplate = document.querySelector("#project-item").content.querySelector('.projects-list__item');
-const projectsList = document.querySelector('#projects-list');
-const renderSlide = project => {
+const projectsFullTemplate = document.querySelector("#project-full").content.querySelector('.projects-gallery__item');
+const projectGallery = document.querySelector('.projects-gallery');
+const renderProjectGallery = projects => {
   const projectsFragment = document.createDocumentFragment();
   const slideProjectsFragment = document.createDocumentFragment();
-  project.content.forEach(project => {
-    const projectPart = slideProjectTemplate.cloneNode(true);
-    projectPart.querySelector('.accordion__title').textContent = project.type;
-    projectPart.querySelector('.accordion__number').innerHTML = project.icon;
-    slideProjectsFragment.appendChild(projectPart);
-    projectsList.appendChild(slideProjectsFragment);
-    project.trainers.forEach(content => {
-      const projectItem = slideProjectItemTemplate.cloneNode(true);
-      projectItem.querySelector('.type').textContent = content.title;
-      projectItem.querySelector('.model__name').textContent = content.model;
-      projectItem.querySelector('.model__type').textContent = content.name;
-      projectsFragment.appendChild(projectItem);
+  const projectsFullFragment = document.createDocumentFragment();
+  projects.forEach(project => {
+    const projectFull = projectsFullTemplate.cloneNode(true);
+    projectFull.querySelector('.title-info').textContent = project.projectId;
+    projectsFullFragment.appendChild(projectFull);
+    const projectsList = projectFull.querySelector('#projects-list');
+    project.content.forEach(project => {
+      const projectPart = slideProjectTemplate.cloneNode(true);
+      projectPart.querySelector('.accordion__title').textContent = project.type;
+      projectPart.querySelector('.accordion__number').innerHTML = project.icon;
+      slideProjectsFragment.appendChild(projectPart);
+      projectsList.appendChild(slideProjectsFragment);
+      project.trainers.forEach(content => {
+        const projectItem = slideProjectItemTemplate.cloneNode(true);
+        projectItem.querySelector('.type').textContent = content.title;
+        projectItem.querySelector('.model__name').textContent = content.model;
+        projectItem.querySelector('.model__type').textContent = content.name;
+        projectsFragment.appendChild(projectItem);
+      });
+      const sliderItems = projectPart.querySelector('#project-content');
+      sliderItems.appendChild(projectsFragment);
     });
-    const sliderItems = projectPart.querySelector('#slider-projects');
-    sliderItems.appendChild(projectsFragment);
   });
+  projectGallery.appendChild(projectsFullFragment);
 };
 
 
@@ -3602,9 +3611,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import './project.js';
-
-(0,_project_js__WEBPACK_IMPORTED_MODULE_1__.renderSlide)(_json_projects_json__WEBPACK_IMPORTED_MODULE_0__[0]);
+(0,_project_js__WEBPACK_IMPORTED_MODULE_1__.renderProjectGallery)(_json_projects_json__WEBPACK_IMPORTED_MODULE_0__);
 if (document.querySelector('.slider-intro') && document.querySelector('.intro__buttons-block')) {
   (0,_slider_js__WEBPACK_IMPORTED_MODULE_2__.setSlider)('.slider-intro', '.intro__buttons-block');
 }

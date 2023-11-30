@@ -1,31 +1,44 @@
 
-const slideProjectItemTemplate = document.querySelector("#project-part").content.querySelector('.slider-project__part');
+const slideProjectItemTemplate = document.querySelector("#project-part").content.querySelector('.project-content__item');
 const slideProjectTemplate = document.querySelector("#project-item").content.querySelector('.projects-list__item');
+const projectsFullTemplate = document.querySelector("#project-full").content.querySelector('.projects-gallery__item');
 
-const projectsList = document.querySelector('#projects-list');
+const projectGallery = document.querySelector('.projects-gallery');
 
-const renderSlide = (project) => {
+const renderProjectGallery = (projects) => {
   const projectsFragment = document.createDocumentFragment();
   const slideProjectsFragment = document.createDocumentFragment();
+  const projectsFullFragment = document.createDocumentFragment();
 
-  project.content.forEach((project) => {
-    const projectPart = slideProjectTemplate.cloneNode(true);
-    projectPart.querySelector('.accordion__title').textContent = project.type;
-    projectPart.querySelector('.accordion__number').innerHTML = project.icon;
-    slideProjectsFragment.appendChild(projectPart);
-    projectsList.appendChild(slideProjectsFragment);
+  projects.forEach((project) => {
+    const projectFull = projectsFullTemplate.cloneNode(true);
 
-    project.trainers.forEach((content) => {
-      const projectItem = slideProjectItemTemplate.cloneNode(true);
+    projectFull.querySelector('.title-info').textContent = project.projectId;
 
-      projectItem.querySelector('.type').textContent = content.title;
-      projectItem.querySelector('.model__name').textContent = content.model;
-      projectItem.querySelector('.model__type').textContent = content.name;
-      projectsFragment.appendChild(projectItem);
+    projectsFullFragment.appendChild(projectFull);
+    const projectsList = projectFull.querySelector('#projects-list');
+
+    project.content.forEach((project) => {
+      const projectPart = slideProjectTemplate.cloneNode(true);
+
+      projectPart.querySelector('.accordion__title').textContent = project.type;
+      projectPart.querySelector('.accordion__number').innerHTML = project.icon;
+      slideProjectsFragment.appendChild(projectPart);
+      projectsList.appendChild(slideProjectsFragment);
+
+      project.trainers.forEach((content) => {
+        const projectItem = slideProjectItemTemplate.cloneNode(true);
+
+        projectItem.querySelector('.type').textContent = content.title;
+        projectItem.querySelector('.model__name').textContent = content.model;
+        projectItem.querySelector('.model__type').textContent = content.name;
+        projectsFragment.appendChild(projectItem);
+      })
+      const sliderItems = projectPart.querySelector('#project-content');
+      sliderItems.appendChild(projectsFragment);
     })
-    const sliderItems = projectPart.querySelector('#slider-projects');
-    sliderItems.appendChild(projectsFragment);
   })
+  projectGallery.appendChild(projectsFullFragment);
 }
 
-export { renderSlide };
+export { renderProjectGallery };
