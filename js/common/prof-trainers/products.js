@@ -1,4 +1,4 @@
-const productFullTemplate = document.querySelector("#products-full").content.querySelector('.products-gallery__item');
+const productFullTemplate = document.querySelector("#products-full").content.querySelector('.product-gallery-set');
 const productContentTemplate = document.querySelector("#products-content").content.querySelector('.product-card');
 
 const productsGallery = document.querySelector('#hit-products');
@@ -11,6 +11,8 @@ const renderProductsGallery = (products) => {
     const productFull = productFullTemplate.cloneNode(true);
 
     productFull.querySelector('.title-info').textContent = `Хиты продаж: ${product.type}`;
+    productFull.querySelector('.product-gallery-set__buttons').id = `product-list-buttons-${product.id}`;
+
     productsFragment.appendChild(productFull);
 
     product.content.forEach((item) => {

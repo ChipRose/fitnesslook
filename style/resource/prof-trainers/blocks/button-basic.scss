@@ -1,4 +1,6 @@
 .button-basic {
+  display: block;
+  width: fit-content;
   padding: var(--indent-small) var(--indent-main);
   border: 1px solid var(--cl-accent);
   min-width: 90px;

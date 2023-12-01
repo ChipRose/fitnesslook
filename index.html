@@ -4352,8 +4352,7 @@
                   <div class="slider-with-button__text-block">
                     <p class="text text-main">
                       Разрабатывая проект расстановки тренажеров мы учитываем удобство тренировок, и технику
-                      безопасности
-                      в помещении зала.
+                      безопасности в помещении зала.
                     </p>
                   </div>
                   <div class="contact-block slider-with-button__contact-block">
@@ -4511,7 +4510,8 @@
                       оборудования, замена деталей, смазка, регулировка и настройка механических и электрических узлов.
                     </p>
                     <p class="text text-main">
-                      Проводя периодическое сервисное обслуживание вы минимизируете риски крупных поломок, и продлеваете срок экспуатации оборудования.
+                      Проводя периодическое сервисное обслуживание вы минимизируете риски крупных поломок, и продлеваете
+                      срок экспуатации оборудования.
                     </p>
                   </div>
                 </div>
@@ -4520,7 +4520,7 @@
           </div>
         </section>
 
-        <section class="section trainers">
+        <section class="section trainers page-prof-trainers__trainers">
           <div class="container">
             <div class="trainers__title-block">
               <h2 class="title title-main">
@@ -4638,37 +4638,50 @@
 
   <!-- Hits list template -->
   <template id="products-full">
-    <li class="products-gallery__item">
-      <h3 class="title title-info"></h3>
-      <ul class="list products-content">
+    <li class="products-gallery__item product-gallery-set slider-with-button">
+      <h3 class="title title-info product-gallery-set__title"></h3>
+      <div class="slider-with-button__buttons product-gallery-set__buttons">
+        <button class="button button-slider button-slider--prev" type="button">
+          <svg class="button-slider__icon" width="6" height="9" role="img"
+            aria-label="Переход к предыдущему слайду" focusable="false">
+            <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+          </svg>
+        </button>
+        <button class="button button-slider button-slider--next" type="button">
+          <svg class="button-slider__icon" width="6" height="9" role="img"
+            aria-label="Переход к следующему слайду" focusable="false">
+            <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+      <ul class="list products-content product-gallery-set__slider">
 
       </ul>
     </li>
   </template>
 
-    <!-- Product content template -->
-    <template id="products-content">
-      <li class="product-card products-content__item">
-        <div class="image-block product-card__image-block">
-          <picture>
-            <source type="image/webp" id="product-img-webp" srcset="">
-            <img id="product-img" src=""
-              srcset="" alt="">
-          </picture>
+  <!-- Product card template -->
+  <template id="products-content">
+    <li class="product-card products-content__item">
+      <div class="image-block product-card__image-block">
+        <picture>
+          <source type="image/webp" id="product-img-webp" srcset="">
+          <img id="product-img" src="" srcset="" alt="">
+        </picture>
+      </div>
+      <div class="product-card__title-block">
+        <h4 class="title title-card product-card__title"></h4>
+        <div class="price-block product-card__price-block">
+          <p class="text price price--old price-block__old"></p>
+          <p class="text price price--new"></p>
         </div>
-        <div class="product-card__title-block">
-          <h4 class="title product-card__title"></h4>
-          <div class="price-block product-card__price-block">
-            <p class="text price price--old price-block__old"></p>
-            <p class="text price price--new"></p>
-          </div>
-        </div>
-        <div class="product-card__text-block">
-          <p class="text text-main"></p>
-          <a href="" class="link button-basic button-basic--accent">Подробнее</a>
-        </div>
-      </li>
-    </template>
+      </div>
+      <div class="product-card__text-block">
+        <p class="text text-main"></p>
+      </div>
+      <a href="" class="link button-basic button-basic--accent product-card__button">Подробнее</a>
+    </li>
+  </template>
 
   <div id="footer">
     <div class="wrapper">

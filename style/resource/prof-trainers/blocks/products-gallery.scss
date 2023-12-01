@@ -1,0 +1,7 @@
+.products-gallery__item{
+  margin-bottom: var(--indent-big);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

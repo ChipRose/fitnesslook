@@ -1,1 +1,14 @@
-.product-card {}
+.product-card__image-block {
+  margin-bottom: var(--indent-main);
+}
+
+.product-card__title-block {
+  margin-bottom: var(--indent-main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card__button {
+  margin-left: auto;
+}

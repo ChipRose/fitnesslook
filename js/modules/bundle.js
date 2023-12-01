@@ -66,7 +66,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   renderProductsGallery: () => (/* binding */ renderProductsGallery)
 /* harmony export */ });
-const productFullTemplate = document.querySelector("#products-full").content.querySelector('.products-gallery__item');
+const productFullTemplate = document.querySelector("#products-full").content.querySelector('.product-gallery-set');
 const productContentTemplate = document.querySelector("#products-content").content.querySelector('.product-card');
 const productsGallery = document.querySelector('#hit-products');
 const renderProductsGallery = products => {
@@ -75,6 +75,7 @@ const renderProductsGallery = products => {
   products.forEach(product => {
     const productFull = productFullTemplate.cloneNode(true);
     productFull.querySelector('.title-info').textContent = `Хиты продаж: ${product.type}`;
+    productFull.querySelector('.product-gallery-set__buttons').id = `product-list-buttons-${product.id}`;
     productsFragment.appendChild(productFull);
     product.content.forEach(item => {
       const productContent = productContentTemplate.cloneNode(true);
@@ -3714,7 +3715,11 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_projects_js__WEBPACK_IMPORTED_MODULE_2__.renderProjectsGallery)(_json_projects_json__WEBPACK_IMPORTED_MODULE_0__);
 (0,_products_js__WEBPACK_IMPORTED_MODULE_3__.renderProductsGallery)(_json_trainers_json__WEBPACK_IMPORTED_MODULE_1__);
-console.log(_json_trainers_json__WEBPACK_IMPORTED_MODULE_1__.length);
+_json_trainers_json__WEBPACK_IMPORTED_MODULE_1__.forEach(({
+  id
+}) => {
+  (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`);
+});
 if (document.querySelector('.slider-intro') && document.querySelector('.intro__buttons-block')) {
   (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('.slider-intro', '.intro__buttons-block');
 }
@@ -3726,9 +3731,6 @@ const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlide
 });
 (0,_slider_pagination_js__WEBPACK_IMPORTED_MODULE_7__.setPagination)(progectsGallery);
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('.slider-questions', '.questions__buttons-block');
-for (let i = 1; i <= _json_trainers_json__WEBPACK_IMPORTED_MODULE_1__.length; i++) {
-  (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)(`#product-list-${i}`, false);
-}
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-best__slider', '.slider-mob-best__buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-why__slider', '.slider-mob-why__buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
