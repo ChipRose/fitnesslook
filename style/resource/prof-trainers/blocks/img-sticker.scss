@@ -38,3 +38,24 @@
     z-index: -1;
   }
 }
+
+.img-sticker.img-sticker--desk{
+  .img-sticker__icon {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      width: 140px;
+      height: auto;
+      display: block;
+      fill: var(--cl-accent);
+    }
+  }
+
+  .img-sticker__img-block {
+
+    @media (min-width: $tablet-width) {
+      margin-top: 40px;
+      margin-right: 40px;
+    }
+  }
+}

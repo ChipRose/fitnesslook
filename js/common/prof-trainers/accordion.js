@@ -1,7 +1,17 @@
-const settingAccordion = () => {
+const settingAccordion = (props) => {
   return {
-    duration: 400
+    duration: 400,
+    ...props
   }
 }
 
-export default settingAccordion;
+const settingAccordionAdaptive = (cb) => {
+  if (window.innerWidth < 768) { cb.closeAll() } else { cb.openAll() };
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) { cb.closeAll() } else { cb.openAll() };
+  });
+}
+
+
+export  {settingAccordion, settingAccordionAdaptive};

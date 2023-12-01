@@ -10,6 +10,12 @@
   }
 }
 
+.accordion .ac-header {
+  @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-main);
+  }
+}
+
 .accordion .ac {
   border: none;
   background: none;

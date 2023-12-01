@@ -1,3 +1,10 @@
+
+.slider-intro__item {
+  @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-big);
+  }
+}
+
 .slider-intro__title-block {
   margin-bottom: var(--indent-big);
 }
@@ -18,6 +25,10 @@
 
 .slider-intro__decoration {
   margin-bottom: var(--indent-main);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .slider-intro__text-block {
@@ -29,5 +40,11 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+.slider-intro__image-block {
+  @media (min-width: $tablet-width) {
+    align-self: flex-end;
   }
 }

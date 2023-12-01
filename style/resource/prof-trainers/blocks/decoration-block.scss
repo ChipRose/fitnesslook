@@ -1,0 +1,25 @@
+.decoration-block {
+  display: none;
+
+  @media (min-width:$tablet-width) {
+    display: flex;
+  }
+}
+
+.decoration-block__item {
+  @media (min-width:$tablet-width) {
+    margin-right: calc(2 * var(--indent-main));
+    margin-bottom: var(--indent-big);
+    flex: 0 0 30%;
+
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+  }
+}
+
+.decoration-block.decoration-block--right {
+  @media (min-width:$tablet-width) {
+    justify-content: flex-end;
+  }
+}

@@ -6,9 +6,11 @@ const getProjectsIndex = (slider) => {
   }
 }
 
-const formatNumber=(number)=>{
-  return typeof Number(number)==='number'&&number.toString().length===1?`0${number}`:number;
+const formatNumber = (number) => {
+  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
 }
 
 
-export {getProjectsIndex, formatNumber}
+
+
+export { getProjectsIndex, formatNumber }

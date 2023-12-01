@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   margin: calc(-1*var(--indent-basic));
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
 .buttons-block__item {

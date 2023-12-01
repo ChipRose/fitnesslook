@@ -3577,14 +3577,32 @@ exports.tns = tns;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   settingAccordion: () => (/* binding */ settingAccordion),
+/* harmony export */   settingAccordionAdaptive: () => (/* binding */ settingAccordionAdaptive)
 /* harmony export */ });
-const settingAccordion = () => {
+const settingAccordion = props => {
   return {
-    duration: 400
+    duration: 400,
+    ...props
   };
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (settingAccordion);
+const settingAccordionAdaptive = cb => {
+  if (window.innerWidth < 768) {
+    cb.closeAll();
+  } else {
+    cb.openAll();
+  }
+  ;
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+      cb.closeAll();
+    } else {
+      cb.openAll();
+    }
+    ;
+  });
+};
+
 
 /***/ }),
 /* 9 */
@@ -3735,7 +3753,14 @@ const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlide
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-best__slider', '.slider-mob-best__buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-why__slider', '.slider-mob-why__buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
-new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.accordion')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__["default"])());
+const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_5__('.accordion-intro', (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)({
+  showMultiple: true
+}));
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordionAdaptive)(accordionIntro);
+const accordionQuestions = new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)());
+// const accordionIntro =  new Accordion(Array.from(document.querySelectorAll('.accordion-intro')), settingAccordion())
+
+// new Accordion(Array.from(document.querySelectorAll('.accordion')), settingAccordion());
 })();
 
 /******/ })()

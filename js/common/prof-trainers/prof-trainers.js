@@ -4,7 +4,7 @@ import { renderProjectsGallery } from './projects.js';
 import { renderProductsGallery } from './products.js';
 import { setSlider, setSmallSlider } from './slider.js';
 import Accordion from 'accordion-js';
-import settingAccordion from './accordion.js';
+import {settingAccordion, settingAccordionAdaptive} from './accordion.js';
 import { setPagination } from './slider-pagination.js'
 
 
@@ -35,7 +35,12 @@ setSmallSlider('.slider-mob-why__slider', '.slider-mob-why__buttons');
 setSmallSlider('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
 
 
+const accordionIntro = new Accordion('.accordion-intro', settingAccordion({showMultiple: true}));
 
+settingAccordionAdaptive(accordionIntro)
 
-new Accordion(Array.from(document.querySelectorAll('.accordion')), settingAccordion());
+const accordionQuestions =  new Accordion(Array.from(document.querySelectorAll('.accordion-questions')), settingAccordion())
+// const accordionIntro =  new Accordion(Array.from(document.querySelectorAll('.accordion-intro')), settingAccordion())
+
+// new Accordion(Array.from(document.querySelectorAll('.accordion')), settingAccordion());
 

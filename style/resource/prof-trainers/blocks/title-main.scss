@@ -8,4 +8,8 @@
 .title-main__last {
   margin-left: var(--indent-big);
   color: var(--cl-accent);
+
+  @media (min-width: $tablet-width) {
+    margin-left: 200px;
+  }
 }
