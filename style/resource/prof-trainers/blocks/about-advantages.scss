@@ -1,0 +1,12 @@
+.about-advantages {
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+}
+
+.about-advantages__image-block {
+  @media (min-width: $tablet-width) {
+    margin-right: var(--indent-big);
+    flex: 0 0 250px;
+  }
+}

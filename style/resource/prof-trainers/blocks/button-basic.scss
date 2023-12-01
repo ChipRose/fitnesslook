@@ -21,9 +21,16 @@
     color: var(--cl-contrast);
     background: var(--cl-accent);
   }
+
+  &--active {
+    background: var(--cl-accent);
+    color: var(--cl-contrast);
+  }
 }
 
 .button-basic.tns-nav-active{
   background: var(--cl-accent);
   color: var(--cl-contrast);
 }
+
+

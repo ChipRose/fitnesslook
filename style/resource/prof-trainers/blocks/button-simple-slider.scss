@@ -1,6 +1,3 @@
-.button-simple-slider {
-
-}
 
 .button-simple-slider__icon {
   pointer-events: none;
@@ -9,4 +6,8 @@
 
 .button-simple-slider--prev {
   transform: rotate(180deg) translateY(1px);
+
+  @media (min-width: $tablet-width) {
+    transform: rotate(180deg) translateY(-2px);
+  }
 }

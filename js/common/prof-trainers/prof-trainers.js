@@ -28,6 +28,7 @@ const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-proj
 setPagination(progectsGallery);
 
 
+const orderMobSlider = setSmallSlider('.slider-mob-order__slider', '.slider-mob-order__buttons');
 
 setSlider('.slider-questions', '.questions__buttons-block');
 setSmallSlider('.slider-mob-best__slider', '.slider-mob-best__buttons');
@@ -36,11 +37,14 @@ setSmallSlider('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
 
 
 const accordionIntro = new Accordion('.accordion-intro', settingAccordion({showMultiple: true}));
+settingAccordionAdaptive(accordionIntro);
 
-settingAccordionAdaptive(accordionIntro)
+const accordionAbout = new Accordion('.accordion-about', settingAccordion({showMultiple: true}));
+settingAccordionAdaptive(accordionAbout);
 
-const accordionQuestions =  new Accordion(Array.from(document.querySelectorAll('.accordion-questions')), settingAccordion())
-// const accordionIntro =  new Accordion(Array.from(document.querySelectorAll('.accordion-intro')), settingAccordion())
 
-// new Accordion(Array.from(document.querySelectorAll('.accordion')), settingAccordion());
+
+// const accordionQuestions =  new Accordion('.accordion-questions', settingAccordion());
+// const accordionBest =  new Accordion('.accordion-best', settingAccordion());
+
 
