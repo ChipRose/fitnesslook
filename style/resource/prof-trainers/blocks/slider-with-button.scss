@@ -5,7 +5,6 @@
 }
 
 .slider-with-button__item {
-  padding-right: var(--indent-big);
   z-index: 1;
   box-sizing: border-box;
 }
@@ -27,6 +26,7 @@
 }
 
 .slider-with-button__text-block {
+  padding-right: var(--indent-big);
   margin-bottom: var(--indent-main);
   min-height: 150px;
 }

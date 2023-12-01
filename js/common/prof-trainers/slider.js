@@ -16,6 +16,7 @@ const setSmallSlider = (container, controlsContainer, props) => {
     items: 1,
     nav: false,
     controlsContainer,
+    gutter: 20,
     ...props
   })
 }

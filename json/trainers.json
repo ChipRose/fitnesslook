@@ -6,7 +6,7 @@
       {
         "image": "/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1.jpg",
         "image2x": "/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1@2x.jpg",
-        "imageWebp": "/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1@2x.webp",
+        "imageWebp": "/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1@2x.webp 2x",
         "oldPrice": 67700,
         "newPrice": 57890,
         "title": "Some treadmill",
@@ -16,7 +16,7 @@
       {
         "image": "/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.jpg",
         "image2x": "/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.jpg",
-        "imageWebp": "/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.webp",
+        "imageWebp": "/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.webp 2x",
         "oldPrice": 67700,
         "newPrice": 57890,
         "title": "Another treadmill",
@@ -32,7 +32,7 @@
       {
         "image": "/i/media/stat/prof-trains/img/trainers/multi/1/multi-1.jpg",
         "image2x": "/i/media/stat/prof-trains/img/trainers/multi/1/multi-1@2x.jpg 2x",
-        "imageWebp": "/i/media/stat/prof-trains/img/trainers/multi/1/multi-1.webp",
+        "imageWebp": "/i/media/stat/prof-trains/img/trainers/multi/1/multi-1.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/1/multi-1@2x.webp 2x",
         "oldPrice": 67700,
         "newPrice": 57890,
         "title": "Some multi",
@@ -42,7 +42,7 @@
       {
         "image": "/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.jpg",
         "image2x": "/i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.jpg 2x",
-        "imageWebp": "/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.webp",
+        "imageWebp": "/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.webp 2x",
         "oldPrice": 67700,
         "newPrice": 57890,
         "title": "Some multi",

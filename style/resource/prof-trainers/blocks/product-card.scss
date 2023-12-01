@@ -1,5 +1,8 @@
 .product-card__image-block {
+  margin-right: auto;
   margin-bottom: var(--indent-main);
+  margin-left: auto;
+  max-width: 300px;
 }
 
 .product-card__title-block {
