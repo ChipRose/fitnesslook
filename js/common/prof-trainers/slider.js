@@ -22,21 +22,21 @@ const setSmallSlider = (container, controlsContainer, props) => {
 }
 
 const settingSliderAdaptive = (cb) => {
-  let newSlider=cb;
+  let newSlider = cb;
   if (window.innerWidth < 768) {
-    if(!newSlider.isOn)newSlider = cb.rebuild()
+    if (!newSlider.isOn) newSlider = cb.rebuild()
 
   }
   else {
-    newSlider.isOn&&newSlider.destroy();
+    newSlider.isOn && newSlider.destroy();
   };
 
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
-      if(!newSlider.isOn)newSlider = cb.rebuild()
+      if (!newSlider.isOn) newSlider = cb.rebuild()
     }
     else {
-      newSlider.isOn&&newSlider.destroy();
+      newSlider.isOn && newSlider.destroy();
     };
   });
 }

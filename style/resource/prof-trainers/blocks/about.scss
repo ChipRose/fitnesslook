@@ -5,7 +5,7 @@
 
 .about .container {
   padding-top: var(--indent-main);
-  padding-bottom: var(--indent-big);
+  padding-bottom: calc(2 * var(--indent-big));
 }
 
 .about__title-block {

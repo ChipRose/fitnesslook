@@ -3708,7 +3708,7 @@
               </div>
             </li>
           </ul>
-          <div class="decoration-block ">
+          <div class="decoration-block intro__decoration">
             <div class="decoration-block__item">
             </div>
             <div class="decoration-block__item">
@@ -3875,8 +3875,8 @@
                 </span>
               </h3>
             </div>
-            <div class="slider-with-button slider-mob-order">
-              <div class="slider-with-button__buttons slider-mob-order__buttons">
+            <div class="slider-with-button slider-with-button--simple">
+              <div class="slider-with-button__buttons" id="slider-order-small-buttons">
                 <button class="button button-slider button-slider--prev" type="button">
                   <svg class="button-slider__icon" width="6" height="9" role="img"
                     aria-label="Переход к предыдущему слайду" focusable="false">
@@ -3902,21 +3902,21 @@
                   </svg>
                 </div>
               </div>
-              <ul class="list slider-with-button__slider slider-mob-order__slider columns columns--two">
-                <li class="slider-with-button__item columns__item">
+              <ul class="list slider-with-button__slider" id="slider-order-small">
+                <li class="slider-with-button__item">
                   <div class="slider-with-button__text-block">
                     <p class="text text-main">
                       А если вы сами изучили все тренажеры, необходимое вам спортивное оборудование, и имеете список
                       тренажеров на руках?
                     </p>
                   </div>
-                  <div class="slider-with-button__contact-block">
+                  <div class="slider-with-button__footer">
                     <a href="" class="link button-basic button-basic--accent">
                       Рассчитать проект
                     </a>
                   </div>
                 </li>
-                <li class="slider-with-button__item columns__item">
+                <li class="slider-with-button__item">
                   <div class="slider-with-button__text-block">
                     <p class="text text-main">
                       Просто <span class="text-main text-main--accent">присылайте список</span> нам, и мы рассчитаем
@@ -3978,7 +3978,7 @@
               </div>
               <div class="best__extra-cover">
                 <div class="img-round-sticker">
-                   <div class="img-round-sticker__image-block">
+                  <div class="img-round-sticker__image-block">
                     <video autoplay>
                       <source src="/i/media-resource/stat/prof-trains/video/best/extra-cover.mp4" type="video/mp4" />
                     </video>
@@ -4005,7 +4005,7 @@
           </div>
         </header>
         <div class="container">
-          <ul class="list slider-best">
+          <ul class="list slider-best best__slider">
             <li class="slider-best__item">
               <div class="slider-best__title-block">
                 <div class="slider-best__title">
@@ -4014,189 +4014,210 @@
                     <span class="title-main__last">фитнесс-зала</span>
                   </h2>
                 </div>
-                <svg class="decorative-icon slider-best__decoration" width="81" height="14" role="img"
-                  aria-label="Разделитель" focusable="false">
-                  <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-divider-basic"></use>
-                </svg>
-                <h3 class="title title-secondary slider-best__title">
-                  <span>
-                    Открывая фитнесс-зал прежде всего стоит учесть интенсивные нагрузки на тренажеры в течении <nobr>8
-                      - 24 часов</nobr>.
-                  </span>
-                </h3>
               </div>
-              <div class="image-block slider-best__image-block">
-                <picture>
-                  <source type="image/webp"
-                    srcset="/i/media/stat/prof-trains/img/best/fitness-cover.webp 1x, /i/media/stat/prof-trains/img/best/fitness-cover@2x.webp 2x">
-                  <img src="/i/media/stat/prof-trains/img/best/fitness-cover.jpg"
-                    srcset="/i/media/stat/prof-trains/img/best/fitness-cover@2x.jpg 2x"
-                    alt="Сильный спортсмен качает мышцы"></img>
-                </picture>
+              <div class="slider-best__content">
+                <div class="slider-best__cover">
+                  <svg class="decorative-icon slider-best__decoration" width="81" height="14" role="img"
+                    aria-label="Разделитель" focusable="false">
+                    <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-divider-basic"></use>
+                  </svg>
+                  <h3 class="title title-secondary slider-best__title">
+                    <span>
+                      Открывая фитнесс-зал прежде всего стоит учесть интенсивные нагрузки на тренажеры в течении <nobr>8
+                        - 24 часов</nobr>.
+                    </span>
+                  </h3>
+                  <div class="image-block slider-best__image-block">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="/i/media/stat/prof-trains/img/best/fitness-cover-desk.webp 1x, /i/media/stat/prof-trains/img/best/fitness-cover-desk@2x.webp 2x">
+                      <source type="image/webp"
+                        srcset="/i/media/stat/prof-trains/img/best/fitness-cover.webp 1x, /i/media/stat/prof-trains/img/best/fitness-cover@2x.webp 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="/i/media/stat/prof-trains/img/best/fitness-cover-desk.jpg 1x, /i/media/stat/prof-trains/img/best/fitness-cover-desk@2x.jpg 2x">
+                      <img src="/i/media/stat/prof-trains/img/best/fitness-cover.jpg"
+                        srcset="/i/media/stat/prof-trains/img/best/fitness-cover@2x.jpg 2x"
+                        alt="Сильный спортсмен качает мышцы"></img>
+                    </picture>
+                  </div>
+                </div>
+                <div class="slider-best__description">
+                  <ul class="list accordion accordion-best slider-best__accordion columns columns--two">
+                    <li class="ac columns__item">
+                      <h3 class="title ac-header">
+                        <button class="ac-trigger accordion__number-title">
+                          <span class="accordion__number">2|1</span>
+                          <span class="accordion__title">
+                            Надежность
+                          </span>
+                        </button>
+                      </h3>
+                      <div class="ac-panel">
+                        <p class="text text-main">
+                          Фитнес-зал предполагает большую проходимость людей, многочасовую работу и интенсивные нагрузки
+                          на тренажеры.
+                        </p>
+                        <p class="text text-main">
+                          Поэтому мы предлагаем самые износостойкие и мультифункциональные pro-тренажеры брендов -
+                          <span class="text-main text-main--accent">Matrix, Svensson Industrial, Bronze Gym, Precor,
+                            Spirit Fitness</span>
+                        </p>
+                    </li>
+                    <li class="ac columns__item">
+                      <h3 class="title ac-header">
+                        <button class="ac-trigger accordion__number-title">
+                          <span class="accordion__number">2|2</span>
+                          <span class="accordion__title">
+                            удобство и безопасность
+                          </span>
+                        </button>
+                      </h3>
+                      <div class=" ac-panel">
+                        <p class="text text-main">
+                          <span class="text-main text-main--accent">Силовые тренажеры</span>
+                          - значимая составляющая фитнесс-зала.
+                        </p>
+                        <p class="text text-main">
+                          Укомплектовывая <span class="text-main text-main--accent">Силовые тренажеры</span> и тренажеры
+                          <span class="text-main text-main--accent">со свободными весами</span> железом обратите
+                          внимание на удобность хвата,
+                          наличие страховочных элементов и устойчивость к ударам.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="ac columns__item">
+                      <h3 class="title ac-header">
+                        <button class="ac-trigger accordion__number-title">
+                          <span class="accordion__number">2|3</span>
+                          <span class="accordion__title">
+                            солидные габариты
+                          </span>
+                        </button>
+                      </h3>
+                      <div class=" ac-panel">
+                        <p class="text text-main">
+                          Мы советуем выбирать наиболее габаритные <span
+                            class="text-main text-main--accent">кардиотренажеры</span>, т.к. беговые дорожки обладают
+                          широким беговым полотном, а эллипсы и велотренажеры наиболее устойчивы.
+                        </p>
+                        <p class="text text-main">
+                          Так же преимуществом габаритных тренажеров является мощный мотор с охлаждением, и вес
+                          пользователя <span class="text-main text-main--accent">до 200 кг</span>.
+                        </p>
+                      </div>
+                    </li>
+                    <li class="ac columns__item">
+                      <h3 class="title ac-header">
+                        <button class="ac-trigger accordion__number-title">
+                          <span class="accordion__number">2|4</span>
+                          <span class="accordion__title">
+                            выгодные решения
+                          </span>
+                        </button>
+                      </h3>
+                      <div class=" ac-panel">
+                        <p class="text text-main">
+                          Открытие фитнесс-зала и закупка оборудования для фитнеса является дорогостоящим проектом.
+                          Поэтому мы предлагаем дополнительные скидки, которые вы можете обсудить с менеджером компании.
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="slider-best__communicate ">
+                    <div class="slider-best__button-wrapper">
+                      <a href="" class="link button-basic button-basic--accent">
+                        Рассчитать проект
+                      </a>
+                    </div>
+                    <div class="slider-best__button-wrapper">
+                      <a href="" class="link button-link button-link--arrow button-link--accent">ПРИМЕР
+                        ПОДБОРА в PDF</a>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <ul class="list accordion accordion-best slider-best__accordion">
-                <li class="ac">
-                  <h3 class="title ac-header">
-                    <button class="ac-trigger accordion__number-title">
-                      <span class="accordion__number">2|1</span>
-                      <span class="accordion__title">
-                        Надежность
-                      </span>
-                    </button>
-                  </h3>
-                  <div class="ac-panel">
-                    <p class="text text-main">
-                      Фитнес-зал предполагает большую проходимость людей, многочасовую работу и интенсивные нагрузки
-                      на тренажеры.
-                    </p>
-                    <p class="text text-main">
-                      Поэтому мы предлагаем самые износостойкие и мультифункци- ональные pro-тренажеры брендов -
-                      <span class="text-main text-main--accent">Matrix, Svensson Industrial, Bronze Gym, Precor,
-                        Spirit Fitness</span>
-                    </p>
-                </li>
-                <li class="ac">
-                  <h3 class="title ac-header">
-                    <button class="ac-trigger accordion__number-title">
-                      <span class="accordion__number">2|2</span>
-                      <span class="accordion__title">
-                        удобство и безопасность
-                      </span>
-                    </button>
-                  </h3>
-                  <div class=" ac-panel">
-                    <p class="text text-main">
-                      <span class="text-main text-main--accent">Силовые тренажеры</span>
-                      - значимая составляющая фитнесс-зала.
-                    </p>
-                    <p class="text text-main">
-                      Укомплектовывая <span class="text-main text-main--accent">Силовые тренажеры</span> и тренажеры
-                      <span class="text-main text-main--accent">со свободными весами</span> железом обратите внимание
-                      на удобность хвата,
-                      наличие страховочных элементов и устойчивость к ударам.
-                    </p>
-                  </div>
-                </li>
-                <li class="ac">
-                  <h3 class="title ac-header">
-                    <button class="ac-trigger accordion__number-title">
-                      <span class="accordion__number">2|3</span>
-                      <span class="accordion__title">
-                        солидные габариты
-                      </span>
-                    </button>
-                  </h3>
-                  <div class=" ac-panel">
-                    <p class="text text-main">
-                      Мы советуем выбирать наиболее габаритные <span
-                        class="text-main text-main--accent">кардиотренажеры</span>, т.к. беговые дорожки обладают
-                      широким беговым полотном, а эллипсы и велотренажеры наиболее устойчивы.
-                    </p>
-                    <p class="text text-main">
-                      Так же преимуществом габаритных тренажеров является мощный мотор с охлаждением, и вес
-                      пользователя <span class="text-main text-main--accent">до 200 кг</span>.
-                    </p>
-                  </div>
-                </li>
-                <li class="ac">
-                  <h3 class="title ac-header">
-                    <button class="ac-trigger accordion__number-title">
-                      <span class="accordion__number">2|4</span>
-                      <span class="accordion__title">
-                        выгодные решения
-                      </span>
-                    </button>
-                  </h3>
-                  <div class=" ac-panel">
-                    <p class="text text-main">
-                      Открытие фитнесс-зала и закупка оборудования для фитнеса является дорогостоящим проектом.
-                      Поэтому мы предлагаем дополнительные скидки, которые вы можете обсудить с менеджером компании.
-                    </p>
-                  </div>
-                </li>
-              </ul>
             </li>
             <li class="slider-best__item">2 слайд</li>
             <li class="slider-best__item">3 слайд</li>
           </ul>
-          <a href=""
-            class="link button-link button-link--arrow button-link--accent button-link--center slider-best__button">ПРИМЕР
-            ПОДБОРА в PDF</a>
-          <div class="img-sticker img-sticker--dark slider-best__image-extra">
-            <div class="img-sticker__img-block">
-              <picture>
-                <source type="image/webp"
-                  srcset="/i/media/stat/prof-trains/img/best/demonstration.webp 1x, /i/media/stat/prof-trains/img/best/demonstration@2x.webp 2x">
-                <img src="/i/media/stat/prof-trains/img/best/demonstration.jpg"
-                  srcset="/i/media/stat/prof-trains/img/best/demonstration.jpg 2x" alt="Занятия со штангой"></img>
-              </picture>
+
+          <div class="best-extra-info">
+            <div class="img-sticker img-sticker--dark best-extra-info__image-block">
+              <div class="img-sticker__img-block">
+                <picture>
+                  <source type="image/webp"
+                    srcset="/i/media/stat/prof-trains/img/best/demonstration.webp 1x, /i/media/stat/prof-trains/img/best/demonstration@2x.webp 2x">
+                  <img src="/i/media/stat/prof-trains/img/best/demonstration.jpg"
+                    srcset="/i/media/stat/prof-trains/img/best/demonstration.jpg 2x" alt="Занятия со штангой"></img>
+                </picture>
+              </div>
+              <svg class="img-sticker__icon" width="183" height="181" role="img" aria-label="FitnessLook"
+                focusable="false">
+                <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-img"></use>
+              </svg>
             </div>
-            <svg class="img-sticker__icon" width="183" height="181" role="img" aria-label="FitnessLook"
-              focusable="false">
-              <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-img"></use>
-            </svg>
-          </div>
-          <h3 class="title title-secondary slider-best__title-extra">
-            2D проект - <span class="title-secondary--accent">бесплатно!</span>
-          </h3>
-          <div class="slider-with-button slider-mob-best">
-            <div class="slider-with-button__buttons slider-mob-best__buttons">
-              <button class="button button-slider button-slider--prev" type="button">
-                <svg class="button-slider__icon" width="6" height="9" role="img"
-                  aria-label="Переход к предыдущему слайду" focusable="false">
-                  <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
-                </svg>
-              </button>
-              <button class="button button-slider button-slider--next" type="button">
-                <svg class="button-slider__icon" width="6" height="9" role="img"
-                  aria-label="Переход к следующему слайду" focusable="false">
-                  <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
-                </svg>
-              </button>
+            <h3 class="title title-secondary best-extra-info__title">
+              2D проект - <span class="title-secondary--accent">бесплатно!</span>
+            </h3>
+            <div class="slider-with-button slider-with-button--simple best-extra-info__slider">
+              <div class="slider-with-button__buttons best-extra-info__slider-buttons" id="slider-best-small-buttons">
+                <button class="button button-slider button-slider--prev" type="button">
+                  <svg class="button-slider__icon" width="6" height="9" role="img"
+                    aria-label="Переход к предыдущему слайду" focusable="false">
+                    <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+                  </svg>
+                </button>
+                <button class="button button-slider button-slider--next" type="button">
+                  <svg class="button-slider__icon" width="6" height="9" role="img"
+                    aria-label="Переход к следующему слайду" focusable="false">
+                    <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+                  </svg>
+                </button>
+              </div>
+              <ul class="list slider-with-button__slider" id="slider-best-small">
+                <li class="slider-with-button__item">
+                  <div class="slider-with-button__text-block">
+                    <p class="text text-main">
+                      2D - проект поможет вам определить количество тренажеров, которые вы можете разместить в зале, и
+                      наиболее эргономично распределить их по площади спортивного помещения.
+                    </p>
+                  </div>
+                  <div class="slider-with-button__contact-block">
+                    <a href="" class="link button-basic button-basic--accent">
+                      Рассчитать проект
+                    </a>
+                  </div>
+                </li>
+                <li class="slider-with-button__item">
+                  <div class="slider-with-button__text-block">
+                    <p class="text text-main">
+                      Разрабатывая проект расстановки тренажеров мы учитываем удобство тренировок, и технику
+                      безопасности
+                      в помещении зала.
+                    </p>
+                  </div>
+                  <div class="contact-block slider-with-button__footer">
+                    <a href="" class="link link-main link-main--bold">@FL - PRO</a>
+                    <ul class="list contact-block__social-block">
+                      <li>
+                        <a href="" class="link button-social">
+                          <svg class="icon" width="29" height="30" role="img" aria-label="Звоните" focusable="false">
+                            <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#phone-icon"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="" class="link button-social button-social--connect">
+                          <svg class="icon" width="17" height="14" role="img" aria-label="Пишите" focusable="false">
+                            <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#connect-icon"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <ul class="list slider-with-button__slider slider-mob-best__slider">
-              <li class="slider-with-button__item">
-                <div class="slider-with-button__text-block">
-                  <p class="text text-main">
-                    2D - проект поможет вам определить количество тренажеров, которые вы можете разместить в зале, и
-                    наиболее эргономично распределить их по площади спортивного помещения.
-                  </p>
-                </div>
-                <div class="slider-with-button__contact-block">
-                  <a href="" class="link button-basic button-basic--accent">
-                    Рассчитать проект
-                  </a>
-                </div>
-              </li>
-              <li class="slider-with-button__item">
-                <div class="slider-with-button__text-block">
-                  <p class="text text-main">
-                    Разрабатывая проект расстановки тренажеров мы учитываем удобство тренировок, и технику
-                    безопасности
-                    в помещении зала.
-                  </p>
-                </div>
-                <div class="contact-block slider-with-button__footer">
-                  <a href="" class="link link-main link-main--bold">@FL - PRO</a>
-                  <ul class="list contact-block__social-block">
-                    <li>
-                      <a href="" class="link button-social">
-                        <svg class="icon" width="29" height="30" role="img" aria-label="Звоните" focusable="false">
-                          <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#phone-icon"></use>
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="" class="link button-social button-social--connect">
-                        <svg class="icon" width="17" height="14" role="img" aria-label="Пишите" focusable="false">
-                          <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#connect-icon"></use>
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
           </div>
         </div>
       </section>
@@ -4221,7 +4242,7 @@
               <h3 class="title subtitle subtitle--accent slider-questions__title">
                 вопросы: фитнес-зал
               </h3>
-              <ul class="list accordion accordion-questions accordion--decor questions-block">
+              <ul class="list accordion accordion-main accordion--decor questions-block">
                 <li class="ac">
                   <h3 class="title ac-header">
                     <button class="ac-trigger accordion__number-title">
@@ -4771,7 +4792,8 @@
     <li class="projects-gallery__item project-full">
       <h4 class="title title-info project-full__title">
       </h4>
-      <ul class="list accordion accordion--decor accordion--decor-image projects-list" id="projects-list">
+      <ul class="list accordion accordion-main accordion--decor accordion--decor-image projects-list"
+        id="projects-list">
         <!-- Projects -->
       </ul>
     </li>

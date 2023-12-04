@@ -5,6 +5,7 @@
   position: relative;
   transition: var(--transition-main);
   color: var(--cl-main);
+  white-space: nowrap;
 
   &--center {
     margin: 0 auto;

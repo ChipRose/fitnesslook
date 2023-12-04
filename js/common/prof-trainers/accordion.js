@@ -6,10 +6,21 @@ const settingAccordion = (props) => {
 }
 
 const settingAccordionAdaptive = (cb) => {
-  if (window.innerWidth < 768) { cb.closeAll() } else { cb.openAll() };
+  let newAccordion = cb;
+  if (Array.isArray(cb)) newAccordion = cb[0]
+
+  if (window.innerWidth < 768) {
+    newAccordion.closeAll()
+  } else {
+    newAccordion.openAll()
+  };
 
   window.addEventListener('resize', () => {
-    if (window.innerWidth < 768) { cb.closeAll() } else { cb.openAll() };
+    if (window.innerWidth < 768) {
+      newAccordion.closeAll()
+    } else {
+      newAccordion.openAll()
+    };
   });
 }
 

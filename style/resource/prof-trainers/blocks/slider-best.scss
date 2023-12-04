@@ -1,3 +1,20 @@
+.slider-best__content {
+  @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-big);
+    display: flex;
+  }
+}
+
+.slider-best__cover {
+  @media (min-width: $tablet-width) {
+    margin-right: var(--indent-big);
+    flex: 0 0 270px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .slider-best__title {
   margin-bottom: var(--indent-main);
   display: flex;
@@ -14,24 +31,59 @@
 
 .slider-best__image-block {
   margin-bottom: var(--indent-main);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    height: auto;
+  }
 }
 
 .slider-best__accordion {
   margin-bottom: var(--indent-main);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.slider-best__communicate {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.slider-best__button-wrapper {
+  margin: 0 auto;
+  width: fit-content;
+
+  &:first-child {
+    display: none;
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 100%;
+    flex: 0 0 calc(50% - var(--indent-main));
+  }
+}
+
+.slider-best__calc-button {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }
 
 .slider-best__button {
-  margin-bottom: var(--indent-main);
-}
+  margin: 0 auto var(--indent-main);
 
-.slider-best__image-extra {
-  margin-bottom: var(--indent-big);
-}
-
-.slider-best__title-extra {
-  margin-bottom: var(--indent-main);
-}
-
-.best__text-extra {
-  margin-bottom: var(--indent-main);
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }

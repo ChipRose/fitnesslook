@@ -28,11 +28,14 @@ const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-proj
 setPagination(progectsGallery);
 
 
-const orderMobSlider = setSmallSlider('.slider-mob-order__slider', '.slider-mob-order__buttons');
+const orderMobSlider = setSmallSlider('#slider-order-small', '#slider-order-small-buttons');
 settingSliderAdaptive (orderMobSlider);
 
 setSlider('.slider-questions', '.questions__buttons-block');
-setSmallSlider('.slider-mob-best__slider', '.slider-mob-best__buttons');
+
+const bestSmallSlider=setSmallSlider('#slider-best-small', '#slider-best-small-buttons');
+settingSliderAdaptive (bestSmallSlider);
+
 setSmallSlider('.slider-mob-why__slider', '.slider-mob-why__buttons');
 setSmallSlider('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
 
@@ -43,9 +46,12 @@ settingAccordionAdaptive(accordionIntro);
 const accordionAbout = new Accordion('.accordion-about', settingAccordion({showMultiple: true}));
 settingAccordionAdaptive(accordionAbout);
 
+const accordionBest =  new Accordion(Array.from(document.querySelectorAll('.accordion-best')), settingAccordion({showMultiple: true}));
+settingAccordionAdaptive(accordionBest);
+
+new Accordion(Array.from(document.querySelectorAll('.accordion-main')));
 
 
 // const accordionQuestions =  new Accordion('.accordion-questions', settingAccordion());
-// const accordionBest =  new Accordion('.accordion-best', settingAccordion());
 
 

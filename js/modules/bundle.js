@@ -3605,17 +3605,19 @@ const settingAccordion = props => {
   };
 };
 const settingAccordionAdaptive = cb => {
+  let newAccordion = cb;
+  if (Array.isArray(cb)) newAccordion = cb[0];
   if (window.innerWidth < 768) {
-    cb.closeAll();
+    newAccordion.closeAll();
   } else {
-    cb.openAll();
+    newAccordion.openAll();
   }
   ;
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
-      cb.closeAll();
+      newAccordion.closeAll();
     } else {
-      cb.openAll();
+      newAccordion.openAll();
     }
     ;
   });
@@ -3767,10 +3769,11 @@ const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlide
   loop: false
 });
 (0,_slider_pagination_js__WEBPACK_IMPORTED_MODULE_7__.setPagination)(progectsGallery);
-const orderMobSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-order__slider', '.slider-mob-order__buttons');
+const orderMobSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('#slider-order-small', '#slider-order-small-buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.settingSliderAdaptive)(orderMobSlider);
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('.slider-questions', '.questions__buttons-block');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-best__slider', '.slider-mob-best__buttons');
+const bestSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('#slider-best-small', '#slider-best-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.settingSliderAdaptive)(bestSmallSlider);
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-why__slider', '.slider-mob-why__buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
 const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_5__('.accordion-intro', (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)({
@@ -3781,9 +3784,13 @@ const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_5__('.accordion
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordionAdaptive)(accordionAbout);
+const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)({
+  showMultiple: true
+}));
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordionAdaptive)(accordionBest);
+new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.accordion-main')));
 
 // const accordionQuestions =  new Accordion('.accordion-questions', settingAccordion());
-// const accordionBest =  new Accordion('.accordion-best', settingAccordion());
 })();
 
 /******/ })()
