@@ -2,7 +2,7 @@ import projects from '../../../json/projects.json';
 import hits from '../../../json/trainers.json';
 import { renderProjectsGallery } from './projects.js';
 import { renderProductsGallery } from './products.js';
-import { setSlider, setSmallSlider } from './slider.js';
+import { setSlider, setSmallSlider, settingSliderAdaptive } from './slider.js';
 import Accordion from 'accordion-js';
 import {settingAccordion, settingAccordionAdaptive} from './accordion.js';
 import { setPagination } from './slider-pagination.js'
@@ -29,6 +29,7 @@ setPagination(progectsGallery);
 
 
 const orderMobSlider = setSmallSlider('.slider-mob-order__slider', '.slider-mob-order__buttons');
+settingSliderAdaptive (orderMobSlider);
 
 setSlider('.slider-questions', '.questions__buttons-block');
 setSmallSlider('.slider-mob-best__slider', '.slider-mob-best__buttons');

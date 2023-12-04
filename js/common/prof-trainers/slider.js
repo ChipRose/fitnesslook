@@ -21,4 +21,24 @@ const setSmallSlider = (container, controlsContainer, props) => {
   })
 }
 
-export { setSlider, setSmallSlider };
+const settingSliderAdaptive = (cb) => {
+  let newSlider=cb;
+  if (window.innerWidth < 768) {
+    if(!newSlider.isOn)newSlider = cb.rebuild()
+
+  }
+  else {
+    newSlider.isOn&&newSlider.destroy();
+  };
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+      if(!newSlider.isOn)newSlider = cb.rebuild()
+    }
+    else {
+      newSlider.isOn&&newSlider.destroy();
+    };
+  });
+}
+
+export { setSlider, setSmallSlider, settingSliderAdaptive };

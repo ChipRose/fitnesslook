@@ -19,12 +19,32 @@
   min-height: 430px;
   box-sizing: border-box;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+.best__main-cover {
+  @media (min-width: $tablet-width) {
+    margin-right: var(--indent-main);
+    flex: 0 0 70%;
+    box-sizing: border-box;
+  }
 }
 
 .best__extra-cover {
   position: absolute;
   right: 0;
   bottom: 0;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+  }
 }
 
 .best__decoration {

@@ -1,3 +1,10 @@
 .container {
+  margin: 0 auto;
   padding: 0 20px;
+  min-width: $mobile-width;
+  max-width: $max-width;
+}
+
+.container--full {
+  padding: 0;
 }

@@ -14,4 +14,4 @@ const settingAccordionAdaptive = (cb) => {
 }
 
 
-export  {settingAccordion, settingAccordionAdaptive};
+export { settingAccordion, settingAccordionAdaptive };

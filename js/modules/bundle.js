@@ -104,7 +104,8 @@ const renderProductsGallery = products => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   setSlider: () => (/* binding */ setSlider),
-/* harmony export */   setSmallSlider: () => (/* binding */ setSmallSlider)
+/* harmony export */   setSmallSlider: () => (/* binding */ setSmallSlider),
+/* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive)
 /* harmony export */ });
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 
@@ -125,6 +126,23 @@ const setSmallSlider = (container, controlsContainer, props) => {
     controlsContainer,
     gutter: 20,
     ...props
+  });
+};
+const settingSliderAdaptive = cb => {
+  let newSlider = cb;
+  if (window.innerWidth < 768) {
+    if (!newSlider.isOn) newSlider = cb.rebuild();
+  } else {
+    newSlider.isOn && newSlider.destroy();
+  }
+  ;
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+      if (!newSlider.isOn) newSlider = cb.rebuild();
+    } else {
+      newSlider.isOn && newSlider.destroy();
+    }
+    ;
   });
 };
 
@@ -3750,6 +3768,7 @@ const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlide
 });
 (0,_slider_pagination_js__WEBPACK_IMPORTED_MODULE_7__.setPagination)(progectsGallery);
 const orderMobSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-order__slider', '.slider-mob-order__buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.settingSliderAdaptive)(orderMobSlider);
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('.slider-questions', '.questions__buttons-block');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-best__slider', '.slider-mob-best__buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-why__slider', '.slider-mob-why__buttons');

@@ -29,4 +29,8 @@
   padding-right: var(--indent-big);
   margin-bottom: var(--indent-main);
   min-height: 100px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+  }
 }

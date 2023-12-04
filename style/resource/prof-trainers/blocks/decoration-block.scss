@@ -3,23 +3,43 @@
 
   @media (min-width:$tablet-width) {
     display: flex;
+    justify-content: space-between;
   }
 }
 
 .decoration-block__item {
   @media (min-width:$tablet-width) {
-    margin-right: calc(2 * var(--indent-main));
-    margin-bottom: var(--indent-big);
     flex: 0 0 30%;
+    margin-right: var(--indent-big);
 
-    &:nth-child(3n){
+    &:nth-child(3n) {
       margin-right: 0;
     }
   }
 }
 
-.decoration-block.decoration-block--right {
-  @media (min-width:$tablet-width) {
-    justify-content: flex-end;
+.decoration-block.decoration-block--two {
+
+  .decoration-block__item {
+    @media (min-width:$tablet-width) {
+      flex: 0 0 calc(50% - var(--indent-main));
+      margin-right: var(--indent-big);
+
+      &:nth-child(3n) {
+        margin-right: var(--indent-big);
+      }
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.decoration-block.decoration-block--dark {
+  svg {
+    @media (min-width:$tablet-width) {
+      fill: var(--cl-main);
+    }
   }
 }
