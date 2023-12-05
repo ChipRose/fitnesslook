@@ -11,6 +11,17 @@
 
 @media (min-width: $tablet-width) {
   :root {
+    --fz-main: 15px;
+    --lh-main: 120%;
+    --fz-medium: 18px;
+    --lh-medium: 120%;
+    --fz-big: 45px;
+    --lh-big: 120%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  :root {
     --fz-main: 16px;
     --lh-main: 120%;
     --fz-medium: 18px;
