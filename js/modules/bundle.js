@@ -3605,6 +3605,7 @@ const settingAccordion = props => {
   };
 };
 const settingAccordionAdaptive = cb => {
+  console.log(cb);
   let newAccordion = cb;
   if (Array.isArray(cb)) newAccordion = cb[0];
   if (window.innerWidth < 768) {
@@ -3621,56 +3622,6 @@ const settingAccordionAdaptive = cb => {
     }
     ;
   });
-};
-
-
-/***/ }),
-/* 9 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   setPagination: () => (/* binding */ setPagination)
-/* harmony export */ });
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(10);
-
-const setPagination = slider => {
-  const sliderProjectsButtons = document.querySelector('.slider-projects__buttons');
-  const slideNumber = document.querySelector('.slider-projects-index');
-  const slidePrevNumber = slideNumber.querySelector('#slider-projects-prev');
-  const slideCurrentNumber = slideNumber.querySelector('#slider-projects-current');
-  const slideNextNumber = slideNumber.querySelector('#slider-projects-next');
-  slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).current);
-  slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).prev);
-  slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).next);
-  sliderProjectsButtons.addEventListener('click', () => {
-    slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).current);
-    slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).prev);
-    slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).next);
-  });
-};
-
-
-/***/ }),
-/* 10 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   formatNumber: () => (/* binding */ formatNumber),
-/* harmony export */   getProjectsIndex: () => (/* binding */ getProjectsIndex)
-/* harmony export */ });
-const getProjectsIndex = slider => {
-  return {
-    current: slider.getInfo().displayIndex,
-    next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? '...' : slider.getInfo().displayIndex + 1,
-    prev: slider.getInfo().displayIndex === 1 ? '...' : slider.getInfo().displayIndex - 1
-  };
-};
-const formatNumber = number => {
-  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
 };
 
 
@@ -3743,7 +3694,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 /* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
-/* harmony import */ var _slider_pagination_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
 
 
 
@@ -3751,31 +3701,39 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+// import { setPagination } from './slider-pagination.js'
 
-(0,_projects_js__WEBPACK_IMPORTED_MODULE_2__.renderProjectsGallery)(_json_projects_json__WEBPACK_IMPORTED_MODULE_0__);
+// renderProjectsGallery(projects);
 (0,_products_js__WEBPACK_IMPORTED_MODULE_3__.renderProductsGallery)(_json_trainers_json__WEBPACK_IMPORTED_MODULE_1__);
 _json_trainers_json__WEBPACK_IMPORTED_MODULE_1__.forEach(({
   id
 }) => {
   (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`);
 });
+
+// Sliders
 if (document.querySelector('.slider-intro') && document.querySelector('.intro__buttons-block')) {
   (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('.slider-intro', '.intro__buttons-block');
 }
 if (document.querySelector('.slider-best') && document.querySelector('.best__buttons-block')) {
   (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('.slider-best', '.best__buttons-block');
 }
-const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-projects__slider', '.slider-projects__buttons', {
-  loop: false
-});
-(0,_slider_pagination_js__WEBPACK_IMPORTED_MODULE_7__.setPagination)(progectsGallery);
+
+// const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-projects__buttons', { loop: false });
+// setPagination(progectsGallery);
+
 const orderMobSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('#slider-order-small', '#slider-order-small-buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.settingSliderAdaptive)(orderMobSlider);
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('.slider-questions', '.questions__buttons-block');
 const bestSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('#slider-best-small', '#slider-best-small-buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.settingSliderAdaptive)(bestSmallSlider);
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-why__slider', '.slider-mob-why__buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
+const whySmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)('#slider-why-small', '#slider-why-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.settingSliderAdaptive)(whySmallSlider);
+
+// setSmallSlider('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
+
+// Accordions
+
 const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_5__('.accordion-intro', (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)({
   showMultiple: true
 }));
@@ -3788,9 +3746,12 @@ const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(d
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordionAdaptive)(accordionBest);
+const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)({
+  showMultiple: true
+}));
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordionAdaptive)(accordionGarantee);
 new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.accordion-main')));
-
-// const accordionQuestions =  new Accordion('.accordion-questions', settingAccordion());
+new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)());
 })();
 
 /******/ })()

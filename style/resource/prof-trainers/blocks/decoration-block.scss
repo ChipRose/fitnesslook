@@ -36,6 +36,19 @@
   }
 }
 
+.decoration-block--narrow.decoration-block {
+  .decoration-block__item {
+    @media (min-width:$tablet-width) {
+      flex: 0 0 33%;
+      margin-right: 0 !important;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
 .decoration-block.decoration-block--dark {
   svg {
     @media (min-width:$tablet-width) {

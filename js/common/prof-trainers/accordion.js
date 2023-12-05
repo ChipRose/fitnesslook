@@ -6,6 +6,7 @@ const settingAccordion = (props) => {
 }
 
 const settingAccordionAdaptive = (cb) => {
+  console.log(cb);
   let newAccordion = cb;
   if (Array.isArray(cb)) newAccordion = cb[0]
 

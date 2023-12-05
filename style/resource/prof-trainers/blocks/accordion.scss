@@ -1,6 +1,7 @@
 .accordion .ac-trigger {
   padding: var(--indent-basic) var(--indent-big) var(--indent-basic) 0;
   text-transform: uppercase;
+  font-size: var(--fz-main);
   color: inherit;
 
   &::after {
@@ -26,8 +27,10 @@
 }
 
 .accordion__number {
+  padding-top: 0;
   margin-right: var(--indent-basic);
   font-family: 'Natasha', Arial, sans-serif;
+  vertical-align: middle;
 }
 
 .accordion .ac.is-active>.ac-header .ac-trigger {
@@ -48,12 +51,17 @@
   box-sizing: border-box;
 }
 
-.accordion--decor-image.accordion .accordion__number-title {
+.accordion--decor.accordion .accordion__number-title {
+  display: flex;
   align-items: center;
 }
 
 .accordion .accordion__number-title {
   display: flex;
+}
+
+.accordion--decor.accordion .accordion__number {
+  padding-top: 5px;
 }
 
 .accordion--decor.accordion .ac-trigger {

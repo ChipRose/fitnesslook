@@ -37,7 +37,9 @@
 
 .slider-with-button.slider-with-button--simple {
   .slider-with-button__buttons {
-    display: none;
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 
   .slider-with-button__slider {
@@ -64,6 +66,14 @@
       @media (min-width: $tablet-width) {
         flex: 1 1 auto;
       }
+    }
+  }
+}
+
+.slider-with-button.slider-with-button--nobutton-desk {
+  .slider-with-button__buttons {
+    @media (min-width: $tablet-width) {
+      display: none;
     }
   }
 }

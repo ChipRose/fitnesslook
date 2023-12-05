@@ -4347,8 +4347,8 @@
               <span class="title-main__last">FITNESSLOOK</span>
             </h2>
           </div>
-          <div class="slider-with-button slider-with-button--image slider-mob-why">
-            <div class="slider-with-button__buttons slider-mob-why__buttons">
+          <div class="slider-with-button slider-with-button--image slider-with-button--nobutton-desk">
+            <div class="slider-with-button__buttons" id="slider-why-small-buttons">
               <button class="button button-slider button-slider--prev" type="button">
                 <svg class="button-slider__icon" width="6" height="9" role="img"
                   aria-label="Переход к предыдущему слайду" focusable="false">
@@ -4362,8 +4362,8 @@
                 </svg>
               </button>
             </div>
-            <ul class="list slider-with-button__slider slider-why slider-mob-why__slider">
-              <li class="slider-with-button__item">
+            <ul class="list slider-with-button__slider slider-why" id="slider-why-small">
+              <li class="slider-with-button__item slider-why__item">
                 <div class="slider-why__image-block">
                   <div class="image-block">
                     <picture>
@@ -4397,7 +4397,7 @@
                 </svg>
                 <a href="" class="link button-link slider-why__link">Сертификаты>></a>
               </li>
-              <li class="slider-with-button__item">
+              <li class="slider-with-button__item slider-why__item">
                 <div class="slider-why__image-block">
                   <div class="image-block">
                     <picture>
@@ -4426,7 +4426,7 @@
                 </svg>
                 <a href="" class="link button-link slider-why__link">Условия и сроки доставки >></a>
               </li>
-              <li class="slider-with-button__item">
+              <li class="slider-with-button__item slider-why__item">
                 <div class="slider-why__image-block">
                   <div class="image-block">
                     <picture>
@@ -4612,7 +4612,7 @@
       <a id="garantee"></a>
       <section class="section garantee page-prof-trainers__garantee">
         <div class="container container--full">
-          <div class="image-block image-block--frame">
+          <div class="image-block image-block--frame garantee__image-block">
             <picture>
               <source type="image/webp"
                 srcset="/i/media/stat/prof-trains/img/garantee/cover.webp 1x, /i/media/stat/prof-trains/img/garantee/cover@2x.webp 2x">
@@ -4625,77 +4625,132 @@
                 <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#frame"></use>
               </svg>
             </div>
-            <p class="image-block__text">
+            <p class="text image-block__text">
               для фитнес залов
             </p>
           </div>
         </div>
         <div class="container">
+          <div class="garantee-panel garantee__decoration">
+            <div class="garantee-panel__item">
+              <svg class="" width="81" height="14" role="img" aria-label="Разделитель" focusable="false">
+                <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-divider-basic"></use>
+              </svg>
+            </div>
+            <div class="garantee-panel__item">
+              <svg class="" width="81" height="14" role="img" aria-label="Разделитель" focusable="false">
+                <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-divider-basic"></use>
+              </svg>
+            </div>
+          </div>
           <ul class="list accordion garantee-list">
-            <li class="ac">
-              <h3 class="title ac-header">
-                <button class="ac-trigger">
+            <li class="ac garantee-list__item">
+              <h3 class="title ac-header garantee-list__header">
+                <button class="ac-trigger garantee-list__button">
                   гАРАНТИЙНОЕ ОБСЛУЖИВАНИЕ
                 </button>
               </h3>
               <div class="ac-panel">
                 <div class="garantee-list__description">
-                  <p class="text text-main">
-                    Все оборудование, представленное в FitnessLook, сертифицировано и имеет гарантийный срок.
-                  </p>
-                  <p class="text text-main">
-                    Гарантийный срок обеспечит вам ремонт, замену тренажера или возврат денежных средств в случае
-                    наступления гарантийного случая.
-                  </p>
-                  <p class="text text-main">
-                    Гарантийным случаем является выявленный в ходе эксплуатации производственный дефект.
-                  </p>
-                  <p class="text text-main">
-                    Гарантийные обязательства выполняются сервисной службой дистрибьютора и собственной сервисной
-                    службой компании «FitnessLook».
-                  </p>
-                  <a href="" class="link button-link button-link--accent">Гарантийный талон>></a>
+                  <div class="columns columns--two">
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        Все оборудование, представленное в FitnessLook, сертифицировано и имеет гарантийный срок.
+                      </p>
+                      <p class="text text-main">
+                        Гарантийный срок обеспечит вам ремонт, замену тренажера или возврат денежных средств в случае
+                        наступления гарантийного случая.
+                      </p>
+                    </div>
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        Гарантийным случаем является выявленный в ходе эксплуатации производственный дефект.
+                      </p>
+                      <p class="text text-main">
+                        Гарантийные обязательства выполняются сервисной службой дистрибьютора и собственной сервисной
+                        службой компании «FitnessLook».
+                      </p>
+                      <a href="" class="link button-link button-link--accent">Гарантийный талон>></a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
-            <li class="ac">
-              <h3 class="title ac-header">
-                <button class="ac-trigger">
+            <li class="ac garantee-list__item">
+              <h3 class="title ac-header garantee-list__header">
+                <button class="ac-trigger garantee-list__button">
                   ПОСТгАРАНТИЙНОЕ ОБСЛУЖИВАНИЕ
                 </button>
               </h3>
               <div class="ac-panel">
                 <div class="garantee-list__description">
-                  <p class="text text-main">
-                    После окончания гарантийного периода и в течении срока службы оборудования компания FitnessLook,
-                    готова осуществить постгарантийное обслуживание - диагностика, поставка деталей, запасных частей,
-                    и ремонт оборудования. </p>
-                  <p class="text text-main">
-                    Постгарантийное обслуживание осуществляется за счет средств заказчика.
-                  </p>
+                  <div class="columns columns--two">
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        После окончания гарантийного периода и в течении срока службы оборудования компания FitnessLook
+                        готова осуществить постгарантийное обслуживание - диагностика, поставка деталей, запасных частей,
+                        и ремонт оборудования.
+                      </p>
+                    </div>
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        Постгарантийное обслуживание осуществляется за счет средств заказчика.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
-            <li class="ac">
-              <h3 class="title ac-header">
-                <button class="ac-trigger">
+            <li class="ac garantee-list__item">
+              <h3 class="title ac-header garantee-list__header">
+                <button class="ac-trigger garantee-list__button">
                   сЕРВИСНОЕ ОБСЛУЖИВАНИЕ
                 </button>
               </h3>
               <div class="ac-panel">
                 <div class="garantee-list__description">
-                  <p class="text text-main">
-                    В сервисное обслуживание входит диагностика, чистка от загрязнения узлов и механизмов
-                    оборудования, замена деталей, смазка, регулировка и настройка механических и электрических узлов.
-                  </p>
-                  <p class="text text-main">
-                    Проводя периодическое сервисное обслуживание вы минимизируете риски крупных поломок, и продлеваете
-                    срок экспуатации оборудования.
-                  </p>
+                  <div class="columns columns--two">
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        В сервисное обслуживание входит диагностика, чистка от загрязнения узлов и механизмов
+                        оборудования, замена деталей, смазка, регулировка и настройка механических и электрических узлов.
+                      </p>
+                    </div>
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        Проводя периодическое сервисное обслуживание вы минимизируете риски крупных поломок, и продлеваете
+                        срок экспуатации оборудования.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </li>
           </ul>
+          <div class="garantee-panel garantee__footer">
+            <div class="garantee-panel__item">
+              <a href="" class="link button-basic button-basic--accent">Заказать звонок</a>
+            </div>
+            <div class="contact-block garantee-panel__item">
+              <a href="" class="link link-main link-main--bold">@FL - PRO</a>
+              <ul class="list contact-block__social-block">
+                <li>
+                  <a href="" class="link button-social">
+                    <svg class="icon" width="29" height="30" role="img" aria-label="Звоните" focusable="false">
+                      <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#phone-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="link button-social button-social--connect">
+                    <svg class="icon" width="17" height="14" role="img" aria-label="Пишите" focusable="false">
+                      <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#connect-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
