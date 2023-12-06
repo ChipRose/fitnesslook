@@ -10,7 +10,12 @@ const formatNumber = (number) => {
   return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
 }
 
+const removeElements = (selectors) => {
+  selectors.forEach((selector)=>{
+    document.querySelector(selector).remove()
+  })
+}
 
 
 
-export { getProjectsIndex, formatNumber }
+export { getProjectsIndex, formatNumber, removeElements }

@@ -5,14 +5,304 @@
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('[{"projectId":"№60552  |  001  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#iron-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"мультистанции","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]},{"projectId":"№60552  |  002  |  спб","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#iron-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"мультистанции","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]},{"projectId":"№60552  |  003  |  спб","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#iron-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]},{"type":"мультистанции","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х4"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х4"}]}]}]');
+module.exports = JSON.parse('[{"id":1,"type":"Кардио","cover":{"image":"/i/media/stat/prof-trains/img/trainers/treadmills/cover.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/treadmills/cover@2x.jpg","imageWebp":"/i/media/stat/prof-trains/img/trainers/treadmills/cover.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/cover@2x.webp 2x"},"content":[{"image":"/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1@2x.jpg","imageWebp":"/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"Some treadmill","link":""},{"image":"/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.jpg","imageWebp":"/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"Another treadmill","link":""},{"image":"/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.jpg","imageWebp":"/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"One more treadmill","link":""}]},{"id":2,"type":"мультистанции","cover":{"image":"/i/media/stat/prof-trains/img/trainers/multi/cover.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/multi/cover@2x.jpg","imageWebp":"/i/media/stat/prof-trains/img/trainers/multi/cover.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/cover@2x.webp 2x"},"content":[{"image":"/i/media/stat/prof-trains/img/trainers/multi/1/multi-1.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/multi/1/multi-1@2x.jpg 2x","imageWebp":"/i/media/stat/prof-trains/img/trainers/multi/1/multi-1.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/1/multi-1@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"Some multi","text":"Модель рассчитана на ходьбу с разной скоростью и легкий бег.","link":""},{"image":"/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.jpg 2x","imageWebp":"/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"Some multi","text":"Hедорогое массажное кресло с большими возможностями.","link":""},{"image":"/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.jpg 2x","imageWebp":"/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"Some multi","text":"Hедорогое массажное кресло с большими возможностями.","link":""}]}]');
 
 /***/ }),
 /* 2 */
 /***/ ((module) => {
 
-"use strict";
-module.exports = JSON.parse('[{"id":1,"type":"Кардио","content":[{"image":"/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1@2x.jpg","imageWebp":"/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"Some treadmill","text":"Стильная ультракомпактная беговая дорожка, в которой нет ничего лишнего.","link":""},{"image":"/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.jpg","imageWebp":"/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"Another treadmill","text":"Hедорогое массажное кресло с большими возможностями.","link":""}]},{"id":2,"type":"мультистанции","content":[{"image":"/i/media/stat/prof-trains/img/trainers/multi/1/multi-1.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/multi/1/multi-1@2x.jpg 2x","imageWebp":"/i/media/stat/prof-trains/img/trainers/multi/1/multi-1.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/1/multi-1@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"Some multi","text":"Модель рассчитана на ходьбу с разной скоростью и легкий бег.","link":""},{"image":"/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.jpg","image2x":"/i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.jpg 2x","imageWebp":"/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.webp 2x","oldPrice":67700,"newPrice":57890,"title":"Some multi","text":"Hедорогое массажное кресло с большими возможностями.","link":""}]}]');
+/**
+ * Accordion v3.3.4
+ * Lightweight and accessible accordion module created in pure Javascript
+ * https://github.com/michu2k/Accordion
+ *
+ * Copyright (c) Michał Strumpf
+ * Published under MIT License
+ */
+
+!function (e) {
+  var t = 0,
+    n = function e(n, s) {
+      var i = this,
+        r = this,
+        o = !1;
+      if (Array.isArray(n)) return !!n.length && n.map(function (t) {
+        return new e(t, s);
+      });
+      var a = {
+        init: function () {
+          this.options = Object.assign({
+            duration: 600,
+            ariaEnabled: !0,
+            collapse: !0,
+            showMultiple: !1,
+            onlyChildNodes: !0,
+            openOnInit: [],
+            elementClass: "ac",
+            triggerClass: "ac-trigger",
+            panelClass: "ac-panel",
+            activeClass: "is-active",
+            beforeOpen: function () {},
+            onOpen: function () {},
+            beforeClose: function () {},
+            onClose: function () {}
+          }, s);
+          var e = "string" == typeof n;
+          this.container = e ? document.querySelector(n) : n, this.createDefinitions(), r.attachEvents();
+        },
+        createDefinitions: function () {
+          var e = this,
+            n = this.options,
+            s = n.elementClass,
+            i = n.openOnInit,
+            r = n.onlyChildNodes ? this.container.childNodes : this.container.querySelectorAll(u(s));
+          this.elements = Array.from(r).filter(function (e) {
+            return e.classList && e.classList.contains(s);
+          }), this.firstElement = this.elements[0], this.lastElement = this.elements[this.elements.length - 1], this.elements.filter(function (e) {
+            return !e.classList.contains("js-enabled");
+          }).forEach(function (n) {
+            n.classList.add("js-enabled"), e.generateIDs(n), e.setARIA(n), e.setTransition(n);
+            var s = e.elements.indexOf(n);
+            t++, i.includes(s) ? e.showElement(n, !1) : e.closeElement(n, !1);
+          });
+        },
+        setTransition: function (e) {
+          var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            n = this.options,
+            s = n.duration,
+            i = n.panelClass,
+            r = e.querySelector(u(i)),
+            o = l("transitionDuration");
+          r.style[o] = t ? null : "".concat(s, "ms");
+        },
+        generateIDs: function (e) {
+          var n = this.options,
+            s = n.triggerClass,
+            i = n.panelClass,
+            r = e.querySelector(u(s)),
+            o = e.querySelector(u(i));
+          e.setAttribute("id", e.id || "ac-".concat(t)), r.setAttribute("id", r.id || "ac-trigger-".concat(t)), o.setAttribute("id", o.id || "ac-panel-".concat(t));
+        },
+        removeIDs: function (e) {
+          var t = this.options,
+            n = t.triggerClass,
+            s = t.panelClass,
+            i = e.querySelector(u(n)),
+            r = e.querySelector(u(s));
+          e.id.startsWith("ac-") && e.removeAttribute("id"), i.id.startsWith("ac-") && i.removeAttribute("id"), r.id.startsWith("ac-") && r.removeAttribute("id");
+        },
+        setARIA: function (e) {
+          var t = this.options,
+            n = t.ariaEnabled,
+            s = t.triggerClass,
+            i = t.panelClass;
+          if (n) {
+            var r = e.querySelector(u(s)),
+              o = e.querySelector(u(i));
+            r.setAttribute("role", "button"), r.setAttribute("aria-controls", o.id), r.setAttribute("aria-disabled", !1), r.setAttribute("aria-expanded", !1), o.setAttribute("role", "region"), o.setAttribute("aria-labelledby", r.id);
+          }
+        },
+        updateARIA: function (e, t) {
+          var n = t.ariaExpanded,
+            s = t.ariaDisabled,
+            i = this.options,
+            r = i.ariaEnabled,
+            o = i.triggerClass;
+          if (r) {
+            var a = e.querySelector(u(o));
+            a.setAttribute("aria-expanded", n), a.setAttribute("aria-disabled", s);
+          }
+        },
+        removeARIA: function (e) {
+          var t = this.options,
+            n = t.ariaEnabled,
+            s = t.triggerClass,
+            i = t.panelClass;
+          if (n) {
+            var r = e.querySelector(u(s)),
+              o = e.querySelector(u(i));
+            r.removeAttribute("role"), r.removeAttribute("aria-controls"), r.removeAttribute("aria-disabled"), r.removeAttribute("aria-expanded"), o.removeAttribute("role"), o.removeAttribute("aria-labelledby");
+          }
+        },
+        focus: function (e, t) {
+          e.preventDefault();
+          var n = this.options.triggerClass;
+          t.querySelector(u(n)).focus();
+        },
+        focusFirstElement: function (e) {
+          this.focus(e, this.firstElement), this.currFocusedIdx = 0;
+        },
+        focusLastElement: function (e) {
+          this.focus(e, this.lastElement), this.currFocusedIdx = this.elements.length - 1;
+        },
+        focusNextElement: function (e) {
+          var t = this.currFocusedIdx + 1;
+          if (t > this.elements.length - 1) return this.focusFirstElement(e);
+          this.focus(e, this.elements[t]), this.currFocusedIdx = t;
+        },
+        focusPrevElement: function (e) {
+          var t = this.currFocusedIdx - 1;
+          if (t < 0) return this.focusLastElement(e);
+          this.focus(e, this.elements[t]), this.currFocusedIdx = t;
+        },
+        showElement: function (e) {
+          var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+            n = this.options,
+            s = n.panelClass,
+            i = n.activeClass,
+            r = n.collapse,
+            o = n.beforeOpen;
+          t && o(e);
+          var a = e.querySelector(u(s)),
+            l = a.scrollHeight;
+          e.classList.add(i), requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              a.style.height = t ? "".concat(l, "px") : "auto";
+            });
+          }), this.updateARIA(e, {
+            ariaExpanded: !0,
+            ariaDisabled: !r
+          });
+        },
+        closeElement: function (e) {
+          var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+            n = this.options,
+            s = n.panelClass,
+            i = n.activeClass,
+            r = n.beforeClose,
+            o = e.querySelector(u(s)),
+            a = o.scrollHeight;
+          e.classList.remove(i), t ? (r(e), requestAnimationFrame(function () {
+            o.style.height = "".concat(a, "px"), requestAnimationFrame(function () {
+              o.style.height = 0;
+            });
+          })) : o.style.height = 0, this.updateARIA(e, {
+            ariaExpanded: !1,
+            ariaDisabled: !1
+          });
+        },
+        toggleElement: function (e) {
+          var t = this.options,
+            n = t.activeClass,
+            s = t.collapse,
+            i = e.classList.contains(n);
+          if (!i || s) return i ? this.closeElement(e) : this.showElement(e);
+        },
+        closeElements: function () {
+          var e = this,
+            t = this.options,
+            n = t.activeClass;
+          t.showMultiple || this.elements.forEach(function (t, s) {
+            t.classList.contains(n) && s !== e.currFocusedIdx && e.closeElement(t);
+          });
+        },
+        handleClick: function (e) {
+          var t = this,
+            n = e.currentTarget;
+          this.elements.forEach(function (s, i) {
+            s.contains(n) && "A" !== e.target.nodeName && (t.currFocusedIdx = i, t.closeElements(), t.focus(e, s), t.toggleElement(s));
+          });
+        },
+        handleKeydown: function (e) {
+          switch (e.key) {
+            case "ArrowUp":
+              return this.focusPrevElement(e);
+            case "ArrowDown":
+              return this.focusNextElement(e);
+            case "Home":
+              return this.focusFirstElement(e);
+            case "End":
+              return this.focusLastElement(e);
+            default:
+              return null;
+          }
+        },
+        handleFocus: function (e) {
+          var t = e.currentTarget,
+            n = this.elements.find(function (e) {
+              return e.contains(t);
+            });
+          this.currFocusedIdx = this.elements.indexOf(n);
+        },
+        handleTransitionEnd: function (e) {
+          if (e.stopPropagation(), "height" === e.propertyName) {
+            var t = this.options,
+              n = t.onOpen,
+              s = t.onClose,
+              i = e.currentTarget,
+              r = parseInt(i.style.height),
+              o = this.elements.find(function (e) {
+                return e.contains(i);
+              });
+            r > 0 ? (i.style.height = "auto", n(o)) : s(o);
+          }
+        }
+      };
+      this.attachEvents = function () {
+        if (!o) {
+          var e = a.options,
+            t = e.triggerClass,
+            n = e.panelClass;
+          a.handleClick = a.handleClick.bind(a), a.handleKeydown = a.handleKeydown.bind(a), a.handleFocus = a.handleFocus.bind(a), a.handleTransitionEnd = a.handleTransitionEnd.bind(a), a.elements.forEach(function (e) {
+            var s = e.querySelector(u(t)),
+              i = e.querySelector(u(n));
+            s.addEventListener("click", a.handleClick), s.addEventListener("keydown", a.handleKeydown), s.addEventListener("focus", a.handleFocus), i.addEventListener("webkitTransitionEnd", a.handleTransitionEnd), i.addEventListener("transitionend", a.handleTransitionEnd);
+          }), o = !0;
+        }
+      }, this.detachEvents = function () {
+        if (o) {
+          var e = a.options,
+            t = e.triggerClass,
+            n = e.panelClass;
+          a.elements.forEach(function (e) {
+            var s = e.querySelector(u(t)),
+              i = e.querySelector(u(n));
+            s.removeEventListener("click", a.handleClick), s.removeEventListener("keydown", a.handleKeydown), s.removeEventListener("focus", a.handleFocus), i.removeEventListener("webkitTransitionEnd", a.handleTransitionEnd), i.removeEventListener("transitionend", a.handleTransitionEnd);
+          }), o = !1;
+        }
+      }, this.toggle = function (e) {
+        var t = a.elements[e];
+        t && a.toggleElement(t);
+      }, this.open = function (e) {
+        var t = a.elements[e];
+        t && a.showElement(t);
+      }, this.openAll = function () {
+        var e = a.options,
+          t = e.activeClass,
+          n = e.onOpen;
+        a.elements.forEach(function (e) {
+          e.classList.contains(t) || (a.showElement(e, !1), n(e));
+        });
+      }, this.close = function (e) {
+        var t = a.elements[e];
+        t && a.closeElement(t);
+      }, this.closeAll = function () {
+        var e = a.options,
+          t = e.activeClass,
+          n = e.onClose;
+        a.elements.forEach(function (e) {
+          e.classList.contains(t) && (a.closeElement(e, !1), n(e));
+        });
+      }, this.destroy = function () {
+        i.detachEvents(), i.openAll(), a.elements.forEach(function (e) {
+          a.removeIDs(e), a.removeARIA(e), a.setTransition(e, !0);
+        }), o = !0;
+      }, this.update = function () {
+        a.createDefinitions(), i.detachEvents(), i.attachEvents();
+      };
+      var l = function (e) {
+          return "string" == typeof document.documentElement.style[e] ? e : (e = c(e), e = "webkit".concat(e));
+        },
+        c = function (e) {
+          return e.charAt(0).toUpperCase() + e.slice(1);
+        },
+        u = function (e) {
+          return ".".concat(CSS.escape(e));
+        };
+      a.init();
+    };
+   true && void 0 !== module.exports ? module.exports = n : e.Accordion = n;
+}(window);
 
 /***/ }),
 /* 3 */
@@ -21,39 +311,24 @@ module.exports = JSON.parse('[{"id":1,"type":"Кардио","content":[{"image":
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderProjectsGallery: () => (/* binding */ renderProjectsGallery)
+/* harmony export */   formatNumber: () => (/* binding */ formatNumber),
+/* harmony export */   getProjectsIndex: () => (/* binding */ getProjectsIndex),
+/* harmony export */   removeElements: () => (/* binding */ removeElements)
 /* harmony export */ });
-const slideProjectItemTemplate = document.querySelector("#project-part").content.querySelector('.project-content__item');
-const slideProjectTemplate = document.querySelector("#project-item").content.querySelector('.projects-list__item');
-const projectsFullTemplate = document.querySelector("#project-full").content.querySelector('.projects-gallery__item');
-const projectGallery = document.querySelector('.projects-gallery');
-const renderProjectsGallery = projects => {
-  const projectsFragment = document.createDocumentFragment();
-  const slideProjectsFragment = document.createDocumentFragment();
-  const projectsFullFragment = document.createDocumentFragment();
-  projects.forEach(project => {
-    const projectFull = projectsFullTemplate.cloneNode(true);
-    projectFull.querySelector('.title-info').textContent = project.projectId;
-    projectsFullFragment.appendChild(projectFull);
-    const projectsList = projectFull.querySelector('#projects-list');
-    project.content.forEach(project => {
-      const projectPart = slideProjectTemplate.cloneNode(true);
-      projectPart.querySelector('.accordion__title').textContent = project.type;
-      projectPart.querySelector('.accordion__number').innerHTML = project.icon;
-      slideProjectsFragment.appendChild(projectPart);
-      projectsList.appendChild(slideProjectsFragment);
-      project.trainers.forEach(content => {
-        const projectItem = slideProjectItemTemplate.cloneNode(true);
-        projectItem.querySelector('.type').textContent = content.title;
-        projectItem.querySelector('.model__name').textContent = content.model;
-        projectItem.querySelector('.model__type').textContent = content.name;
-        projectsFragment.appendChild(projectItem);
-      });
-      const sliderItems = projectPart.querySelector('#project-content');
-      sliderItems.appendChild(projectsFragment);
-    });
+const getProjectsIndex = slider => {
+  return {
+    current: slider.getInfo().displayIndex,
+    next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? '...' : slider.getInfo().displayIndex + 1,
+    prev: slider.getInfo().displayIndex === 1 ? '...' : slider.getInfo().displayIndex - 1
+  };
+};
+const formatNumber = number => {
+  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
+};
+const removeElements = selectors => {
+  selectors.forEach(selector => {
+    document.querySelector(selector).remove();
   });
-  projectGallery.appendChild(projectsFullFragment);
 };
 
 
@@ -64,35 +339,22 @@ const renderProjectsGallery = projects => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderProductsGallery: () => (/* binding */ renderProductsGallery)
+/* harmony export */   setNavigation: () => (/* binding */ setNavigation)
 /* harmony export */ });
-const productFullTemplate = document.querySelector("#products-full").content.querySelector('.product-gallery-set');
-const productContentTemplate = document.querySelector("#products-content").content.querySelector('.product-card');
-const productsGallery = document.querySelector('#hit-products');
-const renderProductsGallery = products => {
-  const productsFragment = document.createDocumentFragment();
-  const productContentFragment = document.createDocumentFragment();
-  products.forEach(product => {
-    const productFull = productFullTemplate.cloneNode(true);
-    productFull.querySelector('.title-info').textContent = `Хиты продаж: ${product.type}`;
-    productFull.querySelector('.product-gallery-set__buttons').id = `product-list-buttons-${product.id}`;
-    productsFragment.appendChild(productFull);
-    product.content.forEach(item => {
-      const productContent = productContentTemplate.cloneNode(true);
-      productContent.querySelector('.product-card__title').textContent = item.title;
-      productContent.querySelector('#product-img').src = item.image;
-      productContent.querySelector('#product-img').alt = item.title;
-      productContent.querySelector('#product-img').srcset = item.image2x;
-      productContent.querySelector('#product-img-webp').srcset = item.imageWebp;
-      productContent.querySelector('.price--old').textContent = item.oldPrice;
-      productContent.querySelector('.price--new').textContent = `${item.newPrice} ₽`;
-      productContentFragment.appendChild(productContent);
+const setNavigation = container => {
+  const navigationList = document.querySelector(container);
+  if (navigationList) {
+    navigationList.addEventListener('click', evt => {
+      evt.preventDefault();
+      const elementHref = evt.target.href;
+      const elementId = elementHref.substring(elementHref.indexOf('#'));
+      const scrollElement = document.querySelector(elementId).offsetTop;
+      window.scrollTo({
+        top: scrollElement,
+        behavior: 'smooth'
+      });
     });
-    const productsContent = productFull.querySelector('.products-content');
-    productsContent.id = `product-list-${product.id}`;
-    productsContent.appendChild(productContentFragment);
-  });
-  productsGallery.appendChild(productsFragment);
+  }
 };
 
 
@@ -3293,303 +3555,6 @@ exports.tns = tns;
 
 /***/ }),
 /* 7 */
-/***/ ((module) => {
-
-/**
- * Accordion v3.3.4
- * Lightweight and accessible accordion module created in pure Javascript
- * https://github.com/michu2k/Accordion
- *
- * Copyright (c) Michał Strumpf
- * Published under MIT License
- */
-
-!function (e) {
-  var t = 0,
-    n = function e(n, s) {
-      var i = this,
-        r = this,
-        o = !1;
-      if (Array.isArray(n)) return !!n.length && n.map(function (t) {
-        return new e(t, s);
-      });
-      var a = {
-        init: function () {
-          this.options = Object.assign({
-            duration: 600,
-            ariaEnabled: !0,
-            collapse: !0,
-            showMultiple: !1,
-            onlyChildNodes: !0,
-            openOnInit: [],
-            elementClass: "ac",
-            triggerClass: "ac-trigger",
-            panelClass: "ac-panel",
-            activeClass: "is-active",
-            beforeOpen: function () {},
-            onOpen: function () {},
-            beforeClose: function () {},
-            onClose: function () {}
-          }, s);
-          var e = "string" == typeof n;
-          this.container = e ? document.querySelector(n) : n, this.createDefinitions(), r.attachEvents();
-        },
-        createDefinitions: function () {
-          var e = this,
-            n = this.options,
-            s = n.elementClass,
-            i = n.openOnInit,
-            r = n.onlyChildNodes ? this.container.childNodes : this.container.querySelectorAll(u(s));
-          this.elements = Array.from(r).filter(function (e) {
-            return e.classList && e.classList.contains(s);
-          }), this.firstElement = this.elements[0], this.lastElement = this.elements[this.elements.length - 1], this.elements.filter(function (e) {
-            return !e.classList.contains("js-enabled");
-          }).forEach(function (n) {
-            n.classList.add("js-enabled"), e.generateIDs(n), e.setARIA(n), e.setTransition(n);
-            var s = e.elements.indexOf(n);
-            t++, i.includes(s) ? e.showElement(n, !1) : e.closeElement(n, !1);
-          });
-        },
-        setTransition: function (e) {
-          var t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = this.options,
-            s = n.duration,
-            i = n.panelClass,
-            r = e.querySelector(u(i)),
-            o = l("transitionDuration");
-          r.style[o] = t ? null : "".concat(s, "ms");
-        },
-        generateIDs: function (e) {
-          var n = this.options,
-            s = n.triggerClass,
-            i = n.panelClass,
-            r = e.querySelector(u(s)),
-            o = e.querySelector(u(i));
-          e.setAttribute("id", e.id || "ac-".concat(t)), r.setAttribute("id", r.id || "ac-trigger-".concat(t)), o.setAttribute("id", o.id || "ac-panel-".concat(t));
-        },
-        removeIDs: function (e) {
-          var t = this.options,
-            n = t.triggerClass,
-            s = t.panelClass,
-            i = e.querySelector(u(n)),
-            r = e.querySelector(u(s));
-          e.id.startsWith("ac-") && e.removeAttribute("id"), i.id.startsWith("ac-") && i.removeAttribute("id"), r.id.startsWith("ac-") && r.removeAttribute("id");
-        },
-        setARIA: function (e) {
-          var t = this.options,
-            n = t.ariaEnabled,
-            s = t.triggerClass,
-            i = t.panelClass;
-          if (n) {
-            var r = e.querySelector(u(s)),
-              o = e.querySelector(u(i));
-            r.setAttribute("role", "button"), r.setAttribute("aria-controls", o.id), r.setAttribute("aria-disabled", !1), r.setAttribute("aria-expanded", !1), o.setAttribute("role", "region"), o.setAttribute("aria-labelledby", r.id);
-          }
-        },
-        updateARIA: function (e, t) {
-          var n = t.ariaExpanded,
-            s = t.ariaDisabled,
-            i = this.options,
-            r = i.ariaEnabled,
-            o = i.triggerClass;
-          if (r) {
-            var a = e.querySelector(u(o));
-            a.setAttribute("aria-expanded", n), a.setAttribute("aria-disabled", s);
-          }
-        },
-        removeARIA: function (e) {
-          var t = this.options,
-            n = t.ariaEnabled,
-            s = t.triggerClass,
-            i = t.panelClass;
-          if (n) {
-            var r = e.querySelector(u(s)),
-              o = e.querySelector(u(i));
-            r.removeAttribute("role"), r.removeAttribute("aria-controls"), r.removeAttribute("aria-disabled"), r.removeAttribute("aria-expanded"), o.removeAttribute("role"), o.removeAttribute("aria-labelledby");
-          }
-        },
-        focus: function (e, t) {
-          e.preventDefault();
-          var n = this.options.triggerClass;
-          t.querySelector(u(n)).focus();
-        },
-        focusFirstElement: function (e) {
-          this.focus(e, this.firstElement), this.currFocusedIdx = 0;
-        },
-        focusLastElement: function (e) {
-          this.focus(e, this.lastElement), this.currFocusedIdx = this.elements.length - 1;
-        },
-        focusNextElement: function (e) {
-          var t = this.currFocusedIdx + 1;
-          if (t > this.elements.length - 1) return this.focusFirstElement(e);
-          this.focus(e, this.elements[t]), this.currFocusedIdx = t;
-        },
-        focusPrevElement: function (e) {
-          var t = this.currFocusedIdx - 1;
-          if (t < 0) return this.focusLastElement(e);
-          this.focus(e, this.elements[t]), this.currFocusedIdx = t;
-        },
-        showElement: function (e) {
-          var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-            n = this.options,
-            s = n.panelClass,
-            i = n.activeClass,
-            r = n.collapse,
-            o = n.beforeOpen;
-          t && o(e);
-          var a = e.querySelector(u(s)),
-            l = a.scrollHeight;
-          e.classList.add(i), requestAnimationFrame(function () {
-            requestAnimationFrame(function () {
-              a.style.height = t ? "".concat(l, "px") : "auto";
-            });
-          }), this.updateARIA(e, {
-            ariaExpanded: !0,
-            ariaDisabled: !r
-          });
-        },
-        closeElement: function (e) {
-          var t = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-            n = this.options,
-            s = n.panelClass,
-            i = n.activeClass,
-            r = n.beforeClose,
-            o = e.querySelector(u(s)),
-            a = o.scrollHeight;
-          e.classList.remove(i), t ? (r(e), requestAnimationFrame(function () {
-            o.style.height = "".concat(a, "px"), requestAnimationFrame(function () {
-              o.style.height = 0;
-            });
-          })) : o.style.height = 0, this.updateARIA(e, {
-            ariaExpanded: !1,
-            ariaDisabled: !1
-          });
-        },
-        toggleElement: function (e) {
-          var t = this.options,
-            n = t.activeClass,
-            s = t.collapse,
-            i = e.classList.contains(n);
-          if (!i || s) return i ? this.closeElement(e) : this.showElement(e);
-        },
-        closeElements: function () {
-          var e = this,
-            t = this.options,
-            n = t.activeClass;
-          t.showMultiple || this.elements.forEach(function (t, s) {
-            t.classList.contains(n) && s !== e.currFocusedIdx && e.closeElement(t);
-          });
-        },
-        handleClick: function (e) {
-          var t = this,
-            n = e.currentTarget;
-          this.elements.forEach(function (s, i) {
-            s.contains(n) && "A" !== e.target.nodeName && (t.currFocusedIdx = i, t.closeElements(), t.focus(e, s), t.toggleElement(s));
-          });
-        },
-        handleKeydown: function (e) {
-          switch (e.key) {
-            case "ArrowUp":
-              return this.focusPrevElement(e);
-            case "ArrowDown":
-              return this.focusNextElement(e);
-            case "Home":
-              return this.focusFirstElement(e);
-            case "End":
-              return this.focusLastElement(e);
-            default:
-              return null;
-          }
-        },
-        handleFocus: function (e) {
-          var t = e.currentTarget,
-            n = this.elements.find(function (e) {
-              return e.contains(t);
-            });
-          this.currFocusedIdx = this.elements.indexOf(n);
-        },
-        handleTransitionEnd: function (e) {
-          if (e.stopPropagation(), "height" === e.propertyName) {
-            var t = this.options,
-              n = t.onOpen,
-              s = t.onClose,
-              i = e.currentTarget,
-              r = parseInt(i.style.height),
-              o = this.elements.find(function (e) {
-                return e.contains(i);
-              });
-            r > 0 ? (i.style.height = "auto", n(o)) : s(o);
-          }
-        }
-      };
-      this.attachEvents = function () {
-        if (!o) {
-          var e = a.options,
-            t = e.triggerClass,
-            n = e.panelClass;
-          a.handleClick = a.handleClick.bind(a), a.handleKeydown = a.handleKeydown.bind(a), a.handleFocus = a.handleFocus.bind(a), a.handleTransitionEnd = a.handleTransitionEnd.bind(a), a.elements.forEach(function (e) {
-            var s = e.querySelector(u(t)),
-              i = e.querySelector(u(n));
-            s.addEventListener("click", a.handleClick), s.addEventListener("keydown", a.handleKeydown), s.addEventListener("focus", a.handleFocus), i.addEventListener("webkitTransitionEnd", a.handleTransitionEnd), i.addEventListener("transitionend", a.handleTransitionEnd);
-          }), o = !0;
-        }
-      }, this.detachEvents = function () {
-        if (o) {
-          var e = a.options,
-            t = e.triggerClass,
-            n = e.panelClass;
-          a.elements.forEach(function (e) {
-            var s = e.querySelector(u(t)),
-              i = e.querySelector(u(n));
-            s.removeEventListener("click", a.handleClick), s.removeEventListener("keydown", a.handleKeydown), s.removeEventListener("focus", a.handleFocus), i.removeEventListener("webkitTransitionEnd", a.handleTransitionEnd), i.removeEventListener("transitionend", a.handleTransitionEnd);
-          }), o = !1;
-        }
-      }, this.toggle = function (e) {
-        var t = a.elements[e];
-        t && a.toggleElement(t);
-      }, this.open = function (e) {
-        var t = a.elements[e];
-        t && a.showElement(t);
-      }, this.openAll = function () {
-        var e = a.options,
-          t = e.activeClass,
-          n = e.onOpen;
-        a.elements.forEach(function (e) {
-          e.classList.contains(t) || (a.showElement(e, !1), n(e));
-        });
-      }, this.close = function (e) {
-        var t = a.elements[e];
-        t && a.closeElement(t);
-      }, this.closeAll = function () {
-        var e = a.options,
-          t = e.activeClass,
-          n = e.onClose;
-        a.elements.forEach(function (e) {
-          e.classList.contains(t) && (a.closeElement(e, !1), n(e));
-        });
-      }, this.destroy = function () {
-        i.detachEvents(), i.openAll(), a.elements.forEach(function (e) {
-          a.removeIDs(e), a.removeARIA(e), a.setTransition(e, !0);
-        }), o = !0;
-      }, this.update = function () {
-        a.createDefinitions(), i.detachEvents(), i.attachEvents();
-      };
-      var l = function (e) {
-          return "string" == typeof document.documentElement.style[e] ? e : (e = c(e), e = "webkit".concat(e));
-        },
-        c = function (e) {
-          return e.charAt(0).toUpperCase() + e.slice(1);
-        },
-        u = function (e) {
-          return ".".concat(CSS.escape(e));
-        };
-      a.init();
-    };
-   true && void 0 !== module.exports ? module.exports = n : e.Accordion = n;
-}(window);
-
-/***/ }),
-/* 8 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3605,7 +3570,6 @@ const settingAccordion = props => {
   };
 };
 const settingAccordionAdaptive = cb => {
-  console.log(cb);
   let newAccordion = cb;
   if (Array.isArray(cb)) newAccordion = cb[0];
   if (window.innerWidth < 768) {
@@ -3622,6 +3586,47 @@ const settingAccordionAdaptive = cb => {
     }
     ;
   });
+};
+
+
+/***/ }),
+/* 8 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   renderProductsGallery: () => (/* binding */ renderProductsGallery)
+/* harmony export */ });
+const productFullTemplate = document.querySelector("#products-full").content.querySelector('.product-gallery-set');
+const productContentTemplate = document.querySelector("#products-content").content.querySelector('.product-card');
+const productsGallery = document.querySelector('#hit-products');
+const renderProductsGallery = products => {
+  const productsFragment = document.createDocumentFragment();
+  const productContentFragment = document.createDocumentFragment();
+  products.forEach(product => {
+    const productFull = productFullTemplate.cloneNode(true);
+    productFull.querySelector('.title-info').textContent = `Хиты продаж: ${product.type}`;
+    productFull.querySelector('.product-gallery-set__buttons').id = `product-list-buttons-${product.id}`;
+    productFull.querySelector('#gallery-cover').src = product.cover?.image;
+    productFull.querySelector('#title-icon-text').textContent = product.type;
+    productsFragment.appendChild(productFull);
+    product.content.forEach(item => {
+      const productContent = productContentTemplate.cloneNode(true);
+      productContent.querySelector('.product-card__title').textContent = item.title;
+      productContent.querySelector('#product-img').src = item.image;
+      productContent.querySelector('#product-img').alt = item.title;
+      productContent.querySelector('#product-img').srcset = item.image2x;
+      productContent.querySelector('#product-img-webp').srcset = item.imageWebp;
+      productContent.querySelector('.price--old').textContent = item.oldPrice;
+      productContent.querySelector('.price--new').textContent = `${item.newPrice} ₽`;
+      productContentFragment.appendChild(productContent);
+    });
+    const productsContent = productFull.querySelector('.products-content');
+    productsContent.id = `product-list-${product.id}`;
+    productsContent.appendChild(productContentFragment);
+  });
+  productsGallery.appendChild(productsFragment);
 };
 
 
@@ -3687,34 +3692,42 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _json_projects_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _json_trainers_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _projects_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _json_trainers_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 /* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
-/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
-
-
-
-
-
-
-
+/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
+/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
+// import projects from '../../../json/projects.json';
+// import { renderProjectsGallery } from './projects.js';
 // import { setPagination } from './slider-pagination.js'
 
+
+
+
+
+
+
+
 // renderProjectsGallery(projects);
-(0,_products_js__WEBPACK_IMPORTED_MODULE_3__.renderProductsGallery)(_json_trainers_json__WEBPACK_IMPORTED_MODULE_1__);
-_json_trainers_json__WEBPACK_IMPORTED_MODULE_1__.forEach(({
+(0,_products_js__WEBPACK_IMPORTED_MODULE_6__.renderProductsGallery)(_json_trainers_json__WEBPACK_IMPORTED_MODULE_0__);
+_json_trainers_json__WEBPACK_IMPORTED_MODULE_0__.forEach(({
   id
 }) => {
-  (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`);
+  (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`, {
+    responsive: {
+      768: {
+        items: 2,
+        gutter: 32,
+        edgePadding: 32
+      }
+    }
+  });
 });
 
 // Sliders
-if (document.querySelector('.slider-intro') && document.querySelector('.intro__buttons-block')) {
-  (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('.slider-intro', '.intro__buttons-block');
-}
+document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('#slider-intro', '#slider-intro-buttons');
 if (document.querySelector('.slider-best') && document.querySelector('.best__buttons-block')) {
   (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('.slider-best', '.best__buttons-block');
 }
@@ -3734,24 +3747,32 @@ const whySmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSmallSlider
 
 // Accordions
 
-const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_5__('.accordion-intro', (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)({
+const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_1__('#accordion-intro', (0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordionAdaptive)(accordionIntro);
-const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_5__('.accordion-about', (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)({
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__.settingAccordionAdaptive)(accordionIntro);
+const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_1__('#accordion-about', (0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordionAdaptive)(accordionAbout);
-const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)({
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__.settingAccordionAdaptive)(accordionAbout);
+const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_1__(Array.from(document.querySelectorAll('#accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordionAdaptive)(accordionBest);
-const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)({
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__.settingAccordionAdaptive)(accordionBest);
+const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_1__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordionAdaptive)(accordionGarantee);
-new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.accordion-main')));
-new accordion_js__WEBPACK_IMPORTED_MODULE_5__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_6__.settingAccordion)());
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__.settingAccordionAdaptive)(accordionGarantee);
+new accordion_js__WEBPACK_IMPORTED_MODULE_1__(Array.from(document.querySelectorAll('.accordion-main')));
+new accordion_js__WEBPACK_IMPORTED_MODULE_1__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_5__.settingAccordion)());
+
+// Remove section
+
+(0,_util_js__WEBPACK_IMPORTED_MODULE_2__.removeElements)(['#projects-section', '#projects-detail-section', '#projects-button']);
+
+// Navigation
+
+(0,_navigation_js__WEBPACK_IMPORTED_MODULE_3__.setNavigation)('#navigation-in');
 })();
 
 /******/ })()

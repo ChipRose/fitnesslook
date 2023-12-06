@@ -50,12 +50,16 @@
       fill: var(--cl-accent);
     }
   }
-
   .img-sticker__img-block {
+    margin-top: 0;
+    margin-right: 0;
+    width: 100%;
 
     @media (min-width: $tablet-width) {
       margin-top: 40px;
       margin-right: 40px;
     }
   }
+
+
 }

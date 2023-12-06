@@ -1,0 +1,9 @@
+.about-list .about-list__button {
+  @media (min-width: $tablet-width) {
+    pointer-events: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}

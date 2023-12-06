@@ -12,6 +12,8 @@ const renderProductsGallery = (products) => {
 
     productFull.querySelector('.title-info').textContent = `Хиты продаж: ${product.type}`;
     productFull.querySelector('.product-gallery-set__buttons').id = `product-list-buttons-${product.id}`;
+    productFull.querySelector('#gallery-cover').src = product.cover?.image;
+    productFull.querySelector('#title-icon-text').textContent = product.type;
 
     productsFragment.appendChild(productFull);
 

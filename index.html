@@ -3557,14 +3557,14 @@
         </div>
         <div class="container">
           <div class="intro__slider">
-            <div class="intro__buttons-block buttons-block">
+            <div class="intro__buttons-block buttons-block" id="slider-intro-buttons">
               <button class="button button-basic buttons-block__item" type="button" id="fitness-intro">Fitness -
                 зал</button>
               <button class="button button-basic buttons-block__item" type="button" id="health-intro">ЛФК</button>
               <button class="button button-basic buttons-block__item" type="button" id="private-intro">Fitness -
                 единица</button>
             </div>
-            <ul class="list slider-intro">
+            <ul class="list slider-intro" id="slider-intro">
               <li class="slider-intro__item">
                 <div class="slider-intro__title">
                   <h2 class="title title-main">
@@ -3632,10 +3632,10 @@
 
             </div>
           </div>
-          <ul class="list accordion accordion-intro columns intro__advantage">
-            <li class="ac columns__item">
-              <h3 class="title ac-header">
-                <button class="ac-trigger">проверенные бренды</button>
+          <ul class="list accordion intro-list columns intro__advantage" id="accordion-intro">
+            <li class="ac columns__item intro-list__item">
+              <h3 class="title ac-header intro-list__header">
+                <button class="ac-trigger intro-list__button">проверенные бренды</button>
               </h3>
               <div class="ac-panel">
                 <p class="text text-main">
@@ -3648,9 +3648,9 @@
                 </p>
               </div>
             </li>
-            <li class="ac columns__item">
-              <h3 class="title  ac-header">
-                <button class="ac-trigger">премиум оборудование</button>
+            <li class="ac columns__item intro-list__item">
+              <h3 class="title  ac-header intro-list__header">
+                <button class="ac-trigger intro-list__button">премиум оборудование</button>
               </h3>
               <div class=" ac-panel">
                 <p class="text text-main">
@@ -3660,9 +3660,9 @@
                 </p>
               </div>
             </li>
-            <li class="ac columns__item">
-              <h3 class="title  ac-header">
-                <button class="ac-trigger">скидки и бонусы</button>
+            <li class="ac columns__item intro-list__item">
+              <h3 class="title  ac-header intro-list__header">
+                <button class="ac-trigger intro-list__button">скидки и бонусы</button>
               </h3>
               <div class=" ac-panel">
                 <p class="text text-main">
@@ -3674,9 +3674,9 @@
                 </p>
               </div>
             </li>
-            <li class="ac columns__item">
-              <h3 class="title  ac-header">
-                <button class="ac-trigger">зал под ключ + 2D</button>
+            <li class="ac columns__item intro-list__item">
+              <h3 class="title  ac-header intro-list__header">
+                <button class="ac-trigger intro-list__button">зал под ключ + 2D</button>
               </h3>
               <div class=" ac-panel">
                 <p class="text text-main">
@@ -3686,8 +3686,8 @@
               </div>
             </li>
             <li class="ac columns__item">
-              <h3 class="title  ac-header">
-                <button class="ac-trigger">Гарантия и сервис</button>
+              <h3 class="title  ac-header intro-list__header">
+                <button class="ac-trigger intro-list__button">Гарантия и сервис</button>
               </h3>
               <div class=" ac-panel">
                 <p class="text text-main">
@@ -3697,8 +3697,8 @@
               </div>
             </li>
             <li class="ac columns__item">
-              <h3 class="title  ac-header">
-                <button class="ac-trigger">Сертификация РФ</button>
+              <h3 class="title  ac-header intro-list__header">
+                <button class="ac-trigger intro-list__button">Сертификация РФ</button>
               </h3>
               <div class=" ac-panel">
                 <p class="text text-main">
@@ -3762,9 +3762,9 @@
               <span class="title-main__last">FitnessLOOK</span>
             </h2>
           </div>
-          <div class="about__buttons-block buttons-block">
+          <div class="about__buttons-block buttons-block" id="navigation-in">
             <a class="link button-basic button-basic--active buttons-block__item" href="#about">О FL</a>
-            <a class="link button-basic buttons-block__item" href="#projects">Наши проекты</a>
+            <a class="link button-basic buttons-block__item" href="#projects" id="projects-button">Наши проекты</a>
             <a class="link button-basic buttons-block__item" href="#garantee">Гарантия и сервис</a>
           </div>
           <div class="about-advantages">
@@ -3783,11 +3783,11 @@
                 <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-img"></use>
               </svg>
             </div>
-            <ul
-              class="list about-advantages__description columns columns--two accordion accordion-about about__service">
-              <li class="ac columns__item">
+            <ul class="list about-advantages__description columns columns--two accordion about__service about-list"
+              id="accordion-about">
+              <li class="ac columns__item about-list__item">
                 <h3 class="title ac-header">
-                  <button class="ac-trigger accordion__number-title">
+                  <button class="ac-trigger accordion__number-title about-list__button">
                     <span class="accordion__number">1|1</span>
                     <span class="accordion__title">
                       Всегда на связи
@@ -3801,9 +3801,9 @@
                   </p>
                 </div>
               </li>
-              <li class="ac columns__item">
+              <li class="ac columns__item about-list__item">
                 <h3 class="title ac-header">
-                  <button class="ac-trigger accordion__number-title">
+                  <button class="ac-trigger accordion__number-title about-list__button">
                     <span class="accordion__number">1|2</span>
                     <span class="accordion__title">
                       оборудование в наличии
@@ -3817,9 +3817,9 @@
                   </p>
                 </div>
               </li>
-              <li class="ac columns__item">
+              <li class="ac columns__item about-list__item">
                 <h3 class="title ac-header">
-                  <button class="ac-trigger accordion__number-title">
+                  <button class="ac-trigger accordion__number-title about-list__button">
                     <span class="accordion__number">1|3</span>
                     <span class="accordion__title">
                       программа лояльности
@@ -3836,7 +3836,7 @@
                   </p>
                 </div>
               </li>
-              <li class="ac columns__item">
+              <li class="ac columns__item about-list__item">
                 <h3 class="title ac-header">
                   <button class="ac-trigger accordion__number-title">
                     <span class="accordion__number">1|4</span>
@@ -3890,7 +3890,7 @@
                   </svg>
                 </button>
               </div>
-              <div class="decoration-block decoration-block--dark decoration-block--two slider-mob-order__decoration">
+              <div class="decoration-block decoration-block--dark decoration-block--two slider-with-button__decoration">
                 <div class="decoration-block__item">
                   <svg class="" width="81" height="14" role="img" aria-label="Разделитель" focusable="false">
                     <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-divider-basic"></use>
@@ -4042,10 +4042,10 @@
                   </div>
                 </div>
                 <div class="slider-best__description">
-                  <ul class="list accordion accordion-best slider-best__accordion columns columns--two">
-                    <li class="ac columns__item">
+                  <ul class="list accordion  slider-best__accordion columns columns--two best-list" id="accordion-best">
+                    <li class="ac columns__item best-list__item">
                       <h3 class="title ac-header">
-                        <button class="ac-trigger accordion__number-title">
+                        <button class="ac-trigger accordion__number-title best-list__button">
                           <span class="accordion__number">2|1</span>
                           <span class="accordion__title">
                             Надежность
@@ -4063,9 +4063,9 @@
                             Spirit Fitness</span>
                         </p>
                     </li>
-                    <li class="ac columns__item">
-                      <h3 class="title ac-header">
-                        <button class="ac-trigger accordion__number-title">
+                    <li class="ac columns__item best-list__item">
+                      <h3 class="title ac-header ">
+                        <button class="ac-trigger accordion__number-title best-list__button">
                           <span class="accordion__number">2|2</span>
                           <span class="accordion__title">
                             удобство и безопасность
@@ -4085,9 +4085,9 @@
                         </p>
                       </div>
                     </li>
-                    <li class="ac columns__item">
+                    <li class="ac columns__item best-list__item">
                       <h3 class="title ac-header">
-                        <button class="ac-trigger accordion__number-title">
+                        <button class="ac-trigger accordion__number-title best-list__button">
                           <span class="accordion__number">2|3</span>
                           <span class="accordion__title">
                             солидные габариты
@@ -4106,9 +4106,10 @@
                         </p>
                       </div>
                     </li>
-                    <li class="ac columns__item">
+
+                    <li class="ac columns__item best-list__item">
                       <h3 class="title ac-header">
-                        <button class="ac-trigger accordion__number-title">
+                        <button class="ac-trigger accordion__number-title best-list__button">
                           <span class="accordion__number">2|4</span>
                           <span class="accordion__title">
                             выгодные решения
@@ -4244,45 +4245,45 @@
               </h3>
               <ul class="list accordion accordion-main accordion--decor questions-block">
                 <li class="ac questions-block__item">
-                    <h3 class="title ac-header questions-block__header">
-                      <button class="ac-trigger accordion__number-title">
-                        <span class="accordion__number">01.</span>
-                        <span class="accordion__title">
-                          коммерческая гарантия что это?
-                        </span>
-                      </button>
-                    </h3>
-                    <div class="ac-panel questions-block__panel">
-                      <div class="questions-block__explanation">
-                        <p class="text text-main">
-                          На профессиональное оборудование распространяется коммерческая гарантия — это означает, что
-                          оно рассчитано на интенсивную эксплуатацию в коммерческих целях.
-                        </p>
-                        <p class="text text-main">
-                          Мы настоятельно не рекомендуем приобретать для фитнес-залов (исключение составляют домашние
-                          залы) непрофессиональное или полупрофессиональное оборудование — при его коммерческом
-                          использовании гарантия будет аннулирована, а сами тренажеры быстро выйдут из строя.
-                        </p>
-                      </div>
-                      <div class="image-block questions-block__image-in">
-                        <picture>
-                          <source type="image/webp"
-                            srcset="/i/media/stat/prof-trains/img/questions/fitness-1.webp 1x, /i/media/stat/prof-trains/img/questions/fitness-1@2x.webp 2x">
-                          <img src="/i/media/stat/prof-trains/img/questions/fitness-1.jpg"
-                            srcset="/i/media/stat/prof-trains/img/questions/fitness-1@2x.jpg 2x"
-                            alt="Спортсменка на беговой дорожке"></img>
-                        </picture>
-                      </div>
+                  <h3 class="title ac-header questions-block__header">
+                    <button class="ac-trigger accordion__number-title">
+                      <span class="accordion__number">01.</span>
+                      <span class="accordion__title">
+                        коммерческая гарантия что это?
+                      </span>
+                    </button>
+                  </h3>
+                  <div class="ac-panel questions-block__panel">
+                    <div class="questions-block__explanation">
+                      <p class="text text-main">
+                        На профессиональное оборудование распространяется коммерческая гарантия — это означает, что
+                        оно рассчитано на интенсивную эксплуатацию в коммерческих целях.
+                      </p>
+                      <p class="text text-main">
+                        Мы настоятельно не рекомендуем приобретать для фитнес-залов (исключение составляют домашние
+                        залы) непрофессиональное или полупрофессиональное оборудование — при его коммерческом
+                        использовании гарантия будет аннулирована, а сами тренажеры быстро выйдут из строя.
+                      </p>
                     </div>
-                    <div class="image-block questions-block__image-out">
+                    <div class="image-block questions-block__image-in">
                       <picture>
                         <source type="image/webp"
-                        srcset="/i/media/stat/prof-trains/img/questions/fitness-1-desk.webp 1x, /i/media/stat/prof-trains/img/questions/fitness-1-desk@2x.webp 2x">
-                          <img src="/i/media/stat/prof-trains/img/questions/fitness-1-desk.jpg"
-                          srcset="/i/media/stat/prof-trains/img/questions/fitness-1-desk@2x.jpg"
+                          srcset="/i/media/stat/prof-trains/img/questions/fitness-1.webp 1x, /i/media/stat/prof-trains/img/questions/fitness-1@2x.webp 2x">
+                        <img src="/i/media/stat/prof-trains/img/questions/fitness-1.jpg"
+                          srcset="/i/media/stat/prof-trains/img/questions/fitness-1@2x.jpg 2x"
                           alt="Спортсменка на беговой дорожке"></img>
                       </picture>
                     </div>
+                  </div>
+                  <div class="image-block questions-block__image-out">
+                    <picture>
+                      <source type="image/webp"
+                        srcset="/i/media/stat/prof-trains/img/questions/fitness-1-desk.webp 1x, /i/media/stat/prof-trains/img/questions/fitness-1-desk@2x.webp 2x">
+                      <img src="/i/media/stat/prof-trains/img/questions/fitness-1-desk.jpg"
+                        srcset="/i/media/stat/prof-trains/img/questions/fitness-1-desk@2x.jpg"
+                        alt="Спортсменка на беговой дорожке"></img>
+                    </picture>
+                  </div>
                 </li>
                 <li class="ac questions-block__item">
                   <h3 class="title ac-header questions-block__header">
@@ -4316,8 +4317,8 @@
                   <div class="image-block questions-block__image-out">
                     <picture>
                       <source type="image/webp"
-                      srcset="/i/media/stat/prof-trains/img/questions/fitness-2-desk.webp 1x, /i/media/stat/prof-trains/img/questions/fitness-2-desk@2x.webp 2x">
-                        <img src="/i/media/stat/prof-trains/img/questions/fitness-2-desk.jpg"
+                        srcset="/i/media/stat/prof-trains/img/questions/fitness-2-desk.webp 1x, /i/media/stat/prof-trains/img/questions/fitness-2-desk@2x.webp 2x">
+                      <img src="/i/media/stat/prof-trains/img/questions/fitness-2-desk.jpg"
                         srcset="/i/media/stat/prof-trains/img/questions/fitness-2-desk@2x.jpg"
                         alt="спортсменка на гребном тренажере"></img>
                     </picture>
@@ -4463,7 +4464,7 @@
       </section>
 
       <a id="projects"></a>
-      <section class="section projects page-prof-trainers__projects">
+      <section class="section projects page-prof-trainers__projects" id="projects-section">
         <div class="container">
           <div class="projects__title-block">
             <h2 class="title title-main">
@@ -4555,7 +4556,7 @@
         </div>
       </section>
 
-      <section class="section projects-detail page-prof-trainers__projects-detail">
+      <section class="section projects-detail page-prof-trainers__projects-detail" id="projects-detail-section">
         <div class="container">
           <div class="projects-detail__title-block">
             <h2 class="title title-main">
@@ -4688,7 +4689,8 @@
                     <div class="columns__item">
                       <p class="text text-main">
                         После окончания гарантийного периода и в течении срока службы оборудования компания FitnessLook
-                        готова осуществить постгарантийное обслуживание - диагностика, поставка деталей, запасных частей,
+                        готова осуществить постгарантийное обслуживание - диагностика, поставка деталей, запасных
+                        частей,
                         и ремонт оборудования.
                       </p>
                     </div>
@@ -4713,12 +4715,14 @@
                     <div class="columns__item">
                       <p class="text text-main">
                         В сервисное обслуживание входит диагностика, чистка от загрязнения узлов и механизмов
-                        оборудования, замена деталей, смазка, регулировка и настройка механических и электрических узлов.
+                        оборудования, замена деталей, смазка, регулировка и настройка механических и электрических
+                        узлов.
                       </p>
                     </div>
                     <div class="columns__item">
                       <p class="text text-main">
-                        Проводя периодическое сервисное обслуживание вы минимизируете риски крупных поломок, и продлеваете
+                        Проводя периодическое сервисное обслуживание вы минимизируете риски крупных поломок, и
+                        продлеваете
                         срок экспуатации оборудования.
                       </p>
                     </div>
@@ -4875,24 +4879,40 @@
   <!-- Hits list template -->
   <template id="products-full">
     <li class="products-gallery__item product-gallery-set slider-with-button">
-      <h3 class="title title-info product-gallery-set__title"></h3>
-      <div class="slider-with-button__buttons product-gallery-set__buttons">
-        <button class="button button-slider button-slider--prev" type="button">
-          <svg class="button-slider__icon" width="6" height="9" role="img" aria-label="Переход к предыдущему слайду"
-            focusable="false">
-            <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+      <div class="product-gallery-set__cover img-cover">
+        <div class="image-block img-cover__image">
+          <picture>
+            <source type="image/webp" id="product-img-webp" srcset="">
+            <img id="gallery-cover" src="" srcset="" alt="">
+          </picture>
+        </div>
+        <div class="title-icon img-cover__text">
+          <svg class="title-icon__icon" width="15" height="15" role="img" focusable="false">
+            <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#filter-icon"></use>
           </svg>
-        </button>
-        <button class="button button-slider button-slider--next" type="button">
-          <svg class="button-slider__icon" width="6" height="9" role="img" aria-label="Переход к следующему слайду"
-            focusable="false">
-            <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
-          </svg>
-        </button>
+          <p class="text title-icon__text" id="title-icon-text"></p>
+        </div>
       </div>
-      <ul class="list products-content product-gallery-set__slider">
+      <div class="product-gallery-set__content">
+        <h3 class="title title-info product-gallery-set__title"></h3>
+        <div class="slider-with-button__buttons product-gallery-set__buttons">
+          <button class="button button-slider button-slider--prev" type="button">
+            <svg class="button-slider__icon" width="6" height="9" role="img" aria-label="Переход к предыдущему слайду"
+              focusable="false">
+              <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+            </svg>
+          </button>
+          <button class="button button-slider button-slider--next" type="button">
+            <svg class="button-slider__icon" width="6" height="9" role="img" aria-label="Переход к следующему слайду"
+              focusable="false">
+              <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="list products-content product-gallery-set__slider">
 
-      </ul>
+        </ul>
+      </div>
     </li>
   </template>
 

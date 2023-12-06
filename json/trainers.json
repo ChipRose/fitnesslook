@@ -2,6 +2,11 @@
   {
     "id":1,
     "type": "Кардио",
+    "cover": {
+      "image": "/i/media/stat/prof-trains/img/trainers/treadmills/cover.jpg",
+      "image2x": "/i/media/stat/prof-trains/img/trainers/treadmills/cover@2x.jpg",
+      "imageWebp": "/i/media/stat/prof-trains/img/trainers/treadmills/cover.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/cover@2x.webp 2x"
+    },
     "content": [
       {
         "image": "/i/media/stat/prof-trains/img/trainers/treadmills/1/treadmill-1.jpg",
@@ -10,7 +15,6 @@
         "oldPrice": 67700,
         "newPrice": 57890,
         "title": "Some treadmill",
-        "text": "Стильная ультракомпактная беговая дорожка, в которой нет ничего лишнего.",
         "link": ""
       },
       {
@@ -20,7 +24,15 @@
         "oldPrice": 67700,
         "newPrice": 57890,
         "title": "Another treadmill",
-        "text": "Hедорогое массажное кресло с большими возможностями.",
+        "link": ""
+      },
+      {
+        "image": "/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.jpg",
+        "image2x": "/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.jpg",
+        "imageWebp": "/i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2.webp 1x, /i/media/stat/prof-trains/img/trainers/treadmills/2/treadmill-2@2x.webp 2x",
+        "oldPrice": 67700,
+        "newPrice": 57890,
+        "title": "One more treadmill",
         "link": ""
       }
     ]
@@ -28,6 +40,11 @@
   {
     "id":2,
     "type": "мультистанции",
+    "cover": {
+      "image": "/i/media/stat/prof-trains/img/trainers/multi/cover.jpg",
+      "image2x": "/i/media/stat/prof-trains/img/trainers/multi/cover@2x.jpg",
+      "imageWebp": "/i/media/stat/prof-trains/img/trainers/multi/cover.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/cover@2x.webp 2x"
+    },
     "content": [
       {
         "image": "/i/media/stat/prof-trains/img/trainers/multi/1/multi-1.jpg",
@@ -37,6 +54,16 @@
         "newPrice": 57890,
         "title": "Some multi",
         "text": "Модель рассчитана на ходьбу с разной скоростью и легкий бег.",
+        "link": ""
+      },
+      {
+        "image": "/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.jpg",
+        "image2x": "/i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.jpg 2x",
+        "imageWebp": "/i/media/stat/prof-trains/img/trainers/multi/2/multi-2.webp 1x, /i/media/stat/prof-trains/img/trainers/multi/2/multi-2@2x.webp 2x",
+        "oldPrice": 67700,
+        "newPrice": 57890,
+        "title": "Some multi",
+        "text": "Hедорогое массажное кресло с большими возможностями.",
         "link": ""
       },
       {
