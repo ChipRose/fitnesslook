@@ -26,7 +26,7 @@
   .columns__item {
     @media (min-width: $tablet-width) {
       margin-right: var(--indent-main);
-      flex: 0 0 calc(50% - var(--indent-main));
+      width: calc(50% - var(--indent-main));
 
       &:nth-of-type(3n){
         margin-right: var(--indent-main);
@@ -39,7 +39,7 @@
 
     @media (min-width: $desktop-width) {
       margin-right: var(--indent-big);
-      flex: 0 0 calc(50% - var(--indent-big));
+      width: calc(50% - var(--indent-big));
 
     }
   }

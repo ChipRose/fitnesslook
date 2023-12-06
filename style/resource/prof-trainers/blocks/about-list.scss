@@ -1,3 +1,22 @@
+.about-list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.about-list__item {
+  @media (min-width: $tablet-width) {
+    margin-right: var(--indent-main);
+    margin-bottom: var(--indent-main);
+    width: calc(50% - var(--indent-main));
+
+    &:nth-child(2n){
+      margin-right: 0;
+
+    }
+  }
+}
 .about-list .about-list__button {
   @media (min-width: $tablet-width) {
     pointer-events: none;

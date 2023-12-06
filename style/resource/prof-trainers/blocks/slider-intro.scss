@@ -5,6 +5,15 @@
   }
 }
 
+.slider-intro__content {
+  @media (min-width: $tablet-width) {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .slider-intro__title-block {
   margin-bottom: var(--indent-big);
 }

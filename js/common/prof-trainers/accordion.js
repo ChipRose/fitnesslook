@@ -7,20 +7,28 @@ const settingAccordion = (props) => {
 
 const settingAccordionAdaptive = (cb) => {
   let newAccordion = cb;
-  
-  if (Array.isArray(cb)) newAccordion = cb[0]
+
+  if (!Array.isArray(cb)) newAccordion = [cb]
 
   if (window.innerWidth < 768) {
-    newAccordion.closeAll()
+    newAccordion.forEach(item => {
+      item.closeAll()
+    });
   } else {
-    newAccordion.openAll()
+    newAccordion.forEach(item => {
+      item.openAll()
+    })
   };
 
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
-      newAccordion.closeAll()
+      newAccordion.forEach(item => {
+        item.closeAll()
+      });
     } else {
-      newAccordion.openAll()
+      newAccordion.forEach(item => {
+        item.openAll()
+      })
     };
   });
 }
