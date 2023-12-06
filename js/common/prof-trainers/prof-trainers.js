@@ -8,6 +8,7 @@ import { setNavigation } from './navigation.js';
 import { setSlider, setSmallSlider, settingSliderAdaptive } from './slider.js';
 import { settingAccordion, settingAccordionAdaptive } from './accordion.js';
 import { renderProductsGallery } from './products.js';
+import './api.js';
 
 
 
@@ -23,7 +24,7 @@ document.querySelector('#slider-intro') && document.querySelector('#slider-intro
 
 
 const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, responsive: { 768: {} } });
-sliderBest.updateSliderHeight();
+// sliderBest.updateSliderHeight();
 
 window.addEventListener('resize', () => {
   sliderBest.updateSliderHeight();
@@ -79,3 +80,26 @@ calcButtons.forEach(button => {
     $("#callmeform").show()
   })
 })
+
+const GET_LINK = 'https://www.fitnesslook.ru/?products_prof_trainers=1';
+
+fetch(GET_LINK, { mode: 'no-cors' })
+  .then((response) => {
+    if (response.ok) {
+      return response;
+    }
+
+    throw new Error(`${response.status} — ${response.statusText}`);
+  })
+  .then((response) => response.json())
+  .then((products) => console.log(products))
+  .catch((error) => console.log(error));
+
+  fetch(GET_LINK,{
+    method:'GET',
+    mode:'no-cors'
+  })
+  .then((response) => response.json())
+  .then((posts) => console.log(posts));
+
+

@@ -3638,6 +3638,14 @@ const renderProductsGallery = products => {
 };
 
 
+/***/ }),
+/* 9 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -3707,9 +3715,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
 /* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
+/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
 // import projects from '../../../json/projects.json';
 // import { renderProjectsGallery } from './projects.js';
 // import { setPagination } from './slider-pagination.js'
+
 
 
 
@@ -3742,7 +3752,8 @@ const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('#slide
     768: {}
   }
 });
-sliderBest.updateSliderHeight();
+// sliderBest.updateSliderHeight();
+
 window.addEventListener('resize', () => {
   sliderBest.updateSliderHeight();
 });
@@ -3795,6 +3806,19 @@ calcButtons.forEach(button => {
     $("#callmeform").show();
   });
 });
+const GET_LINK = 'https://www.fitnesslook.ru/?products_prof_trainers=1';
+fetch(GET_LINK, {
+  mode: 'no-cors'
+}).then(response => {
+  if (response.ok) {
+    return response;
+  }
+  throw new Error(`${response.status} — ${response.statusText}`);
+}).then(response => response.json()).then(products => console.log(products)).catch(error => console.log(error));
+fetch(GET_LINK, {
+  method: 'GET',
+  mode: 'no-cors'
+}).then(response => response.json()).then(posts => console.log(posts));
 })();
 
 /******/ })()

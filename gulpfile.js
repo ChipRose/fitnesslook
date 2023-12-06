@@ -6,6 +6,8 @@ import terser from 'gulp-terser';
 import { deleteAsync } from 'del';
 import webp from 'gulp-webp';
 import webpack from 'webpack-stream';
+import imagemin from 'gulp-imagemin';
+
 
 // import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
@@ -42,32 +44,19 @@ export function processScripts() {
     .pipe(rename('bundle.js'))
     .pipe(gulp.dest('./js/modules/'))
     .pipe(browser.stream());
-  }
+}
 
-// export function processScripts() {
-//   return gulp.src('./js/common/**/*.js')
-//     .pipe(terser())
-//     .pipe(gulp.dest('./js/modules/'))
-//     .pipe(browser.stream());
-// }
-
-// export function optimizeImages() {
-//   return gulp.src('./i/stat/img/**/*.{png,jpg}')
-//     .pipe(gulpIf(!isDevelopment, squoosh()))
-//     .pipe(gulp.dest('build/img'))
-// }
-
-export function createWebp() {
-  return gulp.src('./i/media-resource/**/*.{jpg,png}')
-    .pipe(webp())
+export function optimizeImages() {
+  return gulp.src('./i/media-resource/**/*.{png,jpg}')
+    .pipe(imagemin())
     .pipe(gulp.dest('./i/media/'))
 }
 
-// export function optimizeVector() {
-//   return gulp.src(['./i/media-resource/**/*', '!./i/media-resource/stat/prof-trains/img/icons/**/*.svg'])
-//     .pipe(svgo())
-//     .pipe(gulp.dest('./i/media/'));
-// }
+export function createWebp() {
+  return gulp.src('./i/media-resource/**/*.{jpg,png,svg}')
+    .pipe(webp())
+    .pipe(gulp.dest('./i/media/'))
+}
 
 export function createStack() {
   return gulp.src('./i/media-resource/stat/prof-trains/img/icons/**/*.svg')
@@ -117,11 +106,10 @@ function compileProject(done) {
     processMarkup,
     processStyles,
     processScripts,
-    // optimizeVector,
     copyAssets,
     createStack,
-    createWebp
-    // optimizeImages,
+    createWebp,
+    optimizeImages,
   )(done);
 }
 
