@@ -8,12 +8,16 @@ import { setNavigation } from './navigation.js';
 import { setSlider, setSmallSlider, settingSliderAdaptive } from './slider.js';
 import { settingAccordion, settingAccordionAdaptive } from './accordion.js';
 import { renderProductsGallery } from './products.js';
-import './api.js';
+import { getData } from './api.js';
 
 
-
-// renderProjectsGallery(projects);
 renderProductsGallery(hits);
+getData((products)=>{
+
+  console.log('products',products)
+})
+// renderProjectsGallery(projects);
+
 
 hits.forEach(({ id }) => {
   setSmallSlider(`#product-list-${id}`, `#product-list-buttons-${id}`, { responsive: { 768: { items: 2, gutter: 32, edgePadding: 32 } } });
@@ -81,25 +85,6 @@ calcButtons.forEach(button => {
   })
 })
 
-const GET_LINK = 'https://www.fitnesslook.ru/?products_prof_trainers=1';
 
-fetch(GET_LINK, { mode: 'no-cors' })
-  .then((response) => {
-    if (response.ok) {
-      return response;
-    }
-
-    throw new Error(`${response.status} — ${response.statusText}`);
-  })
-  .then((response) => response.json())
-  .then((products) => console.log(products))
-  .catch((error) => console.log(error));
-
-  fetch(GET_LINK,{
-    method:'GET',
-    mode:'no-cors'
-  })
-  .then((response) => response.json())
-  .then((posts) => console.log(posts));
 
 

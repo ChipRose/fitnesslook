@@ -3644,6 +3644,19 @@ const renderProductsGallery = products => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getData: () => (/* binding */ getData)
+/* harmony export */ });
+const GET_LINK = 'https://www.fitnesslook.ru/?products_prof_trainers=1';
+const getData = onSuccess => {
+  fetch(GET_LINK).then(response => {
+    if (response.ok) {
+      const products = response.json();
+      return products;
+    }
+    throw new Error(`${response.status} — ${response.statusText}`);
+  }).then(products => onSuccess(products)).catch(error => console.log(error));
+};
 
 
 /***/ })
@@ -3727,9 +3740,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-// renderProjectsGallery(projects);
 (0,_products_js__WEBPACK_IMPORTED_MODULE_6__.renderProductsGallery)(_json_trainers_json__WEBPACK_IMPORTED_MODULE_0__);
+(0,_api_js__WEBPACK_IMPORTED_MODULE_7__.getData)(products => {
+  console.log('products', products);
+});
+// renderProjectsGallery(projects);
+
 _json_trainers_json__WEBPACK_IMPORTED_MODULE_0__.forEach(({
   id
 }) => {
@@ -3806,19 +3822,6 @@ calcButtons.forEach(button => {
     $("#callmeform").show();
   });
 });
-const GET_LINK = 'https://www.fitnesslook.ru/?products_prof_trainers=1';
-fetch(GET_LINK, {
-  mode: 'no-cors'
-}).then(response => {
-  if (response.ok) {
-    return response;
-  }
-  throw new Error(`${response.status} — ${response.statusText}`);
-}).then(response => response.json()).then(products => console.log(products)).catch(error => console.log(error));
-fetch(GET_LINK, {
-  method: 'GET',
-  mode: 'no-cors'
-}).then(response => response.json()).then(posts => console.log(posts));
 })();
 
 /******/ })()
