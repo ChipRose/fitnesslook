@@ -24,7 +24,7 @@ getData((products)=>{
 document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons');
 
 
-const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32 });
+const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32,  responsive: {768:{autoHeight:true}} });
 
 
 
@@ -61,8 +61,11 @@ settingAccordionAdaptive(accordionAbout);
 const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionBest);
 
-// sliderBest.updateSliderHeight();
+sliderBest.updateSliderHeight();
+
 sliderBest.events.on('indexChanged', ()=>{
+  sliderBest.updateSliderHeight();
+
   if (window.innerWidth < 768) {
     accordionBest.forEach(item => {
       item.closeAll()
