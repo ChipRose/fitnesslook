@@ -3806,9 +3806,7 @@ document.querySelector('#slider-intro') && document.querySelector('#slider-intro
 const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-best', '#slider-best-buttons', {
   gutter: 32,
   responsive: {
-    768: {
-      autoHeight: true
-    }
+    768: {}
   }
 });
 
@@ -3845,9 +3843,9 @@ const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(d
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordionAdaptive)(accordionBest);
-sliderBest.updateSliderHeight();
 sliderBest.events.on('indexChanged', () => {
-  sliderBest.updateSliderHeight();
+  // sliderBest.updateSliderHeight();
+
   if (window.innerWidth < 768) {
     accordionBest.forEach(item => {
       item.closeAll();
