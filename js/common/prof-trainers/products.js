@@ -12,6 +12,7 @@ const renderProductsGallery = (products) => {
 
     productFull.querySelector('.title-info').textContent = `Хиты продаж: ${product.type}`;
     productFull.querySelector('.product-gallery-set__buttons').id = `product-list-buttons-${product.id}`;
+    productFull.querySelector('.product-gallery-set__slider').id = `product-list-${product.id}`;
     productFull.querySelector('#gallery-cover').src = product.cover?.image;
     productFull.querySelector('#title-icon-text').textContent = product.type;
 
@@ -20,18 +21,19 @@ const renderProductsGallery = (products) => {
     product.content.forEach((item) => {
       const productContent = productContentTemplate.cloneNode(true);
 
-      productContent.querySelector('.product-card__title').textContent=item.title;
-      productContent.querySelector('#product-img').src=item.image;
-      productContent.querySelector('#product-img').alt=item.title;
-      productContent.querySelector('#product-img').srcset=item.image2x;
-      productContent.querySelector('#product-img-webp').srcset=item.imageWebp;
-      productContent.querySelector('.price--old').textContent=item.oldPrice;
-      productContent.querySelector('.price--new').textContent=`${item.newPrice} ₽`;
+      productContent.querySelector('.product-card__title').textContent=item.name;
+      productContent.querySelector('.product-img').src=item.picture;
+      productContent.querySelector('.product-img').alt=item.name;
+      productContent.querySelector('.product-card__button').href=item.full_url;
+      // productContent.querySelector('#product-img').srcset=item.image2x;
+      // productContent.querySelector('#product-img-webp').srcset=item.imageWebp;
+      if(item.list_price!=0) productContent.querySelector('.price--old').textContent=item.list_price;
+      productContent.querySelector('.price--new').textContent=`${item.Price} ₽`;
       productContentFragment.appendChild(productContent);
     })
 
     const productsContent = productFull.querySelector('.products-content');
-    productsContent.id=`product-list-${product.id}`;
+    // productsContent.id=`product-list-${product.id}`;
     productsContent.appendChild(productContentFragment);
 
 

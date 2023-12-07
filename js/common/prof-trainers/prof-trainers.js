@@ -1,27 +1,24 @@
 // import projects from '../../../json/projects.json';
 // import { renderProjectsGallery } from './projects.js';
 // import { setPagination } from './slider-pagination.js'
-import hits from '../../../json/trainers.json';
 import Accordion from 'accordion-js';
-import { removeElements } from './util.js';
+import { removeElements, addListeners } from './util.js';
 import { setNavigation } from './navigation.js';
 import { setSlider, setSmallSlider, settingSliderAdaptive } from './slider.js';
 import { settingAccordion, settingAccordionAdaptive } from './accordion.js';
 import { renderProductsGallery } from './products.js';
 import { getData } from './api.js';
+import { getDataStructure } from './data.js';
 
-
-renderProductsGallery(hits);
 getData((products)=>{
+  const productsList= getDataStructure(products);
+    renderProductsGallery(productsList);
 
-  console.log('products',products)
+    productsList.forEach(({ id }) => {
+    setSmallSlider(`#product-list-${id}`, `#product-list-buttons-${id}`, { responsive: { 768: { items: 2, gutter: 32, edgePadding: 32, } } });
+  })
 })
 // renderProjectsGallery(projects);
-
-
-hits.forEach(({ id }) => {
-  setSmallSlider(`#product-list-${id}`, `#product-list-buttons-${id}`, { responsive: { 768: { items: 2, gutter: 32, edgePadding: 32 } } });
-})
 
 // Sliders
 document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons');
@@ -30,10 +27,10 @@ document.querySelector('#slider-intro') && document.querySelector('#slider-intro
 const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, responsive: { 768: {} } });
 // sliderBest.updateSliderHeight();
 
-window.addEventListener('resize', () => {
-  sliderBest.updateSliderHeight();
+// window.addEventListener('resize', () => {
+//   sliderBest.updateSliderHeight();
 
-})
+// })
 
 // const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-projects__buttons', { loop: false });
 // setPagination(progectsGallery);
@@ -70,20 +67,16 @@ new Accordion(Array.from(document.querySelectorAll('.accordion-questions')), set
 
 // Remove section
 
-removeElements(['#projects-section', '#projects-detail-section', '#projects-button'])
+removeElements(['#projects-section', '#projects-detail-section', '#projects-button','a[data-type="calc-example"]'])
 
 // Navigation
 
 setNavigation('#navigation-in');
 
-const calcButtons = document.querySelectorAll('a[data-type="calc-button"]')
+// Buttons click
 
-calcButtons.forEach(button => {
-  button.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    $("#callmeform").show()
-  })
-})
+addListeners('a[data-type="calc-button"]', ()=>$("#callmeform").show());
+addListeners('a[data-type="call-button"]', ()=>$("#callmeform").show());
 
 
 
