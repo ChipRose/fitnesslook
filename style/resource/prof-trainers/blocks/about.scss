@@ -4,12 +4,12 @@
 }
 
 .about .container {
-  padding-top: var(--indent-main);
+  padding-top: calc( var(--indent-big));
   padding-bottom: calc(2 * var(--indent-big));
 }
 
 .about__title-block {
-  margin-bottom: var(--indent-main);
+  margin-bottom: var(--indent-big);
   display: flex;
   justify-content: center;
 }

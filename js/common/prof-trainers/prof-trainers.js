@@ -38,8 +38,6 @@ const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 3
 const orderMobSlider = setSmallSlider('#slider-order-small', '#slider-order-small-buttons');
 settingSliderAdaptive(orderMobSlider);
 
-setSlider('.slider-questions', '.questions__buttons-block');
-
 const bestFitnessSmallSlider = setSmallSlider('#slider-bestfit-small', '#slider-bestfit-small-buttons');
 settingSliderAdaptive(bestFitnessSmallSlider);
 

@@ -3821,7 +3821,6 @@ const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slide
 
 const orderMobSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)('#slider-order-small', '#slider-order-small-buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.settingSliderAdaptive)(orderMobSlider);
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('.slider-questions', '.questions__buttons-block');
 const bestFitnessSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)('#slider-bestfit-small', '#slider-bestfit-small-buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.settingSliderAdaptive)(bestFitnessSmallSlider);
 const whySmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)('#slider-why-small', '#slider-why-small-buttons');
