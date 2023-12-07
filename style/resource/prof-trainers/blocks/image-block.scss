@@ -4,8 +4,10 @@
   border-radius: var(--radius-main);
   background: rgba(0,0,0,0.1);
 
+
   img {
     filter: grayscale(100%);
+    display: block;
     width: 100%;
     height: auto;
     min-height: 100%;
