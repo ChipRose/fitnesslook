@@ -5171,8 +5171,8 @@
                   aria-label="Разделитель" focusable="false">
                   <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#decoration-divider-basic"></use>
                 </svg>
-                <a href="https://www.fitnesslook.ru/pages/dostavka.html"
-                  class="link button-link slider-why__link" target="_blank">Условия и сроки доставки >></a>
+                <a href="https://www.fitnesslook.ru/pages/dostavka.html" class="link button-link slider-why__link"
+                  target="_blank">Условия и сроки доставки >></a>
               </li>
               <li class="slider-with-button__item slider-why__item">
                 <div class="slider-why__image-block">
@@ -5525,6 +5525,112 @@
         </div>
       </section>
 
+      <!-- Project content item template -->
+      <template id="project-part">
+        <li class="project-content__item">
+          <p class="text type"></p>
+          <p class="text model">
+            <span class="model__name"></span>
+            <span class="model__type"></span>
+          </p>
+        </li>
+      </template>
+
+      <!-- Project item template -->
+      <template id="project-item">
+        <li class="ac projects-list__item">
+          <h3 class="title ac-header">
+            <button class="ac-trigger accordion__number-title">
+              <span class="accordion__number">
+              </span>
+              <span class="accordion__title">
+              </span>
+            </button>
+          </h3>
+          <div class="ac-panel">
+            <ul class="list project-content" id="project-content">
+              <!-- Place for content list -->
+            </ul>
+          </div>
+        </li>
+      </template>
+
+      <!-- Projects template -->
+      <template id="project-full">
+        <li class="projects-gallery__item project-full">
+          <h4 class="title title-info project-full__title">
+          </h4>
+          <ul class="list accordion accordion-main accordion--decor accordion--decor-image projects-list"
+            id="projects-list">
+            <!-- Projects -->
+          </ul>
+        </li>
+      </template>
+
+      <!-- Hits list template -->
+      <template id="products-full">
+        <li class="products-gallery__item product-gallery-set slider-with-button">
+          <div class="product-gallery-set__cover img-cover">
+            <div class="image-block img-cover__image">
+              <picture>
+                <source type="image/webp" id="product-img-webp" srcset="">
+                <img id="gallery-cover" src="" srcset="" alt="">
+              </picture>
+            </div>
+            <div class="title-icon img-cover__text">
+              <svg class="title-icon__icon" width="15" height="15" role="img" focusable="false">
+                <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#filter-icon"></use>
+              </svg>
+              <p class="text title-icon__text" id="title-icon-text"></p>
+            </div>
+          </div>
+          <div class="product-gallery-set__content">
+            <h3 class="title title-info product-gallery-set__title"></h3>
+            <div class="slider-with-button__buttons product-gallery-set__buttons">
+              <button class="button button-slider button-slider--prev" type="button">
+                <svg class="button-slider__icon" width="6" height="9" role="img"
+                  aria-label="Переход к предыдущему слайду" focusable="false">
+                  <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+                </svg>
+              </button>
+              <button class="button button-slider button-slider--next" type="button">
+                <svg class="button-slider__icon" width="6" height="9" role="img"
+                  aria-label="Переход к следующему слайду" focusable="false">
+                  <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="list products-content product-gallery-set__slider">
+
+            </ul>
+          </div>
+        </li>
+      </template>
+
+      <!-- Product card template -->
+      <template id="products-content">
+        <li class="product-card products-content__item">
+          <div class="product-card__wrapper">
+            <div class="image-block product-card__image-block">
+              <picture>
+                <!-- <source type="image/webp" id="product-img-webp" srcset=""> -->
+                <img class="product-img" src="" srcset="" alt="">
+              </picture>
+            </div>
+            <div class="product-card__title-block">
+              <h4 class="title title-card product-card__title"></h4>
+              <div class="price-block product-card__price-block">
+                <p class="text price price--old price-block__old"></p>
+                <nobr class="text price price--new"></nobr>
+              </div>
+            </div>
+            <div class="product-card__text-block">
+              <p class="text text-main"></p>
+            </div>
+            <a href="" class="link button-basic button-basic--accent product-card__button" target="_blank">Подробнее</a>
+          </div>
+        </li>
+      </template>
     </div>
     <!-- </div> -->
     <!-- #wrapper -->
@@ -5585,112 +5691,7 @@
     </div>
   </div>
 
-  <!-- Project content item template -->
-  <template id="project-part">
-    <li class="project-content__item">
-      <p class="text type"></p>
-      <p class="text model">
-        <span class="model__name"></span>
-        <span class="model__type"></span>
-      </p>
-    </li>
-  </template>
 
-  <!-- Project item template -->
-  <template id="project-item">
-    <li class="ac projects-list__item">
-      <h3 class="title ac-header">
-        <button class="ac-trigger accordion__number-title">
-          <span class="accordion__number">
-          </span>
-          <span class="accordion__title">
-          </span>
-        </button>
-      </h3>
-      <div class="ac-panel">
-        <ul class="list project-content" id="project-content">
-          <!-- Place for content list -->
-        </ul>
-      </div>
-    </li>
-  </template>
-
-  <!-- Projects template -->
-  <template id="project-full">
-    <li class="projects-gallery__item project-full">
-      <h4 class="title title-info project-full__title">
-      </h4>
-      <ul class="list accordion accordion-main accordion--decor accordion--decor-image projects-list"
-        id="projects-list">
-        <!-- Projects -->
-      </ul>
-    </li>
-  </template>
-
-  <!-- Hits list template -->
-  <template id="products-full">
-    <li class="products-gallery__item product-gallery-set slider-with-button">
-      <div class="product-gallery-set__cover img-cover">
-        <div class="image-block img-cover__image">
-          <picture>
-            <source type="image/webp" id="product-img-webp" srcset="">
-            <img id="gallery-cover" src="" srcset="" alt="">
-          </picture>
-        </div>
-        <div class="title-icon img-cover__text">
-          <svg class="title-icon__icon" width="15" height="15" role="img" focusable="false">
-            <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#filter-icon"></use>
-          </svg>
-          <p class="text title-icon__text" id="title-icon-text"></p>
-        </div>
-      </div>
-      <div class="product-gallery-set__content">
-        <h3 class="title title-info product-gallery-set__title"></h3>
-        <div class="slider-with-button__buttons product-gallery-set__buttons">
-          <button class="button button-slider button-slider--prev" type="button">
-            <svg class="button-slider__icon" width="6" height="9" role="img" aria-label="Переход к предыдущему слайду"
-              focusable="false">
-              <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
-            </svg>
-          </button>
-          <button class="button button-slider button-slider--next" type="button">
-            <svg class="button-slider__icon" width="6" height="9" role="img" aria-label="Переход к следующему слайду"
-              focusable="false">
-              <use xlink:href="/i/media/stat/prof-trains/img/sprite.svg#simple-arrow-right"></use>
-            </svg>
-          </button>
-        </div>
-        <ul class="list products-content product-gallery-set__slider">
-
-        </ul>
-      </div>
-    </li>
-  </template>
-
-  <!-- Product card template -->
-  <template id="products-content">
-    <li class="product-card products-content__item">
-      <div class="product-card__wrapper">
-        <div class="image-block product-card__image-block">
-          <picture>
-            <!-- <source type="image/webp" id="product-img-webp" srcset=""> -->
-            <img class="product-img" src="" srcset="" alt="">
-          </picture>
-        </div>
-        <div class="product-card__title-block">
-          <h4 class="title title-card product-card__title"></h4>
-          <div class="price-block product-card__price-block">
-            <p class="text price price--old price-block__old"></p>
-            <nobr class="text price price--new"></nobr>
-          </div>
-        </div>
-        <div class="product-card__text-block">
-          <p class="text text-main"></p>
-        </div>
-        <a href="" class="link button-basic button-basic--accent product-card__button" target="_blank">Подробнее</a>
-      </div>
-    </li>
-  </template>
 
   <div id="footer">
     <div class="wrapper">
