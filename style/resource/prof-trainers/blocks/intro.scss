@@ -7,6 +7,10 @@
 
 .intro .intro__buttons-block {
   margin-bottom: var(--indent-big);
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
 }
 
 .intro__advantage {

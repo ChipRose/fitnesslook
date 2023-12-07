@@ -6,12 +6,20 @@
 .about .container {
   padding-top: calc( var(--indent-big));
   padding-bottom: calc(2 * var(--indent-big));
+
+  @media (min-width:$tablet-width) {
+    padding-top: var(--indent-huge);
+  }
 }
 
 .about__title-block {
   margin-bottom: var(--indent-big);
   display: flex;
   justify-content: center;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
 }
 
 .about__buttons-block {

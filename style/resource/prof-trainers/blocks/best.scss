@@ -3,6 +3,10 @@
   background: var(--cl-dark);
   border-radius: 0 0 var(--radius-main) var(--radius-main);
 
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
+
   .container {
     padding-bottom: var(--indent-main);
   }

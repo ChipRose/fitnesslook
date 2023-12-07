@@ -1,4 +1,3 @@
-
 .slider-intro__item {
   @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-big);
@@ -22,6 +21,10 @@
   margin-bottom: var(--indent-big);
   display: flex;
   justify-content: center;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
 }
 
 .slider-intro__title-secondary {
