@@ -3804,11 +3804,9 @@ __webpack_require__.r(__webpack_exports__);
 // Sliders
 document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-intro', '#slider-intro-buttons');
 const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-best', '#slider-best-buttons', {
-  gutter: 32,
-  responsive: {
-    768: {}
-  }
+  gutter: 32
 });
+
 // sliderBest.updateSliderHeight();
 
 // window.addEventListener('resize', () => {
@@ -3842,6 +3840,22 @@ const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(d
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordionAdaptive)(accordionBest);
+
+// sliderBest.updateSliderHeight();
+sliderBest.events.on('indexChanged', () => {
+  if (window.innerWidth < 768) {
+    accordionBest.forEach(item => {
+      item.closeAll();
+    });
+  }
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+      accordionBest.forEach(item => {
+        item.closeAll();
+      });
+    }
+  });
+});
 const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordion)({
   showMultiple: true
 }));

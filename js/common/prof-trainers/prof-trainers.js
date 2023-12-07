@@ -24,7 +24,10 @@ getData((products)=>{
 document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons');
 
 
-const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, responsive: { 768: {} } });
+const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32 });
+
+
+
 // sliderBest.updateSliderHeight();
 
 // window.addEventListener('resize', () => {
@@ -41,6 +44,7 @@ settingSliderAdaptive(orderMobSlider);
 const bestFitnessSmallSlider = setSmallSlider('#slider-bestfit-small', '#slider-bestfit-small-buttons');
 settingSliderAdaptive(bestFitnessSmallSlider);
 
+
 const whySmallSlider = setSmallSlider('#slider-why-small', '#slider-why-small-buttons');
 settingSliderAdaptive(whySmallSlider);
 
@@ -56,6 +60,23 @@ settingAccordionAdaptive(accordionAbout);
 
 const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionBest);
+
+// sliderBest.updateSliderHeight();
+sliderBest.events.on('indexChanged', ()=>{
+  if (window.innerWidth < 768) {
+    accordionBest.forEach(item => {
+      item.closeAll()
+    });
+  }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth < 768) {
+      accordionBest.forEach(item => {
+        item.closeAll()
+      });
+    }
+  });
+});
 
 const accordionGarantee = new Accordion(Array.from(document.querySelectorAll('.garantee-list')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionGarantee);
