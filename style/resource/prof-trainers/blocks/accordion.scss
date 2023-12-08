@@ -61,6 +61,7 @@
 }
 
 .accordion--decor.accordion .accordion__number-title {
+  padding: var(--indent-main) 0;
   display: flex;
   align-items: center;
 }

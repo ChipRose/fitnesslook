@@ -8,8 +8,8 @@
 
 .best-list__item {
   @media (min-width: $tablet-width) {
-    margin-right: var(--indent-main);
-    margin-bottom: var(--indent-main);
+    margin-right: var(--indent-big);
+    margin-bottom: var(--indent-big);
     width: calc(50% - var(--indent-main));
 
     &:nth-child(2n) {

@@ -14,12 +14,16 @@
   margin-bottom: var(--indent-big);
 
   @media (min-width:$tablet-width) {
-    margin-bottom: var(--indent-huge);
+    margin-bottom: var(--indent-super);
   }
 }
 
 .page-prof-trainers__why {
   margin-bottom: var(--indent-big);
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
 }
 
 .page-prof-trainers__projects {
@@ -34,7 +38,7 @@
   margin-bottom: var(--indent-big);
 
   @media (min-width:$tablet-width) {
-    margin-bottom: var(--indent-huge);
+    margin-bottom: var(--indent-super);
   }
 }
 

@@ -8,9 +8,9 @@
 
 .columns__item {
   @media (min-width: $tablet-width) {
-    margin-right: var(--indent-main);
+    margin-right: var(--indent-big);
     margin-bottom: var(--indent-big);
-    flex: 0 0 calc(33% - var(--indent-main)) ;
+    flex: 0 0 calc(33% - var(--indent-big)) ;
 
     &:nth-of-type(3n){
       margin-right: 0;

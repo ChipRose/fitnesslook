@@ -1,5 +1,18 @@
+.garantee__title-block{
+  margin-bottom: var(--indent-big);
+  display: flex;
+  justify-content: center;
+  @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
+}
+
 .garantee__image-block {
   margin-bottom: var(--indent-main);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-big);
+  }
 }
 
 .garantee__decoration {
@@ -9,11 +22,19 @@
 }
 .garantee__content {
   @media (min-width: $tablet-width) {
-    margin-bottom: var(--indent-big);
+    margin-bottom: var(--indent-huge);
   }
 }
 
 .garantee__footer {
   margin-left: auto;
   width: 70%;
+}
+
+.garantee__br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 }

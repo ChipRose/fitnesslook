@@ -1,6 +1,11 @@
 .garantee-list__item {
   @media (min-width:$tablet-width) {
     display: flex;
+    margin-bottom: var(--indent-big);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
