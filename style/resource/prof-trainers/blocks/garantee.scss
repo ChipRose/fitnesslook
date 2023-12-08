@@ -7,6 +7,11 @@
   margin-bottom: var(--indent-main);
   width: 70%;
 }
+.garantee__content {
+  @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-big);
+  }
+}
 
 .garantee__footer {
   margin-left: auto;

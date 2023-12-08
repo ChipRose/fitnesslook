@@ -43,6 +43,7 @@
   height: 350px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-big);
     height: 400px;
 
     img {
@@ -64,6 +65,10 @@
 
 .slider-why__title-block {
   margin-bottom: var(--indent-main);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-big);
+  }
 }
 
 .slider-why__text-block {

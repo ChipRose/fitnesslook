@@ -2,12 +2,13 @@
   min-height: 100%;
 
   @media (min-width: $tablet-width) {
-    min-height: 300px;
+    min-height: 400px;
   }
 }
 
 .product-card__wrapper {
   @media (min-width: $tablet-width) {
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     min-height: inherit;
@@ -29,11 +30,13 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: $tablet-width) {
-   margin-top: auto;
-  }
+
 }
 
 .product-card__button {
   margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+   }
 }
