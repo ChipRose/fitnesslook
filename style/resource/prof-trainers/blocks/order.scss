@@ -8,7 +8,13 @@
 .order__cover {
   @media (min-width:$tablet-width) {
     margin-right: var(--indent-big);
-    flex: 0 0 270px;
+    flex: 0 0 230px;
+  }
+}
+
+.order__content{
+  @media (min-width:$tablet-width) {
+    flex: 0 0 calc(100% - 270px - var(--indent-big));
   }
 }
 

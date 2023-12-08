@@ -17,7 +17,7 @@
 
 .accordion .ac-header {
   @media (min-width: $tablet-width) {
-    margin-bottom: var(--indent-main);
+    margin-bottom: var(--indent-big);
   }
 }
 
@@ -36,6 +36,10 @@
 .accordion .ac.is-active>.ac-header .ac-trigger {
   .accordion__number {
     color: var(--cl-accent);
+
+    @media (min-width: $tablet-width) {
+      color: var(--cl-neutral);
+    }
   }
 
   &::after {
