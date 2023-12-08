@@ -108,8 +108,7 @@ function compileProject(done) {
     processScripts,
     copyAssets,
     createStack,
-    createWebp,
-    optimizeImages,
+    createWebp
   )(done);
 }
 
@@ -118,7 +117,8 @@ export function buildProd(done) {
   isDevelopment = false;
   gulp.series(
     deleteFolders,
-    compileProject
+    compileProject,
+    optimizeImages
   )(done);
 }
 

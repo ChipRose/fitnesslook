@@ -3564,7 +3564,8 @@ exports.tns = tns;
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   settingAccordion: () => (/* binding */ settingAccordion),
-/* harmony export */   settingAccordionAdaptive: () => (/* binding */ settingAccordionAdaptive)
+/* harmony export */   settingAccordionAdaptive: () => (/* binding */ settingAccordionAdaptive),
+/* harmony export */   settingMobileAccordionAdaptive: () => (/* binding */ settingMobileAccordionAdaptive)
 /* harmony export */ });
 const settingAccordion = props => {
   return {
@@ -3572,30 +3573,36 @@ const settingAccordion = props => {
     ...props
   };
 };
-const settingAccordionAdaptive = cb => {
-  let newAccordion = cb;
-  if (!Array.isArray(cb)) newAccordion = [cb];
+const closeAllMobileAccordion = accordions => {
   if (window.innerWidth < 768) {
-    newAccordion.forEach(item => {
+    accordions.forEach(item => {
       item.closeAll();
     });
-  } else {
-    newAccordion.forEach(item => {
+  }
+};
+const openAllDeskAccordion = accordions => {
+  if (window.innerWidth >= 768) {
+    accordions.forEach(item => {
       item.openAll();
     });
   }
-  ;
+};
+const settingAccordionAdaptive = cb => {
+  let newAccordion = cb;
+  if (!Array.isArray(cb)) newAccordion = [cb];
+  closeAllMobileAccordion(newAccordion);
+  openAllDeskAccordion(newAccordion);
   window.addEventListener('resize', () => {
-    if (window.innerWidth < 768) {
-      newAccordion.forEach(item => {
-        item.closeAll();
-      });
-    } else {
-      newAccordion.forEach(item => {
-        item.openAll();
-      });
-    }
-    ;
+    closeAllMobileAccordion(newAccordion);
+    openAllDeskAccordion(newAccordion);
+  });
+};
+const settingMobileAccordionAdaptive = cb => {
+  let newAccordion = cb;
+  if (!Array.isArray(cb)) newAccordion = [cb];
+  closeAllMobileAccordion(newAccordion);
+  window.addEventListener('resize', () => {
+    closeAllMobileAccordion(newAccordion);
   });
 };
 
@@ -3802,20 +3809,14 @@ __webpack_require__.r(__webpack_exports__);
 // renderProjectsGallery(projects);
 
 // Sliders
-document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-intro', '#slider-intro-buttons');
+
+const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-intro', '#slider-intro-buttons');
 const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-best', '#slider-best-buttons', {
   gutter: 32,
   responsive: {
     768: {}
   }
 });
-
-// sliderBest.updateSliderHeight();
-
-// window.addEventListener('resize', () => {
-//   sliderBest.updateSliderHeight();
-
-// })
 
 // const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-projects__buttons', { loop: false });
 // setPagination(progectsGallery);
@@ -3843,28 +3844,21 @@ const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(d
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordionAdaptive)(accordionBest);
-sliderBest.events.on('indexChanged', () => {
-  // sliderBest.updateSliderHeight();
-
-  if (window.innerWidth < 768) {
-    accordionBest.forEach(item => {
-      item.closeAll();
-    });
-  }
-  window.addEventListener('resize', () => {
-    if (window.innerWidth < 768) {
-      accordionBest.forEach(item => {
-        item.closeAll();
-      });
-    }
-  });
-});
 const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordion)({
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordionAdaptive)(accordionGarantee);
 new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-main')));
 new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordion)());
+
+// Accordions in slider
+
+sliderBest.events.on('indexChanged', () => {
+  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingMobileAccordionAdaptive)(accordionBest);
+});
+sliderIntro.events.on('indexChanged', () => {
+  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingMobileAccordionAdaptive)(accordionIntro);
+});
 
 // Remove section
 
