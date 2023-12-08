@@ -380,6 +380,11 @@ const setSlider = (container, navContainer, props) => {
     items: 1,
     controls: false,
     navContainer,
+    responsive: {
+      768: {
+        controls: true
+      }
+    },
     ...props
   });
 };
@@ -3810,12 +3815,12 @@ __webpack_require__.r(__webpack_exports__);
 
 // Sliders
 
-const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-intro', '#slider-intro-buttons');
+const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-intro', '#slider-intro-buttons', {
+  controlsContainer: '#slider-intro-controls'
+});
 const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-best', '#slider-best-buttons', {
   gutter: 32,
-  responsive: {
-    768: {}
-  }
+  controlsContainer: '#slider-best-controls'
 });
 
 // const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-projects__buttons', { loop: false });

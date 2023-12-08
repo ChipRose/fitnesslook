@@ -51,6 +51,21 @@
   }
 }
 
+.best__slider-wrapper {
+  position: relative;
+}
+
+.best__control-buttons {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .best__decoration {
   margin-bottom: var(--indent-main);
 }

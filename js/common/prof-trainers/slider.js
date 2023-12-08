@@ -6,6 +6,11 @@ const setSlider = (container, navContainer, props) => {
     items: 1,
     controls: false,
     navContainer,
+    responsive:{
+      768:{
+        controls: true
+      }
+    },
     ...props
   })
 }

@@ -13,8 +13,11 @@
 }
 
 .button-slider--prev {
-  display: none;
   .button-slider__icon {
     transform: rotate(180deg);
   }
+}
+
+.button-slider--disable {
+  display: none;
 }

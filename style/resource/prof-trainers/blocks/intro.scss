@@ -13,6 +13,23 @@
   }
 }
 
+.intro__slider-wrapper {
+  @media (min-width:$tablet-width) {
+    position: relative;
+  }
+}
+
+.intro__control-buttons {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .intro__advantage {
   margin-bottom: var(--indent-main);
 }
