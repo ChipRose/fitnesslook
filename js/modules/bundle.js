@@ -3816,6 +3816,7 @@ __webpack_require__.r(__webpack_exports__);
 // Sliders
 
 const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-intro', '#slider-intro-buttons', {
+  gutter: 32,
   controlsContainer: '#slider-intro-controls'
 });
 const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-best', '#slider-best-buttons', {

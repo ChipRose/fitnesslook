@@ -45,6 +45,8 @@
 
     @media (min-width: $tablet-width) {
       width: 140px;
+      right: 0;
+
       height: auto;
       display: block;
       fill: var(--cl-accent);
@@ -58,6 +60,9 @@
     @media (min-width: $tablet-width) {
       margin-top: 40px;
       margin-right: 40px;
+      width: calc(100% - 40px);
+      box-sizing: border-box;
+
     }
   }
 

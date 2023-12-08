@@ -32,6 +32,10 @@
 
 .intro__advantage {
   margin-bottom: var(--indent-main);
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .intro__decoration {

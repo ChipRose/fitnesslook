@@ -10,15 +10,11 @@
   @media (min-width: $tablet-width) {
     margin-right: var(--indent-main);
     margin-bottom: var(--indent-big);
-    flex: 0 0 30%;
+    flex: 0 0 calc(33% - var(--indent-main)) ;
 
     &:nth-of-type(3n){
       margin-right: 0;
     }
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-right: var(--indent-big);
   }
 }
 

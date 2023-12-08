@@ -22,7 +22,7 @@ getData((products)=>{
 
 // Sliders
 
-const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons',{controlsContainer:'#slider-intro-controls'});
+const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons',{gutter: 32, controlsContainer:'#slider-intro-controls'});
 
 const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32,  controlsContainer:'#slider-best-controls' });
 
