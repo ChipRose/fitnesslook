@@ -38,7 +38,8 @@ settingSliderAdaptive(bestFitnessSmallSlider);
 const whySmallSlider = setSmallSlider('#slider-why-small', '#slider-why-small-buttons');
 settingSliderAdaptive(whySmallSlider);
 
-// setSmallSlider('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
+const projectsSmallSlider = setSmallSlider('#slider-projects-small', '#slider-projects-small-buttons');
+settingSliderAdaptive(projectsSmallSlider);
 
 // Accordions
 
@@ -69,7 +70,7 @@ sliderIntro.events.on('indexChanged', ()=>{
 
 // Remove section
 
-removeElements(['#projects-section', '#projects-detail-section', '#projects-button','a[data-type="calc-example"]'])
+removeElements(['#projects-detail-section', '#projects-button','a[data-type="calc-example"]'])
 
 // Navigation
 

@@ -3833,8 +3833,8 @@ const bestFitnessSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSma
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.settingSliderAdaptive)(bestFitnessSmallSlider);
 const whySmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)('#slider-why-small', '#slider-why-small-buttons');
 (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.settingSliderAdaptive)(whySmallSlider);
-
-// setSmallSlider('.slider-mob-projects__slider', '.slider-mob-projects__buttons');
+const projectsSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)('#slider-projects-small', '#slider-projects-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.settingSliderAdaptive)(projectsSmallSlider);
 
 // Accordions
 
@@ -3868,7 +3868,7 @@ sliderIntro.events.on('indexChanged', () => {
 
 // Remove section
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_1__.removeElements)(['#projects-section', '#projects-detail-section', '#projects-button', 'a[data-type="calc-example"]']);
+(0,_util_js__WEBPACK_IMPORTED_MODULE_1__.removeElements)(['#projects-detail-section', '#projects-button', 'a[data-type="calc-example"]']);
 
 // Navigation
 
