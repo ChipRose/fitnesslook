@@ -1,11 +1,22 @@
 .button-slider {
-  width: 24px;
-  height: 24px;
+  width: var(--button-size);
+  height: var(--button-size);
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--cl-accent);
   border-radius: 50%;
+  transition: var(--transition-main);
+  background: var(--cl-contrast);
+
+  &:hover {
+    cursor: pointer;
+    background: var(--cl-accent);
+
+    .button-slider__icon {
+      fill: var(--cl-contrast);
+    }
+  }
 }
 
 .button-slider__icon {

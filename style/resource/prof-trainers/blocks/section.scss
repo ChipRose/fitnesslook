@@ -6,3 +6,12 @@
   }
 }
 
+.section.section--dark {
+  .button-slider {
+    background: var(--cl-dark);
+
+    &:hover{
+      background: var(--cl-accent);
+    }
+  }
+}
