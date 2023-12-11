@@ -6,91 +6,50 @@
         "type": "Кардиотренажеры",
         "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
-          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х4"}
+          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4", "link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/marin-endurance-led.html"},
+          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х5", "link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-endurance-led.html"},
+          {"title":"Эллиптический тренажер", "model": "Matrix Performance LED", "name":"Х4", "link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-elliptical-led.html"},
+          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/steppery/victoryfit-vf-st800.html"},
+          {"title":"Гребной тренажер", "model": "Matrix Rower New", "name":"Х4", "link":"https://www.fitnesslook.ru/trenajery/grebnye/matrix-rower.html"}
         ]
       },
       {
-        "type": "железо",
+        "type": "Мультистанции",
         "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#iron-icon'></use></svg>",
         "trainers":[
-          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х4"}
+          {"title":"Мультистанция 4-х позиционная", "model": "Hasttings 4-х позиционная Digger HD023-1", "name":"Х1"},
+          {"title":"Мультистанция 5-ти позиционная", "model": "Hasttings Digger HD023-1 + HD024-1 + HD023OPT-1", "name":"Х1"}
         ]
       },
       {
-        "type": "мультистанции",
+        "type": "Силовое оборудование",
         "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
-          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х4"}
-        ]
-      }
-    ]
-  },
-  {
-    "projectId":"№60552  |  002  |  спб",
-    "content": [
-      {
-        "type": "Кардиотренажеры",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
-        "trainers":[
-          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х4"}
+          {"title":"Силовая скамья", "model": "Bronze Gym BR-1004", "name":"Х2"},
+          {"title":"Машина Смита", "model": "AnyFit PEB201", "name":"Х2"},
+          {"title":"Силовая скамья для жима (со стойками)", "model": "Hasttings Digger HD004-4", "name":"Х2"}
         ]
       },
       {
-        "type": "железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#iron-icon'></use></svg>",
-        "trainers":[
-          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х4"}
-        ]
-      },
-      {
-        "type": "мультистанции",
+        "type": "Железо",
         "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
-          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х4"}
-        ]
-      }
-    ]
-  },
-  {
-    "projectId":"№60552  |  003  |  спб",
-    "content": [
-      {
-        "type": "Кардиотренажеры",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
-        "trainers":[
-          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х4"}
-        ]
-      },
-      {
-        "type": "железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#iron-icon'></use></svg>",
-        "trainers":[
-          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х4"}
-        ]
-      },
-      {
-        "type": "мультистанции",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
-        "trainers":[
-          {"title":"Беговая дорожка", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Велотренажер", "model": "Matrix Endurance LED", "name":"Х4"},
-          {"title":"Степпер", "model": "VictoryFit VF-ST800", "name":"Х4"}
+          {"title":"Набор гексагональных гантелей", "model": "Protrain 1-40 кг RJ0946", "name":"Х1"},
+          {"title":"Стойка для гантелей", "model": "Bronze Gym BR-1027 15 пар", "name":"Х1"},
+          {"model": "Livepro LP8860 (10 пар)", "name":"Х2"},
+          {"title":"Стойка для грифов", "model": "Svensson Industrial X Force 1011", "name":"Х1"},
+          {"title":"Стойка для дисков", "model": "Hasttings Digger HD021-4", "name":"Х1"},
+          {"title":"Замок для грифа", "model": "Bronze Gym клипса", "name":"Х4"},
+          {"title":"Диск для штанги", "model": "Protrain DB6092-1,25 (д=50 мм)", "name":"Х6"},
+          {"model": "Protrain DB6092-2,5 (д=50 мм)", "name":"Х6"},
+          {"model": "Protrain DB6092-5 (д=50 мм)", "name":"Х16"},
+          {"model": "Protrain DB6092-10 (д=50 мм)", "name":"Х10"},
+          {"model": "Protrain DB6092-15 (д=50 мм)", "name":"Х10"},
+          {"model": "Protrain DB6092-20 (д=50 мм)", "name":"Х10"},
+          {"model": "Protrain DB6092-25 (д=50 мм)", "name":"Х10"},
+          {"title":"W-образный гриф для штанги", "model": "Bronze Gym олимпийский 120 см", "name":"Х1"},
+          {"title":"Z-образный гриф для штанги", "model": "Bronze Gym олимпийский 120 см", "name":"Х1"},
+          {"title":"Прямой гриф для штанги", "model": "Bronze Gym олимпийский 220 см BG-PA-BR-S001", "name":"Х2"}
         ]
       }
     ]

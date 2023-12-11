@@ -16,6 +16,13 @@
   }
 }
 
+.slider-best__title-block {
+  @media (min-width: $tablet-width) {
+    padding-right: var(--indent-big);
+    padding-left: var(--indent-big);
+  }
+}
+
 .slider-best__title {
   margin-bottom: var(--indent-big);
   display: flex;

@@ -19,6 +19,8 @@
   justify-content: center;
 
   @media (min-width:$tablet-width) {
+    padding-right: var(--indent-big);
+    padding-left: var(--indent-big);
     margin-bottom: var(--indent-huge);
   }
 }

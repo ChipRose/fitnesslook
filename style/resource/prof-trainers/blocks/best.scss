@@ -56,10 +56,12 @@
 }
 
 .best__control-buttons {
+  display: none;
+
   @media (min-width: $tablet-width) {
     position: absolute;
     width: 100%;
-    top: 50px;
+    top: 45px;
     z-index: 10;
     display: flex;
     justify-content: space-between;

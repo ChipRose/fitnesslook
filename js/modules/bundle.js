@@ -4,6 +4,127 @@
 /* 1 */
 /***/ ((module) => {
 
+"use strict";
+module.exports = JSON.parse('[{"projectId":"№60552  |  001  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Endurance LED","name":"Х4","link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/marin-endurance-led.html"},{"title":"Велотренажер","model":"Matrix Endurance LED","name":"Х5","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-endurance-led.html"},{"title":"Эллиптический тренажер","model":"Matrix Performance LED","name":"Х4","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-elliptical-led.html"},{"title":"Степпер","model":"VictoryFit VF-ST800","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/steppery/victoryfit-vf-st800.html"},{"title":"Гребной тренажер","model":"Matrix Rower New","name":"Х4","link":"https://www.fitnesslook.ru/trenajery/grebnye/matrix-rower.html"}]},{"type":"Мультистанции","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#iron-icon\'></use></svg>","trainers":[{"title":"Мультистанция 4-х позиционная","model":"Hasttings 4-х позиционная Digger HD023-1","name":"Х1"},{"title":"Мультистанция 5-ти позиционная","model":"Hasttings Digger HD023-1 + HD024-1 + HD023OPT-1","name":"Х1"}]},{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Силовая скамья","model":"Bronze Gym BR-1004","name":"Х2"},{"title":"Машина Смита","model":"AnyFit PEB201","name":"Х2"},{"title":"Силовая скамья для жима (со стойками)","model":"Hasttings Digger HD004-4","name":"Х2"}]},{"type":"Железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Набор гексагональных гантелей","model":"Protrain 1-40 кг RJ0946","name":"Х1"},{"title":"Стойка для гантелей","model":"Bronze Gym BR-1027 15 пар","name":"Х1"},{"model":"Livepro LP8860 (10 пар)","name":"Х2"},{"title":"Стойка для грифов","model":"Svensson Industrial X Force 1011","name":"Х1"},{"title":"Стойка для дисков","model":"Hasttings Digger HD021-4","name":"Х1"},{"title":"Замок для грифа","model":"Bronze Gym клипса","name":"Х4"},{"title":"Диск для штанги","model":"Protrain DB6092-1,25 (д=50 мм)","name":"Х6"},{"model":"Protrain DB6092-2,5 (д=50 мм)","name":"Х6"},{"model":"Protrain DB6092-5 (д=50 мм)","name":"Х16"},{"model":"Protrain DB6092-10 (д=50 мм)","name":"Х10"},{"model":"Protrain DB6092-15 (д=50 мм)","name":"Х10"},{"model":"Protrain DB6092-20 (д=50 мм)","name":"Х10"},{"model":"Protrain DB6092-25 (д=50 мм)","name":"Х10"},{"title":"W-образный гриф для штанги","model":"Bronze Gym олимпийский 120 см","name":"Х1"},{"title":"Z-образный гриф для штанги","model":"Bronze Gym олимпийский 120 см","name":"Х1"},{"title":"Прямой гриф для штанги","model":"Bronze Gym олимпийский 220 см BG-PA-BR-S001","name":"Х2"}]}]}]');
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   renderProjectsGallery: () => (/* binding */ renderProjectsGallery)
+/* harmony export */ });
+const slideProjectItemTemplate = document.querySelector("#project-part").content.querySelector('.project-content__item');
+const slideProjectTemplate = document.querySelector("#project-item").content.querySelector('.projects-list__item');
+const projectsFullTemplate = document.querySelector("#project-full").content.querySelector('.projects-gallery__item');
+const projectGallery = document.querySelector('.projects-gallery');
+const renderProjectsGallery = projects => {
+  const projectsFragment = document.createDocumentFragment();
+  const slideProjectsFragment = document.createDocumentFragment();
+  const projectsFullFragment = document.createDocumentFragment();
+  projects.forEach(project => {
+    const projectFull = projectsFullTemplate.cloneNode(true);
+    projectFull.querySelector('.title-info').textContent = project.projectId;
+    projectsFullFragment.appendChild(projectFull);
+    const projectsList = projectFull.querySelector('#projects-list');
+    project.content.forEach(project => {
+      const projectPart = slideProjectTemplate.cloneNode(true);
+      projectPart.querySelector('.accordion__title').textContent = project.type;
+      projectPart.querySelector('.accordion__number').innerHTML = project.icon;
+      slideProjectsFragment.appendChild(projectPart);
+      projectsList.appendChild(slideProjectsFragment);
+      project.trainers.forEach(content => {
+        const projectItem = slideProjectItemTemplate.cloneNode(true);
+        projectItem.querySelector('.type').textContent = content.title;
+        projectItem.querySelector('.model__name').textContent = content.model;
+        projectItem.querySelector('.model__type').textContent = content.name;
+        projectsFragment.appendChild(projectItem);
+      });
+      const sliderItems = projectPart.querySelector('#project-content');
+      sliderItems.appendChild(projectsFragment);
+    });
+  });
+  projectGallery.appendChild(projectsFullFragment);
+};
+
+
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   setPagination: () => (/* binding */ setPagination)
+/* harmony export */ });
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+
+const setPagination = slider => {
+  const sliderProjectsButtons = document.querySelector('.slider-projects__buttons');
+  const slideNumber = document.querySelector('.slider-projects-index');
+  const slidePrevNumber = slideNumber.querySelector('#slider-projects-prev');
+  const slideCurrentNumber = slideNumber.querySelector('#slider-projects-current');
+  const slideNextNumber = slideNumber.querySelector('#slider-projects-next');
+  slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).current);
+  slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).prev);
+  slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).next);
+  sliderProjectsButtons.addEventListener('click', () => {
+    slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).current);
+    slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).prev);
+    slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).next);
+  });
+};
+
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   addListeners: () => (/* binding */ addListeners),
+/* harmony export */   formatNumber: () => (/* binding */ formatNumber),
+/* harmony export */   formatPrice: () => (/* binding */ formatPrice),
+/* harmony export */   getProjectsIndex: () => (/* binding */ getProjectsIndex),
+/* harmony export */   removeElements: () => (/* binding */ removeElements)
+/* harmony export */ });
+const getProjectsIndex = slider => {
+  return {
+    current: slider.getInfo().displayIndex,
+    next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? '...' : slider.getInfo().displayIndex + 1,
+    prev: slider.getInfo().displayIndex === 1 ? '...' : slider.getInfo().displayIndex - 1
+  };
+};
+const formatNumber = number => {
+  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
+};
+const addListeners = (selector, cb) => {
+  const elements = document.querySelectorAll(selector);
+  elements.forEach(button => {
+    button.addEventListener('click', evt => {
+      evt.preventDefault();
+      cb();
+    });
+  });
+};
+const formatPrice = number => {
+  return number.toString().split(/(?=(?:...)*$)/).join("'");
+};
+console.log(formatPrice(12456789));
+const removeElements = selectors => {
+  selectors?.forEach(selector => {
+    document.querySelectorAll(selector).forEach(item => item.remove());
+  });
+};
+
+
+/***/ }),
+/* 5 */
+/***/ ((module) => {
+
 /**
  * Accordion v3.3.4
  * Lightweight and accessible accordion module created in pure Javascript
@@ -298,45 +419,7 @@
 }(window);
 
 /***/ }),
-/* 2 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   addListeners: () => (/* binding */ addListeners),
-/* harmony export */   formatNumber: () => (/* binding */ formatNumber),
-/* harmony export */   getProjectsIndex: () => (/* binding */ getProjectsIndex),
-/* harmony export */   removeElements: () => (/* binding */ removeElements)
-/* harmony export */ });
-const getProjectsIndex = slider => {
-  return {
-    current: slider.getInfo().displayIndex,
-    next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? '...' : slider.getInfo().displayIndex + 1,
-    prev: slider.getInfo().displayIndex === 1 ? '...' : slider.getInfo().displayIndex - 1
-  };
-};
-const formatNumber = number => {
-  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
-};
-const addListeners = (selector, cb) => {
-  const elements = document.querySelectorAll(selector);
-  elements.forEach(button => {
-    button.addEventListener('click', evt => {
-      evt.preventDefault();
-      cb();
-    });
-  });
-};
-const removeElements = selectors => {
-  selectors?.forEach(selector => {
-    document.querySelectorAll(selector).forEach(item => item.remove());
-  });
-};
-
-
-/***/ }),
-/* 3 */
+/* 6 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -362,7 +445,7 @@ const setNavigation = container => {
 
 
 /***/ }),
-/* 4 */
+/* 7 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -372,7 +455,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   setSmallSlider: () => (/* binding */ setSmallSlider),
 /* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive)
 /* harmony export */ });
-/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 
 const setSlider = (container, navContainer, props) => {
   return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
@@ -418,7 +501,7 @@ const settingSliderAdaptive = cb => {
 
 
 /***/ }),
-/* 5 */
+/* 8 */
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3562,7 +3645,7 @@ var tns = function (options) {
 exports.tns = tns;
 
 /***/ }),
-/* 6 */
+/* 9 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3613,7 +3696,7 @@ const settingMobileAccordionAdaptive = cb => {
 
 
 /***/ }),
-/* 7 */
+/* 10 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3621,6 +3704,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   renderProductsGallery: () => (/* binding */ renderProductsGallery)
 /* harmony export */ });
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+
 const productFullTemplate = document.querySelector("#products-full").content.querySelector('.product-gallery-set');
 const productContentTemplate = document.querySelector("#products-content").content.querySelector('.product-card');
 const productsGallery = document.querySelector('#hit-products');
@@ -3638,13 +3723,14 @@ const renderProductsGallery = products => {
     product.content.forEach(item => {
       const productContent = productContentTemplate.cloneNode(true);
       productContent.querySelector('.product-card__title').textContent = item.name;
+      productContent.querySelector('.product-card__extra-name').textContent = item.name_add;
       productContent.querySelector('.product-img').src = item.picture;
       productContent.querySelector('.product-img').alt = item.name;
       productContent.querySelector('.product-card__button').href = item.full_url;
       // productContent.querySelector('#product-img').srcset=item.image2x;
       // productContent.querySelector('#product-img-webp').srcset=item.imageWebp;
       if (item.list_price != 0) productContent.querySelector('.price--old').textContent = item.list_price;
-      productContent.querySelector('.price--new').textContent = `${item.Price} ₽`;
+      productContent.querySelector('.price--new').textContent = `${(0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatPrice)(item.Price)} ₽`;
       productContentFragment.appendChild(productContent);
     });
     const productsContent = productFull.querySelector('.products-content');
@@ -3656,7 +3742,7 @@ const renderProductsGallery = products => {
 
 
 /***/ }),
-/* 8 */
+/* 11 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3677,7 +3763,7 @@ const getData = onSuccess => {
 
 
 /***/ }),
-/* 9 */
+/* 12 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3775,17 +3861,17 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
-/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
-/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
-/* harmony import */ var _data_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
-// import projects from '../../../json/projects.json';
-// import { renderProjectsGallery } from './projects.js';
-// import { setPagination } from './slider-pagination.js'
+/* harmony import */ var _json_projects_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _projects_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _slider_pagination_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4);
+/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
+/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
+/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
+/* harmony import */ var _data_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(12);
 
 
 
@@ -3794,13 +3880,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_api_js__WEBPACK_IMPORTED_MODULE_6__.getData)(products => {
-  const productsList = (0,_data_js__WEBPACK_IMPORTED_MODULE_7__.getDataStructure)(products);
-  (0,_products_js__WEBPACK_IMPORTED_MODULE_5__.renderProductsGallery)(productsList);
+
+
+
+(0,_api_js__WEBPACK_IMPORTED_MODULE_9__.getData)(products => {
+  const productsList = (0,_data_js__WEBPACK_IMPORTED_MODULE_10__.getDataStructure)(products);
+  (0,_products_js__WEBPACK_IMPORTED_MODULE_8__.renderProductsGallery)(productsList);
+  console.log(products);
   productsList.forEach(({
     id
   }) => {
-    (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`, {
+    (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`, {
       responsive: {
         768: {
           items: 2,
@@ -3811,73 +3901,73 @@ __webpack_require__.r(__webpack_exports__);
     });
   });
 });
-// renderProjectsGallery(projects);
+(0,_projects_js__WEBPACK_IMPORTED_MODULE_1__.renderProjectsGallery)(_json_projects_json__WEBPACK_IMPORTED_MODULE_0__);
 
 // Sliders
 
-const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-intro', '#slider-intro-buttons', {
+const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-intro', '#slider-intro-buttons', {
   gutter: 32,
   controlsContainer: '#slider-intro-controls'
 });
-const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-best', '#slider-best-buttons', {
+const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-best', '#slider-best-buttons', {
   gutter: 32,
   controlsContainer: '#slider-best-controls'
 });
-
-// const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-projects__buttons', { loop: false });
-// setPagination(progectsGallery);
-
-const orderMobSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)('#slider-order-small', '#slider-order-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.settingSliderAdaptive)(orderMobSlider);
-const bestFitnessSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)('#slider-bestfit-small', '#slider-bestfit-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.settingSliderAdaptive)(bestFitnessSmallSlider);
-const whySmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)('#slider-why-small', '#slider-why-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.settingSliderAdaptive)(whySmallSlider);
-const projectsSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSmallSlider)('#slider-projects-small', '#slider-projects-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_3__.settingSliderAdaptive)(projectsSmallSlider);
+const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)('.slider-projects__slider', '.slider-projects__buttons', {
+  loop: false
+});
+(0,_slider_pagination_js__WEBPACK_IMPORTED_MODULE_2__.setPagination)(progectsGallery);
+const orderMobSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)('#slider-order-small', '#slider-order-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.settingSliderAdaptive)(orderMobSlider);
+const bestFitnessSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)('#slider-bestfit-small', '#slider-bestfit-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.settingSliderAdaptive)(bestFitnessSmallSlider);
+const whySmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)('#slider-why-small', '#slider-why-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.settingSliderAdaptive)(whySmallSlider);
+const projectsSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)('#slider-projects-small', '#slider-projects-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.settingSliderAdaptive)(projectsSmallSlider);
 
 // Accordions
 
-const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-intro')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordion)({
+const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-intro')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordionAdaptive)(accordionIntro);
-const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-about')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordion)({
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionIntro);
+const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-about')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordionAdaptive)(accordionAbout);
-const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordion)({
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionAbout);
+const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordionAdaptive)(accordionBest);
-const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordion)({
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionBest);
+const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordionAdaptive)(accordionGarantee);
-new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-main')));
-new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingAccordion)());
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionGarantee);
+new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-main')));
+new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)());
 
 // Accordions in slider
 
 sliderBest.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingMobileAccordionAdaptive)(accordionBest);
+  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionBest);
 });
 sliderIntro.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_4__.settingMobileAccordionAdaptive)(accordionIntro);
+  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionIntro);
 });
 
 // Remove section
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_1__.removeElements)(['#projects-detail-section', '#projects-button', 'a[data-type="calc-example"]']);
+(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-button', '#projects-section', '#projects-detail-section', '#sale-button']);
 
 // Navigation
 
-(0,_navigation_js__WEBPACK_IMPORTED_MODULE_2__.setNavigation)('#navigation-in');
+(0,_navigation_js__WEBPACK_IMPORTED_MODULE_5__.setNavigation)('#navigation-in');
 
 // Buttons click
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_1__.addListeners)('a[data-type="calc-button"]', () => $("#callmeform").show());
-(0,_util_js__WEBPACK_IMPORTED_MODULE_1__.addListeners)('a[data-type="call-button"]', () => $("#callmeform").show());
+(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.addListeners)('a[data-type="calc-button"]', () => $("#callmeform").show());
+(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.addListeners)('a[data-type="call-button"]', () => $("#callmeform").show());
 })();
 
 /******/ })()

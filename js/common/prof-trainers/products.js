@@ -1,3 +1,5 @@
+import { formatPrice } from "./util.js";
+
 const productFullTemplate = document.querySelector("#products-full").content.querySelector('.product-gallery-set');
 const productContentTemplate = document.querySelector("#products-content").content.querySelector('.product-card');
 
@@ -22,13 +24,14 @@ const renderProductsGallery = (products) => {
       const productContent = productContentTemplate.cloneNode(true);
 
       productContent.querySelector('.product-card__title').textContent=item.name;
+      productContent.querySelector('.product-card__extra-name').textContent=item.name_add;
       productContent.querySelector('.product-img').src=item.picture;
       productContent.querySelector('.product-img').alt=item.name;
       productContent.querySelector('.product-card__button').href=item.full_url;
       // productContent.querySelector('#product-img').srcset=item.image2x;
       // productContent.querySelector('#product-img-webp').srcset=item.imageWebp;
       if(item.list_price!=0) productContent.querySelector('.price--old').textContent=item.list_price;
-      productContent.querySelector('.price--new').textContent=`${item.Price} ₽`;
+      productContent.querySelector('.price--new').textContent=`${formatPrice(item.Price)} ₽`;
       productContentFragment.appendChild(productContent);
     })
 

@@ -20,6 +20,8 @@
 }
 
 .intro__control-buttons {
+  display: none;
+  
   @media (min-width: $tablet-width) {
     position: absolute;
     width: 100%;

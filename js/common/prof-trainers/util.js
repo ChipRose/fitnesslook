@@ -21,6 +21,11 @@ const addListeners = (selector, cb) => {
   })
 }
 
+const formatPrice = (number)=>{
+  return number.toString().split(/(?=(?:...)*$)/).join("'");
+}
+console.log(formatPrice(12456789))
+
 const removeElements = (selectors) => {
   selectors?.forEach((selector) => {
     document.querySelectorAll(selector).forEach(item=>item.remove())
@@ -29,4 +34,4 @@ const removeElements = (selectors) => {
 
 
 
-export { getProjectsIndex, formatNumber, removeElements, addListeners }
+export { getProjectsIndex, formatNumber, removeElements, addListeners, formatPrice }

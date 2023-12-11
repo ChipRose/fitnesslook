@@ -1,6 +1,6 @@
-// import projects from '../../../json/projects.json';
-// import { renderProjectsGallery } from './projects.js';
-// import { setPagination } from './slider-pagination.js'
+import projects from '../../../json/projects.json';
+import { renderProjectsGallery } from './projects.js';
+import { setPagination } from './slider-pagination.js'
 import Accordion from 'accordion-js';
 import { removeElements, addListeners } from './util.js';
 import { setNavigation } from './navigation.js';
@@ -13,12 +13,12 @@ import { getDataStructure } from './data.js';
 getData((products)=>{
   const productsList= getDataStructure(products);
     renderProductsGallery(productsList);
-
+console.log(products)
     productsList.forEach(({ id }) => {
     setSmallSlider(`#product-list-${id}`, `#product-list-buttons-${id}`, { responsive: { 768: { items: 2, gutter: 32, edgePadding: 32, } } });
   })
 })
-// renderProjectsGallery(projects);
+renderProjectsGallery(projects);
 
 // Sliders
 
@@ -26,8 +26,8 @@ const sliderIntro = document.querySelector('#slider-intro') && document.querySel
 
 const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32,  controlsContainer:'#slider-best-controls' });
 
-// const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-projects__buttons', { loop: false });
-// setPagination(progectsGallery);
+const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-projects__buttons', { loop: false });
+setPagination(progectsGallery);
 
 const orderMobSlider = setSmallSlider('#slider-order-small', '#slider-order-small-buttons');
 settingSliderAdaptive(orderMobSlider);
@@ -70,7 +70,16 @@ sliderIntro.events.on('indexChanged', ()=>{
 
 // Remove section
 
-removeElements(['#projects-detail-section', '#projects-button','a[data-type="calc-example"]'])
+removeElements([
+  'a[data-type="calc-example"]',
+  '#sertificates-button',
+  '#delivery-button',
+  '#garantee-card-button',
+  '#projects-button',
+  '#projects-section',
+  '#projects-detail-section',
+  '#sale-button'
+])
 
 // Navigation
 
