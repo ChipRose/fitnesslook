@@ -497,7 +497,7 @@ const setSimpleSlider = (container, props) => {
     gutter: 32,
     items: 1,
     nav: false,
-    // autoHeight: true,
+    autoHeight: true,
     ...props
   });
 };
@@ -3937,7 +3937,8 @@ const sliderIntro = document.querySelector('#slider-intro') && document.querySel
 });
 const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-best', '#slider-best-buttons', {
   gutter: 32,
-  controlsContainer: '#slider-best-controls'
+  controlsContainer: '#slider-best-controls',
+  autoHeight: true
 });
 const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSimpleSlider)('#slider-projects-details', {
   controlsContainer: '#slider-projects-details-buttons'
@@ -3962,15 +3963,29 @@ const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionAbout);
-const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
-  showMultiple: true
-}));
+const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-best')), {
+  duration: 10,
+  onOpen: () => {
+    sliderBest.updateSliderHeight();
+  },
+  onClose: () => {
+    sliderBest.updateSliderHeight();
+  }
+});
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionBest);
 const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionGarantee);
-const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-main')));
+const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-main')), {
+  duration: 10,
+  onOpen: () => {
+    progectsGallery.updateSliderHeight();
+  },
+  onClose: () => {
+    progectsGallery.updateSliderHeight();
+  }
+});
 new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)());
 
 // Accordions in slider

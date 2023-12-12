@@ -10,11 +10,11 @@ import { renderProductsGallery } from './products.js';
 import { getData } from './api.js';
 import { getDataStructure } from './data.js';
 
-getData((products)=>{
-  const productsList= getDataStructure(products);
-    renderProductsGallery(productsList);
-console.log(products)
-    productsList.forEach(({ id }) => {
+getData((products) => {
+  const productsList = getDataStructure(products);
+  renderProductsGallery(productsList);
+  console.log(products)
+  productsList.forEach(({ id }) => {
     setSmallSlider(`#product-list-${id}`, `#product-list-buttons-${id}`, { responsive: { 768: { items: 2, gutter: 32, edgePadding: 32, } } });
   })
 })
@@ -23,9 +23,9 @@ renderProjectsGallery(sortProjects(projects));
 
 // Sliders
 
-const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons',{gutter: 32, controlsContainer:'#slider-intro-controls'});
+const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons', { gutter: 32, controlsContainer: '#slider-intro-controls' });
 
-const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32,  controlsContainer:'#slider-best-controls' });
+const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, controlsContainer: '#slider-best-controls', autoHeight: true });
 
 const progectsGallery = setSimpleSlider('#slider-projects-details', { controlsContainer: '#slider-projects-details-buttons' });
 setPagination(progectsGallery);
@@ -50,26 +50,43 @@ settingAccordionAdaptive(accordionIntro);
 const accordionAbout = new Accordion(Array.from(document.querySelectorAll('#accordion-about')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionAbout);
 
-const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')), settingAccordion({ showMultiple: true }));
+const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')),{
+  duration: 10,
+  onOpen: () => {
+    sliderBest.updateSliderHeight();
+  },
+  onClose: () => {
+    sliderBest.updateSliderHeight();
+  }
+});
 settingAccordionAdaptive(accordionBest);
 
 const accordionGarantee = new Accordion(Array.from(document.querySelectorAll('.garantee-list')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionGarantee);
 
-const accordionMain = new Accordion(Array.from(document.querySelectorAll('.accordion-main')));
+const accordionMain = new Accordion(Array.from(document.querySelectorAll('.accordion-main')), {
+  duration: 10,
+  onOpen: () => {
+    progectsGallery.updateSliderHeight();
+  },
+  onClose: () => {
+    progectsGallery.updateSliderHeight();
+  }
+});
+
 new Accordion(Array.from(document.querySelectorAll('.accordion-questions')), settingAccordion());
 
 // Accordions in slider
 
-sliderBest.events.on('indexChanged', ()=>{
+sliderBest.events.on('indexChanged', () => {
   settingMobileAccordionAdaptive(accordionBest);
 });
 
-sliderIntro.events.on('indexChanged', ()=>{
+sliderIntro.events.on('indexChanged', () => {
   settingMobileAccordionAdaptive(accordionIntro);
 });
 
-progectsGallery.events.on('indexChanged', ()=>{
+progectsGallery.events.on('indexChanged', () => {
   closeAllAccordions(accordionMain);
 });
 
@@ -93,5 +110,5 @@ setNavigation('#navigation-in');
 
 // Buttons click
 
-addListeners('a[data-type="calc-button"]', ()=>$("#callmeform").show());
-addListeners('a[data-type="call-button"]', ()=>$("#callmeform").show());
+addListeners('a[data-type="calc-button"]', () => $("#callmeform").show());
+addListeners('a[data-type="call-button"]', () => $("#callmeform").show());

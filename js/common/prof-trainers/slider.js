@@ -32,7 +32,7 @@ const setSimpleSlider = (container, props)=>{
     gutter: 32,
     items: 1,
     nav: false,
-    // autoHeight: true,
+    autoHeight: true,
     ...props
   })
 }
