@@ -27,10 +27,10 @@ const openAllDeskAccordions = (accordions) => {
   }
 }
 
-const settingAccordionAdaptive = (cb) => {
-  let newAccordion = cb;
+const settingAccordionAdaptive = (accordion, slider) => {
+  let newAccordion = accordion;
 
-  if (!Array.isArray(cb)) newAccordion = [cb]
+  if (!Array.isArray(accordion)) newAccordion = [accordion]
   closeAllMobileAccordions(newAccordion);
   openAllDeskAccordions(newAccordion);
 
@@ -40,10 +40,10 @@ const settingAccordionAdaptive = (cb) => {
   });
 };
 
-const settingMobileAccordionAdaptive = (cb) => {
-  let newAccordion = cb;
+const settingMobileAccordionAdaptive = (accordion) => {
+  let newAccordion = accordion;
 
-  if (!Array.isArray(cb)) newAccordion = [cb]
+  if (!Array.isArray(accordion)) newAccordion = [accordion]
   closeAllMobileAccordions(newAccordion);
 
   window.addEventListener('resize', () => {

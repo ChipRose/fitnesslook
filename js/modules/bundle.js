@@ -501,17 +501,17 @@ const setSimpleSlider = (container, props) => {
     ...props
   });
 };
-const settingSliderAdaptive = cb => {
-  let newSlider = cb;
+const settingSliderAdaptive = slider => {
+  let newSlider = slider;
   if (window.innerWidth < 768) {
-    if (!newSlider.isOn) newSlider = cb.rebuild();
+    if (!newSlider.isOn) newSlider = slider.rebuild();
   } else {
     newSlider.isOn && newSlider.destroy();
   }
   ;
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
-      if (!newSlider.isOn) newSlider = cb.rebuild();
+      if (!newSlider.isOn) newSlider = slider.rebuild();
     } else {
       newSlider.isOn && newSlider.destroy();
     }
@@ -3701,9 +3701,9 @@ const openAllDeskAccordions = accordions => {
     });
   }
 };
-const settingAccordionAdaptive = cb => {
-  let newAccordion = cb;
-  if (!Array.isArray(cb)) newAccordion = [cb];
+const settingAccordionAdaptive = (accordion, slider) => {
+  let newAccordion = accordion;
+  if (!Array.isArray(accordion)) newAccordion = [accordion];
   closeAllMobileAccordions(newAccordion);
   openAllDeskAccordions(newAccordion);
   window.addEventListener('resize', () => {
@@ -3711,9 +3711,9 @@ const settingAccordionAdaptive = cb => {
     openAllDeskAccordions(newAccordion);
   });
 };
-const settingMobileAccordionAdaptive = cb => {
-  let newAccordion = cb;
-  if (!Array.isArray(cb)) newAccordion = [cb];
+const settingMobileAccordionAdaptive = accordion => {
+  let newAccordion = accordion;
+  if (!Array.isArray(accordion)) newAccordion = [accordion];
   closeAllMobileAccordions(newAccordion);
   window.addEventListener('resize', () => {
     closeAllMobileAccordions(newAccordion);
@@ -3940,7 +3940,6 @@ const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slide
   controlsContainer: '#slider-best-controls',
   autoHeight: true
 });
-sliderBest.updateSliderHeight();
 const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSimpleSlider)('#slider-projects-details', {
   controlsContainer: '#slider-projects-details-buttons'
 });
@@ -3965,7 +3964,7 @@ const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionAbout);
 const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-best')), {
-  duration: 10,
+  duration: 100,
   onOpen: () => {
     sliderBest.updateSliderHeight();
   },
@@ -3973,7 +3972,7 @@ const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(d
     sliderBest.updateSliderHeight();
   }
 });
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionBest);
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionBest, sliderBest);
 const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
   showMultiple: true
 }));
@@ -4017,6 +4016,10 @@ progectsGallery.events.on('indexChanged', () => {
 
 (0,_util_js__WEBPACK_IMPORTED_MODULE_4__.addListeners)('a[data-type="calc-button"]', () => $("#callmeform").show());
 (0,_util_js__WEBPACK_IMPORTED_MODULE_4__.addListeners)('a[data-type="call-button"]', () => $("#callmeform").show());
+window.addEventListener("load", () => {
+  sliderBest.updateSliderHeight();
+  progectsGallery.updateSliderHeight();
+});
 })();
 
 /******/ })()

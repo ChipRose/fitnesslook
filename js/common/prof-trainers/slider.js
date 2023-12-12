@@ -37,10 +37,10 @@ const setSimpleSlider = (container, props)=>{
   })
 }
 
-const settingSliderAdaptive = (cb) => {
-  let newSlider = cb;
+const settingSliderAdaptive = (slider) => {
+  let newSlider = slider;
   if (window.innerWidth < 768) {
-    if (!newSlider.isOn) newSlider = cb.rebuild()
+    if (!newSlider.isOn) newSlider = slider.rebuild()
 
   }
   else {
@@ -49,7 +49,7 @@ const settingSliderAdaptive = (cb) => {
 
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
-      if (!newSlider.isOn) newSlider = cb.rebuild()
+      if (!newSlider.isOn) newSlider = slider.rebuild()
     }
     else {
       newSlider.isOn && newSlider.destroy();

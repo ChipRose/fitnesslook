@@ -21,12 +21,13 @@ getData((products) => {
 
 renderProjectsGallery(sortProjects(projects));
 
+
+
 // Sliders
 
 const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons', { gutter: 32, controlsContainer: '#slider-intro-controls' });
 
-const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, controlsContainer: '#slider-best-controls', autoHeight: true });
-sliderBest.updateSliderHeight();
+const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, controlsContainer: '#slider-best-controls', autoHeight: true});
 
 const progectsGallery = setSimpleSlider('#slider-projects-details', { controlsContainer: '#slider-projects-details-buttons' });
 setPagination(progectsGallery);
@@ -52,7 +53,7 @@ const accordionAbout = new Accordion(Array.from(document.querySelectorAll('#acco
 settingAccordionAdaptive(accordionAbout);
 
 const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')),{
-  duration: 10,
+  duration: 100,
   onOpen: () => {
     sliderBest.updateSliderHeight();
   },
@@ -60,7 +61,7 @@ const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accor
     sliderBest.updateSliderHeight();
   }
 });
-settingAccordionAdaptive(accordionBest);
+settingAccordionAdaptive(accordionBest, sliderBest);
 
 const accordionGarantee = new Accordion(Array.from(document.querySelectorAll('.garantee-list')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionGarantee);
@@ -113,3 +114,8 @@ setNavigation('#navigation-in');
 
 addListeners('a[data-type="calc-button"]', () => $("#callmeform").show());
 addListeners('a[data-type="call-button"]', () => $("#callmeform").show());
+
+window.addEventListener("load", () => {
+  sliderBest.updateSliderHeight();
+  progectsGallery.updateSliderHeight();
+});
