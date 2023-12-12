@@ -1,10 +1,11 @@
-.projects-detail {
-}
-
 .projects-detail__title-block {
-  margin-bottom: var(--indent-main);
+  margin-bottom: var(--indent-big);
   display: flex;
   justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
 }
 
 .projects-detail__video-block {

@@ -3,7 +3,7 @@ const slideProjectItemTemplate = document.querySelector("#project-part").content
 const slideProjectTemplate = document.querySelector("#project-item").content.querySelector('.projects-list__item');
 const projectsFullTemplate = document.querySelector("#project-full").content.querySelector('.projects-gallery__item');
 
-const projectGallery = document.querySelector('.projects-gallery');
+const projectGallery = document.querySelector('#slider-projects-details');
 
 const renderProjectsGallery = (projects) => {
   const projectsFragment = document.createDocumentFragment();
@@ -27,8 +27,10 @@ const renderProjectsGallery = (projects) => {
 
       project.trainers.forEach((content) => {
         const projectItem = slideProjectItemTemplate.cloneNode(true);
+        const type= projectItem.querySelector('.type');
 
-        projectItem.querySelector('.type').textContent = content.title;
+        content.title?type.textContent = content.title:type.remove();
+        projectItem.querySelector('.model').href = content?.link;
         projectItem.querySelector('.model__name').textContent = content.model;
         projectItem.querySelector('.model__type').textContent = content.name;
         projectsFragment.appendChild(projectItem);

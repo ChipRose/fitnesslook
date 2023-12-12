@@ -1,8 +1,8 @@
 import { getProjectsIndex, formatNumber } from './util.js';
 
 const setPagination=(slider)=>{
-  const sliderProjectsButtons = document.querySelector('.slider-projects__buttons');
-  const slideNumber = document.querySelector('.slider-projects-index');
+  const sliderProjectsButtons = document.querySelector('#slider-projects-details-buttons');
+  const slideNumber = document.querySelector('#projects-pagination');
   const slidePrevNumber = slideNumber.querySelector('#slider-projects-prev');
   const slideCurrentNumber = slideNumber.querySelector('#slider-projects-current');
   const slideNextNumber = slideNumber.querySelector('#slider-projects-next');

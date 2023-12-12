@@ -13,6 +13,7 @@
 .questions-block__item {
   @media (min-width: $tablet-width) {
     padding-top: var(--indent-basic);
+    padding-bottom: var(--indent-basic);
     position: relative;
     display: grid;
     grid-template-rows: repeat(2, min-content);

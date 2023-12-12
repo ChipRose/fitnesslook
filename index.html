@@ -5437,17 +5437,17 @@
           <div class="container">
             <div class="slider-projects projects-detail__projects">
               <div class="slider-projects-pagination slider-projects__pagination">
-                <div class="text slider-projects-index slider-projects-pagination__index">
-                  <p class="text slider-projects-index__item slider-projects-index__item--prev"
+                <div class="slider-projects-pagination__index" id="projects-pagination">
+                  <p class="text slider-projects-pagination__item"
                     id="slider-projects-prev">
                   </p>
-                  <p class="text slider-projects-index__item slider-projects-index__item--current"
+                  <p class="text slider-projects-pagination__item slider-projects-pagination__item--current"
                     id="slider-projects-current"></p>
-                  <p class="text slider-projects-index__item slider-projects-index__item--next"
+                  <p class="text slider-projects-pagination__item"
                     id="slider-projects-next">
                   </p>
                 </div>
-                <div class="slider-projects__buttons slider-projects-pagination__buttons">
+                <div class="slider-projects-pagination__buttons" id="slider-projects-details-buttons">
                   <button class="button button-simple-slider button-simple-slider--prev" id="project-prev"
                     type="button">
                     <svg class="button-simple-slider__icon" width="8" height="11" role="img"
@@ -5464,14 +5464,14 @@
                   </button>
                 </div>
               </div>
-              <ul class="list slider-projects__slider projects-gallery">
+              <ul class="list slider-projects__slider" id="slider-projects-details">
                 <!-- Projects gallery -->
               </ul>
             </div>
-            <div class="projects-detail__links">
+            <div class="projects-detail__links" id="projects-info-download">
               <a href="" class="link button-link button-link--arrow button-link--accent">PDF</a>
-              <a href="" class="link button-link button-link--arrow ">Все проекты в <span
-                  class="text-main text-main--accent">PDF</span> </a>t
+              <a href="" class="link button-link button-link--arrow" >Все проекты в <span
+                  class="text-main text-main--accent">PDF</span> </a>
             </div>
           </div>
         </section>
@@ -5653,11 +5653,11 @@
         <!-- Project content item template -->
         <template id="project-part">
           <li class="project-content__item">
-            <p class="text type"></p>
-            <p class="text model">
+            <p class="text type project-content__type"></p>
+            <a class="link model project-content__model">
               <span class="model__name"></span>
               <span class="model__type"></span>
-            </p>
+            </a>
           </li>
         </template>
 

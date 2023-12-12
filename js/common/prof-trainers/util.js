@@ -31,6 +31,12 @@ const removeElements = (selectors) => {
   })
 }
 
+const getCompare = (a, b) => {
+  return b.content.length - a.content.length;
+}
 
+const sortProjects=(array)=>{
+  return array.sort(getCompare)
+}
 
-export { getProjectsIndex, formatNumber, removeElements, addListeners, formatPrice }
+export { getProjectsIndex, formatNumber, removeElements, addListeners, formatPrice, sortProjects }

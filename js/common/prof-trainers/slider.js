@@ -26,6 +26,17 @@ const setSmallSlider = (container, controlsContainer, props) => {
   })
 }
 
+const setSimpleSlider = (container, props)=>{
+  return tns({
+    container,
+    gutter: 32,
+    items: 1,
+    nav: false,
+    // autoHeight: true,
+    ...props
+  })
+}
+
 const settingSliderAdaptive = (cb) => {
   let newSlider = cb;
   if (window.innerWidth < 768) {
@@ -46,4 +57,4 @@ const settingSliderAdaptive = (cb) => {
   });
 }
 
-export { setSlider, setSmallSlider, settingSliderAdaptive };
+export { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive };

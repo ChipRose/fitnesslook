@@ -5,7 +5,13 @@ const settingAccordion = (props) => {
   }
 }
 
-const closeAllMobileAccordion = (accordions) => {
+const closeAllAccordions = (accordions) => {
+  accordions.forEach(item => {
+    item.closeAll()
+  })
+}
+
+const closeAllMobileAccordions = (accordions) => {
   if (window.innerWidth < 768) {
     accordions.forEach(item => {
       item.closeAll()
@@ -13,7 +19,7 @@ const closeAllMobileAccordion = (accordions) => {
   }
 }
 
-const openAllDeskAccordion = (accordions) => {
+const openAllDeskAccordions = (accordions) => {
   if (window.innerWidth >= 768) {
     accordions.forEach(item => {
       item.openAll()
@@ -25,12 +31,12 @@ const settingAccordionAdaptive = (cb) => {
   let newAccordion = cb;
 
   if (!Array.isArray(cb)) newAccordion = [cb]
-  closeAllMobileAccordion(newAccordion);
-  openAllDeskAccordion(newAccordion);
+  closeAllMobileAccordions(newAccordion);
+  openAllDeskAccordions(newAccordion);
 
   window.addEventListener('resize', () => {
-    closeAllMobileAccordion(newAccordion);
-    openAllDeskAccordion(newAccordion);
+    closeAllMobileAccordions(newAccordion);
+    openAllDeskAccordions(newAccordion);
   });
 };
 
@@ -38,12 +44,12 @@ const settingMobileAccordionAdaptive = (cb) => {
   let newAccordion = cb;
 
   if (!Array.isArray(cb)) newAccordion = [cb]
-  closeAllMobileAccordion(newAccordion);
+  closeAllMobileAccordions(newAccordion);
 
   window.addEventListener('resize', () => {
-    closeAllMobileAccordion(newAccordion);
+    closeAllMobileAccordions(newAccordion);
   });
 }
 
 
-export { settingAccordion, settingAccordionAdaptive, settingMobileAccordionAdaptive };
+export { settingAccordion, settingAccordionAdaptive, closeAllAccordions, settingMobileAccordionAdaptive };

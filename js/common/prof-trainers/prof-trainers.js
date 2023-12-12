@@ -2,10 +2,10 @@ import projects from '../../../json/projects.json';
 import { renderProjectsGallery } from './projects.js';
 import { setPagination } from './slider-pagination.js'
 import Accordion from 'accordion-js';
-import { removeElements, addListeners } from './util.js';
+import { removeElements, addListeners, sortProjects } from './util.js';
 import { setNavigation } from './navigation.js';
-import { setSlider, setSmallSlider, settingSliderAdaptive } from './slider.js';
-import { settingAccordion, settingAccordionAdaptive, settingMobileAccordionAdaptive } from './accordion.js';
+import { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive } from './slider.js';
+import { settingAccordion, settingAccordionAdaptive, settingMobileAccordionAdaptive, closeAllAccordions } from './accordion.js';
 import { renderProductsGallery } from './products.js';
 import { getData } from './api.js';
 import { getDataStructure } from './data.js';
@@ -18,7 +18,8 @@ console.log(products)
     setSmallSlider(`#product-list-${id}`, `#product-list-buttons-${id}`, { responsive: { 768: { items: 2, gutter: 32, edgePadding: 32, } } });
   })
 })
-renderProjectsGallery(projects);
+
+renderProjectsGallery(sortProjects(projects));
 
 // Sliders
 
@@ -26,11 +27,11 @@ const sliderIntro = document.querySelector('#slider-intro') && document.querySel
 
 const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32,  controlsContainer:'#slider-best-controls' });
 
-const progectsGallery = setSmallSlider('.slider-projects__slider', '.slider-projects__buttons', { loop: false });
+const progectsGallery = setSimpleSlider('#slider-projects-details', { controlsContainer: '#slider-projects-details-buttons' });
 setPagination(progectsGallery);
 
-const orderMobSlider = setSmallSlider('#slider-order-small', '#slider-order-small-buttons');
-settingSliderAdaptive(orderMobSlider);
+const orderSmallSlider = setSmallSlider('#slider-order-small', '#slider-order-small-buttons');
+settingSliderAdaptive(orderSmallSlider);
 
 const bestFitnessSmallSlider = setSmallSlider('#slider-bestfit-small', '#slider-bestfit-small-buttons');
 settingSliderAdaptive(bestFitnessSmallSlider);
@@ -55,7 +56,7 @@ settingAccordionAdaptive(accordionBest);
 const accordionGarantee = new Accordion(Array.from(document.querySelectorAll('.garantee-list')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionGarantee);
 
-new Accordion(Array.from(document.querySelectorAll('.accordion-main')));
+const accordionMain = new Accordion(Array.from(document.querySelectorAll('.accordion-main')));
 new Accordion(Array.from(document.querySelectorAll('.accordion-questions')), settingAccordion());
 
 // Accordions in slider
@@ -68,6 +69,10 @@ sliderIntro.events.on('indexChanged', ()=>{
   settingMobileAccordionAdaptive(accordionIntro);
 });
 
+progectsGallery.events.on('indexChanged', ()=>{
+  closeAllAccordions(accordionMain);
+});
+
 // Remove section
 
 removeElements([
@@ -75,9 +80,10 @@ removeElements([
   '#sertificates-button',
   '#delivery-button',
   '#garantee-card-button',
+  '#projects-info-download',
   // '#projects-button',
   // '#projects-section',
-  '#projects-detail-section',
+  // '#projects-detail-section',
   '#sale-button'
 ])
 
