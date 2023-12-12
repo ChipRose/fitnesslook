@@ -28,10 +28,19 @@
 
 .page-prof-trainers__projects {
   margin-bottom: var(--indent-big);
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
 }
 
 .page-prof-trainers__projects-detail {
   margin-bottom: var(--indent-big);
+
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
 }
 
 .page-prof-trainers__garantee {

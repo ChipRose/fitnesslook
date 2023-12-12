@@ -3755,7 +3755,7 @@ const renderProductsGallery = products => {
       productContent.querySelector('.product-card__button').href = item.full_url;
       // productContent.querySelector('#product-img').srcset=item.image2x;
       // productContent.querySelector('#product-img-webp').srcset=item.imageWebp;
-      if (item.list_price != 0) productContent.querySelector('.price--old').textContent = item.list_price;
+      if (item.list_price != 0) productContent.querySelector('.price--old').textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatPrice)(item.list_price);
       productContent.querySelector('.price--new').textContent = `${(0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatPrice)(item.Price)} ₽`;
       productContentFragment.appendChild(productContent);
     });

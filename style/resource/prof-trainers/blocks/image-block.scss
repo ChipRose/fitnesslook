@@ -20,8 +20,7 @@
     height: auto;
     min-height: 100%;
     display: block;
-    min-height: 100%;
-
+    object-fit: cover;
     border-radius: var(--radius-main);
   }
 }
@@ -61,4 +60,10 @@
     font-family: "Natasha", Arial, sans-serif;
     color: var(--cl-contrast);
   }
+}
+
+.image-block.image-block--center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
