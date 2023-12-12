@@ -1,6 +1,6 @@
 const settingAccordion = (props) => {
   return {
-    duration: 400,
+    duration: 10,
     ...props
   }
 }

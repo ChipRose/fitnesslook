@@ -3678,7 +3678,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const settingAccordion = props => {
   return {
-    duration: 400,
+    duration: 10,
     ...props
   };
 };
@@ -3940,6 +3940,7 @@ const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slide
   controlsContainer: '#slider-best-controls',
   autoHeight: true
 });
+sliderBest.updateSliderHeight();
 const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSimpleSlider)('#slider-projects-details', {
   controlsContainer: '#slider-projects-details-buttons'
 });
