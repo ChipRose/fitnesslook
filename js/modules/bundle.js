@@ -3678,7 +3678,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const settingAccordion = props => {
   return {
-    duration: 10,
+    duration: 400,
     ...props
   };
 };
@@ -3701,7 +3701,7 @@ const openAllDeskAccordions = accordions => {
     });
   }
 };
-const settingAccordionAdaptive = (accordion, slider) => {
+const settingAccordionAdaptive = accordion => {
   let newAccordion = accordion;
   if (!Array.isArray(accordion)) newAccordion = [accordion];
   closeAllMobileAccordions(newAccordion);
@@ -3964,7 +3964,7 @@ const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionAbout);
 const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-best')), {
-  duration: 100,
+  duration: 400,
   onOpen: () => {
     sliderBest.updateSliderHeight();
   },

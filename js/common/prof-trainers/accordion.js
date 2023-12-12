@@ -1,6 +1,6 @@
 const settingAccordion = (props) => {
   return {
-    duration: 10,
+    duration: 400,
     ...props
   }
 }
@@ -27,7 +27,7 @@ const openAllDeskAccordions = (accordions) => {
   }
 }
 
-const settingAccordionAdaptive = (accordion, slider) => {
+const settingAccordionAdaptive = (accordion) => {
   let newAccordion = accordion;
 
   if (!Array.isArray(accordion)) newAccordion = [accordion]

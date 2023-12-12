@@ -21,8 +21,6 @@ getData((products) => {
 
 renderProjectsGallery(sortProjects(projects));
 
-
-
 // Sliders
 
 const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons', { gutter: 32, controlsContainer: '#slider-intro-controls' });
@@ -53,7 +51,7 @@ const accordionAbout = new Accordion(Array.from(document.querySelectorAll('#acco
 settingAccordionAdaptive(accordionAbout);
 
 const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')),{
-  duration: 100,
+  duration: 400,
   onOpen: () => {
     sliderBest.updateSliderHeight();
   },

@@ -2,23 +2,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 29px;
-  height: 29px;
+  width: 30px;
+  height: 30px;
   background: var(--cl-accent);
   border-radius: 50%;
   transition: var(--transition-main);
 
   svg {
+    width: 28px;
+    height: auto;
     fill: var(--cl-contrast);
   }
 
-  &:hover{
+  &:hover {
     opacity: 0.8;
   }
 }
 
 .button-social--connect {
-  svg{
-    transform: translateY(2px);
+  svg {
+    width: 22px;
   }
 }
