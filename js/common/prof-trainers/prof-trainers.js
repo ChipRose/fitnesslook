@@ -75,8 +75,8 @@ removeElements([
   '#sertificates-button',
   '#delivery-button',
   '#garantee-card-button',
-  '#projects-button',
-  '#projects-section',
+  // '#projects-button',
+  // '#projects-section',
   '#projects-detail-section',
   '#sale-button'
 ])

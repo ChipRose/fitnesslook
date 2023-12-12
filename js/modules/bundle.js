@@ -113,7 +113,6 @@ const addListeners = (selector, cb) => {
 const formatPrice = number => {
   return number.toString().split(/(?=(?:...)*$)/).join("'");
 };
-console.log(formatPrice(12456789));
 const removeElements = selectors => {
   selectors?.forEach(selector => {
     document.querySelectorAll(selector).forEach(item => item.remove());
@@ -3958,7 +3957,10 @@ sliderIntro.events.on('indexChanged', () => {
 
 // Remove section
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-button', '#projects-section', '#projects-detail-section', '#sale-button']);
+(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button',
+// '#projects-button',
+// '#projects-section',
+'#projects-detail-section', '#sale-button']);
 
 // Navigation
 

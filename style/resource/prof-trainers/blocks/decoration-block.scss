@@ -9,7 +9,7 @@
 
 .decoration-block__item {
   @media (min-width:$tablet-width) {
-    flex: 0 0 30%;
+    flex: 0 0 calc(100% / 3 - var(--indent-big));
     margin-right: var(--indent-big);
 
     &:nth-child(3n) {
