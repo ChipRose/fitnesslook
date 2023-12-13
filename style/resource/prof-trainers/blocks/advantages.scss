@@ -1,23 +1,24 @@
-.best-list {
+.advantages {
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
-.best-list__item {
+.advantages__item {
   @media (min-width: $tablet-width) {
     margin-right: var(--indent-big);
     margin-bottom: var(--indent-big);
-    width: calc(50% - var(--indent-main));
+    width: calc(50% - var(--indent-big));
 
-    &:nth-child(2n) {
+    &:nth-child(2n){
       margin-right: 0;
+
     }
   }
 }
-.best-list .best-list__button {
+.advantages .ac-trigger {
   @media (min-width: $tablet-width) {
     pointer-events: none;
 

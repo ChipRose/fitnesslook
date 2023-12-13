@@ -26,12 +26,12 @@
   margin-bottom: var(--indent-main);
 }
 
-.about__img-sticker {
+.about__advantages {
   margin-bottom: var(--indent-main);
-}
 
-.about__service{
-  margin-bottom: var(--indent-main);
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-big);
+  }
 }
 
 .about__decoration {

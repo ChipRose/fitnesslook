@@ -17,19 +17,22 @@
 }
 
 .slider-best__title-block {
-  @media (min-width: $tablet-width) {
-    padding-right: var(--indent-big);
-    padding-left: var(--indent-big);
-  }
-}
-
-.slider-best__title {
   margin-bottom: var(--indent-big);
   display: flex;
   justify-content: center;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
+    padding-right: var(--indent-big);
+    padding-left: var(--indent-big);
     margin-bottom: var(--indent-huge);
+  }
+}
+
+.slider-best__subtitle {
+  margin-bottom: var(--indent-main);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
   }
 }
 

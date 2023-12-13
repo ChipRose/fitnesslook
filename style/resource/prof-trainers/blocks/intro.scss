@@ -3,6 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-big);
+  }
 }
 
 .intro .intro__buttons-block {
@@ -21,7 +25,7 @@
 
 .intro__control-buttons {
   display: none;
-  
+
   @media (min-width: $tablet-width) {
     position: absolute;
     width: 100%;

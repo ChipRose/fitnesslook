@@ -3909,6 +3909,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+// Remove section
+
+(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download',
+// '#projects-button',
+// '#projects-section',
+// '#projects-detail-section',
+'#sale-button']);
 (0,_api_js__WEBPACK_IMPORTED_MODULE_9__.getData)(products => {
   const productsList = (0,_data_js__WEBPACK_IMPORTED_MODULE_10__.getDataStructure)(products);
   (0,_products_js__WEBPACK_IMPORTED_MODULE_8__.renderProductsGallery)(productsList);
@@ -3978,7 +3986,7 @@ const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.fr
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionGarantee);
 const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-main')), {
-  duration: 10,
+  duration: 200,
   onOpen: () => {
     progectsGallery.updateSliderHeight();
   },
@@ -3999,14 +4007,6 @@ sliderIntro.events.on('indexChanged', () => {
 progectsGallery.events.on('indexChanged', () => {
   (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.closeAllAccordions)(accordionMain);
 });
-
-// Remove section
-
-(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download',
-// '#projects-button',
-// '#projects-section',
-// '#projects-detail-section',
-'#sale-button']);
 
 // Navigation
 

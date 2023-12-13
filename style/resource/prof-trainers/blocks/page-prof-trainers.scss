@@ -1,5 +1,9 @@
 .page-prof-trainers__intro {
   margin-bottom: var(--indent-big);
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: var(--indent-huge);
+  }
 }
 
 .page-prof-trainers__best {

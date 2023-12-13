@@ -10,6 +10,20 @@ import { renderProductsGallery } from './products.js';
 import { getData } from './api.js';
 import { getDataStructure } from './data.js';
 
+// Remove section
+
+removeElements([
+  'a[data-type="calc-example"]',
+  '#sertificates-button',
+  '#delivery-button',
+  '#garantee-card-button',
+  '#projects-info-download',
+  // '#projects-button',
+  // '#projects-section',
+  // '#projects-detail-section',
+  '#sale-button'
+])
+
 getData((products) => {
   const productsList = getDataStructure(products);
   renderProductsGallery(productsList);
@@ -50,7 +64,7 @@ settingAccordionAdaptive(accordionIntro);
 const accordionAbout = new Accordion(Array.from(document.querySelectorAll('#accordion-about')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionAbout);
 
-const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')),{
+const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')), {
   duration: 400,
   onOpen: () => {
     sliderBest.updateSliderHeight();
@@ -65,7 +79,7 @@ const accordionGarantee = new Accordion(Array.from(document.querySelectorAll('.g
 settingAccordionAdaptive(accordionGarantee);
 
 const accordionMain = new Accordion(Array.from(document.querySelectorAll('.accordion-main')), {
-  duration: 10,
+  duration: 200,
   onOpen: () => {
     progectsGallery.updateSliderHeight();
   },
@@ -90,19 +104,7 @@ progectsGallery.events.on('indexChanged', () => {
   closeAllAccordions(accordionMain);
 });
 
-// Remove section
 
-removeElements([
-  'a[data-type="calc-example"]',
-  '#sertificates-button',
-  '#delivery-button',
-  '#garantee-card-button',
-  '#projects-info-download',
-  // '#projects-button',
-  // '#projects-section',
-  // '#projects-detail-section',
-  '#sale-button'
-])
 
 // Navigation
 
