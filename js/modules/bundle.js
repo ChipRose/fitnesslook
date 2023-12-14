@@ -79,7 +79,6 @@ const setPagination = slider => {
   slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).prev);
   slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).next);
   slider.events.on('indexChanged', () => {
-    console.log(getProjectsIndex(slider).current);
     slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).current);
     slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).prev);
     slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).next);

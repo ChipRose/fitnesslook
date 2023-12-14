@@ -20,7 +20,6 @@ const setPagination=(slider)=>{
 
 
   slider.events.on('indexChanged', () => {
-    console.log(getProjectsIndex(slider).current)
     slideCurrentNumber.textContent = formatNumber(getProjectsIndex(slider).current);
     slidePrevNumber.textContent = formatNumber(getProjectsIndex(slider).prev);
     slideNextNumber.textContent = formatNumber(getProjectsIndex(slider).next);
