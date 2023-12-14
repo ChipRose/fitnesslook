@@ -5,6 +5,19 @@ const settingAccordion = (props) => {
   }
 }
 
+const settingAccordionInSlider = (slider, props) => {
+  return {
+    duration: 200,
+    onOpen: () => {
+      slider.updateSliderHeight();
+    },
+    onClose: () => {
+      slider.updateSliderHeight();
+    },
+    ...props
+  }
+}
+
 const closeAllAccordions = (accordions) => {
   accordions.forEach(item => {
     item.closeAll()
@@ -54,4 +67,4 @@ const settingMobileAccordionAdaptive = (accordion) => {
 }
 
 
-export { settingAccordion, settingAccordionAdaptive, closeAllAccordions, settingMobileAccordionAdaptive };
+export { settingAccordion, settingAccordionInSlider, settingAccordionAdaptive, closeAllAccordions, settingMobileAccordionAdaptive };

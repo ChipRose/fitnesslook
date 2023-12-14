@@ -46,7 +46,9 @@
     background: none;
   }
 
-  svg{
+  svg {
+    fill: var(--cl-contrast);
+
     @media (min-width: $tablet-width) {
       width: 100%;
       height: auto;

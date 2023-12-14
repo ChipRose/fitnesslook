@@ -63,19 +63,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
 
+const getProjectsIndex = slider => {
+  return {
+    current: slider.getInfo().displayIndex,
+    next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? 1 : slider.getInfo().displayIndex + 1,
+    prev: slider.getInfo().displayIndex === 1 ? slider.getInfo().slideCount : slider.getInfo().displayIndex - 1
+  };
+};
 const setPagination = slider => {
-  const sliderProjectsButtons = document.querySelector('#slider-projects-details-buttons');
   const slideNumber = document.querySelector('#projects-pagination');
   const slidePrevNumber = slideNumber.querySelector('#slider-projects-prev');
   const slideCurrentNumber = slideNumber.querySelector('#slider-projects-current');
   const slideNextNumber = slideNumber.querySelector('#slider-projects-next');
-  slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).current);
-  slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).prev);
-  slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).next);
-  sliderProjectsButtons.addEventListener('click', () => {
-    slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).current);
-    slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).prev);
-    slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)((0,_util_js__WEBPACK_IMPORTED_MODULE_0__.getProjectsIndex)(slider).next);
+  slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).current);
+  slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).prev);
+  slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).next);
+  slider.events.on('indexChanged', () => {
+    console.log(getProjectsIndex(slider).current);
+    slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).current);
+    slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).prev);
+    slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).next);
   });
 };
 
@@ -90,17 +97,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   addListeners: () => (/* binding */ addListeners),
 /* harmony export */   formatNumber: () => (/* binding */ formatNumber),
 /* harmony export */   formatPrice: () => (/* binding */ formatPrice),
-/* harmony export */   getProjectsIndex: () => (/* binding */ getProjectsIndex),
 /* harmony export */   removeElements: () => (/* binding */ removeElements),
 /* harmony export */   sortProjects: () => (/* binding */ sortProjects)
 /* harmony export */ });
-const getProjectsIndex = slider => {
-  return {
-    current: slider.getInfo().displayIndex,
-    next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? '...' : slider.getInfo().displayIndex + 1,
-    prev: slider.getInfo().displayIndex === 1 ? '...' : slider.getInfo().displayIndex - 1
-  };
-};
 const formatNumber = number => {
   return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
 };
@@ -3674,11 +3673,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   closeAllAccordions: () => (/* binding */ closeAllAccordions),
 /* harmony export */   settingAccordion: () => (/* binding */ settingAccordion),
 /* harmony export */   settingAccordionAdaptive: () => (/* binding */ settingAccordionAdaptive),
+/* harmony export */   settingAccordionInSlider: () => (/* binding */ settingAccordionInSlider),
 /* harmony export */   settingMobileAccordionAdaptive: () => (/* binding */ settingMobileAccordionAdaptive)
 /* harmony export */ });
 const settingAccordion = props => {
   return {
     duration: 400,
+    ...props
+  };
+};
+const settingAccordionInSlider = (slider, props) => {
+  return {
+    duration: 200,
+    onOpen: () => {
+      slider.updateSliderHeight();
+    },
+    onClose: () => {
+      slider.updateSliderHeight();
+    },
     ...props
   };
 };
@@ -3914,15 +3926,10 @@ __webpack_require__.r(__webpack_exports__);
 
 // Remove section
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download', '#project-subtitle-pdf',
-// '#projects-button',
-// '#projects-section',
-// '#projects-detail-section',
-'#sale-button']);
+(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download', '#project-subtitle-pdf', '#sale-button']);
 (0,_api_js__WEBPACK_IMPORTED_MODULE_9__.getData)(products => {
   const productsList = (0,_data_js__WEBPACK_IMPORTED_MODULE_10__.getDataStructure)(products);
   (0,_products_js__WEBPACK_IMPORTED_MODULE_8__.renderProductsGallery)(productsList);
-  console.log(products);
   productsList.forEach(({
     id
   }) => {
@@ -3966,50 +3973,25 @@ const projectsSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallS
 
 // Accordions
 
-const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-intro')), {
-  showMultiple: true,
-  duration: 100,
-  onOpen: () => {
-    sliderIntro.updateSliderHeight();
-  },
-  onClose: () => {
-    sliderIntro.updateSliderHeight();
-  }
-});
+const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-intro')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionInSlider)(sliderIntro));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionIntro, sliderIntro);
 const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-about')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionAbout);
-const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-best')), {
-  duration: 100,
-  onOpen: () => {
-    sliderBest.updateSliderHeight();
-  },
-  onClose: () => {
-    sliderBest.updateSliderHeight();
-  }
-});
+const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionInSlider)(sliderBest));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionBest, sliderBest);
 const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionGarantee);
-const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-main')), {
-  duration: 200,
-  onOpen: () => {
-    progectsGallery.updateSliderHeight();
-  },
-  onClose: () => {
-    progectsGallery.updateSliderHeight();
-  }
-});
+const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-main')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionInSlider)(progectsGallery));
 new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)());
 
 // Accordions in slider
 
 sliderBest.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionBest);
+  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionBest, sliderBest);
 });
 sliderIntro.events.on('indexChanged', () => {
   (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionIntro, sliderIntro);
