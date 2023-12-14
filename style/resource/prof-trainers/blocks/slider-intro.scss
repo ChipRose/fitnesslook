@@ -26,6 +26,8 @@
 }
 
 .slider-intro__cover {
+  margin-bottom: var(--indent-main);
+
   @media (min-width:$tablet-width) {
     margin-bottom: var(--indent-huge);
     display: grid;
@@ -63,6 +65,10 @@
 
 .slider-intro__title-secondary {
   margin-bottom: var(--indent-main);
+
+  .title-secondary__line {
+    margin-bottom: var(--indent-main);
+  }
 
   &:last-child {
     margin-bottom: 0;

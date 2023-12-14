@@ -18,6 +18,7 @@ removeElements([
   '#delivery-button',
   '#garantee-card-button',
   '#projects-info-download',
+  '#project-subtitle-pdf',
   // '#projects-button',
   // '#projects-section',
   // '#projects-detail-section',
@@ -37,7 +38,7 @@ renderProjectsGallery(sortProjects(projects));
 
 // Sliders
 
-const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons', { gutter: 32, controlsContainer: '#slider-intro-controls' });
+const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons', { gutter: 32, controlsContainer: '#slider-intro-controls', autoHeight: true });
 
 const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, controlsContainer: '#slider-best-controls', autoHeight: true});
 
@@ -58,14 +59,23 @@ settingSliderAdaptive(projectsSmallSlider);
 
 // Accordions
 
-const accordionIntro = new Accordion(Array.from(document.querySelectorAll('#accordion-intro')), settingAccordion({ showMultiple: true }));
-settingAccordionAdaptive(accordionIntro);
+const accordionIntro = new Accordion(Array.from(document.querySelectorAll('#accordion-intro')), {
+  showMultiple: true,
+  duration: 100,
+  onOpen: () => {
+    sliderIntro.updateSliderHeight();
+  },
+  onClose: () => {
+    sliderIntro.updateSliderHeight();
+  }
+});
+settingAccordionAdaptive(accordionIntro, sliderIntro);
 
 const accordionAbout = new Accordion(Array.from(document.querySelectorAll('#accordion-about')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionAbout);
 
 const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')), {
-  duration: 400,
+  duration: 100,
   onOpen: () => {
     sliderBest.updateSliderHeight();
   },
@@ -97,14 +107,12 @@ sliderBest.events.on('indexChanged', () => {
 });
 
 sliderIntro.events.on('indexChanged', () => {
-  settingMobileAccordionAdaptive(accordionIntro);
+  settingMobileAccordionAdaptive(accordionIntro, sliderIntro);
 });
 
 progectsGallery.events.on('indexChanged', () => {
   closeAllAccordions(accordionMain);
 });
-
-
 
 // Navigation
 
@@ -118,4 +126,5 @@ addListeners('a[data-type="call-button"]', () => $("#callmeform").show());
 window.addEventListener("load", () => {
   sliderBest.updateSliderHeight();
   progectsGallery.updateSliderHeight();
+  sliderIntro.updateSliderHeight();
 });

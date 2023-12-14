@@ -3701,14 +3701,16 @@ const openAllDeskAccordions = accordions => {
     });
   }
 };
-const settingAccordionAdaptive = accordion => {
+const settingAccordionAdaptive = (accordion, slider) => {
   let newAccordion = accordion;
   if (!Array.isArray(accordion)) newAccordion = [accordion];
   closeAllMobileAccordions(newAccordion);
   openAllDeskAccordions(newAccordion);
+  slider?.updateSliderHeight();
   window.addEventListener('resize', () => {
     closeAllMobileAccordions(newAccordion);
     openAllDeskAccordions(newAccordion);
+    slider?.updateSliderHeight();
   });
 };
 const settingMobileAccordionAdaptive = accordion => {
@@ -3912,7 +3914,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // Remove section
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download',
+(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download', '#project-subtitle-pdf',
 // '#projects-button',
 // '#projects-section',
 // '#projects-detail-section',
@@ -3941,7 +3943,8 @@ __webpack_require__.r(__webpack_exports__);
 
 const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-intro', '#slider-intro-buttons', {
   gutter: 32,
-  controlsContainer: '#slider-intro-controls'
+  controlsContainer: '#slider-intro-controls',
+  autoHeight: true
 });
 const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-best', '#slider-best-buttons', {
   gutter: 32,
@@ -3963,16 +3966,23 @@ const projectsSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallS
 
 // Accordions
 
-const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-intro')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
-  showMultiple: true
-}));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionIntro);
+const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-intro')), {
+  showMultiple: true,
+  duration: 100,
+  onOpen: () => {
+    sliderIntro.updateSliderHeight();
+  },
+  onClose: () => {
+    sliderIntro.updateSliderHeight();
+  }
+});
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionIntro, sliderIntro);
 const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-about')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
   showMultiple: true
 }));
 (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionAbout);
 const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-best')), {
-  duration: 400,
+  duration: 100,
   onOpen: () => {
     sliderBest.updateSliderHeight();
   },
@@ -4002,7 +4012,7 @@ sliderBest.events.on('indexChanged', () => {
   (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionBest);
 });
 sliderIntro.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionIntro);
+  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionIntro, sliderIntro);
 });
 progectsGallery.events.on('indexChanged', () => {
   (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.closeAllAccordions)(accordionMain);
@@ -4019,6 +4029,7 @@ progectsGallery.events.on('indexChanged', () => {
 window.addEventListener("load", () => {
   sliderBest.updateSliderHeight();
   progectsGallery.updateSliderHeight();
+  sliderIntro.updateSliderHeight();
 });
 })();
 
