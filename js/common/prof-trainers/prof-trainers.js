@@ -26,7 +26,7 @@ getData((products) => {
   const productsList = getDataStructure(products);
   renderProductsGallery(productsList);
   productsList.forEach(({ id }) => {
-    setSmallSlider(`#product-list-${id}`, `#product-list-buttons-${id}`, { responsive: { 768: { items: 2, gutter: 32, edgePadding: 32, } } });
+    setSmallSlider(`#product-list-${id}`, `#product-list-buttons-${id}`, { responsive: { 768: { items: 2, gutter: 32, edgePadding: 32 } } });
   })
 })
 

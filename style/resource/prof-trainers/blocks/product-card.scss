@@ -8,6 +8,8 @@
 
 .product-card__wrapper {
   @media (min-width: $tablet-width) {
+    margin-right: auto;
+    margin-left: auto;
     max-width: 300px;
     display: flex;
     flex-direction: column;
