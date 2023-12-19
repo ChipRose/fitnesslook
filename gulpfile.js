@@ -2,7 +2,6 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
-import terser from 'gulp-terser';
 import { deleteAsync } from 'del';
 import webp from 'gulp-webp';
 import webpack from 'webpack-stream';

@@ -1,7 +1,8 @@
+import Accordion from 'accordion-js';
 import projects from '../../../json/projects.json';
+import './video.js';
 import { renderProjectsGallery } from './projects.js';
 import { setPagination } from './slider-pagination.js'
-import Accordion from 'accordion-js';
 import { removeElements, addListeners, sortProjects } from './util.js';
 import { setNavigation } from './navigation.js';
 import { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive } from './slider.js';

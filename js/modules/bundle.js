@@ -4,133 +4,6 @@
 /* 1 */
 /***/ ((module) => {
 
-"use strict";
-module.exports = JSON.parse('[{"projectId":"№60552  |  001  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Performance Touch XL","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-performance-touch-xl.html"},{"title":"Эллиптический тренажер","model":"Matrix Performance Ascent Trainer Touch","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-ascent-trainer-touch.html"},{"title":"Велотренажер","model":"Matrix Performance Upright Touch","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/velotrenajery/matrix-performance-upright-touch.html"},{"title":"Гребной тренажер","model":"Matrix RXP-WFRF","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/grebnye/matrix-rxp-wfrf.html"},{"title":"Лестница-эскалатор","model":"Matrix Performance Touch XL","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/steppery/matrix-performance-touch-xl-performance-touch-xl.html"}]},{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Matrix Aura G3-MSFT300 Functional Trainer","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/muljtistancii/matrix-msft-300-functional-trainer.html"},{"model":"Matrix Ultra Base G7-S13BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s13bh.html"},{"model":"Matrix Ultra Base G7-S33BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s33bh.html"},{"model":"Matrix Ultra Base G7-S70BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s70bh.html"},{"title":"Стойка турник брусья-пресс","model":"Matrix Magnum MG-A63C","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/matrix-mg-a63c.html"},{"title":"Машина Смита","model":"Matrix Magnum MG-PL62","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/matrix-magnum-mg-pl62.html"},{"title":"Гиперэкстензия","model":"Matrix MG-A52","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/dlya-spiny/giperekstenzii/matrix-mg-a52.html"},{"title":"Силовая скамья","model":"Matrix Magnum MG-A61","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a61.html"},{"model":"Matrix Magnum MG-A82","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a82.html"}]},{"type":"Железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Гантельный ряд","model":"Ziva ZVO-DBPU1584-GY 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/protrain-1-40-kg-rj0946.html"},{"model":"Ziva XP Urethane Dumbbell Set (5 pairs) 22-30 kg ZXP-DBPU8605","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/bronze-gym-br-1027-15-par.html"},{"model":"Ziva XP Urethane 12-20кг ZXP-DBPU8604","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/livepro-lp8860-10-par.html"},{"title":"Диск для штанги с посадочным диаметром 50 мм.","model":"Ziva с уретановым покрытием, 1.25 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/svensson-industrial-x-force-1011.html"},{"model":"Ziva с уретановым покрытием, 2.5 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-10-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 5 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-15-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 10 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-20-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 15 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 20 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 25 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"},{"title":"Замок для грифа","model":"Замок для грифа Ziva ZXP-OBCC0436-BK","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-diskov-blinov/hasttings-digger-hd021-4.html"},{"title":"Стойка для гантелей","model":"Ziva ZST-VS10- 5396-BK 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/zamki-dlya-grifa/bronze-gym-zamki-klipsa-bg-pa-br-cl001.html"},{"model":"Matrix MG-A510 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-1-25-d-50-mm.html"}]},{"type":"Фитнес оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Мат для йоги","model":"Ziva ZSL-TDYM0251-BK","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/marin-endurance-led.html"},{"title":"Ролик миофасцальный","model":"Ziva ZXP-DFRL0274","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-endurance-led.html"},{"title":"Фитбол","model":"Ziva Фитбол 65 ZVO-ABCB9292-BK","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-elliptical-led.html"}]}]},{"projectId":"№53349  |  00х  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Велотренажер","model":"WattBike Pro","name":"Х4","link":"https://www.fitnesslook.ru/trenajery/velotrenajery/wattbike-pro.html"}]}]},{"projectId":"№47620  |  00х  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Performance Touch XL","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-performance-touch-xl.html"},{"title":"Эллиптический тренажер","model":"Matrix Performance Ascent Trainer Touch","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-ascent-trainer-touch.html"},{"title":"Велотренажер","model":"Matrix Performance Upright Touch","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/velotrenajery/matrix-performance-upright-touch.html"},{"title":"Гребной тренажер","model":"Matrix RXP-WFRF","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/grebnye/matrix-rxp-wfrf.html"},{"title":"Лестница-эскалатор","model":"Matrix Performance Touch XL","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/steppery/matrix-performance-touch-xl-performance-touch-xl.html"}]},{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Matrix Aura G3-MSFT300 Functional Trainer","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/muljtistancii/matrix-msft-300-functional-trainer.html"},{"model":"Matrix Ultra Base G7-S13BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s13bh.html"},{"model":"Matrix Ultra Base G7-S33BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s33bh.html"},{"model":"Matrix Ultra Base G7-S70BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s70bh.html"},{"title":"Стойка турник брусья-пресс","model":"Matrix Magnum MG-A63C","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/matrix-mg-a63c.html"},{"title":"Машина Смита","model":"Matrix Magnum MG-PL62","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/matrix-magnum-mg-pl62.html"},{"title":"Гиперэкстензия","model":"Matrix MG-A52","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/dlya-spiny/giperekstenzii/matrix-mg-a52.html"},{"title":"Силовая скамья","model":"Matrix Magnum MG-A61","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a61.html"},{"model":"Matrix Magnum MG-A82","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a82.html"}]},{"type":"Железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Гантельный ряд","model":"Ziva ZVO-DBPU1584-GY 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-zvo-dbpu1584-gy-10-par.html"},{"model":"Ziva XP Urethane Dumbbell Set (5 pairs) 22-30 kg ZXP-DBPU8605","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-xp-urethane-dumbbell-set-5-pairs-22-30-kg-zxp-dbpu8605.html"},{"model":"Ziva XP Urethane 12-20кг ZXP-DBPU8604","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-xp-urethane-12-20kg.html"},{"title":"Диск для штанги с посадочным диаметром 50 мм.","model":"Ziva с уретановым покрытием, 1.25 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-1-25-kg.html"},{"model":"Ziva с уретановым покрытием, 2.5 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-2-5-kg-zvo-dcpu1612-gy.html"},{"model":"Ziva с уретановым покрытием, 5 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-5-kg-zvo-dcpu1613-gy.html"},{"model":"Ziva с уретановым покрытием, 10 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-10-kg-zvo-dcpu1614-gy.html"},{"model":"Ziva с уретановым покрытием, 15 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-15-kg-zvo-dcpu1615-gy.html"},{"model":"Ziva с уретановым покрытием, 20 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-20-kg-zvo-dcpu1616-gy.html"},{"model":"Ziva с уретановым покрытием, 25 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-25-kg-zvo-dcpu1617-gy.html"},{"title":"Замок для грифа","model":"Замок для грифа Ziva ZXP-OBCC0436-BK","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/zamki-dlya-grifa/ziva-zxp-obcc0436-bk.html"},{"title":"Стойка для гантелей","model":"Ziva ZST-VS10- 5396-BK 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/ziva-zst-vs10-5396-bk-10-par.html"},{"model":"Matrix MG-A510 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/matrix-mg-a510-10-par.html"}]},{"type":"Фитнес оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Мат для йоги","model":"Ziva ZSL-TDYM0251-BK","name":"Х2","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/ziva-zsl-tdym0251-bk.html"},{"title":"Ролик миофасцальный","model":"Ziva ZXP-DFRL0274","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/prochie-tovary/ziva-zxp-dfrl0274.html"},{"title":"Фитбол","model":"Ziva Фитбол 65 ZVO-ABCB9292-BK","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/myachi/ziva-fitbol-65-zvo-abcb9292-bk.html"}]}]},{"projectId":"№42782  |  00х  |  москва","content":[{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Hasttings Digger HD016-1 жим ногами","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd016-1.html"},{"model":"Hasttings Digger HD037-1 сгибание-разгибание ног","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd033-1.html"},{"model":"Body Solid ProClub - вертикальная/горизонтальная тяги SLM-300G","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/body-solid-vertikaljno-gorizontaljnaya-tyaga-body-solid-proclub-slm-300g.html"},{"title":"Тренажер кроссовер","model":"Hasttings Digger HD022-1","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/krossovery/hasttings-digger-hd022-1-krossover.html"},{"title":"Гиперэкстензия","model":"Hasttings Digger HD010-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/dlya-spiny/giperekstenzii/hasttings-digger-hd010-4.html"},{"title":"Машина Смита","model":"Hasttings Digger HD030-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/hasttings-digger-hd030-4.html"},{"title":"Силовая скамья","model":"DFC DCH319","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/dfc-dch319.html"},{"title":"Силовая скамья для жима","model":"Body Solid GFI-21","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/body-solid-reguliruemaya-skamjya-body-solid-gfi-21.html"},{"title":"Тренажер на свободных весах","model":"Body Craft F660 - жим ногами/гакк-машина","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/na-svobodnyh-vesah/body-craft-jim-nogami-body-craft-f660.html"},{"title":"Стойка для штанги","model":"DFC DSST12","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/stojki/dfc-dsst12.html"}]},{"type":"Железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Гантель","model":"MB Barbell Atlet","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/razbornye/barbell-atlet-29-kg.html"},{"title":"Диск для штанги","model":"MB Barbell Atlet 50 мм - 1.25 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-15-kg-7206764.html"},{"model":"MB Barbell Atlet 50 мм - 2.5 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-2-5-kg.html"},{"model":"MB Barbell Atlet 50 мм - 5 кг","name":"Х8","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-5-kg.html"},{"model":"MB Barbell Atlet 50 мм - 10 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-5-kg-7206761.html"},{"model":"MB Barbell Atlet 50 мм - 15 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-15-kg.html"},{"model":"MB Barbell Atlet 50 мм - 20 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-20-kg-chernyj-50-mm.html"},{"model":"MB Barbell Atlet 50 мм - 25 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-20-kg.html"},{"title":"Гриф для штанги","model":"MB Barbell W-образный - 50 мм - 1270 мм","name":"Х1","link":"https://www.fitnesslook.ru/dlya-shtangi/izognutye/w-obraznye/mb-barbell-w-obraznyj-50-mm-1270-mm.html"},{"model":"MB Barbell прямой - 50 мм - 1400 мм","name":"Х1","link":"https://www.fitnesslook.ru/grify/dlya-shtangi/pryamye/mb-barbell-50-mm-1400-mm.html"},{"model":"MB Barbell прямой 50 мм - 2200 мм","name":"Х1","link":"https://www.fitnesslook.ru/grify/dlya-shtangi/pryamye/mb-barbell-50-mm-2200-mm.html"},{"title":"Стойка для бодибаров","model":"Original FitTools горизонтальная FT-BBR-HT","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/original-fit-tools-gorizontaljnaya.html"}]},{"type":"Фитнес оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Мат для йоги","model":"Original FitTools 6 мм двухслойный перфорированный голубой FT-YGM6-3DT-SKYBLUE","name":"Х30","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/original-fittools-6-mm-dvuhslojnyj-perforirovannyj-goluboj.html"},{"title":"Блок для йоги","model":"AeroFit - прямоугольник","name":"Х40","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/tovary-dlya-jogi/aerofit-ft-ygk-469.html"},{"title":"Бодибар","model":"Smith Strength 1 кг. оранжевый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-1-kg-oranjevyj.html"},{"model":"Smith Strength 2 кг. желтый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-2-kg-jeltyj.html"},{"model":"Smith Strength 3 кг. зеленый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-3-kg-zelenyj.html"},{"model":"Smith Strength 4 кг. красный","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-4-kg-krasnyj.html"},{"model":"Smith Strength 5 кг. голубой","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-5-kg-goluboj.html"},{"model":"Smith Strength 6 кг. фиолетовый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-6-kg-fioletovyj.html"},{"model":"Smith Strength 7 кг. светло-оранжевый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-7-kg-svetlo-oranjevyj.html"},{"model":"Smith Strength 8 кг. розовый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-8-kg-rozovyj.html"},{"model":"Smith Strength 9 кг. синий","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-9-kg-sinij.html"},{"model":"Smith Strength 10 кг. серый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-10-kg-seryj.html"},{"title":"Виниловая гантель","model":"Profi Fit 3 кг. PF-VDB-3","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-3-kg-7206402.html"},{"model":"Profi Fit 4 кг. PF-VDB-4","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-4-kg-7206403.html"},{"title":"Гантель для фитнеса","model":"Profi Fit неопреновая 0.5 кг., фиолетовая","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-neoprenovaya-0-5-kg.html"},{"model":"Profi Fit неопреновая 2 кг., оранжевая","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-neoprenovaya-2-kg-oranjevaya.html"},{"title":"Неопреновая гантель","model":"Profi Fit 1 кг.","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-1-kg-7206400.html"},{"model":"Profi Fit 5 кг.","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-5-kg.html"},{"title":"Стойка для гантелей","model":"Body Solid GDR-500","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/body-solid-gdr-500.html"},{"title":"Ремень для йоги","model":"Reebok эластичный голубой","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/tovary-dlya-jogi/reebok-remenj-dlya-jogi-reebok-rayg-10023cy.html"},{"title":"Фитбол","model":"Inex 55 см. красный","name":"Х6","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/myachi/inex-55-sm-krasnyj.html"},{"model":"Inex 65 см. голубой","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/myachi/inex-65-sm-krasnyj-7207560.html"},{"title":"Степ-платформа","model":"Original FitTools 3-х уровневая 1810LW","name":"Х10","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/step-platformy/original-fittools-3-h-urovnevaya-1810lw.html"}]}]},{"projectId":"№39919  |  00х  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix TF50XIR","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-tf50xir.html"},{"title":"Эллиптический тренажер","model":"Matrix A50XIR","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-a50xir.html"}]},{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Hasttings Digger HD001-1 Жим от груди","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-hd001-1-jim-ot-grudi-digger.html"},{"model":"Hasttings Digger HD012-1 - гребная тяга","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd012-1-grebnaya-tyaga.html"},{"model":"Hasttings Digger HD020-1 - Сведение/разведение ног","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd020-1-cvedenie-razvedenie-nog.html"},{"title":"Гравитрон","model":"Hasttings Digger HD008-1","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd008-1-gravitron.html"},{"title":"Гиперэкстензия","model":"Hasttings Digger HD010-4","name":"Х1","link":"https://www.fitnesslook.ru/index.php?searchstring=Hasttings+Digger+HD010-4"},{"title":"Тренажер кроссовер","model":"Hasttings Digger HD021-1","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/krossovery/hasttings-digger-hd021-1.html"},{"title":"Силовая скамья для жима","model":"Hasttings Digger HD016-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/hasttings-digger-hd016-4.html"},{"title":"Скамья для пресса","model":"Hasttings Digger HD025-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-pressa/hasttings-digger-hd025-4.html"},{"title":"Скамья Скотта","model":"Hasttings Digger HD020-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/skotta/hasttings-digger-hd020-4.html"},{"title":"Силовая рама","model":"Hasttings Digger HD020-5","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/ramy/hasttings-digger-hd020-5.html"},{"title":"Ручка для тренажера","model":"Oxygen PR01 - канатная для трицепса с двойным хватом","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-kanat-dlya-tricepsa-s-dvojnym-hvatom-evro-klassik-pr01.html"},{"model":"Oxygen PR02 - канатная для трицепса с одиночным хватом","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-kanat-dlya-tricepsa-s-odinochnym-hvatom-evro-klassik-pr02.html"},{"model":"Oxygen RHMA-01 - для тяги волнообразная","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/evro-klassik-grif-dlya-tyagi-volnoobraznyj-evro-klassik-rhma-1.html"},{"model":"Oxygen RHMA-02 - для тяги прямая","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/evro-klassik-grif-dlya-tyagi-pryamoj-evro-klassik-rhma-2.html"},{"model":"Oxygen RHMA-06 - для тяги с параллельным хватом","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/evro-klassik-grif-dlya-tyagi-s-paralleljnym-hvatom-evro-klassik-rhma-06.html"},{"model":"Oxygen RHMA-07 - V-образная для бицепса","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-hvat-v-obraznyj-dlya-bicepsa-evro-klassik-rhma-07.html"},{"model":"Oxygen RHMA-09 - для узкого хвата","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-rukoyatj-dlya-uzkogo-hvata-evro-klassik-rhma-09.html"},{"model":"Oxygen RHMA-12","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/aerofit-g-brg-09-pu.html"}]},{"type":"Железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Гантельный ряд","model":"Protrain DB 6101 1-30 кг","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/db-6101-1-30kg.html"},{"title":"Гиря","model":"Profi Fit обрезиненная 16 кг.","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/giri/profi-fit-obrezinennaya-16-kg.html"},{"model":"Profi Fit обрезиненная 24 кг.","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/giri/profi-fit-obrezinennaya-24-kg.html"},{"title":"Диск для штанги","model":"Profi Fit обрезиненный Fassion D-51 1.25 кг.","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-1-25-kg.html"},{"model":"Profi Fit обрезиненный Fassion D-51 2.5 кг.","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-2-5-kg.html"},{"model":"Profi Fit обрезиненный Fassion D-51 5 кг.","name":"Х6","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-5-kg.html"},{"model":"Profi Fit обрезиненный Fassion D-51 10 кг.","name":"Х6","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-10-kg.html"},{"model":"Profi Fit обрезиненный Fassion D-51 20 кг.","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-20-kg.html"},{"title":"Гриф для штанги","model":"Body Solid W-образный - 50 мм OB47","name":"Х1","link":"https://www.fitnesslook.ru/dlya-shtangi/izognutye/w-obraznye/body-solid-w-obraznyj-50-mm-ob47.html"},{"model":"Body Solid OB86","name":"Х1","link":"https://www.fitnesslook.ru/grify/dlya-shtangi/pryamye/body-solid-ob86.html"},{"model":"MB Barbell прямой - 50 мм - 1400 мм","name":"Х1","link":"https://www.fitnesslook.ru/grify/dlya-shtangi/pryamye/mb-barbell-50-mm-1400-mm.html"},{"title":"Стойка для грифов","model":"Profi Fit 8 шт.","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/body-solid-8-sht.html"},{"title":"Стойка для гантелей","model":"Profi Fit RUS15500","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/profi-fit-rus15500.html"},{"title":"Стойка для дисков (блинов)","model":"Profi Fit RUS 1230, нагрузка до 900кг","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-diskov-blinov/profi-fit-rus-1230-nagruzka-do-900kg.html"},{"title":"Стойка для медболов","model":"Protrain TA C 7001","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/protrain-ta-c-7001.html"},{"title":"Замок для грифа","model":"Body Solid алюминиевый (пара) D50 мм","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/zamki-dlya-grifa/body-solid-alyuminievyj-para-d50-mm.html"},{"title":"Смягчающая накладка на гриф","model":"Original FitTools FT-PAD-BLK","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/grify/original-fit-tools-ft-pad-blk.html"}]},{"type":"Фитнес оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Коврик для йоги и фитнеса","model":"Reebok синий","name":"Х3","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/reebok-sinij.html"},{"title":"Блок для йоги","model":"Profi Fit черный","name":"Х6","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/tovary-dlya-jogi/profi-fit-chernyj.html"},{"title":"Фитбол","model":"AeroFit - 75 см","name":"Х3","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/myachi/aerofit-ft-abgb-75.html"},{"title":"Набор эластичных лент","model":"Adidas","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/adidas-nabor-elastichnyh-lent-adidas-adtb-10604.html"},{"title":"Набор эспандеров","model":"Original FitTools 6 широких мини-эспандеров","name":"Х2","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/nabory/original-fittools-6-shirokih-mini-espanderov.html"},{"title":"Медбол","model":"StarFit 1 кг. Pro GB-702 красный","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-1-kg-pro-krasnyj.html"},{"model":"StarFit 2 кг. PRO GB-702, оранжевый","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-2-kg-pro-gb-702-oranjevyj.html"},{"model":"StarFit 3 кг Pro GB-702 желтый","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-2-kg-pro-jeltyj.html"},{"model":"StarFit PRO GB-702, 4 кг зеленый","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-pro-gb-702-4-kg-zelenyj.html"},{"model":"StarFit 5 кг Pro GB-702 синий","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-5-kg-pro-sinij.html"},{"title":"Утяжелитель","model":"Inex 1 кг. красный (пара)","name":"Х2","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/utyajeliteli/mb-barbell-1-kg-krasnyj-para.html"},{"model":"Утяжелитель StarFit WT-501, 2 кг ","name":"Х2","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/utyajeliteli/starfit-wt-501-2-kg.html"},{"title":"Скакалка","model":"Reebok 3 м, серый/синий","name":"Х3","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/skakalki/reebok-3-m-seryj-sinij.html"},{"title":"Степ-платформа","model":"Club Step Original, PFCSO","name":"Х3","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/step-platformy/club-step-original-pfcso.html"},{"title":"Ролик для пресса","model":"Adidas ADAC-11404","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/prochie-tovary/adidas-adac-11404.html"},{"title":"Трубчатый эспандер","model":"Reebok RSTB-16070 №1","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/trubchatye/reebok-rstb-16070.html"},{"model":"Reebok RSTB-16072 №3","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/trubchatye/reebok-rstb-16072.html"},{"model":"Reebok RSTB-16074 №5","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/trubchatye/reebok-rstb-16074-5.html"}]},{"type":"Шведские стенки","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Шведская стенка","model":"ES Гибрид-Т45-БП45-ДВ","name":"Х1","link":"https://www.fitnesslook.ru/shvedskie-stenki/kombinirovannye/es-gibrid-t45-bp45-dv.html"}]}]},{"projectId":"№24552  |  00х  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Реабилитационная беговая дорожка","model":"Spirit Fitness [LW1000] LW1000","name":"Х1","link":"https://www.fitnesslook.ru/index.php?searchstring=Spirit+Fitness+%5BLW1000%5D+LW1000"},{"title":"Стойка турник брусья-пресс","model":"Inspire VKR B","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/inspire-vkr-b.html"}]},{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Hasttings Digger HD001-1 Жим от груди","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-hd001-1-jim-ot-grudi-digger.html"}]}]}]');
-
-/***/ }),
-/* 2 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   renderProjectsGallery: () => (/* binding */ renderProjectsGallery)
-/* harmony export */ });
-const slideProjectItemTemplate = document.querySelector("#project-part").content.querySelector('.project-content__item');
-const slideProjectTemplate = document.querySelector("#project-item").content.querySelector('.projects-list__item');
-const projectsFullTemplate = document.querySelector("#project-full").content.querySelector('.projects-gallery__item');
-const projectGallery = document.querySelector('#slider-projects-details');
-const renderProjectsGallery = projects => {
-  const projectsFragment = document.createDocumentFragment();
-  const slideProjectsFragment = document.createDocumentFragment();
-  const projectsFullFragment = document.createDocumentFragment();
-  projects.forEach(project => {
-    const projectFull = projectsFullTemplate.cloneNode(true);
-    projectFull.querySelector('.title-info').textContent = project.projectId;
-    projectsFullFragment.appendChild(projectFull);
-    const projectsList = projectFull.querySelector('#projects-list');
-    project.content.forEach(project => {
-      const projectPart = slideProjectTemplate.cloneNode(true);
-      projectPart.querySelector('.accordion__title').textContent = project.type;
-      projectPart.querySelector('.accordion__number').innerHTML = project.icon;
-      slideProjectsFragment.appendChild(projectPart);
-      projectsList.appendChild(slideProjectsFragment);
-      project.trainers.forEach(content => {
-        const projectItem = slideProjectItemTemplate.cloneNode(true);
-        const type = projectItem.querySelector('.type');
-        content.title ? type.textContent = content.title : type.remove();
-        projectItem.querySelector('.model').href = content?.link;
-        projectItem.querySelector('.model__name').textContent = content.model;
-        projectItem.querySelector('.model__type').textContent = content.name;
-        projectsFragment.appendChild(projectItem);
-      });
-      const sliderItems = projectPart.querySelector('#project-content');
-      sliderItems.appendChild(projectsFragment);
-    });
-  });
-  projectGallery.appendChild(projectsFullFragment);
-};
-
-
-/***/ }),
-/* 3 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   setPagination: () => (/* binding */ setPagination)
-/* harmony export */ });
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
-
-const getProjectsIndex = slider => {
-  return {
-    current: slider.getInfo().displayIndex,
-    next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? 1 : slider.getInfo().displayIndex + 1,
-    prev: slider.getInfo().displayIndex === 1 ? slider.getInfo().slideCount : slider.getInfo().displayIndex - 1
-  };
-};
-const setPagination = slider => {
-  const slideNumber = document.querySelector('#projects-pagination');
-  const slidePrevNumber = slideNumber.querySelector('#slider-projects-prev');
-  const slideCurrentNumber = slideNumber.querySelector('#slider-projects-current');
-  const slideNextNumber = slideNumber.querySelector('#slider-projects-next');
-  slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).current);
-  slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).prev);
-  slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).next);
-  slider.events.on('indexChanged', () => {
-    slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).current);
-    slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).prev);
-    slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).next);
-  });
-};
-
-
-/***/ }),
-/* 4 */
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   addListeners: () => (/* binding */ addListeners),
-/* harmony export */   formatNumber: () => (/* binding */ formatNumber),
-/* harmony export */   formatPrice: () => (/* binding */ formatPrice),
-/* harmony export */   removeElements: () => (/* binding */ removeElements),
-/* harmony export */   sortProjects: () => (/* binding */ sortProjects)
-/* harmony export */ });
-const formatNumber = number => {
-  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
-};
-const addListeners = (selector, cb) => {
-  const elements = document.querySelectorAll(selector);
-  elements.forEach(button => {
-    button.addEventListener('click', evt => {
-      evt.preventDefault();
-      cb();
-    });
-  });
-};
-const formatPrice = number => {
-  return number.toString().split(/(?=(?:...)*$)/).join("'");
-};
-const removeElements = selectors => {
-  selectors?.forEach(selector => {
-    document.querySelectorAll(selector).forEach(item => item.remove());
-  });
-};
-const getCompare = (a, b) => {
-  return b.content.length - a.content.length;
-};
-const sortProjects = array => {
-  return array.sort(getCompare);
-};
-
-
-/***/ }),
-/* 5 */
-/***/ ((module) => {
-
 /**
  * Accordion v3.3.4
  * Lightweight and accessible accordion module created in pure Javascript
@@ -425,7 +298,188 @@ const sortProjects = array => {
 }(window);
 
 /***/ }),
+/* 2 */
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('[{"projectId":"№60552  |  001  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Performance Touch XL","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-performance-touch-xl.html"},{"title":"Эллиптический тренажер","model":"Matrix Performance Ascent Trainer Touch","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-ascent-trainer-touch.html"},{"title":"Велотренажер","model":"Matrix Performance Upright Touch","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/velotrenajery/matrix-performance-upright-touch.html"},{"title":"Гребной тренажер","model":"Matrix RXP-WFRF","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/grebnye/matrix-rxp-wfrf.html"},{"title":"Лестница-эскалатор","model":"Matrix Performance Touch XL","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/steppery/matrix-performance-touch-xl-performance-touch-xl.html"}]},{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Matrix Aura G3-MSFT300 Functional Trainer","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/muljtistancii/matrix-msft-300-functional-trainer.html"},{"model":"Matrix Ultra Base G7-S13BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s13bh.html"},{"model":"Matrix Ultra Base G7-S33BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s33bh.html"},{"model":"Matrix Ultra Base G7-S70BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s70bh.html"},{"title":"Стойка турник брусья-пресс","model":"Matrix Magnum MG-A63C","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/matrix-mg-a63c.html"},{"title":"Машина Смита","model":"Matrix Magnum MG-PL62","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/matrix-magnum-mg-pl62.html"},{"title":"Гиперэкстензия","model":"Matrix MG-A52","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/dlya-spiny/giperekstenzii/matrix-mg-a52.html"},{"title":"Силовая скамья","model":"Matrix Magnum MG-A61","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a61.html"},{"model":"Matrix Magnum MG-A82","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a82.html"}]},{"type":"Железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Гантельный ряд","model":"Ziva ZVO-DBPU1584-GY 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/protrain-1-40-kg-rj0946.html"},{"model":"Ziva XP Urethane Dumbbell Set (5 pairs) 22-30 kg ZXP-DBPU8605","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/bronze-gym-br-1027-15-par.html"},{"model":"Ziva XP Urethane 12-20кг ZXP-DBPU8604","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/livepro-lp8860-10-par.html"},{"title":"Диск для штанги с посадочным диаметром 50 мм.","model":"Ziva с уретановым покрытием, 1.25 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/svensson-industrial-x-force-1011.html"},{"model":"Ziva с уретановым покрытием, 2.5 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-10-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 5 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-15-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 10 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-20-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 15 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 20 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"},{"model":"Ziva с уретановым покрытием, 25 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"},{"title":"Замок для грифа","model":"Замок для грифа Ziva ZXP-OBCC0436-BK","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-diskov-blinov/hasttings-digger-hd021-4.html"},{"title":"Стойка для гантелей","model":"Ziva ZST-VS10- 5396-BK 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/zamki-dlya-grifa/bronze-gym-zamki-klipsa-bg-pa-br-cl001.html"},{"model":"Matrix MG-A510 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-1-25-d-50-mm.html"}]},{"type":"Фитнес оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Мат для йоги","model":"Ziva ZSL-TDYM0251-BK","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/marin-endurance-led.html"},{"title":"Ролик миофасцальный","model":"Ziva ZXP-DFRL0274","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-endurance-led.html"},{"title":"Фитбол","model":"Ziva Фитбол 65 ZVO-ABCB9292-BK","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-elliptical-led.html"}]}]},{"projectId":"№53349  |  00х  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Велотренажер","model":"WattBike Pro","name":"Х4","link":"https://www.fitnesslook.ru/trenajery/velotrenajery/wattbike-pro.html"}]}]},{"projectId":"№47620  |  00х  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix Performance Touch XL","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-performance-touch-xl.html"},{"title":"Эллиптический тренажер","model":"Matrix Performance Ascent Trainer Touch","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-ascent-trainer-touch.html"},{"title":"Велотренажер","model":"Matrix Performance Upright Touch","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/velotrenajery/matrix-performance-upright-touch.html"},{"title":"Гребной тренажер","model":"Matrix RXP-WFRF","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/grebnye/matrix-rxp-wfrf.html"},{"title":"Лестница-эскалатор","model":"Matrix Performance Touch XL","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/steppery/matrix-performance-touch-xl-performance-touch-xl.html"}]},{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Matrix Aura G3-MSFT300 Functional Trainer","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/muljtistancii/matrix-msft-300-functional-trainer.html"},{"model":"Matrix Ultra Base G7-S13BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s13bh.html"},{"model":"Matrix Ultra Base G7-S33BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s33bh.html"},{"model":"Matrix Ultra Base G7-S70BH","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s70bh.html"},{"title":"Стойка турник брусья-пресс","model":"Matrix Magnum MG-A63C","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/matrix-mg-a63c.html"},{"title":"Машина Смита","model":"Matrix Magnum MG-PL62","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/matrix-magnum-mg-pl62.html"},{"title":"Гиперэкстензия","model":"Matrix MG-A52","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/dlya-spiny/giperekstenzii/matrix-mg-a52.html"},{"title":"Силовая скамья","model":"Matrix Magnum MG-A61","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a61.html"},{"model":"Matrix Magnum MG-A82","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a82.html"}]},{"type":"Железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Гантельный ряд","model":"Ziva ZVO-DBPU1584-GY 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-zvo-dbpu1584-gy-10-par.html"},{"model":"Ziva XP Urethane Dumbbell Set (5 pairs) 22-30 kg ZXP-DBPU8605","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-xp-urethane-dumbbell-set-5-pairs-22-30-kg-zxp-dbpu8605.html"},{"model":"Ziva XP Urethane 12-20кг ZXP-DBPU8604","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-xp-urethane-12-20kg.html"},{"title":"Диск для штанги с посадочным диаметром 50 мм.","model":"Ziva с уретановым покрытием, 1.25 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-1-25-kg.html"},{"model":"Ziva с уретановым покрытием, 2.5 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-2-5-kg-zvo-dcpu1612-gy.html"},{"model":"Ziva с уретановым покрытием, 5 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-5-kg-zvo-dcpu1613-gy.html"},{"model":"Ziva с уретановым покрытием, 10 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-10-kg-zvo-dcpu1614-gy.html"},{"model":"Ziva с уретановым покрытием, 15 кг. ZVO-DCPU1618-GY","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-15-kg-zvo-dcpu1615-gy.html"},{"model":"Ziva с уретановым покрытием, 20 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-20-kg-zvo-dcpu1616-gy.html"},{"model":"Ziva с уретановым покрытием, 25 кг. ZVO-DCPU1618-GY","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-25-kg-zvo-dcpu1617-gy.html"},{"title":"Замок для грифа","model":"Замок для грифа Ziva ZXP-OBCC0436-BK","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/zamki-dlya-grifa/ziva-zxp-obcc0436-bk.html"},{"title":"Стойка для гантелей","model":"Ziva ZST-VS10- 5396-BK 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/ziva-zst-vs10-5396-bk-10-par.html"},{"model":"Matrix MG-A510 10 пар","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/matrix-mg-a510-10-par.html"}]},{"type":"Фитнес оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Мат для йоги","model":"Ziva ZSL-TDYM0251-BK","name":"Х2","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/ziva-zsl-tdym0251-bk.html"},{"title":"Ролик миофасцальный","model":"Ziva ZXP-DFRL0274","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/prochie-tovary/ziva-zxp-dfrl0274.html"},{"title":"Фитбол","model":"Ziva Фитбол 65 ZVO-ABCB9292-BK","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/myachi/ziva-fitbol-65-zvo-abcb9292-bk.html"}]}]},{"projectId":"№42782  |  00х  |  москва","content":[{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Hasttings Digger HD016-1 жим ногами","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd016-1.html"},{"model":"Hasttings Digger HD037-1 сгибание-разгибание ног","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd033-1.html"},{"model":"Body Solid ProClub - вертикальная/горизонтальная тяги SLM-300G","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/body-solid-vertikaljno-gorizontaljnaya-tyaga-body-solid-proclub-slm-300g.html"},{"title":"Тренажер кроссовер","model":"Hasttings Digger HD022-1","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/krossovery/hasttings-digger-hd022-1-krossover.html"},{"title":"Гиперэкстензия","model":"Hasttings Digger HD010-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/dlya-spiny/giperekstenzii/hasttings-digger-hd010-4.html"},{"title":"Машина Смита","model":"Hasttings Digger HD030-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/hasttings-digger-hd030-4.html"},{"title":"Силовая скамья","model":"DFC DCH319","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/dfc-dch319.html"},{"title":"Силовая скамья для жима","model":"Body Solid GFI-21","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/body-solid-reguliruemaya-skamjya-body-solid-gfi-21.html"},{"title":"Тренажер на свободных весах","model":"Body Craft F660 - жим ногами/гакк-машина","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/na-svobodnyh-vesah/body-craft-jim-nogami-body-craft-f660.html"},{"title":"Стойка для штанги","model":"DFC DSST12","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/stojki/dfc-dsst12.html"}]},{"type":"Железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Гантель","model":"MB Barbell Atlet","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/razbornye/barbell-atlet-29-kg.html"},{"title":"Диск для штанги","model":"MB Barbell Atlet 50 мм - 1.25 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-15-kg-7206764.html"},{"model":"MB Barbell Atlet 50 мм - 2.5 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-2-5-kg.html"},{"model":"MB Barbell Atlet 50 мм - 5 кг","name":"Х8","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-5-kg.html"},{"model":"MB Barbell Atlet 50 мм - 10 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-5-kg-7206761.html"},{"model":"MB Barbell Atlet 50 мм - 15 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-15-kg.html"},{"model":"MB Barbell Atlet 50 мм - 20 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-20-kg-chernyj-50-mm.html"},{"model":"MB Barbell Atlet 50 мм - 25 кг","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-20-kg.html"},{"title":"Гриф для штанги","model":"MB Barbell W-образный - 50 мм - 1270 мм","name":"Х1","link":"https://www.fitnesslook.ru/dlya-shtangi/izognutye/w-obraznye/mb-barbell-w-obraznyj-50-mm-1270-mm.html"},{"model":"MB Barbell прямой - 50 мм - 1400 мм","name":"Х1","link":"https://www.fitnesslook.ru/grify/dlya-shtangi/pryamye/mb-barbell-50-mm-1400-mm.html"},{"model":"MB Barbell прямой 50 мм - 2200 мм","name":"Х1","link":"https://www.fitnesslook.ru/grify/dlya-shtangi/pryamye/mb-barbell-50-mm-2200-mm.html"},{"title":"Стойка для бодибаров","model":"Original FitTools горизонтальная FT-BBR-HT","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/original-fit-tools-gorizontaljnaya.html"}]},{"type":"Фитнес оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Мат для йоги","model":"Original FitTools 6 мм двухслойный перфорированный голубой FT-YGM6-3DT-SKYBLUE","name":"Х30","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/original-fittools-6-mm-dvuhslojnyj-perforirovannyj-goluboj.html"},{"title":"Блок для йоги","model":"AeroFit - прямоугольник","name":"Х40","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/tovary-dlya-jogi/aerofit-ft-ygk-469.html"},{"title":"Бодибар","model":"Smith Strength 1 кг. оранжевый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-1-kg-oranjevyj.html"},{"model":"Smith Strength 2 кг. желтый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-2-kg-jeltyj.html"},{"model":"Smith Strength 3 кг. зеленый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-3-kg-zelenyj.html"},{"model":"Smith Strength 4 кг. красный","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-4-kg-krasnyj.html"},{"model":"Smith Strength 5 кг. голубой","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-5-kg-goluboj.html"},{"model":"Smith Strength 6 кг. фиолетовый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-6-kg-fioletovyj.html"},{"model":"Smith Strength 7 кг. светло-оранжевый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-7-kg-svetlo-oranjevyj.html"},{"model":"Smith Strength 8 кг. розовый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-8-kg-rozovyj.html"},{"model":"Smith Strength 9 кг. синий","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-9-kg-sinij.html"},{"model":"Smith Strength 10 кг. серый","name":"Х5","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/bodibary/smith-strength-10-kg-seryj.html"},{"title":"Виниловая гантель","model":"Profi Fit 3 кг. PF-VDB-3","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-3-kg-7206402.html"},{"model":"Profi Fit 4 кг. PF-VDB-4","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-4-kg-7206403.html"},{"title":"Гантель для фитнеса","model":"Profi Fit неопреновая 0.5 кг., фиолетовая","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-neoprenovaya-0-5-kg.html"},{"model":"Profi Fit неопреновая 2 кг., оранжевая","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-neoprenovaya-2-kg-oranjevaya.html"},{"title":"Неопреновая гантель","model":"Profi Fit 1 кг.","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-1-kg-7206400.html"},{"model":"Profi Fit 5 кг.","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/profi-fit-5-kg.html"},{"title":"Стойка для гантелей","model":"Body Solid GDR-500","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/ganteli/body-solid-gdr-500.html"},{"title":"Ремень для йоги","model":"Reebok эластичный голубой","name":"Х20","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/tovary-dlya-jogi/reebok-remenj-dlya-jogi-reebok-rayg-10023cy.html"},{"title":"Фитбол","model":"Inex 55 см. красный","name":"Х6","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/myachi/inex-55-sm-krasnyj.html"},{"model":"Inex 65 см. голубой","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/myachi/inex-65-sm-krasnyj-7207560.html"},{"title":"Степ-платформа","model":"Original FitTools 3-х уровневая 1810LW","name":"Х10","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/step-platformy/original-fittools-3-h-urovnevaya-1810lw.html"}]}]},{"projectId":"№39919  |  00х  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Беговая дорожка","model":"Matrix TF50XIR","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-tf50xir.html"},{"title":"Эллиптический тренажер","model":"Matrix A50XIR","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-a50xir.html"}]},{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Hasttings Digger HD001-1 Жим от груди","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-hd001-1-jim-ot-grudi-digger.html"},{"model":"Hasttings Digger HD012-1 - гребная тяга","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd012-1-grebnaya-tyaga.html"},{"model":"Hasttings Digger HD020-1 - Сведение/разведение ног","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd020-1-cvedenie-razvedenie-nog.html"},{"title":"Гравитрон","model":"Hasttings Digger HD008-1","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd008-1-gravitron.html"},{"title":"Гиперэкстензия","model":"Hasttings Digger HD010-4","name":"Х1","link":"https://www.fitnesslook.ru/index.php?searchstring=Hasttings+Digger+HD010-4"},{"title":"Тренажер кроссовер","model":"Hasttings Digger HD021-1","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/krossovery/hasttings-digger-hd021-1.html"},{"title":"Силовая скамья для жима","model":"Hasttings Digger HD016-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/hasttings-digger-hd016-4.html"},{"title":"Скамья для пресса","model":"Hasttings Digger HD025-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-pressa/hasttings-digger-hd025-4.html"},{"title":"Скамья Скотта","model":"Hasttings Digger HD020-4","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/skamji/skotta/hasttings-digger-hd020-4.html"},{"title":"Силовая рама","model":"Hasttings Digger HD020-5","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/ramy/hasttings-digger-hd020-5.html"},{"title":"Ручка для тренажера","model":"Oxygen PR01 - канатная для трицепса с двойным хватом","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-kanat-dlya-tricepsa-s-dvojnym-hvatom-evro-klassik-pr01.html"},{"model":"Oxygen PR02 - канатная для трицепса с одиночным хватом","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-kanat-dlya-tricepsa-s-odinochnym-hvatom-evro-klassik-pr02.html"},{"model":"Oxygen RHMA-01 - для тяги волнообразная","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/evro-klassik-grif-dlya-tyagi-volnoobraznyj-evro-klassik-rhma-1.html"},{"model":"Oxygen RHMA-02 - для тяги прямая","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/evro-klassik-grif-dlya-tyagi-pryamoj-evro-klassik-rhma-2.html"},{"model":"Oxygen RHMA-06 - для тяги с параллельным хватом","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/evro-klassik-grif-dlya-tyagi-s-paralleljnym-hvatom-evro-klassik-rhma-06.html"},{"model":"Oxygen RHMA-07 - V-образная для бицепса","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-hvat-v-obraznyj-dlya-bicepsa-evro-klassik-rhma-07.html"},{"model":"Oxygen RHMA-09 - для узкого хвата","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-rukoyatj-dlya-uzkogo-hvata-evro-klassik-rhma-09.html"},{"model":"Oxygen RHMA-12","name":"Х2","link":"https://www.fitnesslook.ru/trenajery/silovye/opcii-i-aksessuary/ruchki/aerofit-g-brg-09-pu.html"}]},{"type":"Железо","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#barbell-icon\'></use></svg>","trainers":[{"title":"Гантельный ряд","model":"Protrain DB 6101 1-30 кг","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/db-6101-1-30kg.html"},{"title":"Гиря","model":"Profi Fit обрезиненная 16 кг.","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/giri/profi-fit-obrezinennaya-16-kg.html"},{"model":"Profi Fit обрезиненная 24 кг.","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/giri/profi-fit-obrezinennaya-24-kg.html"},{"title":"Диск для штанги","model":"Profi Fit обрезиненный Fassion D-51 1.25 кг.","name":"Х2","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-1-25-kg.html"},{"model":"Profi Fit обрезиненный Fassion D-51 2.5 кг.","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-2-5-kg.html"},{"model":"Profi Fit обрезиненный Fassion D-51 5 кг.","name":"Х6","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-5-kg.html"},{"model":"Profi Fit обрезиненный Fassion D-51 10 кг.","name":"Х6","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-10-kg.html"},{"model":"Profi Fit обрезиненный Fassion D-51 20 кг.","name":"Х4","link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-20-kg.html"},{"title":"Гриф для штанги","model":"Body Solid W-образный - 50 мм OB47","name":"Х1","link":"https://www.fitnesslook.ru/dlya-shtangi/izognutye/w-obraznye/body-solid-w-obraznyj-50-mm-ob47.html"},{"model":"Body Solid OB86","name":"Х1","link":"https://www.fitnesslook.ru/grify/dlya-shtangi/pryamye/body-solid-ob86.html"},{"model":"MB Barbell прямой - 50 мм - 1400 мм","name":"Х1","link":"https://www.fitnesslook.ru/grify/dlya-shtangi/pryamye/mb-barbell-50-mm-1400-mm.html"},{"title":"Стойка для грифов","model":"Profi Fit 8 шт.","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/body-solid-8-sht.html"},{"title":"Стойка для гантелей","model":"Profi Fit RUS15500","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/profi-fit-rus15500.html"},{"title":"Стойка для дисков (блинов)","model":"Profi Fit RUS 1230, нагрузка до 900кг","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-diskov-blinov/profi-fit-rus-1230-nagruzka-do-900kg.html"},{"title":"Стойка для медболов","model":"Protrain TA C 7001","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/protrain-ta-c-7001.html"},{"title":"Замок для грифа","model":"Body Solid алюминиевый (пара) D50 мм","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/zamki-dlya-grifa/body-solid-alyuminievyj-para-d50-mm.html"},{"title":"Смягчающая накладка на гриф","model":"Original FitTools FT-PAD-BLK","name":"Х1","link":"https://www.fitnesslook.ru/jelezo/grify/original-fit-tools-ft-pad-blk.html"}]},{"type":"Фитнес оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Коврик для йоги и фитнеса","model":"Reebok синий","name":"Х3","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/reebok-sinij.html"},{"title":"Блок для йоги","model":"Profi Fit черный","name":"Х6","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/tovary-dlya-jogi/profi-fit-chernyj.html"},{"title":"Фитбол","model":"AeroFit - 75 см","name":"Х3","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/myachi/aerofit-ft-abgb-75.html"},{"title":"Набор эластичных лент","model":"Adidas","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/adidas-nabor-elastichnyh-lent-adidas-adtb-10604.html"},{"title":"Набор эспандеров","model":"Original FitTools 6 широких мини-эспандеров","name":"Х2","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/nabory/original-fittools-6-shirokih-mini-espanderov.html"},{"title":"Медбол","model":"StarFit 1 кг. Pro GB-702 красный","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-1-kg-pro-krasnyj.html"},{"model":"StarFit 2 кг. PRO GB-702, оранжевый","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-2-kg-pro-gb-702-oranjevyj.html"},{"model":"StarFit 3 кг Pro GB-702 желтый","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-2-kg-pro-jeltyj.html"},{"model":"StarFit PRO GB-702, 4 кг зеленый","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-pro-gb-702-4-kg-zelenyj.html"},{"model":"StarFit 5 кг Pro GB-702 синий","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/medbolly/starfit-5-kg-pro-sinij.html"},{"title":"Утяжелитель","model":"Inex 1 кг. красный (пара)","name":"Х2","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/utyajeliteli/mb-barbell-1-kg-krasnyj-para.html"},{"model":"Утяжелитель StarFit WT-501, 2 кг ","name":"Х2","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/utyajeliteli/starfit-wt-501-2-kg.html"},{"title":"Скакалка","model":"Reebok 3 м, серый/синий","name":"Х3","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/skakalki/reebok-3-m-seryj-sinij.html"},{"title":"Степ-платформа","model":"Club Step Original, PFCSO","name":"Х3","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/step-platformy/club-step-original-pfcso.html"},{"title":"Ролик для пресса","model":"Adidas ADAC-11404","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/prochie-tovary/adidas-adac-11404.html"},{"title":"Трубчатый эспандер","model":"Reebok RSTB-16070 №1","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/trubchatye/reebok-rstb-16070.html"},{"model":"Reebok RSTB-16072 №3","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/trubchatye/reebok-rstb-16072.html"},{"model":"Reebok RSTB-16074 №5","name":"Х1","link":"https://www.fitnesslook.ru/fitnes-joga-pilates/espandery/trubchatye/reebok-rstb-16074-5.html"}]},{"type":"Шведские стенки","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Шведская стенка","model":"ES Гибрид-Т45-БП45-ДВ","name":"Х1","link":"https://www.fitnesslook.ru/shvedskie-stenki/kombinirovannye/es-gibrid-t45-bp45-dv.html"}]}]},{"projectId":"№24552  |  00х  |  москва","content":[{"type":"Кардиотренажеры","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Реабилитационная беговая дорожка","model":"Spirit Fitness [LW1000] LW1000","name":"Х1","link":"https://www.fitnesslook.ru/index.php?searchstring=Spirit+Fitness+%5BLW1000%5D+LW1000"},{"title":"Стойка турник брусья-пресс","model":"Inspire VKR B","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/inspire-vkr-b.html"}]},{"type":"Силовое оборудование","icon":"<svg  width=\'28\' height=\'22\' role=\'img\' focusable=\'false\'><use class=\'accordion__icon\' xlink:href=\'/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon\'></use></svg>","trainers":[{"title":"Грузоблочный тренажер","model":"Hasttings Digger HD001-1 Жим от груди","name":"Х1","link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-hd001-1-jim-ot-grudi-digger.html"}]}]}]');
+
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5
+};
+const lazyElements = [{
+  img: document.querySelector("#intro-image"),
+  container: document.querySelector("#intro-cover"),
+  video: "/i/media/stat/prof-trains/video/main-cover.mp4",
+  poster: "/i/media/stat/prof-trains/img/intro/poster-desk.jpg",
+  alt: "Все для фитнес-залов"
+}, {
+  img: document.querySelector("#projects-image"),
+  container: document.querySelector("#projects-cover"),
+  video: "/i/media/stat/prof-trains/video/projects/cover.mp4",
+  poster: "/i/media/stat/prof-trains/img/projects/poster-desk.jpg",
+  alt: "Фитнесс единица"
+}];
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const properties = lazyElements.find(element => element.img === entry.target);
+      const {
+        img,
+        container,
+        video,
+        poster,
+        alt
+      } = properties;
+      const videoElement = document.createElement("video");
+      container.innerHTML = '';
+      videoElement.src = video;
+      videoElement.alt = alt;
+      videoElement.poster = poster;
+      videoElement.controls = false;
+      videoElement.preload = "none";
+      videoElement.autoplay = true;
+      videoElement.muted = true;
+      container.appendChild(videoElement);
+      videoElement.load();
+      observer.unobserve(img);
+    }
+  });
+}, options);
+lazyElements.forEach(element => {
+  observer.observe(element.img);
+});
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   renderProjectsGallery: () => (/* binding */ renderProjectsGallery)
+/* harmony export */ });
+const slideProjectItemTemplate = document.querySelector("#project-part").content.querySelector('.project-content__item');
+const slideProjectTemplate = document.querySelector("#project-item").content.querySelector('.projects-list__item');
+const projectsFullTemplate = document.querySelector("#project-full").content.querySelector('.projects-gallery__item');
+const projectGallery = document.querySelector('#slider-projects-details');
+const renderProjectsGallery = projects => {
+  const projectsFragment = document.createDocumentFragment();
+  const slideProjectsFragment = document.createDocumentFragment();
+  const projectsFullFragment = document.createDocumentFragment();
+  projects.forEach(project => {
+    const projectFull = projectsFullTemplate.cloneNode(true);
+    projectFull.querySelector('.title-info').textContent = project.projectId;
+    projectsFullFragment.appendChild(projectFull);
+    const projectsList = projectFull.querySelector('#projects-list');
+    project.content.forEach(project => {
+      const projectPart = slideProjectTemplate.cloneNode(true);
+      projectPart.querySelector('.accordion__title').textContent = project.type;
+      projectPart.querySelector('.accordion__number').innerHTML = project.icon;
+      slideProjectsFragment.appendChild(projectPart);
+      projectsList.appendChild(slideProjectsFragment);
+      project.trainers.forEach(content => {
+        const projectItem = slideProjectItemTemplate.cloneNode(true);
+        const type = projectItem.querySelector('.type');
+        content.title ? type.textContent = content.title : type.remove();
+        projectItem.querySelector('.model').href = content?.link;
+        projectItem.querySelector('.model__name').textContent = content.model;
+        projectItem.querySelector('.model__type').textContent = content.name;
+        projectsFragment.appendChild(projectItem);
+      });
+      const sliderItems = projectPart.querySelector('#project-content');
+      sliderItems.appendChild(projectsFragment);
+    });
+  });
+  projectGallery.appendChild(projectsFullFragment);
+};
+
+
+/***/ }),
+/* 5 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   setPagination: () => (/* binding */ setPagination)
+/* harmony export */ });
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
+
+const getProjectsIndex = slider => {
+  return {
+    current: slider.getInfo().displayIndex,
+    next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? 1 : slider.getInfo().displayIndex + 1,
+    prev: slider.getInfo().displayIndex === 1 ? slider.getInfo().slideCount : slider.getInfo().displayIndex - 1
+  };
+};
+const setPagination = slider => {
+  const slideNumber = document.querySelector('#projects-pagination');
+  const slidePrevNumber = slideNumber.querySelector('#slider-projects-prev');
+  const slideCurrentNumber = slideNumber.querySelector('#slider-projects-current');
+  const slideNextNumber = slideNumber.querySelector('#slider-projects-next');
+  slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).current);
+  slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).prev);
+  slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).next);
+  slider.events.on('indexChanged', () => {
+    slideCurrentNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).current);
+    slidePrevNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).prev);
+    slideNextNumber.textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatNumber)(getProjectsIndex(slider).next);
+  });
+};
+
+
+/***/ }),
 /* 6 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   addListeners: () => (/* binding */ addListeners),
+/* harmony export */   formatNumber: () => (/* binding */ formatNumber),
+/* harmony export */   formatPrice: () => (/* binding */ formatPrice),
+/* harmony export */   removeElements: () => (/* binding */ removeElements),
+/* harmony export */   sortProjects: () => (/* binding */ sortProjects)
+/* harmony export */ });
+const formatNumber = number => {
+  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
+};
+const addListeners = (selector, cb) => {
+  const elements = document.querySelectorAll(selector);
+  elements.forEach(button => {
+    button.addEventListener('click', evt => {
+      evt.preventDefault();
+      cb();
+    });
+  });
+};
+const formatPrice = number => {
+  return number.toString().split(/(?=(?:...)*$)/).join("'");
+};
+const removeElements = selectors => {
+  selectors?.forEach(selector => {
+    document.querySelectorAll(selector).forEach(item => item.remove());
+  });
+};
+const getCompare = (a, b) => {
+  return b.content.length - a.content.length;
+};
+const sortProjects = array => {
+  return array.sort(getCompare);
+};
+
+
+/***/ }),
+/* 7 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -452,7 +506,7 @@ const setNavigation = container => {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -463,7 +517,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   setSmallSlider: () => (/* binding */ setSmallSlider),
 /* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive)
 /* harmony export */ });
-/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
 
 const setSlider = (container, navContainer, props) => {
   return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
@@ -519,7 +573,7 @@ const settingSliderAdaptive = slider => {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3663,7 +3717,7 @@ var tns = function (options) {
 exports.tns = tns;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3735,7 +3789,7 @@ const settingMobileAccordionAdaptive = accordion => {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3743,7 +3797,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   renderProductsGallery: () => (/* binding */ renderProductsGallery)
 /* harmony export */ });
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 
 const productFullTemplate = document.querySelector("#products-full").content.querySelector('.product-gallery-set');
 const productContentTemplate = document.querySelector("#products-content").content.querySelector('.product-card');
@@ -3781,7 +3835,7 @@ const renderProductsGallery = products => {
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3802,7 +3856,7 @@ const getData = onSuccess => {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3900,17 +3954,19 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _json_projects_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _projects_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _slider_pagination_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5);
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4);
-/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
-/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
-/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
-/* harmony import */ var _data_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(12);
+/* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _json_projects_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _video_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _projects_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _slider_pagination_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
+/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
+/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(12);
+/* harmony import */ var _data_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(13);
+
 
 
 
@@ -3925,14 +3981,14 @@ __webpack_require__.r(__webpack_exports__);
 
 // Remove section
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download', '#project-subtitle-pdf', '#sale-button']);
-(0,_api_js__WEBPACK_IMPORTED_MODULE_9__.getData)(products => {
-  const productsList = (0,_data_js__WEBPACK_IMPORTED_MODULE_10__.getDataStructure)(products);
-  (0,_products_js__WEBPACK_IMPORTED_MODULE_8__.renderProductsGallery)(productsList);
+(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download', '#project-subtitle-pdf', '#sale-button']);
+(0,_api_js__WEBPACK_IMPORTED_MODULE_10__.getData)(products => {
+  const productsList = (0,_data_js__WEBPACK_IMPORTED_MODULE_11__.getDataStructure)(products);
+  (0,_products_js__WEBPACK_IMPORTED_MODULE_9__.renderProductsGallery)(productsList);
   productsList.forEach(({
     id
   }) => {
-    (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`, {
+    (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`, {
       responsive: {
         768: {
           items: 2,
@@ -3943,70 +3999,70 @@ __webpack_require__.r(__webpack_exports__);
     });
   });
 });
-(0,_projects_js__WEBPACK_IMPORTED_MODULE_1__.renderProjectsGallery)((0,_util_js__WEBPACK_IMPORTED_MODULE_4__.sortProjects)(_json_projects_json__WEBPACK_IMPORTED_MODULE_0__));
+(0,_projects_js__WEBPACK_IMPORTED_MODULE_3__.renderProjectsGallery)((0,_util_js__WEBPACK_IMPORTED_MODULE_5__.sortProjects)(_json_projects_json__WEBPACK_IMPORTED_MODULE_1__));
 
 // Sliders
 
-const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-intro', '#slider-intro-buttons', {
+const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-intro', '#slider-intro-buttons', {
   gutter: 32,
   controlsContainer: '#slider-intro-controls',
   autoHeight: true
 });
-const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-best', '#slider-best-buttons', {
+const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-best', '#slider-best-buttons', {
   gutter: 32,
   controlsContainer: '#slider-best-controls',
   autoHeight: true
 });
-const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSimpleSlider)('#slider-projects-details', {
+const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSimpleSlider)('#slider-projects-details', {
   controlsContainer: '#slider-projects-details-buttons'
 });
-(0,_slider_pagination_js__WEBPACK_IMPORTED_MODULE_2__.setPagination)(progectsGallery);
-const orderSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)('#slider-order-small', '#slider-order-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.settingSliderAdaptive)(orderSmallSlider);
-const bestFitnessSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)('#slider-bestfit-small', '#slider-bestfit-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.settingSliderAdaptive)(bestFitnessSmallSlider);
-const whySmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)('#slider-why-small', '#slider-why-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.settingSliderAdaptive)(whySmallSlider);
-const projectsSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSmallSlider)('#slider-projects-small', '#slider-projects-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_6__.settingSliderAdaptive)(projectsSmallSlider);
+(0,_slider_pagination_js__WEBPACK_IMPORTED_MODULE_4__.setPagination)(progectsGallery);
+const orderSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-order-small', '#slider-order-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(orderSmallSlider);
+const bestFitnessSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-bestfit-small', '#slider-bestfit-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(bestFitnessSmallSlider);
+const whySmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-why-small', '#slider-why-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(whySmallSlider);
+const projectsSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-projects-small', '#slider-projects-small-buttons');
+(0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(projectsSmallSlider);
 
 // Accordions
 
-const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-intro')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionInSlider)(sliderIntro));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionIntro, sliderIntro);
-const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('#accordion-about')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
+const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-intro')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(sliderIntro));
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionIntro, sliderIntro);
+const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-about')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionAbout);
-const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionInSlider)(sliderBest));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionBest, sliderBest);
-const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)({
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionAbout);
+const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(sliderBest));
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionBest, sliderBest);
+const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionAdaptive)(accordionGarantee);
-const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-main')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordionInSlider)(progectsGallery));
-new accordion_js__WEBPACK_IMPORTED_MODULE_3__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingAccordion)());
+(0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionGarantee);
+const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-main')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(progectsGallery));
+new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)());
 
 // Accordions in slider
 
 sliderBest.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionBest, sliderBest);
+  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingMobileAccordionAdaptive)(accordionBest, sliderBest);
 });
 sliderIntro.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.settingMobileAccordionAdaptive)(accordionIntro, sliderIntro);
+  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingMobileAccordionAdaptive)(accordionIntro, sliderIntro);
 });
 progectsGallery.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_7__.closeAllAccordions)(accordionMain);
+  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.closeAllAccordions)(accordionMain);
 });
 
 // Navigation
 
-(0,_navigation_js__WEBPACK_IMPORTED_MODULE_5__.setNavigation)('#navigation-in');
+(0,_navigation_js__WEBPACK_IMPORTED_MODULE_6__.setNavigation)('#navigation-in');
 
 // Buttons click
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.addListeners)('a[data-type="calc-button"]', () => $("#callmeform").show());
-(0,_util_js__WEBPACK_IMPORTED_MODULE_4__.addListeners)('a[data-type="call-button"]', () => $("#callmeform").show());
+(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('a[data-type="calc-button"]', () => $("#callmeform").show());
+(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('a[data-type="call-button"]', () => $("#callmeform").show());
 window.addEventListener("load", () => {
   sliderBest.updateSliderHeight();
   progectsGallery.updateSliderHeight();
