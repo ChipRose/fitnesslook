@@ -93,8 +93,8 @@ setNavigation('#navigation-in');
 
 // Buttons click
 
-addListeners('a[data-type="calc-button"]', () => $("#callmeform").show());
-addListeners('a[data-type="call-button"]', () => $("#callmeform").show());
+addListeners('button[data-type="calc-button"]', () => $("#callmeform").show());
+addListeners('button[data-type="call-button"]', () => $("#callmeform").show());
 
 window.addEventListener("load", () => {
   sliderBest.updateSliderHeight();

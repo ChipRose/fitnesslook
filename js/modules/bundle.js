@@ -4061,8 +4061,8 @@ progectsGallery.events.on('indexChanged', () => {
 
 // Buttons click
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('a[data-type="calc-button"]', () => $("#callmeform").show());
-(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('a[data-type="call-button"]', () => $("#callmeform").show());
+(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('button[data-type="calc-button"]', () => $("#callmeform").show());
+(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('button[data-type="call-button"]', () => $("#callmeform").show());
 window.addEventListener("load", () => {
   sliderBest.updateSliderHeight();
   progectsGallery.updateSliderHeight();
