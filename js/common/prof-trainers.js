@@ -1,15 +1,15 @@
 import Accordion from 'accordion-js';
-import projects from '../../../json/projects.json';
-import './video.js';
-import { renderProjectsGallery } from './projects.js';
-import { setPagination } from './slider-pagination.js'
-import { removeElements, addListeners, sortProjects } from './util.js';
-import { setNavigation } from './navigation.js';
-import { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive } from './slider.js';
-import { settingAccordion, settingAccordionAdaptive, settingMobileAccordionAdaptive, closeAllAccordions, settingAccordionInSlider } from './accordion.js';
-import { renderProductsGallery } from './products.js';
-import { getData } from './api.js';
-import { getDataStructure } from './data.js';
+import projects from '../../json/prof-trainers/projects.json';
+import './prof-trainers/video.js';
+import { renderProjectsGallery } from './prof-trainers/projects.js';
+import { setPagination } from './prof-trainers/slider-pagination.js'
+import { removeElements, addListeners, sortProjects } from './prof-trainers/util.js';
+import { setNavigation } from './prof-trainers/navigation.js';
+import { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive, updateSliderAdaptive } from './prof-trainers/slider.js';
+import { settingAccordion, settingAccordionAdaptive, settingMobileAccordionAdaptive, closeAllAccordions, settingAccordionInSlider } from './prof-trainers/accordion.js';
+import { renderProductsGallery } from './prof-trainers/products.js';
+import { getData } from './prof-trainers/api.js';
+import { getDataStructure } from './prof-trainers/data.js';
 
 // Remove section
 
@@ -36,8 +36,10 @@ renderProjectsGallery(sortProjects(projects));
 // Sliders
 
 const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons', { gutter: 32, controlsContainer: '#slider-intro-controls', autoHeight: true });
+updateSliderAdaptive(sliderIntro);
 
 const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, controlsContainer: '#slider-best-controls', autoHeight: true});
+updateSliderAdaptive(sliderBest);
 
 const progectsGallery = setSimpleSlider('#slider-projects-details', { controlsContainer: '#slider-projects-details-buttons' });
 setPagination(progectsGallery);

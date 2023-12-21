@@ -55,14 +55,16 @@ const settingAccordionAdaptive = (accordion, slider) => {
   });
 };
 
-const settingMobileAccordionAdaptive = (accordion) => {
+const settingMobileAccordionAdaptive = (accordion, slider) => {
   let newAccordion = accordion;
 
   if (!Array.isArray(accordion)) newAccordion = [accordion]
   closeAllMobileAccordions(newAccordion);
+  slider?.updateSliderHeight();
 
   window.addEventListener('resize', () => {
     closeAllMobileAccordions(newAccordion);
+    slider?.updateSliderHeight();
   });
 }
 

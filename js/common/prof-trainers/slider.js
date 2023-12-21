@@ -6,8 +6,8 @@ const setSlider = (container, navContainer, props) => {
     items: 1,
     controls: false,
     navContainer,
-    responsive:{
-      768:{
+    responsive: {
+      768: {
         controls: true
       }
     },
@@ -26,7 +26,7 @@ const setSmallSlider = (container, controlsContainer, props) => {
   })
 }
 
-const setSimpleSlider = (container, props)=>{
+const setSimpleSlider = (container, props) => {
   return tns({
     container,
     gutter: 32,
@@ -41,7 +41,7 @@ const settingSliderAdaptive = (slider) => {
   let newSlider = slider;
   if (window.innerWidth < 768) {
     if (!newSlider.isOn) newSlider = slider.rebuild()
-
+    newSlider.updateSliderHeight();
   }
   else {
     newSlider.isOn && newSlider.destroy();
@@ -50,6 +50,7 @@ const settingSliderAdaptive = (slider) => {
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
       if (!newSlider.isOn) newSlider = slider.rebuild()
+      newSlider.updateSliderHeight();
     }
     else {
       newSlider.isOn && newSlider.destroy();
@@ -57,4 +58,10 @@ const settingSliderAdaptive = (slider) => {
   });
 }
 
-export { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive };
+const updateSliderAdaptive = (slider) => {
+  window.addEventListener('resize', () => {
+    slider.updateSliderHeight();
+  });
+}
+
+export { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive, updateSliderAdaptive };

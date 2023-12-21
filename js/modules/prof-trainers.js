@@ -515,7 +515,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   setSimpleSlider: () => (/* binding */ setSimpleSlider),
 /* harmony export */   setSlider: () => (/* binding */ setSlider),
 /* harmony export */   setSmallSlider: () => (/* binding */ setSmallSlider),
-/* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive)
+/* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive),
+/* harmony export */   updateSliderAdaptive: () => (/* binding */ updateSliderAdaptive)
 /* harmony export */ });
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
 
@@ -557,6 +558,7 @@ const settingSliderAdaptive = slider => {
   let newSlider = slider;
   if (window.innerWidth < 768) {
     if (!newSlider.isOn) newSlider = slider.rebuild();
+    newSlider.updateSliderHeight();
   } else {
     newSlider.isOn && newSlider.destroy();
   }
@@ -564,10 +566,16 @@ const settingSliderAdaptive = slider => {
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
       if (!newSlider.isOn) newSlider = slider.rebuild();
+      newSlider.updateSliderHeight();
     } else {
       newSlider.isOn && newSlider.destroy();
     }
     ;
+  });
+};
+const updateSliderAdaptive = slider => {
+  window.addEventListener('resize', () => {
+    slider.updateSliderHeight();
   });
 };
 
@@ -3778,12 +3786,14 @@ const settingAccordionAdaptive = (accordion, slider) => {
     slider?.updateSliderHeight();
   });
 };
-const settingMobileAccordionAdaptive = accordion => {
+const settingMobileAccordionAdaptive = (accordion, slider) => {
   let newAccordion = accordion;
   if (!Array.isArray(accordion)) newAccordion = [accordion];
   closeAllMobileAccordions(newAccordion);
+  slider?.updateSliderHeight();
   window.addEventListener('resize', () => {
     closeAllMobileAccordions(newAccordion);
+    slider?.updateSliderHeight();
   });
 };
 
@@ -3955,17 +3965,17 @@ var __webpack_exports__ = {};
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _json_projects_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _video_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _projects_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _slider_pagination_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _navigation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _accordion_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
-/* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
-/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(12);
-/* harmony import */ var _data_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(13);
+/* harmony import */ var _json_prof_trainers_projects_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _prof_trainers_video_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _prof_trainers_projects_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _prof_trainers_slider_pagination_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var _prof_trainers_util_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _prof_trainers_navigation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(10);
+/* harmony import */ var _prof_trainers_products_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(11);
+/* harmony import */ var _prof_trainers_api_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(12);
+/* harmony import */ var _prof_trainers_data_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(13);
 
 
 
@@ -3981,14 +3991,14 @@ __webpack_require__.r(__webpack_exports__);
 
 // Remove section
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download', '#project-subtitle-pdf', '#sale-button']);
-(0,_api_js__WEBPACK_IMPORTED_MODULE_10__.getData)(products => {
-  const productsList = (0,_data_js__WEBPACK_IMPORTED_MODULE_11__.getDataStructure)(products);
-  (0,_products_js__WEBPACK_IMPORTED_MODULE_9__.renderProductsGallery)(productsList);
+(0,_prof_trainers_util_js__WEBPACK_IMPORTED_MODULE_5__.removeElements)(['a[data-type="calc-example"]', '#sertificates-button', '#delivery-button', '#garantee-card-button', '#projects-info-download', '#project-subtitle-pdf', '#sale-button']);
+(0,_prof_trainers_api_js__WEBPACK_IMPORTED_MODULE_10__.getData)(products => {
+  const productsList = (0,_prof_trainers_data_js__WEBPACK_IMPORTED_MODULE_11__.getDataStructure)(products);
+  (0,_prof_trainers_products_js__WEBPACK_IMPORTED_MODULE_9__.renderProductsGallery)(productsList);
   productsList.forEach(({
     id
   }) => {
-    (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`, {
+    (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)(`#product-list-${id}`, `#product-list-buttons-${id}`, {
       responsive: {
         768: {
           items: 2,
@@ -3999,70 +4009,72 @@ __webpack_require__.r(__webpack_exports__);
     });
   });
 });
-(0,_projects_js__WEBPACK_IMPORTED_MODULE_3__.renderProjectsGallery)((0,_util_js__WEBPACK_IMPORTED_MODULE_5__.sortProjects)(_json_projects_json__WEBPACK_IMPORTED_MODULE_1__));
+(0,_prof_trainers_projects_js__WEBPACK_IMPORTED_MODULE_3__.renderProjectsGallery)((0,_prof_trainers_util_js__WEBPACK_IMPORTED_MODULE_5__.sortProjects)(_json_prof_trainers_projects_json__WEBPACK_IMPORTED_MODULE_1__));
 
 // Sliders
 
-const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-intro', '#slider-intro-buttons', {
+const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-intro', '#slider-intro-buttons', {
   gutter: 32,
   controlsContainer: '#slider-intro-controls',
   autoHeight: true
 });
-const sliderBest = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-best', '#slider-best-buttons', {
+(0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.updateSliderAdaptive)(sliderIntro);
+const sliderBest = (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-best', '#slider-best-buttons', {
   gutter: 32,
   controlsContainer: '#slider-best-controls',
   autoHeight: true
 });
-const progectsGallery = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSimpleSlider)('#slider-projects-details', {
+(0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.updateSliderAdaptive)(sliderBest);
+const progectsGallery = (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSimpleSlider)('#slider-projects-details', {
   controlsContainer: '#slider-projects-details-buttons'
 });
-(0,_slider_pagination_js__WEBPACK_IMPORTED_MODULE_4__.setPagination)(progectsGallery);
-const orderSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-order-small', '#slider-order-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(orderSmallSlider);
-const bestFitnessSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-bestfit-small', '#slider-bestfit-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(bestFitnessSmallSlider);
-const whySmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-why-small', '#slider-why-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(whySmallSlider);
-const projectsSmallSlider = (0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-projects-small', '#slider-projects-small-buttons');
-(0,_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(projectsSmallSlider);
+(0,_prof_trainers_slider_pagination_js__WEBPACK_IMPORTED_MODULE_4__.setPagination)(progectsGallery);
+const orderSmallSlider = (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-order-small', '#slider-order-small-buttons');
+(0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(orderSmallSlider);
+const bestFitnessSmallSlider = (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-bestfit-small', '#slider-bestfit-small-buttons');
+(0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(bestFitnessSmallSlider);
+const whySmallSlider = (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-why-small', '#slider-why-small-buttons');
+(0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(whySmallSlider);
+const projectsSmallSlider = (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSmallSlider)('#slider-projects-small', '#slider-projects-small-buttons');
+(0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.settingSliderAdaptive)(projectsSmallSlider);
 
 // Accordions
 
-const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-intro')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(sliderIntro));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionIntro, sliderIntro);
-const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-about')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)({
+const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-intro')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(sliderIntro));
+(0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionIntro, sliderIntro);
+const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-about')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionAbout);
-const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-best')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(sliderBest));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionBest, sliderBest);
-const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.garantee-list')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)({
+(0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionAbout);
+const accordionBest = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-best')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(sliderBest));
+(0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionBest, sliderBest);
+const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.garantee-list')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)({
   showMultiple: true
 }));
-(0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionGarantee);
-const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-main')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(progectsGallery));
-new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)());
+(0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionGarantee);
+const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-main')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(progectsGallery));
+new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)());
 
 // Accordions in slider
 
 sliderBest.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingMobileAccordionAdaptive)(accordionBest, sliderBest);
+  (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingMobileAccordionAdaptive)(accordionBest, sliderBest);
 });
 sliderIntro.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingMobileAccordionAdaptive)(accordionIntro, sliderIntro);
+  (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingMobileAccordionAdaptive)(accordionIntro, sliderIntro);
 });
 progectsGallery.events.on('indexChanged', () => {
-  (0,_accordion_js__WEBPACK_IMPORTED_MODULE_8__.closeAllAccordions)(accordionMain);
+  (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.closeAllAccordions)(accordionMain);
 });
 
 // Navigation
 
-(0,_navigation_js__WEBPACK_IMPORTED_MODULE_6__.setNavigation)('#navigation-in');
+(0,_prof_trainers_navigation_js__WEBPACK_IMPORTED_MODULE_6__.setNavigation)('#navigation-in');
 
 // Buttons click
 
-(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('button[data-type="calc-button"]', () => $("#callmeform").show());
-(0,_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('button[data-type="call-button"]', () => $("#callmeform").show());
+(0,_prof_trainers_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('button[data-type="calc-button"]', () => $("#callmeform").show());
+(0,_prof_trainers_util_js__WEBPACK_IMPORTED_MODULE_5__.addListeners)('button[data-type="call-button"]', () => $("#callmeform").show());
 window.addEventListener("load", () => {
   sliderBest.updateSliderHeight();
   progectsGallery.updateSliderHeight();

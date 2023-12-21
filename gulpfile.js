@@ -6,9 +6,6 @@ import { deleteAsync } from 'del';
 import webp from 'gulp-webp';
 import webpack from 'webpack-stream';
 import imagemin from 'gulp-imagemin';
-
-
-// import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import rename from 'gulp-rename';
 import { stacksvg } from "gulp-stacksvg";
@@ -22,7 +19,7 @@ export function processMarkup() {
 }
 
 export function processStyles() {
-  return gulp.src('./style/resource/prof-trainers/*.scss', { sourcemaps: isDevelopment })
+  return gulp.src('./style/resource/*.scss', { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(sass({
     }).on('error', sass.logError))
@@ -30,8 +27,8 @@ export function processStyles() {
     .pipe(browser.stream());
 }
 
-export function processScripts() {
-  return gulp.src('./js/common/prof-trainers/prof-trainers.js')
+export function processScripts({src, title, dest='./js/modules/'}) {
+  return gulp.src(src)
     .pipe(webpack({
       mode: 'none',
       module: {
@@ -40,9 +37,16 @@ export function processScripts() {
         ],
       },
     }))
-    .pipe(rename('bundle.js'))
-    .pipe(gulp.dest('./js/modules/'))
+    .pipe(rename(title))
+    .pipe(gulp.dest(dest))
     .pipe(browser.stream());
+}
+
+export function processAllScripts() {
+  return gulp.series(
+    () => processScripts({ src: './js/common/prof-trainers.js', title:'prof-trainers.js'}),
+    () => processScripts({ src: './js/common/delivery.js',title:'delivery.js'})
+  )
 }
 
 export function optimizeImages() {
@@ -57,12 +61,19 @@ export function createWebp() {
     .pipe(gulp.dest('./i/media/'))
 }
 
-export function createStack() {
-  return gulp.src('./i/media-resource/stat/prof-trains/img/icons/**/*.svg')
+export function createStack({src, dest}) {
+  return gulp.src(src)
     .pipe(svgo())
     .pipe(stacksvg())
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('./i/media/stat/prof-trains/img'));
+    .pipe(gulp.dest(dest));
+}
+
+export function createAllStack() {
+  return gulp.series(
+    () => createStack({ src: './i/media-resource/stat/prof-trains/img/icons/**/*.svg', dest:'./i/media/stat/prof-trains/img' }),
+    () => createStack({ src: './i/media-resource/stat/delivery/img/icons/**/*.svg', dest:'./i/media/stat/delivery/img'  })
+  )
 }
 
 export function copyAssets() {
@@ -96,7 +107,7 @@ function reloadServer(done) {
 function watchFiles() {
   gulp.watch('./style/resource/**/*.scss', gulp.series(processStyles));
   gulp.watch('./i/media-resource/**/*.{jpg,png}', gulp.series(copyAssets, createWebp));
-  gulp.watch('./js/common/**/*.js', gulp.series(processScripts));
+  gulp.watch('./js/common/**/*.js', gulp.series(processAllScripts()));
   gulp.watch('./*.html', gulp.series(processMarkup, reloadServer));
 }
 
@@ -104,9 +115,9 @@ function compileProject(done) {
   gulp.parallel(
     processMarkup,
     processStyles,
-    processScripts,
+    processAllScripts(),
     copyAssets,
-    createStack,
+    createAllStack(),
     createWebp
   )(done);
 }
