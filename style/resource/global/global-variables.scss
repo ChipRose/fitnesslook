@@ -1,0 +1,19 @@
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1000px;
+$max-width: 1180px;
+
+:root {
+  --indent-small: 4px;
+  --indent-basic: 8px;
+  --indent-main: 16px;
+  --indent-big: 32px;
+  --indent-huge: 64px;
+  --indent-super: 128px;
+  --radius-basic: 12px;
+  --radius-main: 20px;
+  --radius-big: 30px;
+  --button-size: 24px;
+  --transition-main: all 0.3s ease-out;
+  --shadow-main: 0px 4px 20px 0px rgba(0, 0, 0, 0.06);
+}

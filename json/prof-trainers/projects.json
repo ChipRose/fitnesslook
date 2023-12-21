@@ -4,7 +4,7 @@
     "content": [
       {
         "type": "Кардиотренажеры",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Беговая дорожка", "model": "Matrix Performance Touch XL", "name":"Х2", "link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-performance-touch-xl.html"},
           {"title":"Эллиптический тренажер", "model": "Matrix Performance Ascent Trainer Touch", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-ascent-trainer-touch.html"},
@@ -16,7 +16,7 @@
 
       {
         "type": "Силовое оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
           {"title":"Грузоблочный тренажер", "model": "Matrix Aura G3-MSFT300 Functional Trainer", "name":"Х2", "link":"https://www.fitnesslook.ru/trenajery/silovye/muljtistancii/matrix-msft-300-functional-trainer.html"},
           {"model": "Matrix Ultra Base G7-S13BH", "name":"Х2", "link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s13bh.html"},
@@ -31,7 +31,7 @@
       },
       {
         "type": "Железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
           {"title":"Гантельный ряд", "model": "Ziva ZVO-DBPU1584-GY 10 пар", "name":"Х1", "link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/protrain-1-40-kg-rj0946.html"},
           {"model":"Ziva XP Urethane Dumbbell Set (5 pairs) 22-30 kg ZXP-DBPU8605", "name":"Х1", "link":"https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/bronze-gym-br-1027-15-par.html"},
@@ -50,7 +50,7 @@
       },
       {
         "type": "Фитнес оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Мат для йоги", "model": "Ziva ZSL-TDYM0251-BK", "name":"Х2", "link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/marin-endurance-led.html"},
           {"title":"Ролик миофасцальный", "model": "Ziva ZXP-DFRL0274", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-endurance-led.html"},
@@ -65,7 +65,7 @@
     "content": [
       {
         "type": "Кардиотренажеры",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Велотренажер", "model": "WattBike Pro", "name":"Х4", "link":"https://www.fitnesslook.ru/trenajery/velotrenajery/wattbike-pro.html"}
         ]
@@ -77,7 +77,7 @@
     "content": [
       {
         "type": "Кардиотренажеры",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Беговая дорожка", "model": "Matrix Performance Touch XL", "name":"Х2", "link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-performance-touch-xl.html"},
           {"title":"Эллиптический тренажер", "model": "Matrix Performance Ascent Trainer Touch", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-ascent-trainer-touch.html"},
@@ -89,7 +89,7 @@
 
       {
         "type": "Силовое оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
           {"title":"Грузоблочный тренажер", "model": "Matrix Aura G3-MSFT300 Functional Trainer", "name":"Х2", "link":"https://www.fitnesslook.ru/trenajery/silovye/muljtistancii/matrix-msft-300-functional-trainer.html"},
           {"model": "Matrix Ultra Base G7-S13BH", "name":"Х2", "link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s13bh.html"},
@@ -104,7 +104,7 @@
       },
       {
         "type": "Железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
           {"title":"Гантельный ряд", "model": "Ziva ZVO-DBPU1584-GY 10 пар", "name":"Х1", "link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-zvo-dbpu1584-gy-10-par.html"},
           {"model":"Ziva XP Urethane Dumbbell Set (5 pairs) 22-30 kg ZXP-DBPU8605", "name":"Х1", "link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-xp-urethane-dumbbell-set-5-pairs-22-30-kg-zxp-dbpu8605.html"},
@@ -123,7 +123,7 @@
       },
       {
         "type": "Фитнес оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Мат для йоги", "model": "Ziva ZSL-TDYM0251-BK", "name":"Х2", "link":"https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/ziva-zsl-tdym0251-bk.html"},
           {"title":"Ролик миофасцальный", "model": "Ziva ZXP-DFRL0274", "name":"Х1", "link":"https://www.fitnesslook.ru/fitnes-joga-pilates/prochie-tovary/ziva-zxp-dfrl0274.html"},
@@ -138,7 +138,7 @@
     "content": [
       {
         "type": "Силовое оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
           {"title":"Грузоблочный тренажер", "model": "Hasttings Digger HD016-1 жим ногами", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd016-1.html"},
           {"model":"Hasttings Digger HD037-1 сгибание-разгибание ног", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd033-1.html"},
@@ -154,7 +154,7 @@
       },
       {
         "type": "Железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
           {"title":"Гантель", "model": "MB Barbell Atlet", "name":"Х1", "link":"https://www.fitnesslook.ru/jelezo/ganteli/razbornye/barbell-atlet-29-kg.html"},
           {"title":"Диск для штанги", "model": "MB Barbell Atlet 50 мм - 1.25 кг", "name":"Х4", "link":"https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-15-kg-7206764.html"},
@@ -172,7 +172,7 @@
       },
       {
         "type": "Фитнес оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Мат для йоги", "model": "Original FitTools 6 мм двухслойный перфорированный голубой FT-YGM6-3DT-SKYBLUE", "name":"Х30", "link":"https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/original-fittools-6-mm-dvuhslojnyj-perforirovannyj-goluboj.html"},
           {"title":"Блок для йоги", "model": "AeroFit - прямоугольник", "name":"Х40", "link":"https://www.fitnesslook.ru/fitnes-joga-pilates/tovary-dlya-jogi/aerofit-ft-ygk-469.html"},
@@ -206,7 +206,7 @@
     "content": [
       {
         "type": "Кардиотренажеры",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Беговая дорожка", "model": "Matrix TF50XIR", "name":"Х2", "link":"https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-tf50xir.html"},
           {"title":"Эллиптический тренажер", "model": "Matrix A50XIR", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-a50xir.html"}
@@ -215,7 +215,7 @@
 
       {
         "type": "Силовое оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
           {"title":"Грузоблочный тренажер", "model": "Hasttings Digger HD001-1 Жим от груди", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-hd001-1-jim-ot-grudi-digger.html"},
           {"model": "Hasttings Digger HD012-1 - гребная тяга", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-digger-hd012-1-grebnaya-tyaga.html"},
@@ -239,7 +239,7 @@
       },
       {
         "type": "Железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
         "trainers":[
           {"title":"Гантельный ряд", "model": "Protrain DB 6101 1-30 кг", "name":"Х1", "link":"https://www.fitnesslook.ru/jelezo/ganteli/ryady/db-6101-1-30kg.html"},
           {"title":"Гиря", "model": "Profi Fit обрезиненная 16 кг.", "name":"Х1", "link":"https://www.fitnesslook.ru/jelezo/giri/profi-fit-obrezinennaya-16-kg.html"},
@@ -262,7 +262,7 @@
       },
       {
         "type": "Фитнес оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Коврик для йоги и фитнеса", "model": "Reebok синий", "name":"Х3", "link":"https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/reebok-sinij.html"},
           {"title":"Блок для йоги", "model": "Profi Fit черный", "name":"Х6", "link":"https://www.fitnesslook.ru/fitnes-joga-pilates/tovary-dlya-jogi/profi-fit-chernyj.html"},
@@ -286,7 +286,7 @@
         },
       {
         "type": "Шведские стенки",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Шведская стенка", "model": "ES Гибрид-Т45-БП45-ДВ", "name":"Х1", "link":"https://www.fitnesslook.ru/shvedskie-stenki/kombinirovannye/es-gibrid-t45-bp45-dv.html"}
 
@@ -299,7 +299,7 @@
     "content": [
       {
         "type": "Кардиотренажеры",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Реабилитационная беговая дорожка", "model": "Spirit Fitness [LW1000] LW1000", "name":"Х1", "link":"https://www.fitnesslook.ru/index.php?searchstring=Spirit+Fitness+%5BLW1000%5D+LW1000"},
           {"title":"Стойка турник брусья-пресс", "model": "Inspire VKR B", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/inspire-vkr-b.html"}
@@ -308,7 +308,7 @@
 
      {
         "type": "Силовое оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/prof-trains/img/sprite.svg#treadmill-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
         "trainers":[
           {"title":"Грузоблочный тренажер", "model": "Hasttings Digger HD001-1 Жим от груди", "name":"Х1", "link":"https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/hasttings-hd001-1-jim-ot-grudi-digger.html"}
 

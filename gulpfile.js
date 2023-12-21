@@ -61,20 +61,14 @@ export function createWebp() {
     .pipe(gulp.dest('./i/media/'))
 }
 
-export function createStack({src, dest}) {
-  return gulp.src(src)
+export function createStack() {
+  return gulp.src('./i/media-resource/stat/icons/**/*.svg')
     .pipe(svgo())
     .pipe(stacksvg())
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest(dest));
+    .pipe(gulp.dest('./i/media/stat/'));
 }
 
-export function createAllStack() {
-  return gulp.series(
-    () => createStack({ src: './i/media-resource/stat/prof-trains/img/icons/**/*.svg', dest:'./i/media/stat/prof-trains/img' }),
-    () => createStack({ src: './i/media-resource/stat/delivery/img/icons/**/*.svg', dest:'./i/media/stat/delivery/img'  })
-  )
-}
 
 export function copyAssets() {
   return gulp.src([
@@ -117,7 +111,7 @@ function compileProject(done) {
     processStyles,
     processAllScripts(),
     copyAssets,
-    createAllStack(),
+    createStack,
     createWebp
   )(done);
 }
