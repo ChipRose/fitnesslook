@@ -4,6 +4,35 @@ $desktop-width: 1000px;
 $max-width: 1180px;
 
 :root {
+  --fz-small: 12px;
+  --lh-small: 120%;
+  --fz-main: 14px;
+  --lh-main: 120%;
+  --fz-medium: 16px;
+  --lh-medium: 120%;
+  --fz-big: 26px;
+  --lh-big: 120%;
+
+  @media (min-width: $tablet-width) {
+    --fz-main: 15px;
+    --lh-main: 120%;
+    --fz-medium: 18px;
+    --lh-medium: 120%;
+    --fz-big: 45px;
+    --lh-big: 120%;
+  }
+
+  @media (min-width: $desktop-width) {
+    --fz-main: 17px;
+    --lh-main: 120%;
+    --fz-medium: 18px;
+    --lh-medium: 120%;
+    --fz-big: 45px;
+    --lh-big: 120%;
+  }
+}
+
+:root {
   --indent-small: 4px;
   --indent-basic: 8px;
   --indent-main: 16px;
@@ -16,4 +45,14 @@ $max-width: 1180px;
   --button-size: 24px;
   --transition-main: all 0.3s ease-out;
   --shadow-main: 0px 4px 20px 0px rgba(0, 0, 0, 0.06);
+}
+
+
+// Colors
+:root {
+  --cl-main: rgb(101, 98, 115);
+  --cl-contrast: rgb(255, 255, 255);
+  --cl-accent: rgb(171, 118, 180);
+  --cl-dark: rgb(31, 31, 31);
+  --cl-neutral: rgb(106, 98, 115);
 }

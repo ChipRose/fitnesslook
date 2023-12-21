@@ -1,9 +1,15 @@
 @import "global/global-variables.scss";
-@import "delivery/variables.scss";
 
 //Global
 @import "global/normalize.scss";
 @import "global/global.scss";
 @import "global/fonts.scss";
 @import "global/visually-hidden.scss";
+
+// Blocks
+@import "delivery/page-delivery-state.scss";
+
+
+// Components
+@import "delivery/button-main.scss";
 
