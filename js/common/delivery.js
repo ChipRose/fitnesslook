@@ -1,1 +1,1 @@
-console.log('delivery')
+import './delivery/popup.js'

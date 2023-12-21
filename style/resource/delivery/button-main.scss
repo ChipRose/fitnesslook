@@ -1,3 +1,20 @@
 .button-main {
-  color: red;
+  padding: var(--indent-basic) var(--indent-main);
+  display: block;
+  width: fit-content;
+  box-sizing: border-box;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: var(--fz-medium);
+  line-height: var(--lh-main);
+  font-weight: 500;
+  background: var(--cl-contrast);
+  box-shadow: var(--shadow-main);
+  color: var(--cl-heavy-dark);
+  border-radius: var(--radius-main);
+  cursor: pointer;
+
+  &--active {
+    background: var(--cl-heavy-dark);
+    color: var(--cl-contrast);
+  }
 }

@@ -1,0 +1,35 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrubs__item {
+  margin-right: 12px;
+  font-size: var(--fz-main);
+  position: relative;
+
+  &:last-child {
+    margin-right: 0;
+
+    .breadcrubs__link {
+      padding-right: 0;
+    }
+
+    &::after {
+      content: '';
+    }
+  }
+
+  &::after {
+    content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDkgMTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik05IDZMLTQuODkzOTllLTA3IDExLjE5NjJMLTMuNTEzNzNlLTA4IDAuODAzODQ3TDkgNloiIGZpbGw9IiNEOUQ5RDkiLz4KPC9zdmc+Cg==');
+    position: absolute;
+    top: 2px;
+    right: 0;
+  }
+}
+
+.breadcrubs__link {
+  padding-right: 24px;
+  font-size: inherit;
+  display: block;
+}
