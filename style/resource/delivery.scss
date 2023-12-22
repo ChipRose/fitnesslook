@@ -5,21 +5,17 @@
 @import "global/global.scss";
 @import "global/fonts.scss";
 @import "global/container.scss";
-@import "global/visually-hidden.scss";
+
+// Components
+@import "delivery/buttons.scss";
+@import "delivery/breadcrumbs.scss";
+@import "delivery/titles.scss";
+@import "delivery/image-block.scss";
+@import "delivery/paper.scss";
 
 // Blocks
 @import "delivery/page-delivery-state.scss";
 @import "delivery/cover.scss";
-
-
-// Components
-@import "delivery/button-main.scss";
-@import "delivery/button-popup.scss";
-@import "delivery/breadcrumbs.scss";
-@import "delivery/title-major.scss";
-@import "delivery/subtitle.scss";
-@import "delivery/image-block.scss";
-@import "delivery/paper.scss";
 
 // Layout
 @import "delivery/button-block.scss";

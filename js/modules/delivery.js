@@ -14,9 +14,17 @@ const closeAllPopup = () => {
   });
 };
 popupItems.forEach(item => {
+  const buttonPopup = item.querySelector('.button-popup__button');
   item.addEventListener('click', () => {
+    if (item.classList.contains(OPEN_CLASS)) {
+      closeAllPopup();
+    } else {
+      closeAllPopup();
+      item.classList.add(OPEN_CLASS);
+    }
+  });
+  buttonPopup.addEventListener('blur', () => {
     closeAllPopup();
-    item.classList.toggle(OPEN_CLASS);
   });
 });
 

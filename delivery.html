@@ -3606,12 +3606,25 @@
               <a class="link breadcrubs__link">Доставка и оплата</a>
             </li>
           </ul>
-
-
           <div class="button-block">
             <a href="#schedule" class="link button-main button-block__item button-main--active">График работы</a>
             <a href="#cost" class="link button-main  button-block__item">Стоимость доставки</a>
             <a href="#payment" class="link button-main  button-block__item">Способы оплаты</a>
+          </div>
+
+          <a href="" class="link button-action">Сборка</a>
+
+          <div class="button-popup">
+            <button class="button button-popup__button" type="button">
+              <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
+                <use xlink:href="/i/media/stat/sprite.svg#consultation-icon"></use>
+              </svg>
+            </button>
+            <div class="button-popup__modal">
+              <p class="text">
+                консультация по использованию
+              </p>
+            </div>
           </div>
           <div class="button-popup">
             <button class="button button-popup__button" type="button">
@@ -3628,12 +3641,86 @@
           <div class="button-popup">
             <button class="button button-popup__button" type="button">
               <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
+                <use xlink:href="/i/media/stat/sprite.svg#quality-icon"></use>
+              </svg>
+            </button>
+            <div class="button-popup__modal">
+              <p class="text">
+                оценка качества
+                до оформления
+              </p>
+            </div>
+          </div>
+          <div class="button-popup">
+            <button class="button button-popup__button" type="button">
+              <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
                 <use xlink:href="/i/media/stat/sprite.svg#loading-icon"></use>
               </svg>
             </button>
             <div class="button-popup__modal">
               <p class="text">
-                аккуратная погрузка
+                аккуратная <br> погрузка
+              </p>
+            </div>
+          </div>
+          <div class="button-popup">
+            <button class="button button-popup__button" type="button">
+              <svg class="button-popup__icon" width="22" height="13" role="img" focusable="false">
+                <use xlink:href="/i/media/stat/sprite.svg#van-icon"></use>
+              </svg>
+            </button>
+            <div class="button-popup__modal">
+              <p class="text">
+                заберем обратно при неисправностях
+              </p>
+            </div>
+          </div>
+          <div class="button-popup">
+            <button class="button button-popup__button" type="button">
+              <svg class="button-popup__icon" width="22" height="13" role="img" focusable="false">
+                <use xlink:href="/i/media/stat/sprite.svg#lifting-icon"></use>
+              </svg>
+            </button>
+            <div class="button-popup__modal">
+              <p class="text">
+                подъем до <br> места сборки
+              </p>
+            </div>
+          </div>
+          <div class="button-popup">
+            <button class="button button-popup__button" type="button">
+              <svg class="button-popup__icon button-popup__icon--time" width="10" height="20" role="img"
+                focusable="false">
+                <use xlink:href="/i/media/stat/sprite.svg#time-icon"></use>
+              </svg>
+            </button>
+            <div class="button-popup__modal">
+              <p class="text">
+                выбор времени доставки
+              </p>
+            </div>
+          </div>
+          <div class="button-popup">
+            <button class="button button-popup__button" type="button">
+              <svg class="button-popup__icon" width="14" height="23" role="img" focusable="false">
+                <use xlink:href="/i/media/stat/sprite.svg#rocket-icon"></use>
+              </svg>
+            </button>
+            <div class="button-popup__modal">
+              <p class="text">
+                Старт тренировок в день доставки
+              </p>
+            </div>
+          </div>
+          <div class="button-popup">
+            <button class="button button-popup__button" type="button">
+              <svg class="button-popup__icon" width="18" height="17" role="img" focusable="false">
+                <use xlink:href="/i/media/stat/sprite.svg#in-time-icon"></use>
+              </svg>
+            </button>
+            <div class="button-popup__modal">
+              <p class="text">
+                доставка вовремя
               </p>
             </div>
           </div>
@@ -3641,26 +3728,40 @@
 
         <section class="cover">
           <div class="container">
-            <div class="paper">
-              <h1 class="title title-major cover__title">
+            <div class="cover__wrapper">
+              <h1 class="title title-major cover__title cover__title--desktop">
                 Доставка <br> и оплата FL
               </h1>
-              <p class="text subtitle cover__subtitle">
-                В декабре мы сделали доставку бесплатной для заказов от <nobr>65 000 ₽</nobr>.
-              </p>
-              <div class="image-block">
+              <div class="paper cover__content">
+                <h1 class="title title-major cover__title cover__title--mobile">
+                  Доставка <br> и оплата FL
+                </h1>
+                <header class="cover__header">
+                  <p class="text subtitle cover__subtitle">
+                    В декабре мы сделали доставку бесплатной для заказов от <nobr>65 000 ₽</nobr>.
+                  </p>
+                  <button class="button button-main button-main--active cover__button">Рассчитать стоимость
+                    доставки</button>
+                </header>
+                <div class="image-block cover__image-block">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="/i/media/stat/delivery/cover/cover-desk.webp 1x, /i/media/stat/delivery/cover/cover-desk@2x.webp 2x">
+                    <source type="image/webp"
+                      srcset="/i/media/stat/delivery/cover/cover.webp 1x, /i/media/stat/delivery/cover/cover@2x.webp 2x">
+                    <source media="(min-width: 768px)"
+                      srcset="/i/media/stat/delivery/cover/cover-desk.jpg 1x, /i/media/stat/delivery/cover/cover-desk@2x.jpg 2x">
+                    <img src="/i/media/stat/delivery/cover/cover.jpg" ,
+                      srcset="/i/media/stat/delivery/cover/cover@2x.jpg 2x" alt="Велотренажер" />
+                  </picture>
+                </div>
+              </div>
+              <div class="image-block cover__extra-image-block">
                 <picture>
-                  <source  type="image/webp" media="(min-width: 768px)"
-                  srcset="/i/media/stat/delivery/cover/cover-desk.webp 1x, /i/media/stat/delivery/cover/cover-desk@2x.webp 2x">
                   <source type="image/webp"
-                  srcset="/i/media/stat/delivery/cover/cover.webp 1x, /i/media/stat/delivery/cover/cover@2x.webp 2x">
-                  <source media="(min-width: 768px)"
-                  srcset="/i/media/stat/delivery/cover/cover-desk.jpg 1x, /i/media/stat/delivery/cover/cover-desk@2x.jpg 2x">
-                  <img
-                  src="/i/media/stat/delivery/cover/cover.jpg",
-                  srcset="/i/media/stat/delivery/cover/cover@2x.jpg 2x"
-                  alt="Велотренажер"
-                />
+                    srcset="/i/media/stat/delivery/cover/cover-extra-desk.webp 1x, /i/media/stat/delivery/cover/cover-extra-desk@2x.webp 2x">
+                  <img src="/i/media/stat/delivery/cover/cover-extra-desk.jpg" ,
+                    srcset="/i/media/stat/delivery/cover/cover-extra-desk@2x.jpg 2x" alt="Беговая дорожка" />
                 </picture>
               </div>
             </div>

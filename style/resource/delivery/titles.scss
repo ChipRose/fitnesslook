@@ -1,3 +1,5 @@
+// Title major
+
 .title-major {
   padding-right: var(--indent-huge);
   width: fit-content;
@@ -13,4 +15,13 @@
     bottom: 0;
     right: 0;
   }
+}
+
+// Subtitle
+
+.subtitle {
+  font-size: var(--fz-medium);
+  line-height: var(--lh-huge);
+  font-weight: 400;
+  text-transform: uppercase;
 }
