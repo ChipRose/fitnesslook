@@ -28,6 +28,30 @@ popupItems.forEach(item => {
   });
 });
 
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+const CLOSE_CLASS = 'accordion--close';
+const accordion = document.querySelector('.accordion');
+const accordionButton = accordion.querySelector('.accordion__button');
+const accordionContent = accordion.querySelector('.accordion__content');
+const accordionBody = accordion.querySelector('.accordion__body');
+if (accordion.classList.contains(CLOSE_CLASS)) {
+  accordionBody.style.height = 0;
+}
+accordionButton.addEventListener('click', () => {
+  console.log(accordionContent.offsetHeight);
+  if (accordion.classList.contains(CLOSE_CLASS)) {
+    accordion.classList.remove(CLOSE_CLASS);
+    accordionBody.style.height = `${accordionContent.offsetHeight}px`;
+  } else {
+    accordion.classList.add(CLOSE_CLASS);
+    accordionBody.style.height = 0;
+  }
+});
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -73,6 +97,8 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _delivery_popup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+
 
 })();
 
