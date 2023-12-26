@@ -71,10 +71,7 @@
 
 .accordion .accordion__number-title {
   display: flex;
-}
-
-.accordion--decor.accordion .accordion__number {
-  padding-top: 4px;
+  align-items: center;
 }
 
 .accordion--decor.accordion .ac-trigger {

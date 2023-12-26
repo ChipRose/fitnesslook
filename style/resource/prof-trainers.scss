@@ -6,6 +6,39 @@
 @import "global/fonts.scss";
 @import "global/container.scss";
 
+// Components
+@import "prof-trainers/text-main.scss";
+@import "prof-trainers/link-main.scss";
+@import "prof-trainers/button-basic.scss";
+@import "prof-trainers/button-accordion.scss";
+@import "prof-trainers/button-social.scss";
+@import "prof-trainers/button-link.scss";
+@import "prof-trainers/button-slider.scss";
+@import "prof-trainers/button-simple-slider.scss";
+@import "prof-trainers/title-main.scss";
+@import "prof-trainers/title-simple.scss";
+@import "prof-trainers/title-secondary.scss";
+@import "prof-trainers/title-info.scss";
+@import "prof-trainers/title-card.scss";
+@import "prof-trainers/title-icon.scss";
+@import "prof-trainers/image-block.scss";
+@import "prof-trainers/accordion.scss";
+@import "prof-trainers/decorative-icon.scss";
+@import "prof-trainers/img-sticker.scss";
+@import "prof-trainers/img-logo.scss";
+@import "prof-trainers/img-round-sticker.scss";
+@import "prof-trainers/img-cover.scss";
+@import "prof-trainers/subtitle.scss";
+@import "prof-trainers/model.scss";
+@import "prof-trainers/slider-projects-pagination.scss";
+@import "prof-trainers/price.scss";
+@import "prof-trainers/buttons-block.scss";
+@import "prof-trainers/slider-with-button.scss";
+@import "prof-trainers/info-slider.scss";
+
+
+
+
 //Blocks
 @import "prof-trainers/page-prof-trainers.scss";
 @import "prof-trainers/wrapper.scss";
@@ -44,37 +77,6 @@
 // Layout
 @import "prof-trainers/advantages.scss";
 @import "prof-trainers/columns.scss";
-
-// Components
-@import "prof-trainers/text-main.scss";
-@import "prof-trainers/link-main.scss";
-@import "prof-trainers/button-basic.scss";
-@import "prof-trainers/button-accordion.scss";
-@import "prof-trainers/button-social.scss";
-@import "prof-trainers/button-link.scss";
-@import "prof-trainers/button-slider.scss";
-@import "prof-trainers/button-simple-slider.scss";
-@import "prof-trainers/title-main.scss";
-@import "prof-trainers/title-simple.scss";
-@import "prof-trainers/title-secondary.scss";
-@import "prof-trainers/title-info.scss";
-@import "prof-trainers/title-card.scss";
-@import "prof-trainers/title-icon.scss";
-@import "prof-trainers/image-block.scss";
-@import "prof-trainers/accordion.scss";
-@import "prof-trainers/decorative-icon.scss";
-@import "prof-trainers/img-sticker.scss";
-@import "prof-trainers/img-logo.scss";
-@import "prof-trainers/img-round-sticker.scss";
-@import "prof-trainers/img-cover.scss";
-@import "prof-trainers/subtitle.scss";
-@import "prof-trainers/model.scss";
-@import "prof-trainers/slider-projects-pagination.scss";
-@import "prof-trainers/price.scss";
-@import "prof-trainers/buttons-block.scss";
-@import "prof-trainers/slider-with-button.scss";
-@import "prof-trainers/info-slider.scss";
-
 
 
 
