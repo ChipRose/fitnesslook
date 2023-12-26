@@ -51,6 +51,10 @@
   background: none;
 }
 
+.accordion .ac-panel {
+  overflow: visible;
+}
+
 // .accordion__header {
 //   margin-bottom: var(--indent-big);
 // }
