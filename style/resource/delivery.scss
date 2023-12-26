@@ -15,9 +15,11 @@
 @import "delivery/accordion.scss";
 
 // Blocks
-@import "delivery/page-delivery-state.scss";
+@import "delivery/page-delivery.scss";
 @import "delivery/cover.scss";
+@import "delivery/receiving.scss";
+@import "delivery/receiving-type.scss";
 
 // Layout
-@import "delivery/button-block.scss";
+@import "delivery/layouts.scss";
 

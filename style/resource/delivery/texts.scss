@@ -1,4 +1,4 @@
-// Title major
+// Major Title
 
 .title-major {
   padding-right: var(--indent-huge);
@@ -17,6 +17,24 @@
   }
 }
 
+// Main Title
+
+.title-main {
+  font-size: var(--fz-big);
+  line-height: var(--lh-main);
+  font-weight: 500;
+}
+
+// Secondary title
+
+.title-secondary {
+  font-size: var(--fz-mediumx);
+  line-height: var(--lh-main);
+  vertical-align: middle;
+  font-weight: 400;
+  color: var(--cl-accent);
+}
+
 // Subtitle
 
 .subtitle {
@@ -24,4 +42,22 @@
   line-height: var(--lh-huge);
   font-weight: 400;
   text-transform: uppercase;
+}
+
+// Main text
+
+.text-main {
+  margin-bottom: var(--indent-main);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--accent {
+    color: var(--cl-accent);
+  }
+
+  &--strong {
+    font-weight: 500;
+  }
 }

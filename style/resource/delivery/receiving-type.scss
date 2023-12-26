@@ -1,0 +1,29 @@
+.receiving-type__header {
+  padding-bottom: var(--indent-big);
+  margin-bottom: var(--indent-big);
+  position: relative;
+
+  &::after {
+    content: '';
+    @include decoration;
+  }
+}
+
+.receiving-type__title {
+  margin-bottom: var(--indent-big);
+}
+
+.receiving-type--center{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.receiving-type__content {
+  display: grid;
+  row-gap: var(--indent-main);
+  // justify-items: center;
+}
+
+.receiving-type__action-block {
+  justify-self: end;
+}

@@ -40,3 +40,12 @@
   clip-path: inset(100%);
   overflow: hidden;
 }
+
+@mixin decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 30%;
+  background: var(--cl-dark);
+}

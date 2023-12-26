@@ -1,9 +1,143 @@
-.accordion__body {
-  transition: var(--transition-main);
+.accordion .ac.is-active>.ac-header {
+  margin-bottom: var(--indent-big);
 }
 
-.accordion__body {
-  overflow: hidden;
-  transition: var(--transition-main);
-  overflow: hidden;
+.accordion .ac-trigger {
+  padding: 0 calc(var(--button-size-big) + var(--indent-small)) 0 0;
+  font-size: var(--fz-main);
+  color: inherit;
+  position: relative;
+
+  @media (min-width:$tablet-width) {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background: center center/ 15px 8px no-repeat url('/i/media/stat/icons/simple-arrow.svg');
+    width: var(--button-size-big);
+    height: var(--button-size-big);
+    border-radius: 50%;
+    box-shadow: var(--shadow-middle);
+    transition: var(--transition-main);
+
+    @media (min-width:$tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.accordion .ac.is-active>.ac-header .ac-trigger {
+  &::after {
+    content: '';
+    transform-origin: center center;
+    transform: translateY(-50%) rotate(180deg);
+  }
+}
+
+.accordion .ac-trigger {
+  font-family: Helvetica, Arial sans-serif;
+  font-weight: 500;
+}
+
+.accordion .ac {
+  margin-top: 0;
+  border: none;
+  background: none;
+}
+
+// .accordion__header {
+//   margin-bottom: var(--indent-big);
+// }
+
+// .accordion__body {
+//   transition: var(--transition-main);
+// }
+
+// .accordion__body {
+//   overflow: hidden;
+//   transition: var(--transition-main);
+//   overflow: hidden;
+// }
+
+.accordion__text-block {
+  margin-bottom: var(--indent-big);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.accordion__schedule {
+  margin: calc(-1 * var(--indent-small));
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.accordion__time-item {
+  margin: var(--indent-small);
+  padding: var(--indent-main);
+  background: var(--cl-neutral-accent);
+  border-radius: var(--radius-basic);
+}
+
+// .accordion__button {
+//   padding-right: 45px;
+//   width: 100%;
+//   text-align: left;
+//   position: relative;
+
+//   @media (min-width:$tablet-width) {
+//     pointer-events: none;
+//     cursor: default;
+//   }
+
+
+//   ::after {
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     right: 0;
+//     transform: translateY(-50%);
+//     background: center center/ 15px 8px no-repeat url('/i/media/stat/icons/simple-arrow.svg');
+//     width: 37px;
+//     height: 37px;
+//     border-radius: 50%;
+//     box-shadow: var(--shadow-middle);
+//     transition: var(--transition-main);
+
+//     @media (min-width:$tablet-width) {
+//       display: none;
+//     }
+//   }
+// }
+
+// .accordion.accordion--close{
+//   .accordion__header {
+//     margin-bottom: 0;
+//   }
+
+//   .accordion__button {
+//     ::after {
+//       transform-origin: center center;
+//       transform: translateY(-50%) rotate(180deg) ;
+//     }
+//   }
+// }
+
+.accordion__extra-image {
+  margin: calc(var(--indent-big) - var(--indent-main)) auto var(--indent-big);
+}
+
+.accordion__extra-title-block {
+  margin-bottom: var(--indent-big);
+}
+
+.accordion__extra-text-block {
+  margin-bottom: var(--indent-big);
 }

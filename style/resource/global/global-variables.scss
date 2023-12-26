@@ -6,6 +6,7 @@ $max-width: 1180px;
 :root {
   --fz-small: 12px;
   --fz-medium: 16px;
+  --fz-mediumx: 20px;
   --fz-big: 26px;
   --lh-main: 120%;
   --lh-big: 130%;
@@ -36,9 +37,12 @@ $max-width: 1180px;
   --radius-main: 20px;
   --radius-big: 30px;
   --button-size: 24px;
+  --button-size-big: 37px;
   --popup-size: 42px;
   --transition-main: all 0.3s ease-out;
-  --shadow-main: 0px 4px 20px 0px rgba(0, 0, 0, 0.06);
+  --shadow-main: 0 0 20px 0 rgba(0, 0, 0, 0.06);
+  --shadow-middle: 0 0 20px 0 rgba(0, 0, 0, 0.14);
+  --shadow-button: 0 4px 4px 0 rgba(171, 118, 180, 0.16);
 }
 
 
@@ -46,9 +50,11 @@ $max-width: 1180px;
 :root {
   --cl-main: rgb(101, 98, 115);
   --cl-contrast: rgb(255, 255, 255);
-  --cl-light: rgb(252,251,252);
+  --cl-light: rgb(252, 251, 252);
   --cl-accent: rgb(171, 118, 180);
   --cl-dark: rgb(31, 31, 31);
   --cl-heavy-dark: rgb(40, 40, 40);
   --cl-neutral: rgb(106, 98, 115);
+  --cl-disable: rgb(169, 169, 169);
+  --cl-neutral-accent: rgb(247, 244, 251);
 }

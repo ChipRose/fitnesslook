@@ -5,8 +5,7 @@
   width: 100%;
   height: 100%;
   border-radius: var(--radius-main);
-  background: rgba(0, 0, 0, 0.1);
-
+  // background: rgba(0, 0, 0, 0.1);
 
   img {
     width: 100%;
@@ -98,4 +97,24 @@
       left: 25%;
     }
   }
+}
+
+// Round image
+
+.image-round {
+  padding: var(--indent-small);
+  width: var(--popup-size);
+  height: var(--popup-size);
+  box-sizing: border-box;
+  background: var(--cl-accent);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-round__icon {
+  width: 18px;
+  height: auto;
+  fill: var(--cl-contrast);
 }

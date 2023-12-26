@@ -10,6 +10,8 @@
   margin-top: calc(var(--indent-big) - var(--indent-main));
 
   &--mobile {
+    margin-bottom: var(--indent-main);
+
     @media (min-width:$tablet-width) {
       display: none;
     }

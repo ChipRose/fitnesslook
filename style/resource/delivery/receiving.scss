@@ -1,0 +1,18 @@
+.receiving {
+
+}
+
+.receiving__title {
+  padding-bottom: var(--indent-huge);
+  margin-bottom: var(--indent-big);
+  position: relative;
+
+  &::after{
+    content: '';
+    @include decoration
+  }
+}
+
+.receiving__text-block {
+  margin-bottom: var(--indent-big);
+}

@@ -33,4 +33,11 @@
   padding-right: 24px;
   font-size: inherit;
   display: block;
+  color: var(--cl-disable);
+}
+
+.breadcrubs__item--current .breadcrubs__link{
+  color: var(--cl-dark);
+  font-weight: 400;
+  cursor: default;
 }

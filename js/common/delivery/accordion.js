@@ -1,21 +1,51 @@
-const CLOSE_CLASS = 'accordion--close';
-const accordion = document.querySelector('.accordion');
-const accordionButton = accordion.querySelector('.accordion__button');
-
-const accordionContent = accordion.querySelector('.accordion__content');
-const accordionBody = accordion.querySelector('.accordion__body');
-
-if (accordion.classList.contains(CLOSE_CLASS)) {
-  accordionBody.style.height = 0;
+const closeAllAccordions = (accordions) => {
+  accordions.forEach(item => {
+    item.closeAll()
+  })
 }
 
-accordionButton.addEventListener('click', () => {
-  console.log(accordionContent.offsetHeight);
-  if (accordion.classList.contains(CLOSE_CLASS)) {
-    accordion.classList.remove(CLOSE_CLASS);
-    accordionBody.style.height = `${accordionContent.offsetHeight}px`;
-  } else {
-    accordion.classList.add(CLOSE_CLASS);
-    accordionBody.style.height = 0;
+const closeAllMobileAccordions = (accordions) => {
+  if (window.innerWidth < 768) {
+    accordions.forEach(item => {
+      item.closeAll()
+    });
   }
-});
+}
+
+const settingAccordionInSlider = (slider, props) => {
+  return {
+    onOpen: () => {
+      slider.updateSliderHeight();
+    },
+    onClose: () => {
+      slider.updateSliderHeight();
+    },
+    ...props
+  }
+}
+
+const openAllDeskAccordions = (accordions) => {
+  if (window.innerWidth >= 768) {
+    accordions.forEach(item => {
+      item.openAll()
+    });
+  }
+}
+
+const settingAccordionAdaptive = (accordion, slider) => {
+  let newAccordion = accordion;
+
+  if (!Array.isArray(accordion)) newAccordion = [accordion]
+  closeAllMobileAccordions(newAccordion);
+  openAllDeskAccordions(newAccordion);
+  slider?.updateSliderHeight();
+
+  window.addEventListener('resize', () => {
+    closeAllMobileAccordions(newAccordion);
+    openAllDeskAccordions(newAccordion);
+    slider?.updateSliderHeight();
+  });
+};
+
+export { settingAccordionInSlider, settingAccordionAdaptive, closeAllAccordions };
+

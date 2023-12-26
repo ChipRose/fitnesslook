@@ -20,10 +20,15 @@
   }
 }
 
+.button-main.tns-nav-active {
+  background: var(--cl-heavy-dark);
+  color: var(--cl-contrast);
+}
+
 // Active button
 
 .button-action {
-  padding: var(--indent-basic) var(--indent-main);
+  padding: var(--indent-basic) var(--indent-big);
   display: block;
   width: fit-content;
   box-sizing: border-box;
@@ -34,6 +39,7 @@
   background: var(--cl-accent);
   color: var(--cl-contrast);
   border-radius: var(--radius-main);
+  box-shadow: var(--shadow-button);
 }
 
 // Popup button
@@ -82,7 +88,7 @@
   transition: all 0.3s ease-in;
 }
 
-.button-popup.button-popup--open{
+.button-popup.button-popup--open {
 
   .button-popup__modal {
     padding: var(--indent-small) var(--indent-main);
@@ -92,3 +98,24 @@
   }
 }
 
+// Round button
+
+.button-round {
+  padding: var(--indent-small);
+  width: var(--button-size-big);
+  height: var(--button-size-big);
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--cl-accent);
+  background: var(--cl-contrast);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: var(--shadow-main);
+}
+
+.button-round__icon {
+  fill: var(--cl-accent);
+}
