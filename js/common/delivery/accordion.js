@@ -14,6 +14,7 @@ const closeAllMobileAccordions = (accordions) => {
 
 const settingAccordionInSlider = (slider, props) => {
   return {
+    duration: 80,
     onOpen: () => {
       slider.updateSliderHeight();
     },
