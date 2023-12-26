@@ -3657,18 +3657,14 @@ const sliderDelivery = document.querySelector('#slider-delivery') && document.qu
   navContainer: '#slider-delivery-buttons',
   autoHeight: true
 });
+const sliderCost = document.querySelector('#slider-cost') && document.querySelector('#slider-cost-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-cost', {
+  navContainer: '#slider-cost-buttons',
+  autoHeight: true
+});
 sliderDelivery.events.on('indexChanged', () => {
   (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery, sliderDelivery);
 });
-const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion')), {
-  duration: 200,
-  onOpen: () => {
-    sliderDelivery.updateSliderHeight();
-  },
-  onClose: () => {
-    sliderDelivery.updateSliderHeight();
-  }
-});
+const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion')), (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionInSlider)(sliderDelivery));
 (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery, sliderDelivery);
 })();
 

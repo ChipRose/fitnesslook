@@ -1,0 +1,14 @@
+.slider-main__header {
+  padding-bottom: var(--indent-big);
+  margin-bottom: var(--indent-big);
+  position: relative;
+
+  &::after {
+    content: '';
+    @include decoration;
+  }
+}
+
+.slider-main__title {
+  margin-bottom: var(--indent-big);
+}

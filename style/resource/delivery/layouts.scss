@@ -1,3 +1,5 @@
+// Buttons block
+
 .button-block {
   margin: calc(-1 * var(--indent-basic));
   display: flex;
@@ -6,4 +8,36 @@
 
 .button-block__item {
   margin: var(--indent-basic);
+}
+
+// Main table
+.table-main {
+  border-collapse: collapse;
+}
+
+.table-main__header-cell {
+  padding: var(--indent-basic);
+  color: var(--cl-accent);
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.table-main__body-cell {
+  padding: var(--indent-basic);
+
+  &:first-child {
+    padding-left: 0;
+    font-weight: 500;
+  }
+
+  &:last-child {
+    padding-right: 0;
+    font-weight: 500;
+  }
 }
