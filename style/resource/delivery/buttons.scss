@@ -113,7 +113,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  box-shadow: var(--shadow-main);
+  box-shadow: var(--shadow-middle);
 }
 
 .button-round__icon {
@@ -137,4 +137,34 @@
 .button-table__icon {
   fill: var(--cl-accent);
 }
+
+// Modal button
+
+.button-modal {
+  width: 146px;
+  position: relative;
+}
+
+.button-modal__image-block {
+  padding-top: var(--indent-small);
+  padding-bottom: var(--indent-small);
+  margin-bottom: var(--indent-basic);
+  display: flex;
+  justify-content: center;
+}
+
+.button-modal__text-block {
+  text-align: center;
+}
+
+.button-modal__icon {
+  fill: var(--cl-dark);
+}
+
+.button-modal__button {
+  position: absolute;
+  top: var(--indent-basic);
+  right: var(--indent-basic);
+}
+
 
