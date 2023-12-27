@@ -1,6 +1,4 @@
-.receiving {
-
-}
+// Receiving
 
 .receiving__title {
   padding-bottom: var(--indent-huge);
@@ -16,3 +14,20 @@
 .receiving__text-block {
   margin-bottom: var(--indent-big);
 }
+
+// Receiving type
+
+.receiving-type--center{
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.receiving-type__content {
+  display: grid;
+  row-gap: var(--indent-main);
+}
+
+.receiving-type__action-block {
+  justify-self: end;
+}
+

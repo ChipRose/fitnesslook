@@ -399,6 +399,7 @@ const setPopup = popupProperties => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   setSlider: () => (/* binding */ setSlider),
+/* harmony export */   setTableSlider: () => (/* binding */ setTableSlider),
 /* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive),
 /* harmony export */   updateSliderAdaptive: () => (/* binding */ updateSliderAdaptive)
 /* harmony export */ });
@@ -410,6 +411,16 @@ const setSlider = (container, props) => {
     items: 1,
     controls: false,
     gutter: 40,
+    loop: true,
+    ...props
+  });
+};
+const setTableSlider = (container, props) => {
+  return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+    container,
+    items: 4,
+    nav: false,
+    responsive: {},
     ...props
   });
 };
@@ -3658,8 +3669,15 @@ const sliderDelivery = document.querySelector('#slider-delivery') && document.qu
   navContainer: '#slider-delivery-buttons',
   autoHeight: true
 });
-const sliderCost = document.querySelector('#slider-cost') && document.querySelector('#slider-cost-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-cost', {
-  navContainer: '#slider-cost-buttons',
+const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-cost-delivery', {
+  navContainer: '#slider-cost-delivery-buttons',
+  autoHeight: true
+});
+const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__.setTableSlider)('#slider-table', {
+  controlsContainer: '#slider-table-buttons'
+});
+const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-cost-lifting', {
+  navContainer: '#slider-cost-lifting-buttons',
   autoHeight: true
 });
 sliderDelivery.events.on('indexChanged', () => {

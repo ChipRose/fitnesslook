@@ -6,6 +6,19 @@ const setSlider = (container, props) => {
     items: 1,
     controls: false,
     gutter: 40,
+    loop: true,
+    ...props
+  })
+};
+
+const setTableSlider = (container, props) => {
+  return tns({
+    container,
+    items: 4,
+    nav: false,
+    responsive: {
+
+    },
     ...props
   })
 };
@@ -38,4 +51,4 @@ const updateSliderAdaptive = (slider) => {
   });
 }
 
-export { setSlider, settingSliderAdaptive, updateSliderAdaptive };
+export { setSlider, setTableSlider, settingSliderAdaptive, updateSliderAdaptive };

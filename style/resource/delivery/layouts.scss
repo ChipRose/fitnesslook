@@ -11,12 +11,13 @@
 }
 
 // Main table
+
 .table-main {
   border-collapse: collapse;
 }
 
 .table-main__header-cell {
-  padding: var(--indent-basic);
+  padding: var(--indent-main) var(--indent-basic);
   color: var(--cl-accent);
 
   &:first-child {
@@ -41,3 +42,29 @@
     font-weight: 500;
   }
 }
+
+// Line table
+
+.table-line{
+  display: flex;
+}
+
+.table-line__header-column {
+  margin-right: var(--indent-big);
+  flex: 0 0 max-content;
+
+  .table-line__row {
+    color: var(--cl-accent);
+  }
+}
+
+.table-line__row {
+  margin-bottom: var(--indent-main);
+  font-weight: 500;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+

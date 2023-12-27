@@ -33,9 +33,13 @@
 }
 
 .accordion__number {
-  padding-top: 0;
+  padding-top: 2px;
   margin-right: var(--indent-basic);
   font-family: 'Natasha', Arial, sans-serif;
+  vertical-align: middle;
+}
+
+.accordion__title {
   vertical-align: middle;
 }
 

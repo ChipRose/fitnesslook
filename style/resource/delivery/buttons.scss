@@ -119,3 +119,22 @@
 .button-round__icon {
   fill: var(--cl-accent);
 }
+
+// Table button
+
+.button-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--prev {
+    display: none;
+    transform-origin: center center;
+    transform: rotate(180deg);
+  }
+}
+
+.button-table__icon {
+  fill: var(--cl-accent);
+}
+
