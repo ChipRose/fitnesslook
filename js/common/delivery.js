@@ -1,6 +1,7 @@
 import Accordion from 'accordion-js';
 import { settingAccordionAdaptive, settingAccordionInSlider } from './delivery/accordion.js';
 import setPopup from './delivery/popup.js';
+import  './delivery/modal.js';
 import { setSlider, setTableSlider } from './delivery/slider.js';
 
 setPopup();

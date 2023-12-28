@@ -397,13 +397,21 @@ const setPopup = popupProperties => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+const buttonsModal = document.querySelectorAll('.button-modal__item');
+
+/***/ }),
+/* 5 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   setSlider: () => (/* binding */ setSlider),
 /* harmony export */   setTableSlider: () => (/* binding */ setTableSlider),
 /* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive),
 /* harmony export */   updateSliderAdaptive: () => (/* binding */ updateSliderAdaptive)
 /* harmony export */ });
-/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 
 const setSlider = (container, props) => {
   return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
@@ -451,7 +459,7 @@ const updateSliderAdaptive = slider => {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3659,24 +3667,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _delivery_modal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+
 
 
 
 
 (0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
-const sliderDelivery = document.querySelector('#slider-delivery') && document.querySelector('#slider-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-delivery', {
+const sliderDelivery = document.querySelector('#slider-delivery') && document.querySelector('#slider-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('#slider-delivery', {
   navContainer: '#slider-delivery-buttons',
   autoHeight: true
 });
-const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-cost-delivery', {
+const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('#slider-cost-delivery', {
   navContainer: '#slider-cost-delivery-buttons',
   autoHeight: true
 });
-const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__.setTableSlider)('#slider-table', {
+const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__.setTableSlider)('#slider-table', {
   controlsContainer: '#slider-table-buttons'
 });
-const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_3__.setSlider)('#slider-cost-lifting', {
+const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('#slider-cost-lifting', {
   navContainer: '#slider-cost-lifting-buttons',
   autoHeight: true
 });

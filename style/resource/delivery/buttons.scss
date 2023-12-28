@@ -140,7 +140,9 @@
 
 // Modal button
 
-.button-modal {
+.button-modal {}
+
+.button-modal__container {
   width: 146px;
   position: relative;
 }
@@ -167,4 +169,38 @@
   right: var(--indent-basic);
 }
 
+.button-modal__modal {
+  display: none;
+  position: absolute;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
+  &--open {
+    display: block;
+  }
+
+}
+
+.button-modal__header {
+  margin-bottom: var(--indent-big);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-modal__item--open>.button-modal__container {
+  filter: blur(3px);
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    top: 0;
+    left: 0;
+  }
+}
