@@ -7,7 +7,7 @@
 @import "global/container.scss";
 
 // Components
-@import "delivery/buttons.scss";
+@import "delivery/controls.scss";
 @import "delivery/breadcrumbs.scss";
 @import "delivery/texts.scss";
 @import "delivery/images.scss";
@@ -15,13 +15,15 @@
 @import "delivery/accordion.scss";
 @import "delivery/sliders.scss";
 
+// Layout
+@import "delivery/layouts.scss";
+
 // Blocks
 @import "delivery/page-delivery.scss";
 @import "delivery/cover.scss";
 @import "delivery/receiving.scss";
 @import "delivery/cost.scss";
 @import "delivery/payment.scss";
-
-// Layout
-@import "delivery/layouts.scss";
+@import "delivery/delivery-regions.scss";
+@import "delivery/form-communicate.scss";
 

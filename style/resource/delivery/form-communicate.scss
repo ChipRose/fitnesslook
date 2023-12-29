@@ -1,0 +1,9 @@
+.form-communicate__fieldset {
+  margin-bottom: var(--indent-big);
+  display: flex;
+  flex-direction: column;
+}
+
+.form-communicate__label {
+  margin-bottom: var(--indent-main);
+}
