@@ -140,11 +140,20 @@
 
 // Modal button
 
-.button-modal {}
+.button-modal {
+  margin: calc(-1 * var(--indent-basic));
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button-modal__item {
+  margin: var(--indent-basic);
+}
 
 .button-modal__container {
-  width: 146px;
-  position: relative;
+  width: 153px;
+  min-height: 100px;
 }
 
 .button-modal__image-block {
@@ -157,6 +166,10 @@
 
 .button-modal__text-block {
   text-align: center;
+}
+
+.button-modal__container{
+  position: relative;
 }
 
 .button-modal__icon {
@@ -177,11 +190,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 100;
 
   &--open {
     display: block;
   }
-
 }
 
 .button-modal__header {
@@ -189,18 +202,4 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.button-modal__item--open>.button-modal__container {
-  filter: blur(3px);
-
-  &::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    top: 0;
-    left: 0;
-  }
 }

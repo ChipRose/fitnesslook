@@ -4150,69 +4150,220 @@
         <a id="payment"></a>
         <section class="payment">
           <div class="container">
-            <div class="payment__variant-list">
-              <ul class="list button-modal">
-                <li class="button-modal__item">
-                  <div class="paper button-modal__container ">
-                    <div class="button-modal__image-block">
-                      <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
-                        <use xlink:href="/i/media/stat/sprite.svg#walet-icon"></use>
-                      </svg>
-                    </div>
-                    <div class="button-modal__text-block">
-                      <p class="text">наличными</p>
-                    </div>
-                    <button class="button button-round button-modal__button">?</button>
-                  </div>
-                  <div class="paper button-modal__modal">
-                    <header class="button-modal__header">
-                      <h3 class="title title-extra">Оплата наличными</h3>
-                      <button class="button button-round">
-                        <svg class="button-table__icon" width="11" height="11" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#close-icon"></use>
-                        </svg>
-                      </button>
-                    </header>
-                    <div class="button-modal__content-block">
-                      <p class="text text-main ">
-                        Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
-                      </p>
-                       <p class="text text-main">
-                        Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет оплаты не связан с ведением ими предпринимательской деятельности.
-                       </p>
-                    </div>
-                  </div>
+            <div class="paper">
+              <h2 class="title title-main slider-main__title">
+                Оплата:
+              </h2>
+              <ul class="list payment__variant-list">
+                <li class="payment__variant-item">
+                  <h3 class="title title-extra payment__title-extra">
+                    При получении товара:
+                  </h3>
+                  <ul class="list button-modal">
+                    <li class="button-modal__item">
+                      <div class="paper button-modal__container">
+                        <div class="button-modal__image-block">
+                          <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
+                            <use xlink:href="/i/media/stat/sprite.svg#walet-icon"></use>
+                          </svg>
+                        </div>
+                        <div class="button-modal__text-block">
+                          <p class="text">наличными</p>
+                        </div>
+                        <button class="button button-round button-modal__button">
+                          ?
+                          <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                        </button>
+                      </div>
+                      <div class="paper button-modal__modal">
+                        <header class="button-modal__header">
+                          <h3 class="title title-extra">Оплата наличными</h3>
+                          <button class="button button-round button-model__close-button">
+                            <svg class="button-table__icon" width="11" height="11" role="img" focusable="false">
+                              <use xlink:href="/i/media/stat/sprite.svg#close-icon"></use>
+                            </svg>
+                            <span class="visually-hidden">Закрыть модальное окно</span>
+                          </button>
+                        </header>
+                        <div class="button-modal__content-block">
+                          <p class="text text-main ">
+                            Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
+                          </p>
+                          <p class="text text-main">
+                            Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет
+                            оплаты не связан с ведением ими предпринимательской деятельности.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="button-modal__item">
+                      <div class="paper button-modal__container">
+                        <div class="button-modal__image-block">
+                          <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
+                            <use xlink:href="/i/media/stat/sprite.svg#card-icon"></use>
+                          </svg>
+                        </div>
+                        <div class="button-modal__text-block">
+                          <p class="text">банковской картой</p>
+                        </div>
+                        <button class="button button-round button-modal__button">
+                          ?
+                          <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                        </button>
+                      </div>
+                      <div class="paper button-modal__modal">
+                        <header class="button-modal__header">
+                          <h3 class="title title-extra">банковской картой</h3>
+                          <button class="button button-round button-model__close-button">
+                            <svg class="button-table__icon" width="11" height="11" role="img" aria-label="Закрыть"
+                              focusable="false">
+                              <use xlink:href="/i/media/stat/sprite.svg#close-icon"></use>
+                            </svg>
+                            <span class="visually-hidden">Закрыть модальное окно</span>
+                          </button>
+                        </header>
+                        <div class="button-modal__content-block">
+                          <p class="text text-main ">
+                            Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
+                          </p>
+                          <p class="text text-main">
+                            Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет
+                            оплаты не связан с ведением ими предпринимательской деятельности.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </li>
-                <li class="button-modal__item">
-                  <div class="paper button-modal__container">
-                    <div class="button-modal__image-block">
-                      <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
-                        <use xlink:href="/i/media/stat/sprite.svg#card-icon"></use>
-                      </svg>
-                    </div>
-                    <div class="button-modal__text-block">
-                      <p class="text">банковской картой</p>
-                    </div>
-                    <button class="button button-round button-modal__button">?</button>
-                  </div>
-                  <div class="paper button-modal__modal">
-                    <header class="button-modal__header">
-                      <h3 class="title title-extra">банковской картой</h3>
-                      <button class="button button-round">
-                        <svg class="button-table__icon" width="11" height="11" role="img" aria-label="Закрыть" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#close-icon"></use>
-                        </svg>
-                      </button>
-                    </header>
-                    <div class="button-modal__content-block">
-                      <p class="text text-main ">
-                        Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
-                      </p>
-                       <p class="text text-main">
-                        Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет оплаты не связан с ведением ими предпринимательской деятельности.
-                       </p>
-                    </div>
-                  </div>
+                <li class="payment__variant-item">
+                  <h3 class="title title-extra payment__title-extra">
+                    Online:
+                  </h3>
+                  <ul class="list button-modal">
+                    <li class="button-modal__item">
+                      <div class="paper button-modal__container">
+                        <div class="button-modal__image-block">
+                          <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
+                            <use xlink:href="/i/media/stat/sprite.svg#card-icon"></use>
+                          </svg>
+                        </div>
+                        <div class="button-modal__text-block">
+                          <p class="text">банковской картой оnline сервисы
+                          </p>
+                        </div>
+                        <button class="button button-round button-modal__button">
+                          ?
+                          <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                        </button>
+                      </div>
+                      <div class="paper button-modal__modal">
+                        <header class="button-modal__header">
+                          <h3 class="title title-extra">банковской картой оnline сервисы
+                          </h3>
+                          <button class="button button-round button-model__close-button">
+                            <svg class="button-table__icon" width="11" height="11" role="img" aria-label="Закрыть"
+                              focusable="false">
+                              <use xlink:href="/i/media/stat/sprite.svg#close-icon"></use>
+                            </svg>
+                            <span class="visually-hidden">Закрыть модальное окно</span>
+                          </button>
+                        </header>
+                        <div class="button-modal__content-block">
+                          <p class="text text-main ">
+                            Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
+                          </p>
+                          <p class="text text-main">
+                            Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет
+                            оплаты не связан с ведением ими предпринимательской деятельности.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="button-modal__item">
+                      <div class="paper button-modal__container">
+                        <div class="button-modal__image-block">
+                          <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
+                            <use xlink:href="/i/media/stat/sprite.svg#building-icon"></use>
+                          </svg>
+                        </div>
+                        <div class="button-modal__text-block">
+                          <p class="text">банковским переводом</p>
+                        </div>
+                        <button class="button button-round button-modal__button">
+                          ?
+                          <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                        </button>
+                      </div>
+                      <div class="paper button-modal__modal">
+                        <header class="button-modal__header">
+                          <h3 class="title title-extra">банковским переводом</h3>
+                          <button class="button button-round button-model__close-button">
+                            <svg class="button-table__icon" width="11" height="11" role="img" focusable="false">
+                              <use xlink:href="/i/media/stat/sprite.svg#close-icon"></use>
+                            </svg>
+                            <span class="visually-hidden">Закрыть модальное окно</span>
+                          </button>
+                        </header>
+                        <div class="button-modal__content-block">
+                          <p class="text text-main ">
+                            Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
+                          </p>
+                          <p class="text text-main">
+                            Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет
+                            оплаты не связан с ведением ими предпринимательской деятельности.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li class="payment__variant-item">
+                  <h3 class="title title-extra payment__title-extra">
+                    Другие способы:
+                  </h3>
+                  <ul class="list button-modal">
+                    <li class="button-modal__item">
+                      <div class="paper button-modal__container">
+                        <div class="button-modal__image-block">
+                          <svg class="button-modal__icon" width="49" height="47" role="img" focusable="false">
+                            <use xlink:href="/i/media/stat/sprite.svg#rubles-icon"></use>
+                          </svg>
+                        </div>
+                        <div class="button-modal__text-block">
+                          <p class="text">
+                            Рассрочка/ кредит
+                          </p>
+                        </div>
+                        <button class="button button-round button-modal__button">
+                          ?
+                          <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                        </button>
+                      </div>
+                      <div class="paper button-modal__modal">
+                        <header class="button-modal__header">
+                          <h3 class="title title-extra">
+                            Рассрочка/ кредит
+                          </h3>
+                          <button class="button button-round button-model__close-button">
+                            <svg class="button-table__icon" width="11" height="11" role="img" aria-label="Закрыть"
+                              focusable="false">
+                              <use xlink:href="/i/media/stat/sprite.svg#close-icon"></use>
+                            </svg>
+                            <span class="visually-hidden">Закрыть модальное окно</span>
+                          </button>
+                        </header>
+                        <div class="button-modal__content-block">
+                          <p class="text text-main ">
+                            Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
+                          </p>
+                          <p class="text text-main">
+                            Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет
+                            оплаты не связан с ведением ими предпринимательской деятельности.
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -4224,8 +4375,7 @@
           <div class="image-pins image-block image-pins--bike">
             <div class="button-popup image-pins__item">
               <button class="button button-popup__button" type="button">
-                <svg class="button-popup__icon" width="10" height="20" role="img"
-                  focusable="false">
+                <svg class="button-popup__icon" width="10" height="20" role="img" focusable="false">
                   <use xlink:href="/i/media/stat/sprite.svg#time-icon"></use>
                 </svg>
               </button>
