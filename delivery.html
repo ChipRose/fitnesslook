@@ -19,6 +19,7 @@
   <meta name="google-site-verification" content="VBfmotSpstXTbBlS2aAHEgtMjh2SpFBaHVK_RTmUupE" />
   <meta name="yandex-verification" content="06b3e4bab9ac0ee7" />
 
+
   <script type="text/javascript" src="https://www.fitnesslook.ru/js/jquery-1.7.1.min.js"></script>
 
   <title>Услуги и оборудование FitnessLook в Санкт-Петербурге для открытия спортивного зала, фитнес клуба,
@@ -3612,6 +3613,7 @@
           </div>
         </section>
 
+        <a id="up"></a>
         <section class="cover page-delivery__cover">
           <div class="container">
             <div class="cover__wrapper">
@@ -3699,15 +3701,17 @@
         <section class="receiving-type slider-main page-delivery__receiving-type">
           <div class="container">
             <header class="slider-main__header">
-              <h2 class="title title-main slider-main__title">
+              <!-- <h2 class="title title-main slider-main__title">
                 Как получить свой заказ
-              </h2>
-              <div class="button-block" id="slider-delivery-buttons">
+              </h2> -->
+              <div class="button-block" id="slider-deliv-buttons">
                 <button class="button button-main button-block__item ">Доставка</button>
                 <button class="button button-main  button-block__item">Самовывоз</button>
               </div>
             </header>
-            <ul class="list" id="slider-delivery">
+
+            <ul class="" id="slider-deliv">
+
               <li>
                 <div class="receiving-type__content">
                   <div class="receiving-type__intro-block">
@@ -3759,7 +3763,7 @@
                         srcset="/i/media/stat/delivery/receiving/treadmill@2x.jpg 2x" alt="Беговая дорожка" />
                     </picture>
                   </div>
-                  <div class="paper accordion">
+                  <div class="paper accordion accordion--adaptive accordion--delivery">
                     <div class="ac">
                       <h3 class="title ac-header">
                         <button class="button ac-trigger">
@@ -3800,7 +3804,7 @@
                         srcset="/i/media/stat/delivery/receiving/armchair@2x.jpg 2x" alt="Массажное кресло" />
                     </picture>
                   </div>
-                  <div class="paper accordion">
+                  <div class="paper accordion accordion--adaptive accordion--delivery">
                     <div class="ac">
                       <h3 class="title ac-header">
                         <button class="button ac-trigger">
@@ -3885,7 +3889,7 @@
                         srcset="/i/media/stat/delivery/receiving/ellipsoid@2x.jpg 2x" alt="Эллиптический тренажер" />
                     </picture>
                   </div>
-                  <div class="paper accordion">
+                  <div class="paper accordion accordion--adaptive accordion--delivery">
                     <div class="ac">
                       <h3 class="title ac-header">
                         <button class="button ac-trigger">
@@ -3952,7 +3956,7 @@
                         srcset="/i/media/stat/delivery/receiving/rowing@2x.jpg 2x" alt="Гребной тренажер" />
                     </picture>
                   </div>
-                  <div class="paper accordion">
+                  <div class="paper accordion accordion--adaptive accordion--delivery">
                     <div class="ac">
                       <h3 class="title ac-header">
                         <button class="button ac-trigger">
@@ -3989,10 +3993,22 @@
                   </footer>
                 </div>
               </li>
+              <!-- <li>
+                1 slide
+              </li>
               <li>
-                Самовывоз
+
+                2 slide
+              </li> -->
+              <li>
+
+                <div  >
+                  Самовывоз
+                  <div id="map-container" style="width: 320px; height: 700px;"></div>
+                </div>
               </li>
             </ul>
+
           </div>
         </section>
 
@@ -4150,7 +4166,7 @@
         <a id="payment"></a>
         <section class="payment page-delivery__payment">
           <div class="container">
-            <div class="paper">
+            <div class="paper payment__content">
               <h2 class="title title-main slider-main__title">
                 Оплата:
               </h2>
@@ -4367,6 +4383,19 @@
                 </li>
               </ul>
             </div>
+            <div class="payment__description">
+              <h3 class="title title-extra title-extra--accent payment__extra-title">
+                Внимание!
+              </h3>
+              <div class="payment__extra-info">
+                <p class="text text-main">
+                  Поставка товаров "под заказ" (которые не помечены "в наличии") осуществляется по предоплате, просим
+                  уточнить условия у менеджера.
+                </p>
+                <p class="text text-main">
+                  Данный вид оплаты действует только для региона Санкт-Петербург и Ленинградская область. </p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -4439,48 +4468,179 @@
               </li>
             </ul>
             <div class="delivery-regions__exception-block">
-              <a href="#" class="link button-main button-main--active">Моего города нет в списке</a>
+              <button type="button" class="button button-main button-main--active" id="button-new-location">Моего города
+                нет в списке</button>
             </div>
           </div>
         </section>
 
-        <section class="form-communicate">
+        <section class="form-communicate page-delivery__form-communicate" id="form-communicate">
           <div class="container">
             <h2 class="title title-main delivery-regions__title">
               Стоимость доставки в регионы
             </h2>
             <form class="form-communicate__form">
               <p class="text text-main">
-                Наш менеджер свяжется в вами, чтобы сообщить о  возможности доставки выбранного товара в ваш город, ее способах и стоимости.
+                Наш менеджер свяжется в вами, чтобы сообщить о возможности доставки выбранного товара в ваш город, ее
+                способах и стоимости.
               </p>
               <fieldset class="fieldset form-communicate__fieldset">
                 <label class="form-communicate__label">
-                  <input class="input field-main form-communicate__field" type="text" required placeholder="Ваше имя" name="name" id="name" >
+                  <input class="input field-main form-communicate__field" type="text" required placeholder="Ваше имя"
+                    name="name" id="name">
                   <span class="visually-hidden">
                     Ваше имя
                   </span>
                 </label>
                 <label class="form-communicate__label">
-                  <input class="input field-main form-communicate__field" type="tel" required placeholder="Ваш телефон" name="phone" id="phone" pattern="[0-9,+]{11,12}" >
+                  <input class="input field-main form-communicate__field" type="tel" required placeholder="Ваш телефон"
+                    name="phone" id="phone" pattern="[0-9,+]{11,12}">
                   <span class="visually-hidden">
                     Ваш телефон
                   </span>
                 </label>
                 <label class="form-communicate__label">
-                  <input class="input field-main form-communicate__field" type="text" required placeholder="Город доставки" name="phone" id="city" >
+                  <input class="input field-main form-communicate__field" type="text" required
+                    placeholder="Город доставки" name="phone" id="city">
                   <span class="visually-hidden">
                     Город доставки
                   </span>
                 </label>
               </fieldset>
-              <button class="button button-main button-main--active" type="submit">Узнать про доставку</button>
+              <button class="button button-main button-main--active form-communicate__button" type="submit">Узнать про
+                доставку</button>
             </form>
 
           </div>
         </section>
 
+        <section class="faq page-delivery__faq">
+          <div class="container">
+            <ul class="list faq__list">
+              <li class="paper accordion accordion--faq faq__item">
+                <div class="ac">
+                  <h3 class="title ac-header">
+                    <button class="button ac-trigger">
+                      <p class="text title-secondary title-secondary--basic">
+                        Куда и как подать заявление на возврат товара?
+                      </p>
+                    </button>
+                  </h3>
+                  <div class="ac-panel">
+                    <div class="accordion__text-block">
+                      <p class="text text-main">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, velit quaerat. Vitae ex ipsam
+                        tempore eveniet quod! Ullam doloribus aliquam nam id quis mollitia accusamus deleniti itaque a,
+                        eveniet sed?
+                      </p>
+                      <p class="text text-main">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nam dicta unde ex quidem veniam
+                        voluptas voluptates magni nemo natus, consequuntur consectetur, soluta quas explicabo dolorem
+                        dignissimos doloribus labore aspernatur.
+                        Eveniet hic veniam nisi? Iste accusamus consectetur, necessitatibus assumenda dolor neque
+                        ducimus quibusdam provident atque. Eos sequi atque laboriosam tenetur vitae, architecto, iure,
+                        dolore in delectus sint illum officia voluptate.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="paper accordion accordion--faq faq__item">
+                <div class="ac">
+                  <h3 class="title ac-header">
+                    <button class="button ac-trigger">
+                      <p class="text title-secondary title-secondary--basic">
+                        Условия возврата товара.
+                      </p>
+                    </button>
+                  </h3>
+                  <div class="ac-panel">
+                    <div class="accordion__text-block">
+                      <p class="text text-main">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, velit quaerat. Vitae ex ipsam
+                        tempore eveniet quod! Ullam doloribus aliquam nam id quis mollitia accusamus deleniti itaque a,
+                        eveniet sed?
+                      </p>
+                      <p class="text text-main">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nam dicta unde ex quidem veniam
+                        voluptas voluptates magni nemo natus, consequuntur consectetur, soluta quas explicabo dolorem
+                        dignissimos doloribus labore aspernatur.
+                        Eveniet hic veniam nisi? Iste accusamus consectetur, necessitatibus assumenda dolor neque
+                        ducimus quibusdam provident atque. Eos sequi atque laboriosam tenetur vitae, architecto, iure,
+                        dolore in delectus sint illum officia voluptate.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="paper accordion accordion--faq faq__item">
+                <div class="ac">
+                  <h3 class="title ac-header">
+                    <button class="button ac-trigger">
+                      <p class="text title-secondary title-secondary--basic">
+                        Когда продавец вернет средства за товар?
+                      </p>
+                    </button>
+                  </h3>
+                  <div class="ac-panel">
+                    <div class="accordion__text-block">
+                      <p class="text text-main">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, velit quaerat. Vitae ex ipsam
+                        tempore eveniet quod! Ullam doloribus aliquam nam id quis mollitia accusamus deleniti itaque a,
+                        eveniet sed?
+                      </p>
+                      <p class="text text-main">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nam dicta unde ex quidem veniam
+                        voluptas voluptates magni nemo natus, consequuntur consectetur, soluta quas explicabo dolorem
+                        dignissimos doloribus labore aspernatur.
+                        Eveniet hic veniam nisi? Iste accusamus consectetur, necessitatibus assumenda dolor neque
+                        ducimus quibusdam provident atque. Eos sequi atque laboriosam tenetur vitae, architecto, iure,
+                        dolore in delectus sint illum officia voluptate.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="paper accordion accordion--faq faq__item">
+                <div class="ac">
+                  <h3 class="title ac-header">
+                    <button class="button ac-trigger">
+                      <p class="text title-secondary title-secondary--basic">
+                        Закон о защите прав потребителей. Глава ll, ст. 26.1
+                      </p>
+                    </button>
+                  </h3>
+                  <div class="ac-panel">
+                    <div class="accordion__text-block">
+                      <ol class="list-numeric">
+                        <li class="list-numeric__item">
+                          <p class="text text-main">
+                            Договор розничной купли-продажи может быть заключен на основании ознакомления потребителя с
+                            предложенным продавцом описанием товара посредством каталогов, проспектов, буклетов,
+                            фотоснимков, средств связи (телевизионной, почтовой, радиосвязи и других) или иными
+                            исключающими возможность непосредственного ознакомления потребителя с товаром либо образцом
+                            товара при заключении такого договора (дистанционный способ продажи товара) способами.
+                          </p>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
 
-        <div class="container">
+        <div class="action page-delivery__action">
+          <div class="container">
+            <a href="#up" class="link button-round button-round--accent action__button">
+              UP
+            </a>
+          </div>
+        </div>
+
+
+        <!-- <div class="container">
           <div class="image-pins image-block image-pins--bike">
             <div class="button-popup image-pins__item">
               <button class="button button-popup__button" type="button">
@@ -4501,11 +4661,7 @@
                 srcset="/i/media/stat/delivery/receiving/bike@2x.jpg 2x" alt="Велотренажер" />
             </picture>
           </div>
-        </div>
-
-
-
-
+        </div> -->
 
       </div>
       <div class="clear"></div>
@@ -4768,7 +4924,13 @@
     var unimet = '';
   </script>
 
+<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=13739b0f-0d5b-4af4-aec0-22bc5523893a" type="text/javascript"></script> -->
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=13739b0f-0d5b-4af4-aec0-22bc5523893a"></script>
+
   <script src="/js/modules/delivery.js"></script>
+
+
 
 
 </body>

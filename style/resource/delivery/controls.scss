@@ -114,6 +114,13 @@
   align-items: center;
   border-radius: 50%;
   box-shadow: var(--shadow-middle);
+  vertical-align: middle;
+  line-height: var(--lh-main);
+
+  &--accent{
+    background: var(--cl-accent);
+    color: var(--cl-contrast);
+  }
 }
 
 .button-round__icon {

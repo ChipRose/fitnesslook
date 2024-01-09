@@ -309,13 +309,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   settingAccordionInSlider: () => (/* binding */ settingAccordionInSlider)
 /* harmony export */ });
 const closeAllAccordions = accordions => {
-  accordions.forEach(item => {
+  accordions?.forEach(item => {
     item.closeAll();
   });
 };
 const closeAllMobileAccordions = accordions => {
   if (window.innerWidth < 768) {
-    accordions.forEach(item => {
+    accordions?.forEach(item => {
       item.closeAll();
     });
   }
@@ -324,17 +324,17 @@ const settingAccordionInSlider = (slider, props) => {
   return {
     duration: 80,
     onOpen: () => {
-      slider.updateSliderHeight();
+      slider?.updateSliderHeight();
     },
     onClose: () => {
-      slider.updateSliderHeight();
+      slider?.updateSliderHeight();
     },
     ...props
   };
 };
 const openAllDeskAccordions = accordions => {
   if (window.innerWidth >= 768) {
-    accordions.forEach(item => {
+    accordions?.forEach(item => {
       item.openAll();
     });
   }
@@ -397,6 +397,27 @@ const setPopup = popupProperties => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// import * as ymaps3 from 'ymaps3';
+
+const LOCATION = {
+  center: [37.623082, 55.75254],
+  zoom: 9
+};
+const initMap = () => {
+  const myMap = new ymaps.Map('map-container', LOCATION);
+  myMap.disableDragging();
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initMap);
+
+/***/ }),
+/* 5 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
 const buttonsModal = document.querySelectorAll('.button-modal__item');
 const paymentSection = document.querySelector('.payment');
 buttonsModal.forEach(button => {
@@ -422,7 +443,20 @@ buttonsModal.forEach(button => {
 });
 
 /***/ }),
-/* 5 */
+/* 6 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const buttonNewLocation = document.querySelector('#button-new-location');
+const formBlock = document.querySelector('#form-communicate');
+buttonNewLocation.addEventListener('click', () => {
+  formBlock.classList.toggle('form-communicate--open');
+  console.log('click');
+});
+
+/***/ }),
+/* 7 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -433,7 +467,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive),
 /* harmony export */   updateSliderAdaptive: () => (/* binding */ updateSliderAdaptive)
 /* harmony export */ });
-/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
+/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 
 const setSlider = (container, props) => {
   return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
@@ -481,7 +515,7 @@ const updateSliderAdaptive = slider => {
 
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3689,34 +3723,45 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _delivery_modal_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var _delivery_map_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _delivery_modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var _delivery_form_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+
+
 
 
 
 
 
 (0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
-const sliderDelivery = document.querySelector('#slider-delivery') && document.querySelector('#slider-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('#slider-delivery', {
-  navContainer: '#slider-delivery-buttons',
-  autoHeight: true
+const sliderDelivery = (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-deliv', {
+  navContainer: '#slider-deliv-buttons',
+  autoHeight: true,
+  onInit: () => {
+    ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  }
 });
-const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('#slider-cost-delivery', {
+const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-cost-delivery', {
   navContainer: '#slider-cost-delivery-buttons',
   autoHeight: true
 });
-const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__.setTableSlider)('#slider-table', {
+const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setTableSlider)('#slider-table', {
   controlsContainer: '#slider-table-buttons'
 });
-const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_4__.setSlider)('#slider-cost-lifting', {
+const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-cost-lifting', {
   navContainer: '#slider-cost-lifting-buttons',
   autoHeight: true
 });
-sliderDelivery.events.on('indexChanged', () => {
+sliderDelivery.events.on('indexChanged', evt => {
   (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery, sliderDelivery);
+  if (evt.displayIndex === 2) {
+    ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
+  }
 });
-const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion')), (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionInSlider)(sliderDelivery));
+const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--delivery')), (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionInSlider)(sliderDelivery));
 (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery, sliderDelivery);
+const accordionFaq = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--faq')));
 })();
 
 /******/ })()

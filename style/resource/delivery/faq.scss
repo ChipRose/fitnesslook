@@ -1,0 +1,7 @@
+.faq__item {
+  margin-bottom: var(--indent-main);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

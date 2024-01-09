@@ -11,6 +11,7 @@ import rename from 'gulp-rename';
 import { stacksvg } from "gulp-stacksvg";
 import browser from 'browser-sync';
 
+
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
 
@@ -27,7 +28,7 @@ export function processStyles() {
     .pipe(browser.stream());
 }
 
-export function processScripts({src, title, dest='./js/modules/'}) {
+export function processScripts({ src, title, dest = './js/modules/' }) {
   return gulp.src(src)
     .pipe(webpack({
       mode: 'none',
@@ -44,8 +45,8 @@ export function processScripts({src, title, dest='./js/modules/'}) {
 
 export function processAllScripts() {
   return gulp.series(
-    () => processScripts({ src: './js/common/prof-trainers.js', title:'prof-trainers.js'}),
-    () => processScripts({ src: './js/common/delivery.js',title:'delivery.js'})
+    () => processScripts({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js' }),
+    () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js' })
   )
 }
 

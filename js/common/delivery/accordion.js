@@ -1,12 +1,12 @@
 const closeAllAccordions = (accordions) => {
-  accordions.forEach(item => {
+  accordions?.forEach(item => {
     item.closeAll()
   })
 }
 
 const closeAllMobileAccordions = (accordions) => {
   if (window.innerWidth < 768) {
-    accordions.forEach(item => {
+    accordions?.forEach(item => {
       item.closeAll()
     });
   }
@@ -16,10 +16,10 @@ const settingAccordionInSlider = (slider, props) => {
   return {
     duration: 80,
     onOpen: () => {
-      slider.updateSliderHeight();
+      slider?.updateSliderHeight();
     },
     onClose: () => {
-      slider.updateSliderHeight();
+      slider?.updateSliderHeight();
     },
     ...props
   }
@@ -27,8 +27,8 @@ const settingAccordionInSlider = (slider, props) => {
 
 const openAllDeskAccordions = (accordions) => {
   if (window.innerWidth >= 768) {
-    accordions.forEach(item => {
-      item.openAll()
+    accordions?.forEach(item => {
+      item.openAll();
     });
   }
 }

@@ -1,3 +1,12 @@
+.form-communicate {
+  display: none;
+
+  &--open {
+    margin-top: var(--indent-huge);
+    display: block;
+  }
+}
+
 .form-communicate__fieldset {
   margin-bottom: var(--indent-big);
   display: flex;
@@ -6,4 +15,12 @@
 
 .form-communicate__label {
   margin-bottom: var(--indent-main);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-communicate__button {
+  margin: 0 auto;
 }

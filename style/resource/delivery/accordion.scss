@@ -3,15 +3,10 @@
 }
 
 .accordion .ac-trigger {
-  padding: 0 calc(var(--button-size-big) + var(--indent-small)) 0 0;
+  padding: 0 calc(var(--button-size-big) + var(--indent-basic)) 0 0;
   font-size: var(--fz-main);
   color: inherit;
   position: relative;
-
-  @media (min-width:$tablet-width) {
-    pointer-events: none;
-    cursor: default;
-  }
 
   &::after {
     content: '';
@@ -25,7 +20,16 @@
     border-radius: 50%;
     box-shadow: var(--shadow-middle);
     transition: var(--transition-main);
+  }
+}
 
+.accordion.accordion--adaptive .ac-trigger {
+  @media (min-width:$tablet-width) {
+    pointer-events: none;
+    cursor: default;
+  }
+
+  &::after {
     @media (min-width:$tablet-width) {
       display: none;
     }
@@ -52,22 +56,8 @@
 }
 
 .accordion .ac-panel {
-  overflow: visible;
+  // overflow: visible;
 }
-
-// .accordion__header {
-//   margin-bottom: var(--indent-big);
-// }
-
-// .accordion__body {
-//   transition: var(--transition-main);
-// }
-
-// .accordion__body {
-//   overflow: hidden;
-//   transition: var(--transition-main);
-//   overflow: hidden;
-// }
 
 .accordion__text-block {
   margin-bottom: var(--indent-big);
@@ -81,58 +71,18 @@
   margin: calc(-1 * var(--indent-small));
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .accordion__time-item {
   margin: var(--indent-small);
   padding: var(--indent-main);
+  flex: 0 0 calc(50% - 2 * var(--indent-small));
+  box-sizing: border-box;
   background: var(--cl-neutral-accent);
   border-radius: var(--radius-basic);
+  text-align: center;
 }
-
-// .accordion__button {
-//   padding-right: 45px;
-//   width: 100%;
-//   text-align: left;
-//   position: relative;
-
-//   @media (min-width:$tablet-width) {
-//     pointer-events: none;
-//     cursor: default;
-//   }
-
-
-//   ::after {
-//     content: '';
-//     position: absolute;
-//     top: 50%;
-//     right: 0;
-//     transform: translateY(-50%);
-//     background: center center/ 15px 8px no-repeat url('/i/media/stat/icons/simple-arrow.svg');
-//     width: 37px;
-//     height: 37px;
-//     border-radius: 50%;
-//     box-shadow: var(--shadow-middle);
-//     transition: var(--transition-main);
-
-//     @media (min-width:$tablet-width) {
-//       display: none;
-//     }
-//   }
-// }
-
-// .accordion.accordion--close{
-//   .accordion__header {
-//     margin-bottom: 0;
-//   }
-
-//   .accordion__button {
-//     ::after {
-//       transform-origin: center center;
-//       transform: translateY(-50%) rotate(180deg) ;
-//     }
-//   }
-// }
 
 .accordion__extra-image {
   margin: calc(var(--indent-big) - var(--indent-main)) auto var(--indent-big);

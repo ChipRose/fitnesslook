@@ -33,6 +33,10 @@
   vertical-align: middle;
   font-weight: 400;
   color: var(--cl-accent);
+
+  &--basic{
+    color: var(--cl-dark);
+  }
 }
 
 // Extra title
@@ -41,6 +45,10 @@
   font-size: var(--fz-main);
   line-height: var(--lh-main);
   font-weight: 500;
+
+  &--accent{
+    color:var(--cl-accent);
+  }
 }
 
 // Subtitle
@@ -68,4 +76,14 @@
   &--strong {
     font-weight: 500;
   }
+}
+
+// Numeric list
+
+.list-numeric {
+  padding-left: var(--indent-main);
+}
+
+.list-numeric__item {
+  padding-left: var(--indent-basic);
 }
