@@ -1,5 +1,32 @@
 import { tns } from "tiny-slider";
 
+const setSimpleSlider = (buttonsSelector, container) => {
+  const sliderButtons = document.querySelector(buttonsSelector);
+  const slideContainer = document.querySelector(container);
+  const children = Array.from(slideContainer.children);
+  const buttons = Array.from(sliderButtons.children);
+
+  buttons.forEach(element => element.classList.remove('button-main--active'));
+  children?.forEach(element => {
+    element.style.display = 'none';
+  });
+
+  children[0].style.display = 'block';
+  buttons[0].classList.add('button-main--active');
+
+  sliderButtons.addEventListener('click', (evt) => {
+    const item = slideContainer.querySelector(`#${evt.target.value}`);
+
+    buttons.forEach(element => element.classList.remove('button-main--active'));
+    evt.target.classList.add('button-main--active');
+
+    children?.forEach(element => {
+      element.style.display = 'none';
+    });
+    item.style.display = 'block';
+  })
+}
+
 const setSlider = (container, props) => {
   return tns({
     container,
@@ -51,4 +78,6 @@ const updateSliderAdaptive = (slider) => {
   });
 }
 
-export { setSlider, setTableSlider, settingSliderAdaptive, updateSliderAdaptive };
+
+
+export { setSlider, setTableSlider, settingSliderAdaptive, updateSliderAdaptive, setSimpleSlider };

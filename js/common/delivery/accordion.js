@@ -12,19 +12,6 @@ const closeAllMobileAccordions = (accordions) => {
   }
 }
 
-const settingAccordionInSlider = (slider, props) => {
-  return {
-    duration: 80,
-    onOpen: () => {
-      slider?.updateSliderHeight();
-    },
-    onClose: () => {
-      slider?.updateSliderHeight();
-    },
-    ...props
-  }
-}
-
 const openAllDeskAccordions = (accordions) => {
   if (window.innerWidth >= 768) {
     accordions?.forEach(item => {
@@ -48,5 +35,5 @@ const settingAccordionAdaptive = (accordion, slider) => {
   });
 };
 
-export { settingAccordionInSlider, settingAccordionAdaptive, closeAllAccordions };
+export { settingAccordionAdaptive, closeAllAccordions };
 

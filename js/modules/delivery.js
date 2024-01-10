@@ -305,8 +305,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   closeAllAccordions: () => (/* binding */ closeAllAccordions),
-/* harmony export */   settingAccordionAdaptive: () => (/* binding */ settingAccordionAdaptive),
-/* harmony export */   settingAccordionInSlider: () => (/* binding */ settingAccordionInSlider)
+/* harmony export */   settingAccordionAdaptive: () => (/* binding */ settingAccordionAdaptive)
 /* harmony export */ });
 const closeAllAccordions = accordions => {
   accordions?.forEach(item => {
@@ -319,18 +318,6 @@ const closeAllMobileAccordions = accordions => {
       item.closeAll();
     });
   }
-};
-const settingAccordionInSlider = (slider, props) => {
-  return {
-    duration: 80,
-    onOpen: () => {
-      slider?.updateSliderHeight();
-    },
-    onClose: () => {
-      slider?.updateSliderHeight();
-    },
-    ...props
-  };
 };
 const openAllDeskAccordions = accordions => {
   if (window.innerWidth >= 768) {
@@ -462,6 +449,7 @@ buttonNewLocation.addEventListener('click', () => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   setSimpleSlider: () => (/* binding */ setSimpleSlider),
 /* harmony export */   setSlider: () => (/* binding */ setSlider),
 /* harmony export */   setTableSlider: () => (/* binding */ setTableSlider),
 /* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive),
@@ -469,6 +457,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
 
+const setSimpleSlider = (buttonsSelector, container) => {
+  const sliderButtons = document.querySelector(buttonsSelector);
+  const slideContainer = document.querySelector(container);
+  const children = Array.from(slideContainer.children);
+  const buttons = Array.from(sliderButtons.children);
+  buttons.forEach(element => element.classList.remove('button-main--active'));
+  children?.forEach(element => {
+    element.style.display = 'none';
+  });
+  children[0].style.display = 'block';
+  buttons[0].classList.add('button-main--active');
+  sliderButtons.addEventListener('click', evt => {
+    const item = slideContainer.querySelector(`#${evt.target.value}`);
+    buttons.forEach(element => element.classList.remove('button-main--active'));
+    evt.target.classList.add('button-main--active');
+    children?.forEach(element => {
+      element.style.display = 'none';
+    });
+    item.style.display = 'block';
+  });
+};
 const setSlider = (container, props) => {
   return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
     container,
@@ -3735,13 +3744,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
-const sliderDelivery = (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-deliv', {
-  navContainer: '#slider-deliv-buttons',
-  autoHeight: true,
-  onInit: () => {
-    ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
-  }
-});
 const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-cost-delivery', {
   navContainer: '#slider-cost-delivery-buttons',
   autoHeight: true
@@ -3749,19 +3751,20 @@ const sliderCost = document.querySelector('#slider-cost-delivery') && document.q
 const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setTableSlider)('#slider-table', {
   controlsContainer: '#slider-table-buttons'
 });
+const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#pickup-slider', {
+  controlsContainer: "#pickup-slider-buttons",
+  controls: true,
+  nav: false
+});
 const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-cost-lifting', {
   navContainer: '#slider-cost-lifting-buttons',
   autoHeight: true
 });
-sliderDelivery.events.on('indexChanged', evt => {
-  (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery, sliderDelivery);
-  if (evt.displayIndex === 2) {
-    ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
-  }
-});
-const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--delivery')), (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionInSlider)(sliderDelivery));
-(0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery, sliderDelivery);
+const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--delivery')));
+(0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery);
 const accordionFaq = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--faq')));
+(0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery);
+(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
 })();
 
 /******/ })()

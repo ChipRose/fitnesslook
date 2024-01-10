@@ -51,6 +51,7 @@ $max-width: 1180px;
 :root {
   --cl-main: rgb(101, 98, 115);
   --cl-contrast: rgb(255, 255, 255);
+  --cl-transparent-contrast: rgba(255, 255, 255, 0.3);
   --cl-light: rgb(252, 251, 252);
   --cl-accent: rgb(171, 118, 180);
   --cl-dark: rgb(31, 31, 31);

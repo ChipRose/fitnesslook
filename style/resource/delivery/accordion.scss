@@ -36,6 +36,10 @@
   }
 }
 
+.accordion .ac-panel {
+  // overflow: visible;
+}
+
 .accordion .ac.is-active>.ac-header .ac-trigger {
   &::after {
     content: '';
@@ -53,10 +57,6 @@
   margin-top: 0;
   border: none;
   background: none;
-}
-
-.accordion .ac-panel {
-  // overflow: visible;
 }
 
 .accordion__text-block {
@@ -82,6 +82,8 @@
   background: var(--cl-neutral-accent);
   border-radius: var(--radius-basic);
   text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .accordion__extra-image {

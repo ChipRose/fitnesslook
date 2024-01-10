@@ -3701,19 +3701,18 @@
         <section class="receiving-type slider-main page-delivery__receiving-type">
           <div class="container">
             <header class="slider-main__header">
-              <!-- <h2 class="title title-main slider-main__title">
+              <h2 class="title title-main slider-main__title">
                 Как получить свой заказ
-              </h2> -->
-              <div class="button-block" id="slider-deliv-buttons">
-                <button class="button button-main button-block__item ">Доставка</button>
-                <button class="button button-main  button-block__item">Самовывоз</button>
+              </h2>
+              <div class="button-block" id="slider-delivery-type-buttons">
+                <button class="button button-main button-main--active button-block__item" value="delivery">Доставка</button>
+                <button class="button button-main  button-block__item" value="pickup">Самовывоз</button>
               </div>
             </header>
 
-            <ul class="" id="slider-deliv">
-
-              <li>
-                <div class="receiving-type__content">
+            <ul class="list receiving-type__main-slider" >
+              <li id="delivery">
+                <div class="receiving-type__delivery">
                   <div class="receiving-type__intro-block">
                     <p class="text text-main text-main--strong">
                       Доставка курьером FitnessLook - это тренажер под ключ + консультация по использованию.
@@ -3985,30 +3984,169 @@
                       </div>
                     </div>
                   </div>
-                  <footer class="receiving-type__action-block">
-                    <a href="#receiving-type" class="link button-round">
-                      UP
-                      <span class="visually-hidden">Наверх блока</span>
-                    </a>
-                  </footer>
                 </div>
               </li>
-              <!-- <li>
-                1 slide
-              </li>
-              <li>
+              <li id="pickup">
+                <div class="receiving-type__intro-block">
+                  <p class="text text-main text-main--strong">
+                    Самовывоз - удобный способ забрать товар в удобное для вас время.
+                  </p>
+                </div>
+                <div class="receiving-type__address-block">
+                  <div class="receiving-type__map-block">
+                    <picture>
+                      <source type="image/webp" media="(min-width: 768px)"
+                        srcset="/i/media/stat/delivery/receiving/map-desk.webp 1x, /i/media/stat/delivery/receiving/map-desk@2x.webp 2x">
+                      <source type="image/webp"
+                        srcset="/i/media/stat/delivery/receiving/map.webp 1x, /i/media/stat/delivery/receiving/map@2x.webp 2x">
+                      <source media="(min-width: 768px)"
+                        srcset="/i/media/stat/delivery/receiving/map-desk.jpg 1x, /i/media/stat/delivery/receiving/map-desk@2x.jpg 2x">
+                      <img src="/i/media/stat/delivery/receiving/map.jpg" ,
+                        srcset="/i/media/stat/delivery/receiving/map@2x.jpg 2x" alt="ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж" />
+                    </picture>
+                  </div>
+                  <div class="paper accordion accordion--adaptive accordion--delivery">
+                    <div class="ac">
+                      <h3 class="title ac-header">
+                        <button class="button ac-trigger">
+                          <p class="text title-secondary">
+                            Как забрать товар
+                          </p>
+                        </button>
+                      </h3>
+                      <div class="ac-panel">
+                        <div class="accordion__text-block">
+                          <p class="text text-main">
+                            Если вы хотите самостоятельно забрать свой заказ с нашего центрального склада в Санкт-Петербурге, выберете этот способ при оформлении заказа.
+                          </p>
+                          <p class="text text-main">
+                            Для товаров, заявленных в наличии, самовывоз чаще всего возможен в день заказа. Подробности объяснит менеджер.
+                          </p>
+                        </div>
+                        <address>
+                          <h4 class="title title-extra title-extra--accent">
+                            ТВК Интерио
+                          </h4>
+                          <div class="accordion__text-block">
+                            <p class="text text-main">
+                              ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж                           </p>
+                          </div>
+                        </address>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                2 slide
-              </li> -->
-              <li>
-
-                <div  >
-                  Самовывоз
-                  <div id="map-container" style="width: 320px; height: 700px;"></div>
+                <a id="schedule"></a>
+                <div class="receiving-type__pickup">
+                  <div class="receiving-type__pickup-slider-block">
+                    <div class="receiving-type__pickup-slider-buttons" id="pickup-slider-buttons">
+                      <button class="button button-round button-round--slider button-round--slider-prev">
+                        <svg class="" width="16" height="12" role="img" focusable="false">
+                          <use xlink:href="/i/media/stat/sprite.svg#arrow-simple"></use>
+                        </svg>
+                      </button>
+                      <button class="button button-round button-round--slider">
+                        <svg class="" width="16" height="12" role="img" focusable="false">
+                          <use xlink:href="/i/media/stat/sprite.svg#arrow-simple"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <ul class="list receiving-type__pickup-slider" id="pickup-slider">
+                      <li class="receiving-type__pickup-item">
+                        <div class="image-block">
+                          <picture>
+                          <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-0.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-0@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-0.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-0@2x.jpg 2x" alt="ТВК Интерио" />
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="receiving-type__pickup-item image-block">
+                        <div class="image-block">
+                          <picture>
+                          <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-1.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-1@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-1.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-1@2x.jpg 2x" alt="ТВК Интерио" />
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="receiving-type__pickup-item image-block">
+                        <div class="image-block">
+                          <picture>
+                          <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-2.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-2@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-2.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-2@2x.jpg 2x" alt="ТВК Интерио" />
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="receiving-type__pickup-item image-block">
+                        <div class="image-block">
+                          <picture>
+                          <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-3.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-3@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-3.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-3@2x.jpg 2x" alt="ТВК Интерио" />
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="receiving-type__pickup-item image-block">
+                        <div class="image-block">
+                          <picture>
+                          <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-4.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-4@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-4.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-4@2x.jpg 2x" alt="ТВК Интерио" />
+                          </picture>
+                        </div>
+                      </li>
+                      <li class="receiving-type__pickup-item image-block">
+                        <div class="image-block">
+                          <picture>
+                          <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-5.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-5@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-5.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-5@2x.jpg 2x" alt="ТВК Интерио" />
+                          </picture>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="paper accordion accordion--adaptive accordion--delivery">
+                    <div class="ac">
+                      <h3 class="title ac-header">
+                        <button class="button ac-trigger">
+                          <p class="text title-secondary">
+                            График работы
+                          </p>
+                        </button>
+                      </h3>
+                      <div class="ac-panel">
+                        <div class="accordion__text-block">
+                          <p class="text text-main">
+                            Забрать беговую дорожку вы можете в соответствии с графиком работы торгового комплекса.
+                          </p>
+                        </div>
+                        <ul class="list accordion__schedule">
+                          <li class="accordion__time-item">10:00 - 20:00</li>
+                          <li class="accordion__time-item">Ежедневно</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>
 
+            <footer class="receiving-type__action-block">
+              <a href="#receiving-type" class="link button-round">
+                UP
+                <span class="visually-hidden">Наверх блока</span>
+              </a>
+            </footer>
           </div>
         </section>
 
@@ -4516,6 +4654,9 @@
 
         <section class="faq page-delivery__faq">
           <div class="container">
+            <h2 class="title title-main faq__title">
+              FAQ
+            </h2>
             <ul class="list faq__list">
               <li class="paper accordion accordion--faq faq__item">
                 <div class="ac">
@@ -4924,9 +5065,9 @@
     var unimet = '';
   </script>
 
-<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=13739b0f-0d5b-4af4-aec0-22bc5523893a" type="text/javascript"></script> -->
+  <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=13739b0f-0d5b-4af4-aec0-22bc5523893a" type="text/javascript"></script> -->
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=13739b0f-0d5b-4af4-aec0-22bc5523893a"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=13739b0f-0d5b-4af4-aec0-22bc5523893a"></script>
 
   <script src="/js/modules/delivery.js"></script>
 

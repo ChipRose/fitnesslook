@@ -5,7 +5,7 @@
   margin-bottom: var(--indent-big);
   position: relative;
 
-  &::after{
+  &::after {
     content: '';
     @include decoration
   }
@@ -17,17 +17,56 @@
 
 // Receiving type
 
-.receiving-type--center{
+.receiving-type__intro-block {
+  margin-bottom: var(--indent-big);
+
+}
+
+.receiving-type__address-block {
+  margin-bottom: var(--indent-big);
+}
+
+.receiving-type--center {
   margin-right: auto;
   margin-left: auto;
 }
 
-.receiving-type__content {
+.receiving-type__delivery {
   display: grid;
   row-gap: var(--indent-main);
 }
 
 .receiving-type__action-block {
-  justify-self: end;
+  margin-top: var(--indent-big);
+  display: flex;
+  justify-content: end;
 }
 
+
+.receiving-type__map-block {
+  margin-bottom: var(--indent-big);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: var(--radius-main);
+
+  img {
+    display: block;
+  }
+}
+
+.receiving-type__pickup-slider-block {
+  margin-bottom: var(--indent-big);
+  position: relative;
+}
+
+.receiving-type__pickup-slider-buttons {
+  padding: 0 var(--indent-main);
+  width: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  bottom: var(--indent-big);
+}

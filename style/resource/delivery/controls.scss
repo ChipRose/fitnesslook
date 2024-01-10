@@ -117,9 +117,23 @@
   vertical-align: middle;
   line-height: var(--lh-main);
 
-  &--accent{
+  &--accent {
     background: var(--cl-accent);
     color: var(--cl-contrast);
+  }
+
+  &--slider {
+    background: var(--cl-transparent-contrast);
+    box-shadow: none;
+
+
+    svg {
+      fill: var(--cl-contrast);
+    }
+  }
+
+  &--slider-prev {
+    transform: rotate(180deg);
   }
 }
 
@@ -175,7 +189,7 @@
   text-align: center;
 }
 
-.button-modal__container{
+.button-modal__container {
   position: relative;
 }
 
@@ -224,4 +238,3 @@
     opacity: 0.5;
   }
 }
-
