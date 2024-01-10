@@ -3673,26 +3673,40 @@
             <h2 class="title title-main receiving__title">
               Способы получения и оплаты заказов в <nobr>Санкт-Петербурге</nobr>
             </h2>
-            <div class="receiving__text-block">
-              <p class="text text-main text-main--strong">
-                Доставка до дома — самый быстрый и популярный способ получения заказов у покупателей FitnessLook из
-                Санкт-Петербурга*
-              </p>
-              <p class="text text-main">
-                Хорошие новости!
-              </p>
-              <p class="text text-main">
-                Весь декабрь эта опция является приятным подарком, за который не потребуется доплачивать, для 95%
-                заказов. Кроме того, мы запустили акцию и снизили цену на доставку для товаров, не попадающих под
-                условия бесплатной доставки.
-              </p>
-              <p class="text text-main">
-                *Если вас интересует способ получения заказа в другом регионе, найдите и выберете его в списке городов
-                работы FitnessLook.
-              </p>
-            </div>
-            <div class="receiving__action-block">
-              <a href="#regions-list" class="link button-main button-main--active">Список городов</a>
+            <div class="receiving__wrapper">
+              <div class="receiving__content">
+                <div class="receiving__text-block">
+                  <p class="text text-main text-main--strong receiving__text-intro">
+                    Доставка до дома — самый быстрый и популярный способ получения заказов у покупателей FitnessLook из
+                    Санкт-Петербурга*
+                  </p>
+                  <p class="text text-main">
+                    Хорошие новости!
+                  </p>
+                  <p class="text text-main receiving__text">
+                    Весь декабрь эта опция является приятным подарком, за который не потребуется доплачивать, для 95%
+                    заказов. Кроме того, мы запустили акцию и снизили цену на доставку для товаров, не попадающих под
+                    условия бесплатной доставки.
+                  </p>
+                  <p class="text text-main ">
+                    *Если вас интересует способ получения заказа в другом регионе, найдите и выберете его в списке
+                    городов
+                    работы FitnessLook.
+                  </p>
+                </div>
+                <div class="receiving__action-block">
+                  <a href="#regions-list" class="link button-main button-main--active">Список городов</a>
+                </div>
+              </div>
+              <div class="image-block receiving__map-block">
+                <picture>
+                  <source type="image/webp"
+                    srcset="/i/media/stat/delivery/receiving/map-desk.webp 1x, /i/media/stat/delivery/receiving/map-desk@2x.webp 2x">
+                  <img src="/i/media/stat/delivery/receiving/map-desk.jpg" ,
+                    srcset="/i/media/stat/delivery/receiving/map-desk@2x.jpg 2x"
+                    alt="ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж" />
+                </picture>
+              </div>
             </div>
           </div>
         </section>
@@ -3705,12 +3719,13 @@
                 Как получить свой заказ
               </h2>
               <div class="button-block" id="slider-delivery-type-buttons">
-                <button class="button button-main button-main--active button-block__item" value="delivery">Доставка</button>
+                <button class="button button-main button-main--active button-block__item"
+                  value="delivery">Доставка</button>
                 <button class="button button-main  button-block__item" value="pickup">Самовывоз</button>
               </div>
             </header>
 
-            <ul class="list receiving-type__main-slider" >
+            <ul class="list receiving-type__main-slider">
               <li id="delivery">
                 <div class="receiving-type__delivery">
                   <div class="receiving-type__intro-block">
@@ -3718,268 +3733,284 @@
                       Доставка курьером FitnessLook - это тренажер под ключ + консультация по использованию.
                     </p>
                   </div>
-                  <div class="image-pins image-block image-pins--treadmill receiving-type--center">
-                    <div class="button-popup image-pins__item">
-                      <button class="button button-popup__button" type="button">
-                        <svg class="button-popup__icon" width="18" height="17" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#in-time-icon"></use>
-                        </svg>
-                      </button>
-                      <div class="button-popup__modal">
-                        <p class="text">
-                          доставка вовремя
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-popup image-pins__item">
-                      <button class="button button-popup__button" type="button">
-                        <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#loading-icon"></use>
-                        </svg>
-                      </button>
-                      <div class="button-popup__modal">
-                        <p class="text">
-                          аккуратная <br> погрузка
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-popup image-pins__item">
-                      <button class="button button-popup__button" type="button">
-                        <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#set-icon"></use>
-                        </svg>
-                      </button>
-                      <div class="button-popup__modal">
-                        <p class="text">
-                          профессиональная сборка
-                        </p>
-                      </div>
-                    </div>
-                    <picture>
-                      <source type="image/webp"
-                        srcset="/i/media/stat/delivery/receiving/treadmill.webp 1x, /i/media/stat/delivery/receiving/treadmill@2x.webp 2x">
-                      <img src="/i/media/stat/delivery/receiving/treadmill.jpg" ,
-                        srcset="/i/media/stat/delivery/receiving/treadmill@2x.jpg 2x" alt="Беговая дорожка" />
-                    </picture>
-                  </div>
-                  <div class="paper accordion accordion--adaptive accordion--delivery">
-                    <div class="ac">
-                      <h3 class="title ac-header">
-                        <button class="button ac-trigger">
-                          <p class="text title-secondary">
-                            Команда доставки
-                          </p>
-                        </button>
-                      </h3>
-                      <div class="ac-panel">
-                        <p class="text text-main">
-                          Мы бережно упакуем ваш заказ и передадим сотрудникам собственной службы доставки.
-                        </p>
-                        <p class="text text-main">
-                          В состав экипажа доставки FitnessLook, как правило, входят: пунктуальный водитель, грузчик,
-                          специалист - сборщик.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="image-pins image-block image-pins--armchair receiving-type--center">
-                    <div class="button-popup image-pins__item">
-                      <button class="button button-popup__button" type="button">
-                        <svg class="button-popup__icon button-popup__icon--time" width="10" height="20" role="img"
-                          focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#time-icon"></use>
-                        </svg>
-                      </button>
-                      <div class="button-popup__modal">
-                        <p class="text">
-                          выбор времени доставки
-                        </p>
-                      </div>
-                    </div>
-                    <picture>
-                      <source type="image/webp"
-                        srcset="/i/media/stat/delivery/receiving/armchair.webp 1x, /i/media/stat/delivery/receiving/armchair@2x.webp 2x">
-                      <img src="/i/media/stat/delivery/receiving/armchair.jpg" ,
-                        srcset="/i/media/stat/delivery/receiving/armchair@2x.jpg 2x" alt="Массажное кресло" />
-                    </picture>
-                  </div>
-                  <div class="paper accordion accordion--adaptive accordion--delivery">
-                    <div class="ac">
-                      <h3 class="title ac-header">
-                        <button class="button ac-trigger">
-                          <p class="text title-secondary">
-                            Доставка в удобное время
-                          </p>
-                        </button>
-                      </h3>
-                      <div class="ac-panel">
-                        <div class="accordion__text-block">
-                          <p class="text text-main">
-                            Для удобства Вы можете выбрать 4-х часовой временной интервал доставки.
-                          </p>
-                          <p class="text text-main">
-                            Для доставки товаров на следующий день, необходимо оформить заказ <span
-                              class="text-main text-main--accent">до 17:00</span> текущего дня.
-                          </p>
-                        </div>
-                        <ul class="list accordion__schedule">
-                          <li class="accordion__time-item">12:00 - 16:00</li>
-                          <li class="accordion__time-item">14:00 - 18:00</li>
-                          <li class="accordion__time-item">16:00 - 20:00</li>
-                          <li class="accordion__time-item">18:00 - 22:00</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="image-pins image-block image-pins--ellipsoid receiving-type--center">
-                    <div class="button-popup image-pins__item">
-                      <button class="button button-popup__button" type="button">
-                        <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#consultation-icon"></use>
-                        </svg>
-                      </button>
-                      <div class="button-popup__modal">
-                        <p class="text">
-                          консультация по использованию
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-popup image-pins__item">
-                      <button class="button button-popup__button" type="button">
-                        <svg class="button-popup__icon" width="22" height="13" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#van-icon"></use>
-                        </svg>
-                      </button>
-                      <div class="button-popup__modal">
-                        <p class="text">
-                          заберем обратно при неисправностях
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-popup image-pins__item">
-                      <button class="button button-popup__button" type="button">
-                        <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#quality-icon"></use>
-                        </svg>
-                      </button>
-                      <div class="button-popup__modal">
-                        <p class="text">
-                          оценка качества
-                          до оформления
-                        </p>
-                      </div>
-                    </div>
-                    <div class="button-popup image-pins__item">
-                      <button class="button button-popup__button" type="button">
-                        <svg class="button-popup__icon" width="22" height="13" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#lifting-icon"></use>
-                        </svg>
-                      </button>
-                      <div class="button-popup__modal">
-                        <p class="text">
-                          подъем до <br> места сборки
-                        </p>
-                      </div>
-                    </div>
-                    <picture>
-                      <source type="image/webp"
-                        srcset="/i/media/stat/delivery/receiving/ellipsoid.webp 1x, /i/media/stat/delivery/receiving/ellipsoid@2x.webp 2x">
-                      <img src="/i/media/stat/delivery/receiving/ellipsoid.jpg" ,
-                        srcset="/i/media/stat/delivery/receiving/ellipsoid@2x.jpg 2x" alt="Эллиптический тренажер" />
-                    </picture>
-                  </div>
-                  <div class="paper accordion accordion--adaptive accordion--delivery">
-                    <div class="ac">
-                      <h3 class="title ac-header">
-                        <button class="button ac-trigger">
-                          <p class="text title-secondary">
-                            Доставка + подъем + сборка + консультация
-                          </p>
-                        </button>
-                      </h3>
-                      <div class="ac-panel">
-                        <div class="accordion__text-block">
-                          <p class="text text-main">
-                            Ваш заказ будет доставлен вовремя. Наши сотрудники поднимут его в квартиру, даже если в
-                            вашем
-                            доме нет грузового лифта. Также тренажер или другой заказанный товар будет собран прямо при
-                            вас.
-                          </p>
-                          <p class="text text-main">
-                            После чего вы получите от опытного мастера практичекие рекомендации по эксплуатации и
-                            обслужианию оборудования.
-                          </p>
-                        </div>
-                        <div class="paper">
-                          <div class="image-round accordion__extra-image">
-                            <svg class="image-round__icon" width="18" height="19" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#present-icon"></use>
-                            </svg>
-                          </div>
-                          <h3 class="title title-secondary accordion__extra-title-block">
-                            Подарки в декабре
-                          </h3>
-                          <div class="accordion__extra-text-block">
-                            <p class="text text-main">
-                              <span class="text-main text-main--accent">Для этого воспользуйтесь опцией сборки, которая
-                                также в декабре является подарком</span>
-                              для большей части товаров нашего спортивного гипермаркета.
-                            </p>
-                          </div>
-                          <div class="accordion__action-block">
-                            <button class="button button-action" type="button">
-                              Сборка
+                  <div class="receiving-type__wrapper">
+                    <div class="receiving-type__column">
+                      <div class="receiving-type__info-block">
+                        <div
+                          class="receiving-type__info-image-block image-pins image-block image-pins--treadmill receiving-type--center">
+                          <div class="button-popup image-pins__item">
+                            <button class="button button-popup__button" type="button">
+                              <svg class="button-popup__icon" width="18" height="17" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#in-time-icon"></use>
+                              </svg>
                             </button>
+                            <div class="button-popup__modal">
+                              <p class="text">
+                                доставка вовремя
+                              </p>
+                            </div>
+                          </div>
+                          <div class="button-popup image-pins__item">
+                            <button class="button button-popup__button" type="button">
+                              <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#loading-icon"></use>
+                              </svg>
+                            </button>
+                            <div class="button-popup__modal">
+                              <p class="text">
+                                аккуратная <br> погрузка
+                              </p>
+                            </div>
+                          </div>
+                          <div class="button-popup image-pins__item">
+                            <button class="button button-popup__button" type="button">
+                              <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#set-icon"></use>
+                              </svg>
+                            </button>
+                            <div class="button-popup__modal">
+                              <p class="text">
+                                профессиональная сборка
+                              </p>
+                            </div>
+                          </div>
+                          <picture>
+                            <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/treadmill.webp 1x, /i/media/stat/delivery/receiving/treadmill@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/treadmill.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/treadmill@2x.jpg 2x" alt="Беговая дорожка" />
+                          </picture>
+                        </div>
+                        <div class="paper accordion accordion--adaptive accordion--delivery">
+                          <div class="ac">
+                            <h3 class="title ac-header">
+                              <button class="button ac-trigger">
+                                <p class="text title-secondary">
+                                  Команда доставки
+                                </p>
+                              </button>
+                            </h3>
+                            <div class="ac-panel">
+                              <p class="text text-main">
+                                Мы бережно упакуем ваш заказ и передадим сотрудникам собственной службы доставки.
+                              </p>
+                              <p class="text text-main">
+                                В состав экипажа доставки FitnessLook, как правило, входят: пунктуальный водитель, грузчик,
+                                специалист - сборщик.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="receiving-type__info-block">
+                        <div class="receiving-type__info-image-block image-pins image-block image-pins--ellipsoid receiving-type--center">
+                          <div class="button-popup image-pins__item">
+                            <button class="button button-popup__button" type="button">
+                              <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#consultation-icon"></use>
+                              </svg>
+                            </button>
+                            <div class="button-popup__modal">
+                              <p class="text">
+                                консультация по использованию
+                              </p>
+                            </div>
+                          </div>
+                          <div class="button-popup image-pins__item">
+                            <button class="button button-popup__button" type="button">
+                              <svg class="button-popup__icon" width="22" height="13" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#van-icon"></use>
+                              </svg>
+                            </button>
+                            <div class="button-popup__modal">
+                              <p class="text">
+                                заберем обратно при неисправностях
+                              </p>
+                            </div>
+                          </div>
+                          <div class="button-popup image-pins__item">
+                            <button class="button button-popup__button" type="button">
+                              <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#quality-icon"></use>
+                              </svg>
+                            </button>
+                            <div class="button-popup__modal">
+                              <p class="text">
+                                оценка качества
+                                до оформления
+                              </p>
+                            </div>
+                          </div>
+                          <div class="button-popup image-pins__item">
+                            <button class="button button-popup__button" type="button">
+                              <svg class="button-popup__icon" width="22" height="13" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#lifting-icon"></use>
+                              </svg>
+                            </button>
+                            <div class="button-popup__modal">
+                              <p class="text">
+                                подъем до <br> места сборки
+                              </p>
+                            </div>
+                          </div>
+                          <picture>
+                            <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/ellipsoid.webp 1x, /i/media/stat/delivery/receiving/ellipsoid@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/ellipsoid.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/ellipsoid@2x.jpg 2x" alt="Эллиптический тренажер" />
+                          </picture>
+                        </div>
+                        <div class="paper accordion accordion--adaptive accordion--delivery">
+                          <div class="ac">
+                            <h3 class="title ac-header">
+                              <button class="button ac-trigger">
+                                <p class="text title-secondary">
+                                  Доставка + подъем + сборка + консультация
+                                </p>
+                              </button>
+                            </h3>
+                            <div class="ac-panel">
+                              <div class="accordion__text-block">
+                                <p class="text text-main">
+                                  Ваш заказ будет доставлен вовремя. Наши сотрудники поднимут его в квартиру, даже если в
+                                  вашем
+                                  доме нет грузового лифта. Также тренажер или другой заказанный товар будет собран прямо при
+                                  вас.
+                                </p>
+                                <p class="text text-main">
+                                  После чего вы получите от опытного мастера практичекие рекомендации по эксплуатации и
+                                  обслужианию оборудования.
+                                </p>
+                              </div>
+                              <div class="paper">
+                                <div class="image-round accordion__extra-image">
+                                  <svg class="image-round__icon" width="18" height="19" role="img" focusable="false">
+                                    <use xlink:href="/i/media/stat/sprite.svg#present-icon"></use>
+                                  </svg>
+                                </div>
+                                <h3 class="title title-secondary accordion__extra-title-block">
+                                  Подарки в декабре
+                                </h3>
+                                <div class="accordion__extra-text-block">
+                                  <p class="text text-main">
+                                    <span class="text-main text-main--accent">Для этого воспользуйтесь опцией сборки, которая
+                                      также в декабре является подарком</span>
+                                    для большей части товаров нашего спортивного гипермаркета.
+                                  </p>
+                                </div>
+                                <div class="accordion__action-block">
+                                  <button class="button button-action" type="button">
+                                    Сборка
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="image-pins image-block image-pins--rowing receiving-type--center">
-                    <div class="button-popup image-pins__item">
-                      <button class="button button-popup__button" type="button">
-                        <svg class="button-popup__icon" width="14" height="23" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#rocket-icon"></use>
-                        </svg>
-                      </button>
-                      <div class="button-popup__modal">
-                        <p class="text">
-                          Старт тренировок в день доставки
-                        </p>
-                      </div>
-                    </div>
-                    <picture>
-                      <source type="image/webp"
-                        srcset="/i/media/stat/delivery/receiving/rowing.webp 1x, /i/media/stat/delivery/receiving/rowing@2x.webp 2x">
-                      <img src="/i/media/stat/delivery/receiving/rowing.jpg" ,
-                        srcset="/i/media/stat/delivery/receiving/rowing@2x.jpg 2x" alt="Гребной тренажер" />
-                    </picture>
-                  </div>
-                  <div class="paper accordion accordion--adaptive accordion--delivery">
-                    <div class="ac">
-                      <h3 class="title ac-header">
-                        <button class="button ac-trigger">
-                          <p class="text title-secondary">
-                            Первая тренировка в день доставки
-                          </p>
-                        </button>
-                      </h3>
-                      <div class="ac-panel">
-                        <div class="accordion__text-block">
-                          <p class="text text-main">
-                            Это разительно отличает нас от МаркетПлейсов и интернет-магазинов, которые просто привезут
-                            вам
-                            заказанный товар до подъезда или входной двери квартиры, после чего уедут. </p>
-                          <p class="text text-main">
-                            Фактически, наша опция доставки — это тренажер (или другой товар) <span
-                              class="text-main text-main--accent">под ключ</span>, который после заказа окажется у вас в
-                            собранном и <span class="text-main text-main--accent">готовом к использованию виде</span>.
-                          </p>
+                    <div class="receiving-type__column">
+                      <div class="receiving-type__info-block">
+                        <div
+                          class="receiving-type__info-image-block image-pins image-block image-pins--armchair receiving-type--center">
+                          <div class="button-popup image-pins__item">
+                            <button class="button button-popup__button" type="button">
+                              <svg class="button-popup__icon button-popup__icon--time" width="10" height="20" role="img"
+                                focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#time-icon"></use>
+                              </svg>
+                            </button>
+                            <div class="button-popup__modal">
+                              <p class="text">
+                                выбор времени доставки
+                              </p>
+                            </div>
+                          </div>
+                          <picture>
+                            <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/armchair.webp 1x, /i/media/stat/delivery/receiving/armchair@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/armchair.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/armchair@2x.jpg 2x" alt="Массажное кресло" />
+                          </picture>
                         </div>
-                        <div class="accordion__action-block">
-                          <button class="button button-action" type="button">
-                            В корзину
-                          </button>
+                        <div class="paper accordion accordion--adaptive accordion--delivery">
+                          <div class="ac">
+                            <h3 class="title ac-header">
+                              <button class="button ac-trigger">
+                                <p class="text title-secondary">
+                                  Доставка в удобное время
+                                </p>
+                              </button>
+                            </h3>
+                            <div class="ac-panel">
+                              <div class="accordion__text-block">
+                                <p class="text text-main">
+                                  Для удобства Вы можете выбрать 4-х часовой временной интервал доставки.
+                                </p>
+                                <p class="text text-main">
+                                  Для доставки товаров на следующий день, необходимо оформить заказ <span
+                                    class="text-main text-main--accent">до 17:00</span> текущего дня.
+                                </p>
+                              </div>
+                              <ul class="list accordion__schedule">
+                                <li class="accordion__time-item">12:00 - 16:00</li>
+                                <li class="accordion__time-item">14:00 - 18:00</li>
+                                <li class="accordion__time-item">16:00 - 20:00</li>
+                                <li class="accordion__time-item">18:00 - 22:00</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="receiving-type__info-block">
+                        <div class="receiving-type__info-image-block image-pins image-block image-pins--rowing receiving-type--center">
+                          <div class="button-popup image-pins__item">
+                            <button class="button button-popup__button" type="button">
+                              <svg class="button-popup__icon" width="14" height="23" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#rocket-icon"></use>
+                              </svg>
+                            </button>
+                            <div class="button-popup__modal">
+                              <p class="text">
+                                Старт тренировок в день доставки
+                              </p>
+                            </div>
+                          </div>
+                          <picture>
+                            <source type="image/webp"
+                              srcset="/i/media/stat/delivery/receiving/rowing.webp 1x, /i/media/stat/delivery/receiving/rowing@2x.webp 2x">
+                            <img src="/i/media/stat/delivery/receiving/rowing.jpg" ,
+                              srcset="/i/media/stat/delivery/receiving/rowing@2x.jpg 2x" alt="Гребной тренажер" />
+                          </picture>
+                        </div>
+                        <div class="paper accordion accordion--adaptive accordion--delivery">
+                          <div class="ac">
+                            <h3 class="title ac-header">
+                              <button class="button ac-trigger">
+                                <p class="text title-secondary">
+                                  Первая тренировка в день доставки
+                                </p>
+                              </button>
+                            </h3>
+                            <div class="ac-panel">
+                              <div class="accordion__text-block">
+                                <p class="text text-main">
+                                  Это разительно отличает нас от МаркетПлейсов и интернет-магазинов, которые просто привезут
+                                  вам
+                                  заказанный товар до подъезда или входной двери квартиры, после чего уедут. </p>
+                                <p class="text text-main">
+                                  Фактически, наша опция доставки — это тренажер (или другой товар) <span
+                                    class="text-main text-main--accent">под ключ</span>, который после заказа окажется у вас в
+                                  собранном и <span class="text-main text-main--accent">готовом к использованию виде</span>.
+                                </p>
+                              </div>
+                              <div class="accordion__action-block">
+                                <button class="button button-action" type="button">
+                                  В корзину
+                                </button>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -4002,7 +4033,8 @@
                       <source media="(min-width: 768px)"
                         srcset="/i/media/stat/delivery/receiving/map-desk.jpg 1x, /i/media/stat/delivery/receiving/map-desk@2x.jpg 2x">
                       <img src="/i/media/stat/delivery/receiving/map.jpg" ,
-                        srcset="/i/media/stat/delivery/receiving/map@2x.jpg 2x" alt="ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж" />
+                        srcset="/i/media/stat/delivery/receiving/map@2x.jpg 2x"
+                        alt="ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж" />
                     </picture>
                   </div>
                   <div class="paper accordion accordion--adaptive accordion--delivery">
@@ -4017,10 +4049,12 @@
                       <div class="ac-panel">
                         <div class="accordion__text-block">
                           <p class="text text-main">
-                            Если вы хотите самостоятельно забрать свой заказ с нашего центрального склада в Санкт-Петербурге, выберете этот способ при оформлении заказа.
+                            Если вы хотите самостоятельно забрать свой заказ с нашего центрального склада в
+                            Санкт-Петербурге, выберете этот способ при оформлении заказа.
                           </p>
                           <p class="text text-main">
-                            Для товаров, заявленных в наличии, самовывоз чаще всего возможен в день заказа. Подробности объяснит менеджер.
+                            Для товаров, заявленных в наличии, самовывоз чаще всего возможен в день заказа. Подробности
+                            объяснит менеджер.
                           </p>
                         </div>
                         <address>
@@ -4029,7 +4063,7 @@
                           </h4>
                           <div class="accordion__text-block">
                             <p class="text text-main">
-                              ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж                           </p>
+                              ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж </p>
                           </div>
                         </address>
                       </div>
@@ -4056,60 +4090,66 @@
                       <li class="receiving-type__pickup-item">
                         <div class="image-block">
                           <picture>
-                          <source type="image/webp"
+                            <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-0.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-0@2x.webp 2x">
                             <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-0.jpg" ,
-                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-0@2x.jpg 2x" alt="ТВК Интерио" />
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-0@2x.jpg 2x"
+                              alt="ТВК Интерио" />
                           </picture>
                         </div>
                       </li>
                       <li class="receiving-type__pickup-item image-block">
                         <div class="image-block">
                           <picture>
-                          <source type="image/webp"
+                            <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-1.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-1@2x.webp 2x">
                             <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-1.jpg" ,
-                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-1@2x.jpg 2x" alt="ТВК Интерио" />
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-1@2x.jpg 2x"
+                              alt="ТВК Интерио" />
                           </picture>
                         </div>
                       </li>
                       <li class="receiving-type__pickup-item image-block">
                         <div class="image-block">
                           <picture>
-                          <source type="image/webp"
+                            <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-2.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-2@2x.webp 2x">
                             <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-2.jpg" ,
-                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-2@2x.jpg 2x" alt="ТВК Интерио" />
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-2@2x.jpg 2x"
+                              alt="ТВК Интерио" />
                           </picture>
                         </div>
                       </li>
                       <li class="receiving-type__pickup-item image-block">
                         <div class="image-block">
                           <picture>
-                          <source type="image/webp"
+                            <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-3.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-3@2x.webp 2x">
                             <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-3.jpg" ,
-                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-3@2x.jpg 2x" alt="ТВК Интерио" />
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-3@2x.jpg 2x"
+                              alt="ТВК Интерио" />
                           </picture>
                         </div>
                       </li>
                       <li class="receiving-type__pickup-item image-block">
                         <div class="image-block">
                           <picture>
-                          <source type="image/webp"
+                            <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-4.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-4@2x.webp 2x">
                             <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-4.jpg" ,
-                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-4@2x.jpg 2x" alt="ТВК Интерио" />
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-4@2x.jpg 2x"
+                              alt="ТВК Интерио" />
                           </picture>
                         </div>
                       </li>
                       <li class="receiving-type__pickup-item image-block">
                         <div class="image-block">
                           <picture>
-                          <source type="image/webp"
+                            <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-5.webp 1x, /i/media/stat/delivery/receiving/delivery-slider/slide-5@2x.webp 2x">
                             <img src="/i/media/stat/delivery/receiving/delivery-slider/slide-5.jpg" ,
-                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-5@2x.jpg 2x" alt="ТВК Интерио" />
+                              srcset="/i/media/stat/delivery/receiving/delivery-slider/slide-5@2x.jpg 2x"
+                              alt="ТВК Интерио" />
                           </picture>
                         </div>
                       </li>
@@ -4782,26 +4822,7 @@
 
 
         <!-- <div class="container">
-          <div class="image-pins image-block image-pins--bike">
-            <div class="button-popup image-pins__item">
-              <button class="button button-popup__button" type="button">
-                <svg class="button-popup__icon" width="10" height="20" role="img" focusable="false">
-                  <use xlink:href="/i/media/stat/sprite.svg#time-icon"></use>
-                </svg>
-              </button>
-              <div class="button-popup__modal">
-                <p class="text">
-                  выбор времени доставки
-                </p>
-              </div>
-            </div>
-            <picture>
-              <source type="image/webp"
-                srcset="/i/media/stat/delivery/receiving/bike.webp 1x, /i/media/stat/delivery/receiving/bike@2x.webp 2x">
-              <img src="/i/media/stat/delivery/receiving/bike.jpg" ,
-                srcset="/i/media/stat/delivery/receiving/bike@2x.jpg 2x" alt="Велотренажер" />
-            </picture>
-          </div>
+
         </div> -->
 
       </div>

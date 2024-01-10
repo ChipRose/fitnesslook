@@ -1,5 +1,5 @@
 .slider-main__header {
-  padding-bottom: var(--indent-big);
+  padding-bottom: var(--indent-huge);
   margin-bottom: var(--indent-big);
   position: relative;
 
@@ -19,4 +19,8 @@
 
 .slider-main__intro-block {
   margin-bottom: var(--indent-big);
+
+  @media (min-width:$tablet-width) {
+    display: flex;
+  }
 }
