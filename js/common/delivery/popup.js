@@ -7,7 +7,7 @@ const closeAllPopup = (popupItems) => {
 }
 
 const setPopup = (popupProperties) => {
-  const {popupClass='.button-popup', buttonClass='.button-popup__button'}=popupProperties||{};
+  const { popupClass = '.button-popup', buttonClass = '.button-popup__button' } = popupProperties || {};
   const popupItems = document.querySelectorAll(popupClass);
 
   popupItems.forEach((item) => {
@@ -23,7 +23,7 @@ const setPopup = (popupProperties) => {
     });
 
     buttonPopup.addEventListener('blur', () => {
-      closeAllPopup();
+      closeAllPopup(popupItems);
     })
   })
 }

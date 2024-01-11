@@ -372,7 +372,7 @@ const setPopup = popupProperties => {
       }
     });
     buttonPopup.addEventListener('blur', () => {
-      closeAllPopup();
+      closeAllPopup(popupItems);
     });
   });
 };

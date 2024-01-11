@@ -41,3 +41,25 @@
 .payment__extra-title {
   margin-bottom: var(--indent-big);
 }
+
+.payment__extra-info {
+  margin-bottom: var(--indent-big);
+
+  @media (min-width:$tablet-width) {
+    margin: calc(-1 * var(--indent-big)) calc(-1 * var(--indent-big)) 0;
+    display: flex;
+  }
+}
+
+.payment__extra-item{
+  margin-bottom: var(--indent-main);
+
+  &:last-child {
+    margin-bottom: 0;
+
+  }
+  @media (min-width:$tablet-width) {
+    margin: var(--indent-big);
+    flex: 0 0 calc(50% - 2 * var(--indent-big));
+  }
+}
