@@ -400,10 +400,9 @@ const initMap = () => {
     iconLayout: 'default#image',
     iconImageHref: '/i/media/stat/icons/ancor.svg',
     icon_imagesize: [200, 200]
-    // iconImageOffset: [75, 75]
   });
-
   myMap.controls.get('zoomControl').options.set('size', 'small');
+  myMap.behaviors.disable('scrollZoom');
   myMap.geoObjects.add(myPlacemark);
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initMap);
