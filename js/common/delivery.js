@@ -1,10 +1,10 @@
 import Accordion from 'accordion-js';
-import { settingAccordionAdaptive,  } from './delivery/accordion.js';
+import { settingAccordionAdaptive  } from './delivery/accordion.js';
 import setPopup from './delivery/popup.js';
 import initMap from './delivery/map.js';
 import './delivery/modal.js';
 import './delivery/form.js';
-import { setSlider, setTableSlider,setSimpleSlider } from './delivery/slider.js';
+import { setSlider, setTableSlider,setSimpleSlider,settingSliderAdaptive } from './delivery/slider.js';
 
 setPopup();
 

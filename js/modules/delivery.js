@@ -493,7 +493,11 @@ const setTableSlider = (container, props) => {
     container,
     items: 4,
     nav: false,
-    responsive: {},
+    responsive: {
+      768: {
+        items: 7
+      }
+    },
     ...props
   });
 };

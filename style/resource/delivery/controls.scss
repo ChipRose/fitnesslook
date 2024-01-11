@@ -175,10 +175,12 @@
 .button-modal__container {
   width: 153px;
   min-height: 100px;
+  height: 100%;
 }
 
 .button-modal__image-block {
-  padding-top: var(--indent-small);
+  margin-top: auto;
+  padding-top: var(--indent-main);
   padding-bottom: var(--indent-small);
   margin-bottom: var(--indent-basic);
   display: flex;
@@ -190,6 +192,8 @@
 }
 
 .button-modal__container {
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
@@ -197,10 +201,17 @@
   fill: var(--cl-dark);
 }
 
-.button-modal__button {
+.button-modal__action-block {
+  top: 0;
+  right: 0;
+  left: 0;
   position: absolute;
-  top: var(--indent-basic);
-  right: var(--indent-basic);
+}
+
+.button-modal__button {
+  margin-top: var(--indent-basic);
+  margin-right: var(--indent-basic);
+  margin-left: auto;
 }
 
 .button-modal__modal {

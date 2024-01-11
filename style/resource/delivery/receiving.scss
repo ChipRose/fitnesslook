@@ -120,6 +120,9 @@
     align-items: flex-end;
     background: center top / contain no-repeat url('/i/media-resource/stat/receiving/bg-desk.png') ;
   }
+  @media (min-resolution: 2dppx) {
+    background: center top / contain no-repeat url('/i/media-resource/stat/receiving/bg-desk@2x.png') ;
+  }
 }
 
 .receiving-type__column {

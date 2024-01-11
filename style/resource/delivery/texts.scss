@@ -76,6 +76,21 @@
   &--strong {
     font-weight: 500;
   }
+
+  &--del {
+    font-weight: 300;
+    color: var(--cl-disable);
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      background: var(--cl-disable);
+    }
+  }
 }
 
 // Numeric list
