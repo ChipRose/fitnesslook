@@ -387,15 +387,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-// import * as ymaps3 from 'ymaps3';
-
 const LOCATION = {
-  center: [37.623082, 55.75254],
-  zoom: 9
+  center: [59.997230, 30.269389],
+  controls: ['zoomControl'],
+  zoom: 13
 };
+const map = document.querySelector('#map');
+map.replaceChildren();
 const initMap = () => {
-  const myMap = new ymaps.Map('map-container', LOCATION);
-  myMap.disableDragging();
+  const myMap = new ymaps.Map('map', LOCATION);
+  const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '/i/media/stat/icons/ancor.svg',
+    icon_imagesize: [200, 200]
+    // iconImageOffset: [75, 75]
+  });
+
+  myMap.controls.get('zoomControl').options.set('size', 'small');
+  myMap.geoObjects.add(myPlacemark);
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initMap);
 
@@ -3748,6 +3757,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
 const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-cost-delivery', {
   navContainer: '#slider-cost-delivery-buttons',
   autoHeight: true

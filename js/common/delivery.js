@@ -8,6 +8,7 @@ import { setSlider, setTableSlider,setSimpleSlider,settingSliderAdaptive } from 
 
 setPopup();
 
+ymaps.ready(initMap);
 
 const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && setSlider('#slider-cost-delivery', {
   navContainer: '#slider-cost-delivery-buttons',
