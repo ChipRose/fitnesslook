@@ -8,6 +8,7 @@ buttonsModal.forEach((button) => {
     modal.classList.remove('button-modal__modal--open');
     window.removeEventListener('keydown', eskClose);
   }
+
   const eskClose = (evt) => {
     if (evt.code === "Escape" || evt.code === "ESC") {
       handleClose();

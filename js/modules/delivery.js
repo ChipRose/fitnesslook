@@ -392,17 +392,18 @@ const LOCATION = {
   controls: ['zoomControl'],
   zoom: 13
 };
+const ANCOR = {
+  iconLayout: 'default#image',
+  iconImageHref: '/i/media/stat/icons/ancor.svg',
+  icon_imagesize: [200, 200]
+};
 const map = document.querySelector('#map');
 map.replaceChildren();
 const initMap = () => {
   const myMap = new ymaps.Map('map', LOCATION);
-  const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
-    iconLayout: 'default#image',
-    iconImageHref: '/i/media/stat/icons/ancor.svg',
-    icon_imagesize: [200, 200]
-  });
+  const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, ANCOR);
   myMap.controls.get('zoomControl').options.set('size', 'small');
-  myMap.behaviors.disable('scrollZoom');
+  myMap.behaviors.disable('drag');
   myMap.geoObjects.add(myPlacemark);
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initMap);
@@ -447,11 +448,37 @@ const buttonNewLocation = document.querySelector('#button-new-location');
 const formBlock = document.querySelector('#form-communicate');
 buttonNewLocation.addEventListener('click', () => {
   formBlock.classList.toggle('form-communicate--open');
-  console.log('click');
 });
 
 /***/ }),
 /* 7 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   setNavigation: () => (/* binding */ setNavigation)
+/* harmony export */ });
+const setNavigation = container => {
+  const HEADER_HEIGHT = 153;
+  const navigationList = document.querySelector(container);
+  if (navigationList) {
+    navigationList.addEventListener('click', evt => {
+      evt.preventDefault();
+      const elementHref = evt.target.href;
+      const elementId = elementHref.substring(elementHref.indexOf('#'));
+      const scrollElement = document.querySelector(elementId).offsetTop;
+      window.scrollTo({
+        top: scrollElement + HEADER_HEIGHT,
+        behavior: 'smooth'
+      });
+    });
+  }
+};
+
+
+/***/ }),
+/* 8 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -463,7 +490,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive),
 /* harmony export */   updateSliderAdaptive: () => (/* binding */ updateSliderAdaptive)
 /* harmony export */ });
-/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
 
 const setSimpleSlider = (buttonsSelector, container) => {
   const sliderButtons = document.querySelector(buttonsSelector);
@@ -536,7 +563,7 @@ const updateSliderAdaptive = slider => {
 
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3747,7 +3774,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _delivery_map_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 /* harmony import */ var _delivery_modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var _delivery_form_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _delivery_navigation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
 
 
 
@@ -3755,29 +3783,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+
 ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
-const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-cost-delivery', {
+(0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+
+// Sliders
+
+const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-cost-delivery', {
   navContainer: '#slider-cost-delivery-buttons',
   autoHeight: true
 });
-const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setTableSlider)('#slider-table', {
+const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setTableSlider)('#slider-table', {
   controlsContainer: '#slider-table-buttons'
 });
-const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#pickup-slider', {
+const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#pickup-slider', {
   controlsContainer: "#pickup-slider-buttons",
   controls: true,
   nav: false
 });
-const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSlider)('#slider-cost-lifting', {
+const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-cost-lifting', {
   navContainer: '#slider-cost-lifting-buttons',
   autoHeight: true
 });
+(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
+
+// Accordions
+
 const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--delivery')));
 (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery);
 const accordionFaq = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--faq')));
 (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery);
-(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_6__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
 })();
 
 /******/ })()
