@@ -102,3 +102,10 @@
 .list-numeric__item {
   padding-left: var(--indent-basic);
 }
+
+// Basic link
+
+.link-basic {
+  font-weight: 500;
+  color: var(--cl-accent);
+}

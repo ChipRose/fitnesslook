@@ -3628,8 +3628,9 @@
                   <p class="text subtitle cover__subtitle">
                     В декабре мы сделали доставку бесплатной для заказов от <nobr>65 000 ₽</nobr>.
                   </p>
-                  <button class="button button-main button-main--active cover__button">Рассчитать стоимость
-                    доставки</button>
+                  <button class="button button-main button-main--active cover__button cover__button--hidden">
+                    Рассчитать стоимость доставки
+                  </button>
                 </header>
                 <div class="image-block cover__image-block">
                   <picture>
@@ -3659,11 +3660,21 @@
         <section class="navigation page-delivery__navigation">
           <div class="container">
             <div class="button-block">
-              <a href="#receiving-type" class="link button-main button-block__item button-main--active">Способы
-                доставки</a>
-              <a href="#cost-delivery" class="link button-main  button-block__item">Стоимость доставки</a>
-              <a href="#payment" class="link button-main  button-block__item">Способы оплаты</a>
-              <a href="#schedule" class="link button-main button-block__item">График работы</a>
+              <a href="#receiving-type" class="link button-main button-block__item button-main--active">
+                Способы получения
+              </a>
+              <a href="#cost-delivery" class="link button-main  button-block__item">
+                Стоимость доставки
+              </a>
+              <a href="#payment" class="link button-main  button-block__item">
+                Способы оплаты
+              </a>
+              <a href="#regions-list" class="link button-main  button-block__item">
+                Доставка в регионы
+              </a>
+              <a href="#faq" class="link button-main button-block__item">
+                FAQ
+              </a>
             </div>
           </div>
         </section>
@@ -4209,7 +4220,7 @@
               <div class="button-block" id="slider-cost-delivery-buttons">
                 <button class="button button-main button-block__item ">Санкт-Петербург</button>
                 <button class="button button-main  button-block__item">Ленинградская область</button>
-                <button class="button button-main  button-block__item">Другие регионы</button>
+                <a href ="#regions-list" class="link button-main  button-block__item">Другие регионы</a>
               </div>
             </header>
             <ul class="list" id="slider-cost-delivery">
@@ -4449,7 +4460,7 @@
                       </div>
                       <div class="paper button-modal__modal">
                         <header class="button-modal__header">
-                          <h3 class="title title-extra">банковской картой</h3>
+                          <h3 class="title title-extra">Оплата банковской картой</h3>
                           <button class="button button-round button-model__close-button">
                             <svg class="button-table__icon" width="11" height="11" role="img" aria-label="Закрыть"
                               focusable="false">
@@ -4496,7 +4507,7 @@
                       </div>
                       <div class="paper button-modal__modal">
                         <header class="button-modal__header">
-                          <h3 class="title title-extra">банковской картой оnline сервисы
+                          <h3 class="title title-extra">Оплата банковской картой оnline сервисы
                           </h3>
                           <button class="button button-round button-model__close-button">
                             <svg class="button-table__icon" width="11" height="11" role="img" aria-label="Закрыть"
@@ -4537,7 +4548,8 @@
                       </div>
                       <div class="paper button-modal__modal">
                         <header class="button-modal__header">
-                          <h3 class="title title-extra">по QR
+                          <h3 class="title title-extra">
+                            Оплата по QR
                           </h3>
                           <button class="button button-round button-model__close-button">
                             <svg class="button-table__icon" width="11" height="11" role="img" aria-label="Закрыть"
@@ -4549,11 +4561,10 @@
                         </header>
                         <div class="button-modal__content-block">
                           <p class="text text-main ">
-                            Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
+                            Мы предоставляем возможность оплатить заказ с помощью системы быстрых платежей.
                           </p>
                           <p class="text text-main">
-                            Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет
-                            оплаты не связан с ведением ими предпринимательской деятельности.
+                            Сделать это можно как переводом по СБП, так и с помощью сформированного нами QR-кода со счетом на оплату.
                           </p>
                         </div>
                       </div>
@@ -4577,7 +4588,7 @@
                       </div>
                       <div class="paper button-modal__modal">
                         <header class="button-modal__header">
-                          <h3 class="title title-extra">банковским переводом</h3>
+                          <h3 class="title title-extra">Оплата банковским переводом</h3>
                           <button class="button button-round button-model__close-button">
                             <svg class="button-table__icon" width="11" height="11" role="img" focusable="false">
                               <use xlink:href="/i/media/stat/sprite.svg#close-icon"></use>
@@ -4625,7 +4636,7 @@
                       <div class="paper button-modal__modal">
                         <header class="button-modal__header">
                           <h3 class="title title-extra">
-                            Рассрочка/ кредит
+                            Оплата в рассрочку или кредит
                           </h3>
                           <button class="button button-round button-model__close-button">
                             <svg class="button-table__icon" width="11" height="11" role="img" aria-label="Закрыть"
@@ -4637,11 +4648,10 @@
                         </header>
                         <div class="button-modal__content-block">
                           <p class="text text-main ">
-                            Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
+                            Услуга покупки товаров FitnessLook в рассрочку или кредит предоставляются нашими банками-партнерами: АО "ТИНЬКОФФ БАНК" и ПАО "ПОЧТА БАНК".
                           </p>
                           <p class="text text-main">
-                            Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет
-                            оплаты не связан с ведением ими предпринимательской деятельности.
+                            Подайте заявку и получите ответ в течение пары минут! Более <a href="https://www.fitnesslook.ru/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html" class="link link-basic">подробная информация</a> об этом способе оплаты.
                           </p>
                         </div>
                       </div>
@@ -4669,7 +4679,7 @@
                       <div class="paper button-modal__modal">
                         <header class="button-modal__header">
                           <h3 class="title title-extra">
-                            В рассрочку картой “Халва”
+                            Оплата в рассрочку картой “Халва”
                           </h3>
                           <button class="button button-round button-model__close-button">
                             <svg class="button-table__icon" width="11" height="11" role="img" aria-label="Закрыть"
@@ -4681,11 +4691,9 @@
                         </header>
                         <div class="button-modal__content-block">
                           <p class="text text-main ">
-                            Наличный расчет — это передача денежных купюр или монет от покупателя продавцу.
-                          </p>
+                            Обаладателям карты «Халва» доступны супер-выгодные условия покупки наших товаров в рассрочку 0%, без комиссий и переплат, поскольку гипермаркет FitnessLook является партнером ПАО «Совкомбанк».                          </p>
                           <p class="text text-main">
-                            Ограничений по сумме нет, если обе стороны сделки являются физическими лицами, а предмет
-                            оплаты не связан с ведением ими предпринимательской деятельности.
+                            Способ доступен при online-оплаты картой «Халва», рассрочка активируется в личном кабинете банка.
                           </p>
                         </div>
                       </div>
@@ -4834,6 +4842,7 @@
           </div>
         </section>
 
+        <a id="faq"></a>
         <section class="faq page-delivery__faq">
           <div class="container">
             <h2 class="title title-main faq__title">
