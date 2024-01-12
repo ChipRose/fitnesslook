@@ -1,11 +1,24 @@
 import Accordion from 'accordion-js';
-import { settingAccordionAdaptive  } from './delivery/accordion.js';
+import { settingAccordionAdaptive } from './delivery/accordion.js';
+import { getData } from './delivery/api.js';
 import setPopup from './delivery/popup.js';
 import initMap from './delivery/map.js';
 import './delivery/modal.js';
 import './delivery/form.js';
-import {setNavigation} from "./delivery/navigation.js";
-import { setSlider, setTableSlider,setSimpleSlider } from './delivery/slider.js';
+import { renderCitiesDelivery } from './delivery/regions.js';
+import { setNavigation } from "./delivery/navigation.js";
+import { setSlider, setTableSlider, setSimpleSlider } from './delivery/slider.js';
+
+getData((regions) => {
+  renderCitiesDelivery(regions);
+});
+
+// Navigation
+
+setNavigation('#navigation-in');
+setNavigation('#cost-regions');
+setNavigation('#global-up');
+setNavigation('#receiving-up');
 
 ymaps.ready(initMap);
 setPopup();

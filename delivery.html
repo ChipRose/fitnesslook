@@ -3614,7 +3614,7 @@
                 </h2>
                 <header class="cover__header">
                   <p class="text subtitle cover__subtitle">
-                    В декабре мы сделали доставку бесплатной для заказов от <span class="nobr">65 000 ₽</span>.
+                    В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class="nobr">25'000 ₽</span>.
                   </p>
                   <button class="button button-main button-main--active cover__button cover__button--hidden">
                     Рассчитать стоимость доставки
@@ -3648,7 +3648,7 @@
         <section class="navigation page-delivery__navigation">
           <div class="container">
             <h2 class="visually-hidden">Навигация по странице</h2>
-            <div class="button-block">
+            <div class="button-block" id="navigation-in">
               <a href="#receiving-type" class="link button-main button-block__item button-main--active">
                 Способы получения
               </a>
@@ -3658,7 +3658,7 @@
               <a href="#payment" class="link button-main  button-block__item">
                 Способы оплаты
               </a>
-              <a href="#regions-list" class="link button-main  button-block__item">
+              <a href="#regions" class="link button-main  button-block__item">
                 Доставка в регионы
               </a>
               <a href="#faq" class="link button-main button-block__item">
@@ -3684,7 +3684,8 @@
                     Хорошие новости!
                   </p>
                   <p class="text text-main receiving__text">
-                    Весь декабрь эта опция является приятным подарком, за который не потребуется доплачивать, для 95%
+                    Весь {$cur_month} эта опция является приятным подарком, за который не потребуется доплачивать, для
+                    95%
                     заказов. Кроме того, мы запустили акцию и снизили цену на доставку для товаров, не попадающих под
                     условия бесплатной доставки.
                   </p>
@@ -3695,7 +3696,7 @@
                   </p>
                 </div>
                 <div class="receiving__action-block">
-                  <a href="#regions-list" class="link button-main button-main--active">Список городов</a>
+                  <a href="#regions" class="link button-main button-main--active">Список городов</a>
                 </div>
               </div>
               <div class="image-block receiving__map-block">
@@ -3892,20 +3893,20 @@
                                   </svg>
                                 </div>
                                 <h3 class="title title-secondary accordion__extra-title-block">
-                                  Подарки в декабре
+                                  Подарки в {$cur_month_e}
                                 </h3>
                                 <div class="accordion__extra-text-block">
                                   <p class="text text-main">
                                     <span class="text-main text-main--accent">Для этого воспользуйтесь опцией сборки,
                                       которая
-                                      также в декабре является подарком</span>
+                                      также в {$cur_month_e} является подарком</span>
                                     для большей части товаров нашего спортивного гипермаркета.
                                   </p>
                                 </div>
                                 <div class="accordion__action-block">
-                                  <button class="button button-action" type="button">
+                                  <a class="link button-action" href="https://www.fitnesslook.ru/pages/sborka-trenazherov-i-oborudovaniya.html" target="_blank">
                                     Сборка
-                                  </button>
+                                  </a>
                                 </div>
                               </div>
                             </div>
@@ -4011,11 +4012,6 @@
                                   собранном и <span class="text-main text-main--accent">готовом к использованию
                                     виде</span>.
                                 </p>
-                              </div>
-                              <div class="accordion__action-block">
-                                <button class="button button-action" type="button">
-                                  В корзину
-                                </button>
                               </div>
                             </div>
                           </div>
@@ -4188,7 +4184,7 @@
             </ul>
 
             <footer class="receiving-type__action-block">
-              <a href="#receiving-type" class="link button-round">
+              <a href="#receiving-type" id="receiving-up" class="link button-round">
                 UP
                 <span class="visually-hidden">Наверх блока</span>
               </a>
@@ -4203,11 +4199,11 @@
               <h2 class="title title-main slider-main__title">
                 Стоимость доставки
               </h2>
-              <div class="button-block" id="slider-cost-delivery-buttons">
+              <div class="button-block cost-delivery__button-block" id="slider-cost-delivery-buttons">
                 <button class="button button-main button-block__item ">Санкт-Петербург</button>
                 <button class="button button-main  button-block__item">Ленинградская область</button>
-                <a href="#regions-list" class="link button-main  button-block__item">Другие регионы</a>
               </div>
+              <a href="#regions" class="link button-main" id="cost-regions">Другие регионы</a>
             </header>
             <ul class="list" id="slider-cost-delivery">
               <li>
@@ -4215,13 +4211,11 @@
                   <div class="slider-main__intro-block">
                     <div class="slider-main__intro-item">
                       <p class="text text-main">
-                        Обращаем Ваше внимание, доставка осуществляется до подъезда или до места, куда сможет
-                        беспрепятственно подъехать автомобиль.
-                      </p>
+                        В {$cur_month_e} мы дарим бесплатную доставку для всех заказов в пределах КАД стоимостью от 25'000 ₽                      </p>
                     </div>
                     <div class="slider-main__intro-item">
                       <p class="text text-main">
-                        Маршрут доставки в пределах КАД ограничен ул. Пионерстроя и Коннолахтинской дорогой.
+                        Кроме того, мы на 30% снизили стоимость доставки заказов от 15'000 до 25'000 ₽.
                       </p>
                     </div>
                   </div>
@@ -4278,9 +4272,6 @@
               <li>
                 Ленинградская область
               </li>
-              <li>
-                Другие регионы
-              </li>
             </ul>
           </div>
         </section>
@@ -4292,8 +4283,8 @@
                 Стоимость подъема на этаж
               </h2>
               <div class="button-block" id="slider-cost-lifting-buttons">
-                <button class="button button-main button-block__item ">С лифтом</button>
-                <button class="button button-main  button-block__item">Без лифта</button>
+                <button class="button button-main button-block__item ">Без лифта</button>
+                <button class="button button-main  button-block__item">Без грузового лифта</button>
               </div>
             </header>
             <ul class="list" id="slider-cost-lifting">
@@ -4303,8 +4294,7 @@
                     <div class="slider-main__intro-item">
                       <p class="text text-main">
                         Стоимость подъема на этаж до дверей в квартиру оговаривается заранее и её стоимость
-                        рассчитывается
-                        следующим образом:
+                        рассчитывается следующим образом:
                       </p>
                     </div>
                   </div>
@@ -4603,73 +4593,14 @@
           </div>
         </section>
 
-        <a id="regions-list"></a>
+        <a id="regions"></a>
         <section class="delivery-regions page-delivery__delivery-regions">
           <div class="container">
             <h2 class="title title-main delivery-regions__title">
               Доставка в регионы
             </h2>
-            <ul class="list button-block delivery-regions__list">
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Москва и МО</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Волгоград</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Воронеж</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Екатеринбург</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Казань</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Краснодар</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Красноярск</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Нижний Новгород</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Омск</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Пермь</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Ростов-на-Дону</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Самара</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Саратов</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Симферополь</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Сочи</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Тольятти</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Тюмень</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Уфа</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Челябинск</a>
-              </li>
-              <li class="button-block__item">
-                <a href="#" class="link button-main">Новосибирск</a>
-              </li>
+            <ul class="list button-block delivery-regions__list" id="regions-list">
+              <!-- Regions list -->
             </ul>
             <div class="delivery-regions__exception-block">
               <button type="button" class="button button-main button-main--active" id="button-new-location">Моего города
@@ -4719,7 +4650,6 @@
               <button class="button button-main button-main--active form-communicate__button" type="submit">Узнать про
                 доставку</button>
             </form>
-
           </div>
         </section>
 
@@ -4846,16 +4776,19 @@
 
         <div class="action page-delivery__action">
           <div class="container">
-            <a href="#up" class="link button-round button-round--accent action__button">
+            <a href="#up" id="global-up" class="link button-round button-round--accent action__button">
               UP
             </a>
           </div>
         </div>
 
 
-        <!-- <div class="container">
-
-        </div> -->
+        <!-- Regions item template -->
+        <template id="regions-item">
+          <li class="button-block__item">
+            <a href="" target="_blank" class="link button-main"></a>
+          </li>
+        </template>
 
       </div>
       <div class="clear"></div>

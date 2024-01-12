@@ -347,6 +347,27 @@ const settingAccordionAdaptive = (accordion, slider) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getData: () => (/* binding */ getData)
+/* harmony export */ });
+const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
+const getData = onSuccess => {
+  fetch(GET_LINK).then(response => {
+    if (response.ok) {
+      const regions = response.json();
+      return regions;
+    }
+    throw new Error(`${response.status} — ${response.statusText}`);
+  }).then(products => onSuccess(products)).catch(error => console.log(error));
+};
+
+
+/***/ }),
+/* 4 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 const OPEN_CLASS = 'button-popup--open';
@@ -379,7 +400,7 @@ const setPopup = popupProperties => {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (setPopup);
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -409,7 +430,7 @@ const initMap = () => {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (initMap);
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -439,7 +460,7 @@ buttonsModal.forEach(button => {
 });
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -451,7 +472,34 @@ buttonNewLocation.addEventListener('click', () => {
 });
 
 /***/ }),
-/* 7 */
+/* 8 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   renderCitiesDelivery: () => (/* binding */ renderCitiesDelivery)
+/* harmony export */ });
+// import { formatPrice } from "./util.js";
+
+const regionsTemplate = document.querySelector("#regions-item").content.querySelector('.button-block__item');
+const regionsList = document.querySelector('#regions-list');
+const renderCitiesDelivery = items => {
+  console.log(items);
+  const regionsContentFragment = document.createDocumentFragment();
+  items.forEach(item => {
+    const region = regionsTemplate.cloneNode(true);
+    const button = region.querySelector('.button-main');
+    button.textContent = item.city;
+    button.href = `https://${item.name}.fitnesslook.ru/pages/dostavka.html`;
+    regionsContentFragment.appendChild(region);
+  });
+  regionsList.appendChild(regionsContentFragment);
+};
+
+
+/***/ }),
+/* 9 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -478,7 +526,7 @@ const setNavigation = container => {
 
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -490,7 +538,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive),
 /* harmony export */   updateSliderAdaptive: () => (/* binding */ updateSliderAdaptive)
 /* harmony export */ });
-/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 const setSimpleSlider = (buttonsSelector, container) => {
   const sliderButtons = document.querySelector(buttonsSelector);
@@ -563,7 +611,7 @@ const updateSliderAdaptive = slider => {
 
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3770,12 +3818,14 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
-/* harmony import */ var _delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
-/* harmony import */ var _delivery_map_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _delivery_modal_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
-/* harmony import */ var _delivery_form_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _delivery_navigation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _delivery_api_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
+/* harmony import */ var _delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
+/* harmony import */ var _delivery_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var _delivery_modal_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
+/* harmony import */ var _delivery_form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _delivery_regions_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
 
 
 
@@ -3784,28 +3834,40 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
-(0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+
+
+(0,_delivery_api_js__WEBPACK_IMPORTED_MODULE_2__.getData)(regions => {
+  (0,_delivery_regions_js__WEBPACK_IMPORTED_MODULE_7__.renderCitiesDelivery)(regions);
+});
+
+// Navigation
+
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#navigation-in');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#cost-regions');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#global-up');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#receiving-up');
+ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
+(0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
 // Sliders
 
-const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-cost-delivery', {
+const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSlider)('#slider-cost-delivery', {
   navContainer: '#slider-cost-delivery-buttons',
   autoHeight: true
 });
-const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setTableSlider)('#slider-table', {
+const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setTableSlider)('#slider-table', {
   controlsContainer: '#slider-table-buttons'
 });
-const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#pickup-slider', {
+const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSlider)('#pickup-slider', {
   controlsContainer: "#pickup-slider-buttons",
   controls: true,
   nav: false
 });
-const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSlider)('#slider-cost-lifting', {
+const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSlider)('#slider-cost-lifting', {
   navContainer: '#slider-cost-lifting-buttons',
   autoHeight: true
 });
-(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
+(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
 
 // Accordions
 
