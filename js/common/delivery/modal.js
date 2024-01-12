@@ -1,5 +1,5 @@
-const buttonsModal = document.querySelectorAll('.button-modal__item');
 const paymentSection = document.querySelector('.payment');
+const buttonsModal = document.querySelectorAll('.button-modal__item');
 
 buttonsModal.forEach((button) => {
   const modal = button.querySelector('.button-modal__modal');
@@ -15,7 +15,7 @@ buttonsModal.forEach((button) => {
     }
   }
 
-  button.querySelector('.button-modal__button').addEventListener('click', () => {
+  button.querySelector('.button-modal__button')?.addEventListener('click', () => {
     window.addEventListener('keydown', eskClose);
 
     paymentSection.classList.add('payment--open');
