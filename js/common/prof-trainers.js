@@ -58,7 +58,7 @@ settingSliderAdaptive(projectsSmallSlider);
 
 // Accordions
 
-const accordionIntro = new Accordion(Array.from(document.querySelectorAll('#accordion-intro')), settingAccordionInSlider(sliderIntro));
+const accordionIntro = new Accordion(Array.from(document.querySelectorAll('.accordion-intro')), settingAccordionInSlider(sliderIntro));
 settingAccordionAdaptive(accordionIntro, sliderIntro);
 
 const accordionAbout = new Accordion(Array.from(document.querySelectorAll('#accordion-about')), settingAccordion({ showMultiple: true }));

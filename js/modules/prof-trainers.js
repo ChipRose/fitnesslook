@@ -4040,7 +4040,7 @@ const projectsSmallSlider = (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE
 
 // Accordions
 
-const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-intro')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(sliderIntro));
+const accordionIntro = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-intro')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(sliderIntro));
 (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionIntro, sliderIntro);
 const accordionAbout = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('#accordion-about')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)({
   showMultiple: true
