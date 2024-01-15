@@ -26,6 +26,8 @@ setPopup();
 // Sliders
 
 setSimpleSlider('#slider-cost-delivery-buttons', '#slider-cost-delivery');
+setSimpleSlider('#slider-cost-lifting-buttons', '#slider-cost-lifting');
+setSimpleSlider('#slider-delivery-type-buttons', '.receiving-type__main-slider');
 
 const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table-buttons') && setTableSlider('#slider-table', {
   controlsContainer: '#slider-table-buttons',
@@ -41,12 +43,11 @@ const sliderPickup = document.querySelector('#pickup-slider') && document.queryS
   nav: false
 });
 
-const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && setSlider('#slider-cost-lifting', {
-  navContainer: '#slider-cost-lifting-buttons',
-  autoHeight: true,
-});
+// const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && setSlider('#slider-cost-lifting', {
+//   navContainer: '#slider-cost-lifting-buttons',
+//   autoHeight: true,
+// });
 
-setSimpleSlider('#slider-delivery-type-buttons', '.receiving-type__main-slider');
 
 // Accordions
 

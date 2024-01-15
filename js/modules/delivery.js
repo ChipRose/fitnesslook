@@ -3849,6 +3849,8 @@ ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 // Sliders
 
 (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSimpleSlider)('#slider-cost-delivery-buttons', '#slider-cost-delivery');
+(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSimpleSlider)('#slider-cost-lifting-buttons', '#slider-cost-lifting');
+(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
 const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setTableSlider)('#slider-table', {
   controlsContainer: '#slider-table-buttons'
 });
@@ -3860,11 +3862,11 @@ const sliderPickup = document.querySelector('#pickup-slider') && document.queryS
   controls: true,
   nav: false
 });
-const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSlider)('#slider-cost-lifting', {
-  navContainer: '#slider-cost-lifting-buttons',
-  autoHeight: true
-});
-(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
+
+// const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && setSlider('#slider-cost-lifting', {
+//   navContainer: '#slider-cost-lifting-buttons',
+//   autoHeight: true,
+// });
 
 // Accordions
 
