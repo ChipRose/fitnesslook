@@ -480,14 +480,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   renderCitiesDelivery: () => (/* binding */ renderCitiesDelivery)
 /* harmony export */ });
-// import { formatPrice } from "./util.js";
-
 const regionsTemplate = document.querySelector("#regions-item").content.querySelector('.button-block__item');
 const regionsList = document.querySelector('#regions-list');
 const renderCitiesDelivery = items => {
-  console.log(items);
   const regionsContentFragment = document.createDocumentFragment();
-  items.forEach(item => {
+  items?.forEach(item => {
     const region = regionsTemplate.cloneNode(true);
     const button = region.querySelector('.button-main');
     button.textContent = item.city;
@@ -545,7 +542,7 @@ const setSimpleSlider = (buttonsSelector, container) => {
   const slideContainer = document.querySelector(container);
   const children = Array.from(slideContainer.children);
   const buttons = Array.from(sliderButtons.children);
-  buttons.forEach(element => element.classList.remove('button-main--active'));
+  buttons?.forEach(element => element.classList.remove('button-main--active'));
   children?.forEach(element => {
     element.style.display = 'none';
   });
@@ -3851,12 +3848,12 @@ ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 // Sliders
 
-const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSlider)('#slider-cost-delivery', {
-  navContainer: '#slider-cost-delivery-buttons',
-  autoHeight: true
-});
-const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setTableSlider)('#slider-table', {
+(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSimpleSlider)('#slider-cost-delivery-buttons', '#slider-cost-delivery');
+const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setTableSlider)('#slider-table', {
   controlsContainer: '#slider-table-buttons'
+});
+const sliderTableNoElevator = document.querySelector('#slider-table-no-elevator') && document.querySelector('#slider-table-buttons-no-elevator') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setTableSlider)('#slider-table-no-elevator', {
+  controlsContainer: '#slider-table-buttons-no-elevator'
 });
 const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSlider)('#pickup-slider', {
   controlsContainer: "#pickup-slider-buttons",

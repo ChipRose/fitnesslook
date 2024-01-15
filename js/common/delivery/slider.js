@@ -6,7 +6,7 @@ const setSimpleSlider = (buttonsSelector, container) => {
   const children = Array.from(slideContainer.children);
   const buttons = Array.from(sliderButtons.children);
 
-  buttons.forEach(element => element.classList.remove('button-main--active'));
+  buttons?.forEach(element => element.classList.remove('button-main--active'));
   children?.forEach(element => {
     element.style.display = 'none';
   });

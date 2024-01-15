@@ -66,3 +66,15 @@
 .nobr {
   white-space: nowrap;
 }
+
+.ruble {
+  position: relative;
+
+  &::after {
+    content: '\20BD';
+    position: absolute;
+    color: inherit;
+    left: 0;
+    top: 63%;
+  }
+}

@@ -3904,7 +3904,9 @@
                                   </p>
                                 </div>
                                 <div class="accordion__action-block">
-                                  <a class="link button-action" href="https://www.fitnesslook.ru/pages/sborka-trenazherov-i-oborudovaniya.html" target="_blank">
+                                  <a class="link button-action"
+                                    href="https://www.fitnesslook.ru/pages/sborka-trenazherov-i-oborudovaniya.html"
+                                    target="_blank">
                                     Сборка
                                   </a>
                                 </div>
@@ -4199,19 +4201,25 @@
               <h2 class="title title-main slider-main__title">
                 Стоимость доставки
               </h2>
-              <div class="button-block cost-delivery__button-block" id="slider-cost-delivery-buttons">
-                <button class="button button-main button-block__item ">Санкт-Петербург</button>
-                <button class="button button-main  button-block__item">Ленинградская область</button>
+              <div class="cost-delivery__button-block">
+                <div class="button-block cost-delivery__button-item" id="slider-cost-delivery-buttons">
+                  <button class="button button-main button-block__item " value="spb-delivery">Санкт-Петербург</button>
+                  <button class="button button-main  button-block__item " value="spb-region-delivery">Ленинградская
+                    область</button>
+                </div>
+                <div class="button-block cost-delivery__button-item">
+                  <a href="#regions" class="link button-main button-block__item" id="cost-regions">Другие регионы</a>
+                </div>
               </div>
-              <a href="#regions" class="link button-main" id="cost-regions">Другие регионы</a>
             </header>
             <ul class="list" id="slider-cost-delivery">
-              <li>
+              <li id="spb-delivery">
                 <div class="slider-main__content">
                   <div class="slider-main__intro-block">
                     <div class="slider-main__intro-item">
                       <p class="text text-main">
-                        В {$cur_month_e} мы дарим бесплатную доставку для всех заказов в пределах КАД стоимостью от 25'000 ₽                      </p>
+                        В {$cur_month_e} мы дарим бесплатную доставку для всех заказов в пределах КАД стоимостью от
+                        25'000 ₽. </p>
                     </div>
                     <div class="slider-main__intro-item">
                       <p class="text text-main">
@@ -4219,153 +4227,205 @@
                       </p>
                     </div>
                   </div>
-                  <table class="table table-main">
+                  <table class="table table-main slider-main__table-block">
                     <thead class="table-main__header">
                       <tr>
-                        <th class="table-main__header-cell">
+                        <th class="table-main__cell table-main__cell--header">
                           Стоимость заказа
                         </th>
-                        <th class="table-main__header-cell">
+                        <th class="table-main__cell table-main__cell--header">
                           Условия доставки
                         </th>
-                        <th class="table-main__header-cell">
+                        <th class="table-main__cell table-main__cell--header">
                           Стоимость доставки
                         </th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="table-main__body-cell">
-                          <span class="nobr text text-main text-main--strong">
-                            от 15 000 р.
+                        <td class="table-main__cell">
+                          <span class="nobr text text-main">
+                            от 15'000 ₽.
                           </span>
                         </td>
-                        <td class="table-main__body-cell" rowspan="2">в пределах КАД</td>
-                        <td class="table-main__body-cell">
-                          <span class="nobr text text-main text-main--strong">
-                            1 000 р.
+                        <td class="table-main__cell">в пределах КАД</td>
+                        <td class="table-main__cell">
+                          <span class="nobr text text-main">
+                            1'000 ₽.
                           </span>
                           <span class="nobr text text-main text-main--del">
-                            1 500 р.
+                            1'500 ₽.
                           </span>
                         </td>
                       </tr>
                       <tr>
-                        <td class="table-main__body-cell">
-                          <span class="nobr text text-main text-main--strong">
-                            от 25 000 р.
+                        <td class="table-main__cell">
+                          <span class="nobr text text-main">
+                            от 25'000 ₽.
                           </span>
                         </td>
-                        <td class="table-main__body-cell">
-                          <span class="nobr text text-main text-main--strong">
-                            0 р.
+                        <td class="table-main__cell">в пределах КАД</td>
+                        <td class="table-main__cell">
+                          <span class="nobr text text-main">
+                            0 ₽.
                           </span>
                           <span class="nobr text text-main text-main--del">
-                            1 500 р.
+                            1'500 ₽.
                           </span>
                         </td>
                       </tr>
                     </tbody>
                   </table>
+                  <div class="cost-lifting">
+                    <header class="cost-lifting__header">
+                      <h2 class="title title-extra title-extra--accent cost-lifting__title">
+                        Подъем на этаж*
+                      </h2>
+                      <div class="button-block" id="slider-cost-lifting-buttons">
+                        <button class="button button-main button-block__item ">Без грузового лифта</button>
+                        <button class="button button-main  button-block__item">Без лифта</button>
+                      </div>
+                    </header>
+                    <ul class="list" id="slider-cost-lifting">
+                      <li>
+                        <div class="cost-lifting__intro-block">
+                          <div class="cost-lifting__intro-item">
+                            <p class="text text-main">
+                              Если вход в лифт вашего дома расположен выше первого этажа и лифт не является грузовым, то
+                              к стоимости доставки будет прибавлена сумма подъема заказа на один этаж.
+                            </p>
+                          </div>
+                          <div class="cost-lifting__intro-item">
+                            <p class="text text-main">
+                              Она зависит только от веса заказанных товаров.
+                            </p>
+                          </div>
+                        </div>
+                        <div class="cost-lifting__table">
+                          <div class="cost-lifting__table-button-block" id="slider-table-buttons">
+                            <button class="button button-table button-table--prev" type="button">
+                              <svg class="button-table__icon" width="11" height="14" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#table-arrow"></use>
+                              </svg>
+                            </button>
+                            <button class="button button-table button-table--next" type="button">
+                              <svg class="button-table__icon" width="11" height="14" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#table-arrow"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="table-line">
+                            <div class="table-line__header-column">
+                              <div class="table-line__row">Вес заказа:</div>
+                              <div class="table-line__row">Стоимость:</div>
+                            </div>
+                            <div class="table-line__body" id="slider-table">
+                              <div class="table-line__column">
+                                <div class="table-line__row">до 10 кг</div>
+                                <div class="table-line__row">0 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">11 - 30 кг</div>
+                                <div class="table-line__row">100 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">31 - 50 кг</div>
+                                <div class="table-line__row">150 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">51 - 75 кг</div>
+                                <div class="table-line__row">200 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">76 - 100 кг</div>
+                                <div class="table-line__row">300 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">101 - 150 кг</div>
+                                <div class="table-line__row">500 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">151 - 200 кг</div>
+                                <div class="table-line__row">1'000 ₽</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="cost-lifting__intro-block">
+                          <div class="cost-lifting__intro-item">
+                            <p class="text text-main">
+                              Если в вашем доме нет лифта, наша команда доставки самостоятельно поднимет заказанные вами товары по лестнице и занесет в квартиру.
+                            </p>
+                          </div>
+                          <div class="cost-lifting__intro-item">
+
+                          </div>
+                        </div>
+                        <div class="cost-lifting__table">
+                          <div class="cost-lifting__table-button-block" id="slider-table-buttons-no-elevator">
+                            <button class="button button-table button-table--prev" type="button">
+                              <svg class="button-table__icon" width="11" height="14" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#table-arrow"></use>
+                              </svg>
+                            </button>
+                            <button class="button button-table button-table--next" type="button">
+                              <svg class="button-table__icon" width="11" height="14" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#table-arrow"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="table-line">
+                            <div class="table-line__header-column">
+                              <div class="table-line__row">Вес заказа:</div>
+                              <div class="table-line__row">Стоимость:</div>
+                            </div>
+                            <div class="table-line__body" id="slider-table-no-elevator">
+                              <div class="table-line__column">
+                                <div class="table-line__row">до 10 кг</div>
+                                <div class="table-line__row">0 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">11 - 30 кг</div>
+                                <div class="table-line__row">100 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">31 - 50 кг</div>
+                                <div class="table-line__row">150 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">51 - 75 кг</div>
+                                <div class="table-line__row">200 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">76 - 100 кг</div>
+                                <div class="table-line__row">300 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">101 - 150 кг</div>
+                                <div class="table-line__row">500 ₽</div>
+                              </div>
+                              <div class="table-line__column">
+                                <div class="table-line__row">151 - 200 кг</div>
+                                <div class="table-line__row">1'000 ₽</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>
-              <li>
+              <li id="spb-region-delivery">
                 Ленинградская область
               </li>
             </ul>
           </div>
         </section>
 
-        <section class="cost-lifting slider-main page-delivery__cost-lifting">
-          <div class="container">
-            <header class="slider-main__header">
-              <h2 class="title title-main slider-main__title">
-                Стоимость подъема на этаж
-              </h2>
-              <div class="button-block" id="slider-cost-lifting-buttons">
-                <button class="button button-main button-block__item ">Без лифта</button>
-                <button class="button button-main  button-block__item">Без грузового лифта</button>
-              </div>
-            </header>
-            <ul class="list" id="slider-cost-lifting">
-              <li>
-                <div class="slider-main__content">
-                  <div class="slider-main__intro-block">
-                    <div class="slider-main__intro-item">
-                      <p class="text text-main">
-                        Стоимость подъема на этаж до дверей в квартиру оговаривается заранее и её стоимость
-                        рассчитывается следующим образом:
-                      </p>
-                    </div>
-                  </div>
-                  <dl class="cost-lifting__caption">
-                    <div class="cost-lifting__caption-item">
-                      <dt>Заказ от 50 000 р -</dt>
-                      <dd>0 р.</dd>
-                    </div>
-                    <div class="cost-lifting__caption-item">
-                      <dt>Заказ до 50 000 р -</dt>
-                      <dd>стоимость 1 этажа</dd>
-                    </div>
-                  </dl>
-                  <div class="cost-lifting__table">
-                    <div class="cost-lifting__table-button-block" id="slider-table-buttons">
-                      <button class="button button-table button-table--prev" type="button">
-                        <svg class="button-table__icon" width="11" height="14" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#table-arrow"></use>
-                        </svg>
-                      </button>
-                      <button class="button button-table button-table--next" type="button">
-                        <svg class="button-table__icon" width="11" height="14" role="img" focusable="false">
-                          <use xlink:href="/i/media/stat/sprite.svg#table-arrow"></use>
-                        </svg>
-                      </button>
-                    </div>
-                    <div class="table-line">
-                      <div class="table-line__header-column">
-                        <div class="table-line__row">Вес заказа</div>
-                        <div class="table-line__row">За этаж</div>
-                      </div>
-                      <div class="table-line__body" id="slider-table">
-                        <div class="table-line__column">
-                          <div class="table-line__row">до 10 кг</div>
-                          <div class="table-line__row">0 р.</div>
-                        </div>
-                        <div class="table-line__column">
-                          <div class="table-line__row">11 - 30 кг</div>
-                          <div class="table-line__row">100 р.</div>
-                        </div>
-                        <div class="table-line__column">
-                          <div class="table-line__row">31 - 50 кг</div>
-                          <div class="table-line__row">150 р.</div>
-                        </div>
-                        <div class="table-line__column">
-                          <div class="table-line__row">51 - 75 кг</div>
-                          <div class="table-line__row">200 р.</div>
-                        </div>
-                        <div class="table-line__column">
-                          <div class="table-line__row">76 - 100 кг</div>
-                          <div class="table-line__row">300 р.</div>
-                        </div>
-                        <div class="table-line__column">
-                          <div class="table-line__row">101 - 150 кг</div>
-                          <div class="table-line__row">500 р.</div>
-                        </div>
-                        <div class="table-line__column">
-                          <div class="table-line__row">151 - 200 кг</div>
-                          <div class="table-line__row">1000 р.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                Без лифта
-              </li>
-            </ul>
-          </div>
-        </section>
+
 
         <a id="payment"></a>
         <section class="payment page-delivery__payment">

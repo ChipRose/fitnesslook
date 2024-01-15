@@ -25,13 +25,14 @@ setPopup();
 
 // Sliders
 
-const sliderCost = document.querySelector('#slider-cost-delivery') && document.querySelector('#slider-cost-delivery-buttons') && setSlider('#slider-cost-delivery', {
-  navContainer: '#slider-cost-delivery-buttons',
-  autoHeight: true,
+setSimpleSlider('#slider-cost-delivery-buttons', '#slider-cost-delivery');
+
+const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table-buttons') && setTableSlider('#slider-table', {
+  controlsContainer: '#slider-table-buttons',
 });
 
-const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table') && setTableSlider('#slider-table', {
-  controlsContainer: '#slider-table-buttons',
+const sliderTableNoElevator = document.querySelector('#slider-table-no-elevator') && document.querySelector('#slider-table-buttons-no-elevator') && setTableSlider('#slider-table-no-elevator', {
+  controlsContainer: '#slider-table-buttons-no-elevator',
 });
 
 const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && setSlider('#pickup-slider', {

@@ -1,21 +1,32 @@
 // Lifting cost
 
-.cost-lifting__caption {
+.cost-lifting__header {
   margin-bottom: var(--indent-big);
 }
 
-.cost-lifting__caption-item {
-  margin-bottom: var(--indent-main);
-  display: flex;
-  font-weight: 500;
+.cost-lifting__title {
+  margin-bottom: var(--indent-big);
+}
 
-  dt {
-    margin-right: var(--indent-small);
+.cost-lifting__intro-block {
+  margin-bottom: var(--indent-big);
+
+  @media (min-width:$tablet-width) {
+    margin: calc(-1 * var(--indent-big)) calc(-1 * var(--indent-big)) var(--indent-big);
+    display: flex;
+  }
+}
+
+.cost-lifting__intro-item {
+  margin-bottom: var(--indent-main);
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
-  dd {
-    margin: 0;
-    color: var(--cl-accent);
+  @media (min-width:$tablet-width) {
+    margin: var(--indent-big);
+    flex: 0 0 calc(50% - 2 * var(--indent-big));
   }
 }
 
@@ -36,5 +47,12 @@
 // Delivery cost
 
 .cost-delivery__button-block {
-  margin-bottom: var(--indent-basic);
+  margin: calc(-1 * var(--indent-small));
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cost-delivery__button-item {
+  margin: var(--indent-small);
 }

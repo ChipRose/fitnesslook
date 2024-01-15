@@ -20,6 +20,11 @@
     color: var(--cl-contrast);
   }
 
+  &:active {
+    background: var(--cl-heavy-dark);
+    color: var(--cl-contrast);
+  }
+
   &:hover {
     box-shadow: var(--shadow-main-hover);
   }

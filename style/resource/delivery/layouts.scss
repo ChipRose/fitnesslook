@@ -17,9 +17,9 @@
   border-collapse: collapse;
 }
 
-.table-main__header-cell {
+.table-main__cell {
   padding: var(--indent-main) var(--indent-basic);
-  color: var(--cl-accent);
+  font-weight: 500;
 
   &:first-child {
     padding-left: 0;
@@ -28,6 +28,11 @@
   &:last-child {
     padding-right: 0;
   }
+
+  &--header{
+    color: var(--cl-accent);
+  }
+
 }
 
 .table-main__body-cell {
