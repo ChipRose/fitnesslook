@@ -347,9 +347,11 @@ const settingAccordionAdaptive = (accordion, slider) => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getData: () => (/* binding */ getData)
+/* harmony export */   getData: () => (/* binding */ getData),
+/* harmony export */   sendData: () => (/* binding */ sendData)
 /* harmony export */ });
 const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
+const POST_LINK = '#';
 const getData = onSuccess => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {
@@ -358,6 +360,14 @@ const getData = onSuccess => {
     }
     throw new Error(`${response.status} — ${response.statusText}`);
   }).then(products => onSuccess(products)).catch(error => console.log(error));
+};
+const sendData = (onSuccess, onError, body) => {
+  fetch(POST_LINK, {
+    method: 'POST',
+    body
+  }).then(response => {
+    response.ok ? onSuccess() : onError();
+  }).catch(() => onError());
 };
 
 
@@ -465,11 +475,22 @@ buttonsModal.forEach(button => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   setPromoFormSubmit: () => (/* binding */ setPromoFormSubmit)
+/* harmony export */ });
 const buttonNewLocation = document.querySelector('#button-new-location');
 const formBlock = document.querySelector('#form-communicate');
+const form = document.querySelector('#form');
 buttonNewLocation.addEventListener('click', () => {
   formBlock.classList.toggle('form-communicate--open');
 });
+const setPromoFormSubmit = (...callbacks) => {
+  promoForm.addEventListener('submit', evt => {
+    evt.preventDefault();
+    callbacks.forEach(cb => cb());
+  });
+};
+
 
 /***/ }),
 /* 8 */

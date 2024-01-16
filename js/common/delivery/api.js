@@ -1,4 +1,6 @@
 const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
+const POST_LINK = '#';
+
 
 const getData = (onSuccess) => {
   fetch(GET_LINK)
@@ -13,4 +15,17 @@ const getData = (onSuccess) => {
     .catch((error) => console.log(error));
 }
 
-export {getData}
+const sendData = (onSuccess, onError, body) => {
+  fetch(POST_LINK,
+    {
+      method: 'POST',
+      body,
+    },
+  )
+    .then((response) => {
+      response.ok ? onSuccess() : onError();
+    })
+    .catch(() => onError());
+};
+
+export { getData, sendData };
