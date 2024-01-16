@@ -3730,8 +3730,10 @@
               <li id="delivery">
                 <div class="receiving-type__delivery">
                   <div class="receiving-type__intro-block">
-                    <p class="text text-main text-main--strong">
-                      Доставка курьером FitnessLook - это тренажер под ключ + консультация по использованию.
+                    <p class="text text-main">
+                      <span class="text-main text-main--strong">Доставка FitnessLook</span> — это спортивное или
+                      массажное оборудование у вас дома «под ключ» +
+                      консультация по использованию и обслуживанию.
                     </p>
                   </div>
                   <div class="receiving-type__wrapper">
@@ -3797,8 +3799,7 @@
                               </p>
                               <p class="text text-main">
                                 В состав экипажа доставки FitnessLook, как правило, входят: пунктуальный водитель,
-                                грузчик,
-                                специалист - сборщик.
+                                грузчик, специалист - сборщик.
                               </p>
                             </div>
                           </div>
@@ -3839,8 +3840,7 @@
                             </button>
                             <div class="button-popup__modal">
                               <p class="text">
-                                оценка качества
-                                до оформления
+                                оценка качества до оформления
                               </p>
                             </div>
                           </div>
@@ -3869,7 +3869,7 @@
                             <h3 class="title ac-header">
                               <button class="button ac-trigger">
                                 <span class="text title-secondary">
-                                  Доставка + подъем + сборка + консультация
+                                  Не просто доставка
                                 </span>
                               </button>
                             </h3>
@@ -3882,8 +3882,8 @@
                                   прямо при вас.
                                 </p>
                                 <p class="text text-main">
-                                  После чего вы получите от опытного мастера практичекие рекомендации по эксплуатации и
-                                  обслужианию оборудования.
+                                  Затем опытный мастер-сборщик покажет, как правильно использовать оборудование и даст
+                                  рекомендации по его своевременному обслуживанию.
                                 </p>
                               </div>
                               <div class="paper">
@@ -3897,9 +3897,8 @@
                                 </h3>
                                 <div class="accordion__extra-text-block">
                                   <p class="text text-main">
-                                    <span class="text-main text-main--accent">Для этого воспользуйтесь опцией сборки,
-                                      которая
-                                      также в {$cur_month_e} является подарком</span>
+                                    Для этого воспользуйтесь опцией сборки, которая также в
+                                    <span class="text-main text-main--accent"> {$cur_month_e} является подарком</span>
                                     для большей части товаров нашего спортивного гипермаркета.
                                   </p>
                                 </div>
@@ -3951,7 +3950,7 @@
                             </h3>
                             <div class="ac-panel">
                               <div class="accordion__text-block">
-                                <p class="text text-main">
+                                <p class="text text-main text-main--strong">
                                   Для удобства Вы можете выбрать 4-х часовой временной интервал доставки.
                                 </p>
                                 <p class="text text-main">
@@ -3961,9 +3960,9 @@
                               </div>
                               <ul class="list accordion__schedule">
                                 <li class="accordion__time-item">12:00 - 16:00</li>
-                                <li class="accordion__time-item">14:00 - 18:00</li>
-                                <li class="accordion__time-item">16:00 - 20:00</li>
-                                <li class="accordion__time-item">18:00 - 22:00</li>
+                                <li class="accordion__time-item">15:00 - 19:00</li>
+                                <li class="accordion__time-item">17:00 - 21:00</li>
+                                <li class="accordion__time-item">17:00 - 21:00</li>
                               </ul>
                             </div>
                           </div>
@@ -4026,7 +4025,7 @@
               <li id="pickup">
                 <div class="receiving-type__intro-block">
                   <p class="text text-main text-main--strong">
-                    Самовывоз - удобный способ забрать товар в удобное для вас время.
+                    Самовывоз — самый простой способ забрать заказ в удобное время.
                   </p>
                 </div>
                 <div class="receiving-type__pickup-wrapper">
@@ -4170,11 +4169,11 @@
                         <div class="ac-panel">
                           <div class="accordion__text-block">
                             <p class="text text-main">
-                              Забрать беговую дорожку вы можете в соответствии с графиком работы торгового комплекса.
-                            </p>
+                              Лучше всего — согласовать время своего визита с менеджерами FitnessLook по телефону, чтобы
+                              мы подготовили заказ и объяснили как его забрать. </p>
                           </div>
                           <ul class="list accordion__schedule">
-                            <li class="accordion__time-item">10:00 - 20:00</li>
+                            <li class="accordion__time-item">10:00 - 21:00</li>
                             <li class="accordion__time-item">Ежедневно</li>
                           </ul>
                         </div>
@@ -4186,9 +4185,15 @@
             </ul>
 
             <footer class="receiving-type__action-block">
-              <a href="#receiving-type" id="receiving-up" class="link button-round">
+              <a href="#receiving-type" id="receiving-up" class="link button-round receiving-type__action-item">
                 UP
                 <span class="visually-hidden">Наверх блока</span>
+              </a>
+              <a href="#receiving-type" id="receiving-close-up" class="link button-round receiving-type__action-item">
+                <svg class="button-round__icon" width="11" height="20" role="img" focusable="false">
+                  <use xlink:href="/i/media/stat/sprite.svg#arrow-duble-up"></use>
+                </svg>
+                <span class="visually-hidden">Закрыть все и перейти наверх блока</span>
               </a>
             </footer>
           </div>
@@ -4253,6 +4258,7 @@
                           <span class="nobr text text-main">
                             1'000 ₽
                           </span>
+                          <br />
                           <span class="nobr text text-main text-main--del">
                             1'500 ₽
                           </span>
@@ -4269,6 +4275,7 @@
                           <span class="nobr text text-main">
                             0 ₽
                           </span>
+                          <br />
                           <span class="nobr text text-main text-main--del">
                             1'500 ₽
                           </span>
@@ -4282,7 +4289,8 @@
                         Подъем на этаж*
                       </h2>
                       <div class="button-block" id="slider-cost-lifting-buttons">
-                        <button class="button button-main button-block__item" value="no-weight-elevator">Без грузового лифта</button>
+                        <button class="button button-main button-block__item" value="no-weight-elevator">Без грузового
+                          лифта</button>
                         <button class="button button-main  button-block__item" value="no-elevator">Без лифта</button>
                       </div>
                     </header>
@@ -4424,12 +4432,15 @@
                   <div class="slider-main__intro-block">
                     <div class="slider-main__intro-item">
                       <p class="text text-main">
-                        Если пункт назначения доставки лежит менее чем в 6 км от КАД, в качестве бонуса на доставку действуют условия доставки по Санкт-Петербургу.
+                        Если пункт назначения доставки лежит менее чем в <span class="nobr">6 км</span> от КАД, в
+                        качестве бонуса на доставку
+                        действуют условия доставки по Санкт-Петербургу.
                       </p>
                     </div>
                     <div class="slider-main__intro-item">
                       <p class="text text-main">
-                        Если пункт назначения находится дальше, то стоимость доставки будет рассчитаны менеджером по тарифу <span class="tex-main text-main--strong">40 ₽ за каждый километр</span> за пределами КАД.
+                        Если пункт назначения находится дальше, то стоимость доставки будет рассчитаны менеджером по
+                        тарифу <span class="tex-main text-main--strong">40 ₽ за каждый километр</span> за пределами КАД.
                       </p>
                     </div>
                   </div>
@@ -4459,6 +4470,7 @@
                           <span class="nobr text text-main">
                             1’000 ₽ + 40 ₽ / км
                           </span>
+                          <br />
                           <span class="nobr text text-main text-main--del">
                             1'500 + 60 ₽ / км
                           </span>
@@ -4475,6 +4487,7 @@
                           <span class="nobr text text-main">
                             0 + 40 ₽ / км
                           </span>
+                          <br />
                           <span class="nobr text text-main text-main--del">
                             1'500 + 60 ₽ / км
                           </span>
@@ -4746,8 +4759,7 @@
             <div class="form-communicate__intro__item">
               <p class="text text-main">
                 Наш менеджер свяжется в вами, чтобы сообщить о возможности доставки выбранного товара в ваш город,
-                ее
-                способах и стоимости.
+                ее способах и стоимости.
               </p>
             </div>
           </div>
@@ -4799,17 +4811,22 @@
               <div class="ac-panel">
                 <div class="accordion__text-block">
                   <p class="text text-main">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, velit quaerat. Vitae ex ipsam
-                    tempore eveniet quod! Ullam doloribus aliquam nam id quis mollitia accusamus deleniti itaque a,
-                    eveniet sed?
+                    Потребитель вправе отказаться от товара в любое время до его передачи, а после передачи товара - в
+                    течение 14 (7 - при приобретении дистанционным способом) дней.
                   </p>
                   <p class="text text-main">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nam dicta unde ex quidem veniam
-                    voluptas voluptates magni nemo natus, consequuntur consectetur, soluta quas explicabo dolorem
-                    dignissimos doloribus labore aspernatur.
-                    Eveniet hic veniam nisi? Iste accusamus consectetur, necessitatibus assumenda dolor neque
-                    ducimus quibusdam provident atque. Eos sequi atque laboriosam tenetur vitae, architecto, iure,
-                    dolore in delectus sint illum officia voluptate.
+                    Для этого необходимо предъявить Товар и Заявление о возврате/обмене товара по адресу:
+                  </p>
+                  <p class="text text-main">
+                    г. Санкт-Петербург, ул. Полевая Сабировская, д. 54, лит. А, ТВК Интерио, секция 304,
+                    <span class="nobr">
+                      тел. 8-999-063-51-40,
+                    </span>
+                    info@fitnesslook.ru , пн-пт <span class="nobr">с 10:00</span> <span class="nobr">до 18:00</span>.
+                  </p>
+                  <p class="text text-main">
+                    Товары, перечисленные в постановлении Правительства Российской Федерации от 31.12.2020 N 2463
+                    возврату и обмену не подлежат.
                   </p>
                 </div>
               </div>
@@ -4827,17 +4844,36 @@
               <div class="ac-panel">
                 <div class="accordion__text-block">
                   <p class="text text-main">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, velit quaerat. Vitae ex ipsam
-                    tempore eveniet quod! Ullam doloribus aliquam nam id quis mollitia accusamus deleniti itaque a,
-                    eveniet sed?
+                    Возврат и обмен товара надлежащего качества возможен при соблюдении следующих условий:
+                  </p>
+                  <ul class="list-standard">
+                    <li>
+                      Сохранность оригинальной упаковки.
+                    </li>
+                    <li>
+                      Сохранность товарного вида изделия (отсутствие следов сборки, эксплуатации).
+                    </li>
+                    <li>
+                      Наличие товарного чека.
+                    </li>
+                    <li>
+                      Наличие гарантийного талона.
+                    </li>
+                  </ul>
+                  <p class="text text-main">
+                    При возврате или обмене товара надлежащего качества с Покупателя удерживается стоимость оказанных
+                    услуг по доставке, подъему на этаж и монтажу (даже если они были произведены бесплатно, в качестве
+                    скидки и т.п.) согласно тарифам. При необходимости вывоза и демонтажа оборудования стоимость
+                    оказанных услуг удерживается в двойном размере.
                   </p>
                   <p class="text text-main">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nam dicta unde ex quidem veniam
-                    voluptas voluptates magni nemo natus, consequuntur consectetur, soluta quas explicabo dolorem
-                    dignissimos doloribus labore aspernatur.
-                    Eveniet hic veniam nisi? Iste accusamus consectetur, necessitatibus assumenda dolor neque
-                    ducimus quibusdam provident atque. Eos sequi atque laboriosam tenetur vitae, architecto, iure,
-                    dolore in delectus sint illum officia voluptate.
+                    В случае если информация о порядке и сроках возврата товара надлежащего качества не была
+                    предоставлена в письменной форме в момент доставки товара, покупатель вправе отказаться от товара в
+                    течение 3 месяцев с момента передачи товара.
+                  </p>
+                  <p class="text text-main">
+                    Возврат и обмен товаров ненадлежащего качества производится Продавцом только после соответствующего
+                    заключения сервисного центра официального дистрибьютора фирмы-производителя.
                   </p>
                 </div>
               </div>
@@ -4855,17 +4891,8 @@
               <div class="ac-panel">
                 <div class="accordion__text-block">
                   <p class="text text-main">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, velit quaerat. Vitae ex ipsam
-                    tempore eveniet quod! Ullam doloribus aliquam nam id quis mollitia accusamus deleniti itaque a,
-                    eveniet sed?
-                  </p>
-                  <p class="text text-main">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et nam dicta unde ex quidem veniam
-                    voluptas voluptates magni nemo natus, consequuntur consectetur, soluta quas explicabo dolorem
-                    dignissimos doloribus labore aspernatur.
-                    Eveniet hic veniam nisi? Iste accusamus consectetur, necessitatibus assumenda dolor neque
-                    ducimus quibusdam provident atque. Eos sequi atque laboriosam tenetur vitae, architecto, iure,
-                    dolore in delectus sint illum officia voluptate.
+                    При соблюдении условий Продавец производит возврат денежных средств в течении 10 дней со дня
+                    предоставления Товара и Заявления.
                   </p>
                 </div>
               </div>

@@ -1,5 +1,5 @@
 import Accordion from 'accordion-js';
-import { settingAccordionAdaptive } from './delivery/accordion.js';
+import { settingAccordionAdaptive, closeAllAccordions } from './delivery/accordion.js';
 import { getData } from './delivery/api.js';
 import setPopup from './delivery/popup.js';
 import initMap from './delivery/map.js';
@@ -19,6 +19,7 @@ setNavigation('#navigation-in');
 setNavigation('#cost-regions');
 setNavigation('#global-up');
 setNavigation('#receiving-up');
+setNavigation('#receiving-close-up', () => closeAllAccordions(accordionDelivery));
 
 ymaps.ready(initMap);
 setPopup();
@@ -42,11 +43,6 @@ const sliderPickup = document.querySelector('#pickup-slider') && document.queryS
   controls: true,
   nav: false
 });
-
-// const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && setSlider('#slider-cost-lifting', {
-//   navContainer: '#slider-cost-lifting-buttons',
-//   autoHeight: true,
-// });
 
 
 // Accordions

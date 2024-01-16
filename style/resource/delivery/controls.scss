@@ -159,6 +159,7 @@
 
 .button-round__icon {
   fill: var(--cl-accent);
+  pointer-events: none;
 }
 
 // Table button

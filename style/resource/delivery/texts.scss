@@ -34,7 +34,7 @@
   font-weight: 400;
   color: var(--cl-accent);
 
-  &--basic{
+  &--basic {
     color: var(--cl-dark);
   }
 }
@@ -46,8 +46,8 @@
   line-height: var(--lh-main);
   font-weight: 500;
 
-  &--accent{
-    color:var(--cl-accent);
+  &--accent {
+    color: var(--cl-accent);
   }
 }
 
@@ -101,6 +101,35 @@
 
 .list-numeric__item {
   padding-left: var(--indent-basic);
+}
+
+// Standard list
+
+.list-standard {
+  padding: 0;
+  margin-bottom: var(--indent-main);
+  list-style: none;
+
+  li {
+    padding-left: var(--indent-main);
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      position: absolute;
+      left: calc((var(--indent-main) - 4px)/2);
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--cl-main);
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Basic link

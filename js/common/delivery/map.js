@@ -1,6 +1,6 @@
 
 
-const LOCATION = { center: [59.997230, 30.269389], controls: ['zoomControl'], zoom: 13 };
+const LOCATION = { center: [59.997230, 30.269389], controls: ['zoomControl'], zoom: 16 };
 const ANCOR = {
   iconLayout: 'default#image',
   iconImageHref: '/i/media/stat/icons/ancor.svg',

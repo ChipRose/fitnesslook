@@ -1,6 +1,6 @@
 import { tns } from "tiny-slider";
 
-const setSimpleSlider = (buttonsSelector, container) => {
+const setSimpleSlider = (buttonsSelector, container, activeSlide=0) => {
   const sliderButtons = document.querySelector(buttonsSelector);
   const slideContainer = document.querySelector(container);
   const children = Array.from(slideContainer.children);
@@ -11,8 +11,8 @@ const setSimpleSlider = (buttonsSelector, container) => {
     element.style.display = 'none';
   });
 
-  children[0].style.display = 'block';
-  buttons[0].classList.add('button-main--active');
+  children[activeSlide].style.display = 'block';
+  buttons[activeSlide].classList.add('button-main--active');
 
   sliderButtons.addEventListener('click', (evt) => {
     const item = slideContainer.querySelector(`#${evt.target.value}`);

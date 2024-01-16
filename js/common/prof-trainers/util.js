@@ -4,7 +4,7 @@ const formatNumber = (number) => {
 }
 
 const addListeners = (selector, cb) => {
-  const elements=document.querySelectorAll(selector);
+  const elements = document.querySelectorAll(selector);
 
   elements.forEach(button => {
     button.addEventListener('click', (evt) => {
@@ -14,13 +14,13 @@ const addListeners = (selector, cb) => {
   })
 }
 
-const formatPrice = (number)=>{
+const formatPrice = (number) => {
   return number.toString().split(/(?=(?:...)*$)/).join("'");
 }
 
 const removeElements = (selectors) => {
   selectors?.forEach((selector) => {
-    document.querySelectorAll(selector).forEach(item=>item.remove())
+    document.querySelectorAll(selector).forEach(item => item.remove())
   })
 }
 
@@ -28,7 +28,7 @@ const getCompare = (a, b) => {
   return b.content.length - a.content.length;
 }
 
-const sortProjects=(array)=>{
+const sortProjects = (array) => {
   return array.sort(getCompare)
 }
 

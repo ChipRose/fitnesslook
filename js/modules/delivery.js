@@ -411,7 +411,7 @@ __webpack_require__.r(__webpack_exports__);
 const LOCATION = {
   center: [59.997230, 30.269389],
   controls: ['zoomControl'],
-  zoom: 13
+  zoom: 16
 };
 const ANCOR = {
   iconLayout: 'default#image',
@@ -504,21 +504,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   setNavigation: () => (/* binding */ setNavigation)
 /* harmony export */ });
-const setNavigation = container => {
+const setNavigation = (container, ...callBacks) => {
   const HEADER_HEIGHT = 153;
   const navigationList = document.querySelector(container);
-  if (navigationList) {
-    navigationList.addEventListener('click', evt => {
-      evt.preventDefault();
-      const elementHref = evt.target.href;
-      const elementId = elementHref.substring(elementHref.indexOf('#'));
-      const scrollElement = document.querySelector(elementId).offsetTop;
-      window.scrollTo({
-        top: scrollElement + HEADER_HEIGHT,
-        behavior: 'smooth'
-      });
+  const navigationHandle = (element, ...callBacks) => {
+    const elementHref = element.target.href;
+    const elementId = elementHref.substring(elementHref.indexOf('#'));
+    const scrollElement = document.querySelector(elementId).offsetTop;
+    window.scrollTo({
+      top: scrollElement + HEADER_HEIGHT,
+      behavior: 'smooth'
     });
-  }
+    if (callBacks?.length) {
+      callBacks.forEach(cb => {
+        cb();
+      });
+    }
+  };
+  navigationList?.addEventListener('click', evt => {
+    evt.preventDefault();
+    navigationHandle(evt, ...callBacks);
+  });
 };
 
 
@@ -537,7 +543,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
-const setSimpleSlider = (buttonsSelector, container) => {
+const setSimpleSlider = (buttonsSelector, container, activeSlide = 0) => {
   const sliderButtons = document.querySelector(buttonsSelector);
   const slideContainer = document.querySelector(container);
   const children = Array.from(slideContainer.children);
@@ -546,8 +552,8 @@ const setSimpleSlider = (buttonsSelector, container) => {
   children?.forEach(element => {
     element.style.display = 'none';
   });
-  children[0].style.display = 'block';
-  buttons[0].classList.add('button-main--active');
+  children[activeSlide].style.display = 'block';
+  buttons[activeSlide].classList.add('button-main--active');
   sliderButtons.addEventListener('click', evt => {
     const item = slideContainer.querySelector(`#${evt.target.value}`);
     buttons.forEach(element => element.classList.remove('button-main--active'));
@@ -3843,6 +3849,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#cost-regions');
 (0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#global-up');
 (0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#receiving-up');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#receiving-close-up', () => (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionDelivery));
 ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 (0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
@@ -3862,11 +3869,6 @@ const sliderPickup = document.querySelector('#pickup-slider') && document.queryS
   controls: true,
   nav: false
 });
-
-// const sliderCostLifting = document.querySelector('#slider-cost-lifting') && document.querySelector('#slider-cost-lifting-buttons') && setSlider('#slider-cost-lifting', {
-//   navContainer: '#slider-cost-lifting-buttons',
-//   autoHeight: true,
-// });
 
 // Accordions
 
