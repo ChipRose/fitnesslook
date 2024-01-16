@@ -3849,6 +3849,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#cost-regions');
 (0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#global-up');
 (0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#receiving-up');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#regions-list-button');
 (0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#receiving-close-up', () => (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionDelivery));
 ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 (0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__["default"])();

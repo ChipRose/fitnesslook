@@ -19,6 +19,7 @@ setNavigation('#navigation-in');
 setNavigation('#cost-regions');
 setNavigation('#global-up');
 setNavigation('#receiving-up');
+setNavigation('#regions-list-button');
 setNavigation('#receiving-close-up', () => closeAllAccordions(accordionDelivery));
 
 ymaps.ready(initMap);
