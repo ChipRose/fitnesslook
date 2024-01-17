@@ -1,3 +1,5 @@
+// Communicate form
+
 .form-communicate {
   display: none;
 
@@ -43,8 +45,29 @@
     margin-bottom: 0;
 
   }
+
   @media (min-width:$tablet-width) {
     margin: var(--indent-big);
     flex: 0 0 calc(50% - 2 * var(--indent-big));
+  }
+}
+
+// Success modal
+
+.message {
+  position: fixed;
+  padding: var(--indent-main);
+  box-sizing: border-box;
+  width: 250px;
+  height: fit-content;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--cl-contrast);
+  border-radius: var(--radius-main);
+  box-shadow: var(--shadow-main);
+
+  &--success{
+    color: var(--cl-accent);
   }
 }

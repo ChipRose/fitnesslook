@@ -351,7 +351,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   sendData: () => (/* binding */ sendData)
 /* harmony export */ });
 const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
-const POST_LINK = 'https://httpbin.org/post';
+const POST_LINK = '';
+// const POST_LINK = 'https://httpbin.org/post';
+
 const getData = onSuccess => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {
@@ -477,13 +479,19 @@ buttonsModal.forEach(button => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   sendForm: () => (/* binding */ sendForm),
-/* harmony export */   setFormSubmit: () => (/* binding */ setFormSubmit)
+/* harmony export */   setErrorState: () => (/* binding */ setErrorState),
+/* harmony export */   setFormSubmit: () => (/* binding */ setFormSubmit),
+/* harmony export */   setSuccessState: () => (/* binding */ setSuccessState)
 /* harmony export */ });
 /* harmony import */ var _delivery_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
 
+const TIMEOUT_DELAY = 3000;
 const buttonNewLocation = document.querySelector('#button-new-location');
 const formBlock = document.querySelector('#form-communicate');
 const form = document.querySelector('#form');
+const templateSuccess = document.querySelector('#success').content.querySelector('.message');
+const templateError = document.querySelector('#error').content.querySelector('.message');
+const content = document.querySelector('#main_content_template');
 buttonNewLocation.addEventListener('click', () => {
   formBlock.classList.toggle('form-communicate--open');
 });
@@ -499,6 +507,36 @@ const sendForm = (onSuccess = () => console.log("Форма отправлена
     (0,_delivery_api_js__WEBPACK_IMPORTED_MODULE_0__.sendData)(() => onSuccess(), () => onError(), formData);
   };
   return setState;
+};
+const isEscape = evt => {
+  return evt.key === 'Escape' || evt.key === 'ESC';
+};
+const showMessage = (template, buttonClose) => {
+  content.appendChild(template);
+  template.addEventListener('click', () => {
+    template.remove();
+  });
+  document.addEventListener('keydown', evt => {
+    if (isEscape(evt)) {
+      template.remove();
+      document.removeEventListener('keydown', evt);
+    }
+  });
+  if (buttonClose) {
+    const button = template.querySelector(`.${buttonClose}`);
+    button.addEventListener('click', () => {
+      template.remove();
+    });
+  } else {
+    // setTimeout(() => template.remove(), TIMEOUT_DELAY);
+  }
+};
+const setSuccessState = () => {
+  showMessage(templateSuccess);
+  form.reset();
+};
+const setErrorState = () => {
+  showMessage(templateError);
 };
 
 
@@ -3873,7 +3911,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_delivery_api_js__WEBPACK_IMPORTED_MODULE_2__.getData)(regions => {
   (0,_delivery_regions_js__WEBPACK_IMPORTED_MODULE_7__.renderCitiesDelivery)(regions);
 });
-(0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.setFormSubmit)((0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.sendForm)());
+(0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.setFormSubmit)((0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.sendForm)(_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.setSuccessState, _delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.setErrorState));
 
 // Navigation
 

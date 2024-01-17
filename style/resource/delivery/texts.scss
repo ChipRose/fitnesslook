@@ -77,6 +77,10 @@
     font-weight: 500;
   }
 
+  &--center {
+    text-align: center;
+  }
+
   &--del {
     font-weight: 300;
     color: var(--cl-disable);

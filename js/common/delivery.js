@@ -4,7 +4,7 @@ import { getData } from './delivery/api.js';
 import setPopup from './delivery/popup.js';
 import initMap from './delivery/map.js';
 import './delivery/modal.js';
-import { setFormSubmit, sendForm } from './delivery/form.js';
+import { setFormSubmit, sendForm, setSuccessState, setErrorState } from './delivery/form.js';
 import { renderCitiesDelivery } from './delivery/regions.js';
 import { setNavigation } from "./delivery/navigation.js";
 import { setSlider, setTableSlider, setSimpleSlider } from './delivery/slider.js';
@@ -13,7 +13,7 @@ getData((regions) => {
   renderCitiesDelivery(regions);
 });
 
-setFormSubmit(sendForm());
+setFormSubmit(sendForm(setSuccessState, setErrorState));
 
 // Navigation
 
