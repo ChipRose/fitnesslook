@@ -132,11 +132,11 @@
     margin: calc(-1 * var(--indent-main));
     display: flex;
     align-items: flex-end;
-    background: center top / contain no-repeat url('/i/media/stat/receiving/bg-desk.png');
+    background: center top / contain no-repeat url('/i/media/stat/delivery/receiving/bg-desk.png');
   }
 
   @media (min-resolution: 2dppx) {
-    background: center top / contain no-repeat url('/i/media/stat/receiving/bg-desk@2x.png');
+    background: center top / contain no-repeat url('/i/media/stat/delivery/receiving/bg-desk@2x.png');
   }
 }
 

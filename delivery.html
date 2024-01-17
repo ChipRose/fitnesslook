@@ -3781,8 +3781,8 @@
                           <picture>
                             <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/treadmill.webp 1x, /i/media/stat/delivery/receiving/treadmill@2x.webp 2x">
-                            <img src="/i/media/stat/delivery/receiving/treadmill.jpg"
-                              srcset="/i/media/stat/delivery/receiving/treadmill@2x.jpg 2x" alt="Беговая дорожка">
+                            <img src="/i/media/stat/delivery/receiving/treadmill.png"
+                              srcset="/i/media/stat/delivery/receiving/treadmill@2x.png 2x" alt="Беговая дорожка">
                           </picture>
                         </div>
                         <div class="paper accordion accordion--adaptive accordion--delivery">
@@ -3807,8 +3807,7 @@
                         </div>
                       </div>
                       <div class="receiving-type__info-block">
-                        <div
-                          class="receiving-type__info-image-block image-pins image-block image-pins--ellipsoid receiving-type--center">
+                        <div class="receiving-type__info-image-block image-pins image-block image-pins--ellipsoid receiving-type--center">
                           <div class="button-popup image-pins__item">
                             <button class="button button-popup__button" type="button">
                               <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
@@ -3860,8 +3859,8 @@
                           <picture>
                             <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/ellipsoid.webp 1x, /i/media/stat/delivery/receiving/ellipsoid@2x.webp 2x">
-                            <img src="/i/media/stat/delivery/receiving/ellipsoid.jpg"
-                              srcset="/i/media/stat/delivery/receiving/ellipsoid@2x.jpg 2x"
+                            <img src="/i/media/stat/delivery/receiving/ellipsoid.png"
+                              srcset="/i/media/stat/delivery/receiving/ellipsoid@2x.png 2x"
                               alt="Эллиптический тренажер">
                           </picture>
                         </div>
@@ -3936,8 +3935,8 @@
                           <picture>
                             <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/armchair.webp 1x, /i/media/stat/delivery/receiving/armchair@2x.webp 2x">
-                            <img src="/i/media/stat/delivery/receiving/armchair.jpg"
-                              srcset="/i/media/stat/delivery/receiving/armchair@2x.jpg 2x" alt="Массажное кресло">
+                            <img src="/i/media/stat/delivery/receiving/armchair.png"
+                              srcset="/i/media/stat/delivery/receiving/armchair@2x.png 2x" alt="Массажное кресло">
                           </picture>
                         </div>
                         <div class="paper accordion accordion--adaptive accordion--delivery">
@@ -3987,8 +3986,8 @@
                           <picture>
                             <source type="image/webp"
                               srcset="/i/media/stat/delivery/receiving/rowing.webp 1x, /i/media/stat/delivery/receiving/rowing@2x.webp 2x">
-                            <img src="/i/media/stat/delivery/receiving/rowing.jpg"
-                              srcset="/i/media/stat/delivery/receiving/rowing@2x.jpg 2x" alt="Гребной тренажер">
+                            <img src="/i/media/stat/delivery/receiving/rowing.png"
+                              srcset="/i/media/stat/delivery/receiving/rowing@2x.png 2x" alt="Гребной тренажер">
                           </picture>
                         </div>
                         <div class="paper accordion accordion--adaptive accordion--delivery">
@@ -4762,21 +4761,21 @@
               <fieldset class="fieldset form-communicate__fieldset">
                 <label class="form-communicate__label">
                   <input class="input field-main form-communicate__field" type="text" required placeholder="Ваше имя"
-                    name="name" id="name">
+                    name="name" id="name-field">
                   <span class="visually-hidden">
                     Ваше имя
                   </span>
                 </label>
                 <label class="form-communicate__label">
                   <input class="input field-main form-communicate__field" type="tel" required placeholder="Ваш телефон"
-                    name="phone" id="phone" pattern="[0-9,+]{11,12}">
+                    name="phone" id="phone-field" pattern="[0-9,+]{11,12}">
                   <span class="visually-hidden">
                     Ваш телефон
                   </span>
                 </label>
                 <label class="form-communicate__label">
                   <input class="input field-main form-communicate__field" type="text" required
-                    placeholder="Город доставки" name="phone" id="city">
+                    placeholder="Город доставки" name="region" id="region-field">
                   <span class="visually-hidden">
                     Город доставки
                   </span>
@@ -4943,6 +4942,21 @@
           <li class="button-block__item">
             <a href="" target="_blank" class="link button-main"></a>
           </li>
+        </template>
+
+        <!-- Success message -->
+        <template id="success">
+          <div class="success">
+            <p class="success__message">Ваше заявка <br>успешно отправлена!</p>
+          </div>
+        </template>
+
+        <!-- Error message -->
+        <template id="error">
+          <div class="error">
+            <p class="error__message">Ошибка отправки</p>
+            <button type="button" class="error__button">Попробовать снова</button>
+          </div>
         </template>
 
         <div class="clear"></div>
@@ -5204,16 +5218,9 @@
     var unimet = '';
   </script>
 
-  <!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=13739b0f-0d5b-4af4-aec0-22bc5523893a" type="text/javascript"></script> -->
-
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=13739b0f-0d5b-4af4-aec0-22bc5523893a"></script>
 
   <script src="/js/modules/delivery.js"></script>
-
-
-
-
 </body>
-
 
 </html>

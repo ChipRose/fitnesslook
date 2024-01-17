@@ -351,7 +351,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   sendData: () => (/* binding */ sendData)
 /* harmony export */ });
 const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
-const POST_LINK = '#';
+const POST_LINK = 'https://httpbin.org/post';
 const getData = onSuccess => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {
@@ -476,19 +476,29 @@ buttonsModal.forEach(button => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   setPromoFormSubmit: () => (/* binding */ setPromoFormSubmit)
+/* harmony export */   sendForm: () => (/* binding */ sendForm),
+/* harmony export */   setFormSubmit: () => (/* binding */ setFormSubmit)
 /* harmony export */ });
+/* harmony import */ var _delivery_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(3);
+
 const buttonNewLocation = document.querySelector('#button-new-location');
 const formBlock = document.querySelector('#form-communicate');
 const form = document.querySelector('#form');
 buttonNewLocation.addEventListener('click', () => {
   formBlock.classList.toggle('form-communicate--open');
 });
-const setPromoFormSubmit = (...callbacks) => {
-  promoForm.addEventListener('submit', evt => {
+const setFormSubmit = (...callbacks) => {
+  form.addEventListener('submit', evt => {
     evt.preventDefault();
     callbacks.forEach(cb => cb());
   });
+};
+const sendForm = (onSuccess = () => console.log("Форма отправлена"), onError = () => console.log("Ошибка при отправке")) => {
+  const setState = () => {
+    const formData = new FormData(form);
+    (0,_delivery_api_js__WEBPACK_IMPORTED_MODULE_0__.sendData)(() => onSuccess(), () => onError(), formData);
+  };
+  return setState;
 };
 
 
@@ -3863,6 +3873,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_delivery_api_js__WEBPACK_IMPORTED_MODULE_2__.getData)(regions => {
   (0,_delivery_regions_js__WEBPACK_IMPORTED_MODULE_7__.renderCitiesDelivery)(regions);
 });
+(0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.setFormSubmit)((0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.sendForm)());
 
 // Navigation
 
