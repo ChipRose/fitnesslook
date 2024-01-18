@@ -478,6 +478,46 @@ buttonsModal.forEach(button => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   renderQuestionsList: () => (/* binding */ renderQuestionsList)
+/* harmony export */ });
+const questionTemplate = document.querySelector("#question").content.querySelector('.faq__item');
+const questionsList = document.querySelector('#faq-list');
+const renderQuestionsList = questions => {
+  const questionsFragment = document.createDocumentFragment();
+  // const productContentFragment = document.createDocumentFragment();
+
+  questions.forEach(question => {
+    const questionNode = questionTemplate.cloneNode(true);
+    questionNode.querySelector('.title-secondary').textContent = question.title;
+    questionNode.querySelector('.accordion__text-block').innerHTML = question.answer;
+    // productFull.querySelector('.product-gallery-set__buttons').id = `product-list-buttons-${product.id}`;
+    // productFull.querySelector('.product-gallery-set__slider').id = `product-list-${product.id}`;
+    // productFull.querySelector('#gallery-cover').src = product.cover?.image;
+    // productFull.querySelector('#title-icon-text').textContent = product.type;
+
+    questionsFragment.appendChild(questionNode);
+
+    // const productsContent = productFull.querySelector('.products-content');
+  });
+
+  questionsList.appendChild(questionsFragment);
+};
+
+
+/***/ }),
+/* 8 */
+/***/ ((module) => {
+
+"use strict";
+module.exports = JSON.parse('[{"title":"Нужно ли предварительно делать заказ для самовывоза?","answer":"<p class=\'text text-main\'>Если вы планируете посетить шоу-рум в ТВК Интерио, получить консультацию и провести тест-драйв интересующих моделей, то прямо во время своего визита сможете сделать заказ и сразу же забрать его самовывозом. </p><p class=\'text text-main\'>Если вы уже определились и хотите просто как можно быстрее забрать оборудование самостоятельно, необходимо предварительно сделать заказ на сайте или по телефону. В таком случае менеджер подтвердит наличие, объяснит порядок оплаты и получения заказа, а также передаст информацию на склад, чтобы ваш заказ подготовили точно ко времени вашего приезда. </p>"},{"title":"Есть ли доставка вечером после работы или в выходные?","answer":"<p class=\'text text-main\'>Мы без проблем доставим ваш заказ в субботу или воскресенье, поскольку в Санкт-Петербурге служба доставки FitnessLook работает без выходных! Исключениями могут являться только дни официальных государственных праздников. </p><p class=\'text text-main\'>Что касается вечернего времени доставки после работы, то здесь тоже все очень просто. В интервале доставок можно выбрать промежуток 18:00-22:00 и сообщить менеджеру наиболее комфортное для получения заказа время.</p>"},{"title":"Доставка будет до подъезда или до квартиры?","answer":"<p class=\'text text-main\'>Доставка будет не просто в квартиру. Мы занесем и поставим оборудование в  наиболее удобное для этого место. Кроме того, 99% заказов, совершенных нашими покупателями, сразу включает в себя услугу сборки. В результате доставки тренажер, массажное кресло или другое оборудование будут в собранном виде стоять там, где вам нужно!</p>"},{"title":"Живу в Ленинградской области, как будет считаться доставка?","answer":"<p class=\'text text-main\'>В <span class=\'text-main text-main--strong\'>{$cur_month_e}</span> действует акция-бонус в качестве дополнительного подарка, мы снизили стоимость доставки по Санкт-Петербургу и стоимость тарификации за расстояния вне КАД для Ленинградской области.</p><p class=\'text text-main\'>Например, вы живете в Репино и сделали заказ на сумму 50\'000 ₽. Расстояние от ближайшего съезда с КАД до вашего дома по навигатору = приблизительно 18 километров. В таком случае доставка будет рассчитана по тарифу: <span class=\'text-main text-main--strong\'>0 ₽</span> за территорию КАД + 40 x 18 = <span class=\'text-main text-main--strong\'>720 ₽</span> за расстояние вне КАД.</p>"},{"title":"Сборка при доставке или мастер приедет потом / в другой день?","answer":"<p class=\'text text-main\'>В состав экипажа службы доставки FitnessLook всегда входит мастер-сборщик, поэтому сборка оборудования осуществляется в день доставки.</p><p class=\'text text-main\'>В нашей практике пока не было таких случаев, но если вдруг вам потребуется сборка не в день доставки, а позже — об этом можно договориться. В таком случае придется дополнительно оплатить услуги сборщика по тарифу доставки до адреса. Хотя на текущий момент мы даже не представляем обстоятельства, которые могут сделать сборку не в день доставки удобной и выгодной.</p>"},{"title":"Хочу вернуть товар надлежащего качества, что для этого нужно?","answer":"<p class=\'text text-main\'>Наши покупатели имеют право вернуть товар надлежащего качества в течение 7 дней с момента покупки, если он им не подошел или не понравился.</p><p class=\'text text-main\'>При этом, если оборудование доставлено и собрано, потребуется оплатить:</p><ul class=\'list-standard\'><li>Услуги разборки и упаковки оборудования по тарифу сборки</li><li>Услуги забора заказа и его доставки с адреса до склада по тарифу доставки</li></ul><p class=\'text text-main\'><span class=\'text-main text-main--strong\'>Важно!</span> При этом сгорают все бонусы и скидки, сделанные при заказе. То есть, если доставка и сборка шли подарком и были бесплатными, то при возврате товара надлежащего качество придется оплатить их стоимость.</p><p class=\'text text-main\'>Например, вы заказали тренажер за 50\'000 ₽ на адрес в пределах Санкт-Петербурга. Стоимость его доставки составляла бы 1\'000 ₽, а сборки — 1\'500 ₽. Но в <span class=\'text-main text-main--strong\'>{$cur_month_e}</span> эти услуги идут подарком! Мы доставили и собрали вам тренажер, после чего вы решили вернуть его как товар надлежащего качества. В таком случае, потребуется оплатить:</p><ul class=\'list-standard\'><li>1\'000 ₽ — стоимость доставки до адреса</li><li>1\'500 ₽ — стоимость сборки тренажера</li><li>1\'500 ₽ — стоимость разборки тренажера</li><li>1\'000 ₽ — стоимость доставки разобранного тренажера с адреса до склада FitnessLook</li></ul>"},{"title":"Может ли принять мой заказ другой человек?","answer":"<p class=\'text text-main\'>Никаких проблем. Вы можете делегировать получение заказа на адресе любому члену семьи или другу. Просто предупредите об этом менеджера.</p>"},{"title":"Я получу полный комплект документов при любом способе доставки / оплаты?","answer":"<p class=\'text text-main\'>Да. Полный пакет документов, включающий: чек, товарный чек, гарантийный талон производителя и талон расширенной гарантии +1 год лично от FitnessLook (опционально) будет предоставлен для всех заказов. Неважно, как они были доставлены или оплачены.</p>"},{"title":"Могу ли я оплатить заказ при получении?","answer":"<p class=\'text text-main\'>Никаких проблем! Покупателям FitnessLook в Санкт-Петербурге доступна оплата заказа непосредственно при получении и даже после сборки. То есть вы сможете оплатить оборудование, когда оно будет стоять у вас в удобном месте в собранном виде! </p><p class=\'text text-main\'>Сделать это можно будет при помощи наличного расчета, банковской карты и других поддерживаемых нами методов оплаты. Не волнуйтесь! Экипажи FitnessLook всегда оборудованы терминалами для оплаты картой, и у наших сотрудников всегда есть сдача-размен, если вы предпочтете оплатить наличными.</p>"},{"title":"Можно ли оплатить заказ по QR-коду/СБП?","answer":"<p class=\'text text-main\'>Да, этот и все другие современные методы оплаты доступны покупателям FitnessLook. Просто выберете наиболее удобный конкретно для себя способ и воспользуйтесь им.</p>"},{"title":"Хочу оплатить от организации, как это сделать?","answer":"<p class=\'text text-main\'>Сообщите об этом менеджеру. Он объяснит, на какую почту направить свои реквизиты, после чего мы выставим счет, и его можно будет оплатить от юридического лица.</p>"},{"title":"Как оформить рассрочку или кредит, кто предоставляет услугу?","answer":"<p class=\'text text-main\'>Реализация программ покупки в рассрочку и кредит осуществляются нашими банками-партнерами. На текущий момент, мы сотрудничаем с Тинькофф Банк, Почта Банк, МТС Банк, Хоум Кредит Банк и другими добросовестными и благонадежными банками. </p><p class=\'text text-main\'>Для оформления рассрочки или кредита необходимо при заказе выбрать вид услуги и срок закрытия платежей. После этого заполните короткую форму, получите одобрение банков и выберете подходящий. Заявка, как правило, подтверждается за 1-2 минуты.</p><p class=\'text text-main\'>Кроме того, выгодная покупка в рассрочку доступна обладателям карты «Халва». Однако обращаем внимание! Чтобы воспользоваться этой программой лояльности от ПАО «СОВКОМБАНК», необходимо будет совершить online-оплату заказа.</p>"}]');
+
+/***/ }),
+/* 9 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   sendForm: () => (/* binding */ sendForm),
 /* harmony export */   setErrorState: () => (/* binding */ setErrorState),
 /* harmony export */   setFormSubmit: () => (/* binding */ setFormSubmit),
@@ -541,7 +581,7 @@ const setErrorState = () => {
 
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -565,7 +605,7 @@ const renderCitiesDelivery = items => {
 
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -598,7 +638,7 @@ const setNavigation = (container, ...callBacks) => {
 
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -610,7 +650,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   settingSliderAdaptive: () => (/* binding */ settingSliderAdaptive),
 /* harmony export */   updateSliderAdaptive: () => (/* binding */ updateSliderAdaptive)
 /* harmony export */ });
-/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
+/* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
 
 const setSimpleSlider = (buttonsSelector, container, activeSlide = 0) => {
   const sliderButtons = document.querySelector(buttonsSelector);
@@ -683,7 +723,7 @@ const updateSliderAdaptive = slider => {
 
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ ((__unused_webpack_module, exports) => {
 
 "use strict";
@@ -3894,10 +3934,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
 /* harmony import */ var _delivery_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var _delivery_modal_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
-/* harmony import */ var _delivery_form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
-/* harmony import */ var _delivery_regions_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
-/* harmony import */ var _delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
-/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _delivery_faq_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
+/* harmony import */ var _json_delivery_questions_json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(8);
+/* harmony import */ var _delivery_form_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(9);
+/* harmony import */ var _delivery_regions_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(10);
+/* harmony import */ var _delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(11);
+/* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(12);
+
+
 
 
 
@@ -3909,33 +3953,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_delivery_api_js__WEBPACK_IMPORTED_MODULE_2__.getData)(regions => {
-  (0,_delivery_regions_js__WEBPACK_IMPORTED_MODULE_7__.renderCitiesDelivery)(regions);
+  (0,_delivery_regions_js__WEBPACK_IMPORTED_MODULE_9__.renderCitiesDelivery)(regions);
 });
-(0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.setFormSubmit)((0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.sendForm)(_delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.setSuccessState, _delivery_form_js__WEBPACK_IMPORTED_MODULE_6__.setErrorState));
+(0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.setFormSubmit)((0,_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.sendForm)(_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.setSuccessState, _delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.setErrorState));
+(0,_delivery_faq_js__WEBPACK_IMPORTED_MODULE_6__.renderQuestionsList)(_json_delivery_questions_json__WEBPACK_IMPORTED_MODULE_7__);
 
 // Navigation
 
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#navigation-in');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#cost-regions');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#global-up');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#receiving-up');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#regions-list-button');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_8__.setNavigation)('#receiving-close-up', () => (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionDelivery));
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#navigation-in');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#cost-regions');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#global-up');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#receiving-up');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#regions-list-button');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#receiving-close-up', () => (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionDelivery));
 ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 (0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
 // Sliders
 
-(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSimpleSlider)('#slider-cost-delivery-buttons', '#slider-cost-delivery');
-(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSimpleSlider)('#slider-cost-lifting-buttons', '#slider-cost-lifting');
-(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
-const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setTableSlider)('#slider-table', {
+(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSimpleSlider)('#slider-cost-delivery-buttons', '#slider-cost-delivery');
+(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSimpleSlider)('#slider-cost-lifting-buttons', '#slider-cost-lifting');
+(0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
+const sliderTable = document.querySelector('#slider-table') && document.querySelector('#slider-table-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setTableSlider)('#slider-table', {
   controlsContainer: '#slider-table-buttons'
 });
-const sliderTableNoElevator = document.querySelector('#slider-table-no-elevator') && document.querySelector('#slider-table-buttons-no-elevator') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setTableSlider)('#slider-table-no-elevator', {
+const sliderTableNoElevator = document.querySelector('#slider-table-no-elevator') && document.querySelector('#slider-table-buttons-no-elevator') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setTableSlider)('#slider-table-no-elevator', {
   controlsContainer: '#slider-table-buttons-no-elevator'
 });
-const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_9__.setSlider)('#pickup-slider', {
+const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSlider)('#pickup-slider', {
   controlsContainer: "#pickup-slider-buttons",
   controls: true,
   nav: false
@@ -3945,8 +3990,9 @@ const sliderPickup = document.querySelector('#pickup-slider') && document.queryS
 
 const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--delivery')));
 (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery);
-const accordionFaq = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--faq')));
-(0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery);
+new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--faq')), {
+  duration: 300
+});
 })();
 
 /******/ })()
