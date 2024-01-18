@@ -351,9 +351,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   sendData: () => (/* binding */ sendData)
 /* harmony export */ });
 const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
-const POST_LINK = '';
-// const POST_LINK = 'https://httpbin.org/post';
-
+// const POST_LINK ='';
+const POST_LINK = 'https://httpbin.org/post';
 const getData = onSuccess => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {
@@ -484,22 +483,12 @@ const questionTemplate = document.querySelector("#question").content.querySelect
 const questionsList = document.querySelector('#faq-list');
 const renderQuestionsList = questions => {
   const questionsFragment = document.createDocumentFragment();
-  // const productContentFragment = document.createDocumentFragment();
-
   questions.forEach(question => {
     const questionNode = questionTemplate.cloneNode(true);
     questionNode.querySelector('.title-secondary').textContent = question.title;
     questionNode.querySelector('.accordion__text-block').innerHTML = question.answer;
-    // productFull.querySelector('.product-gallery-set__buttons').id = `product-list-buttons-${product.id}`;
-    // productFull.querySelector('.product-gallery-set__slider').id = `product-list-${product.id}`;
-    // productFull.querySelector('#gallery-cover').src = product.cover?.image;
-    // productFull.querySelector('#title-icon-text').textContent = product.type;
-
     questionsFragment.appendChild(questionNode);
-
-    // const productsContent = productFull.querySelector('.products-content');
   });
-
   questionsList.appendChild(questionsFragment);
 };
 
@@ -568,7 +557,7 @@ const showMessage = (template, buttonClose) => {
       template.remove();
     });
   } else {
-    // setTimeout(() => template.remove(), TIMEOUT_DELAY);
+    setTimeout(() => template.remove(), TIMEOUT_DELAY);
   }
 };
 const setSuccessState = () => {

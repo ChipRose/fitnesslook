@@ -1,6 +1,6 @@
 const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
-const POST_LINK ='';
-// const POST_LINK = 'https://httpbin.org/post';
+// const POST_LINK ='';
+const POST_LINK = 'https://httpbin.org/post';
 
 
 const getData = (onSuccess) => {

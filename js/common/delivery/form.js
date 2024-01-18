@@ -60,7 +60,7 @@ const showMessage = (template, buttonClose) => {
       template.remove();
     })
   } else {
-    // setTimeout(() => template.remove(), TIMEOUT_DELAY);
+    setTimeout(() => template.remove(), TIMEOUT_DELAY);
   }
 };
 
