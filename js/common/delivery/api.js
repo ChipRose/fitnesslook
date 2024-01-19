@@ -1,6 +1,5 @@
 const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
-// const POST_LINK ='';
-const POST_LINK = 'https://httpbin.org/post';
+const POST_LINK = 'https://www.fitnesslook.ru/api_front/lid/';
 
 
 const getData = (onSuccess) => {
@@ -16,11 +15,14 @@ const getData = (onSuccess) => {
     .catch((error) => console.log(error));
 }
 
-const sendData = (onSuccess, onError, body) => {
+const sendData = (onSuccess, onError, data) => {
   fetch(POST_LINK,
     {
       method: 'POST',
-      body,
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
     },
   )
     .then((response) => {

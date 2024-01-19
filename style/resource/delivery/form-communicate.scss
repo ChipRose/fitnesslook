@@ -56,17 +56,32 @@
 
 .message {
   position: fixed;
-  width: 250px;
+  width: 30%;
+  min-width: 240px;
   height: fit-content;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: center;
   top: 50%;
   left: 50%;
+  z-index: 100;
   transform: translate(-50%, -50%);
+}
 
-  &--success{
-    color: var(--cl-accent);
+.message__title {
+  padding: var(--indent-main) 0;
+}
+
+.message__close-button {
+  position: absolute;
+  top: var(--indent-basic);
+  right: var(--indent-basic);
+}
+
+.message__text-block {
+  margin-bottom: var(--indent-big);
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }

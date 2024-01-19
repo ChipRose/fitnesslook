@@ -4,6 +4,7 @@ const setNavigation = (container, ...callBacks) => {
 
   const navigationHandle = (element, ...callBacks) => {
     const elementHref = element.target.href;
+    console.log(elementHref);
     const elementId = elementHref.substring(elementHref.indexOf('#'));
     const scrollElement = document.querySelector(elementId).offsetTop;
     window.scrollTo({ top: scrollElement + HEADER_HEIGHT, behavior: 'smooth' });

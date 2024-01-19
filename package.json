@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "accordion-js": "^3.3.4",
+    "imask": "^7.3.0",
     "tiny-slider": "^2.9.4",
     "ymaps": "^0.2.1"
   }
