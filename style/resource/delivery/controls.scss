@@ -139,6 +139,16 @@
   line-height: var(--lh-main);
   transition: var(--transition-main);
 
+  &--big {
+    @media (min-width:$tablet-width) {
+      width: var(--button-size-huge);
+      height: var(--button-size-huge);
+      font-size: var(--fz-mediumx);
+      line-height: 100%;
+      vertical-align: middle;
+    }
+  }
+
   &--accent {
     background: var(--cl-accent);
     color: var(--cl-contrast);

@@ -16,6 +16,7 @@ $max-width: 1180px;
   @media (min-width: $tablet-width) {
     --fz-main: 15px;
     --fz-medium: 18px;
+    --fz-mediumx: 26px;
     --fz-big: 45px;
   }
 
@@ -38,6 +39,7 @@ $max-width: 1180px;
   --radius-big: 30px;
   --button-size: 24px;
   --button-size-big: 37px;
+  --button-size-huge: 90px;
   --popup-size: 42px;
   --transition-main: all 0.3s ease-out;
   --shadow-main: 0 0 20px 0 rgba(0, 0, 0, 0.06);

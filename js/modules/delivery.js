@@ -527,6 +527,7 @@ const phoneInput = form.querySelector('#phone-field');
 const templateSuccess = document.querySelector('#success').content.querySelector('.message');
 const templateError = document.querySelector('#error').content.querySelector('.message');
 const content = document.querySelector('#main_content_template');
+const body = document.querySelector('body');
 const bg = document.querySelector('.content');
 const maskOptions = {
   mask: '+{7}(000)000-00-00'
@@ -564,17 +565,16 @@ const isEscape = evt => {
 };
 const showMessage = (template, buttonClose) => {
   content.appendChild(template);
-  bg.classList.add('content--disable');
-  template.addEventListener('click', () => {
-    template.remove();
-  });
+  bg.classList.add('content--lock');
+  body.classList.add('body-lock');
   const removeModalHandler = () => {
     template.remove();
-    bg.classList.remove('content--disable');
+    bg.classList.remove('content--lock');
+    body.classList.remove('body-lock');
   };
   document.addEventListener('keydown', evt => {
     if (isEscape(evt)) {
-      template.remove();
+      removeModalHandler();
       document.removeEventListener('keydown', evt);
     }
   });
@@ -582,9 +582,9 @@ const showMessage = (template, buttonClose) => {
     const button = template.querySelector(`.${buttonClose}`);
     button.addEventListener('click', removeModalHandler);
   } else {
-    setTimeout(() => template.remove(), TIMEOUT_DELAY);
+    setTimeout(() => removeModalHandler(), TIMEOUT_DELAY);
   }
-  const back = document.querySelector('.content--disable');
+  const back = document.querySelector('.content--lock');
   back && back.addEventListener('click', removeModalHandler);
 };
 const setSuccessState = () => {
