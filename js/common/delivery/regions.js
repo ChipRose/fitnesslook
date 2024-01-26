@@ -6,7 +6,7 @@ const renderCitiesDelivery = (items) => {
 
   items?.forEach((item) => {
     const region = regionsTemplate.cloneNode(true);
-    const button = region.querySelector('.button-main');
+    const button = region.querySelector('.button-simple');
 
     button.textContent = item.city;
     button.href = `https://${item.name}.fitnesslook.ru/pages/dostavka.html`;

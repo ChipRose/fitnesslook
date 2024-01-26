@@ -1,13 +1,13 @@
 // Buttons block
 
 .button-block {
-  margin: calc(-1 * var(--indent-basic));
+  margin: -6px;
   display: flex;
   flex-wrap: wrap;
 }
 
 .button-block__item {
-  margin: var(--indent-basic);
+  margin: 6px;
 }
 
 // Main table
@@ -18,8 +18,9 @@
 }
 
 .table-main__cell {
-  padding: var(--indent-main) var(--indent-basic);
-  font-weight: 500;
+  padding: 10px;
+  font-weight: var(--fw-medium);
+  vertical-align: top;
 
   &:first-child {
     padding-left: 0;
@@ -29,32 +30,21 @@
     padding-right: 0;
   }
 
-  &--header{
+  &--header {
+    padding: 15px 10px;
     color: var(--cl-accent);
   }
 
 }
 
-.table-main__body-cell {
-  padding: var(--indent-basic);
-
-  &:first-child {
-    padding-left: 0;
-  }
-
-  &:last-child {
-    padding-right: 0;
-  }
-}
-
 // Line table
 
-.table-line{
+.table-line {
   display: flex;
 }
 
 .table-line__header-column {
-  margin-right: var(--indent-big);
+  margin-right: 25px;
   flex: 0 0 max-content;
 
   .table-line__row {
@@ -63,12 +53,10 @@
 }
 
 .table-line__row {
-  margin-bottom: var(--indent-main);
-  font-weight: 500;
+  padding: 18px 0;
+  font-weight: var(--fw-bold);
 
   &:last-child {
     margin-bottom: 0;
   }
 }
-
-

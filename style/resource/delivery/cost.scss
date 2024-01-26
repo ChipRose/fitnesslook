@@ -1,7 +1,7 @@
 // Lifting cost
 
 .cost-lifting__header {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 60px;
 }
 
 .cost-lifting__title {
@@ -9,7 +9,7 @@
 }
 
 .cost-lifting__intro-block {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 60px;
 
   @media (min-width:$tablet-width) {
     margin: calc(-1 * var(--indent-big)) calc(-1 * var(--indent-big)) var(--indent-big);
@@ -18,7 +18,7 @@
 }
 
 .cost-lifting__intro-item {
-  margin-bottom: var(--indent-main);
+  margin-bottom: 32px;
 
   &:last-child {
     margin-bottom: 0;
@@ -46,13 +46,18 @@
 
 // Delivery cost
 
+.cost-delivery__title {
+  margin-bottom: 46px;
+}
+
+
 .cost-delivery__button-block {
-  margin: calc(-1 * var(--indent-basic)) 0;
+  margin: 0 -6px 60px 0;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .cost-delivery__button-item {
-  margin: 0;
+  margin-bottom: 6px;
 }

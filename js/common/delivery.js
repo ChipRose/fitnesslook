@@ -58,7 +58,7 @@ const accordionDelivery = new Accordion(Array.from(document.querySelectorAll('.a
 settingAccordionAdaptive(accordionDelivery);
 
 new Accordion(Array.from(document.querySelectorAll('.accordion--faq')), {
-  duration: 300
+  duration: 100
 });
 
 

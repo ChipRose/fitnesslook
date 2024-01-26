@@ -1,10 +1,29 @@
+.accordion {
+  box-sizing: border-box;
+  background: var(--cl-contrast);
+  border-radius: var(--radius-basic);
+  box-shadow: var(--shadow-main);
+}
+
+.accordion .ac-header {
+  padding: 32px 22px;
+  box-sizing: border-box;
+}
+
 .accordion .ac.is-active>.ac-header {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 21px;
+}
+
+.accordion .ac.is-active>.ac-panel {
+  padding-bottom: 46px;
+
+  &--extra {
+    padding-bottom: 10px;
+  }
 }
 
 .accordion .ac-trigger {
-  padding: 0 calc(var(--button-size-big) + var(--indent-basic)) 0 0;
-  font-size: var(--fz-main);
+  padding: 0 57px 0 0;
   color: inherit;
   position: relative;
 
@@ -44,11 +63,6 @@
   }
 }
 
-.accordion .ac-trigger {
-  font-family: Helvetica, Arial sans-serif;
-  font-weight: 500;
-}
-
 .accordion .ac {
   margin-top: 0;
   border: none;
@@ -56,7 +70,8 @@
 }
 
 .accordion__text-block {
-  margin-bottom: var(--indent-huge);
+  margin-bottom: var(--indent-big);
+  padding: 0 22px;
 
   &:last-child {
     margin-bottom: 0;
@@ -64,32 +79,43 @@
 }
 
 .accordion__schedule {
-  margin: calc(-1 * var(--indent-small));
+  padding: 0 22px;
+  margin: -8px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .accordion__time-item {
-  margin: var(--indent-small);
-  padding: var(--indent-main);
-  flex: 0 0 calc(50% - 2 * var(--indent-small));
+  margin: 8px;
+  padding: 25px;
+  flex: 0 0 calc(50% - 16px);
   box-sizing: border-box;
   background: var(--cl-neutral-accent);
-  border-radius: var(--radius-basic);
+  border-radius: var(--radius-xsmall);
   text-align: center;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   text-transform: uppercase;
 }
 
 .accordion__extra-image {
-  margin: calc(var(--indent-big) - var(--indent-main)) auto var(--indent-big);
+  margin: 0 auto 38px;
 }
 
 .accordion__extra-title-block {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
 }
 
 .accordion__extra-text-block {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
+}
+
+.accordion__paper {
+  margin: 0 10px;
+  padding: 38px 12px 46px;
+
+  box-sizing: border-box;
+  background: var(--cl-contrast);
+  border-radius: 20px;
+  box-shadow: var(--shadow-main);
 }

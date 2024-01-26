@@ -1,14 +1,15 @@
 // Main button
 
 .button-main {
-  padding: var(--indent-basic) var(--indent-main);
+  padding: 8px 20px;
   display: block;
   width: fit-content;
   box-sizing: border-box;
   font-family: 'Helvetica', Arial, sans-serif;
   font-size: var(--fz-medium);
-  line-height: var(--lh-main);
-  font-weight: 500;
+  line-height: var(--lh-small);
+  letter-spacing: 0.02;
+  font-weight: var(--fw-medium);
   background: var(--cl-contrast);
   box-shadow: var(--shadow-main);
   color: var(--cl-heavy-dark);
@@ -41,10 +42,34 @@
   color: var(--cl-contrast);
 }
 
+// Simple button
+
+.button-simple {
+  padding: 11px 24px;
+  border-radius: 20px;
+  display: block;
+  width: fit-content;
+  box-sizing: border-box;
+  background: var(--cl-contrast);
+  font-size: var(--fz-main);
+  font-weight: var(--fw-regular);
+  box-shadow: var(--shadow-main);
+  transition: var(--transition-main);
+
+  &--active {
+    background: var(--cl-heavy-dark);
+    color: var(--cl-contrast);
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-main-hover);
+  }
+}
+
 // Active button
 
 .button-action {
-  padding: var(--indent-basic) var(--indent-big);
+  padding: 15px 35px;
   display: block;
   width: fit-content;
   box-sizing: border-box;
@@ -99,9 +124,9 @@
   transform: translateY(-50%);
   left: 120%;
   width: 0;
-  height: var(--popup-size);
+  height: fit-content;
   align-items: center;
-  border-radius: var(--radius-main);
+  border-radius: var(--radius-small);
   font-size: var(--fz-small);
   text-transform: lowercase;
   color: var(--cl-contrast);
@@ -110,24 +135,26 @@
 }
 
 .button-popup.button-popup--open {
-
   .button-popup__modal {
-    padding: var(--indent-small) var(--indent-main);
     display: flex;
+    box-sizing: border-box;
     opacity: 1;
-    width: 145px;
+  }
+
+  .button-popup__modal .text {
+    padding: 6px 12px;
   }
 }
 
 // Round button
 
 .button-round {
-  padding: var(--indent-small);
-  width: var(--button-size-big);
-  height: var(--button-size-big);
+  padding: 11px;
+  width: 37px;
+  height: 37px;
   box-sizing: border-box;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: var(--fw-medium);
   color: var(--cl-accent);
   background: var(--cl-contrast);
   display: flex;
@@ -136,8 +163,15 @@
   border-radius: 50%;
   box-shadow: var(--shadow-middle);
   vertical-align: middle;
-  line-height: var(--lh-main);
+  line-height: 150%;
   transition: var(--transition-main);
+
+  &--simple {
+    color: var(--cl-disable);
+    font-size: var(--fz-medium);
+    font-weight: var(--fw-regular);
+
+  }
 
   &--big {
     @media (min-width:$tablet-width) {
@@ -199,17 +233,17 @@
 // Modal button
 
 .button-modal {
-  margin: calc(-1 * var(--indent-basic));
+  margin: -9px -4px;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .button-modal__item {
   max-width: 327px;
   min-width: 130px;
-  flex: 0 1 calc(50% - 2 * var(--indent-basic));
-  margin: var(--indent-basic);
+  min-height: 98px;
+  flex: 0 1 calc(50% - 8px);
+  margin: 18px 4px;
 
   @media (min-width:$tablet-width) {
     min-height: 200px;
@@ -217,8 +251,12 @@
 }
 
 .button-modal__container {
+  @include paper;
+
+  padding: 0 8px 8px;
   min-height: 100px;
   height: 100%;
+  border-radius: 20px;
 }
 
 .button-modal__content-block {
@@ -229,7 +267,7 @@
 }
 
 .button-modal__image-block {
-  margin-bottom: var(--indent-main);
+  margin-bottom: 11px;
   height: 60px;
   display: flex;
   justify-content: center;
@@ -258,12 +296,13 @@
 }
 
 .button-modal__button {
-  margin-top: var(--indent-basic);
-  margin-right: var(--indent-basic);
+  margin-top: 4px;
+  margin-right: 4px;
   margin-left: auto;
 }
 
 .button-modal__modal {
+
   display: none;
   position: absolute;
   width: 80%;
@@ -288,14 +327,15 @@
 // Input
 
 .input.field-main {
-  padding: var(--indent-main) var(--indent-big);
+  padding: 12px 29px;
   box-shadow: var(--shadow-inset);
   box-sizing: border-box;
   width: 100%;
-  border-radius: var(--radius-big);
+  border-radius: 20px;
 
   &::placeholder {
-    opacity: 0.5;
+    color: var(--cl-disable);
+    opacity: 1;
   }
 
   &:focus-within {

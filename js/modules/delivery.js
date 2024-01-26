@@ -387,6 +387,7 @@ const OPEN_CLASS = 'button-popup--open';
 const closeAllPopup = popupItems => {
   popupItems?.forEach(item => {
     item.classList.remove(OPEN_CLASS);
+    item.querySelector('.button-popup__modal').style.width = '0';
   });
 };
 const setPopup = popupProperties => {
@@ -403,6 +404,9 @@ const setPopup = popupProperties => {
       } else {
         closeAllPopup(popupItems);
         item.classList.add(OPEN_CLASS);
+        const innerWidth = `${item.querySelector('.button-popup__modal .text').offsetWidth}px`;
+        item.querySelector('.button-popup__modal').style.width = innerWidth;
+        console.log(item.querySelector('.button-popup__modal .text').offsetWidth);
       }
     });
     buttonPopup.addEventListener('blur', () => {
@@ -4696,7 +4700,7 @@ const renderCitiesDelivery = items => {
   const regionsContentFragment = document.createDocumentFragment();
   items?.forEach(item => {
     const region = regionsTemplate.cloneNode(true);
-    const button = region.querySelector('.button-main');
+    const button = region.querySelector('.button-simple');
     button.textContent = item.city;
     button.href = `https://${item.name}.fitnesslook.ru/pages/dostavka.html`;
     regionsContentFragment.appendChild(region);
@@ -8093,7 +8097,7 @@ const sliderPickup = document.querySelector('#pickup-slider') && document.queryS
 const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--delivery')));
 (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery);
 new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--faq')), {
-  duration: 300
+  duration: 100
 });
 })();
 

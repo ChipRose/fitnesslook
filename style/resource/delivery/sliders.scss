@@ -1,6 +1,6 @@
 .slider-main__header {
   padding-bottom: var(--indent-huge);
-  margin-bottom: var(--indent-big);
+  margin-bottom: var(--indent-medium);
   position: relative;
 
   &::after {
@@ -10,7 +10,7 @@
 }
 
 .slider-main__title {
-  margin-bottom: var(--indent-huge);
+  margin-bottom: var(--indent-big);
 }
 
 .slider-main #slider-delivery-mw {
@@ -18,7 +18,7 @@
 }
 
 .slider-main__intro-block {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 45px;
 
   @media (min-width:$tablet-width) {
     margin: calc(-1 * var(--indent-big)) calc(-1 * var(--indent-big)) var(--indent-big);
@@ -27,7 +27,7 @@
 }
 
 .slider-main__intro-item {
-  margin-bottom: var(--indent-main);
+  margin-bottom: 32px;
 
   &:last-child {
     margin-bottom: 0;
@@ -40,6 +40,6 @@
 }
 
 .slider-main__table-block {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 50px;
 
 }

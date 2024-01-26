@@ -2,6 +2,13 @@
   position: relative;
 }
 
+.payment__content {
+  @include paper;
+
+  padding: 32px 22px 13px;
+  border-radius: 30px;
+}
+
 .payment.payment--open .payment__content {
   position: relative;
   overflow: hidden;
@@ -27,23 +34,31 @@
 }
 
 .payment__variant-item {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 33px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.payment__title {
+  margin-bottom: 38px;
 }
 
 .payment__title-extra {
-  margin-bottom: var(--indent-main);
+  margin-bottom: 17px;
 }
 
 .payment__content {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 54px;
 }
 
 .payment__extra-title {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 34px;
 }
 
 .payment__extra-info {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 50px;
 
   @media (min-width:$tablet-width) {
     margin: calc(-1 * var(--indent-big)) calc(-1 * var(--indent-big)) 0;
@@ -51,13 +66,14 @@
   }
 }
 
-.payment__extra-item{
-  margin-bottom: var(--indent-main);
+.payment__extra-item {
+  margin-bottom: 23px;
 
   &:last-child {
     margin-bottom: 0;
 
   }
+
   @media (min-width:$tablet-width) {
     margin: var(--indent-big);
     flex: 0 0 calc(50% - 2 * var(--indent-big));

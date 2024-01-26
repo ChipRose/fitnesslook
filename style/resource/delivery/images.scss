@@ -4,8 +4,24 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
-  border-radius: var(--radius-main);
-  // background: rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  background: var(--cl-transparent-neutral);
+
+  img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+// Image pins block
+
+.image-pins-block {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 
   img {
     width: 100%;
@@ -56,17 +72,17 @@
     }
 
     &:nth-child(2) {
-      top: 40%;
+      top: 58%;
       left: 28%;
     }
 
     &:nth-child(3) {
-      top: 62%;
-      left: 40%;
+      top: 35%;
+      left: 28%;
     }
 
     &:nth-child(4) {
-      top: 83%;
+      top: 80%;
       left: 28%;
     }
   }
@@ -102,7 +118,7 @@
 // Round image
 
 .image-round {
-  padding: var(--indent-small);
+  padding: 11зч;
   width: var(--popup-size);
   height: var(--popup-size);
   box-sizing: border-box;

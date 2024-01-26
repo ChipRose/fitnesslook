@@ -10,7 +10,7 @@
 }
 
 .form-communicate__fieldset {
-  margin: 0 auto var(--indent-big);
+  margin: 0 auto 20px;
   width: 100%;
   max-width: 700px;
   display: flex;
@@ -18,7 +18,7 @@
 }
 
 .form-communicate__label {
-  margin-bottom: var(--indent-main);
+  margin-bottom: 10px;
 
   &:last-child {
     margin-bottom: 0;
@@ -39,7 +39,7 @@
 }
 
 .form-communicate__intro__item {
-  margin-bottom: var(--indent-main);
+  margin-bottom: 56px;
 
   &:last-child {
     margin-bottom: 0;

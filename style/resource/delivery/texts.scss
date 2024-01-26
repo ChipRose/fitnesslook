@@ -1,19 +1,23 @@
 // Major Title
 
 .title-major {
-  padding-right: var(--indent-huge);
   width: fit-content;
-  font-size: var(--fz-big);
-  line-height: var(--lh-big);
-  font-weight: 500;
+  font-size: var(--fz-huge);
+  line-height: var(--lh-small);
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
-  position: relative;
 
-  &::after {
-    content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCA0MiAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS4wOTE4IDBDMTQuNDA0MyAwIDE3LjM3NzkgMS40NTIxNSAxOS40MTAyIDMuNzU0ODhDMTcuOTY1OCA1LjgzNzg5IDE3LjExOTEgOC4zNjYyMSAxNy4xMTkxIDExLjA5MjhDMTcuMTE5MSAxMy44MTg0IDE3Ljk2NDggMTYuMzQ2NyAxOS40MDkyIDE4LjQyODdDMTcuMzc3IDIwLjczMTQgMTQuNDAzMyAyMi4xODI2IDExLjA5MTggMjIuMTgyNkM0Ljk2NTgyIDIyLjE4MjYgMCAxNy4yMTY4IDAgMTEuMDkxOEMwIDQuOTY1ODIgNC45NjU4MiAwIDExLjA5MTggMFpNMzAuOTA5MiAyMi4xODI2QzM3LjAzNDIgMjIuMTgyNiA0MiAxNy4yMTY4IDQyIDExLjA5MThDNDIgNC45NjU4MiAzNy4wMzQyIDAgMzAuOTA5MiAwQzI0Ljc4MzIgMCAxOS44MTc0IDQuOTY1ODIgMTkuODE3NCAxMS4wOTE4QzE5LjgxNzQgMTcuMjE2OCAyNC43ODMyIDIyLjE4MjYgMzAuOTA5MiAyMi4xODI2WiIgZmlsbD0iI0YzRjNGMyIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOm11bHRpcGx5Ii8+Cjwvc3ZnPgo=');
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  @media (min-width:$tablet-width) {
+    padding-right: 63px;
+    position: relative;
+    font-size: 40px;
+
+    &::after {
+      content: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iMjMiIHZpZXdCb3g9IjAgMCA0MiAyMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xMS4wOTE4IDBDMTQuNDA0MyAwIDE3LjM3NzkgMS40NTIxNSAxOS40MTAyIDMuNzU0ODhDMTcuOTY1OCA1LjgzNzg5IDE3LjExOTEgOC4zNjYyMSAxNy4xMTkxIDExLjA5MjhDMTcuMTE5MSAxMy44MTg0IDE3Ljk2NDggMTYuMzQ2NyAxOS40MDkyIDE4LjQyODdDMTcuMzc3IDIwLjczMTQgMTQuNDAzMyAyMi4xODI2IDExLjA5MTggMjIuMTgyNkM0Ljk2NTgyIDIyLjE4MjYgMCAxNy4yMTY4IDAgMTEuMDkxOEMwIDQuOTY1ODIgNC45NjU4MiAwIDExLjA5MTggMFpNMzAuOTA5MiAyMi4xODI2QzM3LjAzNDIgMjIuMTgyNiA0MiAxNy4yMTY4IDQyIDExLjA5MThDNDIgNC45NjU4MiAzNy4wMzQyIDAgMzAuOTA5MiAwQzI0Ljc4MzIgMCAxOS44MTc0IDQuOTY1ODIgMTkuODE3NCAxMS4wOTE4QzE5LjgxNzQgMTcuMjE2OCAyNC43ODMyIDIyLjE4MjYgMzAuOTA5MiAyMi4xODI2WiIgZmlsbD0iI0YzRjNGMyIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOm11bHRpcGx5Ii8+Cjwvc3ZnPgo=');
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
   }
 }
 
@@ -21,17 +25,17 @@
 
 .title-main {
   font-size: var(--fz-big);
-  line-height: var(--lh-main);
-  font-weight: 500;
+  line-height: var(--lh-xsmall);
+  font-weight: var(--fw-bold);
 }
 
 // Secondary title
 
 .title-secondary {
-  font-size: var(--fz-mediumx);
-  line-height: var(--lh-main);
+  font-size: var(--fz-xhuge);
+  line-height: var(--lh-medium);
   vertical-align: middle;
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   color: var(--cl-accent);
 
   &--basic {
@@ -44,26 +48,40 @@
 .title-extra {
   font-size: var(--fz-main);
   line-height: var(--lh-main);
-  font-weight: 500;
+  font-weight: var(--fw-medium);
 
   &--accent {
     color: var(--cl-accent);
   }
 }
 
+// Extra info
+
+.title-extra-info {
+  color: var(--cl-accent);
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+}
+
+.title-simple {
+  font-size: var(--fz-main);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-tiny);
+}
+
 // Subtitle
 
 .subtitle {
-  font-size: var(--fz-medium);
+  font-size: var(--fz-xmedium);
   line-height: var(--lh-huge);
-  font-weight: 400;
+  font-weight: var(--fw-regular);
   text-transform: uppercase;
 }
 
 // Main text
 
 .text-main {
-  margin-bottom: var(--indent-main);
+  margin-bottom: var(--indent-small);
 
   &:last-child {
     margin-bottom: 0;
@@ -73,12 +91,20 @@
     color: var(--cl-accent);
   }
 
+  &--medium {
+    font-weight: var(--fw-medium);
+  }
+
   &--strong {
-    font-weight: 500;
+    font-weight: var(--fw-bold);
   }
 
   &--center {
     text-align: center;
+  }
+
+  &--important {
+    font-size: var(--fz-xmedium);
   }
 
   &--del {
@@ -142,3 +168,8 @@
   font-weight: 500;
   color: var(--cl-accent);
 }
+
+
+
+
+

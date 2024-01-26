@@ -2,8 +2,8 @@
   #wmc {
     font-family: 'Helvetica', Arial, sans-serif;
     font-size: var(--fz-main);
-    line-height: var(--lh-main);
-    font-weight: 300;
+    line-height: var(--lh-medium);
+    font-weight: var(--fw-light);
     background: var(--cl-light);
   }
 }
@@ -16,11 +16,11 @@
 }
 
 .page-delivery__main-nav {
-  margin-bottom: var(--indent-main);
+  margin-bottom: var(--indent-big);
 }
 
 .page-delivery__main-nav .container {
-  padding-top: var(--indent-main);
+  padding-top: 5px;
 }
 
 .page-delivery__cover {
@@ -28,19 +28,15 @@
 }
 
 .page-delivery__navigation {
-  margin-bottom: var(--indent-big);
-}
-
-.page-delivery__navigation {
-  margin-bottom: var(--indent-huge);
+  margin-bottom: var(--indent-super);
 }
 
 .page-delivery__receiving {
-  margin-bottom: var(--indent-huge);
+  margin-bottom: calc(var(--indent-huge) + var(--indent-medium));
 }
 
 .page-delivery__receiving-type {
-  margin-bottom: var(--indent-huge);
+  margin-bottom: 52px;
 }
 
 .page-delivery__cost-delivery {
@@ -56,7 +52,7 @@
 }
 
 .page-delivery__delivery-regions {
-  margin-bottom: var(--indent-huge);
+  margin-bottom: 53px;
 }
 
 .page-delivery__form-communicate {
