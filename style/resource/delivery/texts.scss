@@ -39,7 +39,9 @@
   color: var(--cl-accent);
 
   &--basic {
+    font-size: 20px;
     color: var(--cl-dark);
+    font-weight: var(--fw-regular);
   }
 }
 
@@ -162,11 +164,14 @@
   }
 }
 
-// Basic link
+// Main link
 
-.link-basic {
-  font-weight: 500;
+.link-main {
   color: var(--cl-accent);
+
+  &--medium {
+    font-weight: var(--fw-medium);
+  }
 }
 
 

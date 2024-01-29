@@ -1,8 +1,6 @@
 .accordion {
-  box-sizing: border-box;
-  background: var(--cl-contrast);
+  @include paper;
   border-radius: var(--radius-basic);
-  box-shadow: var(--shadow-main);
 }
 
 .accordion .ac-header {
@@ -22,9 +20,14 @@
   }
 }
 
+.accordion-address {
+  padding: 0 22px;
+}
+
 .accordion .ac-trigger {
   padding: 0 57px 0 0;
   color: inherit;
+  font-family: "Helvetica", Arial, sans-serif;
   position: relative;
 
   &::after {
@@ -118,4 +121,30 @@
   background: var(--cl-contrast);
   border-radius: 20px;
   box-shadow: var(--shadow-main);
+}
+
+.accordion.accordion--faq {
+  .title-secondary {
+    font-size: 20px;
+    color: var(--cl-dark);
+    font-weight: var(--fw-regular);
+  }
+
+  .ac-trigger {
+    &::after {
+      background: center center/ 15px 8px no-repeat url('/i/media/stat/icons/simple-arrow-neutral.svg');
+    }
+  }
+
+  .ac-header {
+    padding-left: 39px;
+  }
+
+  .title-secondary {
+    font-weight: var(--fw-bold);
+  }
+
+  .accordion__text-block {
+    padding: 0 39px;
+  }
 }

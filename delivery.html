@@ -3585,7 +3585,7 @@
       <div id="main_content_template">
         <div class="content">
           <h1 class="visually-hidden">
-            Доставка и оплата FL
+            Доставка и оплата
           </h1>
 
           <section class="page-delivery__main-nav">
@@ -3593,7 +3593,11 @@
             <div class="container">
               <ul class="list breadcrumbs">
                 <li class="breadcrubs__item">
-                  <a href="/" class="link breadcrubs__link">Главная</a>
+                  <a href="/" class="link breadcrubs__link">
+                    <svg width="15" height="19" role="img" focusable="false">
+                      <use xlink:href="/i/media/stat/sprite.svg#home"></use>
+                    </svg>
+                  </a>
                 </li>
                 <li class="breadcrubs__item breadcrubs__item--current">
                   <a class="link breadcrubs__link">Доставка и оплата</a>
@@ -3690,14 +3694,12 @@
                       условия бесплатной доставки.
                     </p>
                     <p class="text text-main ">
-                      *Если вас интересует способ получения заказа в другом регионе, найдите и выберете его в списке
-                      городов
+                      *Если вас интересует способ получения заказа в другом регионе, найдите и выберете его в
+                      <a href="#regions" class="link link-main" id="regions-list-button">
+                        списке городов
+                      </a>
                       работы FitnessLook.
                     </p>
-                  </div>
-                  <div class="receiving__action-block">
-                    <a href="#regions" class="link button-main button-main--active" id="regions-list-button">Список
-                      городов</a>
                   </div>
                 </div>
                 <div class="image-block receiving__map-block">
@@ -4023,12 +4025,12 @@
                 </li>
                 <li id="pickup">
                   <div class="receiving-type__intro-block">
-                    <p class="text text-main text-main--strong">
+                    <p class="text text-main text-main--strong text-main--important">
                       Самовывоз — самый простой способ забрать заказ в удобное время.
                     </p>
                   </div>
                   <div class="receiving-type__pickup-wrapper">
-                    <div class="receiving-type__pickup-block">
+                    <div class="receiving-type__pickup-block container__narrow">
                       <div class="receiving-type__map-block" id="map">
                         <picture>
                           <source type="image/webp"
@@ -4038,7 +4040,7 @@
                             alt="ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж">
                         </picture>
                       </div>
-                      <div class="paper accordion accordion--adaptive accordion--delivery">
+                      <div class="accordion accordion--adaptive accordion--delivery">
                         <div class="ac">
                           <h3 class="title ac-header">
                             <button class="button ac-trigger">
@@ -4058,11 +4060,12 @@
                                 Подробности объяснит менеджер.
                               </p>
                             </div>
-                            <address>
-                              <p class="text title-extra title-extra--accent receiving-type__extra-title">
+                            <address class="accordion-address">
+                              <p
+                                class="text text-main text-main--important text-main--accent text-main--medium receiving-type__extra-title">
                                 ТВК Интерио
                               </p>
-                              <div class="accordion__text-block">
+                              <div class="address__text-block">
                                 <p class="text text-main">
                                   ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж </p>
                               </div>
@@ -4073,7 +4076,7 @@
                     </div>
 
                     <a id="schedule"></a>
-                    <div class="receiving-type__pickup-block">
+                    <div class="receiving-type__pickup-block container__narrow">
                       <div class="receiving-type__pickup-slider-block">
                         <div class="receiving-type__pickup-slider-buttons" id="pickup-slider-buttons">
                           <button class="button button-round button-round--slider button-round--slider-prev">
@@ -4156,7 +4159,7 @@
                           </li>
                         </ul>
                       </div>
-                      <div class="paper accordion accordion--adaptive accordion--delivery">
+                      <div class="accordion accordion--adaptive accordion--delivery">
                         <div class="ac">
                           <h3 class="title ac-header">
                             <button class="button ac-trigger">
@@ -4202,7 +4205,7 @@
           <a id="cost-delivery"></a>
           <section class="cost-delivery slider-main page-delivery__cost-delivery">
             <div class="container">
-              <header >
+              <header>
                 <h2 class="title title-main cost-delivery__title">
                   Стоимость доставки
                 </h2>
@@ -4236,10 +4239,13 @@
                       <thead class="table-main__header">
                         <tr>
                           <th class="table-main__cell table-main__cell--header">
-                            Стоимость заказа:
+                            Стоимость заказа
+                          </th>
+                          <th class="table-main__cell table-main__cell--header table-main__cell--nomob">
+                            Зона доставки
                           </th>
                           <th class="table-main__cell table-main__cell--header">
-                            Стоимость доставки:
+                            Стоимость доставки
                           </th>
                         </tr>
                       </thead>
@@ -4248,6 +4254,11 @@
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
                               от 15'000 ₽
+                            </span>
+                          </td>
+                          <td class="table-main__cell table-main__cell--nomob">
+                            <span class="nobr text text-main">
+                              в пределах КАД
                             </span>
                           </td>
                           <td class="table-main__cell">
@@ -4264,6 +4275,11 @@
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
                               от 25'000 ₽
+                            </span>
+                          </td>
+                          <td class="table-main__cell table-main__cell--nomob">
+                            <span class="nobr text text-main">
+                              в пределах КАД
                             </span>
                           </td>
                           <td class="table-main__cell">
@@ -4448,7 +4464,7 @@
                           <th class="table-main__cell table-main__cell--header">
                             Стоимость заказа
                           </th>
-                          <th class="table-main__cell table-main__cell--header">
+                          <th class="table-main__cell table-main__cell--header table-main__cell--nomob">
                             Условия доставки
                           </th>
                           <th class="table-main__cell table-main__cell--header">
@@ -4463,7 +4479,8 @@
                               от 25'000 ₽
                             </span>
                           </td>
-                          <td class="table-main__cell">территория Ленинградской области</td>
+                          <td class="table-main__cell table-main__cell--nomob">
+                            территория Ленинградской области< /td>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
                               1’000 ₽ + 40 ₽ / км
@@ -4480,7 +4497,9 @@
                               от 35'000 ₽
                             </span>
                           </td>
-                          <td class="table-main__cell">территория Ленинградской области</td>
+                          <td class="table-main__cell table-main__cell--nomob">
+                            территория Ленинградской области
+                          </td>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
                               0 + 40 ₽ / км
@@ -4650,7 +4669,7 @@
                             <p class="text text-main">
                               Подайте заявку и получите ответ в течение пары минут! Более <a
                                 href="/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html"
-                                class="link link-basic" target="_blank">подробная информация</a> об этом способе оплаты.
+                                class="link link-main link-main--medium" target="_blank">подробная информация</a> об этом способе оплаты.
                             </p>
                           </div>
                         </div>
@@ -4715,7 +4734,7 @@
                   <div class="payment__extra-item">
                     <p class="text text-main">
                       Поставка товаров "под заказ" (которые не помечены "в наличии") осуществляется по предоплате,
-                      просим  уточнить условия у менеджера.
+                      просим уточнить условия у менеджера.
                     </p>
                   </div>
                   <div class="payment__extra-item">
@@ -4739,7 +4758,7 @@
               </ul>
               <div class="delivery-regions__exception-block">
                 <button type="button" class="button button-simple button-simple--active" id="button-new-location">
-                  Моего города  нет в списке
+                  Моего города нет в списке
                 </button>
               </div>
             </div>
@@ -4797,7 +4816,7 @@
               <h2 class="title title-main faq__title">
                 FAQ
               </h2>
-              <ul class="list faq__list" id="faq-list">
+              <ul class="list faq__list container__narrow" id="faq-list">
               </ul>
             </div>
           </section>
@@ -4851,11 +4870,11 @@
 
         <!-- Question -->
         <template id="question">
-          <li class="paper accordion accordion--faq faq__item">
+          <li class="accordion accordion--faq faq__item">
             <div class="ac">
               <h3 class="title ac-header">
                 <button class="button ac-trigger">
-                  <span class="text title-secondary title-secondary--basic">
+                  <span class="text title-secondary">
                   </span>
                 </button>
               </h3>
