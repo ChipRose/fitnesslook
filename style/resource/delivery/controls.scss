@@ -240,25 +240,41 @@
 .button-modal {
   margin: -9px -4px;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
+
+  @media (min-width:$tablet-width) {
+    justify-content: flex-start;
+    margin: -9px -17px;
+
+  }
+
 }
 
 .button-modal__item {
-  max-width: 327px;
-  min-width: 130px;
-  min-height: 98px;
-  flex: 0 1 calc(50% - 8px);
   margin: 18px 4px;
+  max-width: 320px;
+  min-width: 140px;
+  min-height: 98px;
+  flex: 1 0 calc(50% - 8px);
+
+  &:nth-child(3n) {
+    flex-grow: 0
+  }
 
   @media (min-width:$tablet-width) {
+    flex: 1 0 320px;
+    width: 320px;
     min-height: 200px;
+    margin: 18px 17px;
   }
 }
 
 .button-modal__container {
   @include paper;
 
-  padding: 0 8px 8px;
+  padding: 0 8px 15px;
   min-height: 100px;
   height: 100%;
   border-radius: 20px;
@@ -307,14 +323,17 @@
 }
 
 .button-modal__modal {
+  border-radius: 20px;
+  background: var(--cl-middle);
 
   display: none;
+  padding: 30px;
   position: absolute;
-  width: 80%;
   height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: -17px;
+  right: -17px;
+  box-sizing: border-box;
+  top: calc(100% + 25px);
   z-index: 100;
 
   &--open {
@@ -323,10 +342,14 @@
 }
 
 .button-modal__header {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 27px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.button-modal__header .title-extra{
+  width: 50%;
 }
 
 // Input
