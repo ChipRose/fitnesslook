@@ -62,6 +62,7 @@
     "node": "20.9.0"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.33",
     "accordion-js": "^3.3.4",
     "imask": "^7.3.0",
     "tiny-slider": "^2.9.4",

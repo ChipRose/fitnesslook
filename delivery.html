@@ -12,6 +12,10 @@
 
   <link rel="stylesheet" type="text/css" href="https://www.fitnesslook.ru/js/tiny_slider/tiny-slider.css">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css  ">
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+          />
   <link rel="stylesheet" type="text/css" href="/style/modules/delivery.css">
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -4635,7 +4639,7 @@
                       <li class="button-modal__item">
                         <div class="button-modal__container">
                           <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button">
+                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-credit">
                               ?
                               <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                             </button>
@@ -4653,7 +4657,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="button-modal__modal" tabindex="-1">
+                        <div class="button-modal__modal" tabindex="-1" id="dialog-content-credit">
                           <header class="button-modal__header">
                             <h3 class="title title-extra">
                               Оплата в рассрочку или кредит
@@ -4683,7 +4687,7 @@
                       <li class="button-modal__item">
                         <div class="button-modal__container">
                           <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button">
+                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-halva">
                               ?
                               <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                             </button>
@@ -4701,13 +4705,13 @@
                             </div>
                           </div>
                         </div>
-                        <div class="button-modal__modal" tabindex="-1">
+                        <div class="button-modal__modal" tabindex="-1" id="dialog-content-halva">
                           <header class="button-modal__header">
                             <h3 class="title title-extra">
                               Оплата в рассрочку картой “Халва”
                             </h3>
                           </header>
-                          <div class="button-modal__content-block">
+                          <div class="button-modal__content-block" >
                             <p class="text text-main ">
                               Обаладателям карты «Халва» доступны супер-выгодные условия покупки наших товаров в
                               рассрочку

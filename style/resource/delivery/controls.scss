@@ -327,22 +327,12 @@
 }
 
 .button-modal__modal {
+  padding: 30px;
+  width: 80%;
+  max-width: 352px;
   border-radius: 20px;
   background: var(--cl-middle);
-
   display: none;
-  padding: 30px;
-  position: absolute;
-  height: auto;
-  left: -17px;
-  right: -17px;
-  box-sizing: border-box;
-  top: calc(100% + 25px);
-  z-index: 100;
-
-  &--open {
-    display: block;
-  }
 }
 
 .button-modal__header {
