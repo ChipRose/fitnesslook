@@ -1,6 +1,6 @@
 import { tns } from "tiny-slider";
 
-const setSimpleSlider = (buttonsSelector, container, activeSlide=0) => {
+const setSimpleSlider = (buttonsSelector, container, activeSlide = 0) => {
   const sliderButtons = document.querySelector(buttonsSelector);
   const slideContainer = document.querySelector(container);
   const children = Array.from(slideContainer.children);
@@ -18,12 +18,12 @@ const setSimpleSlider = (buttonsSelector, container, activeSlide=0) => {
     const item = slideContainer.querySelector(`#${evt.target.value}`);
 
     buttons?.forEach(element => {
-      if (element.value===evt.target.value){
+      if (element.value === evt.target.value) {
         element.classList.add('button-main--active');
       } else {
         element.classList.remove('button-main--active');
       }
-  });
+    });
 
     children?.forEach(element => {
       element.style.display = 'none';
@@ -46,13 +46,12 @@ const setSlider = (container, props) => {
 const setTableSlider = (container, props) => {
   return tns({
     container,
-    items: 4,
+    items: 5,
     nav: false,
     responsive: {
-      768:{
-        items: 7
-
-      }
+      768: {
+        items: 6
+      },
     },
     ...props
   })

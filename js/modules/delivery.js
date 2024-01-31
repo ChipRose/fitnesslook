@@ -10137,11 +10137,11 @@ const setSlider = (container, props) => {
 const setTableSlider = (container, props) => {
   return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
     container,
-    items: 4,
+    items: 5,
     nav: false,
     responsive: {
       768: {
-        items: 7
+        items: 6
       }
     },
     ...props
