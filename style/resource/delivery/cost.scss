@@ -2,10 +2,18 @@
 
 .cost-lifting__header {
   margin-bottom: 60px;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 67px;
+  }
 }
 
 .cost-lifting__title {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .cost-lifting__intro-block {
@@ -14,6 +22,7 @@
   @media (min-width:$tablet-width) {
     margin: calc(-1 * var(--indent-big)) calc(-1 * var(--indent-big)) var(--indent-big);
     display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -27,6 +36,7 @@
   @media (min-width:$tablet-width) {
     margin: var(--indent-big);
     flex: 0 0 calc(50% - 2 * var(--indent-big));
+    max-width: 450px;
   }
 }
 
@@ -48,16 +58,24 @@
 
 .cost-delivery__title {
   margin-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
 }
 
 
 .cost-delivery__button-block {
-  margin: 0 -6px 60px 0;
+  margin: 0 -6px 60px -6px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 -6px 67px -16px;
+  }
 }
 
 .cost-delivery__button-item {
-  margin-bottom: 6px;
+  margin: 0px;
 }

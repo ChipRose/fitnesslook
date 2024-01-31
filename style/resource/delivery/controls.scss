@@ -83,6 +83,10 @@
   box-shadow: var(--shadow-button);
   transition: var(--transition-main);
 
+  @media (min-width:$tablet-width) {
+    padding: 8px 39px;
+  }
+
   &:hover {
     box-shadow: var(--shadow-main-hover);
   }
@@ -249,7 +253,6 @@
     margin: -9px -17px;
 
   }
-
 }
 
 .button-modal__item {
@@ -263,11 +266,15 @@
     flex-grow: 0
   }
 
+  @media (min-width:544px) {
+    min-height: 130px;
+  }
+
   @media (min-width:$tablet-width) {
+    margin: 18px 17px;
     flex: 1 0 320px;
     width: 320px;
     min-height: 200px;
-    margin: 18px 17px;
   }
 }
 
@@ -278,6 +285,9 @@
   min-height: 100px;
   height: 100%;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .button-modal__content-block {
@@ -297,12 +307,6 @@
 
 .button-modal__text-block {
   text-align: center;
-}
-
-.button-modal__container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
 }
 
 .button-modal__icon {

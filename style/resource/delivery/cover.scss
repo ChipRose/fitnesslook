@@ -1,28 +1,31 @@
 .cover__wrapper {
   @media (min-width:$tablet-width) {
     display: grid;
-    grid-template-rows: 80px 50px min-content 50px;
-    grid-template-columns: 50% 30% 20%;
+    grid-template-rows: min-content 50px min-content 50px;
+    grid-template-columns: 50% 20% 30%;
   }
 }
 
 .cover__title-block {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
   box-sizing: border-box;
-}
-
-.cover__title {
 
   @media (min-width:$tablet-width) {
     margin-bottom: 12px;
+    grid-row: 1/3;
+    grid-column: 1/2;
   }
 }
 
 .cover__header {
-  margin-bottom: var(--indent-big);
+  padding: 0 65px;
+  margin-bottom: 19px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: var(--indent-main);
+    padding: 0 20px;
+    margin-bottom: 21px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -30,14 +33,7 @@
 }
 
 .cover__subtitle {
-  padding: 0 22px;
-  margin-bottom: var(--indent-medium);
-  box-sizing: border-box;
-
-  @media (min-width: $tablet-width) {
-    margin-right: var(--indent-big);
-    margin-bottom: 0;
-  }
+  max-width: 430px;
 }
 
 .cover__button {
@@ -54,13 +50,14 @@
 }
 
 .cover__content {
-  padding: 30px 10px 16px ;
+  padding: 30px 10px 12px ;
   box-sizing: border-box;
   background: var(--cl-contrast);
   border-radius: 30px;
   box-shadow: var(--shadow-main);
 
   @media (min-width:$tablet-width) {
+    padding: 27px 20px 20px ;
     grid-row: 3/5;
     grid-column: 1/3;
     z-index: 1;

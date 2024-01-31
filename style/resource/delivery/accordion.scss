@@ -6,14 +6,26 @@
 .accordion .ac-header {
   padding: 32px 22px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding: 46px 44px;
+  }
 }
 
 .accordion .ac.is-active>.ac-header {
   margin-bottom: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 7px;
+  }
 }
 
 .accordion .ac.is-active>.ac-panel {
   padding-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 68px;
+  }
 
   &--extra {
     padding-bottom: 10px;
@@ -73,11 +85,16 @@
 }
 
 .accordion__text-block {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
   padding: 0 22px;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0 44px;
+    margin-bottom: 59px;
   }
 }
 
@@ -99,6 +116,10 @@
   text-align: center;
   font-weight: var(--fw-medium);
   text-transform: uppercase;
+
+  @media (min-width:$tablet-width) {
+    padding: 18px 5px;
+  }
 }
 
 .accordion__extra-image {
@@ -114,13 +135,17 @@
 }
 
 .accordion__paper {
-  margin: 0 10px;
   padding: 38px 12px 46px;
-
+  margin: 0 10px;
   box-sizing: border-box;
   background: var(--cl-contrast);
   border-radius: 20px;
   box-shadow: var(--shadow-main);
+
+  @media (min-width:$tablet-width) {
+    padding: 46px 26px 68px;
+
+  }
 }
 
 .accordion.accordion--faq {

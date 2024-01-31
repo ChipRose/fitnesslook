@@ -4,10 +4,18 @@
   margin: -6px;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    margin: -19px;
+  }
 }
 
 .button-block__item {
   margin: 6px;
+
+  @media (min-width: $tablet-width) {
+    margin: 19px;
+  }
 }
 
 // Main table

@@ -1,10 +1,14 @@
 .page-delivery {
   #wmc {
     font-family: 'Helvetica', Arial, sans-serif;
-    font-size: var(--fz-main);
-    line-height: var(--lh-medium);
+    font-size: 14px;
+    line-height: 140%;
     font-weight: var(--fw-light);
     background: var(--cl-light);
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -16,19 +20,35 @@
 }
 
 .page-delivery__main-nav {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 47px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 84px;
+  }
 }
 
 .page-delivery__main-nav .container {
   padding-top: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+  }
 }
 
 .page-delivery__cover {
   margin-bottom: var(--indent-big);
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .page-delivery__navigation {
-  margin-bottom: var(--indent-super);
+  margin-bottom: 68px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 134px;
+  }
 }
 
 .page-delivery__receiving {
@@ -56,7 +76,12 @@
 }
 
 .page-delivery__form-communicate {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
+
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 93px;
+  }
 }
 
 .page-delivery__faq {

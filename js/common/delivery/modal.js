@@ -1,4 +1,5 @@
-const paymentSection = document.querySelector('.payment');
+import { scrollToElement } from "./util.js";
+
 const buttonsModal = document.querySelectorAll('.button-modal__item');
 
 const eskClose = (evt) => {
@@ -7,19 +8,19 @@ const eskClose = (evt) => {
   }
 }
 
+// console.log(document.querySelector('#payment-ancor').offsetTop);
+
 buttonsModal.forEach((button) => {
   const modal = button.querySelector('.button-modal__modal');
+
+  const handleClose = () => {
+    modal.classList.remove('button-modal__modal--open');
+  }
 
   const handleMobTooltip = () => {
     modal.classList.add('button-modal__modal--open');
     modal.focus();
-    modal.addEventListener('blur', () => {
-      modal.classList.remove('button-modal__modal--open');
-    })
-  }
-
-  const handleClose = () => {
-    modal.classList.remove('button-modal__modal--open');
+    modal.addEventListener('blur', handleClose, { once: true });
   }
 
   const handleDeskTooltip = () => {

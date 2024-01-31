@@ -1,4 +1,4 @@
-const regionsTemplate = document.querySelector("#regions-item").content.querySelector('.button-block__item');
+const regionsTemplate = document.querySelector("#regions-item").content.querySelector('.delivery-region__item');
 const regionsList = document.querySelector('#regions-list');
 
 const renderCitiesDelivery = (items) => {

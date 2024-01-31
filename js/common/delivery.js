@@ -3,6 +3,7 @@ import { settingAccordionAdaptive, closeAllAccordions } from './delivery/accordi
 import { getData } from './delivery/api.js';
 import setPopup from './delivery/popup.js';
 import initMap from './delivery/map.js';
+import { removeElements } from './delivery/util.js';
 import './delivery/modal.js';
 import { renderQuestionsList } from './delivery/faq.js';
 import questions from '../../json/delivery/questions.json';
@@ -61,5 +62,33 @@ new Accordion(Array.from(document.querySelectorAll('.accordion--faq')), {
   duration: 100
 });
 
+// DOM
+
+const column1 = document.querySelector('.receiving-type__col--1');
+const columnChild1 = document.querySelector('.receiving-type__col--1').children;
+const column2 = document.querySelector('.receiving-type__col--2');
+const columnChild2 = document.querySelector('.receiving-type__col--2').children;
+let flag = true;
+
+const changeAdvOrder = () => {
+  const windowWidth = window.innerWidth;
+
+  if (windowWidth >= 768 && flag) {
+    column2.insertBefore(columnChild1[1], columnChild2[0]);
+    column1.insertBefore(columnChild2[1], columnChild1[0].nextSibling);
+    flag = false;
+  }
+
+  if (!flag && windowWidth < 768) {
+    column2.insertBefore(columnChild1[1], columnChild2[0]);
+    column1.insertBefore(columnChild2[1], columnChild1[0].nextSibling);
+    flag = true;
+  }
+}
+
+
+changeAdvOrder();
+
+window.addEventListener('resize', changeAdvOrder)
 
 

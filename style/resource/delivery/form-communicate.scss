@@ -15,6 +15,10 @@
   max-width: 700px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .form-communicate__label {
@@ -33,7 +37,7 @@
   margin-bottom: var(--indent-big);
 
   @media (min-width:$tablet-width) {
-    margin: calc(-1 * var(--indent-big)) calc(-1 * var(--indent-big)) var(--indent-big);
+    margin: -46px -46px 65px;
     display: flex;
   }
 }

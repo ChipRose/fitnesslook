@@ -1,4 +1,5 @@
 import { sendData } from '../delivery/api.js';
+import { scrollToElement } from './util.js';
 import IMask from 'imask';
 
 const TIMEOUT_DELAY = 3000;
@@ -23,8 +24,7 @@ const phoneMask = IMask(phoneInput, maskOptions);
 buttonNewLocation.addEventListener('click', () => {
   formBlock.classList.toggle('form-communicate--open');
   if (formBlock.classList.contains('form-communicate--open')) {
-    const scrollElement = document.querySelector('#form-block').offsetTop;
-    window.scrollTo({ top: scrollElement + 153, behavior: 'smooth' });
+    scrollToElement('#form-block');
   }
 })
 
