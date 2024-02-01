@@ -149,7 +149,6 @@
 
   @media (min-width:$tablet-width) {
     padding: 46px 26px 68px;
-
   }
 }
 
@@ -158,6 +157,10 @@
     font-size: 18px;
     color: var(--cl-dark);
     font-weight: var(--fw-regular);
+
+    @media (min-width:$tablet-width) {
+      font-size: 26px;
+    }
   }
 
   .ac-trigger {
