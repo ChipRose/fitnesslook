@@ -68,10 +68,11 @@
 .message {
   @include paper;
   padding: 20px;
+  width: 50%;
+  min-width: 240px;
+  max-width: 350px;
   border-radius: 20px;
   position: fixed;
-  width: 30%;
-  min-width: 240px;
   height: fit-content;
   box-sizing: border-box;
   display: flex;
