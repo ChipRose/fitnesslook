@@ -121,33 +121,23 @@
 }
 
 .button-popup__modal {
+  padding: 6px 12px;
   background: var(--cl-accent);
   box-sizing: border-box;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 120%;
-  width: 0;
   height: fit-content;
   align-items: center;
   border-radius: var(--radius-small);
   text-transform: lowercase;
   color: var(--cl-contrast);
   overflow: hidden;
-  transition: all 0.3s ease-in;
+  transition: all 0.5s ease-in;
   font-weight: var(--fw-regular);
-}
-
-.button-popup.button-popup--open {
-  .button-popup__modal {
-    display: flex;
-    box-sizing: border-box;
-    opacity: 1;
-  }
-
-  .button-popup__modal .text {
-    padding: 6px 12px;
-  }
+  pointer-events: none;
+  opacity: 0;
 }
 
 // Round button
