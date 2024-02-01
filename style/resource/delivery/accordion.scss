@@ -34,6 +34,11 @@
 
 .accordion-address {
   padding: 0 22px;
+
+  @media (min-width:$tablet-width) {
+    padding: 0 44px;
+
+  }
 }
 
 .accordion .ac-trigger {

@@ -21,6 +21,13 @@
   }
 }
 
+.form-communicate__field {
+
+  @media (min-width:$tablet-width) {
+    font-size: 16px;
+  }
+}
+
 .form-communicate__label {
   margin-bottom: 10px;
 
@@ -59,6 +66,9 @@
 // Success modal
 
 .message {
+  @include paper;
+  padding: 20px;
+  border-radius: 20px;
   position: fixed;
   width: 30%;
   min-width: 240px;
@@ -73,13 +83,13 @@
 }
 
 .message__title {
-  padding: var(--indent-main) 0;
+  padding: 20px 0;
 }
 
 .message__close-button {
   position: absolute;
-  top: var(--indent-basic);
-  right: var(--indent-basic);
+  top: 4px;
+  right: 4px;
 }
 
 .message__text-block {

@@ -3610,16 +3610,15 @@
             </div>
           </section>
 
-          <a id="up"></a>
           <section class="cover page-delivery__cover">
             <div class="container">
-              <div class="cover__wrapper">
+              <div class="cover__wrapper container__null">
                 <div class="cover__title-block">
                   <h2 class="title title-major cover__title">
                     Доставка <br> и оплата
                   </h2>
                 </div>
-                <div class="cover__content container__null">
+                <div class="cover__content">
                   <header class="cover__header">
                     <p class="text subtitle cover__subtitle">
                       В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class="nobr">25'000 ₽</span>.
@@ -4488,7 +4487,8 @@
                             </span>
                           </td>
                           <td class="table-main__cell table-main__cell--nomob">
-                            территория Ленинградской области< /td>
+                            территория Ленинградской области
+                          </td>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
                               1’000 ₽ + 40 ₽ / км
@@ -4826,7 +4826,7 @@
 
           <div class="action page-delivery__action">
             <div class="container">
-              <a href="#up" id="global-up"
+              <a href="#faq" id="global-up"
                 class="link button-round button-round--accent button-round--big action__button">
                 UP
               </a>
@@ -4843,7 +4843,7 @@
 
         <!-- Success message -->
         <template id="success">
-          <div class="message message--success paper">
+          <div class="message message--success">
             <h2 class="title title-extra message__title">Спасибо!</h2>
             <div class="message__text-block">
               <p class="text text-main">Ваша заявка отправлена!<br>Менеджер свяжется с вами в ближайшее время.</p>
@@ -4859,7 +4859,7 @@
 
         <!-- Error message -->
         <template id="error">
-          <div class="message message--error paper">
+          <div class="message message--error">
             <h2 class="title title-extra message__title">Внимание!</h2>
             <div class="message__text-block">
               <p class="text text-main">

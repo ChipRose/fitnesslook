@@ -57,9 +57,11 @@
   display: none;
 
   @media (min-width: $tablet-width) {
-    display: block;
-    flex: 0 0 360px;
-    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 356px;
+    height: 500px;
   }
 }
 
