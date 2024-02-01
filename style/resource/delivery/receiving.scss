@@ -42,14 +42,14 @@
 }
 
 .receiving__subtitle {
-  margin-bottom: var(--indent-small);
+  margin-bottom: 32px;
 }
 
 .receiving__text {
-  margin-bottom: var(--indent-small);
+  margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: var(--indent-huge);
+    margin-bottom: 60px;
   }
 }
 

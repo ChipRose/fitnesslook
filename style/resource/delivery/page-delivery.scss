@@ -36,7 +36,7 @@
 }
 
 .page-delivery__cover {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 20px;
@@ -60,15 +60,15 @@
 }
 
 .page-delivery__cost-delivery {
-  margin-bottom: var(--indent-huge);
+  margin-bottom: 60px;
 }
 
 .page-delivery__cost-lifting {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
 }
 
 .page-delivery__payment {
-  margin-bottom: var(--indent-huge);
+  margin-bottom: 60px;
 }
 
 .page-delivery__delivery-regions {
@@ -89,5 +89,5 @@
 }
 
 .page-delivery__action {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
 }

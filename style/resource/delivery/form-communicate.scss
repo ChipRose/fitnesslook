@@ -4,7 +4,7 @@
   display: none;
 
   &--open {
-    margin-top: var(--indent-huge);
+    margin-top: 60px;
     display: block;
   }
 }
@@ -41,7 +41,7 @@
 }
 
 .form-communicate__intro-block {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
 
   @media (min-width:$tablet-width) {
     margin: -46px -46px 65px;
@@ -58,8 +58,8 @@
   }
 
   @media (min-width:$tablet-width) {
-    margin: var(--indent-big);
-    flex: 0 0 calc(50% - 2 * var(--indent-big));
+    margin: 46px;
+    flex: 0 0 calc(50% - 2 * 46px);
   }
 }
 
@@ -94,7 +94,7 @@
 }
 
 .message__text-block {
-  margin-bottom: var(--indent-big);
+  margin-bottom: 46px;
 
   &:last-child {
     margin-bottom: 0;

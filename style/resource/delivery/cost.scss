@@ -20,7 +20,7 @@
   margin-bottom: 60px;
 
   @media (min-width:$tablet-width) {
-    margin: calc(-1 * var(--indent-big)) calc(-1 * var(--indent-big)) var(--indent-big);
+    margin: -46px -46px 46px;
     display: flex;
     justify-content: space-between;
   }
@@ -34,8 +34,8 @@
   }
 
   @media (min-width:$tablet-width) {
-    margin: var(--indent-big);
-    flex: 0 0 calc(50% - 2 * var(--indent-big));
+    margin: 46px;
+    flex: 0 0 calc(50% - 2 * 46px);
     max-width: 450px;
   }
 }
