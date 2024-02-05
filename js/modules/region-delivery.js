@@ -10034,10 +10034,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const regionsTemplate = document.querySelector("#regions-item").content.querySelector('.delivery-region__item');
 const regionsList = document.querySelector('#regions-list');
-console.log(window.location.hostname);
+const getFirstDomain = () => {
+  const hostFull = window.location.hostname;
+  const items = hostFull.split('.');
+  return items[0] && items[0] !== "fitnesslook" ? items[0] : '';
+};
 const renderCitiesDelivery = items => {
   const regionsContentFragment = document.createDocumentFragment();
-  items?.forEach(item => {
+  console.log(getFirstDomain());
+  items.filter(({
+    name
+  }) => name !== getFirstDomain());
+  items?.filter(({
+    name
+  }) => name !== getFirstDomain()).forEach(item => {
     const region = regionsTemplate.cloneNode(true);
     const button = region.querySelector('.button-simple');
     button.textContent = item.city;

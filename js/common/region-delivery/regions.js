@@ -2,12 +2,21 @@ const regionsTemplate = document.querySelector("#regions-item").content.querySel
 const regionsList = document.querySelector('#regions-list');
 
 
-console.log(window.location.hostname  );
+
+const getFirstDomain = () => {
+  const hostFull = window.location.hostname;
+  const items = hostFull.split('.');
+
+  return items[0] && items[0] !== "fitnesslook" ? items[0] : '';
+}
 
 const renderCitiesDelivery = (items) => {
   const regionsContentFragment = document.createDocumentFragment();
+  console.log(getFirstDomain());
 
-  items?.forEach((item) => {
+  items.filter(({ name }) => name !== getFirstDomain())
+
+  items?.filter(({ name }) => name !== getFirstDomain()).forEach((item) => {
     const region = regionsTemplate.cloneNode(true);
     const button = region.querySelector('.button-simple');
 
