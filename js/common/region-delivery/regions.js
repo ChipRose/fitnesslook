@@ -3,6 +3,7 @@ const regionsList = document.querySelector('#regions-list');
 
 
 console.log(window.location.hostname  );
+
 const renderCitiesDelivery = (items) => {
   const regionsContentFragment = document.createDocumentFragment();
 

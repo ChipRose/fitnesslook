@@ -170,7 +170,11 @@
   }
 
   .ac-header {
-    padding-left: 39px;
+    padding-left: 22px;
+
+    @media (min-width:$tablet-width) {
+      padding-left: 39px;
+    }
   }
 
   .title-secondary {
@@ -178,6 +182,10 @@
   }
 
   .accordion__text-block {
-    padding: 0 39px;
+    padding: 0 22px;
+
+    @media (min-width:$tablet-width) {
+      padding: 0 39px;
+    }
   }
 }
