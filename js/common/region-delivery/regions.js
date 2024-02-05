@@ -12,10 +12,7 @@ const getFirstDomain = () => {
 
 const renderCitiesDelivery = (items) => {
   const regionsContentFragment = document.createDocumentFragment();
-  console.log(getFirstDomain());
-
-  items.filter(({ name }) => name !== getFirstDomain())
-
+  
   items?.filter(({ name }) => name !== getFirstDomain()).forEach((item) => {
     const region = regionsTemplate.cloneNode(true);
     const button = region.querySelector('.button-simple');

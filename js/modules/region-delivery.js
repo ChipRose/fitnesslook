@@ -10041,10 +10041,6 @@ const getFirstDomain = () => {
 };
 const renderCitiesDelivery = items => {
   const regionsContentFragment = document.createDocumentFragment();
-  console.log(getFirstDomain());
-  items.filter(({
-    name
-  }) => name !== getFirstDomain());
   items?.filter(({
     name
   }) => name !== getFirstDomain()).forEach(item => {
