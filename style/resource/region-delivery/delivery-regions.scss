@@ -1,0 +1,29 @@
+.delivery-regions__title {
+  margin-bottom: 42px;
+}
+
+.delivery-regions__title-form {
+  margin-bottom: 31px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 69px;
+  }
+}
+
+.delivery-regions__list {
+  margin: -5px -5px 12px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    margin: -8px -8px 48px;
+  }
+}
+
+.delivery-region__item {
+  margin: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin: 8px;
+  }
+}

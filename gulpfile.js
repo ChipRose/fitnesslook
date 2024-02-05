@@ -46,7 +46,8 @@ export function processScripts({ src, title, dest = './js/modules/' }) {
 export function processAllScripts() {
   return gulp.series(
     () => processScripts({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js' }),
-    () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js' })
+    () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js' }),
+    () => processScripts({ src: './js/common/region-delivery.js', title: 'region-delivery.js' })
   )
 }
 

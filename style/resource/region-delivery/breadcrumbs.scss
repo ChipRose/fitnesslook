@@ -1,0 +1,44 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+}
+
+.breadcrubs__item {
+  margin-right: 17px;
+  font-size: var(--fz-main);
+  position: relative;
+  background: right 50%/ 12px 12px no-repeat url('/i/media/stat/icons/arrow-triangle.svg');
+
+
+  &:last-child {
+    margin-right: 0;
+    background: none;
+
+    .breadcrubs__link {
+      padding-right: 0;
+    }
+  }
+
+
+
+}
+
+.breadcrubs__link {
+  padding-right: 28px;
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+  color: var(--cl-disable);
+
+  svg {
+    fill: var(--cl-transparent-neutral);
+  }
+}
+
+.breadcrubs__item--current .breadcrubs__link{
+  color: var(--cl-dark);
+  font-weight: 400;
+  cursor: default;
+}
