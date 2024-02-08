@@ -4,7 +4,6 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.13",
     "babel-core": "^6.26.3",
     "babel-loader": "^9.1.3",
@@ -42,10 +41,10 @@
     "webpack-stream": "^7.0.0"
   },
   "scripts": {
-    "editorconfig": "editorconfig-cli",
-    "test": "eslint \"js/common/**/*.js\"",
+    "eslinter": "eslint \"js/common/**/*.js\"",
     "w3c": "gulp validateMarkup --silent",
     "bemlinter": "gulp lintBem --silent",
+    "test": "npm run w3c && bemlinter && npm run eslinter",
     "start": "gulp runDev",
     "build": "gulp buildProd",
     "preview": "gulp buildProd && gulp startServer"
@@ -55,14 +54,6 @@
     "not dead",
     "not op_mini all",
     "not < 0.25%"
-  ],
-  "editorconfig-cli": [
-    "*.json",
-    "*.js",
-    "*.html",
-    "js/**/*.js",
-    "i/**/*.svg",
-    "style/**/*.scss"
   ],
   "engines": {
     "node": "20.9.0"

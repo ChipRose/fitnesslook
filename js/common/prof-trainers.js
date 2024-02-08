@@ -72,7 +72,8 @@ settingAccordionAdaptive(accordionGarantee)
 
 const accordionMain = new Accordion(Array.from(document.querySelectorAll('.accordion-main')), settingAccordionInSlider(progectsGallery))
 
-new Accordion(Array.from(document.querySelectorAll('.accordion-questions')), settingAccordion())
+const accordionQuestions = new Accordion(Array.from(document.querySelectorAll('.accordion-questions')), settingAccordion())
+closeAllAccordions(accordionQuestions)
 
 // Accordions in slider
 
@@ -94,8 +95,10 @@ setNavigation('#navigation-in')
 
 // Buttons click
 
+/* eslint-disable */
 addListeners('button[data-type="calc-button"]', () => $('#callmeform').show())
 addListeners('button[data-type="call-button"]', () => $('#callmeform').show())
+/* eslint-enable */
 
 window.addEventListener('load', () => {
   sliderBest.updateSliderHeight()

@@ -36,4 +36,3 @@ const settingAccordionAdaptive = (accordion, slider) => {
 }
 
 export { settingAccordionAdaptive, closeAllAccordions }
-

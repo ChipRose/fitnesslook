@@ -28,6 +28,7 @@ setNavigation('#receiving-up')
 setNavigation('#regions-list-button')
 setNavigation('#receiving-close-up', () => closeAllAccordions(accordionDelivery))
 
+// eslint-disable-next-line
 ymaps.ready(initMap)
 setPopup()
 
@@ -47,6 +48,8 @@ document.querySelector('#pickup-slider') && document.querySelector('#pickup-slid
 const accordionDelivery = new Accordion(Array.from(document.querySelectorAll('.accordion--delivery')))
 settingAccordionAdaptive(accordionDelivery)
 
-new Accordion(Array.from(document.querySelectorAll('.accordion--faq')), {
+const accordionFAQ = new Accordion(Array.from(document.querySelectorAll('.accordion--faq')), {
   duration: 100
 })
+
+closeAllAccordions(accordionFAQ)

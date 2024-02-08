@@ -13400,6 +13400,8 @@ __webpack_require__.r(__webpack_exports__);
 (0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#receiving-up');
 (0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#regions-list-button');
 (0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#receiving-close-up', () => (0,_region_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionDelivery));
+
+// eslint-disable-next-line
 ymaps.ready(_region_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 (0,_region_delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
@@ -13417,9 +13419,10 @@ document.querySelector('#pickup-slider') && document.querySelector('#pickup-slid
 
 const accordionDelivery = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--delivery')));
 (0,_region_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.settingAccordionAdaptive)(accordionDelivery);
-new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--faq')), {
+const accordionFAQ = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion--faq')), {
   duration: 100
 });
+(0,_region_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionFAQ);
 })();
 
 /******/ })()
