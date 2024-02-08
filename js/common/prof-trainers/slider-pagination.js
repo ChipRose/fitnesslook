@@ -1,4 +1,4 @@
-import { formatNumber } from './util.js';
+import { formatNumber } from './util.js'
 
 const getProjectsIndex = (slider) => {
   return {
@@ -8,22 +8,21 @@ const getProjectsIndex = (slider) => {
   }
 }
 
-const setPagination=(slider)=>{
-  const slideNumber = document.querySelector('#projects-pagination');
-  const slidePrevNumber = slideNumber.querySelector('#slider-projects-prev');
-  const slideCurrentNumber = slideNumber.querySelector('#slider-projects-current');
-  const slideNextNumber = slideNumber.querySelector('#slider-projects-next');
+const setPagination = (slider) => {
+  const slideNumber = document.querySelector('#projects-pagination')
+  const slidePrevNumber = slideNumber.querySelector('#slider-projects-prev')
+  const slideCurrentNumber = slideNumber.querySelector('#slider-projects-current')
+  const slideNextNumber = slideNumber.querySelector('#slider-projects-next')
 
-  slideCurrentNumber.textContent = formatNumber(getProjectsIndex(slider).current);
-  slidePrevNumber.textContent = formatNumber(getProjectsIndex(slider).prev);
-  slideNextNumber.textContent = formatNumber(getProjectsIndex(slider).next);
-
+  slideCurrentNumber.textContent = formatNumber(getProjectsIndex(slider).current)
+  slidePrevNumber.textContent = formatNumber(getProjectsIndex(slider).prev)
+  slideNextNumber.textContent = formatNumber(getProjectsIndex(slider).next)
 
   slider.events.on('indexChanged', () => {
-    slideCurrentNumber.textContent = formatNumber(getProjectsIndex(slider).current);
-    slidePrevNumber.textContent = formatNumber(getProjectsIndex(slider).prev);
-    slideNextNumber.textContent = formatNumber(getProjectsIndex(slider).next);
+    slideCurrentNumber.textContent = formatNumber(getProjectsIndex(slider).current)
+    slidePrevNumber.textContent = formatNumber(getProjectsIndex(slider).prev)
+    slideNextNumber.textContent = formatNumber(getProjectsIndex(slider).next)
   })
 }
 
-export {setPagination}
+export { setPagination }

@@ -1,21 +1,20 @@
-
 const formatNumber = (number) => {
-  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
+  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number
 }
 
 const addListeners = (selector, cb) => {
-  const elements = document.querySelectorAll(selector);
+  const elements = document.querySelectorAll(selector)
 
   elements.forEach(button => {
     button.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      cb();
+      evt.preventDefault()
+      cb()
     })
   })
 }
 
 const formatPrice = (number) => {
-  return number.toString().split(/(?=(?:...)*$)/).join("'");
+  return number.toString().split(/(?=(?:...)*$)/).join("'")
 }
 
 const removeElements = (selectors) => {
@@ -25,7 +24,7 @@ const removeElements = (selectors) => {
 }
 
 const getCompare = (a, b) => {
-  return b.content.length - a.content.length;
+  return b.content.length - a.content.length
 }
 
 const sortProjects = (array) => {

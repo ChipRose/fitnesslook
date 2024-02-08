@@ -9,10 +9,10 @@ const settingAccordionInSlider = (slider, props) => {
   return {
     duration: 200,
     onOpen: () => {
-      slider.updateSliderHeight();
+      slider.updateSliderHeight()
     },
     onClose: () => {
-      slider.updateSliderHeight();
+      slider.updateSliderHeight()
     },
     ...props
   }
@@ -28,7 +28,7 @@ const closeAllMobileAccordions = (accordions) => {
   if (window.innerWidth < 768) {
     accordions.forEach(item => {
       item.closeAll()
-    });
+    })
   }
 }
 
@@ -36,37 +36,36 @@ const openAllDeskAccordions = (accordions) => {
   if (window.innerWidth >= 768) {
     accordions.forEach(item => {
       item.openAll()
-    });
+    })
   }
 }
 
 const settingAccordionAdaptive = (accordion, slider) => {
-  let newAccordion = accordion;
+  let newAccordion = accordion
 
   if (!Array.isArray(accordion)) newAccordion = [accordion]
-  closeAllMobileAccordions(newAccordion);
-  openAllDeskAccordions(newAccordion);
-  slider?.updateSliderHeight();
+  closeAllMobileAccordions(newAccordion)
+  openAllDeskAccordions(newAccordion)
+  slider?.updateSliderHeight()
 
   window.addEventListener('resize', () => {
-    closeAllMobileAccordions(newAccordion);
-    openAllDeskAccordions(newAccordion);
-    slider?.updateSliderHeight();
-  });
-};
-
-const settingMobileAccordionAdaptive = (accordion, slider) => {
-  let newAccordion = accordion;
-
-  if (!Array.isArray(accordion)) newAccordion = [accordion]
-  closeAllMobileAccordions(newAccordion);
-  slider?.updateSliderHeight();
-
-  window.addEventListener('resize', () => {
-    closeAllMobileAccordions(newAccordion);
-    slider?.updateSliderHeight();
-  });
+    closeAllMobileAccordions(newAccordion)
+    openAllDeskAccordions(newAccordion)
+    slider?.updateSliderHeight()
+  })
 }
 
+const settingMobileAccordionAdaptive = (accordion, slider) => {
+  let newAccordion = accordion
 
-export { settingAccordion, settingAccordionInSlider, settingAccordionAdaptive, closeAllAccordions, settingMobileAccordionAdaptive };
+  if (!Array.isArray(accordion)) newAccordion = [accordion]
+  closeAllMobileAccordions(newAccordion)
+  slider?.updateSliderHeight()
+
+  window.addEventListener('resize', () => {
+    closeAllMobileAccordions(newAccordion)
+    slider?.updateSliderHeight()
+  })
+}
+
+export { settingAccordion, settingAccordionInSlider, settingAccordionAdaptive, closeAllAccordions, settingMobileAccordionAdaptive }

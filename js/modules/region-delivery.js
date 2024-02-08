@@ -365,7 +365,7 @@ const sendData = (onSuccess, onError, data) => {
   fetch(POST_LINK, {
     method: 'POST',
     headers: {
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
   }).then(response => {
@@ -453,14 +453,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
 
 const buttonsModal = document.querySelectorAll('.button-modal__button');
-const eskClose = evt => {
-  if (evt.code === "Escape" || evt.code === "ESC") {
-    handleClose();
-  }
-};
 buttonsModal.forEach(button => {
-  button?.addEventListener("click", () => {
-    console.log('click');
+  button?.addEventListener('click', () => {
     _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox.bind('[data-fancybox]', {});
   });
 });
@@ -5765,7 +5759,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   renderQuestionsList: () => (/* binding */ renderQuestionsList)
 /* harmony export */ });
-const questionTemplate = document.querySelector("#question").content.querySelector('.faq__item');
+const questionTemplate = document.querySelector('#question').content.querySelector('.faq__item');
 const questionsList = document.querySelector('#faq-list');
 const renderQuestionsList = questions => {
   const questionsFragment = document.createDocumentFragment();
@@ -5784,7 +5778,7 @@ const renderQuestionsList = questions => {
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('[{"title":"Можно ли самому выбрать ТК и терминал?","answer":"<p class=\'text text-main\'>Разумеется. Можно выбрать конкретную транспортную компанию и наиболее удобный для получения терминал. Но при этом необходимо, чтобы транспортная компания являлась федеральной и была представлена на территории Москвы или Санкт-Петербурга, откуда мы осуществим отправку вашего заказа со своих складов.</p>"},{"title":"Доставка на адрес — до подъезда или до квартиры?","answer":"<p class=\'text text-main\'>Доставка до адреса, как правило, осуществляется транспортными компаниями до подъезда или до ближайшего возможного места подъезда автомобиля к адресу. Ряд транспортных компаний дополнительно предоставляют платную услугу заноса заказа в квартиру.</p>"},{"title":"Можно ли проверить качество заказанного оборудования до оплаты?","answer":"<p class=\'text text-main\'>К сожалению, такая опция доступна только для покупателей FitnessLook из Москвы и Санкт-Петербурга, где мы осуществляем доставку и сборку оборудования силами собственной службы.</p><p class=\'text text-main\'>Насколько мы осведомлены, все транспортные компании следует правилу выдачи заказа только после оплаты.</p>"},{"title":"Если ТК разобьет мой заказ, кто несет за это ответственность?","answer":"<p class=\'text text-main\'>За десятилетний опыт работы на рынке спортивного и массажного оборудования мы с подобной историей не сталкивались. Были прецеденты, связанные с небрежной и деструктивной работой сотрудников доставки крупных МаркетПлейсов, но именно  транспортные компании всегда добросовестно и образцово подходили к исполнению своих обязанностей по доставке.</p><p class=\'text text-main\'>Кроме того, мы максимально надежно упаковываем ваш заказ, используя для этого жесткую обрешетку. Затем мы скрупулезно подготавливаем заказ к дальней перевозке и, разумеется, не забываем его застраховать.</p><p class=\'text text-main\'>Тем не менее. Если что-то вдруг пойдет не так, вам все равно не о чем переживать. Испорченные товары из вашего заказа будут заменены на новые!</p>"},{"title":"Как осуществляется официальная гарантия в моем городе?","answer":"<p class=\'text text-main\'>Сервисные центры практически всех брендов спортивного и массажного оборудования расположены в Москве и Санкт-Петербурге.</p><p class=\'text text-main\'></p><p class=\'text text-main\'>Если вы заказали продукцию такого бренда и при этом у вас возникла необходимость гарантийного обращения или ремонта, обычно это происходит так.</p><ul class=\'list-standard\'><li>Сотрудники сервисного отдела бренда-производителя реагируют на ваше обращение и связываются с вами, запрашивают детальное описание проблемы и вспомогательные видео/фото-материалы.</li><li>Если проблема носит локальный характер и устраняется на месте (например, необходим комплекс действий для сброса электронной ошибки), то сервисный сотрудник дистанционно поможет ее решить.</li><li>Если необходимо заменить какую-то часть оборудования, то бренд-производитель отправит ее удобным способом и в большинстве случае оплатит услуги мастера для ее замены.</li></ul><p class=\'text text-main\'>Если же проблема носит более серьезный характер, то в рамках гарантии бренд-производитель организует доставку-перемещение неисправного оборудования в сервисный центр в Москву или Санкт-Петербург и возьмет на себя все расходы.</p><p class=\'text text-main\'>При этом оборудование будет возвращено покупателю в установленный законом срок в исправном виде, либо будет предоставлено аналогичное новое оборудование.</p>"},{"title":"Хочу вернуть товар надлежащего качества, что для этого нужно?","answer":"<p class=\'text text-main\'>Наши покупатели имеют право вернуть товар надлежащего качества в течение 7 дней с момента получения, если он им не подошел или не понравился.</p><p class=\'text text-main\'>Подлежащая возврату позиция должна сохранить: товарный вид, заводскую упаковку и комплект документов, которыми сопровождался заказ.</p><p class=\'text text-main\'>Для возврата товара надлежащего качестве потребуется оплатить услуги по доставке его до места, откуда он был к вам отправлен.</p><p class=\'text text-main\'><span class=\'text text-main text-main--medium\'>Важно!</span> При этом сгорают все бонусы и скидки, сделанные при заказе. То есть, если доставка шла подарком и была бесплатной, то при возврате товара надлежащего качество придется оплатить их стоимость.</p>"},{"title":"Я получу полный комплект документов при любом способе доставки/оплаты?","answer":"<p class=\'text text-main\'>Да.Полный пакет документов, включающий: чек, товарный чек, гарантийный талон производителя и талон расширенной гарантии +1 год лично от FitnessLook (опционально) будет предоставлен для всех заказов. Неважно, как они были доставлены или оплачены.</p>"},{"title":"Могу ли я оплатить заказ при получении?","answer":"<p class=\'text text-main\'>Да. Ряд транспортных компаний предоставляет возможность оплаты заказа по факту получения. Однако обращаем внимание! Как правило, большая часть транспортных компаний для такого сценарии оплаты попросит наличный расчет.</p>"},{"title":"Можно ли оплатить заказ по QR-коду/СБП?","answer":"<p class=\'text text-main\'>Да, этот и все другие современные методы оплаты доступны покупателям FitnessLook. Просто выберете наиболее удобный конкретно для себя способ и воспользуйтесь им.</p>"},{"title":"Хочу оплатить от организации, как это сделать?","answer":"<p class=\'text text-main\'>Сообщите об этом менеджеру. Он объяснит, на какую почту направить свои реквизиты, после чего мы выставим счет, и его можно будет оплатить от юридического лица.</p>"},{"title":"Как оформить рассрочку или кредит, кто предоставляет услугу?","answer":"<p class=\'text text-main\'>Реализация программ покупки в рассрочку и кредит осуществляются нашими банками-партнерами. На текущий момент, мы сотрудничаем с Тинькофф Банк, Почта Банк, МТС Банк, Хоум Кредит Банк и другими добросовестными и благонадежными банками.</p><p class=\'text text-main\'>Для оформления рассрочки или кредита необходимо при заказе выбрать вид услуги и срок закрытия платежей. После этого заполните короткую форму, получите одобрение банков и выберете подходящий. Заявка, как правило, подтверждается за 1-2 минуты.</p><p class=\'text text-main\'>Кроме того, выгодная покупка в рассрочку доступна обладателям карты «Халва». Однако обращаем внимание! Чтобы воспользоваться этой программой лояльности от ПАО «СОВКОМБАНК», необходимо будет совершить online-оплату заказа.</p>"}]');
+module.exports = /*#__PURE__*/JSON.parse('[{"title":"Можно ли самому выбрать ТК и терминал?","answer":"<p class=\'text text-main\'>Разумеется. Можно выбрать конкретную транспортную компанию и наиболее удобный для получения терминал. Но при этом необходимо, чтобы транспортная компания являлась федеральной и была представлена на территории Москвы или Санкт-Петербурга, откуда мы осуществим отправку вашего заказа со своих складов.</p>"},{"title":"Доставка на адрес — до подъезда или до квартиры?","answer":"<p class=\'text text-main\'>Доставка до адреса, как правило, осуществляется транспортными компаниями до подъезда или до ближайшего возможного места подъезда автомобиля к адресу. Ряд транспортных компаний дополнительно предоставляют платную услугу заноса заказа в квартиру.</p>"},{"title":"Можно ли проверить качество заказанного оборудования до оплаты?","answer":"<p class=\'text text-main\'>К сожалению, такая опция доступна только для покупателей FitnessLook из Москвы и Санкт-Петербурга, где мы осуществляем доставку и сборку оборудования силами собственной службы.</p><p class=\'text text-main\'>Насколько мы осведомлены, все транспортные компании следует правилу выдачи заказа только после оплаты.</p>"},{"title":"Если ТК разобьет мой заказ, кто несет за это ответственность?","answer":"<p class=\'text text-main\'>За десятилетний опыт работы на рынке спортивного и массажного оборудования мы с подобной историей не сталкивались. Были прецеденты, связанные с небрежной и деструктивной работой сотрудников доставки крупных МаркетПлейсов, но именно  транспортные компании всегда добросовестно и образцово подходили к исполнению своих обязанностей по доставке.</p><p class=\'text text-main\'>Кроме того, мы максимально надежно упаковываем ваш заказ, используя для этого жесткую обрешетку. Затем мы скрупулезно подготавливаем заказ к дальней перевозке и, разумеется, не забываем его застраховать.</p><p class=\'text text-main\'>Тем не менее. Если что-то вдруг пойдет не так, вам все равно не о чем переживать. Испорченные товары из вашего заказа будут заменены на новые!</p>"},{"title":"Как осуществляется официальная гарантия в моем городе?","answer":"<p class=\'text text-main\'>Сервисные центры практически всех брендов спортивного и массажного оборудования расположены в Москве и Санкт-Петербурге.</p><p class=\'text text-main\'></p><p class=\'text text-main\'>Если вы заказали продукцию такого бренда и при этом у вас возникла необходимость гарантийного обращения или ремонта, обычно это происходит так.</p><ul class=\'list-standard\'><li>Сотрудники сервисного отдела бренда-производителя реагируют на ваше обращение и связываются с вами, запрашивают детальное описание проблемы и вспомогательные видео/фото-материалы.</li><li>Если проблема носит локальный характер и устраняется на месте (например, необходим комплекс действий для сброса электронной ошибки), то сервисный сотрудник дистанционно поможет ее решить.</li><li>Если необходимо заменить какую-то часть оборудования, то бренд-производитель отправит ее удобным способом и в большинстве случае оплатит услуги мастера для ее замены.</li></ul><p class=\'text text-main\'>Если же проблема носит более серьезный характер, то в рамках гарантии бренд-производитель организует доставку-перемещение неисправного оборудования в сервисный центр в Москву или Санкт-Петербург и возьмет на себя все расходы.</p><p class=\'text text-main\'>При этом оборудование будет возвращено покупателю в установленный законом срок в исправном виде, либо будет предоставлено аналогичное новое оборудование.</p>"},{"title":"Хочу вернуть товар надлежащего качества, что для этого нужно?","answer":"<p class=\'text text-main\'>Наши покупатели имеют право вернуть товар надлежащего качества в течение 7 дней с момента получения, если он им не подошел или не понравился.</p><p class=\'text text-main\'>Подлежащая возврату позиция должна сохранить: товарный вид, заводскую упаковку и комплект документов, которыми сопровождался заказ.</p><p class=\'text text-main\'>Для возврата товара надлежащего качестве потребуется оплатить услуги по доставке его до места, откуда он был к вам отправлен.</p><p class=\'text text-main\'><span class=\'text text-main text-main--medium\'>Важно!</span> При этом сгорают все бонусы и скидки, сделанные при заказе. То есть, если доставка шла подарком и была бесплатной, то при возврате товара надлежащего качество придется оплатить их стоимость.</p>"},{"title":"Я получу полный комплект документов при любом способе доставки/оплаты?","answer":"<p class=\'text text-main\'>Да.Полный пакет документов, включающий: чек, товарный чек, гарантийный талон производителя и талон расширенной гарантии +1 год лично от FitnessLook (опционально) будет предоставлен для всех заказов. Неважно, как они были доставлены или оплачены.</p>"},{"title":"Могу ли я оплатить заказ при получении?","answer":"<p class=\'text text-main\'>Да. Ряд транспортных компаний предоставляет возможность оплаты заказа по факту получения. Однако обращаем внимание! Как правило, большая часть транспортных компаний для такого сценарии оплаты попросит наличный расчет.</p>"},{"title":"Можно ли оплатить заказ по QR-коду/СБП?","answer":"<p class=\'text text-main\'>Да, этот и все другие современные методы оплаты доступны покупателям FitnessLook. Просто выберете наиболее удобный конкретно для себя способ и воспользуйтесь им.</p>"},{"title":"Хочу оплатить от организации, как это сделать?","answer":"<p class=\'text text-main\'>Сообщите об этом менеджеру. Он объяснит, на какую почту направить свои реквизиты, после чего мы выставим счет, и его можно будет оплатить от юридического лица.</p>"},{"title":"Как оформить рассрочку или кредит, кто предоставляет услугу?","answer":"<p class=\'text text-main\'>Реализация программ покупки в рассрочку и кредит осуществляются нашими банками-партнерами. На текущий момент, мы сотрудничаем с Тинькофф Банк, Почта Банк, МТС Банк, Хоум Кредит Банк и другими добросовестными и благонадежными банками.</p><p class=\'text text-main\'>Для оформления рассрочки или кредита необходимо при заказе выбрать вид услуги и срок закрытия платежей. После этого заполните короткую форму, получите одобрение банков и выберете подходящий. Заявка, как правило, подтверждается за 1-2 минуты.</p><p class=\'text text-main\'>Кроме того, выгодная покупка в рассрочку доступна обладателям карты «Халва». Однако обращаем внимание! Чтобы воспользоваться этой программой лояльности от ПАО «СОВКОМБАНК», необходимо будет совершить online-оплату заказа.</p>"}]');
 
 /***/ }),
 /* 10 */
@@ -5831,11 +5825,11 @@ const setFormSubmit = (...callbacks) => {
     callbacks.forEach(cb => cb());
   });
 };
-const sendForm = (onSuccess = () => console.log("Форма отправлена"), onError = () => console.log("Ошибка при отправке")) => {
+const sendForm = (onSuccess = () => console.log('Форма отправлена'), onError = () => console.log('Ошибка при отправке')) => {
   const setState = () => {
     const formData = new FormData(form);
     const data = {};
-    data['form_name'] = form.id;
+    data.form_name = form.id;
     formData.forEach((value, key) => data[key] = value);
     data.phone = phoneMask.unmaskedValue;
     (0,_delivery_api_js__WEBPACK_IMPORTED_MODULE_0__.sendData)(() => onSuccess(), () => onError(), data);
@@ -5903,7 +5897,7 @@ const sendData = (onSuccess, onError, data) => {
   fetch(POST_LINK, {
     method: 'POST',
     headers: {
-      "Content-Type": "application/json"
+      'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
   }).then(response => {
@@ -6209,7 +6203,6 @@ class InputMask {
     if (this.displayValue !== this.el.value) {
       console.warn('Element value was changed outside of mask. Syncronize mask using `mask.updateValue()` to work properly.'); // eslint-disable-line no-console
     }
-
     this._selection = {
       start: this.selectionStart,
       end: this.cursorPos
@@ -6789,7 +6782,6 @@ class MaskElement {
 
   /** */
 }
-
 _core_holder_js__WEBPACK_IMPORTED_MODULE_0__["default"].MaskElement = MaskElement;
 
 
@@ -7376,7 +7368,6 @@ class Masked {
       // but it causes bugs when one append calls another (when dynamic dispatch set rawInputValue)
       // this._resetBeforeTailState();
     }
-
     return details;
   }
   remove(fromPos, toPos) {
@@ -8004,7 +7995,6 @@ class MaskedPattern extends _base_js__WEBPACK_IMPORTED_MODULE_3__["default"] {
       details.aggregate(blockDetails);
       if (blockDetails.skip || blockDetails.rawInserted) break; // go next char
     }
-
     return details;
   }
   extractTail(fromPos, toPos) {
@@ -8456,7 +8446,6 @@ class PatternCursor {
       this.offset = this.block.displayValue.length; // TODO this is stupid type error, `block` depends on index that was changed above
     }
   }
-
   _pushLeft(fn) {
     this.pushState();
     for (this.bindBlock(); 0 <= this.index; --this.index, this.offset = this.block?.displayValue.length || 0) {
@@ -8978,7 +8967,6 @@ class MaskedRange extends _pattern_js__WEBPACK_IMPORTED_MODULE_1__["default"] {
   constructor(opts) {
     super(opts); // mask will be created in _update
   }
-
   updateOptions(opts) {
     super.updateOptions(opts);
   }
@@ -9118,7 +9106,6 @@ class MaskedDynamic extends _base_js__WEBPACK_IMPORTED_MODULE_3__["default"] {
       // this.currentMask = this.doDispatch(''); // probably not needed but lets see
     }
   }
-
   _appendCharRaw(ch, flags) {
     if (flags === void 0) {
       flags = {};
@@ -9440,7 +9427,6 @@ class MaskedEnum extends _pattern_js__WEBPACK_IMPORTED_MODULE_0__["default"] {
   constructor(opts) {
     super(opts); // mask will be created in _update
   }
-
   updateOptions(opts) {
     super.updateOptions(opts);
   }
@@ -9769,7 +9755,6 @@ class MaskedNumber extends _base_js__WEBPACK_IMPORTED_MODULE_2__["default"] {
       parts[1] = parts[1].replace(/0*$/, ''); // remove trailing zeros
       if (!parts[1].length) parts.length = 1; // remove fractional
     }
-
     return this._insertThousandsSeparators(parts.join(this.radix));
   }
   _padFractionalZeros(value) {
@@ -9969,7 +9954,6 @@ class RepeatBlock extends _pattern_js__WEBPACK_IMPORTED_MODULE_3__["default"] {
       details.aggregate(blockDetails);
       if (blockDetails.skip || blockDetails.rawInserted) break; // go next char
     }
-
     return details;
   }
   _trimEmptyTail(fromPos, toPos) {
@@ -10032,12 +10016,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   renderCitiesDelivery: () => (/* binding */ renderCitiesDelivery)
 /* harmony export */ });
-const regionsTemplate = document.querySelector("#regions-item").content.querySelector('.delivery-region__item');
+const regionsTemplate = document.querySelector('#regions-item').content.querySelector('.delivery-region__item');
 const regionsList = document.querySelector('#regions-list');
 const getFirstDomain = () => {
   const hostFull = window.location.hostname;
   const items = hostFull.split('.');
-  return items[0] && items[0] !== "fitnesslook" ? items[0] : '';
+  return items[0] && items[0] !== 'fitnesslook' ? items[0] : '';
 };
 const renderCitiesDelivery = items => {
   const regionsContentFragment = document.createDocumentFragment();
@@ -10160,7 +10144,6 @@ const settingSliderAdaptive = slider => {
   } else {
     newSlider.isOn && newSlider.destroy();
   }
-  ;
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
       if (!newSlider.isOn) newSlider = slider.rebuild();
@@ -10168,7 +10151,6 @@ const settingSliderAdaptive = slider => {
     } else {
       newSlider.isOn && newSlider.destroy();
     }
-    ;
   });
 };
 const updateSliderAdaptive = slider => {
@@ -10372,7 +10354,6 @@ function removeCSSRule(sheet, index) {
   // return raf(function() {
   'deleteRule' in sheet ? sheet.deleteRule(index) : sheet.removeRule(index); // });
 }
-
 function getCssRulesLength(sheet) {
   var rule = 'insertRule' in sheet ? sheet.cssRules : sheet.rules;
   return rule.length;
@@ -10494,7 +10475,6 @@ function whichProperty(props) {
   }
   return false; // explicit for ie9-
 }
-
 function has3DTransforms(tf) {
   if (!tf) {
     return false;
@@ -11875,7 +11855,6 @@ var tns = function (options) {
       indexMax = getIndexMax(); // autoWidth: <= rightBoundary, slidePositions
       // fixedWidth: <= rightBoundary, fixedWidth, gutter
     }
-
     if (bpChanged || fixedWidth) {
       items = getOption('items');
       slideBy = getOption('slideBy');
@@ -11899,7 +11878,6 @@ var tns = function (options) {
         }
       }
     }
-
     if (freezable && (bpChanged || fixedWidth || autoWidth)) {
       freeze = getFreeze(); // <= autoWidth: slidePositions, gutter, viewport, rightBoundary
       // <= fixedWidth: fixedWidth, gutter, rightBoundary
@@ -13429,8 +13407,8 @@ ymaps.ready(_region_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 (0,_region_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSimpleSlider)('#slider-cost-delivery-buttons', '#slider-cost-delivery');
 (0,_region_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
-const sliderPickup = document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_region_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSlider)('#pickup-slider', {
-  controlsContainer: "#pickup-slider-buttons",
+document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_region_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSlider)('#pickup-slider', {
+  controlsContainer: '#pickup-slider-buttons',
   controls: true,
   nav: false
 });

@@ -1,4 +1,4 @@
-import { tns } from "tiny-slider";
+import { tns } from 'tiny-slider'
 
 const setSlider = (container, navContainer, props) => {
   return tns({
@@ -38,30 +38,28 @@ const setSimpleSlider = (container, props) => {
 }
 
 const settingSliderAdaptive = (slider) => {
-  let newSlider = slider;
+  let newSlider = slider
   if (window.innerWidth < 768) {
     if (!newSlider.isOn) newSlider = slider.rebuild()
-    newSlider.updateSliderHeight();
+    newSlider.updateSliderHeight()
+  } else {
+    newSlider.isOn && newSlider.destroy()
   }
-  else {
-    newSlider.isOn && newSlider.destroy();
-  };
 
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
       if (!newSlider.isOn) newSlider = slider.rebuild()
-      newSlider.updateSliderHeight();
+      newSlider.updateSliderHeight()
+    } else {
+      newSlider.isOn && newSlider.destroy()
     }
-    else {
-      newSlider.isOn && newSlider.destroy();
-    };
-  });
+  })
 }
 
 const updateSliderAdaptive = (slider) => {
   window.addEventListener('resize', () => {
-    slider.updateSliderHeight();
-  });
+    slider.updateSliderHeight()
+  })
 }
 
-export { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive, updateSliderAdaptive };
+export { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive, updateSliderAdaptive }
