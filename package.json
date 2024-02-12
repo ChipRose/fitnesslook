@@ -48,7 +48,7 @@
     "stylelint": "stylelint \"style/resource/**/*.scss\"",
     "w3c": "gulp validateMarkup --silent",
     "bemlinter": "gulp lintBem --silent",
-    "test": "npm run w3c && bemlinter && npm run editorconfig && npm run eslinter",
+    "test": "npm run w3c && bemlinter && npm run editorconfig && npm run eslinter && npm run stylelint",
     "start": "gulp runDev",
     "build": "gulp buildProd",
     "preview": "gulp buildProd && gulp startServer"

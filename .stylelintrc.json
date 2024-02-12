@@ -1,4 +1,14 @@
 {
   "extends": "stylelint-config-htmlacademy",
-  "ignores": "editorconfig-cli -i 'js-comments' -i 'c-comments'"
+  "rules": {
+    "selector-max-id": 1,
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "composes"
+        ]
+      }
+    ]
+  }
 }
