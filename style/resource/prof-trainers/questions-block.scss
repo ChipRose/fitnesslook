@@ -26,7 +26,7 @@
 
 .questions-block__header {
   @media (min-width: $tablet-width) {
-    margin-bottom: 0 !important;
+    margin-bottom: 0;
     grid-row: 1/2;
     grid-column: 1/2;
     align-self: center;

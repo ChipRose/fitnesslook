@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-big);
   }
 }
@@ -12,13 +12,13 @@
 .intro .intro__buttons-block {
   margin-bottom: var(--indent-big);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-huge);
   }
 }
 
 .intro__slider-wrapper {
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     position: relative;
   }
 }
@@ -39,7 +39,7 @@
 .intro__advantage {
   margin-bottom: var(--indent-main);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
 }
@@ -47,8 +47,7 @@
 .intro__decoration {
   margin-bottom: var(--indent-main);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-big);
-
   }
 }

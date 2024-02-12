@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^2.0.8",
     "autoprefixer": "10.4.13",
     "babel-core": "^6.26.3",
     "babel-loader": "^9.1.3",
@@ -36,19 +37,29 @@
     "postcss-url": "10.1.3",
     "sass": "1.56.1",
     "style-loader": "^3.3.3",
-    "stylelint": "14.15.0",
+    "stylelint": "^16.2.1",
+    "stylelint-config-htmlacademy": "^4.0.5",
     "webpack": "^5.89.0",
     "webpack-stream": "^7.0.0"
   },
   "scripts": {
     "eslinter": "eslint \"js/common/**/*.js\"",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"style/resource/**/*.scss\"",
     "w3c": "gulp validateMarkup --silent",
     "bemlinter": "gulp lintBem --silent",
-    "test": "npm run w3c && bemlinter && npm run eslinter",
+    "test": "npm run w3c && bemlinter && npm run editorconfig && npm run eslinter",
     "start": "gulp runDev",
     "build": "gulp buildProd",
     "preview": "gulp buildProd && gulp startServer"
   },
+  "editorconfig-cli": [
+    "./*.html",
+    "./json/**/*.json",
+    "./i/media-resource/stat/icons/**/*.svg",
+    "./js/common/**/*.js",
+    "./style/resource/**/*.{scss}"
+  ],
   "browserslist": [
     "last 2 versions",
     "not dead",
@@ -61,8 +72,8 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.33",
     "accordion-js": "^3.3.4",
+    "eslint-config-htmlacademy": "^10.0.1",
     "imask": "^7.3.0",
-    "tiny-slider": "^2.9.4",
-    "ymaps": "^0.2.1"
+    "tiny-slider": "^2.9.4"
   }
 }

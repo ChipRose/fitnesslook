@@ -2,8 +2,7 @@
   overflow: hidden;
   height: 100%;
   border-radius: var(--radius-main);
-  background: rgba(0,0,0,0.1);
-
+  background: rgba(0, 0, 0, 0.1);
 
   img {
     width: 100%;
@@ -39,14 +38,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
 
-    svg {
-      fill: var(--cl-contrast);
+  .image-block__frame svg {
+    fill: var(--cl-contrast);
 
-      @media (min-width: $desktop-width) {
-        width: 350px;
-        height: auto;
-      }
+    @media (min-width: $desktop-width) {
+      width: 350px;
+      height: auto;
     }
   }
 
@@ -56,12 +55,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: var(--fz-medium);
-    font-family: "Natasha", Arial, sans-serif;
+    font-family: "Natasha", "Arial", sans-serif;
     color: var(--cl-contrast);
   }
 }
 
-.image-block.image-block--center{
+.image-block.image-block--center {
   display: flex;
   justify-content: center;
   align-items: center;

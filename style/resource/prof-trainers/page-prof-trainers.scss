@@ -1,14 +1,12 @@
-.page-prof-trainers {
-  #wmc {
-    font-family: 'Helvetica', Arial, sans-serif;
-    background: var(--cl-contrast);
-    font-size: var(--fz-main);
-    line-height: var(--lh-main);
-    font-weight: 300;
-  }
+.page-prof-trainers #wmc {
+  font-family: "Helvetica", "Arial", sans-serif;
+  background: var(--cl-contrast);
+  font-size: var(--fz-main);
+  line-height: var(--lh-main);
+  font-weight: 300;
 }
 
-.page-prof-trainers #wmc>.wrapper {
+.page-prof-trainers #wmc > .wrapper {
   padding: 0;
   width: 100%;
   max-width: 100%;
@@ -19,7 +17,7 @@
   margin-top: var(--indent-main);
   margin-bottom: var(--indent-big);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-top: var(--indent-big);
     margin-bottom: var(--indent-huge);
   }
@@ -28,7 +26,7 @@
 .page-prof-trainers__best {
   margin-bottom: var(--indent-big);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-huge);
   }
 }
@@ -36,7 +34,7 @@
 .page-prof-trainers__questions {
   margin-bottom: var(--indent-big);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 68px;
   }
 }
@@ -44,7 +42,7 @@
 .page-prof-trainers__why {
   margin-bottom: var(--indent-big);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-huge);
   }
 }
@@ -52,7 +50,7 @@
 .page-prof-trainers__projects {
   margin-bottom: var(--indent-big);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-huge);
   }
 }
@@ -61,7 +59,7 @@
   margin-bottom: var(--indent-big);
 
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-huge);
   }
 }
@@ -69,7 +67,7 @@
 .page-prof-trainers__garantee {
   margin-bottom: var(--indent-big);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 68px;
   }
 }

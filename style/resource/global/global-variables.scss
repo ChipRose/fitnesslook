@@ -12,7 +12,6 @@ $max-width: 1180px;
   --lh-big: 130%;
   --lh-huge: 170%;
 
-
   @media (min-width: $tablet-width) {
     --fz-main: 15px;
     --fz-medium: 18px;
@@ -25,9 +24,7 @@ $max-width: 1180px;
     --fz-medium: 18px;
     --fz-big: 45px;
   }
-}
 
-:root {
   --indent-small: 4px;
   --indent-basic: 8px;
   --indent-main: 16px;
@@ -47,11 +44,6 @@ $max-width: 1180px;
   --shadow-middle: 0 0 20px 0 rgba(0, 0, 0, 0.14);
   --shadow-button: 0 4px 4px 0 rgba(171, 118, 180, 0.16);
   --shadow-inset: 2px 0px 14px 1px rgba(0, 0, 0, 0.14) inset;
-}
-
-
-// Colors
-:root {
   --cl-main: rgb(101, 98, 115);
   --cl-contrast: rgb(255, 255, 255);
   --cl-transparent-contrast: rgba(255, 255, 255, 0.3);
@@ -62,5 +54,5 @@ $max-width: 1180px;
   --cl-neutral: rgb(106, 98, 115);
   --cl-disable: rgb(169, 169, 169);
   --cl-neutral-accent: rgb(247, 244, 251);
-  --cl-transparent-neutral:  rgba(0, 0, 0, 0.06);
+  --cl-transparent-neutral: rgba(0, 0, 0, 0.06);
 }

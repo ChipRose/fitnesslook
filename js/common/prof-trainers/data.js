@@ -19,13 +19,14 @@ const dataTemplate = [
     },
     content: []
   }
-]
+];
+
 const getDataStructure = (products) => {
   const dataStructure = dataTemplate.map((item, index) => {
-    item.content = products[index]
-    return item
-  })
-  return dataStructure
-}
+    item.content = products[index];
+    return item;
+  });
+  return dataStructure;
+};
 
-export { getDataStructure }
+export { getDataStructure };

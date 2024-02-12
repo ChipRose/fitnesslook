@@ -4,7 +4,8 @@
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
+
     @include decoration;
   }
 }
@@ -12,7 +13,7 @@
 .slider-main__title {
   margin-bottom: 46px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 60px;
   }
 }
@@ -24,7 +25,7 @@
 .slider-main__intro-block {
   margin-bottom: 45px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: -46px -46px 54px;
     display: flex;
     justify-content: space-between;
@@ -36,10 +37,9 @@
 
   &:last-child {
     margin-bottom: 0;
-
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: 46px;
     max-width: 450px;
     flex: 0 0 calc(50% - 108px);
@@ -48,5 +48,4 @@
 
 .slider-main__table-block {
   margin-bottom: 50px;
-
 }

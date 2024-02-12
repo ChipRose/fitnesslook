@@ -1,5 +1,5 @@
 .garantee-list__item {
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     margin-bottom: var(--indent-big);
 
@@ -18,7 +18,7 @@
 
 .garantee-list .garantee-list__button {
   @media (min-width: $tablet-width) {
-    font-family: "Natasha", Arial, sans-serif;
+    font-family: "Natasha", "Arial", sans-serif;
     pointer-events: none;
 
 

@@ -16,14 +16,13 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 52px;
   }
 }
 
 .form-communicate__field {
-
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     font-size: 16px;
   }
 }
@@ -43,7 +42,7 @@
 .form-communicate__intro-block {
   margin-bottom: 46px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: -46px -46px 65px;
     display: flex;
   }
@@ -54,10 +53,9 @@
 
   &:last-child {
     margin-bottom: 0;
-
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: 46px;
     flex: 0 0 calc(50% - 2 * 46px);
   }

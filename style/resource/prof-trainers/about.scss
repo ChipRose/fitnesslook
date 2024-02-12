@@ -4,10 +4,10 @@
 }
 
 .about .container {
-  padding-top: calc( var(--indent-big));
+  padding-top: calc(var(--indent-big));
   padding-bottom: calc(2 * var(--indent-big));
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding-top: var(--indent-huge);
   }
 }
@@ -17,7 +17,7 @@
   display: flex;
   justify-content: center;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-huge);
   }
 }
@@ -29,7 +29,7 @@
 .about__advantages {
   margin-bottom: var(--indent-main);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-big);
   }
 }

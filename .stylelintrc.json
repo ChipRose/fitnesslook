@@ -1,0 +1,4 @@
+{
+  "extends": "stylelint-config-htmlacademy",
+  "ignores": "editorconfig-cli -i 'js-comments' -i 'c-comments'"
+}

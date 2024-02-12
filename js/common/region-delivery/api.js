@@ -1,18 +1,18 @@
-const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/'
-const POST_LINK = 'https://www.fitnesslook.ru/api_front/lid/'
+const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
+const POST_LINK = 'https://www.fitnesslook.ru/api_front/lid/';
 
-const getData = (onSuccess) => {
+const getData = (onSuccess, onError = () => { }) => {
   fetch(GET_LINK)
     .then((response) => {
       if (response.ok) {
-        const regions = response.json()
-        return regions
+        const regions = response.json();
+        return regions;
       }
-      throw new Error(`${response.status} — ${response.statusText}`)
+      throw new Error(`${response.status} — ${response.statusText}`);
     })
     .then((products) => onSuccess(products))
-    .catch((error) => console.log(error))
-}
+    .catch((error) => onError(error));
+};
 
 const sendData = (onSuccess, onError, data) => {
   fetch(POST_LINK,
@@ -24,10 +24,8 @@ const sendData = (onSuccess, onError, data) => {
       body: JSON.stringify(data)
     }
   )
-    .then((response) => {
-      response.ok ? onSuccess() : onError()
-    })
-    .catch(() => onError())
-}
+    .then((response) => response.ok ? onSuccess() : onError())
+    .catch(() => onError());
+};
 
-export { getData, sendData }
+export { getData, sendData };

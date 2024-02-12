@@ -89,8 +89,7 @@
   }
 }
 
-.slider-with-button__slider{
-
+.slider-with-button__slider {
   @media (min-width: $tablet-width) {
     &--desk {
       display: flex;
@@ -98,5 +97,3 @@
     }
   }
 }
-
-

@@ -375,21 +375,21 @@ const renderProjectsGallery = projects => {
   const projectsFragment = document.createDocumentFragment();
   const slideProjectsFragment = document.createDocumentFragment();
   const projectsFullFragment = document.createDocumentFragment();
-  projects.forEach(project => {
+  projects?.forEach(project => {
     const projectFull = projectsFullTemplate.cloneNode(true);
     projectFull.querySelector('.title-info').textContent = project.projectId;
     projectsFullFragment.appendChild(projectFull);
     const projectsList = projectFull.querySelector('#projects-list');
-    project.content.forEach(project => {
+    project.content.forEach(item => {
       const projectPart = slideProjectTemplate.cloneNode(true);
-      projectPart.querySelector('.accordion__title').textContent = project.type;
-      projectPart.querySelector('.accordion__number').innerHTML = project.icon;
+      projectPart.querySelector('.accordion__title').textContent = item.type;
+      projectPart.querySelector('.accordion__number').innerHTML = item.icon;
       slideProjectsFragment.appendChild(projectPart);
       projectsList.appendChild(slideProjectsFragment);
-      project.trainers.forEach(content => {
+      item.trainers.forEach(content => {
         const projectItem = slideProjectItemTemplate.cloneNode(true);
         const type = projectItem.querySelector('.type');
-        content.title ? type.textContent = content.title : type.remove();
+        type.textContent = content.title ? content.title : type.remove();
         projectItem.querySelector('.model').href = content?.link;
         projectItem.querySelector('.model__name').textContent = content.model;
         projectItem.querySelector('.model__type').textContent = content.name;
@@ -415,11 +415,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
 
 const getProjectsIndex = slider => {
-  return {
+  const index = {
     current: slider.getInfo().displayIndex,
     next: slider.getInfo().displayIndex === slider.getInfo().slideCount ? 1 : slider.getInfo().displayIndex + 1,
     prev: slider.getInfo().displayIndex === 1 ? slider.getInfo().slideCount : slider.getInfo().displayIndex - 1
   };
+  return index;
 };
 const setPagination = slider => {
   const slideNumber = document.querySelector('#projects-pagination');
@@ -450,9 +451,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   removeElements: () => (/* binding */ removeElements),
 /* harmony export */   sortProjects: () => (/* binding */ sortProjects)
 /* harmony export */ });
-const formatNumber = number => {
-  return typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
-};
+const formatNumber = number => typeof Number(number) === 'number' && number.toString().length === 1 ? `0${number}` : number;
 const addListeners = (selector, cb) => {
   const elements = document.querySelectorAll(selector);
   elements.forEach(button => {
@@ -462,20 +461,14 @@ const addListeners = (selector, cb) => {
     });
   });
 };
-const formatPrice = number => {
-  return number.toString().split(/(?=(?:...)*$)/).join("'");
-};
+const formatPrice = number => number.toString().split(/(?=(?:...)*$)/).join('\'');
 const removeElements = selectors => {
   selectors?.forEach(selector => {
     document.querySelectorAll(selector).forEach(item => item.remove());
   });
 };
-const getCompare = (a, b) => {
-  return b.content.length - a.content.length;
-};
-const sortProjects = array => {
-  return array.sort(getCompare);
-};
+const getCompare = (a, b) => b.content.length - a.content.length;
+const sortProjects = array => array.sort(getCompare);
 
 
 /***/ }),
@@ -520,54 +513,56 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var tiny_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
 
-const setSlider = (container, navContainer, props) => {
-  return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    container,
-    items: 1,
-    controls: false,
-    navContainer,
-    responsive: {
-      768: {
-        controls: true
-      }
-    },
-    ...props
-  });
-};
-const setSmallSlider = (container, controlsContainer, props) => {
-  return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    container,
-    items: 1,
-    nav: false,
-    controlsContainer,
-    gutter: 20,
-    ...props
-  });
-};
-const setSimpleSlider = (container, props) => {
-  return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    container,
-    gutter: 32,
-    items: 1,
-    nav: false,
-    autoHeight: true,
-    ...props
-  });
-};
+const setSlider = (container, navContainer, props) => (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+  container,
+  items: 1,
+  controls: false,
+  navContainer,
+  responsive: {
+    768: {
+      controls: true
+    }
+  },
+  ...props
+});
+const setSmallSlider = (container, controlsContainer, props) => (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+  container,
+  items: 1,
+  nav: false,
+  controlsContainer,
+  gutter: 20,
+  ...props
+});
+const setSimpleSlider = (container, props) => (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+  container,
+  gutter: 32,
+  items: 1,
+  nav: false,
+  autoHeight: true,
+  ...props
+});
 const settingSliderAdaptive = slider => {
   let newSlider = slider;
   if (window.innerWidth < 768) {
-    if (!newSlider.isOn) newSlider = slider.rebuild();
-    newSlider.updateSliderHeight();
+    if (!newSlider.isOn) {
+      newSlider = slider.rebuild();
+      newSlider.updateSliderHeight();
+    }
   } else {
-    newSlider.isOn && newSlider.destroy();
+    if (newSlider.isOn) {
+      newSlider.destroy();
+    }
   }
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
-      if (!newSlider.isOn) newSlider = slider.rebuild();
-      newSlider.updateSliderHeight();
+      if (!newSlider.isOn) {
+        newSlider = slider.rebuild();
+        newSlider.updateSliderHeight();
+      }
     } else {
-      newSlider.isOn && newSlider.destroy();
+      if (newSlider.isOn) {
+        newSlider.destroy();
+      }
     }
   });
 };
@@ -3731,26 +3726,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   settingAccordionInSlider: () => (/* binding */ settingAccordionInSlider),
 /* harmony export */   settingMobileAccordionAdaptive: () => (/* binding */ settingMobileAccordionAdaptive)
 /* harmony export */ });
-const settingAccordion = props => {
-  return {
-    duration: 400,
-    ...props
-  };
-};
-const settingAccordionInSlider = (slider, props) => {
-  return {
-    duration: 200,
-    onOpen: () => {
-      slider.updateSliderHeight();
-    },
-    onClose: () => {
-      slider.updateSliderHeight();
-    },
-    ...props
-  };
-};
-const closeAllAccordions = accordions => {
-  accordions.forEach(item => {
+const settingAccordion = props => ({
+  duration: 400,
+  ...props
+});
+const settingAccordionInSlider = (slider, props) => ({
+  duration: 200,
+  onOpen: () => slider.updateSliderHeight(),
+  onClose: () => slider.updateSliderHeight(),
+  ...props
+});
+const closeAllAccordions = (accordions = []) => {
+  accordions?.forEach(item => {
     item.closeAll();
   });
 };
@@ -3770,7 +3757,9 @@ const openAllDeskAccordions = accordions => {
 };
 const settingAccordionAdaptive = (accordion, slider) => {
   let newAccordion = accordion;
-  if (!Array.isArray(accordion)) newAccordion = [accordion];
+  if (!Array.isArray(accordion)) {
+    newAccordion = [accordion];
+  }
   closeAllMobileAccordions(newAccordion);
   openAllDeskAccordions(newAccordion);
   slider?.updateSliderHeight();
@@ -3782,7 +3771,9 @@ const settingAccordionAdaptive = (accordion, slider) => {
 };
 const settingMobileAccordionAdaptive = (accordion, slider) => {
   let newAccordion = accordion;
-  if (!Array.isArray(accordion)) newAccordion = [accordion];
+  if (!Array.isArray(accordion)) {
+    newAccordion = [accordion];
+  }
   closeAllMobileAccordions(newAccordion);
   slider?.updateSliderHeight();
   window.addEventListener('resize', () => {
@@ -3824,7 +3815,9 @@ const renderProductsGallery = products => {
       productContent.querySelector('.product-img').src = item.picture;
       productContent.querySelector('.product-img').alt = item.name;
       productContent.querySelector('.product-card__button').href = item.full_url;
-      if (item.list_price !== 0) productContent.querySelector('.price--old').textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatPrice)(item.list_price);
+      if (item.list_price !== 0) {
+        productContent.querySelector('.price--old').textContent = (0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatPrice)(item.list_price);
+      }
       productContent.querySelector('.price--new').textContent = `${(0,_util_js__WEBPACK_IMPORTED_MODULE_0__.formatPrice)(item.Price)} ₽`;
       productContentFragment.appendChild(productContent);
     });
@@ -3845,14 +3838,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getData: () => (/* binding */ getData)
 /* harmony export */ });
 const GET_LINK = 'https://www.fitnesslook.ru/?products_prof_trainers=1';
-const getData = onSuccess => {
+const getData = (onSuccess, onError = () => {}) => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {
       const products = response.json();
       return products;
     }
     throw new Error(`${response.status} — ${response.statusText}`);
-  }).then(products => onSuccess(products)).catch(error => console.log(error));
+  }).then(products => onSuccess(products)).catch(error => onError(error));
 };
 
 
@@ -4043,9 +4036,8 @@ const accordionGarantee = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.fr
   showMultiple: true
 }));
 (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionAdaptive)(accordionGarantee);
-const accordionMain = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-main')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(progectsGallery));
-const accordionQuestions = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)());
-(0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.closeAllAccordions)(accordionQuestions);
+const accordionsMain = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-main')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordionInSlider)(progectsGallery));
+new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(document.querySelectorAll('.accordion-questions')), (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingAccordion)());
 
 // Accordions in slider
 
@@ -4056,7 +4048,7 @@ sliderIntro.events.on('indexChanged', () => {
   (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.settingMobileAccordionAdaptive)(accordionIntro, sliderIntro);
 });
 progectsGallery.events.on('indexChanged', () => {
-  (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.closeAllAccordions)(accordionMain);
+  (0,_prof_trainers_accordion_js__WEBPACK_IMPORTED_MODULE_8__.closeAllAccordions)(accordionsMain);
 });
 
 // Navigation

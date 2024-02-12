@@ -5,7 +5,7 @@
   display: block;
   width: fit-content;
   box-sizing: border-box;
-  font-family: 'Helvetica', Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: var(--fz-xmedium);
   line-height: var(--lh-small);
   letter-spacing: 0.02;
@@ -73,7 +73,7 @@
   display: block;
   width: fit-content;
   box-sizing: border-box;
-  font-family: 'Helvetica', Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: var(--fz-medium);
   line-height: var(--lh-main);
   font-weight: 500;
@@ -83,7 +83,7 @@
   box-shadow: var(--shadow-button);
   transition: var(--transition-main);
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     padding: 8px 39px;
   }
 
@@ -139,7 +139,7 @@
   pointer-events: none;
   opacity: 0;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     min-width: 200px;
   }
 }
@@ -168,7 +168,6 @@
     color: var(--cl-disable);
     font-size: var(--fz-medium);
     font-weight: var(--fw-regular);
-
   }
 
   &--big {
@@ -177,7 +176,7 @@
     font-size: 20px;
     font-weight: var(--fw-medium);
 
-    @media (min-width:$tablet-width) {
+    @media (min-width: $tablet-width) {
       width: var(--button-size-huge);
       height: var(--button-size-huge);
       font-size: var(--fz-mediumx);
@@ -242,10 +241,9 @@
   flex-wrap: wrap;
   position: relative;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     justify-content: flex-start;
     margin: -9px -17px;
-
   }
 }
 
@@ -256,14 +254,14 @@
   flex: 1 0 calc(50% - 8px);
 
   &:nth-child(3n) {
-    flex-grow: 0
+    flex-grow: 0;
   }
 
-  @media (min-width:544px) {
+  @media (min-width: 544px) {
     min-height: 130px;
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: 18px 17px;
     flex: 1 0 320px;
     width: 320px;
@@ -284,7 +282,7 @@
 }
 
 .button-modal__content-block {
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin-top: auto;
     margin-bottom: auto;
   }
@@ -335,7 +333,7 @@
   align-items: center;
 }
 
-.button-modal__header .title-extra{
+.button-modal__header .title-extra {
   width: 50%;
 }
 

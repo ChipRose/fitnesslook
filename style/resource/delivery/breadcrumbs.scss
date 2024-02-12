@@ -9,7 +9,7 @@
   margin-right: 17px;
   font-size: var(--fz-main);
   position: relative;
-  background: right 50%/ 12px 12px no-repeat url('/i/media/stat/icons/arrow-triangle.svg');
+  background: right 50%/ 12px 12px no-repeat url("/i/media/stat/icons/arrow-triangle.svg");
 
 
   &:last-child {
@@ -20,9 +20,6 @@
       padding-right: 0;
     }
   }
-
-
-
 }
 
 .breadcrubs__link {
@@ -37,7 +34,7 @@
   }
 }
 
-.breadcrubs__item--current .breadcrubs__link{
+.breadcrubs__item--current .breadcrubs__link {
   color: var(--cl-dark);
   font-weight: 400;
   cursor: default;

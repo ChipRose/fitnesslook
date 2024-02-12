@@ -1,7 +1,8 @@
-.garantee__title-block{
+.garantee__title-block {
   margin-bottom: var(--indent-big);
   display: flex;
   justify-content: center;
+
   @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-huge);
   }
@@ -20,6 +21,7 @@
   margin-bottom: var(--indent-main);
   width: 70%;
 }
+
 .garantee__content {
   @media (min-width: $tablet-width) {
     margin-bottom: var(--indent-huge);

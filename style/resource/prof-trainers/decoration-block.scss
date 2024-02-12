@@ -1,14 +1,14 @@
 .decoration-block {
   display: none;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
   }
 }
 
 .decoration-block__item {
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     flex: 0 0 calc(100% / 3 - var(--indent-big));
     margin-right: var(--indent-big);
 
@@ -19,9 +19,8 @@
 }
 
 .decoration-block.decoration-block--two {
-
   .decoration-block__item {
-    @media (min-width:$tablet-width) {
+    @media (min-width: $tablet-width) {
       flex: 0 0 calc(50% - var(--indent-big));
       margin-right: var(--indent-big);
 
@@ -38,7 +37,7 @@
 
 .decoration-block--narrow.decoration-block {
   .decoration-block__item {
-    @media (min-width:$tablet-width) {
+    @media (min-width: $tablet-width) {
       flex: 0 0 33%;
       margin-right: 0 !important;
 
@@ -51,7 +50,7 @@
 
 .decoration-block.decoration-block--dark {
   svg {
-    @media (min-width:$tablet-width) {
+    @media (min-width: $tablet-width) {
       fill: var(--cl-main);
     }
   }

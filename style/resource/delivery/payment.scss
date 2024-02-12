@@ -6,30 +6,31 @@
   @include paper;
 
   padding: 32px 22px 13px;
+  margin-bottom: 54px;
+
   border-radius: 30px;
 }
 
-.payment.payment--open .payment__content {
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 19;
-    background: var(--cl-transparent-neutral);
-  }
-}
-
 .payment.payment--open {
-
   .button-modal__container,
   .payment__title-extra {
     filter: blur(3px);
+  }
+
+  .payment__content {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 19;
+      background: var(--cl-transparent-neutral);
+    }
   }
 }
 
@@ -49,10 +50,6 @@
   margin-bottom: 17px;
 }
 
-.payment__content {
-  margin-bottom: 54px;
-}
-
 .payment__extra-title {
   margin-bottom: 34px;
 }
@@ -60,7 +57,7 @@
 .payment__extra-info {
   margin-bottom: 50px;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: -46px -46px 0;
     display: flex;
   }
@@ -71,10 +68,9 @@
 
   &:last-child {
     margin-bottom: 0;
-
   }
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     margin: 46px;
     flex: 0 0 calc(50% - 2 * 46px);
   }

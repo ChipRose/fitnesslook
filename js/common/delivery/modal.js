@@ -1,11 +1,10 @@
-import { Fancybox } from '@fancyapps/ui'
+import { Fancybox } from '@fancyapps/ui';
 
-const buttonsModal = document.querySelectorAll('.button-modal__button')
+const buttonsModal = document.querySelectorAll('.button-modal__button');
 
 buttonsModal.forEach((button) => {
   button?.addEventListener('click', () => {
-    console.log('click')
     Fancybox.bind('[data-fancybox]', {
-    })
-  })
-})
+    });
+  });
+});

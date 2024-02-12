@@ -39,7 +39,7 @@
   }
 }
 
-.img-sticker.img-sticker--desk{
+.img-sticker.img-sticker--desk {
   .img-sticker__icon {
     display: none;
 
@@ -52,6 +52,7 @@
       fill: var(--cl-accent);
     }
   }
+
   .img-sticker__img-block {
     margin-top: 0;
     margin-right: 0;
@@ -62,9 +63,6 @@
       margin-right: 40px;
       width: calc(100% - 40px);
       box-sizing: border-box;
-
     }
   }
-
-
 }

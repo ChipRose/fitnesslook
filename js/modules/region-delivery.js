@@ -328,7 +328,9 @@ const openAllDeskAccordions = accordions => {
 };
 const settingAccordionAdaptive = (accordion, slider) => {
   let newAccordion = accordion;
-  if (!Array.isArray(accordion)) newAccordion = [accordion];
+  if (!Array.isArray(accordion)) {
+    newAccordion = [accordion];
+  }
   closeAllMobileAccordions(newAccordion);
   openAllDeskAccordions(newAccordion);
   slider?.updateSliderHeight();
@@ -352,14 +354,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
 const POST_LINK = 'https://www.fitnesslook.ru/api_front/lid/';
-const getData = onSuccess => {
+const getData = (onSuccess, onError = () => {}) => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {
       const regions = response.json();
       return regions;
     }
     throw new Error(`${response.status} — ${response.statusText}`);
-  }).then(products => onSuccess(products)).catch(error => console.log(error));
+  }).then(products => onSuccess(products)).catch(error => onError(error));
 };
 const sendData = (onSuccess, onError, data) => {
   fetch(POST_LINK, {
@@ -368,9 +370,7 @@ const sendData = (onSuccess, onError, data) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
-  }).then(response => {
-    response.ok ? onSuccess() : onError();
-  }).catch(() => onError());
+  }).then(response => response.ok ? onSuccess() : onError()).catch(() => onError());
 };
 
 
@@ -5825,20 +5825,18 @@ const setFormSubmit = (...callbacks) => {
     callbacks.forEach(cb => cb());
   });
 };
-const sendForm = (onSuccess = () => console.log('Форма отправлена'), onError = () => console.log('Ошибка при отправке')) => {
+const sendForm = (onSuccess = () => {}, onError = () => {}) => {
   const setState = () => {
     const formData = new FormData(form);
     const data = {};
-    data.form_name = form.id;
+    data['form_name'] = form.id;
     formData.forEach((value, key) => data[key] = value);
     data.phone = phoneMask.unmaskedValue;
     (0,_delivery_api_js__WEBPACK_IMPORTED_MODULE_0__.sendData)(() => onSuccess(), () => onError(), data);
   };
   return setState;
 };
-const isEscape = evt => {
-  return evt.key === 'Escape' || evt.key === 'ESC';
-};
+const isEscape = evt => evt.key === 'Escape' || evt.key === 'ESC';
 const showMessage = (template, buttonClose) => {
   content.appendChild(template);
   bg.classList.add('content--lock');
@@ -5861,7 +5859,9 @@ const showMessage = (template, buttonClose) => {
     setTimeout(() => removeModalHandler(), TIMEOUT_DELAY);
   }
   const back = document.querySelector('.content--lock');
-  back && back.addEventListener('click', removeModalHandler);
+  if (back) {
+    back.addEventListener('click', removeModalHandler);
+  }
 };
 const setSuccessState = () => {
   showMessage(templateSuccess, 'message__close-button');
@@ -5884,14 +5884,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
 const POST_LINK = 'https://www.fitnesslook.ru/api_front/lid/';
-const getData = onSuccess => {
+const getData = (onSuccess = () => {}, onError = () => {}) => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {
       const regions = response.json();
       return regions;
     }
     throw new Error(`${response.status} — ${response.statusText}`);
-  }).then(products => onSuccess(products)).catch(error => console.log(error));
+  }).then(products => onSuccess(products)).catch(error => onError(error));
 };
 const sendData = (onSuccess, onError, data) => {
   fetch(POST_LINK, {
@@ -5900,9 +5900,7 @@ const sendData = (onSuccess, onError, data) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(data)
-  }).then(response => {
-    response.ok ? onSuccess() : onError();
-  }).catch(() => onError());
+  }).then(response => response.ok ? onSuccess() : onError()).catch(() => onError());
 };
 
 
@@ -5924,7 +5922,6 @@ const removeElements = (...selectors) => {
 const scrollToElement = selector => {
   const HEADER_HEIGHT = 153;
   const scrollElement = document.querySelector(selector)?.offsetTop;
-  console.log(document.querySelector(selector), scrollElement);
   window.scrollTo({
     top: scrollElement + HEADER_HEIGHT,
     behavior: 'smooth'
@@ -10047,24 +10044,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   setNavigation: () => (/* binding */ setNavigation)
 /* harmony export */ });
-const setNavigation = (container, ...callBacks) => {
-  const HEADER_HEIGHT = 153;
-  const navigationList = document.querySelector(container);
-  const navigationHandle = (element, ...callBacks) => {
-    const elementHref = element.target.href;
-    console.log(elementHref);
-    const elementId = elementHref.substring(elementHref.indexOf('#'));
-    const scrollElement = document.querySelector(elementId).offsetTop;
-    window.scrollTo({
-      top: scrollElement + HEADER_HEIGHT,
-      behavior: 'smooth'
+const HEADER_HEIGHT = 153;
+const navigationHandle = (element, ...callBacks) => {
+  const elementHref = element.target.href;
+  const elementId = elementHref.substring(elementHref.indexOf('#'));
+  const scrollElement = document.querySelector(elementId).offsetTop;
+  window.scrollTo({
+    top: scrollElement + HEADER_HEIGHT,
+    behavior: 'smooth'
+  });
+  if (callBacks?.length) {
+    callBacks.forEach(cb => {
+      cb();
     });
-    if (callBacks?.length) {
-      callBacks.forEach(cb => {
-        cb();
-      });
-    }
-  };
+  }
+};
+const setNavigation = (container, ...callBacks) => {
+  const navigationList = document.querySelector(container);
   navigationList?.addEventListener('click', evt => {
     evt.preventDefault();
     navigationHandle(evt, ...callBacks);
@@ -10113,43 +10109,47 @@ const setSimpleSlider = (buttonsSelector, container, activeSlide = 0) => {
     item.style.display = 'block';
   });
 };
-const setSlider = (container, props) => {
-  return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    container,
-    items: 1,
-    controls: false,
-    gutter: 40,
-    loop: true,
-    ...props
-  });
-};
-const setTableSlider = (container, props) => {
-  return (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
-    container,
-    items: 5,
-    nav: false,
-    responsive: {
-      768: {
-        items: 6
-      }
-    },
-    ...props
-  });
-};
+const setSlider = (container, props) => (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+  container,
+  items: 1,
+  controls: false,
+  gutter: 40,
+  loop: true,
+  ...props
+});
+const setTableSlider = (container, props) => (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+  container,
+  items: 5,
+  nav: false,
+  responsive: {
+    768: {
+      items: 6
+    }
+  },
+  ...props
+});
 const settingSliderAdaptive = slider => {
   let newSlider = slider;
   if (window.innerWidth < 768) {
-    if (!newSlider.isOn) newSlider = slider.rebuild();
-    newSlider.updateSliderHeight();
+    if (!newSlider.isOn) {
+      newSlider = slider.rebuild();
+      newSlider.updateSliderHeight();
+    }
   } else {
-    newSlider.isOn && newSlider.destroy();
+    if (newSlider.isOn) {
+      newSlider.destroy();
+    }
   }
   window.addEventListener('resize', () => {
     if (window.innerWidth < 768) {
-      if (!newSlider.isOn) newSlider = slider.rebuild();
-      newSlider.updateSliderHeight();
+      if (!newSlider.isOn) {
+        newSlider = slider.rebuild();
+        newSlider.updateSliderHeight();
+      }
     } else {
-      newSlider.isOn && newSlider.destroy();
+      if (newSlider.isOn) {
+        newSlider.destroy();
+      }
     }
   });
 };
@@ -13392,15 +13392,6 @@ __webpack_require__.r(__webpack_exports__);
 (0,_region_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.setFormSubmit)((0,_region_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.sendForm)(_region_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.setSuccessState, _region_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.setErrorState));
 (0,_region_delivery_faq_js__WEBPACK_IMPORTED_MODULE_6__.renderQuestionsList)(_json_region_delivery_questions_json__WEBPACK_IMPORTED_MODULE_7__);
 
-// Navigation
-
-(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#navigation-in');
-(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#cost-regions');
-(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#global-up');
-(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#receiving-up');
-(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#regions-list-button');
-(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#receiving-close-up', () => (0,_region_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionDelivery));
-
 // eslint-disable-next-line
 ymaps.ready(_region_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 (0,_region_delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
@@ -13409,11 +13400,13 @@ ymaps.ready(_region_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 
 (0,_region_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSimpleSlider)('#slider-cost-delivery-buttons', '#slider-cost-delivery');
 (0,_region_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSimpleSlider)('#slider-delivery-type-buttons', '.receiving-type__main-slider');
-document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons') && (0,_region_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSlider)('#pickup-slider', {
-  controlsContainer: '#pickup-slider-buttons',
-  controls: true,
-  nav: false
-});
+if (document.querySelector('#pickup-slider') && document.querySelector('#pickup-slider-buttons')) {
+  (0,_region_delivery_slider_js__WEBPACK_IMPORTED_MODULE_11__.setSlider)('#pickup-slider', {
+    controlsContainer: '#pickup-slider-buttons',
+    controls: true,
+    nav: false
+  });
+}
 
 // Accordions
 
@@ -13423,6 +13416,15 @@ const accordionFAQ = new accordion_js__WEBPACK_IMPORTED_MODULE_0__(Array.from(do
   duration: 100
 });
 (0,_region_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionFAQ);
+
+// Navigation
+
+(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#navigation-in');
+(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#cost-regions');
+(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#global-up');
+(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#receiving-up');
+(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#regions-list-button');
+(0,_region_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_10__.setNavigation)('#receiving-close-up', () => (0,_region_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionDelivery));
 })();
 
 /******/ })()
