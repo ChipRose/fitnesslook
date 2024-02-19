@@ -48,19 +48,19 @@ export function processAllScripts() {
     () => processScripts({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js' }),
     () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js' }),
     () => processScripts({ src: './js/common/region-delivery.js', title: 'region-delivery.js' })
-  )
+  );
 }
 
 export function optimizeImages() {
   return gulp.src('./i/media-resource/**/*.{png,jpg}')
     .pipe(imagemin())
-    .pipe(gulp.dest('./i/media/'))
+    .pipe(gulp.dest('./i/media/'));
 }
 
 export function createWebp() {
   return gulp.src('./i/media-resource/**/*.{jpg,png,svg}')
     .pipe(webp())
-    .pipe(gulp.dest('./i/media/'))
+    .pipe(gulp.dest('./i/media/'));
 }
 
 export function createStack() {
@@ -75,7 +75,7 @@ export function createStack() {
 export function copyAssets() {
   return gulp.src([
     './i/media-resource/**/*',
-  ], { base: "i/media-resource" })
+  ], { base: 'i/media-resource' })
     .pipe(gulp.dest('./i/media'));
 }
 
@@ -103,6 +103,7 @@ function reloadServer(done) {
 function watchFiles() {
   gulp.watch('./style/resource/**/*.scss', gulp.series(processStyles));
   gulp.watch('./i/media-resource/**/*.{jpg,png}', gulp.series(copyAssets, createWebp));
+  gulp.watch('./json/**/*.{json}', gulp.series(copyAssets));
   gulp.watch('./js/common/**/*.js', gulp.series(processAllScripts()));
   gulp.watch('./*.html', gulp.series(processMarkup, reloadServer));
 }
