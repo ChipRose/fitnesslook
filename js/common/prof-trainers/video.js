@@ -17,7 +17,8 @@ const lazyElements = [
     container: document.querySelector('#projects-cover'),
     video: '/i/media/stat/prof-trains/video/projects/cover.mp4',
     poster: '/i/media/stat/prof-trains/img/projects/poster-desk.jpg',
-    alt: 'Фитнесс единица'
+    alt: 'Фитнесс единица',
+    loop: true
   }
 ];
 
@@ -25,7 +26,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const properties = lazyElements.find((element) => element.img === entry.target);
-      const { img, container, video, poster, alt } = properties;
+      const { img, container, video, poster, alt, loop = false } = properties;
       const videoElement = document.createElement('video');
 
       container.innerHTML = '';
@@ -36,6 +37,7 @@ const observer = new IntersectionObserver((entries) => {
       videoElement.preload = 'none';
       videoElement.autoplay = true;
       videoElement.muted = true;
+      videoElement.loop = loop;
 
       container.appendChild(videoElement);
       videoElement.load();

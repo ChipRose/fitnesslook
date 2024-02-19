@@ -3,7 +3,7 @@ import projects from '../../json/prof-trainers/projects.json';
 import './prof-trainers/video.js';
 import { renderProjectsGallery } from './prof-trainers/projects.js';
 import { setPagination } from './prof-trainers/slider-pagination.js';
-import { removeElements, addListeners, sortProjects } from './prof-trainers/util.js';
+import { removeElements, addListeners } from './prof-trainers/util.js';
 import { setNavigation } from './prof-trainers/navigation.js';
 import { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive, updateSliderAdaptive } from './prof-trainers/slider.js';
 import { settingAccordion, settingAccordionAdaptive, settingMobileAccordionAdaptive, closeAllAccordions, settingAccordionInSlider } from './prof-trainers/accordion.js';
@@ -31,7 +31,7 @@ getData((products) => {
   });
 });
 
-renderProjectsGallery(sortProjects(projects));
+renderProjectsGallery(projects);
 
 // Sliders
 
