@@ -96,7 +96,7 @@
       },
       {
         "type": "Железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#iron-icon'></use></svg>",
         "trainers": [
           {
             "title": "Гантельный ряд",
@@ -221,33 +221,49 @@
         "trainers": [
           {
             "title": "Беговая дорожка",
-            "model": "Matrix Performance Touch XL",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/begovye-dorojki/matrix-performance-touch-xl.html"
-          },
-          {
-            "title": "Эллиптический тренажер",
-            "model": "Matrix Performance Ascent Trainer Touch",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-ascent-trainer-touch.html"
+            "model": "Matrix Endurance LED",
+            "name": "Х4",
+            "link": "https://www.fitnesslook.ru/trenajery/begovye-dorojki/marin-endurance-led.html"
           },
           {
             "title": "Велотренажер",
-            "model": "Matrix Performance Upright Touch",
+            "model": "Matrix Endurance LED",
+            "name": "Х5",
+            "link": "https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-endurance-led.html"
+          },
+          {
+            "title": "Эллиптический тренажер",
+            "model": "Matrix Performance LED",
+            "name": "Х4",
+            "link": "https://www.fitnesslook.ru/trenajery/ellepticheskie/matrix-performance-elliptical-led.html"
+          },
+          {
+            "title": "Степпер",
+            "model": "VictoryFit VF-ST800",
             "name": "Х1",
-            "link": "https://www.fitnesslook.ru/trenajery/velotrenajery/matrix-performance-upright-touch.html"
+            "link": "https://www.fitnesslook.ru/trenajery/steppery/victoryfit-vf-st800.html"
           },
           {
             "title": "Гребной тренажер",
-            "model": "Matrix RXP-WFRF",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/trenajery/grebnye/matrix-rxp-wfrf.html"
+            "model": "Matrix Rower New",
+            "name": "Х4",
+            "link": "https://www.fitnesslook.ru/trenajery/grebnye/matrix-rower.html"
+          }
+        ]
+      },
+      {
+        "type": "Мультистанции",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Мультистанция 4-х позиционная",
+            "model": "Hasttings 4-х позиционная Digger HD023-1",
+            "name": "Х1"
           },
           {
-            "title": "Лестница-эскалатор",
-            "model": "Matrix Performance Touch XL",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/trenajery/steppery/matrix-performance-touch-xl-performance-touch-xl.html"
+            "title": "Мультистанция 5-ти позиционная",
+            "model": "Hasttings Digger HD023-1 + HD024-1 + HD023OPT-1",
+            "name": "Х1"
           }
         ]
       },
@@ -256,153 +272,98 @@
         "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
         "trainers": [
           {
-            "title": "Грузоблочный тренажер",
-            "model": "Matrix Aura G3-MSFT300 Functional Trainer",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/silovye/muljtistancii/matrix-msft-300-functional-trainer.html"
-          },
-          {
-            "model": "Matrix Ultra Base G7-S13BH",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s13bh.html"
-          },
-          {
-            "model": "Matrix Ultra Base G7-S33BH",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s33bh.html"
-          },
-          {
-            "model": "Matrix Ultra Base G7-S70BH",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s70bh.html"
-          },
-          {
-            "title": "Стойка турник брусья-пресс",
-            "model": "Matrix Magnum MG-A63C",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/matrix-mg-a63c.html"
+            "title": "Силовая скамья",
+            "model": "Bronze Gym BR-1004",
+            "name": "Х2"
           },
           {
             "title": "Машина Смита",
-            "model": "Matrix Magnum MG-PL62",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/matrix-magnum-mg-pl62.html"
+            "model": "AnyFit PEB201",
+            "name": "Х2"
           },
           {
-            "title": "Гиперэкстензия",
-            "model": "Matrix MG-A52",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/silovye/dlya-spiny/giperekstenzii/matrix-mg-a52.html"
-          },
-          {
-            "title": "Силовая скамья",
-            "model": "Matrix Magnum MG-A61",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a61.html"
-          },
-          {
-            "model": "Matrix Magnum MG-A82",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a82.html"
+            "title": "Силовая скамья для жима (со стойками)",
+            "model": "Hasttings Digger HD004-4",
+            "name": "Х2"
           }
         ]
       },
       {
         "type": "Железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#iron-icon'></use></svg>",
         "trainers": [
           {
-            "title": "Гантельный ряд",
-            "model": "Ziva ZVO-DBPU1584-GY 10 пар",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-zvo-dbpu1584-gy-10-par.html"
-          },
-          {
-            "model": "Ziva XP Urethane Dumbbell Set (5 pairs) 22-30 kg ZXP-DBPU8605",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-xp-urethane-dumbbell-set-5-pairs-22-30-kg-zxp-dbpu8605.html"
-          },
-          {
-            "model": "Ziva XP Urethane 12-20кг ZXP-DBPU8604",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/jelezo/ganteli/ryady/ziva-xp-urethane-12-20kg.html"
-          },
-          {
-            "title": "Диск для штанги с посадочным диаметром 50 мм.",
-            "model": "Ziva с уретановым покрытием, 1.25 кг. ZVO-DCPU1618-GY",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-1-25-kg.html"
-          },
-          {
-            "model": "Ziva с уретановым покрытием, 2.5 кг. ZVO-DCPU1618-GY",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-2-5-kg-zvo-dcpu1612-gy.html"
-          },
-          {
-            "model": "Ziva с уретановым покрытием, 5 кг. ZVO-DCPU1618-GY",
-            "name": "Х4",
-            "link": "https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-5-kg-zvo-dcpu1613-gy.html"
-          },
-          {
-            "model": "Ziva с уретановым покрытием, 10 кг. ZVO-DCPU1618-GY",
-            "name": "Х4",
-            "link": "https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-10-kg-zvo-dcpu1614-gy.html"
-          },
-          {
-            "model": "Ziva с уретановым покрытием, 15 кг. ZVO-DCPU1618-GY",
-            "name": "Х4",
-            "link": "https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-15-kg-zvo-dcpu1615-gy.html"
-          },
-          {
-            "model": "Ziva с уретановым покрытием, 20 кг. ZVO-DCPU1618-GY",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-20-kg-zvo-dcpu1616-gy.html"
-          },
-          {
-            "model": "Ziva с уретановым покрытием, 25 кг. ZVO-DCPU1618-GY",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/jelezo/diski-dlya-shtangi/50-mm/ziva-s-uretanovym-pokrytiem-25-kg-zvo-dcpu1617-gy.html"
-          },
-          {
-            "title": "Замок для грифа",
-            "model": "Замок для грифа Ziva ZXP-OBCC0436-BK",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/jelezo/zamki-dlya-grifa/ziva-zxp-obcc0436-bk.html"
+            "title": "Набор гексагональных гантелей",
+            "model": "Protrain 1-40 кг RJ0946",
+            "name": "Х1"
           },
           {
             "title": "Стойка для гантелей",
-            "model": "Ziva ZST-VS10- 5396-BK 10 пар",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/ziva-zst-vs10-5396-bk-10-par.html"
+            "model": "Bronze Gym BR-1027 15 пар",
+            "name": "Х1"
           },
           {
-            "model": "Matrix MG-A510 10 пар",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/matrix-mg-a510-10-par.html"
-          }
-        ]
-      },
-      {
-        "type": "Фитнес оборудование",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
-        "trainers": [
-          {
-            "title": "Мат для йоги",
-            "model": "Ziva ZSL-TDYM0251-BK",
-            "name": "Х2",
-            "link": "https://www.fitnesslook.ru/fitnes-joga-pilates/kovriki-i-maty/ziva-zsl-tdym0251-bk.html"
+            "model": "Livepro LP8860 (10 пар)",
+            "name": "Х2"
           },
           {
-            "title": "Ролик миофасцальный",
-            "model": "Ziva ZXP-DFRL0274",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/fitnes-joga-pilates/prochie-tovary/ziva-zxp-dfrl0274.html"
+            "title": "Стойка для грифов",
+            "model": "Svensson Industrial X Force 1011",
+            "name": "Х1"
           },
           {
-            "title": "Фитбол",
-            "model": "Ziva Фитбол 65 ZVO-ABCB9292-BK",
-            "name": "Х1",
-            "link": "https://www.fitnesslook.ru/fitnes-joga-pilates/myachi/ziva-fitbol-65-zvo-abcb9292-bk.html"
+            "title": "Стойка для дисков",
+            "model": "Hasttings Digger HD021-4",
+            "name": "Х1"
+          },
+          {
+            "title": "Замок для грифа",
+            "model": "Bronze Gym клипса",
+            "name": "Х4"
+          },
+          {
+            "title": "Диск для штанги",
+            "model": "Protrain DB6092-1,25 (д=50 мм)",
+            "name": "Х6"
+          },
+          {
+            "model": "Protrain DB6092-2,5 (д=50 мм)",
+            "name": "Х6"
+          },
+          {
+            "model": "Protrain DB6092-5 (д=50 мм)",
+            "name": "Х16"
+          },
+          {
+            "model": "Protrain DB6092-10 (д=50 мм)",
+            "name": "Х10"
+          },
+          {
+            "model": "Protrain DB6092-15 (д=50 мм)",
+            "name": "Х10"
+          },
+          {
+            "model": "Protrain DB6092-20 (д=50 мм)",
+            "name": "Х10"
+          },
+          {
+            "model": "Protrain DB6092-25 (д=50 мм)",
+            "name": "Х10"
+          },
+          {
+            "title": "W-образный гриф для штанги",
+            "model": "Bronze Gym олимпийский 120 см",
+            "name": "Х1"
+          },
+          {
+            "title": "Z-образный гриф для штанги",
+            "model": "Bronze Gym олимпийский 120 см",
+            "name": "Х1"
+          },
+          {
+            "title": "Прямой гриф для штанги",
+            "model": "Bronze Gym олимпийский 220 см BG-PA-BR-S001",
+            "name": "Х2"
           }
         ]
       }
@@ -477,7 +438,7 @@
       },
       {
         "type": "Железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#iron-icon'></use></svg>",
         "trainers": [
           {
             "title": "Гантель",
@@ -806,7 +767,7 @@
       },
       {
         "type": "Железо",
-        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#iron-icon'></use></svg>",
         "trainers": [
           {
             "title": "Гантельный ряд",
