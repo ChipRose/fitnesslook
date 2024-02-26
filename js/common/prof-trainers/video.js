@@ -15,22 +15,41 @@ const lazyElements = [
   {
     img: document.querySelector('#projects-image'),
     container: document.querySelector('#projects-cover'),
-    video: '/i/media/stat/prof-trains/video/projects/cover.mp4',
+    video: '/i/media/stat/prof-trains/video/projects/projects-cover.mp4',
+    videoDesk: '/i/media/stat/prof-trains/video/projects/projects-cover-desk.mp4',
     poster: '/i/media/stat/prof-trains/img/projects/poster-desk.jpg',
     alt: 'Фитнесс единица',
     loop: true
   }
 ];
 
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       const properties = lazyElements.find((element) => element.img === entry.target);
-      const { img, container, video, poster, alt, loop = false } = properties;
+      const { img, container, video, poster, alt, loop = false, videoDesk } = properties;
       const videoElement = document.createElement('video');
 
+      if (videoDesk) {
+        if (window.innerWidth < 768) {
+          videoElement.src = video;
+        } else {
+          videoElement.src = videoDesk;
+        }
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth < 768) {
+            videoElement.src = video;
+          } else {
+            videoElement.src = videoDesk;
+          }
+        });
+      } else {
+        videoElement.src = video;
+      }
+
       container.innerHTML = '';
-      videoElement.src = video;
       videoElement.alt = alt;
       videoElement.poster = poster;
       videoElement.controls = false;
@@ -38,6 +57,7 @@ const observer = new IntersectionObserver((entries) => {
       videoElement.autoplay = true;
       videoElement.muted = true;
       videoElement.loop = loop;
+
 
       container.appendChild(videoElement);
       videoElement.load();
