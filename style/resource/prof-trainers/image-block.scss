@@ -53,10 +53,14 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    font-size: 14px;
     transform: translate(-50%, -50%);
-    font-size: var(--fz-medium);
     font-family: "Natasha", "Arial", sans-serif;
     color: var(--cl-contrast);
+
+    @media (min-width: $tablet-width) {
+      font-size: var(--fz-medium);
+    }
   }
 }
 

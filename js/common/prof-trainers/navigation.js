@@ -1,16 +1,41 @@
-const setNavigation = (container) => {
-  const HEADER_HEIGHT = 153;
-  const navigationList = document.querySelector(container);
+const HEADER_HEIGHT = 153;
 
-  if (navigationList) {
-    navigationList.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      const elementHref = evt.target.href;
-      const elementId = elementHref.substring(elementHref.indexOf('#'));
-      const scrollElement = document.querySelector(elementId).offsetTop;
-      window.scrollTo({ top: scrollElement + HEADER_HEIGHT, behavior: 'smooth' });
+const navigationHandle = (element, ...callBacks) => {
+  const elementHref = element.target.href;
+  const elementId = elementHref.substring(elementHref.indexOf('#'));
+  const scrollElement = document.querySelector(elementId).offsetTop;
+  window.scrollTo({ top: scrollElement + HEADER_HEIGHT, behavior: 'smooth' });
+
+  if (callBacks?.length) {
+    callBacks.forEach((cb) => {
+      cb();
     });
   }
 };
 
-export { setNavigation };
+const setNavigation = (container, ...callBacks) => {
+  const navigationList = document.querySelector(container);
+
+  navigationList?.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    navigationHandle(evt, ...callBacks);
+  });
+};
+
+const setSetNavigation = (container, ...callBacks) => {
+  const navigationItemList = document.querySelectorAll(container);
+
+  Array.from(navigationItemList).map((navItem) => {
+    navItem.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      if (callBacks?.length) {
+        callBacks.forEach((cb) => {
+          cb();
+        });
+      }
+      navigationHandle(evt);
+    });
+  });
+};
+
+export { setNavigation, setSetNavigation };

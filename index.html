@@ -5067,7 +5067,7 @@
                     </p>
                     <p class="text text-main">
                       Сроки и последовательность обслуживания зависит от типа тренажера. Как правило, диагностику и
-                      сервисное обслуживание рекомендуется проводить от 1 раза в 3 мнсяца до 1 раза в месяц.
+                      сервисное обслуживание рекомендуется проводить от 1 раза в 3 месяца до 1 раза в месяц.
                     </p>
                     <p class="text text-main">
                       Во время подбора тренажеров менеджер рассчитает сроки обслуживания в зависимости от проходимости
@@ -5413,7 +5413,8 @@
           </div>
         </section>
 
-        <section class="section projects-detail page-prof-trainers__projects-detail" id="projects-detail-section">
+        <a id="projects-detail"></a>
+        <section class="section projects-detail page-prof-trainers__projects-detail">
           <div class="container">
             <div class="projects-detail__title-block">
               <h2 class="title title-main">
@@ -5468,11 +5469,7 @@
                 </ul>
               </div>
             </div>
-            <div class="projects-detail__links" id="projects-info-download">
-              <button type="button" class="button button-link button-link--arrow button-link--accent">PDF</button>
-              <button type="button" class="button button-link button-link--arrow">Все проекты в <span
-                  class="text-main text-main--accent">PDF</span> </button>
-            </div>
+
           </div>
         </section>
 
@@ -5685,12 +5682,30 @@
         <!-- Projects template -->
         <template id="project-full">
           <li class="projects-gallery__item project-full">
-            <h4 class="title title-info project-full__title">
-            </h4>
-            <ul class="list accordion accordion-main accordion--decor accordion--decor-image projects-list"
-              id="projects-list">
-              <!-- Projects -->
-            </ul>
+            <div class="project-full__content">
+              <h4 class="title title-info project-full__title">
+              </h4>
+              <ul class="list project-full__accordion accordion accordion-projects accordion--decor accordion--decor-image projects-list"
+                id="projects-list">
+                <!-- Projects -->
+              </ul>
+              <div class="project-full__links" id="projects-info-download">
+                <div class="project-full__download">
+                  <a href="/i/media/stat/prof-trains/docs/001.pdf" target="_blank" class="link button-link button-link--arrow button-link--accent button-link--unique">PDF</a>
+                  <a href="/i/media/stat/prof-trains/docs/all.pdf" target="_blank" class="link button-link button-link--arrow">Все проекты в <span
+                      class="text-main text-main--accent">PDF</span></a>
+                </div>
+                <div class="project-full__nav">
+                  <a href="#projects-detail" class="link button-round project-detail-up">UP</a>
+                  <a href="#projects-detail" class="link button-round project-detail-close-up">
+                    <svg class="button-slider__icon" width="6" height="10" role="img"
+                    aria-label="Переход к следующему слайду" focusable="false">
+                    <use xlink:href="/i/media/stat/sprite.svg#arrow-duble-up"></use>
+                  </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
           </li>
         </template>
 

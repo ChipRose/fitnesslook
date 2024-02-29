@@ -13,6 +13,7 @@ const renderProjectsGallery = (projects) => {
     const projectFull = projectsFullTemplate.cloneNode(true);
 
     projectFull.querySelector('.title-info').textContent = project.projectId;
+    projectFull.querySelector('.button-link--unique').href = project.file;
     projectsFullFragment.appendChild(projectFull);
     const projectsList = projectFull.querySelector('#projects-list');
 

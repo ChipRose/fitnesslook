@@ -3,9 +3,13 @@
   padding: var(--indent-basic) var(--indent-big) var(--indent-basic) 0;
   text-transform: uppercase;
   font-weight: 500;
-  font-size: var(--fz-main);
+  font-size: 16px;
   color: inherit;
   position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 
   &::after {
     content: "";

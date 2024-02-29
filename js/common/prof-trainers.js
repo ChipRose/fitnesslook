@@ -4,7 +4,7 @@ import './prof-trainers/video.js';
 import { renderProjectsGallery } from './prof-trainers/projects.js';
 import { setPagination } from './prof-trainers/slider-pagination.js';
 import { removeElements, addListeners } from './prof-trainers/util.js';
-import { setNavigation } from './prof-trainers/navigation.js';
+import { setNavigation,setSetNavigation } from './prof-trainers/navigation.js';
 import { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive, updateSliderAdaptive } from './prof-trainers/slider.js';
 import { settingAccordion, settingAccordionAdaptive, settingMobileAccordionAdaptive, closeAllAccordions, settingAccordionInSlider } from './prof-trainers/accordion.js';
 import { renderProductsGallery } from './prof-trainers/products.js';
@@ -18,7 +18,6 @@ removeElements([
   '#sertificates-button',
   '#delivery-button',
   '#garantee-card-button',
-  '#projects-info-download',
   '#project-subtitle-pdf',
   '#sale-button'
 ]);
@@ -72,6 +71,8 @@ settingAccordionAdaptive(accordionGarantee);
 
 const accordionsMain = new Accordion(Array.from(document.querySelectorAll('.accordion-main')), settingAccordionInSlider(progectsGallery));
 
+const accordionsProjects = new Accordion(Array.from(document.querySelectorAll('.accordion-projects')), settingAccordionInSlider(progectsGallery));
+
 new Accordion(Array.from(document.querySelectorAll('.accordion-questions')), settingAccordion());
 
 // Accordions in slider
@@ -91,6 +92,8 @@ progectsGallery.events.on('indexChanged', () => {
 // Navigation
 
 setNavigation('#navigation-in');
+setSetNavigation('.project-detail-up');
+setSetNavigation('.project-detail-close-up',() => closeAllAccordions(accordionsProjects));
 
 // Buttons click
 

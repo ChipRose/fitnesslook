@@ -1,6 +1,7 @@
 [
   {
-    "projectId": "СПОРТКОМПЛЕКС СПБХЛ  |  001  |  САНКТ - ПЕТЕРБУРГ",
+    "projectId": "СК СПБХЛ  |  001  |  САНКТ - ПЕТЕРБУРГ",
+    "file": "/i/media/stat/prof-trains/docs/001.pdf",
     "content": [
       {
         "type": "Кардиотренажеры",
@@ -197,6 +198,7 @@
   },
   {
     "projectId": "СКА «АРЕНА»  |  002  |  САНКТ - ПЕТЕРБУРГ",
+    "file": "/i/media/stat/prof-trains/docs/002.pdf",
     "content": [
       {
         "type": "Кардиотренажеры",
@@ -214,6 +216,7 @@
   },
   {
     "projectId": "ФИТНЕС - СТУДИЯ  |  003  |  КРАСНОДАР",
+    "file": "/i/media/stat/prof-trains/docs/003.pdf",
     "content": [
       {
         "type": "Кардиотренажеры",
@@ -392,6 +395,7 @@
   },
   {
     "projectId": "ЛХК «ТЕРРИТОРИЯ ЛЬДА»  |  004  |  АМУРСК",
+    "file": "/i/media/stat/prof-trains/docs/004.pdf",
     "content": [
       {
         "type": "Силовое оборудование",
@@ -662,6 +666,7 @@
   },
   {
     "projectId": "ЧАСТНЫЙ ЗАЛ  |  005  |  ПУШКИН",
+    "file": "/i/media/stat/prof-trains/docs/005.pdf",
     "content": [
       {
         "type": "Кардиотренажеры",
@@ -1010,6 +1015,7 @@
   },
   {
     "projectId": "ЧАСТНЫЙ ЗАЛ  |  006  |  САНКТ - ПЕТЕРБУРГ",
+    "file": "/i/media/stat/prof-trains/docs/006.pdf",
     "content": [
       {
         "type": "Кардиотренажеры",

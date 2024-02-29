@@ -9,12 +9,6 @@
 // Components
 @import "prof-trainers/text-main.scss";
 @import "prof-trainers/link-main.scss";
-@import "prof-trainers/button-basic.scss";
-@import "prof-trainers/button-accordion.scss";
-@import "prof-trainers/button-social.scss";
-@import "prof-trainers/button-link.scss";
-@import "prof-trainers/button-slider.scss";
-@import "prof-trainers/button-simple-slider.scss";
 @import "prof-trainers/title-main.scss";
 @import "prof-trainers/title-simple.scss";
 @import "prof-trainers/title-secondary.scss";
@@ -38,6 +32,7 @@
 
 //Blocks
 @import "prof-trainers/page-prof-trainers.scss";
+@import "prof-trainers/button.scss";
 @import "prof-trainers/wrapper.scss";
 @import "prof-trainers/section.scss";
 @import "prof-trainers/intro.scss";
