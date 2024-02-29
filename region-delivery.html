@@ -3618,7 +3618,7 @@
                 <div class="cover__content">
                   <header class="cover__header">
                     <p class="text subtitle cover__subtitle">
-                      В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class="nobr">{$order_cost}
+                      В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class="nobr">{$pod_info.sum_dostavka|number_format:0:",":"'"}
                         ₽</span>.
                     </p>
                     <button class="button button-main button-main--active cover__button cover__button--hidden">
@@ -3819,7 +3819,7 @@
                                   </p>
                                   <p class="text text-main">
                                     Исходя из нашего опыта, средний срок с момента заказа до готовности его получения на
-                                    терминале ТК составляет для {$region_a} X—Y дней.
+                                    терминале ТК составляет для {$pod_info.city_a} X—Y дней.
                                   </p>
                                 </div>
                               </div>
@@ -3925,7 +3925,7 @@
                               </p>
                               <p class="text text-main">
                                 Исходя из нашего опыта, средний срок с момента заказа до готовности его получения на
-                                терминае ТК составляет для {$region_a} X—Y дней.
+                                терминае ТК составляет для {$pod_info.city_a} X—Y дней.
                               </p>
                             </div>
                           </div>
@@ -3960,9 +3960,9 @@
                 </h2>
                 <div class="cost-delivery__button-block">
                   <div class="button-block cost-delivery__button-item" id="slider-cost-delivery-buttons">
-                    <button class="button button-main button-block__item " value="region-delivery">{$region}</button>
+                    <button class="button button-main button-block__item " value="region-delivery">{$pod_info.city}</button>
                     <button class="button button-main  button-block__item " value="region-ext-delivery">
-                      {$region_ext}
+                      {$pod_info.region_ext}
                     </button>
                   </div>
                   <div class="button-block cost-delivery__button-item">
@@ -3977,14 +3977,14 @@
                       <div class="slider-main__intro-item">
                         <p class="text text-main">
                           В {$cur_month_e} мы дарим бесплатную доставку до адреса для всех заказов в пределах
-                          {$region_a} стоимостью от {$order_cost} ₽, и до терминала ТК от {$order_cost_terminal} ₽.
+                          {$pod_info.city_a} стоимостью от {$pod_info.sum_dostavka|number_format:0:",":"'"} ₽, и до терминала ТК от {$pod_info.dotk|number_format:0:",":"'"} ₽.
                         </p>
                       </div>
                       <div class="slider-main__intro-item">
                         <p class="text text-main">
-                          Кроме того, мы на {$discount_percent} снизили стоимость доставки до адреса заказов от
-                          {$order_cost_lower} ₽ до {$order_cost_upper} ₽, и до терминала ТК от
-                          {$order_cost_term_lower} ₽ до {$order_cost_term_upper} ₽.
+                          Кроме того, мы на 30% снизили стоимость доставки до адреса заказов от
+                          {$pod_info.min_sum_dostavka|number_format:0:",":"'"} ₽ до {$pod_info.sum_dostavka|number_format:0:",":"'"} ₽, и до терминала ТК от
+                          {$pod_info.min_dotk|number_format:0:",":"'"} ₽ до {$pod_info.dotk|number_format:0:",":"'"} ₽.
                         </p>
                       </div>
                     </div>
@@ -4009,42 +4009,42 @@
                         <tr>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              от {$order_cost_term_lower} ₽
+                              от {$pod_info.min_dotk|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                           <td class="table-main__cell table-main__cell--nomob">
                             <span class="nobr text text-main">
-                              в пределах {$region_a}
+                              в пределах {$pod_info.city_a}
                             </span>
                           </td>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              {$delivery_cost_term_discount_lower} ₽
+                              {$pod_info.cost_dotk|number_format:0:",":"'"} ₽
                             </span>
                             <br>
                             <span class="nobr text text-main text-main--del">
-                              {$delivery_cost_term_lower} ₽
+                              {($pod_info.cost_dotk+500)|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                         </tr>
                         <tr>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              от {$order_cost_term_upper} ₽
+                              от {$pod_info.dotk|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                           <td class="table-main__cell table-main__cell--nomob">
                             <span class="nobr text text-main">
-                              в пределах {$region_a}
+                              в пределах {$pod_info.city_a}
                             </span>
                           </td>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              {$delivery_cost_term_discount_upper} ₽
+                              0 ₽
                             </span>
                             <br>
                             <span class="nobr text text-main text-main--del">
-                              {$delivery_cost_term_upper} ₽
+                              {($pod_info.cost_dotk+500)|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                         </tr>
@@ -4071,42 +4071,42 @@
                         <tr>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              от {$order_cost_lower} ₽
+                              от {$pod_info.min_sum_dostavka|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                           <td class="table-main__cell table-main__cell--nomob">
                             <span class="nobr text text-main">
-                              в пределах {$region_a}
+                              в пределах {$pod_info.city_a}
                             </span>
                           </td>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              {$delivery_cost_discount_lower} ₽
+                              {$pod_info.cost_dostavka|number_format:0:",":"'"} ₽
                             </span>
                             <br>
                             <span class="nobr text text-main text-main--del">
-                              {$delivery_cost_lower} ₽
+                              {($pod_info.cost_dostavka+500)|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                         </tr>
                         <tr>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              от {$order_cost_upper} ₽
+                              от {$pod_info.sum_dostavka|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                           <td class="table-main__cell table-main__cell--nomob">
                             <span class="nobr text text-main">
-                              в пределах {$region_a}
+                              в пределах {$pod_info.city_a}
                             </span>
                           </td>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              {$delivery_cost_discount_upper} ₽
+                              0 ₽
                             </span>
                             <br>
                             <span class="nobr text text-main text-main--del">
-                              {$delivery_cost_discount_upper} ₽
+                              {($pod_info.cost_dostavka+500)|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                         </tr>
@@ -4119,10 +4119,10 @@
                     <div class="slider-main__intro-block">
                       <div class="slider-main__intro-item">
                         <p class="text text-main">
-                          Доставка по {$region_ext_i} осуществляется транспортными компаниями - партнерами Fitnesslook.
+                          Доставка по {$pod_info.region_ext_i} осуществляется транспортными компаниями - партнерами Fitnesslook.
                         </p>
                         <p class="text text-main">
-                          Стоимость доставки заказов по {$region_ext_i} рассчитывается менеджером после получения
+                          Стоимость доставки заказов по {$pod_info.region_ext_i} рассчитывается менеджером после получения
                           заказа. </p>
                       </div>
                       <div class="slider-main__intro-item">
@@ -4153,42 +4153,42 @@
                         <tr>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              от {$order_cost_term_ext_lower} ₽
+                              от {$pod_info.min_dotk|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                           <td class="table-main__cell table-main__cell--nomob">
                             <span class="nobr text text-main">
-                              в пределах {$region_ext_i}
+                              в пределах {$pod_info.region_ext_i}
                             </span>
                           </td>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              {$delivery_cost_term_ext_discount_lower} ₽
+                              {$pod_info.cost_dotk|number_format:0:",":"'"} ₽
                             </span>
                             <br>
                             <span class="nobr text text-main text-main--del">
-                              {$delivery_cost_term_ext_lower} ₽
+                              {($pod_info.cost_dotk+500)|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                         </tr>
                         <tr>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              от {$order_cost_term_ext_upper} ₽
+                              от {$pod_info.dotk|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                           <td class="table-main__cell table-main__cell--nomob">
                             <span class="nobr text text-main">
-                              в пределах {$region_ext_i}
+                              в пределах {$pod_info.region_ext_i}
                             </span>
                           </td>
                           <td class="table-main__cell">
                             <span class="nobr text text-main">
-                              {$delivery_cost_term_ext_discount_upper} ₽
+                              0 ₽
                             </span>
                             <br>
                             <span class="nobr text text-main text-main--del">
-                              {$delivery_cost_term_ext_upper} ₽
+                              {($pod_info.cost_dotk+500)|number_format:0:",":"'"} ₽
                             </span>
                           </td>
                         </tr>
