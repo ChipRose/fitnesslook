@@ -1,14 +1,14 @@
 import gulp from 'gulp';
 import plumber from 'gulp-plumber';
-import dartSass from "sass";
-import gulpSass from "gulp-sass";
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
 import { deleteAsync } from 'del';
 import webp from 'gulp-webp';
 import webpack from 'webpack-stream';
 import imagemin from 'gulp-imagemin';
 import svgo from 'gulp-svgmin';
 import rename from 'gulp-rename';
-import { stacksvg } from "gulp-stacksvg";
+import { stacksvg } from 'gulp-stacksvg';
 import browser from 'browser-sync';
 
 
@@ -16,7 +16,7 @@ const sass = gulpSass(dartSass);
 let isDevelopment = true;
 
 export function processMarkup() {
-  return gulp.src('*.html')
+  return gulp.src('*.html');
 }
 
 export function processStyles() {
@@ -47,6 +47,7 @@ export function processAllScripts() {
   return gulp.series(
     () => processScripts({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js' }),
     () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js' }),
+    () => processScripts({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js' }),
     () => processScripts({ src: './js/common/region-delivery.js', title: 'region-delivery.js' })
   );
 }
