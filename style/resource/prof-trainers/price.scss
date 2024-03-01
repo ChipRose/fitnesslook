@@ -1,9 +1,14 @@
 .price {
   color: var(--cl-accent);
   width: fit-content;
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 
   &--old {
-    font-size: var(--fz-small);
+    font-size: 12px;
     position: relative;
   }
 

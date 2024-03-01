@@ -1,10 +1,5 @@
 .text-main {
   margin-bottom: var(--indent-main);
-  font-size: 14px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 17px;
-  }
 
   &:last-child {
     margin-bottom: 0;
@@ -26,9 +21,13 @@
 }
 
 .title-card {
-  font-size: var(--fz-medium);
+  font-size: 16px;
   line-height: var(--lh-main);
   font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }
 
 .title-icon {

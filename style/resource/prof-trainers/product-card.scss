@@ -40,6 +40,11 @@
 
 .product-card__extra-name {
   margin-bottom: var(--indent-basic);
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .product-card__price-block {
