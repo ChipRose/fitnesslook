@@ -423,15 +423,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* eslint-disable no-undef */
 const LOCATION = {
-  center: [59.997230, 30.269389],
+  center: [59.997255, 30.268759],
   controls: ['zoomControl'],
   zoom: 16
 };
 const ANCOR = {
   iconLayout: 'default#image',
   iconImageHref: '/i/media/stat/icons/ancor.svg',
-  icon_imagesize: [200, 200]
+  iconImageSize: [50, 50],
+  iconImageOffset: [-25, -25]
 };
 const map = document.querySelector('#map');
 map.replaceChildren();

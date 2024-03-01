@@ -18,6 +18,10 @@
   font-weight: 300;
 }
 
+p, span {
+  overflow-wrap: break-word;
+}
+
 .text {
   padding: 0;
   margin: 0;

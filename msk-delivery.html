@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="https://www.fitnesslook.ru/js/tiny_slider/tiny-slider.css">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css  ">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-  <link rel="stylesheet" type="text/css" href="/style/modules/delivery.css">
+  <link rel="stylesheet" type="text/css" href="/style/modules/msk-delivery.css">
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -3618,7 +3618,8 @@
                 <div class="cover__content">
                   <header class="cover__header">
                     <p class="text subtitle cover__subtitle">
-                      В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class="nobr">25'000 ₽</span>.
+                      В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span
+                        class="nobr">{$POD_INFO.SUM_DOSTAVKA|NUMBER_FORMAT:0:",":"'"} ₽.</span>
                     </p>
                     <button class="button button-main button-main--active cover__button cover__button--hidden">
                       Рассчитать стоимость доставки
@@ -3678,27 +3679,31 @@
                 Способы получения и оплаты заказов в Москве
               </h2>
               <div class="receiving__wrapper">
-                <div class="receiving__content">
-                  <div class="receiving__text-block">
-                    <p class="text text-main text-main--strong receiving__text-intro">
-                      Доставка до дома — самый быстрый и популярный способ получения заказов у покупателей FitnessLook
-                      из Москвы*
-                    </p>
-                    <p class="text text-main receiving__subtitle">
-                      Хорошие новости!
-                    </p>
-                    <p class="text text-main receiving__text">
-                      Весь {$cur_month} эта опция является приятным подарком , за который не потребуется доплачивать,
-                      для 95% заказов. Кроме того, мы запустили акцию и снизили цену на доставку для товаров, не
-                      попадающих под условия бесплатной доставки.
-                    </p>
-                    <p class="text text-main ">
-                      *Если вас интересует способ получения заказа в другом регионе, найдите и выберете его в
-                      <a href="#regions" class="link link-main" id="regions-list-button">
-                        списке городов
-                      </a>
-                      работы FitnessLook.
-                    </p>
+                <div class="receiving__text-block">
+                  <p class="text text-main text-main--strong receiving__text-intro">
+                    Доставка до дома — самый быстрый и популярный способ получения заказов у покупателей FitnessLook
+                    из Москвы*
+                  </p>
+                  <p class="text text-main receiving__subtitle">
+                    Хорошие новости!
+                  </p>
+                  <div class="receiving__content">
+                    <div class="receiving__content-item">
+                      <p class="text text-main receiving__text">
+                        Весь {$cur_month} эта опция является приятным подарком, за который не потребуется доплачивать,
+                        для 95% заказов. Кроме того, мы запустили акцию и снизили цену на доставку для товаров, не
+                        попадающих под условия бесплатной доставки.
+                      </p>
+                    </div>
+                    <div class="receiving__content-item">
+                      <p class="text text-main ">
+                        *Если вас интересует способ получения заказа в другом регионе, найдите и выберете его в
+                        <a href="#regions" class="link link-main" id="regions-list-button">
+                          списке городов
+                        </a>
+                        работы FitnessLook.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -4044,8 +4049,8 @@
                           <div class="ac-panel">
                             <div class="accordion__text-block">
                               <p class="text text-main">
-                                Если вы хотите самостоятельно забрать свой заказ с нашего центрального склада в
-                                Санкт-Петербурге, выберете этот способ при оформлении заказа.
+                                Если вы хотите самостоятельно забрать свой заказ с нашего центрального склада в Москве,
+                                выберете этот способ при оформлении заказа.
                               </p>
                               <p class="text text-main">
                                 Для товаров, заявленных в наличии, самовывоз чаще всего возможен в день заказа.
@@ -4055,11 +4060,15 @@
                             <address class="accordion-address">
                               <p
                                 class="text text-main text-main--important text-main--accent text-main--medium receiving-type__extra-title">
-                                ТВК Интерио
+                                МЦ Империя
                               </p>
                               <div class="address__text-block">
                                 <p class="text text-main">
-                                  ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж </p>
+                                  Москва, МЦ "Империя", Дмитровское шоссе 161Б, 5 этаж, секция 5А
+                                </p>
+                                <p class="text text-main">
+                                  Ст. метро: Лианозово, ФизТех.Ст. D1 "Марк"
+                                </p>
                               </div>
                             </address>
                           </div>
@@ -4090,62 +4099,29 @@
                                   srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-0.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-0@2x.webp 2x">
                                 <img src="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-0.jpg"
                                   srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-0@2x.jpg 2x"
-                                  alt="ТВК Интерио">
+                                  alt="МЦ Империя">
                               </picture>
                             </div>
                           </li>
-                          <li class="receiving-type__pickup-item image-block">
+                          <li class="receiving-type__pickup-item">
                             <div class="image-block">
                               <picture>
                                 <source type="image/webp"
                                   srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-1.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-1@2x.webp 2x">
                                 <img src="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-1.jpg"
                                   srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-1@2x.jpg 2x"
-                                  alt="ТВК Интерио">
+                                  alt="МЦ Империя">
                               </picture>
                             </div>
                           </li>
-                          <li class="receiving-type__pickup-item image-block">
+                          <li class="receiving-type__pickup-item">
                             <div class="image-block">
                               <picture>
                                 <source type="image/webp"
                                   srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-2.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-2@2x.webp 2x">
                                 <img src="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-2.jpg"
                                   srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-2@2x.jpg 2x"
-                                  alt="ТВК Интерио">
-                              </picture>
-                            </div>
-                          </li>
-                          <li class="receiving-type__pickup-item image-block">
-                            <div class="image-block">
-                              <picture>
-                                <source type="image/webp"
-                                  srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-3.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-3@2x.webp 2x">
-                                <img src="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-3.jpg"
-                                  srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-3@2x.jpg 2x"
-                                  alt="ТВК Интерио">
-                              </picture>
-                            </div>
-                          </li>
-                          <li class="receiving-type__pickup-item image-block">
-                            <div class="image-block">
-                              <picture>
-                                <source type="image/webp"
-                                  srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-4.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-4@2x.webp 2x">
-                                <img src="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-4.jpg"
-                                  srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-4@2x.jpg 2x"
-                                  alt="ТВК Интерио">
-                              </picture>
-                            </div>
-                          </li>
-                          <li class="receiving-type__pickup-item image-block">
-                            <div class="image-block">
-                              <picture>
-                                <source type="image/webp"
-                                  srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-5.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-5@2x.webp 2x">
-                                <img src="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-5.jpg"
-                                  srcset="/i/media/stat/msk-delivery/receiving/delivery-slider/slide-5@2x.jpg 2x"
-                                  alt="ТВК Интерио">
+                                  alt="МЦ Империя">
                               </picture>
                             </div>
                           </li>
@@ -4164,8 +4140,8 @@
                             <div class="accordion__text-block">
                               <p class="text text-main">
                                 Лучше всего — согласовать время своего визита с менеджерами FitnessLook по телефону,
-                                чтобы
-                                мы подготовили заказ и объяснили как его забрать. </p>
+                                чтобы мы подготовили заказ и объяснили как его забрать.
+                              </p>
                             </div>
                             <ul class="list accordion__schedule">
                               <li class="accordion__time-item">10:00 - 21:00</li>
@@ -4445,7 +4421,7 @@
                     <div class="slider-main__intro-block">
                       <div class="slider-main__intro-item">
                         <p class="text text-main">
-                          Если адрес доставки находится за пределами МКАД, то стоимость доставки будет рассчитаны
+                          Если адрес доставки находится за пределами МКАД, то стоимость доставки будет рассчитана
                           менеджером по тарифу <span class="tex-main text-main--strong">40 ₽ за каждый километр</span>
                           после съезда с МКАД.
                         </p>

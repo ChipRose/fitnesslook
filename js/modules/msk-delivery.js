@@ -423,21 +423,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* eslint-disable no-undef */
 const LOCATION = {
-  center: [59.997230, 30.269389],
+  center: [55.905486, 37.539297],
   controls: ['zoomControl'],
   zoom: 16
 };
 const ANCOR = {
   iconLayout: 'default#image',
   iconImageHref: '/i/media/stat/icons/ancor.svg',
-  icon_imagesize: [200, 200]
+  iconImageSize: [50, 50],
+  iconImageOffset: [-25, -25]
+};
+const BALOON = {
+  balloonContent: '<strong>МЦ Империя</strong><p class="text text-main">До 21:00</p>',
+  iconCaption: 'До 21:00'
 };
 const map = document.querySelector('#map');
 map.replaceChildren();
 const initMap = () => {
   const myMap = new ymaps.Map('map', LOCATION);
-  const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, ANCOR);
+  const myPlacemark = new ymaps.Placemark(myMap.getCenter(), BALOON, ANCOR);
   myMap.controls.get('zoomControl').options.set('size', 'small');
   myMap.behaviors.disable('drag');
   myMap.geoObjects.add(myPlacemark);
@@ -13327,7 +13333,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _delivery_api_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 /* harmony import */ var _delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4);
-/* harmony import */ var _delivery_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
+/* harmony import */ var _msk_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5);
 /* harmony import */ var _delivery_modal_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6);
 /* harmony import */ var _delivery_faq_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
 /* harmony import */ var _json_msk_delivery_questions_json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
@@ -13354,7 +13360,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_delivery_faq_js__WEBPACK_IMPORTED_MODULE_6__.renderQuestionsList)(_json_msk_delivery_questions_json__WEBPACK_IMPORTED_MODULE_7__);
 
 // eslint-disable-next-line
-ymaps.ready(_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
+ymaps.ready(_msk_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
 (0,_delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
 // Sliders

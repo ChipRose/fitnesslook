@@ -1,7 +1,7 @@
 .cover__wrapper {
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-rows: min-content 55px 408px 55px;
+    grid-template-rows: min-content 55px minmax(408px, auto) 55px;
     grid-template-columns: 50% 30% 20%;
   }
 }

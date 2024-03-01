@@ -2,7 +2,7 @@ import Accordion from 'accordion-js';
 import { settingAccordionAdaptive, closeAllAccordions } from './delivery/accordion.js';
 import { getData } from './delivery/api.js';
 import setPopup from './delivery/popup.js';
-import initMap from './delivery/map.js';
+import initMap from './msk-delivery/map.js';
 import './delivery/modal.js';
 import { renderQuestionsList } from './delivery/faq.js';
 import questions from '../../json/msk-delivery/questions.json';
