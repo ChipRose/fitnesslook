@@ -31,13 +31,20 @@
 .project-content__model {
   display: block;
   width: fit-content;
+  font-size: 14px;
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
+    font-size: 17px;
   }
 }
 
 .project-content__type {
   margin-bottom: var(--indent-basic);
   font-weight: 500;
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }
