@@ -434,7 +434,8 @@ const ANCOR = {
   icon_imagesize: [200, 200]
 };
 const map = document.querySelector('#map');
-map.replaceChildren();
+// map.replaceChildren()
+
 const initMap = () => {
   const myMap = new ymaps.Map('map', LOCATION);
   const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, ANCOR);
@@ -13393,7 +13394,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_region_delivery_faq_js__WEBPACK_IMPORTED_MODULE_6__.renderQuestionsList)(_json_region_delivery_questions_json__WEBPACK_IMPORTED_MODULE_7__);
 
 // eslint-disable-next-line
-ymaps.ready(_region_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
+// ymaps.ready(initMap)
 (0,_region_delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
 // Sliders

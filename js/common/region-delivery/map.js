@@ -6,7 +6,7 @@ const ANCOR = {
 }
 
 const map = document.querySelector('#map')
-map.replaceChildren()
+// map.replaceChildren()
 
 const initMap = () => {
   const myMap = new ymaps.Map('map', LOCATION)

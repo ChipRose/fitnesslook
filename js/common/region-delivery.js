@@ -20,7 +20,7 @@ setFormSubmit(sendForm(setSuccessState, setErrorState));
 renderQuestionsList(questions);
 
 // eslint-disable-next-line
-ymaps.ready(initMap)
+// ymaps.ready(initMap)
 setPopup();
 
 // Sliders
