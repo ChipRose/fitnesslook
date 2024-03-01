@@ -1,5 +1,10 @@
 .text-main {
   margin-bottom: var(--indent-main);
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 
   &:last-child {
     margin-bottom: 0;
