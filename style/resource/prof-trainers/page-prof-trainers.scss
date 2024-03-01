@@ -1,9 +1,13 @@
 .page-prof-trainers #wmc {
   font-family: "Helvetica", "Arial", sans-serif;
   background: var(--cl-contrast);
-  font-size: var(--fz-main);
+  font-size: 14px;
   line-height: var(--lh-main);
   font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    font-size: 17px;
+  }
 }
 
 .page-prof-trainers #wmc > .wrapper {

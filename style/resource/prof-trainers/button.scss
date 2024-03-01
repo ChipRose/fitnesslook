@@ -25,12 +25,16 @@
   border: 1px solid var(--cl-accent);
   min-width: 90px;
   box-sizing: border-box;
-  font-size: var(--fz-medium);
+  font-size: 16px;
   line-height: var(--lh-main);
   color: var(--cl-accent);
   border-radius: var(--radius-basic);
   transition: var(--transition-main);
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 
   &:hover,
   &:active {
@@ -56,13 +60,18 @@
 }
 
 .button-link {
-  font-weight: 500;
   display: block;
   width: fit-content;
   position: relative;
   transition: var(--transition-main);
   color: var(--cl-main);
+  font-size: 14px;
+  font-weight: 500;
   white-space: nowrap;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+  }
 
   &--center {
     margin: 0 auto;

@@ -7,14 +7,9 @@
 @import "global/container.scss";
 
 // Components
-@import "prof-trainers/text-main.scss";
+@import "prof-trainers/button.scss";
+@import "prof-trainers/text.scss";
 @import "prof-trainers/link-main.scss";
-@import "prof-trainers/title-main.scss";
-@import "prof-trainers/title-simple.scss";
-@import "prof-trainers/title-secondary.scss";
-@import "prof-trainers/title-info.scss";
-@import "prof-trainers/title-card.scss";
-@import "prof-trainers/title-icon.scss";
 @import "prof-trainers/image-block.scss";
 @import "prof-trainers/accordion.scss";
 @import "prof-trainers/decorative-icon.scss";
@@ -22,7 +17,6 @@
 @import "prof-trainers/img-logo.scss";
 @import "prof-trainers/img-round-sticker.scss";
 @import "prof-trainers/img-cover.scss";
-@import "prof-trainers/subtitle.scss";
 @import "prof-trainers/model.scss";
 @import "prof-trainers/slider-projects-pagination.scss";
 @import "prof-trainers/price.scss";
@@ -32,7 +26,6 @@
 
 //Blocks
 @import "prof-trainers/page-prof-trainers.scss";
-@import "prof-trainers/button.scss";
 @import "prof-trainers/wrapper.scss";
 @import "prof-trainers/section.scss";
 @import "prof-trainers/intro.scss";
