@@ -1,20 +1,24 @@
-const LOCATION = { center: [59.997230, 30.269389], controls: ['zoomControl'], zoom: 16 }
-const ANCOR = {
-  iconLayout: 'default#image',
-  iconImageHref: '/i/media/stat/icons/ancor.svg',
-  icon_imagesize: [200, 200]
+const getFirstDomain = () => {
+  const hostFull = window.location.hostname;
+  const items = hostFull.split('.');
+
+  return items[0] && items[0] !== 'fitnesslook' ? items[0] : '';
+};
+
+export const initMap = (regions) => {
+  const map = document.querySelector('#cdek-map')
+  map.replaceChildren();
+  console.log(regions);
+  const firstDomain = getFirstDomain();
+  console.log(firstDomain);
+
+  const widjet = new ISDEKWidjet({
+    hidedelt: true,
+    defaultCity: 'auto',
+    cityFrom: 'Санкт-Петербург',
+    link: 'cdek-map',
+    apiKey:'13739b0f-0d5b-4af4-aec0-22bc5523893a',
+    region: true,
+    choose: false
+  });
 }
-
-const map = document.querySelector('#map')
-// map.replaceChildren()
-
-const initMap = () => {
-  const myMap = new ymaps.Map('map', LOCATION)
-  const myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, ANCOR)
-  myMap.controls.get('zoomControl').options.set('size', 'small')
-  myMap.behaviors.disable('drag')
-  myMap.geoObjects
-    .add(myPlacemark)
-}
-
-export default initMap

@@ -2,7 +2,7 @@ import Accordion from 'accordion-js';
 import { settingAccordionAdaptive, closeAllAccordions } from './region-delivery/accordion.js';
 import { getData } from './region-delivery/api.js';
 import setPopup from './region-delivery/popup.js';
-import initMap from './region-delivery/map.js';
+import { initMap } from './region-delivery/map.js';
 import './region-delivery/modal.js';
 import { renderQuestionsList } from './region-delivery/faq.js';
 import questions from '../../json/region-delivery/questions.json';
@@ -13,6 +13,7 @@ import { setSlider, setSimpleSlider } from './region-delivery/slider.js';
 
 getData((regions) => {
   renderCitiesDelivery(regions);
+  initMap(regions);
 });
 
 setFormSubmit(sendForm(setSuccessState, setErrorState));
@@ -20,7 +21,6 @@ setFormSubmit(sendForm(setSuccessState, setErrorState));
 renderQuestionsList(questions);
 
 // eslint-disable-next-line
-// ymaps.ready(initMap)
 setPopup();
 
 // Sliders

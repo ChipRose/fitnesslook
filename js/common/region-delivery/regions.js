@@ -24,4 +24,4 @@ const renderCitiesDelivery = (items) => {
   regionsList.appendChild(regionsContentFragment);
 };
 
-export { renderCitiesDelivery };
+export { renderCitiesDelivery, getFirstDomain };
