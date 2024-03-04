@@ -13,7 +13,6 @@ import { setSlider, setSimpleSlider } from './region-delivery/slider.js';
 
 getData((regions) => {
   renderCitiesDelivery(regions);
-  initMap(regions);
 });
 
 setFormSubmit(sendForm(setSuccessState, setErrorState));
@@ -21,6 +20,7 @@ setFormSubmit(sendForm(setSuccessState, setErrorState));
 renderQuestionsList(questions);
 
 // eslint-disable-next-line
+initMap();
 setPopup();
 
 // Sliders

@@ -423,17 +423,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   initMap: () => (/* binding */ initMap)
 /* harmony export */ });
-const getFirstDomain = () => {
-  const hostFull = window.location.hostname;
-  const items = hostFull.split('.');
-  return items[0] && items[0] !== 'fitnesslook' ? items[0] : '';
-};
-const initMap = regions => {
+const initMap = () => {
   const map = document.querySelector('#cdek-map');
   map.replaceChildren();
-  console.log(regions);
-  const firstDomain = getFirstDomain();
-  console.log(firstDomain);
   const widjet = new ISDEKWidjet({
     hidedelt: true,
     defaultCity: 'auto',
@@ -13390,12 +13382,12 @@ __webpack_require__.r(__webpack_exports__);
 
 (0,_region_delivery_api_js__WEBPACK_IMPORTED_MODULE_2__.getData)(regions => {
   (0,_region_delivery_regions_js__WEBPACK_IMPORTED_MODULE_9__.renderCitiesDelivery)(regions);
-  (0,_region_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__.initMap)(regions);
 });
 (0,_region_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.setFormSubmit)((0,_region_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.sendForm)(_region_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.setSuccessState, _region_delivery_form_js__WEBPACK_IMPORTED_MODULE_8__.setErrorState));
 (0,_region_delivery_faq_js__WEBPACK_IMPORTED_MODULE_6__.renderQuestionsList)(_json_region_delivery_questions_json__WEBPACK_IMPORTED_MODULE_7__);
 
 // eslint-disable-next-line
+(0,_region_delivery_map_js__WEBPACK_IMPORTED_MODULE_4__.initMap)();
 (0,_region_delivery_popup_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 
 // Sliders

@@ -1,16 +1,6 @@
-const getFirstDomain = () => {
-  const hostFull = window.location.hostname;
-  const items = hostFull.split('.');
-
-  return items[0] && items[0] !== 'fitnesslook' ? items[0] : '';
-};
-
-export const initMap = (regions) => {
+export const initMap = () => {
   const map = document.querySelector('#cdek-map')
   map.replaceChildren();
-  console.log(regions);
-  const firstDomain = getFirstDomain();
-  console.log(firstDomain);
 
   const widjet = new ISDEKWidjet({
     hidedelt: true,
