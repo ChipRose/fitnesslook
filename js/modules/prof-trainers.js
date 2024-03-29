@@ -3879,7 +3879,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   getData: () => (/* binding */ getData)
 /* harmony export */ });
-const GET_LINK = 'https://www.fitnesslook.ru/?products_prof_trainers=1';
+const GET_LINK = '/?products_prof_trainers=1';
 const getData = (onSuccess, onError = () => {}) => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {

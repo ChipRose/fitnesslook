@@ -1,4 +1,4 @@
-const GET_LINK = 'https://www.fitnesslook.ru/?products_prof_trainers=1';
+const GET_LINK = '/?products_prof_trainers=1';
 
 const getData = (onSuccess, onError = () => { }) => {
   fetch(GET_LINK)
