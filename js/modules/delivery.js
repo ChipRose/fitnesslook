@@ -5761,14 +5761,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   renderQuestionsList: () => (/* binding */ renderQuestionsList)
 /* harmony export */ });
+Object(function webpackMissingModule() { var e = new Error("Cannot find module './util'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
 const questionTemplate = document.querySelector('#question').content.querySelector('.faq__item');
 const questionsList = document.querySelector('#faq-list');
 const renderQuestionsList = questions => {
+  const curMonth = Object(function webpackMissingModule() { var e = new Error("Cannot find module './util'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())();
   const questionsFragment = document.createDocumentFragment();
   questions.forEach(question => {
     const questionNode = questionTemplate.cloneNode(true);
     questionNode.querySelector('.title-secondary').textContent = question.title;
-    questionNode.querySelector('.accordion__text-block').innerHTML = question.answer;
+    questionNode.querySelector('.accordion__text-block').innerHTML = question.answer.replace('{$cur_month_e}', curMonth);
     questionsFragment.appendChild(questionNode);
   });
   questionsList.appendChild(questionsFragment);
@@ -5881,9 +5884,24 @@ const setErrorState = () => {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getCurMonth: () => (/* binding */ getCurMonth),
 /* harmony export */   removeElements: () => (/* binding */ removeElements),
 /* harmony export */   scrollToElement: () => (/* binding */ scrollToElement)
 /* harmony export */ });
+const MONTH_E = {
+  'декабрь': 'декабре',
+  'январь': 'январе',
+  'февраль': 'феврале',
+  'март': 'марте',
+  'апрель': 'апреле',
+  'май': 'мае',
+  'июнь': 'июне',
+  'июль': 'июле',
+  'август': 'августе',
+  'сентябрь': 'сентябре',
+  'октябрь': 'октябре',
+  'ноябрь': 'ноябре'
+};
 const removeElements = (...selectors) => {
   selectors?.forEach(selector => {
     document.querySelectorAll(selector).forEach(item => item.remove());
@@ -5896,6 +5914,13 @@ const scrollToElement = selector => {
     top: scrollElement + HEADER_HEIGHT,
     behavior: 'smooth'
   });
+};
+const getCurMonth = () => {
+  const date = new Date();
+  const monthName = date.toLocaleString('default', {
+    month: 'long'
+  });
+  return MONTH_E[monthName];
 };
 
 
