@@ -352,8 +352,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getData: () => (/* binding */ getData),
 /* harmony export */   sendData: () => (/* binding */ sendData)
 /* harmony export */ });
-const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
-const POST_LINK = 'https://www.fitnesslook.ru/api_front/lid/';
+const GET_LINK = '/api_front/list_domain/';
+const POST_LINK = '/api_front/lid/';
 const getData = (onSuccess, onError = () => {}) => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {
@@ -5852,8 +5852,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getData: () => (/* binding */ getData),
 /* harmony export */   sendData: () => (/* binding */ sendData)
 /* harmony export */ });
-const GET_LINK = 'https://www.fitnesslook.ru/api_front/list_domain/';
-const POST_LINK = 'https://www.fitnesslook.ru/api_front/lid/';
+const GET_LINK = '/api_front/list_domain/';
+const POST_LINK = '/api_front/lid/';
 const getData = (onSuccess = () => {}, onError = () => {}) => {
   fetch(GET_LINK).then(response => {
     if (response.ok) {
