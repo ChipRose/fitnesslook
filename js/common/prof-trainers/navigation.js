@@ -14,15 +14,6 @@ const navigationHandle = (element, ...callBacks) => {
 };
 
 const setNavigation = (container, ...callBacks) => {
-  const navigationList = document.querySelector(container);
-
-  navigationList?.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    navigationHandle(evt, ...callBacks);
-  });
-};
-
-const setSetNavigation = (container, ...callBacks) => {
   const navigationItemList = document.querySelectorAll(container);
 
   Array.from(navigationItemList).map((navItem) => {
@@ -38,4 +29,4 @@ const setSetNavigation = (container, ...callBacks) => {
   });
 };
 
-export { setNavigation, setSetNavigation };
+export { setNavigation };

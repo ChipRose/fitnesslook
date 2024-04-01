@@ -130,6 +130,10 @@
   transition: var(--transition-main);
   background: var(--cl-contrast);
 
+  svg {
+    pointer-events: none;
+  }
+
   &:hover {
     cursor: pointer;
     background: var(--cl-accent);

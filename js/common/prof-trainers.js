@@ -4,8 +4,8 @@ import './prof-trainers/video.js';
 import { renderProjectsGallery } from './prof-trainers/projects.js';
 import { setPagination } from './prof-trainers/slider-pagination.js';
 import { removeElements, addListeners } from './prof-trainers/util.js';
-import { setNavigation,setSetNavigation } from './prof-trainers/navigation.js';
-import { setSlider, setSmallSlider, setSimpleSlider, settingSliderAdaptive, updateSliderAdaptive } from './prof-trainers/slider.js';
+import { setNavigation } from './prof-trainers/navigation.js';
+import { setSlider, setSmallSlider, setScrolSlider, setSimpleSlider, settingSliderAdaptive, updateSliderAdaptive, setTinySlider } from './prof-trainers/slider.js';
 import { settingAccordion, settingAccordionAdaptive, settingMobileAccordionAdaptive, closeAllAccordions, settingAccordionInSlider } from './prof-trainers/accordion.js';
 import { renderProductsGallery } from './prof-trainers/products.js';
 import { getData } from './prof-trainers/api.js';
@@ -33,12 +33,13 @@ getData((products) => {
 renderProjectsGallery(projects);
 
 // Sliders
+setTinySlider('#slider-intro-buttons', '#slider-intro');
+setScrolSlider('#slider-intro-controls', '#slider-intro', '#slider-intro-buttons');
 
-const sliderIntro = document.querySelector('#slider-intro') && document.querySelector('#slider-intro-buttons') && setSlider('#slider-intro', '#slider-intro-buttons', { gutter: 32, controlsContainer: '#slider-intro-controls', autoHeight: true });
-updateSliderAdaptive(sliderIntro);
+setTinySlider('#slider-best-buttons', '#slider-best');
 
-const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, controlsContainer: '#slider-best-controls', autoHeight: true });
-updateSliderAdaptive(sliderBest);
+// const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, controlsContainer: '#slider-best-controls', autoHeight: true });
+// updateSliderAdaptive(sliderBest);
 
 const progectsGallery = setSimpleSlider('#slider-projects-details', { controlsContainer: '#slider-projects-details-buttons' });
 setPagination(progectsGallery);
@@ -57,14 +58,14 @@ settingSliderAdaptive(projectsSmallSlider);
 
 // Accordions
 
-const accordionIntro = new Accordion(Array.from(document.querySelectorAll('.accordion-intro')), settingAccordionInSlider(sliderIntro));
-settingAccordionAdaptive(accordionIntro, sliderIntro);
+const accordionIntro = new Accordion(Array.from(document.querySelectorAll('.accordion-intro')));
+settingAccordionAdaptive(accordionIntro);
 
 const accordionAbout = new Accordion(Array.from(document.querySelectorAll('#accordion-about')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionAbout);
 
-const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')), settingAccordionInSlider(sliderBest));
-settingAccordionAdaptive(accordionBest, sliderBest);
+const accordionBest = new Accordion(Array.from(document.querySelectorAll('.accordion-best')));
+settingAccordionAdaptive(accordionBest);
 
 const accordionGarantee = new Accordion(Array.from(document.querySelectorAll('.garantee-list')), settingAccordion({ showMultiple: true }));
 settingAccordionAdaptive(accordionGarantee);
@@ -77,12 +78,12 @@ new Accordion(Array.from(document.querySelectorAll('.accordion-questions')), set
 
 // Accordions in slider
 
-sliderBest.events.on('indexChanged', () => {
-  settingMobileAccordionAdaptive(accordionBest, sliderBest);
+document.querySelector('#slider-intro-buttons').addEventListener('click', () => {
+  settingMobileAccordionAdaptive(accordionIntro);
 });
 
-sliderIntro.events.on('indexChanged', () => {
-  settingMobileAccordionAdaptive(accordionIntro, sliderIntro);
+document.querySelector('#slider-best-buttons').addEventListener('click', () => {
+  settingMobileAccordionAdaptive(accordionBest);
 });
 
 progectsGallery.events.on('indexChanged', () => {
@@ -92,8 +93,8 @@ progectsGallery.events.on('indexChanged', () => {
 // Navigation
 
 setNavigation('#navigation-in');
-setSetNavigation('.project-detail-up');
-setSetNavigation('.project-detail-close-up',() => closeAllAccordions(accordionsProjects));
+setNavigation('.project-detail-up');
+setNavigation('.project-detail-close-up', () => closeAllAccordions(accordionsProjects));
 
 // Buttons click
 
@@ -103,7 +104,5 @@ addListeners('button[data-type="call-button"]', () => $('#callmeform').show())
 /* eslint-enable */
 
 window.addEventListener('load', () => {
-  sliderBest.updateSliderHeight();
   progectsGallery.updateSliderHeight();
-  sliderIntro.updateSliderHeight();
 });

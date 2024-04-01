@@ -1,4 +1,4 @@
-import { getCurMonth } from '../delivery/util';
+import { getCurMonth } from '../delivery/util.js';
 
 const questionTemplate = document.querySelector('#question').content.querySelector('.faq__item');
 const questionsList = document.querySelector('#faq-list');
