@@ -1,10 +1,17 @@
 const regionsTemplate = document.querySelector('#regions-item').content.querySelector('.delivery-region__item');
 const regionsList = document.querySelector('#regions-list');
 
+const getFirstDomain = () => {
+  const hostFull = window.location.hostname;
+  const items = hostFull.split('.');
+
+  return items[0] && items[0] !== 'fitnesslook' ? items[0] : '';
+};
+
 const renderCitiesDelivery = (items) => {
   const regionsContentFragment = document.createDocumentFragment();
 
-  items?.forEach((item) => {
+  items?.filter(({ name }) => name !== getFirstDomain()).forEach((item) => {
     const region = regionsTemplate.cloneNode(true);
     const button = region.querySelector('.button-simple');
 
@@ -17,4 +24,5 @@ const renderCitiesDelivery = (items) => {
   regionsList.appendChild(regionsContentFragment);
 };
 
-export { renderCitiesDelivery };
+export { renderCitiesDelivery, getFirstDomain };
+
