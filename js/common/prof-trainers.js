@@ -5,7 +5,7 @@ import { renderProjectsGallery } from './prof-trainers/projects.js';
 import { setPagination } from './prof-trainers/slider-pagination.js';
 import { removeElements, addListeners } from './prof-trainers/util.js';
 import { setNavigation } from './prof-trainers/navigation.js';
-import { setSlider, setSmallSlider, setScrolSlider, setSimpleSlider, settingSliderAdaptive, updateSliderAdaptive, setTinySlider } from './prof-trainers/slider.js';
+import { setSmallSlider, setScrolSlider, setSimpleSlider, settingSliderAdaptive, setTinySlider } from './prof-trainers/slider.js';
 import { settingAccordion, settingAccordionAdaptive, settingMobileAccordionAdaptive, closeAllAccordions, settingAccordionInSlider } from './prof-trainers/accordion.js';
 import { renderProductsGallery } from './prof-trainers/products.js';
 import { getData } from './prof-trainers/api.js';
@@ -37,9 +37,6 @@ setTinySlider('#slider-intro-buttons', '#slider-intro');
 setScrolSlider('#slider-intro-controls', '#slider-intro', '#slider-intro-buttons');
 
 setTinySlider('#slider-best-buttons', '#slider-best');
-
-// const sliderBest = setSlider('#slider-best', '#slider-best-buttons', { gutter: 32, controlsContainer: '#slider-best-controls', autoHeight: true });
-// updateSliderAdaptive(sliderBest);
 
 const progectsGallery = setSimpleSlider('#slider-projects-details', { controlsContainer: '#slider-projects-details-buttons' });
 setPagination(progectsGallery);
