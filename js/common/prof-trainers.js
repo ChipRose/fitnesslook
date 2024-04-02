@@ -37,6 +37,7 @@ setTinySlider('#slider-intro-buttons', '#slider-intro');
 setScrolSlider('#slider-intro-controls', '#slider-intro', '#slider-intro-buttons');
 
 setTinySlider('#slider-best-buttons', '#slider-best');
+setScrolSlider('#slider-best-controls', '#slider-best', '#slider-intro-buttons');
 
 const progectsGallery = setSimpleSlider('#slider-projects-details', { controlsContainer: '#slider-projects-details-buttons' });
 setPagination(progectsGallery);
