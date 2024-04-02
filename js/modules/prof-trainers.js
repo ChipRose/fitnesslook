@@ -4104,6 +4104,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setTinySlider)('#slider-intro-buttons', '#slider-intro');
 (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setScrolSlider)('#slider-intro-controls', '#slider-intro', '#slider-intro-buttons');
 (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setTinySlider)('#slider-best-buttons', '#slider-best');
+(0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setScrolSlider)('#slider-best-controls', '#slider-best', '#slider-best-buttons');
 const progectsGallery = (0,_prof_trainers_slider_js__WEBPACK_IMPORTED_MODULE_7__.setSimpleSlider)('#slider-projects-details', {
   controlsContainer: '#slider-projects-details-buttons'
 });

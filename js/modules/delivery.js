@@ -10006,13 +10006,21 @@ _core_holder_js__WEBPACK_IMPORTED_MODULE_1__["default"].RepeatBlock = RepeatBloc
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getFirstDomain: () => (/* binding */ getFirstDomain),
 /* harmony export */   renderCitiesDelivery: () => (/* binding */ renderCitiesDelivery)
 /* harmony export */ });
 const regionsTemplate = document.querySelector('#regions-item').content.querySelector('.delivery-region__item');
 const regionsList = document.querySelector('#regions-list');
+const getFirstDomain = () => {
+  const hostFull = window.location.hostname;
+  const items = hostFull.split('.');
+  return items[0] && items[0] !== 'fitnesslook' ? items[0] : '';
+};
 const renderCitiesDelivery = items => {
   const regionsContentFragment = document.createDocumentFragment();
-  items?.forEach(item => {
+  items?.filter(({
+    name
+  }) => name !== getFirstDomain()).forEach(item => {
     const region = regionsTemplate.cloneNode(true);
     const button = region.querySelector('.button-simple');
     button.textContent = item.city;
