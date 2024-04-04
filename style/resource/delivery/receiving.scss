@@ -7,7 +7,7 @@
 
   @media (min-width: $tablet-width) {
     padding-bottom: 74px;
-    margin-bottom: 34px;
+    margin-bottom: 0;
     max-width: 700px;
   }
 
@@ -25,8 +25,9 @@
 
 .receiving__content {
   @media (min-width: $tablet-width) {
+    margin-top: 34px;
     margin-right: 60px;
-    max-width: 563px;
+    max-width: 470px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -38,6 +39,7 @@
   margin-bottom: 60px;
 
   @media (min-width: $tablet-width) {
+    max-width: 450px;
     margin-bottom: 63px;
   }
 }
