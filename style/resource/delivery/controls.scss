@@ -137,10 +137,9 @@
   font-weight: var(--fw-regular);
   pointer-events: none;
   opacity: 0;
-
-  @media (min-width: $tablet-width) {
-    min-width: 200px;
-  }
+  font-size: 14px;
+  line-height: 1.2;
+  vertical-align: middle;
 }
 
 // Round button
@@ -293,6 +292,10 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 38px;
+  }
 }
 
 .button-modal__text-block {
