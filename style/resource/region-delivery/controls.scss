@@ -176,9 +176,9 @@
     font-weight: var(--fw-medium);
 
     @media (min-width: $tablet-width) {
-      width: var(--button-size-huge);
-      height: var(--button-size-huge);
-      font-size: var(--fz-mediumx);
+      width: 90px;
+      height: 90px;
+      font-size: 26px;
       line-height: 100%;
       vertical-align: middle;
     }
