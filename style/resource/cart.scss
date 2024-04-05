@@ -1,0 +1,137 @@
+//FONTS
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../../../../i/font/roboto-regular.woff2") format("woff2"),
+    url("../../../../i/font/roboto-regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../../../../i/font/roboto-medium.woff2") format("woff2"),
+    url("../../../../i/font/roboto-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src:
+    url("../../../../i/font/roboto-bold.woff2") format("woff2"),
+    url("../../../../i/font/roboto-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// VARIABLE
+$mobile-width: 320px;
+$tablet-width: 768px;
+$max-width: 1180px;
+
+:root {
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --main-shadow: 2px 0 14px 1px rgba(0, 0, 0, 0.14) inset;
+  --cl-main: rgb(142, 142, 142);
+  --cl-heavy-dark: rgb(0, 0, 0);
+  --cl-contrast: rgb(255, 255, 255);
+  --cl-accent: rgb(171, 118, 180);
+  --cl-light: rgb(252, 251, 252);
+}
+
+//GLOBAL
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+}
+
+.text {
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.input,
+.input[type="text"],
+.input[type="password"] {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  overflow: hidden;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.cart {
+  #wmc {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 117%;
+    font-weight: var(--fw-regular);
+    background: var(--cl-light);
+  }
+}
+
+.cart #wmc>.wrapper {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: auto;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  min-width: $mobile-width;
+  max-width: $max-width;
+  box-sizing: border-box;
+}

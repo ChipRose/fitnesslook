@@ -48,7 +48,8 @@ export function processAllScripts() {
     () => processScripts({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js' }),
     () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js' }),
     () => processScripts({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js' }),
-    () => processScripts({ src: './js/common/region-delivery.js', title: 'region-delivery.js' })
+    () => processScripts({ src: './js/common/region-delivery.js', title: 'region-delivery.js' }),
+    () => processScripts({ src: './js/common/region-delivery.js', title: 'cart.js' }),
   );
 }
 
