@@ -3591,167 +3591,241 @@
             </div>
           </div>
 
-          <section class="order-structure">
-            <header class="order-structure__header">
-              <div class="container">
-                <div class="order-structure__wrapper">
-                  <h2 class="title title-section">
-                    Состав заказа:
-                  </h2>
-                  <a class="link link-button">
-                    <svg class="link-button__icon" width="18" height="14" role="img" focusable="false">
-                      <use xlink:href="/i/media/stat/sprite.svg#back-arrow"></use>
-                    </svg>
-                    <span>
-                      Вернуться к покупкам
-                    </span>
-                  </a>
+          <form action="" method="post">
+            <fieldset class="fieldset order-structure cart-page__order-structure">
+              <header class="order-structure__header">
+                <div class="container">
+                  <div class="order-structure__wrapper">
+                    <h2 class="title title-section">
+                      Состав заказа:
+                    </h2>
+                    <a class="link link-button">
+                      <svg class="link-button__icon" width="18" height="14" role="img" focusable="false">
+                        <use xlink:href="/i/media/stat/sprite.svg#back-arrow"></use>
+                      </svg>
+                      <span>
+                        Вернуться к покупкам
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </header>
+              <div class="order-structure__content">
+                <div class="container">
+                  <ul class="list order">
+                    <li class="order__item">
+                      <a href="" class="link order__preview image-block">
+                        <img src="/i/media/stat/cart/product-template-1.jpg" width="59" alt="Выбранный продукт">
+                      </a>
+                      <div class="order__product">
+                        <p class="text text-main">Беговая дорожка</p>
+                        <p class="text text-main text-main--accent">Orlauf Shrike</p>
+                      </div>
+                      <div class="order__counter">
+                        <div class="counter">
+                          <div class="counter__buttons-block">
+                            <button class="button counter__count-button" type="button" data-count="plus">
+                              <svg width="6" height="4" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                              </svg>
+                            </button>
+                            <button class="button counter__count-button" type="button" data-count="minus">
+                              <svg width="6" height="4" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="counter__field-block">
+                            <input class="input counter__field" type="number" value="1">
+                          </div>
+                          <div class="counter__del-block">
+                            <button class="button counter__del-button" type="button" data-name="del-button">
+                              <svg width="7" height="7" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#del"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__price">
+                        <p class="text text-main text-main--accent text-main--strong">
+                          1 500 000 Р
+                        </p>
+                        <p class="text text-main text-main--del">
+                          18 990 Р
+                        </p>
+                      </div>
+                    </li>
+                    <li class="order__item">
+                      <a href="" class="link order__preview">
+                        <img src="/i/media/stat/cart/product-template-2.webp" width="59" alt="Выбранный продукт">
+                      </a>
+                      <div class="order__product">
+                        <p class="text text-main">Премиальное массажное кресло</p>
+                        <p class="text text-main text-main--accent">OTO Titan TT-01 Beige</p>
+                      </div>
+                      <div class="order__counter">
+                        <div class="counter">
+                          <div class="counter__buttons-block">
+                            <button class="button counter__count-button" type="button" data-count="plus">
+                              <svg width="6" height="4" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                              </svg>
+                            </button>
+                            <button class="button counter__count-button" type="button" data-count="minus">
+                              <svg width="6" height="4" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="counter__field-block">
+                            <input class="input counter__field" type="number" value="1">
+                          </div>
+                          <div class="counter__del-block">
+                            <button class="button counter__del-button" type="button" data-name="del-button">
+                              <svg width="7" height="7" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#del"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__price">
+                        <p class="text text-main text-main--accent text-main--strong">
+                          1 649 000 Р
+                        </p>
+                        <p class="text text-main text-main--del">
+                          2 000 000 Р
+                        </p>
+                      </div>
+                    </li>
+                    <li class="order__item order__item--readonly">
+                      <div href="" class="order__preview">
+                        <svg width="35" height="34" role="img" focusable="false">
+                          <use xlink:href="/i/media/stat/sprite.svg#guarantee"></use>
+                        </svg>
+                      </div>
+                      <div class="order__product">
+                        <p class="text text-main">Расширенная гарантия</p>
+                        <p class="text text-main text-main--accent">+1 год</p>
+                      </div>
+                      <div class="order__picture">
+                        <svg width="21" height="22" role="img" focusable="false">
+                          <use xlink:href="/i/media/stat/sprite.svg#present-icon"></use>
+                        </svg>
+                      </div>
+                      <div class="order__counter">
+                        <div class="counter">
+                          <div class="counter__buttons-block">
+                            <button class="button counter__count-button" type="button" disabled data-count="plus">
+                              <svg width="6" height="4" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                              </svg>
+                            </button>
+                            <button class="button counter__count-button" type="button" disabled data-count="minus">
+                              <svg width="6" height="4" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="counter__field-block">
+                            <input class="input counter__field" type="number" value="1" readonly>
+                          </div>
+                          <div class="counter__del-block">
+                            <button class="button counter__del-button" type="button" data-name="del-button">
+                              <svg width="7" height="7" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#del"></use>
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="order__price">
+                        <p class="text text-main text-main--accent text-main--strong">
+                          0 Р
+                        </p>
+                        <p class="text text-main text-main--del">
+                          2 000 Р
+                        </p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </header>
-            <div class="order-structure__content">
-              <div class="container">
-                <ul class="list order">
-                  <li class="order__item">
-                    <a href="" class="link order__preview image-block">
-                      <img src="/i/media/stat/cart/product-template.jpg" width="59" alt="Выбранный продукт">
-                    </a>
-                    <div class="order__product">
-                      <p class="text text-main">Беговая дорожка</p>
-                      <p class="text text-main text-main--accent">Orlauf Shrike</p>
-                    </div>
-                    <div class="order__counter">
-                      <div class="counter">
-                        <div class="counter__buttons-block">
-                          <button class="button counter__count-button" type="button" data-count="plus">
-                            <svg width="6" height="4" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                            </svg>
-                          </button>
-                          <button class="button counter__count-button" type="button" data-count="minus">
-                            <svg width="6" height="4" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="counter__field-block">
-                          <input class="input counter__field" type="number" value="1">
-                        </div>
-                        <div class="counter__del-block">
-                          <button class="button counter__del-button" type="button" data-name="del-button">
-                            <svg width="7" height="7" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#del"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="order__price">
-                      <p class="text text-main text-main--accent text-main--strong">
-                        1 500 000 Р
-                      </p>
-                      <p class="text text-main text-main--del">
-                        18 990 Р
-                      </p>
-                    </div>
-                  </li>
-                  <li class="order__item">
-                    <a href="" class="link order__preview">
-                      <img src="/i/media/stat/cart/product-template-2.webp" width="59" alt="Выбранный продукт">
-                    </a>
-                    <div class="order__product">
-                      <p class="text text-main">Премиальное массажное кресло</p>
-                      <p class="text text-main text-main--accent">OTO Titan TT-01 Beige</p>
-                    </div>
-                    <div class="order__counter">
-                      <div class="counter">
-                        <div class="counter__buttons-block">
-                          <button class="button counter__count-button" type="button" data-count="plus">
-                            <svg width="6" height="4" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                            </svg>
-                          </button>
-                          <button class="button counter__count-button" type="button" data-count="minus">
-                            <svg width="6" height="4" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="counter__field-block">
-                          <input class="input counter__field" type="number" value="1">
-                        </div>
-                        <div class="counter__del-block">
-                          <button class="button counter__del-button" type="button" data-name="del-button">
-                            <svg width="7" height="7" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#del"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="order__price">
-                      <p class="text text-main text-main--accent text-main--strong">
-                        1 649 000 Р
-                      </p>
-                      <p class="text text-main text-main--del">
-                        2 000 000 Р
-                      </p>
-                    </div>
-                  </li>
-                  <li class="order__item order__item--readonly">
-                    <div href="" class="order__preview">
-                      <svg width="35" height="34" role="img" focusable="false">
-                        <use xlink:href="/i/media/stat/sprite.svg#guarantee"></use>
-                      </svg>
-                    </div>
-                    <div class="order__product">
-                      <p class="text text-main">Расширенная гарантия</p>
-                      <p class="text text-main text-main--accent">+1 год</p>
-                    </div>
-                    <div class="order__picture">
-                      <svg width="21" height="22" role="img" focusable="false">
-                        <use xlink:href="/i/media/stat/sprite.svg#present-icon"></use>
-                      </svg>
-                    </div>
-                    <div class="order__counter">
-                      <div class="counter">
-                        <div class="counter__buttons-block">
-                          <button class="button counter__count-button" type="button" disabled data-count="plus">
-                            <svg width="6" height="4" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                            </svg>
-                          </button>
-                          <button class="button counter__count-button" type="button" disabled data-count="minus">
-                            <svg width="6" height="4" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="counter__field-block">
-                          <input class="input counter__field" type="number" value="1" readonly>
-                        </div>
-                        <div class="counter__del-block">
-                          <button class="button counter__del-button" type="button" data-name="del-button">
-                            <svg width="7" height="7" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#del"></use>
-                            </svg>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="order__price">
-                      <p class="text text-main text-main--accent text-main--strong">
-                        0 Р
-                      </p>
-                      <p class="text text-main text-main--del">
-                        2 000 Р
-                      </p>
-                    </div>
-                  </li>
-                </ul>
+            </fieldset>
+
+            <fieldset class="fieldset delivery cart-page__delivery">
+              <header class="delivery__header">
+                <div class="container container--narrow">
+                  <h3 class="title title-subsection delivery__title">
+                    Регион доставки:
+                  </h3>
+                  <p class="text-accent text-accent--big text-accent--strong">
+                    Санкт-Петербург*
+                  </p>
+                </div>
+              </header>
+              <div class="delivery__content">
+                <div class="container">
+                  <div class="delivery__type-list">
+                    <label class="delivery-type delivery__item">
+                      <input class="delivery-type__field visually-hidden" type="radio" value="pickup"
+                        name="delivery-type" />
+                      <span class="delivery-type__property">
+                        <span class="delivery__title-block">
+                          <span class="delivery-type__title title-subsection">Самовывоз</span>
+                          <span class="delivery-type__extra text-accent text-accent--strong">ТК Интерио</span>
+                        </span>
+                        <span class="delivery-type__price-block">
+                          <span class="delivery-type__price text-main text-main--accent text-main--strong">0 P.</span>
+                          <span class="delivery-type__price-old text-main text-main--del">1000 P.</span>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="delivery-type delivery__item">
+                      <input class="delivery-type__field visually-hidden" type="radio" value="delivery"
+                        name="delivery-type" />
+                      <span class="delivery-type__property">
+                        <span class="delivery__title-block">
+                          <span class="delivery-type__title title-subsection">Доставка до адреса</span>
+                          <span class="delivery-type__extra title-subsection">СПБ</span>
+                        </span>
+                        <span class="delivery-type__price-block">
+                          <span class="delivery-type__price text-main text-main--accent text-main--strong">+ 1 500
+                            P.</span>
+                          <span class="delivery-type__price-old text-main text-main--del">2 500 P.</span>
+                        </span>
+                      </span>
+                    </label>
+                    <label class="delivery-type delivery__item">
+                      <input class="delivery-type__field visually-hidden" type="radio" value="delivery"
+                        name="delivery-type" />
+                      <span class="delivery-type__property">
+                        <span class="delivery__title-block">
+                          <span class="delivery-type__title title-subsection">Доставка до адреса</span>
+                          <span class="delivery-type__extra title-subsection">ЛО</span>
+                        </span>
+                        <span class="delivery-type__price-block">
+                          <span class="delivery-type__price text-main text-main--accent text-main--strong">+ 2 500
+                            P.*</span>
+                          <span class="delivery-type__price-old text-main text-main--del">4 000 P.</span>
+                        </span>
+                      </span>
+                    </label>
+                  </div>
+                </div>
               </div>
-            </div>
-          </section>
+              <div class="delivery__extra-info">
+                <div class="container container--narrow">
+                  <p class="text text-main">
+                    *Стоимость доставки по Ленинградской области может быть скорректирована.
+                  </p>
+                  <p class="text text-main">
+                    Точную стоимость доставки сообщит менеджер при подтверждении заказа. </p>
+                </div>
+              </div>
+            </fieldset>
+          </form>
 
         </div>
         <div class="clear"></div>
