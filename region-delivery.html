@@ -3801,7 +3801,13 @@
                               </button>
                               <div class="button-popup__modal">
                                 <p class="text">
-                                  {$pod_info.td} дней пути до {$pod_info.city_a} с момента заказа
+                                  {$pod_info.td} дней пути
+                                  <span class="nobr">
+                                    до {$pod_info.city_a}
+                                  </span>
+                                  <span class="nobr">
+                                    с момента заказа
+                                  </span>
                                 </p>
                               </div>
                             </div>
@@ -4527,7 +4533,7 @@
         <!-- Regions item template -->
         <template id="regions-item">
           <li class="delivery-region__item">
-            <a href="" target="_blank" class="link button-simple"></a>
+            <a href="" target="_blank" class="link button-simple nobr"></a>
           </li>
         </template>
 

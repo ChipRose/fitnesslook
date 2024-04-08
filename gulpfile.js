@@ -49,7 +49,7 @@ export function processAllScripts() {
     () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js' }),
     () => processScripts({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js' }),
     () => processScripts({ src: './js/common/region-delivery.js', title: 'region-delivery.js' }),
-    () => processScripts({ src: './js/common/region-delivery.js', title: 'cart.js' }),
+    () => processScripts({ src: './js/common/cart.js', title: 'cart.js' }),
   );
 }
 

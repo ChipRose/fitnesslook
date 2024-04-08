@@ -112,14 +112,16 @@
 
 .accordion__time-item {
   margin: 8px;
-  padding: 25px;
+  padding: 25px 15px;
   flex: 0 0 calc(50% - 16px);
+  width: calc(50% - 16px);
   box-sizing: border-box;
   background: var(--cl-neutral-accent);
   border-radius: var(--radius-xsmall);
   text-align: center;
   font-weight: var(--fw-medium);
   text-transform: uppercase;
+  box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
     padding: 18px 5px;
