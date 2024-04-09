@@ -27,7 +27,8 @@ const setSimpleSlider = (container, controlsContainer) => tns({
   nav: false, 
   gutter: 8, 
   slideBy: 1,
+  loop: false,
+  rewind: true
 });
 
 const dateSlider = setSimpleSlider('#date-slider','#date-control');
-dateSlider.refresh();
