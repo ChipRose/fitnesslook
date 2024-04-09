@@ -175,6 +175,14 @@ $max-width: 1180px;
   margin-bottom: 64px;
 }
 
+.cart-page__order-structure {
+  margin-bottom: 48px;
+}
+
+.cart-page__date {
+  margin-bottom: 48px;
+}
+
 //Text
 
 .title-main {
@@ -240,17 +248,22 @@ $max-width: 1180px;
 //Button radio
 
 .button-radio {
-  padding: 3px;
-  width: fit-content;
-  box-sizing: border-box;
+  display: flex;
+
+  &--slider {
+    padding: 20px 0;
+  }
 }
 
 .button-radio__content {
   padding: 10px 17px;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
   border-radius: 12px;
   box-shadow: var(--button-shadow);
+
+  span {
+    display: block;
+  }
 }
 
 .button-radio__field:checked + .button-radio__content {
@@ -259,6 +272,10 @@ $max-width: 1180px;
   span {
     color: var(--cl-contrast);
   }
+}
+
+.button-radio--big .button-radio__content {
+  padding: 18px;
 }
 
 //Button slider
@@ -470,8 +487,12 @@ $max-width: 1180px;
 
 //Date
 
+.date__day {
+  margin-bottom: 4px;
+}
+
 .date__header {
-  margin-bottom: 24px;
+  margin-bottom: 4px;
 }
 
 .date__slider-wrapper {
@@ -484,9 +505,19 @@ $max-width: 1180px;
   order: 2;
 }
 
-.date__list-wrapper {
+.date__day-list-wrapper {
   margin-right: 17px;
   width: 150px;
   flex: 0 0 calc(100% - 54px);
   order: 1;
+}
+
+.date__time-list {
+  margin: -4px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.date__time-item {
+  margin: 4px;
 }
