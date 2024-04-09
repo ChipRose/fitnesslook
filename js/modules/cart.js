@@ -38,15 +38,15 @@ Array.from(counters).forEach(counter => {
 
 //Slider
 
-const setSimpleSlider = (container, controlsContainer, props) => tns({
+const setSimpleSlider = (container, controlsContainer) => tns({
   container,
   controlsContainer,
   items: 3,
   nav: false,
   gutter: 8,
-  slideBy: 3,
-  ...props
+  slideBy: 1
 });
-setSimpleSlider('#date-slider', '#date-control');
+const dateSlider = setSimpleSlider('#date-slider', '#date-control');
+dateSlider.refresh();
 /******/ })()
 ;

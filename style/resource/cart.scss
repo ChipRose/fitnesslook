@@ -253,9 +253,10 @@ $max-width: 1180px;
 
 .button-radio {
   display: flex;
+  cursor: pointer;
 
   &--slider {
-    padding: 20px 0;
+    padding: 20px 3px;
   }
 }
 
@@ -266,6 +267,11 @@ $max-width: 1180px;
   box-shadow: var(--button-shadow);
   display: flex;
   flex-direction: column;
+  transition: var(--transition-main);
+
+  &:hover, &:active {
+    box-shadow: 0 0 0 1px var(--cl-accent);
+  }
 }
 
 .button-radio__content--nested {
