@@ -35,5 +35,17 @@ Array.from(counters).forEach(counter => {
   const counterButtonBlock = counter.querySelector('.counter__buttons-block');
   counterButtonBlock.addEventListener('click', evt => handleCounterClick(evt, counter));
 });
+
+//Slider
+
+const setSimpleSlider = (container, controlsContainer, props) => tns({
+  container,
+  controlsContainer,
+  items: 3,
+  nav: false,
+  gutter: 8,
+  ...props
+});
+setSimpleSlider('#date-slider', '#date-control');
 /******/ })()
 ;
