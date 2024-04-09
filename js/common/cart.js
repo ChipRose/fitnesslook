@@ -26,6 +26,7 @@ const setSimpleSlider = (container, controlsContainer, props) => tns({
   items: 3, 
   nav: false, 
   gutter: 8, 
+  slideBy: 3,
   ...props 
 });
 

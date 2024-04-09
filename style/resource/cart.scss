@@ -260,10 +260,26 @@ $max-width: 1180px;
   width: 100%;
   border-radius: 12px;
   box-shadow: var(--button-shadow);
+  display: flex;
+  flex-direction: column;
+}
 
-  span {
-    display: block;
-  }
+.button-radio__content--nested {
+  flex-direction: row;
+}
+
+.button-radio__text-block {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.button-radio__price-block {
+  flex: 0 0 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .button-radio__field:checked + .button-radio__content {
@@ -272,10 +288,19 @@ $max-width: 1180px;
   span {
     color: var(--cl-contrast);
   }
+
+  span::before {
+    border-color: var(--cl-contrast);
+  }
 }
 
 .button-radio--big .button-radio__content {
   padding: 18px;
+}
+
+.button-radio--huge .button-radio__content {
+  padding: 16px 21px;
+  border-radius: 20px;
 }
 
 //Button slider
@@ -520,4 +545,18 @@ $max-width: 1180px;
 
 .date__time-item {
   margin: 4px;
+}
+
+// Assembly
+
+.assembly__header {
+  margin-bottom: 24px;
+}
+
+.assembly_item {
+  margin-bottom: 9px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
