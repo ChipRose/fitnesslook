@@ -7295,7 +7295,26 @@ const maskOptions = {
     mask: 'FL 0000 0000 00'
   }]
 };
-const phoneMask = (0,imask__WEBPACK_IMPORTED_MODULE_1__["default"])(phoneInput, maskOptions);
+(0,imask__WEBPACK_IMPORTED_MODULE_1__["default"])(phoneInput, maskOptions);
+
+//Extra control
+const controlExtraElement = document.querySelector('.control-extra');
+const handleWindowScroll = () => {
+  const conrolElement = document.querySelector('.cart-page__details');
+  const controlSectionPosition = conrolElement.getBoundingClientRect().top;
+  controlExtraElement.style.display = 'none';
+  if (controlSectionPosition < 0) {
+    if (controlExtraElement.style.display === 'block') {
+      controlExtraElement.style.display = 'none';
+    }
+    return;
+  }
+  if (controlExtraElement.style.display === 'none') {
+    controlExtraElement.style.display = 'block';
+  }
+};
+handleWindowScroll();
+window.addEventListener('scroll', handleWindowScroll);
 })();
 
 /******/ })()

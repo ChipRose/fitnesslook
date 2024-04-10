@@ -47,6 +47,28 @@ const maskOptions = {
   ]
 };
 
-const phoneMask = IMask(phoneInput, maskOptions);
+IMask(phoneInput, maskOptions);
 
+
+//Extra control
+const controlExtraElement = document.querySelector('.control-extra');
+
+const handleWindowScroll = () => {
+  const conrolElement = document.querySelector('.cart-page__details');
+  const controlSectionPosition = conrolElement.getBoundingClientRect().top;
+  controlExtraElement.style.display = 'none';
+
+  if (controlSectionPosition < 0) {
+    if (controlExtraElement.style.display === 'block') {
+      controlExtraElement.style.display = 'none';
+    }
+    return;
+  }
+  if (controlExtraElement.style.display === 'none') {
+    controlExtraElement.style.display = 'block';
+  }
+};
+
+handleWindowScroll();
+window.addEventListener('scroll', handleWindowScroll);
 
