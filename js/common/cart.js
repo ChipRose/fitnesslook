@@ -20,4 +20,19 @@ Array.from(counters).forEach((counter) => {
   counterButtonBlock.addEventListener('click', (evt) => handleCounterClick(evt, counter));
 });
 
+//Slider
+
+const setSimpleSlider = (container, controlsContainer) => tns({
+  container,
+  controlsContainer,
+  items: 3,
+  nav: false,
+  gutter: 8,
+  slideBy: 1,
+  loop: false,
+  rewind: true
+});
+
+const dateSlider = setSimpleSlider('#date-slider','#date-control');
+
 

@@ -3204,6 +3204,20 @@ Array.from(counters).forEach(counter => {
   const counterButtonBlock = counter.querySelector('.counter__buttons-block');
   counterButtonBlock.addEventListener('click', evt => handleCounterClick(evt, counter));
 });
+
+//Slider
+
+const setSimpleSlider = (container, controlsContainer) => (0,tiny_slider__WEBPACK_IMPORTED_MODULE_0__.tns)({
+  container,
+  controlsContainer,
+  items: 3,
+  nav: false,
+  gutter: 8,
+  slideBy: 1,
+  loop: false,
+  rewind: true
+});
+const dateSlider = setSimpleSlider('#date-slider', '#date-control');
 })();
 
 /******/ })()
