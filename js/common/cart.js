@@ -34,7 +34,7 @@ const setSimpleSlider = (container, controlsContainer) => tns({
   rewind: true
 });
 
-setSimpleSlider('#date-slider','#date-control');
+setSimpleSlider('#date-slider', '#date-control');
 
 //Input
 
@@ -42,8 +42,8 @@ const phoneInput = document.querySelector('#card-loyality');
 
 const maskOptions = {
   mask: [
-    {mask:'+{7}(000)000-00-00'},
-    {mask:'FL 0000 0000 00'},
+    { mask: '+{7}(000)000-00-00' },
+    { mask: 'FL 0000 0000 00' },
   ]
 };
 
@@ -52,11 +52,17 @@ IMask(phoneInput, maskOptions);
 
 //Extra control
 const controlExtraElement = document.querySelector('.control-extra');
+const menu = document.querySelector('.position_fixed');
 
 const handleWindowScroll = () => {
   const conrolElement = document.querySelector('.cart-page__details');
   const controlSectionPosition = conrolElement.getBoundingClientRect().top;
   controlExtraElement.style.display = 'none';
+
+  if (!menu.style.display || menu.style.display === 'none') {
+    controlExtraElement.style.display = 'none';
+    return;
+  }
 
   if (controlSectionPosition < 0) {
     if (controlExtraElement.style.display === 'block') {
@@ -67,6 +73,8 @@ const handleWindowScroll = () => {
   if (controlExtraElement.style.display === 'none') {
     controlExtraElement.style.display = 'block';
   }
+
+
 };
 
 handleWindowScroll();

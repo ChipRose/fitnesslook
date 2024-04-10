@@ -7299,10 +7299,15 @@ const maskOptions = {
 
 //Extra control
 const controlExtraElement = document.querySelector('.control-extra');
+const menu = document.querySelector('.position_fixed');
 const handleWindowScroll = () => {
   const conrolElement = document.querySelector('.cart-page__details');
   const controlSectionPosition = conrolElement.getBoundingClientRect().top;
   controlExtraElement.style.display = 'none';
+  if (!menu.style.display || menu.style.display === 'none') {
+    controlExtraElement.style.display = 'none';
+    return;
+  }
   if (controlSectionPosition < 0) {
     if (controlExtraElement.style.display === 'block') {
       controlExtraElement.style.display = 'none';
