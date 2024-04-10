@@ -203,6 +203,10 @@ $max-width: 1180px;
   margin-bottom: 64px;
 }
 
+.cart-page__control {
+  margin-bottom: 24px;
+}
+
 //Text
 
 .title-main {
@@ -236,6 +240,12 @@ $max-width: 1180px;
     color: var(--cl-heavy-dark);
   }
 
+  &--huge-accent {
+    font-size: 32px;
+    line-height: 56%;
+    color: var(--cl-heavy-dark);
+  }
+
   &--uppercase {
     text-transform: uppercase;
   }
@@ -254,6 +264,10 @@ $max-width: 1180px;
 
   &--nobr {
     white-space: nowrap;
+  }
+
+  &--middle {
+    font-size: 14px;
   }
 
   &--del {
@@ -289,6 +303,70 @@ $max-width: 1180px;
 }
 
 //COMPONENTS
+
+//Button main
+
+.button-main {
+  padding: 11px 20px;
+  background: var(--cl-accent);
+  border-radius: 8px;
+  color: var(--cl-contrast);
+  text-transform: uppercase;
+  display: block;
+  font-size: 18px;
+  line-height: 100%;
+  transition: var(--transition-main);
+
+  &--full {
+    width: 100%;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: var(--inner-shadow);
+  }
+}
+
+.button-extra {
+  padding: 11px 20px;
+  background: var(--cl-heavy-dark) radial-gradient(340px 82px at center top, rgba(255, 92, 77, 0.5) 0%, rgba(235, 70, 159, 0.5) 10%, rgba(131, 65, 239, 0.18) 40%, rgba(63, 104, 249, 0) 52%) !important;
+  padding: 15px 36px;
+  border-radius: 8px;
+  color: var(--cl-contrast);
+  transition: var(--transition-main);
+
+  &--full {
+    width: 100%;
+  }
+
+  &:hover .button-extra__wrapper {
+    opacity: 0.8;
+  }
+}
+
+.button-extra__wrapper {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 100%;
+  transition: var(--transition-main);
+}
+
+.button-extra__text-block {
+  margin-right: 5px;
+}
+
+//Yandex pay logo
+
+.ya-pay-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ya-pay-logo__icon {
+  margin-right: 5px;
+
+}
 
 //Field with label
 
@@ -783,4 +861,33 @@ input[class~='field-main'] {
     margin-top: 46px;
     margin-bottom: 0;
   }
+}
+
+//Control
+
+.control__header {
+  margin-bottom: 64px;
+}
+
+.control__button {
+  margin-bottom: 11px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.control__title-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.control__title {
+  margin-right: 10px;
+}
+
+.control__sum-block {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
