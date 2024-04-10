@@ -42,6 +42,7 @@ $max-width: 1180px;
   --fw-medium: 500;
   --fw-bold: 700;
   --main-shadow: 2px 0 14px 1px rgba(0, 0, 0, 0.14) inset;
+  --extra-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.06);
   --accent-shadow: 0 0 0 1px var(--cl-accent) inset;
   --transition-main: all 0.3s ease-out;
   --cl-main: rgb(142, 142, 142);
@@ -140,7 +141,7 @@ $max-width: 1180px;
   box-sizing: border-box;
 
   &--narrow {
-    padding: 0 23px;
+    padding: 0 27px;
   }
 }
 
@@ -220,6 +221,10 @@ $max-width: 1180px;
     font-weight: var(--fw-bold);
   }
 
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
   &--del {
     position: relative;
     width: fit-content;
@@ -250,9 +255,75 @@ $max-width: 1180px;
 
 //COMPONENTS
 
+//Button round
+
+.button-slider {
+  padding: 12px;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--cl-contrast);
+  box-shadow: var(--extra-shadow);
+  border-radius: 50%;
+  box-sizing: border-box;
+  transition: var(--transition-main);
+
+  svg {
+    fill: var(--cl-neutral);
+  }
+
+  &:hover,
+  &:focus {
+    background: var(--cl-accent);
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: var(--cl-contrast);
+  }
+
+  &--prev {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--disable {
+    display: none;
+  }
+}
+
+//Button radio
+
+.button-radio {
+  padding: 3px;
+
+}
+
+.button-radio__property {
+  padding: 10px 17px;
+  display: flex;
+  width: 82px;
+  flex-direction: column;
+  box-shadow: var(--extra-shadow);
+  border-radius: 12px;
+  transition: var(--transition-main);
+  box-sizing: border-box;
+}
+
+.button-radio__field:checked+.button-radio__property {
+  background: var(--cl-accent);
+
+  span {
+    color: var(--cl-contrast);
+  }
+}
+
 //Link button
 
-.link-button {
+.button-link {
   padding: 5px 8px;
   width: fit-content;
   display: flex;
@@ -268,9 +339,10 @@ $max-width: 1180px;
   }
 }
 
-.link-button__icon {
+.button-link__icon {
   margin-right: 9px;
 }
+
 
 //Counter
 
@@ -403,7 +475,7 @@ $max-width: 1180px;
 //Delivery type
 
 .delivery-type__property {
-  padding: 20px 13px;
+  padding: 20px 17px;
   display: flex;
   justify-content: space-between;
   border-radius: 20px;
@@ -431,11 +503,6 @@ $max-width: 1180px;
 .delivery-type__field:checked+.delivery-type__property {
   box-shadow: var(--accent-shadow);
 }
-
-//LAYOUT
-
-
-
 
 //SECTIONS
 

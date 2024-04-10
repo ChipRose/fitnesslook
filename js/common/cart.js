@@ -1,3 +1,5 @@
+import { tns } from 'tiny-slider';
+
 //Counter
 
 const counters = document.querySelectorAll('.counter');
@@ -17,3 +19,5 @@ Array.from(counters).forEach((counter) => {
   const counterButtonBlock = counter.querySelector('.counter__buttons-block');
   counterButtonBlock.addEventListener('click', (evt) => handleCounterClick(evt, counter));
 });
+
+
