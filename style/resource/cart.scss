@@ -44,6 +44,7 @@ $max-width: 1180px;
   --main-shadow: 2px 0 14px 1px rgba(0, 0, 0, 0.14) inset;
   --extra-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.06);
   --accent-shadow: 0 0 0 1px var(--cl-accent) inset;
+  --inner-shadow: 0px 4px 12px 0px #754B7C inset;
   --transition-main: all 0.3s ease-out;
   --cl-main: rgb(142, 142, 142);
   --cl-neutral: rgb(186, 186, 186);
@@ -191,7 +192,11 @@ $max-width: 1180px;
 }
 
 .cart-page__assembly {
-  margin-bottom: 48px;
+  margin-bottom: 64px;
+}
+
+.cart-page__discount {
+  margin-bottom: 64px;
 }
 
 //Text
@@ -272,6 +277,53 @@ $max-width: 1180px;
 }
 
 //COMPONENTS
+
+//Field with label
+
+.field-labeled {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field-labeled__field {
+  order: 2;
+}
+
+.field-labeled__label {
+  margin-right: 15px;
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--cl-heavy-dark);
+  order: 1;
+}
+
+//Field main
+
+input[class~='field-main'] {
+  max-width: 160px;
+  padding: 10px;
+  background: var(--cl-accent);
+  border: none;
+  text-align: center;
+  line-height: 100%;
+  vertical-align: middle;
+  border-radius: 16px;
+  box-shadow: var(--inner-shadow);
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--cl-contrast);
+  box-sizing: border-box;
+  transition: var(--transition-main);
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+}
 
 //Button radio
 
@@ -670,4 +722,14 @@ $max-width: 1180px;
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+//Discount
+
+.discount__header {
+  margin-bottom: 24px;
+}
+
+.discount__text-block {
+  margin-bottom: 32px;
 }

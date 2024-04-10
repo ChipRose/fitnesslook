@@ -4032,7 +4032,7 @@
                     </li>
                     <li class="assembly_item">
                       <label class="button-radio button-radio--huge">
-                        <input class="button-radio__field visually-hidden" checked type="radio" name="assembly-type"
+                        <input class="button-radio__field visually-hidden"checked type="radio" name="assembly-type"
                           value="with-assembly">
                         <span class="button-radio__content button-radio__content--nested">
                           <span class="button-radio__text-block">
@@ -4055,6 +4055,33 @@
                       </label>
                     </li>
                   </ul>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset discount cart-page__discount">
+              <header class="discount__header">
+                <div class="container container--narrow">
+                  <h2 class="title title-section">
+                    Скидка
+                  </h2>
+                </div>
+              </header>
+              <div class="discount__content">
+                <div class="container container--narrow">
+                  <div class="discount__text-block">
+                    <p class="text text-main">
+                      Для получения скидки укажите номер карты лояльности или телефон:
+                    </p>
+                  </div>
+                  <div class="discount__info-field">
+                    <label class="field-labeled">
+                      <input type="text" class="field-main field-labeled__field" placeholder="FL 0000 0000 00" id="card-loyality">
+                      <span class="field-labeled__label">
+                        Номер телефона
+                      </span>
+                    </label>
+                  </div>
                 </div>
               </div>
             </fieldset>
@@ -4319,6 +4346,7 @@
   </script>
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=13739b0f-0d5b-4af4-aec0-22bc5523893a"></script>
+  <script src="https://unpkg.com/imask"></script>
 
   <script type="module" src="/js/modules/cart.js"></script>
 </body>

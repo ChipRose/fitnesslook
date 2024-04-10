@@ -1,4 +1,5 @@
 import { tns } from 'tiny-slider';
+import IMask from 'imask';
 
 //Counter
 
@@ -33,6 +34,19 @@ const setSimpleSlider = (container, controlsContainer) => tns({
   rewind: true
 });
 
-const dateSlider = setSimpleSlider('#date-slider','#date-control');
+setSimpleSlider('#date-slider','#date-control');
+
+//Input
+
+const phoneInput = document.querySelector('#card-loyality');
+
+const maskOptions = {
+  mask: [
+    {mask:'+{7}(000)000-00-00'},
+    {mask:'FL 0000 0000 00'},
+  ]
+};
+
+const phoneMask = IMask(phoneInput, maskOptions);
 
 
