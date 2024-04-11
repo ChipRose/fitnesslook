@@ -3756,320 +3756,329 @@
                 </div>
               </fieldset>
 
-              <fieldset class="fieldset section delivery cart-page__delivery">
-                <header class="delivery__header">
-                  <div class="container container--narrow">
-                    <h3 class="title title-subsection delivery__title">
-                      Регион доставки:
-                    </h3>
-                    <p class="text-accent text-accent--big text-accent--strong">
-                      Санкт-Петербург*
-                    </p>
-                  </div>
-                </header>
-                <div class="delivery__content">
-                  <div class="container">
-                    <div class="delivery__type-list">
-                      <label class="delivery-type delivery__item">
-                        <input class="delivery-type__field visually-hidden" type="radio" value="pickup"
-                          name="delivery-type" />
-                        <span class="delivery-type__property">
-                          <span class="delivery__title-block">
-                            <span class="delivery-type__title title-subsection">Самовывоз</span>
-                            <span class="delivery-type__extra text-accent text-accent--strong">ТК Интерио</span>
-                          </span>
-                          <span class="delivery-type__price-block">
-                            <span
-                              class="delivery-type__price text-main text-main--accent text-main--strong text-main--nobr">0
-                              P.</span>
-                            <span class="delivery-type__price-old text-main text-main--del text-main--nobr">1000
-                              P.</span>
-                          </span>
-                        </span>
-                      </label>
-                      <label class="delivery-type delivery__item">
-                        <input class="delivery-type__field visually-hidden" type="radio" checked value="delivery"
-                          name="delivery-type" />
-                        <span class="delivery-type__property">
-                          <span class="delivery__title-block">
-                            <span class="delivery-type__title title-subsection">Доставка до адреса</span>
-                            <span class="delivery-type__extra title-subsection">СПБ</span>
-                          </span>
-                          <span class="delivery-type__price-block">
-                            <span
-                              class="delivery-type__price text-main text-main--accent text-main--strong text-main--nobr">+
-                              1 500
-                              P.</span>
-                            <span class="delivery-type__price-old text-main text-main--del text-main--nobr">2 500
-                              P.</span>
-                          </span>
-                        </span>
-                      </label>
-                      <label class="delivery-type delivery__item">
-                        <input class="delivery-type__field visually-hidden" type="radio" value="delivery"
-                          name="delivery-type" />
-                        <span class="delivery-type__property">
-                          <span class="delivery__title-block">
-                            <span class="delivery-type__title title-subsection">Доставка до адреса</span>
-                            <span class="delivery-type__extra title-subsection">ЛО</span>
-                          </span>
-                          <span class="delivery-type__price-block">
-                            <span
-                              class="delivery-type__price text-main text-main--accent text-main--strong text-main--nobr">
-                              + 2 500 P.*
+              <div class="section">
+                <fieldset class="fieldset delivery cart-page__delivery">
+                  <header class="delivery__header">
+                    <div class="container container--narrow">
+                      <h3 class="title title-subsection delivery__title">
+                        Регион доставки:
+                      </h3>
+                      <p class="text-accent text-accent--big text-accent--strong">
+                        Санкт-Петербург*
+                      </p>
+                    </div>
+                  </header>
+                  <div class="delivery__content">
+                    <div class="container">
+                      <ul class="list delivery__type-list">
+                        <li class="delivery__item">
+                          <label class="button-radio button-radio--huge">
+                            <input class="button-radio__field visually-hidden" type="radio" value="pickup"
+                              name="delivery-type" />
+                            <span class="button-radio__content button-radio__content--nested">
+                              <span class="button-radio__text-block">
+                                <span class="text-main text-main--accent text-main--medium">Самовывоз</span>
+                                <span class="text-accent text-accent--strong">ТК Интерио</span>
+                              </span>
+                              <span class="button-radio__price-block">
+                                <span class="text-main text-main--accent text-main--strong text-main--nobr">
+                                  0 P.
+                                </span>
+                                <span class="text-main text-main--del text-main--nobr">
+                                  1000 P.
+                                </span>
+                              </span>
                             </span>
-                            <span class="delivery-type__price-old text-main text-main--del text-main--nobr">
-                              4 000 P.
+                          </label>
+                        </li>
+                        <li class="delivery__item">
+                          <label class="button-radio button-radio--huge">
+                            <input class="button-radio__field visually-hidden" type="radio" checked value="delivery"
+                              name="delivery-type" />
+                            <span class="button-radio__content button-radio__content--nested">
+                              <span class="button-radio__text-block">
+                                <span class="text-main text-main--accent text-main--medium">Доставка до адреса</span>
+                                <span class="text-main text-main--accent text-main--medium">СПБ</span>
+                              </span>
+                              <span class="button-radio__price-block">
+                                <span class="text-main text-main--accent text-main--strong text-main--nobr">
+                                  + 1 500 P.
+                                </span>
+                                <span class="text-main text-main--del text-main--nobr">
+                                  2 500 P.
+                                </span>
+                              </span>
                             </span>
-                          </span>
-                        </span>
-                      </label>
+                          </label>
+                        </li>
+                        <li class="delivery__item">
+                          <label class="button-radio button-radio--huge">
+                            <input class="button-radio__field visually-hidden" type="radio" value="delivery"
+                              name="delivery-type" />
+                            <span class="button-radio__content button-radio__content--nested">
+                              <span class="button-radio__text-block">
+                                <span class="text-main text-main--accent text-main--medium">Доставка до адреса</span>
+                                <span class="text-main text-main--accent text-main--medium">ЛО</span>
+                              </span>
+                              <span class="button-radio__price-block">
+                                <span
+                                  class="text-main text-main--accent text-main--strong text-main--nobr">
+                                  + 2 500 P.*
+                                </span>
+                                <span class="text-main text-main--del text-main--nobr">
+                                  4 000 P.
+                                </span>
+                              </span>
+                            </span>
+                          </label>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                </div>
-                <div class="delivery__extra-info">
-                  <div class="container container--narrow">
-                    <p class="text text-main">
-                      *Стоимость доставки по Ленинградской области может быть скорректирована.
-                    </p>
-                    <p class="text text-main">
-                      Точную стоимость доставки сообщит менеджер при подтверждении заказа. </p>
+                  <div class="delivery__extra-info">
+                    <div class="container container--narrow">
+                      <p class="text text-main">
+                        *Стоимость доставки по Ленинградской области может быть скорректирована.
+                      </p>
+                      <p class="text text-main">
+                        Точную стоимость доставки сообщит менеджер при подтверждении заказа. </p>
+                    </div>
                   </div>
-                </div>
-              </fieldset>
+                </fieldset>
 
-              <fieldset class="fieldset section date cart-page__date">
-                <header class="date__header">
-                  <div class="container container--narrow">
-                    <h3 class="title title-subsection">
-                      Дата и время доставки:
-                    </h3>
-                  </div>
-                </header>
-                <div class="date__day">
-                  <div class="container">
-                    <div class="date__slider-wrapper">
-                      <div class="date__control" id="date-control">
-                        <button class="button button-slider button-slider--prev button-slider--disabled" type="button">
-                          <svg width="9" height="13" role="img" focusable="false">
-                            <use xlink:href="/i/media/stat/sprite.svg#simple-arrow-right"></use>
-                          </svg>
-                        </button>
-                        <button class="button button-slider button-slider--next" type="button">
-                          <svg width="9" height="13" role="img" focusable="false">
-                            <use xlink:href="/i/media/stat/sprite.svg#simple-arrow-right"></use>
-                          </svg>
-                        </button>
-                      </div>
-                      <div class="date__day-list-wrapper">
-                        <ul class="list date__day-list" id="date-slider">
-                          <li>
-                            <label class="button-radio button-radio--slider">
-                              <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                value="19/11/2024">
-                              <span class="button-radio__content">
-                                <span class="text-main text-main--accent text-main--medium">
-                                  19 ноя
+                <fieldset class="fieldset date cart-page__date">
+                  <header class="date__header">
+                    <div class="container container--narrow">
+                      <h3 class="title title-subsection">
+                        Дата и время доставки:
+                      </h3>
+                    </div>
+                  </header>
+                  <div class="date__day">
+                    <div class="container">
+                      <div class="date__slider-wrapper">
+                        <div class="date__control" id="date-control">
+                          <button class="button button-slider button-slider--prev button-slider--disabled" type="button">
+                            <svg width="9" height="13" role="img" focusable="false">
+                              <use xlink:href="/i/media/stat/sprite.svg#simple-arrow-right"></use>
+                            </svg>
+                          </button>
+                          <button class="button button-slider button-slider--next" type="button">
+                            <svg width="9" height="13" role="img" focusable="false">
+                              <use xlink:href="/i/media/stat/sprite.svg#simple-arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="date__day-list-wrapper">
+                          <ul class="list date__day-list" id="date-slider">
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="19/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    19 ноя
+                                  </span>
+                                  <span class="text-main text-main--uppercase">
+                                    вс
+                                  </span>
                                 </span>
-                                <span class="text-main text-main--uppercase">
-                                  вс
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" checked type="radio"
+                                  name="date-delivery" value="20/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    20 ноя
+                                  </span>
+                                  <span class="text-main text-main--uppercase">
+                                    пн
+                                  </span>
                                 </span>
-                              </span>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="button-radio button-radio--slider">
-                              <input class="button-radio__field visually-hidden" checked type="radio"
-                                name="date-delivery" value="20/11/2024">
-                              <span class="button-radio__content">
-                                <span class="text-main text-main--accent text-main--medium">
-                                  20 ноя
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="21/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    21 ноя
+                                  </span>
+                                  <span class="text-main text-main--uppercase">
+                                    вт
+                                  </span>
                                 </span>
-                                <span class="text-main text-main--uppercase">
-                                  пн
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="22/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    22 ноя
+                                  </span>
+                                  <span class="text-main text-main--uppercase">
+                                    ср
+                                  </span>
                                 </span>
-                              </span>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="button-radio button-radio--slider">
-                              <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                value="21/11/2024">
-                              <span class="button-radio__content">
-                                <span class="text-main text-main--accent text-main--medium">
-                                  21 ноя
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="23/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    23 ноя
+                                  </span>
+                                  <span class="text-main text-main--uppercase">
+                                    чт
+                                  </span>
                                 </span>
-                                <span class="text-main text-main--uppercase">
-                                  вт
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="24/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    24 ноя
+                                  </span>
+                                  <span class="text-main text-main--uppercase">
+                                    пт
+                                  </span>
                                 </span>
-                              </span>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="button-radio button-radio--slider">
-                              <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                value="22/11/2024">
-                              <span class="button-radio__content">
-                                <span class="text-main text-main--accent text-main--medium">
-                                  22 ноя
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="25/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    25 ноя
+                                  </span>
+                                  <span class="text-main text-main--uppercase">
+                                    сб
+                                  </span>
                                 </span>
-                                <span class="text-main text-main--uppercase">
-                                  ср
-                                </span>
-                              </span>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="button-radio button-radio--slider">
-                              <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                value="23/11/2024">
-                              <span class="button-radio__content">
-                                <span class="text-main text-main--accent text-main--medium">
-                                  23 ноя
-                                </span>
-                                <span class="text-main text-main--uppercase">
-                                  чт
-                                </span>
-                              </span>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="button-radio button-radio--slider">
-                              <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                value="24/11/2024">
-                              <span class="button-radio__content">
-                                <span class="text-main text-main--accent text-main--medium">
-                                  24 ноя
-                                </span>
-                                <span class="text-main text-main--uppercase">
-                                  пт
-                                </span>
-                              </span>
-                            </label>
-                          </li>
-                          <li>
-                            <label class="button-radio button-radio--slider">
-                              <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                value="25/11/2024">
-                              <span class="button-radio__content">
-                                <span class="text-main text-main--accent text-main--medium">
-                                  25 ноя
-                                </span>
-                                <span class="text-main text-main--uppercase">
-                                  сб
-                                </span>
-                              </span>
-                            </label>
-                          </li>
-                        </ul>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="date__time">
-                  <div class="container">
-                    <ul class="list date__time-list">
-                      <li class="date__time-item">
-                        <label class="button-radio  button-radio--big">
-                          <input class="button-radio__field visually-hidden" type="radio" checked name="time-delivery"
-                            value="12:00-16:00">
-                          <span class="button-radio__content">
-                            <span class="text-main text-main--accent text-main--medium">
-                              12:00 - 16:00
-                            </span>
-                          </span>
-                        </label>
-                      </li>
-                      <li class="date__time-item">
-                        <label class="button-radio button-radio--big">
-                          <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
-                            value="14:00-18:00">
-                          <span class="button-radio__content">
-                            <span class="text-main text-main--accent text-main--medium">
-                              14:00 - 18:00
-                            </span>
-                          </span>
-                        </label>
-                      </li>
-                      <li class="date__time-item">
-                        <label class="button-radio button-radio--big">
-                          <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
-                            value="16:00-20:00">
-                          <span class="button-radio__content">
-                            <span class="text-main text-main--accent text-main--medium">
-                              16:00 - 20:00
-                            </span>
-                          </span>
-                        </label>
-                      </li>
-                      <li class="date__time-item">
-                        <label class="button-radio button-radio--big">
-                          <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
-                            value="18:00-22:00">
-                          <span class="button-radio__content">
-                            <span class="text-main text-main--accent text-main--medium">
-                              18:00 - 22:00
-                            </span>
-                          </span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </fieldset>
-
-              <fieldset class="fieldset section assembly cart-page__assembly">
-                <header class="assembly__header">
-                  <div class="container container--narrow">
-                    <h3 class="title title-subsection">
-                      Сборка:
-                    </h3>
-                  </div>
-                </header>
-                <div class="assembly__content">
-                  <div class="container">
-                    <ul class="list assembly__list">
-                      <li class="assembly_item">
-                        <label class="button-radio button-radio--huge">
-                          <input class="button-radio__field visually-hidden" type="radio" name="assembly-type"
-                            value="without-assembly">
-                          <span class="button-radio__content">
-                            <span class="text-main text-main--accent text-main--medium">
-                              Без сборки
-                            </span>
-                            <span class="text-main">
-                              Сборка товара покупателем
-                            </span>
-                        </label>
-                      </li>
-                      <li class="assembly_item">
-                        <label class="button-radio button-radio--huge">
-                          <input class="button-radio__field visually-hidden" checked type="radio" name="assembly-type"
-                            value="with-assembly">
-                          <span class="button-radio__content button-radio__content--nested">
-                            <span class="button-radio__text-block">
+                  <div class="date__time">
+                    <div class="container">
+                      <ul class="list date__time-list">
+                        <li class="date__time-item">
+                          <label class="button-radio  button-radio--big">
+                            <input class="button-radio__field visually-hidden" type="radio" checked name="time-delivery"
+                              value="12:00-16:00">
+                            <span class="button-radio__content">
                               <span class="text-main text-main--accent text-main--medium">
-                                Со сборкой
+                                12:00 - 16:00
+                              </span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="date__time-item">
+                          <label class="button-radio button-radio--big">
+                            <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
+                              value="14:00-18:00">
+                            <span class="button-radio__content">
+                              <span class="text-main text-main--accent text-main--medium">
+                                14:00 - 18:00
+                              </span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="date__time-item">
+                          <label class="button-radio button-radio--big">
+                            <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
+                              value="16:00-20:00">
+                            <span class="button-radio__content">
+                              <span class="text-main text-main--accent text-main--medium">
+                                16:00 - 20:00
+                              </span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="date__time-item">
+                          <label class="button-radio button-radio--big">
+                            <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
+                              value="18:00-22:00">
+                            <span class="button-radio__content">
+                              <span class="text-main text-main--accent text-main--medium">
+                                18:00 - 22:00
+                              </span>
+                            </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="fieldset assembly cart-page__assembly">
+                  <header class="assembly__header">
+                    <div class="container container--narrow">
+                      <h3 class="title title-subsection">
+                        Сборка:
+                      </h3>
+                    </div>
+                  </header>
+                  <div class="assembly__content">
+                    <div class="container">
+                      <ul class="list assembly__list">
+                        <li class="assembly_item">
+                          <label class="button-radio button-radio--huge">
+                            <input class="button-radio__field visually-hidden" type="radio" name="assembly-type"
+                              value="without-assembly">
+                            <span class="button-radio__content">
+                              <span class="text-main text-main--accent text-main--medium">
+                                Без сборки
                               </span>
                               <span class="text-main">
-                                Сборка товара специалистом FitnessLook
+                                Сборка товара покупателем
+                              </span>
+                          </label>
+                        </li>
+                        <li class="assembly_item">
+                          <label class="button-radio button-radio--huge">
+                            <input class="button-radio__field visually-hidden" checked type="radio" name="assembly-type"
+                              value="with-assembly">
+                            <span class="button-radio__content button-radio__content--nested">
+                              <span class="button-radio__text-block">
+                                <span class="text-main text-main--accent text-main--medium">
+                                  Со сборкой
+                                </span>
+                                <span class="text-main">
+                                  Сборка товара специалистом FitnessLook
+                                </span>
+                              </span>
+                              <span class="button-radio__price-block">
+                                <span class="text-main text-main--accent text-main--strong">
+                                  + 1500 P.
+                                </span>
+                                <span class="text-main text-main--del">
+                                  2 500 P.
+                                </span>
                               </span>
                             </span>
-                            <span class="button-radio__price-block">
-                              <span class="text-main text-main--accent text-main--strong">
-                                + 1500 P.
-                              </span>
-                              <span class="text-main text-main--del">
-                                2 500 P.
-                              </span>
-                            </span>
-                          </span>
-                        </label>
-                      </li>
-                    </ul>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </fieldset>
+                </fieldset>
+              </div>
             </div>
 
             <div class="form-start__col">

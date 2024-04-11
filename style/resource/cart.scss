@@ -801,50 +801,6 @@ input[class~='field-main'] {
   }
 }
 
-//Delivery type
-
-.delivery-type__property {
-  padding: 20px 17px;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 20px;
-  box-shadow: var(--main-shadow);
-  background: var(--cl-contrast);
-  transition: var(--transition-main);
-
-  &:hover,
-  &:active {
-    box-shadow: 0 0 0 1px var(--cl-accent);
-  }
-}
-
-.delivery__title-block {
-  display: flex;
-  flex-direction: column;
-}
-
-.delivery-type__title {
-  margin-bottom: 12px;
-}
-
-.delivery-type__price-block {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
-}
-
-.delivery-type__field:checked+.delivery-type__property {
-  background: var(--cl-accent);
-
-  span {
-    color: var(--cl-contrast);
-  }
-
-  span::before {
-    border-color: var(--cl-contrast);
-  }
-}
-
 //SECTIONS
 
 //Form start
@@ -907,7 +863,7 @@ input[class~='field-main'] {
 }
 
 .delivery__item {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: block;
 
   &:last-child {
