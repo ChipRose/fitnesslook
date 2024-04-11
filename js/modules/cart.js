@@ -7281,7 +7281,15 @@ const setSimpleSlider = (container, controlsContainer) => (0,tiny_slider__WEBPAC
   gutter: 8,
   slideBy: 1,
   loop: false,
-  rewind: true
+  rewind: true,
+  responsive: {
+    798: {
+      items: 4
+    },
+    906: {
+      items: 5
+    }
+  }
 });
 setSimpleSlider('#date-slider', '#date-control');
 

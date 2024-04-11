@@ -31,7 +31,15 @@ const setSimpleSlider = (container, controlsContainer) => tns({
   gutter: 8,
   slideBy: 1,
   loop: false,
-  rewind: true
+  rewind: true,
+  responsive: {
+    798: {
+      items: 4
+    },
+    906 :{
+      items: 5
+    }
+  }
 });
 
 setSimpleSlider('#date-slider', '#date-control');
