@@ -5,7 +5,6 @@ import gulpSass from 'gulp-sass';
 import { deleteAsync } from 'del';
 import webp from 'gulp-webp';
 import webpack from 'webpack-stream';
-import imagemin from 'gulp-imagemin';
 import svgo from 'gulp-svgmin';
 import rename from 'gulp-rename';
 import { stacksvg } from 'gulp-stacksvg';
