@@ -55,7 +55,6 @@ export function processAllScripts() {
 
 export function optimizeImages() {
   return gulp.src('./i/media-resource/**/*.{png,jpg}')
-    .pipe(imagemin())
     .pipe(gulp.dest('./i/media/'));
 }
 
