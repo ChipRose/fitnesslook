@@ -36,15 +36,17 @@ const setSimpleSlider = (container, controlsContainer) => tns({
     798: {
       items: 4
     },
-    906 :{
+    906: {
       items: 5
     }
   }
 });
 
-setSimpleSlider('#date-slider', '#date-control');
+if (document.querySelector('#date-slider') && document.querySelector('#date-control')) {
+  setSimpleSlider('#date-slider', '#date-control');
+}
 
-//Input
+//Input Validation
 
 const phoneInput = document.querySelector('#card-loyality');
 
@@ -55,10 +57,13 @@ const maskOptions = {
   ]
 };
 
-IMask(phoneInput, maskOptions);
+if (phoneInput) {
+  IMask(phoneInput, maskOptions);
+}
 
 
 //Extra control
+
 const controlExtraElement = document.querySelector('.control-extra');
 
 
@@ -76,7 +81,29 @@ const handleMenuAppearance = () => {
   }
 };
 
-handleMenuAppearance();
-window.addEventListener('scroll', handleMenuAppearance);
-window.addEventListener('resize', handleMenuAppearance);
+if (controlExtraElement) {
+  handleMenuAppearance();
+  window.addEventListener('scroll', handleMenuAppearance);
+  window.addEventListener('resize', handleMenuAppearance);
+}
 
+
+// Accordion
+
+const accordions = Array.from(document.querySelectorAll('.accordion'));
+
+const accordionHandler = (evt) => {
+  evt.preventDefault();
+  const curentAccordion = evt.target.closest('.accordion');
+  const currentContent = evt.target.nextElementSibling;
+  curentAccordion.classList.toggle('active');
+  if (curentAccordion.classList.contains('active')) {
+    currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
+  } else {
+    currentContent.style.maxHeight = 0;
+  }
+};
+
+accordions.forEach((accordion) => {
+  accordion.addEventListener('click', accordionHandler);
+});

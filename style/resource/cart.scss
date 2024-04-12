@@ -169,9 +169,9 @@ $max-width: 1180px;
   object-fit: contain;
 }
 
-//PAGE
+//PAGES
 
-.cart-page #wmc {
+#wmc {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 12px;
   line-height: 117%;
@@ -180,7 +180,7 @@ $max-width: 1180px;
   background: var(--cl-light);
 }
 
-.cart-page #wmc>.wrapper {
+#wmc>.wrapper {
   padding: 0;
   width: 100%;
   max-width: 100%;
@@ -257,7 +257,7 @@ $max-width: 1180px;
   margin-bottom: 24px;
 }
 
-//Text
+//Texts
 
 .title-main {
   font-size: 20px;
@@ -403,22 +403,9 @@ $max-width: 1180px;
   }
 }
 
-//COMPONENTS
+//Controls
 
-//Section
-
-.section {
-
-  @media (min-width: $tablet-width) {
-    padding-top: 36px;
-    background: var(--cl-contrast);
-    border-radius: 30px;
-    box-shadow: var(--extra-shadow);
-    overflow: hidden;
-  }
-}
-
-//Button main
+//---Button main
 
 .button-main {
   padding: 8px;
@@ -446,6 +433,8 @@ $max-width: 1180px;
     box-shadow: var(--inner-shadow);
   }
 }
+
+//---Button extra
 
 .button-extra {
   padding: 8px;
@@ -476,65 +465,7 @@ $max-width: 1180px;
   margin-right: 5px;
 }
 
-//Yandex pay logo
-
-.ya-pay-logo {
-  display: inline-flex;
-  align-items: center;
-}
-
-.ya-pay-logo__icon {
-  margin-right: 5px;
-}
-
-//Field with label
-
-.field-labeled {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.field-labeled__field {
-  order: 2;
-}
-
-.field-labeled__label {
-  margin-right: 15px;
-  font-size: 14px;
-  font-weight: var(--fw-medium);
-  color: var(--cl-heavy-dark);
-  order: 1;
-}
-
-//Field main
-
-input[class~='field-main'] {
-  max-width: 160px;
-  padding: 10px;
-  background: var(--cl-accent);
-  border: none;
-  text-align: center;
-  line-height: 100%;
-  vertical-align: middle;
-  border-radius: 16px;
-  box-shadow: var(--inner-shadow);
-  font-size: 14px;
-  font-weight: var(--fw-medium);
-  color: var(--cl-contrast);
-  box-sizing: border-box;
-  transition: var(--transition-main);
-
-  &:focus {
-    box-shadow: none;
-  }
-
-  &::placeholder {
-    color: inherit;
-  }
-}
-
-//Button radio
+//---Button radio
 
 .button-radio {
   display: flex;
@@ -603,7 +534,7 @@ input[class~='field-main'] {
   border-radius: 20px;
 }
 
-//Button slider
+//---Button slider
 
 .button-slider {
   padding: 12px;
@@ -642,7 +573,7 @@ input[class~='field-main'] {
   }
 }
 
-//Link button
+//---Button link
 
 .button-link {
   padding: 5px 8px;
@@ -664,43 +595,100 @@ input[class~='field-main'] {
   margin-right: 9px;
 }
 
-//Item info
+//---Yandex pay logo
 
-.item-info {
-  display: flex;
-  justify-content: space-between;
+.ya-pay-logo {
+  display: inline-flex;
+  align-items: center;
 }
 
-.item-info__text-block {
-  flex: 0 1 fit-content;
-  margin-right: 10px;
+.ya-pay-logo__icon {
+  margin-right: 5px;
 }
 
-.item-info__icon {
-  width: 17px;
-  height: 18px;
-  fill: var(--cl-accent);
+
+//COMPONENTS
+
+//---Section
+
+.section {
 
   @media (min-width: $tablet-width) {
-    width: 22px;
-    height: auto;
+    padding-top: 36px;
+    background: var(--cl-contrast);
+    border-radius: 30px;
+    box-shadow: var(--extra-shadow);
+    overflow: hidden;
   }
 }
 
-.item-info__price-block {
-  flex: 0 0 fit-content;
+//---Field with label
+
+.field-labeled {
   display: flex;
-  flex-direction: column;
-  align-items: end;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.field-labeled__field {
+  order: 2;
+}
 
-//Counter
+.field-labeled__label {
+  margin-right: 15px;
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--cl-heavy-dark);
+  order: 1;
+}
+
+//---Field main
+
+input[class~='field-main'] {
+  max-width: 160px;
+  padding: 10px;
+  background: var(--cl-accent);
+  border: none;
+  text-align: center;
+  line-height: 100%;
+  vertical-align: middle;
+  border-radius: 16px;
+  box-shadow: var(--inner-shadow);
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--cl-contrast);
+  box-sizing: border-box;
+  transition: var(--transition-main);
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: inherit;
+  }
+}
+
+//---Counter
 
 .counter {
   display: flex;
   align-items: center;
   justify-content: end;
+}
+
+.counter--readonly {
+  .counter__buttons-block {
+    display: none;
+  }
+
+  .counter__del-button {
+    display: none;
+  }
+
+  .counter__field-block {
+    margin-right: 0;
+  }
 }
 
 .counter__buttons-block {
@@ -760,7 +748,47 @@ input[class~='field-main'] {
   }
 }
 
-//Order
+//---Item info
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-info__text-block {
+  flex: 1 1 auto;
+  margin-right: 10px;
+}
+
+.item-info__image-block {
+  margin-right: 10px;
+}
+
+.item-info__icon {
+  width: 17px;
+  height: 18px;
+  fill: var(--cl-accent);
+
+  @media (min-width: $tablet-width) {
+    width: 22px;
+    height: auto;
+  }
+}
+
+.item-info__counter-block {
+  margin-right: 10px;
+  display: block;
+}
+
+.item-info__price-block {
+  flex: 0 0 fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  min-width: 80px;
+}
+
+//---Order
 
 .order {
   padding: 14px 0;
@@ -828,15 +856,37 @@ input[class~='field-main'] {
   flex-direction: column;
   align-items: end;
   flex: 0 0 fit-content;
-  min-width: 76px;
+  min-width: 80px;
 
   @media (min-width: $tablet-width) {
-    min-width: auto;
-  }
-
-  @media (min-width: 840px) {
     min-width: 100px;
   }
+}
+
+// Accordion
+
+.accordion {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion__label {
+  order: 2;
+  position: relative;
+  cursor: pointer;
+
+  .container {
+    pointer-events: none;
+  }
+}
+
+.accordion__content {
+  order:1;
+  position: relative;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.3s ease-in;
 }
 
 //SECTIONS
@@ -866,16 +916,15 @@ input[class~='field-main'] {
 
 .form-start__detail {
   @media (min-width: $tablet-width) {
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
   }
 }
 
 .form-start__order-structure {
   @media (min-width: $tablet-width) {
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
   }
 }
-
 
 //Order structure
 
@@ -1118,4 +1167,17 @@ input[class~='field-main'] {
   &:last-child {
     margin-right: 0;
   }
+}
+
+// Order content
+
+.order-content__sum {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-content__sum-price {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }

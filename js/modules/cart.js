@@ -7291,9 +7291,11 @@ const setSimpleSlider = (container, controlsContainer) => (0,tiny_slider__WEBPAC
     }
   }
 });
-setSimpleSlider('#date-slider', '#date-control');
+if (document.querySelector('#date-slider') && document.querySelector('#date-control')) {
+  setSimpleSlider('#date-slider', '#date-control');
+}
 
-//Input
+//Input Validation
 
 const phoneInput = document.querySelector('#card-loyality');
 const maskOptions = {
@@ -7303,9 +7305,12 @@ const maskOptions = {
     mask: 'FL 0000 0000 00'
   }]
 };
-(0,imask__WEBPACK_IMPORTED_MODULE_1__["default"])(phoneInput, maskOptions);
+if (phoneInput) {
+  (0,imask__WEBPACK_IMPORTED_MODULE_1__["default"])(phoneInput, maskOptions);
+}
 
 //Extra control
+
 const controlExtraElement = document.querySelector('.control-extra');
 const handleMenuAppearance = () => {
   const conrolElement = document.querySelector('.cart-page__details');
@@ -7318,9 +7323,29 @@ const handleMenuAppearance = () => {
     controlExtraElement.style.display = 'block';
   }
 };
-handleMenuAppearance();
-window.addEventListener('scroll', handleMenuAppearance);
-window.addEventListener('resize', handleMenuAppearance);
+if (controlExtraElement) {
+  handleMenuAppearance();
+  window.addEventListener('scroll', handleMenuAppearance);
+  window.addEventListener('resize', handleMenuAppearance);
+}
+
+// Accordion
+
+const accordions = Array.from(document.querySelectorAll('.accordion'));
+const accordionHandler = evt => {
+  evt.preventDefault();
+  const curentAccordion = evt.target.closest('.accordion');
+  const currentContent = evt.target.nextElementSibling;
+  curentAccordion.classList.toggle('active');
+  if (curentAccordion.classList.contains('active')) {
+    currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
+  } else {
+    currentContent.style.maxHeight = 0;
+  }
+};
+accordions.forEach(accordion => {
+  accordion.addEventListener('click', accordionHandler);
+});
 })();
 
 /******/ })()
