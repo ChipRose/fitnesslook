@@ -542,7 +542,7 @@ input[class~='field-main'] {
 
   &--slider {
     padding: 20px 3px;
-    width: fit-content;
+    width: auto;
   }
 
   @media (min-width: $tablet-width) {
@@ -845,6 +845,11 @@ input[class~='field-main'] {
 
 .form-start__col {
 
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+
   &:first-child {
     @media (min-width: $tablet-width) {
       margin-right: 15px;
@@ -856,6 +861,18 @@ input[class~='field-main'] {
     @media (min-width: $tablet-width) {
       flex: 0 1 470px;
     }
+  }
+}
+
+.form-start__detail {
+  @media (min-width: $tablet-width) {
+    flex: 1 1 auto;
+  }
+}
+
+.form-start__order-structure {
+  @media (min-width: $tablet-width) {
+    flex: 1 1 auto;
   }
 }
 
