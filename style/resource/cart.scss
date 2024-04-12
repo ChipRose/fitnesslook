@@ -542,6 +542,7 @@ input[class~='field-main'] {
 
   &--slider {
     padding: 20px 3px;
+    width: fit-content;
   }
 
   @media (min-width: $tablet-width) {
@@ -987,6 +988,10 @@ input[class~='field-main'] {
 
   &:last-child {
     margin-bottom: 0;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 4px;
+    }
   }
 
   @media (min-width: $tablet-width) {
