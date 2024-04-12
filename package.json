@@ -51,6 +51,7 @@
     "test": "npm run w3c && bemlinter && npm run editorconfig && npm run eslinter && npm run stylelint",
     "start": "gulp runDev",
     "build": "gulp buildProd",
+    "deploy": "gulp PubProd",
     "preview": "gulp buildProd && gulp startServer"
   },
   "editorconfig-cli": [

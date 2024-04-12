@@ -137,3 +137,73 @@ export function runDev(done) {
     watchFiles
   )(done);
 }
+
+//Depl
+
+function deleteFoldersPub() {
+  return deleteAsync(['./build']);
+}
+
+export function processMarkupPub() {
+  return gulp.src('*.html')
+    .pipe(gulp.dest('./build'));
+}
+
+export function processStylesPub() {
+  return gulp.src('./style/resource/*.scss', { sourcemaps: isDevelopment })
+    .pipe(plumber())
+    .pipe(sass({
+    }).on('error', sass.logError))
+    .pipe(gulp.dest('./build/style/modules/cart.css', { sourcemaps: isDevelopment }));
+}
+
+export function processAllScriptsPub() {
+  return gulp.series(
+    () => processScripts({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js', dest: './build/js/modules/' }),
+    () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js', dest: './build/js/modules/' }),
+    () => processScripts({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js', dest: './build/js/modules/' }),
+    () => processScripts({ src: './js/common/region-delivery.js', title: 'region-delivery.js', dest: './build/js/modules/' }),
+    () => processScripts({ src: './js/common/cart.js', title: 'cart.js', dest: './build/js/modules/' }),
+  );
+}
+
+export function copyAssetsPub() {
+  return gulp.src([
+    './i/media-resource/**/*',
+  ], { base: 'i/media-resource' })
+    .pipe(gulp.dest('./build/i/media'));
+}
+
+export function createStackPub() {
+  return gulp.src('./i/media-resource/stat/icons/**/*.svg')
+    .pipe(svgo())
+    .pipe(stacksvg())
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('./build/i/media/stat/'));
+}
+
+export function createWebpPub() {
+  return gulp.src('./i/media-resource/**/*.{jpg,png,svg}')
+    .pipe(webp())
+    .pipe(gulp.dest('./build/i/media/'));
+}
+
+function compileProjectPub(done) {
+  gulp.parallel(
+    processMarkupPub,
+    processStylesPub,
+    processAllScriptsPub(),
+    copyAssetsPub,
+    createStackPub,
+    createWebpPub
+  )(done);
+}
+
+export function PubProd(done) {
+  isDevelopment = false;
+
+  gulp.series(
+    deleteFoldersPub,
+    compileProjectPub
+  )(done);
+}
