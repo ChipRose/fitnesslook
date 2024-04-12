@@ -31,11 +31,11 @@ jobs:
       - name: Install
         run: npm ci
       - name: Build
-        run: npm run build
+        run: npm run deploy
      # - name: Deploy
-     #   run: cd build && rsync -e "ssh -i $HOME/.ssh/BUILD -o StrictHostKeyChecking=no" --archive --compress --delete .ChipRose@Cat-energy:/var/www/Cat-energy/html/
+     #   run: cd build && rsync -e "ssh -i $HOME/.ssh/BUILD -o StrictHostKeyChecking=no" --archive --compress --delete .fitnesslook@fitnesslook:/var/www/fitnesslook/html/
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
-          branch: master # The branch the action should deploy to.
-          folder: / # The folder the action should deploy.
+          branch: gh-page # The branch the action should deploy to.
+          folder: build # The folder the action should deploy.
