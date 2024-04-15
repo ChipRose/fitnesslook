@@ -47,7 +47,11 @@ let isDevelopment = true;
 
 export function processMarkup() {
   return gulp.src(path.src.html)
-    .pipe(fileinclude())
+    .pipe(fileinclude({
+      context: {
+        path: '/'
+      }
+    }))
     .pipe(gulp.dest(path.build.html))
     .pipe(browser.stream());
 }
@@ -112,7 +116,7 @@ export function copyAssets() {
 }
 
 function deleteFolders() {
-  return deleteAsync(['./*.html',path.build.assets, path.build.js, path.build.css]);
+  return deleteAsync(['./*.html', path.build.assets, path.build.js, path.build.css]);
 }
 
 export function startServer(done) {
@@ -177,8 +181,14 @@ function deleteFoldersPub() {
 }
 
 export function processMarkupPub() {
-  return gulp.src('*.html')
-    .pipe(gulp.dest('./build'));
+  return gulp.src(path.src.html)
+    .pipe(fileinclude({
+      context: {
+        path: './'
+      }
+    }))
+    .pipe(gulp.dest(path.publication.html))
+    .pipe(browser.stream());
 }
 
 export function processStylesPub() {
