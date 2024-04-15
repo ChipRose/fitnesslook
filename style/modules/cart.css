@@ -583,6 +583,11 @@ template {
   margin-bottom: 24px;
 }
 
+.cart-page-order__title-main {
+  padding-top: 17px;
+  margin-bottom: 38px;
+}
+
 .title-main {
   font-size: 20px;
   font-weight: var(--fw-bold);
@@ -598,6 +603,7 @@ template {
   font-size: 18px;
   font-weight: var(--fw-bold);
   color: var(--cl-heavy-dark);
+  line-height: 95%;
 }
 @media (min-width: 768px) {
   .title-section {
@@ -870,6 +876,20 @@ template {
 
 .button-link__icon {
   margin-right: 9px;
+}
+
+.button-link-iconed {
+  padding: 5px 5px 5px 0;
+  display: block;
+  width: fit-content;
+  transition: var(--transition-main);
+}
+.button-link-iconed:hover {
+  opacity: 0.6;
+}
+
+.button-link-iconed__icon {
+  margin-right: 16px;
 }
 
 .ya-pay-logo {
@@ -1397,31 +1417,61 @@ input[class~=field-main]::placeholder {
   margin-right: 0;
 }
 
-.order-content__title {
-  margin-right: 17px;
+.order-content__title-block {
+  margin-bottom: 21px;
 }
 
-.order-content__sum {
-  margin-right: 10px;
+.order-content__short-list {
+  display: flex;
+  align-items: center;
+}
+
+.order-content__list-item {
+  margin-right: 40px;
+}
+.order-content__list-item--image-block {
+  border-radius: 12px;
+  overflow: hidden;
+}
+.order-content__list-item:last-child {
+  margin-right: 0;
+}
+
+.order-content__label {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.order-content__sum-price {
+.order-content__label-text-block {
+  margin-right: 17px;
+}
+
+.order-content__text {
+  margin-right: 15px;
+}
+
+.order-content__label-price-block {
   display: flex;
   flex-direction: column;
   align-items: end;
 }
 
-.order-content__date-sum {
-  margin-bottom: 55px;
+.order-content__date-summary {
+  padding-top: 25px;
+  margin-bottom: 80px;
 }
 
-.date-sum {
-  padding: 25px 0;
+.order-content__icon {
+  fill: var(--cl-accent);
 }
 
-.date-sum__title-block {
-  margin-bottom: 32px;
+.order-content__date-title-block {
+  margin-bottom: 25px;
+}
+
+.order-content__price-rezult {
+  font-size: 16px;
+  color: var(--cl-heavy-dark);
+  font-weight: var(--fw-bold);
 }

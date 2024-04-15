@@ -3587,31 +3587,59 @@
       <div id="main_content_template">
         <div class="cart-page-order__title-main">
           <div class="container">
-            <h1 class="title title-main">
-              <a href="/cart-start.html" class="link">
-                <svg width="35" height="14" role="img" focusable="false">
+            <p class="text title-main">
+              <a href="cart-start.html" class="link button-link-iconed">
+                <svg class="button-link-iconed__icon" width="35" height="14" role="img" focusable="false">
                   <use xlink:href="i/media/stat/sprite.svg#simple-arrow-back"></use>
                 </svg>
+                Оформление заказа
               </a>
-              Оформление заказа
-            </h1>
+            </p>
           </div>
         </div>
         <section class="order-content">
+          <div class="order-content__common">
+            <div class="order-content__title-block">
+              <div class="container container--narrow">
+                <h1 class="title title-section">
+                  Данные по заказу
+                </h1>
+              </div>
+            </div>
+            <div class="order-content__summary">
+              <div class="container">
+                <div class="list order-content__short-list">
+                  <div class="order-content__list-item order-content__list-item--image-block image-block">
+                      <img src="i/media/stat/cart/product-template-1.webp" width="59" alt="Выбранный продукт">
+                  </div>
+                  <div class="order-content__list-item">
+                    <span class="text-main text-main--accent text-main--medium">
+                      +
+                    </span>
+                  </div>
+                  <div class="order-content__list-item">
+                    <svg class="order-content__icon" width="21" height="22" role="img" focusable="false">
+                      <use xlink:href="i/media/stat/sprite.svg#present-icon"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="accordion order-content__accordion">
             <div class="accordion__label">
               <div class="container container--narrow">
-                <div class="order-content__sum">
-                  <div class="order-content__sum-title">
-                    <span class="text-main text-main--middle order-content__title">
+                <div class="order-content__label">
+                  <div class="order-content__label-text-block">
+                    <span class="text-main text-main--middle order-content__text">
                       Информация о заказе
                     </span>
                     <svg class="accordion__icon" width="11" height="9" role="img" focusable="false">
                       <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
                     </svg>
                   </div>
-                  <div class="order-content__sum-price">
-                    <span class="text-main text-main--accent-adaptive">
+                  <div class="order-content__label-price-block">
+                    <span class="text-main order-content__price-rezult">
                       1 684 400 Р
                     </span>
                     <span class="text-main text-main--del">
@@ -3622,14 +3650,14 @@
               </div>
             </div>
             <div class="accordion__content">
-              <div class="date-sum order-content__date-sum">
+              <div class="order-content__date-summary">
                 <div class="container container--narrow">
-                  <div class="date-sum__title-block">
+                  <div class="order-content__date-title-block">
                     <h2 class="title title-section">
                       Выбранная дата и время доставки:
                     </h2>
                   </div>
-                  <div class="date-sum__text-block">
+                  <div class="order-content__date-text-block">
                     <p class="text text-main text-main--accent text-main--medium">
                       21 ноября, с  14:00 до 18:00
                     </p>
