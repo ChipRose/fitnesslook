@@ -270,6 +270,18 @@ $max-width: 1180px;
   margin-bottom: 38px;
 }
 
+.cart-page-order__title {
+  margin-bottom: 35px;
+}
+
+.cart-page-order__fieldset {
+  margin-bottom: 54px;
+}
+
+.cart-page-order__contacts {
+  margin-bottom: 28px;
+}
+
 //Texts
 
 .title-main {
@@ -719,6 +731,14 @@ textarea.field-simple {
 
 
 //COMPONENTS
+
+//---Paper
+
+.paper {
+  overflow: hidden;
+  box-shadow: var(--extra-shadow);
+  background: var(--cl-contrast);
+}
 
 //---Section
 
@@ -1316,9 +1336,7 @@ textarea.field-simple {
 
 // Form order
 
-.form-order__title {
-  margin-bottom: 35px;
-}
+
 
 .form-order__fieldlist-item {
   margin-bottom: 10px;
@@ -1328,9 +1346,7 @@ textarea.field-simple {
   }
 }
 
-.form-order__fieldset {
-  margin-bottom: 54px;
-}
+
 
 .form-order__textarea {
   min-height: 123px;
