@@ -49,7 +49,8 @@ export function processMarkup() {
   return gulp.src(path.src.html)
     .pipe(fileinclude({
       context: {
-        path: '/'
+        path: '/',
+        rootPath:'/'
       }
     }))
     .pipe(gulp.dest(path.build.html))
@@ -184,7 +185,8 @@ export function processMarkupPub() {
   return gulp.src(path.src.html)
     .pipe(fileinclude({
       context: {
-        path: './'
+        path: '/',
+        rootPath:''
       }
     }))
     .pipe(gulp.dest(path.publication.html))
@@ -192,11 +194,11 @@ export function processMarkupPub() {
 }
 
 export function processStylesPub() {
-  return gulp.src('./style/resource/*.scss', { sourcemaps: isDevelopment })
+  return gulp.src(path.src.css, { sourcemaps: isDevelopment })
     .pipe(plumber())
     .pipe(sass({
     }).on('error', sass.logError))
-    .pipe(gulp.dest('./build/style/modules/cart.css', { sourcemaps: isDevelopment }));
+    .pipe(gulp.dest(path.publication.css, { sourcemaps: isDevelopment }));
 }
 
 export function processAllScriptsPub() {
@@ -225,7 +227,7 @@ export function createStackPub() {
 }
 
 export function createWebpPub() {
-  return gulp.src('./i/media-resource/**/*.{jpg,png,svg}')
+  return gulp.src('./i/media-resource/**/*.{jpg,png}')
     .pipe(webp())
     .pipe(gulp.dest('./build/i/media/'));
 }
