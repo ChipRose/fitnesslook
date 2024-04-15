@@ -7297,7 +7297,8 @@ if (document.querySelector('#date-slider') && document.querySelector('#date-cont
 
 //Input Validation
 
-const phoneInput = document.querySelector('#card-loyality');
+const loyalityInput = document.querySelector('#card-loyality');
+const phoneInput = document.querySelector('#contact-phone');
 const maskOptions = {
   mask: [{
     mask: '+{7}(000)000-00-00'
@@ -7305,8 +7306,16 @@ const maskOptions = {
     mask: 'FL 0000 0000 00'
   }]
 };
+const maskPhoneOptions = {
+  mask: [{
+    mask: '+{7}(000)000-00-00'
+  }]
+};
+if (loyalityInput) {
+  (0,imask__WEBPACK_IMPORTED_MODULE_1__["default"])(loyalityInput, maskOptions);
+}
 if (phoneInput) {
-  (0,imask__WEBPACK_IMPORTED_MODULE_1__["default"])(phoneInput, maskOptions);
+  (0,imask__WEBPACK_IMPORTED_MODULE_1__["default"])(phoneInput, maskPhoneOptions);
 }
 
 //Extra control

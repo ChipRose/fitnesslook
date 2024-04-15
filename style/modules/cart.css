@@ -440,6 +440,10 @@ template {
   -moz-appearance: textfield;
 }
 
+.textarea {
+  resize: none !important;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -901,16 +905,6 @@ template {
   margin-right: 5px;
 }
 
-@media (min-width: 768px) {
-  .section {
-    padding-top: 36px;
-    background: var(--cl-contrast);
-    border-radius: 30px;
-    box-shadow: var(--extra-shadow);
-    overflow: hidden;
-  }
-}
-
 .field-labeled {
   display: flex;
   justify-content: space-between;
@@ -950,6 +944,46 @@ input[class~=field-main]:focus {
 }
 input[class~=field-main]::placeholder {
   color: inherit;
+}
+
+input.field-simple[type=text],
+textarea.field-simple {
+  padding: 14px 20px;
+  width: 100%;
+  background: var(--cl-contrast);
+  border: none;
+  line-height: 100%;
+  vertical-align: middle;
+  border-radius: 20px;
+  box-shadow: var(--main-shadow);
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--cl-heavy-dark);
+  box-sizing: border-box;
+  transition: var(--transition-main);
+}
+input.field-simple[type=text]:focus,
+textarea.field-simple:focus {
+  box-shadow: none;
+}
+input.field-simple[type=text]::placeholder,
+textarea.field-simple::placeholder {
+  font-weight: var(--fw-regular);
+  color: var(--cl-neutral);
+}
+input.field-simple[type=text]:hover,
+textarea.field-simple:hover {
+  box-shadow: var(--accent-shadow);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-top: 36px;
+    background: var(--cl-contrast);
+    border-radius: 30px;
+    box-shadow: var(--extra-shadow);
+    overflow: hidden;
+  }
 }
 
 .counter {
@@ -1474,4 +1508,23 @@ input[class~=field-main]::placeholder {
   font-size: 16px;
   color: var(--cl-heavy-dark);
   font-weight: var(--fw-bold);
+}
+
+.form-order__title {
+  margin-bottom: 35px;
+}
+
+.form-order__fieldlist-item {
+  margin-bottom: 10px;
+}
+.form-order__fieldlist-item:last-child {
+  margin-bottom: 0px;
+}
+
+.form-order__fieldset {
+  margin-bottom: 54px;
+}
+
+.form-order__textarea {
+  min-height: 123px;
 }
