@@ -185,7 +185,7 @@ export function processMarkupPub() {
   return gulp.src(path.src.html)
     .pipe(fileinclude({
       context: {
-        path: '/',
+        path: '',
         rootPath:''
       }
     }))
