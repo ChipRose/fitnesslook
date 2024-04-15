@@ -48,7 +48,8 @@ if (document.querySelector('#date-slider') && document.querySelector('#date-cont
 
 //Input Validation
 
-const phoneInput = document.querySelector('#card-loyality');
+const loyalityInput = document.querySelector('#card-loyality');
+const phoneInput = document.querySelector('#contact-phone');
 
 const maskOptions = {
   mask: [
@@ -57,8 +58,18 @@ const maskOptions = {
   ]
 };
 
+const maskPhoneOptions = {
+  mask: [
+    { mask: '+{7}(000)000-00-00' },
+  ]
+};
+
+if (loyalityInput) {
+  IMask(loyalityInput, maskOptions);
+}
+
 if (phoneInput) {
-  IMask(phoneInput, maskOptions);
+  IMask(phoneInput, maskPhoneOptions);
 }
 
 

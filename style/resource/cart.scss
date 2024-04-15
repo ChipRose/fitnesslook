@@ -119,6 +119,10 @@ $max-width: 1180px;
   -moz-appearance: textfield;
 }
 
+.textarea {
+  resize: none !important;
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -632,21 +636,7 @@ $max-width: 1180px;
   margin-right: 5px;
 }
 
-
-//COMPONENTS
-
-//---Section
-
-.section {
-
-  @media (min-width: $tablet-width) {
-    padding-top: 36px;
-    background: var(--cl-contrast);
-    border-radius: 30px;
-    box-shadow: var(--extra-shadow);
-    overflow: hidden;
-  }
-}
+//Fields
 
 //---Field with label
 
@@ -694,6 +684,56 @@ input[class~='field-main'] {
     color: inherit;
   }
 }
+
+//---Field simple
+
+input.field-simple[type="text"],
+textarea.field-simple {
+  padding: 14px 20px;
+  width: 100%;
+  background: var(--cl-contrast);
+  border: none;
+  line-height: 100%;
+  vertical-align: middle;
+  border-radius: 20px;
+  box-shadow: var(--main-shadow);
+  font-size: 14px;
+  font-weight: var(--fw-medium);
+  color: var(--cl-heavy-dark);
+  box-sizing: border-box;
+  transition: var(--transition-main);
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    font-weight: var(--fw-regular);
+    color: var(--cl-neutral);
+  }
+
+  &:hover {
+    box-shadow: var(--accent-shadow);
+  }
+}
+
+
+//COMPONENTS
+
+//---Section
+
+.section {
+
+  @media (min-width: $tablet-width) {
+    padding-top: 36px;
+    background: var(--cl-contrast);
+    border-radius: 30px;
+    box-shadow: var(--extra-shadow);
+    overflow: hidden;
+  }
+}
+
+
 
 //---Counter
 
@@ -1272,5 +1312,26 @@ input[class~='field-main'] {
   font-size: 16px;
   color: var(--cl-heavy-dark);
   font-weight: var(--fw-bold);
+}
 
+// Form order
+
+.form-order__title {
+  margin-bottom: 35px;
+}
+
+.form-order__fieldlist-item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.form-order__fieldset {
+  margin-bottom: 54px;
+}
+
+.form-order__textarea {
+  min-height: 123px;
 }

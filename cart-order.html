@@ -3597,6 +3597,7 @@
             </p>
           </div>
         </div>
+
         <section class="order-content">
           <div class="order-content__common">
             <div class="order-content__title-block">
@@ -3854,7 +3855,62 @@
           </div>
         </section>
 
-
+        <form class="form-order">
+          <div class="form-order__title">
+            <div class="container container--narrow">
+              <h2 class="title title-section">
+                Контактные данные
+              </h2>
+            </div>
+          </div>
+          <fieldset class="fieldset form-order__fieldset">
+            <div class="container">
+              <ul class="list form-order__fieldlist">
+                <li class="form-order__fieldlist-item">
+                  <label>
+                    <input class="input field-simple" type="text" placeholder="Ваше имя" name="name">
+                    <span class="visually-hidden">
+                      Ваше имя
+                    </span>
+                  </label>
+                </li>
+                <li class="form-order__fieldlist-item">
+                  <label>
+                    <input class="input field-simple" type="text" placeholder="Город доставки" name="city">
+                    <span class="visually-hidden">
+                      Город доставки
+                    </span>
+                  </label>
+                </li>
+                <li class="form-order__fieldlist-item">
+                  <label>
+                    <input class="input field-simple" type="text" placeholder="Ваш телефон" name="phone" id="contact-phone">
+                    <span class="visually-hidden">
+                      Ваш телефон
+                    </span>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <div class="form-order__title">
+            <div class="container container--narrow">
+              <h2 class="title title-section">
+                Адрес доставки:
+              </h2>
+            </div>
+          </div>
+          <fieldset class="fieldset">
+            <div class="container">
+              <label>
+                <textarea class="textarea field-simple form-order__textarea" placeholder="Введите адрес, по которому нужно доставить товар" name="address"></textarea>
+                <span class="visually-hidden">
+                  Ваше имя
+                </span>
+              </label>
+            </div>
+          </fieldset>
+        </form>
       </div>
       <div class="clear"></div>
     </div><!-- #wrapper -->
