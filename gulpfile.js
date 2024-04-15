@@ -9,25 +9,59 @@ import svgo from 'gulp-svgmin';
 import rename from 'gulp-rename';
 import { stacksvg } from 'gulp-stacksvg';
 import browser from 'browser-sync';
+import fileinclude from 'gulp-file-include';
+
+const PROJECT_FOLDER = '.';
+const SRC_FOLDER = '.';
+const PUBLICATION_FOLDER = './build';
+
+const path = {
+  src: {
+    html: `${SRC_FOLDER}/html/**/*.html`,
+    css: `${SRC_FOLDER}/style/resource/*.scss`,
+    img: `${SRC_FOLDER}/i/media-resource/**/*.{jpg,png}`,
+    sprite: `${SRC_FOLDER}/i/media-resource/stat/icons/**/*.svg`,
+    assets: `${SRC_FOLDER}/i/media-resource/**/*`
+  },
+  build: {
+    html: `${PROJECT_FOLDER}/`,
+    css: `${PROJECT_FOLDER}/style/modules/`,
+    js: `${PROJECT_FOLDER}/js/modules/`,
+    img: `${PROJECT_FOLDER}/i/media/`,
+    sprite: `${PROJECT_FOLDER}/i/media/stat/`,
+    assets: `${PROJECT_FOLDER}/i/media`
+  },
+  publication: {
+    html: `${PUBLICATION_FOLDER}/`,
+    css: `${PUBLICATION_FOLDER}/style/modules/`,
+    js: `${PUBLICATION_FOLDER}/js/modules/`,
+    img: `${PUBLICATION_FOLDER}/i/media/`,
+    sprite: `${PUBLICATION_FOLDER}/i/media/stat/`,
+    assets: `${PUBLICATION_FOLDER}/i/media`
+  }
+};
 
 
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
 
 export function processMarkup() {
-  return gulp.src('*.html');
-}
-
-export function processStyles() {
-  return gulp.src('./style/resource/*.scss', { sourcemaps: isDevelopment })
-    .pipe(plumber())
-    .pipe(sass({
-    }).on('error', sass.logError))
-    .pipe(gulp.dest('./style/modules/', { sourcemaps: isDevelopment }))
+  return gulp.src(path.src.html)
+    .pipe(fileinclude())
+    .pipe(gulp.dest(path.build.html))
     .pipe(browser.stream());
 }
 
-export function processScripts({ src, title, dest = './js/modules/' }) {
+export function processStyles() {
+  return gulp.src(path.src.css, { sourcemaps: isDevelopment })
+    .pipe(plumber())
+    .pipe(sass({
+    }).on('error', sass.logError))
+    .pipe(gulp.dest(path.build.css, { sourcemaps: isDevelopment }))
+    .pipe(browser.stream());
+}
+
+export function processScripts({ src, title, dest = path.build.js }) {
   return gulp.src(src)
     .pipe(webpack({
       mode: 'none',
@@ -58,29 +92,27 @@ export function optimizeImages() {
 }
 
 export function createWebp() {
-  return gulp.src('./i/media-resource/**/*.{jpg,png,svg}')
+  return gulp.src(path.src.img)
     .pipe(webp())
-    .pipe(gulp.dest('./i/media/'));
+    .pipe(gulp.dest(path.build.img));
 }
 
 export function createStack() {
-  return gulp.src('./i/media-resource/stat/icons/**/*.svg')
+  return gulp.src(path.src.sprite)
     .pipe(svgo())
     .pipe(stacksvg())
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('./i/media/stat/'));
+    .pipe(gulp.dest(path.build.sprite));
 }
 
 
 export function copyAssets() {
-  return gulp.src([
-    './i/media-resource/**/*',
-  ], { base: 'i/media-resource' })
-    .pipe(gulp.dest('./i/media'));
+  return gulp.src(path.src.assets, { base: 'i/media-resource' })
+    .pipe(gulp.dest(path.build.assets));
 }
 
 function deleteFolders() {
-  return deleteAsync(['./i/media', './js/modules', './style/modules']);
+  return deleteAsync(['./*.html',path.build.assets, path.build.js, path.build.css]);
 }
 
 export function startServer(done) {
@@ -138,7 +170,7 @@ export function runDev(done) {
   )(done);
 }
 
-//Depl
+//Publication
 
 function deleteFoldersPub() {
   return deleteAsync(['./build']);
@@ -175,11 +207,11 @@ export function copyAssetsPub() {
 }
 
 export function createStackPub() {
-  return gulp.src('./i/media-resource/stat/icons/**/*.svg')
+  return gulp.src(path.src.sprite)
     .pipe(svgo())
     .pipe(stacksvg())
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('./build/i/media/stat/'));
+    .pipe(gulp.dest(path.publication.sprite));
 }
 
 export function createWebpPub() {
