@@ -75,3 +75,16 @@
     flex: 0 0 calc(50% - 2 * 46px);
   }
 }
+
+.payment__alert {
+  font-size: 12px;
+  color: var(--cl-disable);
+
+  p {
+    margin-bottom: 8px;
+  };
+
+  p:last-child {
+    margin-bottom: 0;
+  };
+}
