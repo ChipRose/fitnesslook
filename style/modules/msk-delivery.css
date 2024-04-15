@@ -2077,6 +2077,17 @@ p, span {
   }
 }
 
+.payment__alert {
+  font-size: 12px;
+  color: var(--cl-disable);
+}
+.payment__alert p {
+  margin-bottom: 8px;
+}
+.payment__alert p:last-child {
+  margin-bottom: 0;
+}
+
 .delivery-regions__title {
   margin-bottom: 42px;
 }
