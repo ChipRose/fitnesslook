@@ -592,6 +592,18 @@ template {
   margin-bottom: 38px;
 }
 
+.cart-page-order__title {
+  margin-bottom: 35px;
+}
+
+.cart-page-order__fieldset {
+  margin-bottom: 54px;
+}
+
+.cart-page-order__contacts {
+  margin-bottom: 28px;
+}
+
 .title-main {
   font-size: 20px;
   font-weight: var(--fw-bold);
@@ -974,6 +986,12 @@ textarea.field-simple::placeholder {
 input.field-simple[type=text]:hover,
 textarea.field-simple:hover {
   box-shadow: var(--accent-shadow);
+}
+
+.paper {
+  overflow: hidden;
+  box-shadow: var(--extra-shadow);
+  background: var(--cl-contrast);
 }
 
 @media (min-width: 768px) {
@@ -1510,19 +1528,11 @@ textarea.field-simple:hover {
   font-weight: var(--fw-bold);
 }
 
-.form-order__title {
-  margin-bottom: 35px;
-}
-
 .form-order__fieldlist-item {
   margin-bottom: 10px;
 }
 .form-order__fieldlist-item:last-child {
   margin-bottom: 0px;
-}
-
-.form-order__fieldset {
-  margin-bottom: 54px;
 }
 
 .form-order__textarea {
