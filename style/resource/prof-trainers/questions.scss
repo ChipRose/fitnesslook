@@ -1,9 +1,0 @@
-.questions__title {
-  margin-bottom: var(--indent-big);
-  display: flex;
-  justify-content: center;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: var(--indent-huge);
-  }
-}
