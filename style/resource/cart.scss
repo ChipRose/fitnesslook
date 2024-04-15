@@ -872,6 +872,7 @@ input[class~='field-main'] {
 }
 
 .accordion__label {
+  padding: 18px 0;
   order: 2;
   position: relative;
   cursor: pointer;
@@ -882,11 +883,26 @@ input[class~='field-main'] {
 }
 
 .accordion__content {
-  order:1;
+  order: 1;
   position: relative;
   overflow: hidden;
   max-height: 0;
-  transition: all 0.3s ease-in;
+  transition: var(--transition-main);
+}
+
+.accordion__icon {
+  width: 11px;
+  height: 9px;
+  fill: var(--cl-neutral);
+  transform: rotate(180deg);
+  transition: var(--transition-main);
+}
+
+.accordion.active {
+  .accordion__icon {
+    transform: rotate(0);
+    transition: var(--transition-main);
+  }
 }
 
 //SECTIONS
@@ -1171,8 +1187,14 @@ input[class~='field-main'] {
 
 // Order content
 
+.order-content__title {
+  margin-right: 17px;
+}
+
 .order-content__sum {
+  margin-right: 10px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -1180,4 +1202,18 @@ input[class~='field-main'] {
   display: flex;
   flex-direction: column;
   align-items: end;
+}
+
+.order-content__date-sum {
+  margin-bottom: 55px;
+}
+
+// Date sum
+
+.date-sum {
+  padding: 25px 0;
+}
+
+.date-sum__title-block {
+  margin-bottom: 32px;
 }

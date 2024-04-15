@@ -38,6 +38,9 @@ const path = {
     img: `${PUBLICATION_FOLDER}/i/media/`,
     sprite: `${PUBLICATION_FOLDER}/i/media/stat/`,
     assets: `${PUBLICATION_FOLDER}/i/media`
+  },
+  watch:{
+    html:`${SRC_FOLDER}/html/**/*.html`
   }
 };
 
@@ -49,8 +52,7 @@ export function processMarkup() {
   return gulp.src(path.src.html)
     .pipe(fileinclude({
       context: {
-        path: '/',
-        rootPath:'/'
+        path: '/'
       }
     }))
     .pipe(gulp.dest(path.build.html))
@@ -142,7 +144,7 @@ function watchFiles() {
   gulp.watch('./i/media-resource/**/*.{jpg,png}', gulp.series(copyAssets, createWebp));
   gulp.watch('./json/**/*.{json}', gulp.series(copyAssets));
   gulp.watch('./js/common/**/*.js', gulp.series(processAllScripts()));
-  gulp.watch('./*.html', gulp.series(processMarkup, reloadServer));
+  gulp.watch(path.watch.html, gulp.series(processMarkup, reloadServer));
 }
 
 function compileProject(done) {
@@ -185,8 +187,7 @@ export function processMarkupPub() {
   return gulp.src(path.src.html)
     .pipe(fileinclude({
       context: {
-        path: '',
-        rootPath:''
+        path: ''
       }
     }))
     .pipe(gulp.dest(path.publication.html))
