@@ -1712,9 +1712,30 @@ textarea.field-simple:hover {
     padding-bottom: 20px;
   }
 }
-
 @media (min-width: 768px) {
-  .form-order__date-wrapper {
+  .form-order__date .form-order__date-wrapper {
+    padding: 29px 0;
+  }
+}
+
+.form-order__discount {
+  display: none;
+}
+@media (min-width: 768px) {
+  .form-order__discount {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition-main);
+  }
+}
+@media (min-width: 768px) {
+  .form-order__discount .section {
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .form-order__discount .form-order__discount-wrapper {
     padding: 29px 0;
   }
 }
