@@ -681,8 +681,8 @@ p, span {
   pointer-events: none;
   opacity: 0;
   font-size: 14px;
-  vertical-align: middle;
   line-height: 1.2;
+  vertical-align: middle;
 }
 
 .button-round {
@@ -1588,6 +1588,10 @@ p, span {
   .page-delivery__navigation {
     margin-bottom: 134px;
   }
+}
+
+.page-delivery__receiving {
+  margin-bottom: 89px;
 }
 
 .page-delivery__receiving-type {
