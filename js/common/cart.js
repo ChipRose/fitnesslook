@@ -103,23 +103,29 @@ if (controlExtraElement) {
 // Accordion
 
 const accordions = Array.from(document.querySelectorAll('.accordion'));
-const extraBlock = document.querySelector('.form-order__date');
+const extraBlocks = [document.querySelector('.form-order__date'), document.querySelector('.form-order__discount')];
 
 const accordionHandler = (evt) => {
   evt.preventDefault();
   const curentAccordion = evt.target.closest('.accordion');
   const currentContent = evt.target.nextElementSibling;
   curentAccordion.classList.toggle('active');
-  extraBlock?.classList.toggle('active');
+  extraBlocks?.forEach((block) => {
+    block.classList.toggle('active');
+  });
 
   if (curentAccordion.classList.contains('active')) {
     currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
-    extraBlock.style.maxHeight = `${extraBlock.scrollHeight}px`;
-    extraBlock.style.marginBottom = '15px';
+    extraBlocks?.forEach((block) => {
+      block.style.maxHeight = `${block.scrollHeight}px`;
+      block.style.marginBottom = '15px';
+    });
   } else {
     currentContent.style.maxHeight = 0;
-    extraBlock.style.maxHeight = 0;
-    extraBlock.style.marginBottom = '0';
+    extraBlocks?.forEach((block) => {
+      block.style.maxHeight = '0';
+      block.style.marginBottom = '0';
+    });
   }
 };
 

@@ -1562,13 +1562,40 @@ textarea.field-simple {
       padding-bottom: 20px;
     }
   }
-}
 
-.form-order__date-wrapper {
-  @media (min-width:$tablet-width) {
-    padding: 29px 0;
+  .form-order__date-wrapper {
+    @media (min-width:$tablet-width) {
+      padding: 29px 0;
+    }
   }
 }
+
+
+.form-order__discount {
+  display: none;
+
+  @media (min-width:$tablet-width) {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition-main);
+  }
+
+  .section {
+    @media (min-width:$tablet-width) {
+      padding-bottom: 20px;
+    }
+  }
+
+
+  .form-order__discount-wrapper {
+    @media (min-width:$tablet-width) {
+      padding: 29px 0;
+    }
+  }
+}
+
+
 
 .form-order__order-content {
   margin-bottom: 32px;
