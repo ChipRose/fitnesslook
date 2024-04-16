@@ -1100,6 +1100,12 @@ textarea.field-simple:hover {
   }
 }
 
+@media (min-width: 768px) {
+  .section.section--nopad {
+    padding-top: 0;
+  }
+}
+
 .counter {
   display: flex;
   align-items: center;
@@ -1521,6 +1527,7 @@ textarea.field-simple:hover {
 }
 @media (min-width: 768px) {
   .details__header {
+    padding-top: 29px;
     margin-bottom: 52px;
   }
 }
@@ -1613,6 +1620,18 @@ textarea.field-simple:hover {
   margin-bottom: 21px;
 }
 
+@media (min-width: 768px) {
+  .order-content__common {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .order-content__common-wrapper {
+    padding: 29px 0;
+  }
+}
+
 .order-content__short-list {
   display: flex;
   align-items: center;
@@ -1653,6 +1672,11 @@ textarea.field-simple:hover {
   padding-top: 25px;
   margin-bottom: 80px;
 }
+@media (min-width: 768px) {
+  .order-content__date-summary {
+    display: none;
+  }
+}
 
 .order-content__icon {
   fill: var(--cl-accent);
@@ -1670,6 +1694,29 @@ textarea.field-simple:hover {
 
 .form-order__title {
   margin-bottom: 35px;
+}
+
+.form-order__date {
+  display: none;
+}
+@media (min-width: 768px) {
+  .form-order__date {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition-main);
+  }
+}
+@media (min-width: 768px) {
+  .form-order__date .section {
+    padding-bottom: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .form-order__date-wrapper {
+    padding: 29px 0;
+  }
 }
 
 .form-order__order-content {
