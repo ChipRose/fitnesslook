@@ -53,8 +53,8 @@
         <form class="form-order cart-page-order__form-order">
           <div class="container-extra">
             <div class="container-extra__col">
-              <section class="order-content form-order__order-content section">
-                <div class="order-content__common">
+              <section class="order-content__common section section--nopad">
+                <div class="order-content__common-wrapper">
                   <div class="order-content__title-block">
                     <div class="container container--narrow">
                       <h1 class="title title-section">
@@ -82,6 +82,191 @@
                     </div>
                   </div>
                 </div>
+              </section>
+
+              <fieldset class="fieldset date form-order__date section section--nopad">
+                <div class="form-order__date-wrapper">
+                  <header class="date__header">
+                    <div class="container container--narrow">
+                      <h3 class="title title-subsection">
+                        Дата и время доставки:
+                      </h3>
+                    </div>
+                  </header>
+                  <div class="date__day">
+                    <div class="container">
+                      <div class="date__slider-wrapper">
+                        <div class="date__control" id="date-control">
+                          <button class="button button-slider button-slider--prev button-slider--disabled" type="button">
+                            <svg width="9" height="13" role="img" focusable="false">
+                              <use xlink:href="@@pathi/media/stat/sprite.svg#simple-arrow-right"></use>
+                            </svg>
+                          </button>
+                          <button class="button button-slider button-slider--next" type="button">
+                            <svg width="9" height="13" role="img" focusable="false">
+                              <use xlink:href="@@pathi/media/stat/sprite.svg#simple-arrow-right"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="date__day-list-wrapper">
+                          <ul class="list date__day-list" id="date-slider">
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="19/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    19 ноя
+                                  </span>
+                                  <span class="text-main text-main--big">
+                                    вс
+                                  </span>
+                                </span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" checked type="radio"
+                                  name="date-delivery" value="20/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    20 ноя
+                                  </span>
+                                  <span class="text-main text-main--big">
+                                    пн
+                                  </span>
+                                </span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="21/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    21 ноя
+                                  </span>
+                                  <span class="text-main text-main--big">
+                                    вт
+                                  </span>
+                                </span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="22/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    22 ноя
+                                  </span>
+                                  <span class="text-main text-main--big">
+                                    ср
+                                  </span>
+                                </span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="23/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    23 ноя
+                                  </span>
+                                  <span class="text-main text-main--big">
+                                    чт
+                                  </span>
+                                </span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="24/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    24 ноя
+                                  </span>
+                                  <span class="text-main text-main--big">
+                                    пт
+                                  </span>
+                                </span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="button-radio button-radio--slider">
+                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                  value="25/11/2024">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    25 ноя
+                                  </span>
+                                  <span class="text-main text-main--big">
+                                    сб
+                                  </span>
+                                </span>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="date__time">
+                    <div class="container">
+                      <ul class="list date__time-list">
+                        <li class="date__time-item">
+                          <label class="button-radio">
+                            <input class="button-radio__field visually-hidden" type="radio" checked name="time-delivery"
+                              value="12:00-16:00">
+                            <span class="button-radio__content">
+                              <span class="text-main text-main--accent text-main--medium">
+                                12:00 - 16:00
+                              </span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="date__time-item">
+                          <label class="button-radio">
+                            <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
+                              value="14:00-18:00">
+                            <span class="button-radio__content">
+                              <span class="text-main text-main--accent text-main--medium">
+                                14:00 - 18:00
+                              </span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="date__time-item">
+                          <label class="button-radio">
+                            <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
+                              value="16:00-20:00">
+                            <span class="button-radio__content">
+                              <span class="text-main text-main--accent text-main--medium">
+                                16:00 - 20:00
+                              </span>
+                            </span>
+                          </label>
+                        </li>
+                        <li class="date__time-item">
+                          <label class="button-radio">
+                            <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
+                              value="18:00-22:00">
+                            <span class="button-radio__content">
+                              <span class="text-main text-main--accent text-main--medium">
+                                18:00 - 22:00
+                              </span>
+                            </span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+
+              <section class="order-content form-order__order-content section section--nopad">
                 <div class="accordion order-content__accordion">
                   <div class="accordion__label">
                     <div class="container container--narrow">

@@ -12633,31 +12633,34 @@ if (controlExtraElement) {
 // Accordion
 
 const accordions = Array.from(document.querySelectorAll('.accordion'));
+const extraBlock = document.querySelector('.form-order__date');
 const accordionHandler = evt => {
   evt.preventDefault();
   const curentAccordion = evt.target.closest('.accordion');
   const currentContent = evt.target.nextElementSibling;
   curentAccordion.classList.toggle('active');
+  extraBlock?.classList.toggle('active');
   if (curentAccordion.classList.contains('active')) {
     currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
+    extraBlock.style.maxHeight = `${extraBlock.scrollHeight}px`;
+    extraBlock.style.marginBottom = '15px';
   } else {
     currentContent.style.maxHeight = 0;
+    extraBlock.style.maxHeight = 0;
   }
 };
-accordions.forEach(accordion => {
+accordions?.forEach(accordion => {
   accordion.addEventListener('click', accordionHandler);
 });
 
 //Modals
 
 const buttonsModal = document.querySelectorAll('.button-radio__modal-button');
-if (buttonsModal?.length) {
-  buttonsModal.forEach(button => {
-    button?.addEventListener('click', () => {
-      _fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__.Fancybox.bind('[data-fancybox]', {});
-    });
+buttonsModal?.forEach(button => {
+  button?.addEventListener('click', () => {
+    _fancyapps_ui__WEBPACK_IMPORTED_MODULE_2__.Fancybox.bind('[data-fancybox]', {});
   });
-}
+});
 })();
 
 /******/ })()
