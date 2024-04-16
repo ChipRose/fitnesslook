@@ -1,5 +1,6 @@
 import { tns } from 'tiny-slider';
 import IMask from 'imask';
+import { Fancybox } from '@fancyapps/ui';
 
 //Counter
 
@@ -79,8 +80,8 @@ const controlExtraElement = document.querySelector('.control-extra');
 
 
 const handleMenuAppearance = () => {
-  const conrolElement = document.querySelector('.cart-page__details');
-  const controlSectionPosition = conrolElement.getBoundingClientRect().top;
+  const controlElement = document.querySelector('.cart-page__details') || document.querySelector('.form-order__payment');
+  const controlSectionPosition = controlElement.getBoundingClientRect().top;
 
   if (!window.pageYOffset || window.innerWidth >= 1100 || controlSectionPosition < 0) {
     controlExtraElement.style.display = 'none';
@@ -118,3 +119,16 @@ const accordionHandler = (evt) => {
 accordions.forEach((accordion) => {
   accordion.addEventListener('click', accordionHandler);
 });
+
+//Modals
+
+const buttonsModal = document.querySelectorAll('.button-radio__modal-button');
+
+if (buttonsModal?.length) {
+  buttonsModal.forEach((button) => {
+    button?.addEventListener('click', () => {
+      Fancybox.bind('[data-fancybox]', {
+      });
+    });
+  });
+}

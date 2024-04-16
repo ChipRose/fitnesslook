@@ -1,4 +1,4 @@
-@import "region-delivery/variables.scss";
+@import "delivery/variables.scss";
 
 //Global
 @import "global/normalize.scss";
@@ -7,7 +7,7 @@
 @import "global/container.scss";
 
 // Components
-@import "region-delivery/controls.scss";
+@import "delivery/controls.scss";
 @import "delivery/breadcrumbs.scss";
 @import "delivery/texts.scss";
 @import "region-delivery/images.scss";
@@ -16,15 +16,15 @@
 @import "region-delivery/sliders.scss";
 
 // Layout
-@import "region-delivery/layouts.scss";
+@import "delivery/layouts.scss";
 
 // Blocks
-@import "region-delivery/page-delivery.scss";
+@import "delivery/page-delivery.scss";
 @import "region-delivery/cover.scss";
 @import "region-delivery/receiving.scss";
-@import "region-delivery/cost.scss";
+@import "delivery/cost.scss";
 @import "delivery/payment.scss";
-@import "region-delivery/delivery-regions.scss";
+@import "delivery/delivery-regions.scss";
 @import "delivery/form-communicate.scss";
 @import "delivery/faq.scss";
-@import "region-delivery/action.scss";
+@import "delivery/action.scss";

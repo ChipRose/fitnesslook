@@ -40,7 +40,8 @@ const path = {
     assets: `${PUBLICATION_FOLDER}/i/media`
   },
   watch:{
-    html:`${SRC_FOLDER}/html/**/*.html`
+    html:`${SRC_FOLDER}/html/**/*.html`,
+    js:`${SRC_FOLDER}/js/common/**/*.js`
   }
 };
 
@@ -143,7 +144,7 @@ function watchFiles() {
   gulp.watch('./style/resource/**/*.scss', gulp.series(processStyles));
   gulp.watch('./i/media-resource/**/*.{jpg,png}', gulp.series(copyAssets, createWebp));
   gulp.watch('./json/**/*.{json}', gulp.series(copyAssets));
-  gulp.watch('./js/common/**/*.js', gulp.series(processAllScripts()));
+  gulp.watch(path.watch.js, gulp.series(processAllScripts()));
   gulp.watch(path.watch.html, gulp.series(processMarkup, reloadServer));
 }
 
@@ -157,7 +158,6 @@ function compileProject(done) {
     createWebp
   )(done);
 }
-
 
 export function buildProd(done) {
   isDevelopment = false;
