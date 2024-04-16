@@ -119,6 +119,7 @@ const accordionHandler = (evt) => {
   } else {
     currentContent.style.maxHeight = 0;
     extraBlock.style.maxHeight = 0;
+    extraBlock.style.marginBottom = '0';
   }
 };
 
