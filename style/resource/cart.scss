@@ -50,6 +50,7 @@ $max-width: 1180px;
   --cl-main: rgb(142, 142, 142);
   --cl-neutral: rgb(186, 186, 186);
   --cl-disable: rgb(180, 180, 180);
+  --cl-disable-02: rgba(180, 180, 180, 0.2);
   --cl-light-neutral: rgb(237, 234, 238);
   --cl-background: rgb(236, 236, 236);
   --cl-neutral-03: rgba(186, 186, 186, 0.3);
@@ -617,6 +618,14 @@ $max-width: 1180px;
     padding: 14px 18px;
     border-radius: 20px;
     position: relative;
+
+    @media (min-width: 540px) {
+      padding: 14px 18px 25px;
+    }
+
+    @media (min-width: $tablet-width) {
+    padding: 14px 18px;
+    }
   }
 
   .button-radio__action-block {
@@ -792,8 +801,13 @@ $max-width: 1180px;
 
 .field-labeled {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+
+  @media (min-width:$tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .field-labeled__field {
     order: 2;
@@ -801,10 +815,15 @@ $max-width: 1180px;
 
   .field-labeled__label {
     margin-right: 15px;
-    font-size: 14px;
-    font-weight: var(--fw-medium);
-    color: var(--cl-heavy-dark);
+    margin-bottom: 32px;
     order: 1;
+
+    @media (min-width:$tablet-width) {
+      margin-bottom: 0;
+      font-size: 14px;
+      font-weight: var(--fw-medium);
+      color: var(--cl-heavy-dark);
+    }
   }
 }
 
@@ -955,6 +974,14 @@ textarea.field-simple {
     font-size: 10px;
     box-sizing: border-box;
     text-align: center;
+
+    &:read-only {
+      border: 1px solid var(--cl-disable-02);
+    }
+
+    &:focus:read-only {
+      box-shadow: none !important;
+    }
   }
 
   .counter__del-button {
@@ -1356,11 +1383,15 @@ textarea.field-simple {
   }
 }
 
-.discount__text-block {
-  margin-bottom: 32px;
-}
-
 //Details
+
+.details__content {
+  margin-bottom: 20px;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 40px;
+  }
+}
 
 .details__header {
   margin-bottom: 24px;
@@ -1473,6 +1504,8 @@ textarea.field-simple {
 }
 
 .order-content__common {
+  margin-bottom: 20px;
+
   @media (min-width: $tablet-width) {
     margin-bottom: 15px;
   }
@@ -1522,15 +1555,6 @@ textarea.field-simple {
   align-items: end;
 }
 
-.order-content__date-summary {
-  padding-top: 25px;
-  margin-bottom: 80px;
-
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .order-content__icon {
   fill: var(--cl-accent);
 }
@@ -1543,6 +1567,12 @@ textarea.field-simple {
   font-size: 16px;
   color: var(--cl-heavy-dark);
   font-weight: var(--fw-bold);
+
+  @media (min-width:$tablet-width) {
+    font-size: 22px;
+    line-height: 81%;
+
+  }
 }
 
 // Form order
@@ -1552,14 +1582,9 @@ textarea.field-simple {
 }
 
 .form-order__date {
-  display: none;
-
-  @media (min-width:$tablet-width) {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    transition: var(--transition-main);
-  }
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition-main);
 
   .section {
     @media (min-width:$tablet-width) {
@@ -1568,6 +1593,8 @@ textarea.field-simple {
   }
 
   .form-order__date-wrapper {
+    padding: 40px 0 40px 0;
+
     @media (min-width:$tablet-width) {
       padding: 29px 0;
     }
@@ -1576,14 +1603,9 @@ textarea.field-simple {
 
 
 .form-order__discount {
-  display: none;
-
-  @media (min-width:$tablet-width) {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    transition: var(--transition-main);
-  }
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition-main);
 
   .section {
     @media (min-width:$tablet-width) {
@@ -1592,18 +1614,22 @@ textarea.field-simple {
   }
 
   .form-order__discount-wrapper {
+    padding-bottom: 40px;
+
     @media (min-width:$tablet-width) {
       padding: 29px 0;
     }
   }
 }
 
-
-
 .form-order__order-content {
   margin-bottom: 32px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  &.active{
     margin-bottom: 15px;
   }
 }
