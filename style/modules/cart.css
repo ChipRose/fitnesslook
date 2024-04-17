@@ -372,6 +372,7 @@ template {
   --cl-main: rgb(142, 142, 142);
   --cl-neutral: rgb(186, 186, 186);
   --cl-disable: rgb(180, 180, 180);
+  --cl-disable-02: rgba(180, 180, 180, 0.2);
   --cl-light-neutral: rgb(237, 234, 238);
   --cl-background: rgb(236, 236, 236);
   --cl-neutral-03: rgba(186, 186, 186, 0.3);
@@ -875,6 +876,16 @@ template {
   border-radius: 20px;
   position: relative;
 }
+@media (min-width: 540px) {
+  .button-radio.button-radio--modal .button-radio__content {
+    padding: 14px 18px 25px;
+  }
+}
+@media (min-width: 768px) {
+  .button-radio.button-radio--modal .button-radio__content {
+    padding: 14px 18px;
+  }
+}
 .button-radio.button-radio--modal .button-radio__action-block {
   top: 0;
   right: 0;
@@ -1007,18 +1018,30 @@ template {
 
 .field-labeled {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .field-labeled {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .field-labeled .field-labeled__field {
   order: 2;
 }
 .field-labeled .field-labeled__label {
   margin-right: 15px;
-  font-size: 14px;
-  font-weight: var(--fw-medium);
-  color: var(--cl-heavy-dark);
+  margin-bottom: 32px;
   order: 1;
+}
+@media (min-width: 768px) {
+  .field-labeled .field-labeled__label {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: var(--fw-medium);
+    color: var(--cl-heavy-dark);
+  }
 }
 
 input[class~=field-main] {
@@ -1149,6 +1172,12 @@ textarea.field-simple:hover {
   font-size: 10px;
   box-sizing: border-box;
   text-align: center;
+}
+.counter .counter__field:read-only {
+  border: 1px solid var(--cl-disable-02);
+}
+.counter .counter__field:focus:read-only {
+  box-shadow: none !important;
 }
 .counter .counter__del-button {
   display: flex;
@@ -1518,8 +1547,13 @@ textarea.field-simple:hover {
   }
 }
 
-.discount__text-block {
-  margin-bottom: 32px;
+.details__content {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .details__content {
+    margin-bottom: 40px;
+  }
 }
 
 .details__header {
@@ -1625,6 +1659,9 @@ textarea.field-simple:hover {
   margin-bottom: 21px;
 }
 
+.order-content__common {
+  margin-bottom: 20px;
+}
 @media (min-width: 768px) {
   .order-content__common {
     margin-bottom: 15px;
@@ -1673,16 +1710,6 @@ textarea.field-simple:hover {
   align-items: end;
 }
 
-.order-content__date-summary {
-  padding-top: 25px;
-  margin-bottom: 80px;
-}
-@media (min-width: 768px) {
-  .order-content__date-summary {
-    display: none;
-  }
-}
-
 .order-content__icon {
   fill: var(--cl-accent);
 }
@@ -1696,26 +1723,29 @@ textarea.field-simple:hover {
   color: var(--cl-heavy-dark);
   font-weight: var(--fw-bold);
 }
+@media (min-width: 768px) {
+  .order-content__price-rezult {
+    font-size: 22px;
+    line-height: 81%;
+  }
+}
 
 .form-order__title {
   margin-bottom: 35px;
 }
 
 .form-order__date {
-  display: none;
-}
-@media (min-width: 768px) {
-  .form-order__date {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    transition: var(--transition-main);
-  }
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition-main);
 }
 @media (min-width: 768px) {
   .form-order__date .section {
     padding-bottom: 20px;
   }
+}
+.form-order__date .form-order__date-wrapper {
+  padding: 40px 0 40px 0;
 }
 @media (min-width: 768px) {
   .form-order__date .form-order__date-wrapper {
@@ -1724,20 +1754,17 @@ textarea.field-simple:hover {
 }
 
 .form-order__discount {
-  display: none;
-}
-@media (min-width: 768px) {
-  .form-order__discount {
-    display: block;
-    max-height: 0;
-    overflow: hidden;
-    transition: var(--transition-main);
-  }
+  max-height: 0;
+  overflow: hidden;
+  transition: var(--transition-main);
 }
 @media (min-width: 768px) {
   .form-order__discount .section {
     padding-bottom: 20px;
   }
+}
+.form-order__discount .form-order__discount-wrapper {
+  padding-bottom: 40px;
 }
 @media (min-width: 768px) {
   .form-order__discount .form-order__discount-wrapper {
@@ -1750,8 +1777,11 @@ textarea.field-simple:hover {
 }
 @media (min-width: 768px) {
   .form-order__order-content {
-    margin-bottom: 15px;
+    margin-bottom: 0;
   }
+}
+.form-order__order-content.active {
+  margin-bottom: 15px;
 }
 
 .form-order__fieldset {
