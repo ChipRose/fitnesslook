@@ -1574,6 +1574,11 @@ textarea.field-simple:hover {
 .control__buttons-block {
   margin-bottom: 38px;
 }
+@media (min-width: 768px) {
+  .control__buttons-block {
+    margin-bottom: 0;
+  }
+}
 
 .control__alert-block {
   text-align: right;
@@ -1785,6 +1790,9 @@ textarea.field-simple:hover {
   .form-order__control {
     padding-bottom: 30px;
   }
+}
+.form-order__control .control__buttons-block {
+  margin-bottom: 15px;
 }
 
 .payment__main-title {
