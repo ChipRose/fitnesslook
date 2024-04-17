@@ -1415,6 +1415,10 @@ textarea.field-simple {
 
 .control__buttons-block {
   margin-bottom: 38px;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .control__alert-block {
@@ -1587,7 +1591,6 @@ textarea.field-simple {
     }
   }
 
-
   .form-order__discount-wrapper {
     @media (min-width:$tablet-width) {
       padding: 29px 0;
@@ -1639,6 +1642,10 @@ textarea.field-simple {
 
   @media (min-width:$tablet-width) {
     padding-bottom: 30px;
+  }
+
+  .control__buttons-block {
+    margin-bottom: 15px;
   }
 }
 

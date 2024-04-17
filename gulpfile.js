@@ -39,9 +39,12 @@ const path = {
     sprite: `${PUBLICATION_FOLDER}/i/media/stat/`,
     assets: `${PUBLICATION_FOLDER}/i/media`
   },
-  watch:{
-    html:`${SRC_FOLDER}/html/**/*.html`,
-    js:`${SRC_FOLDER}/js/common/**/*.js`
+  watch: {
+    html: `${SRC_FOLDER}/html/**/*.html`,
+    css: `${SRC_FOLDER}/style/resource/**/*.scss`,
+    js: `${SRC_FOLDER}/js/common/**/*.js`,
+    json: `${SRC_FOLDER}/json/**/*.{json}`,
+    assets: `${SRC_FOLDER}/i/media-resource/**/*.{jpg,png}`
   }
 };
 
@@ -69,28 +72,30 @@ export function processStyles() {
     .pipe(browser.stream());
 }
 
-export function processScripts({ src, title, dest = path.build.js }) {
-  return gulp.src(src)
-    .pipe(webpack({
-      mode: 'none',
-      module: {
-        rules: [
-          { test: /\.js$/i, exclude: '/node_modules/', use: ['babel-loader'] },
-        ],
-      },
-    }))
-    .pipe(rename(title))
-    .pipe(gulp.dest(dest))
-    .pipe(browser.stream());
+export function processScript({ src, title, dest = path.build.js }) {
+  return function script() {
+    return gulp.src(src)
+      .pipe(webpack({
+        mode: 'none',
+        module: {
+          rules: [
+            { test: /\.js$/i, exclude: '/node_modules/', use: ['babel-loader'] },
+          ],
+        },
+      }))
+      .pipe(rename(title))
+      .pipe(gulp.dest(dest))
+      .pipe(browser.stream());
+  };
 }
 
 export function processAllScripts() {
   return gulp.series(
-    () => processScripts({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js' }),
-    () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js' }),
-    () => processScripts({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js' }),
-    () => processScripts({ src: './js/common/region-delivery.js', title: 'region-delivery.js' }),
-    () => processScripts({ src: './js/common/cart.js', title: 'cart.js' }),
+    processScript({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js' }),
+    processScript({ src: './js/common/delivery.js', title: 'delivery.js' }),
+    processScript({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js' }),
+    processScript({ src: './js/common/region-delivery.js', title: 'region-delivery.js' }),
+    processScript({ src: './js/common/cart.js', title: 'cart.js' }),
   );
 }
 
@@ -141,9 +146,9 @@ function reloadServer(done) {
 }
 
 function watchFiles() {
-  gulp.watch('./style/resource/**/*.scss', gulp.series(processStyles));
-  gulp.watch('./i/media-resource/**/*.{jpg,png}', gulp.series(copyAssets, createWebp));
-  gulp.watch('./json/**/*.{json}', gulp.series(copyAssets));
+  gulp.watch(path.watch.css, gulp.series(processStyles));
+  gulp.watch(path.watch.assets, gulp.series(copyAssets, createWebp));
+  gulp.watch(path.watch.json, gulp.series(copyAssets));
   gulp.watch(path.watch.js, gulp.series(processAllScripts()));
   gulp.watch(path.watch.html, gulp.series(processMarkup, reloadServer));
 }
@@ -180,7 +185,7 @@ export function runDev(done) {
 //Publication
 
 function deleteFoldersPub() {
-  return deleteAsync(['./build']);
+  return deleteAsync([PUBLICATION_FOLDER]);
 }
 
 export function processMarkupPub() {
@@ -204,11 +209,11 @@ export function processStylesPub() {
 
 export function processAllScriptsPub() {
   return gulp.series(
-    () => processScripts({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js', dest: './build/js/modules/' }),
-    () => processScripts({ src: './js/common/delivery.js', title: 'delivery.js', dest: './build/js/modules/' }),
-    () => processScripts({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js', dest: './build/js/modules/' }),
-    () => processScripts({ src: './js/common/region-delivery.js', title: 'region-delivery.js', dest: './build/js/modules/' }),
-    () => processScripts({ src: './js/common/cart.js', title: 'cart.js', dest: './build/js/modules/' }),
+    processScript({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js', dest: './build/js/modules/' }),
+    processScript({ src: './js/common/delivery.js', title: 'delivery.js', dest: './build/js/modules/' }),
+    processScript({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js', dest: './build/js/modules/' }),
+    processScript({ src: './js/common/region-delivery.js', title: 'region-delivery.js', dest: './build/js/modules/' }),
+    processScript({ src: './js/common/cart.js', title: 'cart.js', dest: './build/js/modules/' }),
   );
 }
 
@@ -228,9 +233,9 @@ export function createStackPub() {
 }
 
 export function createWebpPub() {
-  return gulp.src('./i/media-resource/**/*.{jpg,png}')
+  return gulp.src(path.src.img)
     .pipe(webp())
-    .pipe(gulp.dest('./build/i/media/'));
+    .pipe(gulp.dest(path.publication.img));
 }
 
 function compileProjectPub(done) {
