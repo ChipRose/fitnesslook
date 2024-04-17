@@ -12649,15 +12649,15 @@ const accordionHandler = evt => {
     block.classList.toggle('active');
   });
   const accordionCloseHandler = () => {
+    parentDiv1?.insertBefore(accordionWrapperElement, flagElement1.nextSibling);
     orderContentElement?.classList.remove('section', 'section--nopad', 'active');
     curentAccordion?.classList.remove('active');
-    parentDiv1?.insertBefore(accordionWrapperElement, flagElement1.nextSibling);
-    currentContent.style.maxHeight = 0;
+    currentContent.style.maxHeight = '0';
     extraBlocks?.forEach(block => {
       block.style.maxHeight = '0';
       block.style.marginBottom = '0';
     });
-    window.removeEventListener('resize', accordionCloseHandler);
+    // window.removeEventListener('resize', accordionCloseHandler);
   };
   if (curentAccordion.classList.contains('active')) {
     parentDiv0?.insertBefore(accordionWrapperElement, flagElement0.nextSibling);
@@ -12667,7 +12667,8 @@ const accordionHandler = evt => {
       block.style.maxHeight = `${block.scrollHeight}px`;
       block.style.marginBottom = '15px';
     });
-    window.addEventListener('resize', accordionCloseHandler);
+
+    // window.addEventListener('resize', accordionCloseHandler);
   } else {
     accordionCloseHandler(currentContent);
   }
