@@ -12634,6 +12634,12 @@ if (controlExtraElement) {
 
 const accordions = Array.from(document.querySelectorAll('.accordion'));
 const extraBlocks = [document.querySelector('.form-order__date'), document.querySelector('.form-order__discount')];
+const parentDiv0 = document.querySelector('.container-extra__col');
+const flagElement0 = parentDiv0.querySelector('#summary-section');
+const parentDiv1 = flagElement0;
+const flagElement1 = parentDiv0.querySelector('.order-content__common-wrapper');
+const accordionWrapperElement = parentDiv0.querySelector('#accordion-wrapper');
+const orderContentElement = document.querySelector('.order-content');
 const accordionHandler = evt => {
   evt.preventDefault();
   const curentAccordion = evt.target.closest('.accordion');
@@ -12643,7 +12649,9 @@ const accordionHandler = evt => {
     block.classList.toggle('active');
   });
   if (curentAccordion.classList.contains('active')) {
+    parentDiv0?.insertBefore(accordionWrapperElement, flagElement0.nextSibling);
     currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
+    orderContentElement?.classList.add('section', 'section--nopad', 'active');
     extraBlocks?.forEach(block => {
       block.style.maxHeight = `${block.scrollHeight}px`;
       block.style.marginBottom = '15px';
@@ -12654,6 +12662,8 @@ const accordionHandler = evt => {
       block.style.maxHeight = '0';
       block.style.marginBottom = '0';
     });
+    orderContentElement?.classList.remove('section', 'section--nopad', 'active');
+    parentDiv1?.insertBefore(accordionWrapperElement, flagElement1.nextSibling);
   }
 };
 accordions?.forEach(accordion => {

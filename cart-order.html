@@ -3602,7 +3602,7 @@
         <form class="form-order cart-page-order__form-order">
           <div class="container-extra">
             <div class="container-extra__col">
-              <section class="order-content__common section section--nopad">
+              <section class="order-content__common section section--nopad" id="summary-section">
                 <div class="order-content__common-wrapper">
                   <div class="order-content__title-block">
                     <div class="container container--narrow">
@@ -3631,443 +3631,434 @@
                     </div>
                   </div>
                 </div>
-              </section>
 
-              <fieldset class="fieldset date form-order__date section section--nopad">
-                <div class="form-order__date-wrapper">
-                  <header class="date__header">
-                    <div class="container container--narrow">
-                      <h2 class="title title-section">
-                        Выбранные дата и время доставки:
-                      </h2>
-                    </div>
-                  </header>
-                  <div class="date__day">
-                    <div class="container">
-                      <div class="date__slider-wrapper">
-                        <div class="date__control" id="date-control">
-                          <button class="button button-slider button-slider--prev button-slider--disabled" type="button">
-                            <svg width="9" height="13" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#simple-arrow-right"></use>
-                            </svg>
-                          </button>
-                          <button class="button button-slider button-slider--next" type="button">
-                            <svg width="9" height="13" role="img" focusable="false">
-                              <use xlink:href="/i/media/stat/sprite.svg#simple-arrow-right"></use>
-                            </svg>
-                          </button>
-                        </div>
-                        <div class="date__day-list-wrapper">
-                          <ul class="list date__day-list" id="date-slider">
-                            <li>
-                              <label class="button-radio button-radio--slider">
-                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                  value="19/11/2024">
-                                <span class="button-radio__content">
-                                  <span class="text-main text-main--accent text-main--medium">
-                                    19 ноя
-                                  </span>
-                                  <span class="text-main text-main--big">
-                                    вс
-                                  </span>
-                                </span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="button-radio button-radio--slider">
-                                <input class="button-radio__field visually-hidden" checked type="radio"
-                                  name="date-delivery" value="20/11/2024">
-                                <span class="button-radio__content">
-                                  <span class="text-main text-main--accent text-main--medium">
-                                    20 ноя
-                                  </span>
-                                  <span class="text-main text-main--big">
-                                    пн
-                                  </span>
-                                </span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="button-radio button-radio--slider">
-                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                  value="21/11/2024">
-                                <span class="button-radio__content">
-                                  <span class="text-main text-main--accent text-main--medium">
-                                    21 ноя
-                                  </span>
-                                  <span class="text-main text-main--big">
-                                    вт
-                                  </span>
-                                </span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="button-radio button-radio--slider">
-                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                  value="22/11/2024">
-                                <span class="button-radio__content">
-                                  <span class="text-main text-main--accent text-main--medium">
-                                    22 ноя
-                                  </span>
-                                  <span class="text-main text-main--big">
-                                    ср
-                                  </span>
-                                </span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="button-radio button-radio--slider">
-                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                  value="23/11/2024">
-                                <span class="button-radio__content">
-                                  <span class="text-main text-main--accent text-main--medium">
-                                    23 ноя
-                                  </span>
-                                  <span class="text-main text-main--big">
-                                    чт
-                                  </span>
-                                </span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="button-radio button-radio--slider">
-                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                  value="24/11/2024">
-                                <span class="button-radio__content">
-                                  <span class="text-main text-main--accent text-main--medium">
-                                    24 ноя
-                                  </span>
-                                  <span class="text-main text-main--big">
-                                    пт
-                                  </span>
-                                </span>
-                              </label>
-                            </li>
-                            <li>
-                              <label class="button-radio button-radio--slider">
-                                <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
-                                  value="25/11/2024">
-                                <span class="button-radio__content">
-                                  <span class="text-main text-main--accent text-main--medium">
-                                    25 ноя
-                                  </span>
-                                  <span class="text-main text-main--big">
-                                    сб
-                                  </span>
-                                </span>
-                              </label>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="date__time">
-                    <div class="container">
-                      <ul class="list date__time-list">
-                        <li class="date__time-item">
-                          <label class="button-radio">
-                            <input class="button-radio__field visually-hidden" type="radio" checked name="time-delivery"
-                              value="12:00-16:00">
-                            <span class="button-radio__content">
-                              <span class="text-main text-main--accent text-main--medium">
-                                12:00 - 16:00
-                              </span>
-                            </span>
-                          </label>
-                        </li>
-                        <li class="date__time-item">
-                          <label class="button-radio">
-                            <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
-                              value="14:00-18:00">
-                            <span class="button-radio__content">
-                              <span class="text-main text-main--accent text-main--medium">
-                                14:00 - 18:00
-                              </span>
-                            </span>
-                          </label>
-                        </li>
-                        <li class="date__time-item">
-                          <label class="button-radio">
-                            <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
-                              value="16:00-20:00">
-                            <span class="button-radio__content">
-                              <span class="text-main text-main--accent text-main--medium">
-                                16:00 - 20:00
-                              </span>
-                            </span>
-                          </label>
-                        </li>
-                        <li class="date__time-item">
-                          <label class="button-radio">
-                            <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
-                              value="18:00-22:00">
-                            <span class="button-radio__content">
-                              <span class="text-main text-main--accent text-main--medium">
-                                18:00 - 22:00
-                              </span>
-                            </span>
-                          </label>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-
-              <fieldset class="fieldset section discount form-order__discount section section--nopad">
-                <div class="form-order__discount-wrapper">
-                  <header class="discount__header">
-                    <div class="container container--narrow">
-                      <h2 class="title title-section">
-                        Примененная скидка = 3 000 Р |  3%:
-                      </h2>
-                    </div>
-                  </header>
-                  <div class="discount__content">
-                    <div class="container container--narrow">
-                      <div class="discount__info-field">
-                        <label class="field-labeled">
-                          <input type="text" class="field-main field-labeled__field" readonly placeholder="FL 0000 0000 00"
-                            id="card-loyality">
-                          <span class="field-labeled__label">
-                            Скидка начислена по карте лояльности:
-                          </span>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-
-              <section class="order-content form-order__order-content section section--nopad">
-                <div class="accordion order-content__accordion">
-                  <div class="accordion__label">
-                    <div class="container container--narrow">
-                      <div class="order-content__label">
-                        <div class="order-content__label-text-block">
-                          <span class="text-main text-main--middle order-content__text">
-                            Информация о заказе
-                          </span>
-                          <svg class="accordion__icon" width="11" height="9" role="img" focusable="false">
-                            <use xlink:href="/i/media/stat/sprite.svg#arrow-up"></use>
-                          </svg>
-                        </div>
-                        <div class="order-content__label-price-block">
-                          <span class="text-main text-main--nobr order-content__price-rezult">
-                            1 684 400 Р
-                          </span>
-                          <span class="text-main text-main--del">
-                            4 000 000 Р
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion__content">
-                    <div class="order-content__date-summary">
-                      <div class="container container--narrow">
-                        <div class="order-content__date-title-block">
+                <div id="accordion-wrapper">
+                  <fieldset class="fieldset date form-order__date section section--nopad">
+                    <div class="form-order__date-wrapper">
+                      <header class="date__header">
+                        <div class="container">
                           <h2 class="title title-section">
-                            Выбранная дата и время доставки:
-                          </h2>
-                        </div>
-                        <div class="order-content__date-text-block">
-                          <p class="text text-main text-main--accent text-main--medium">
-                            21 ноября, с 14:00 до 18:00
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <section class="details">
-                      <header class="details__header">
-                        <div class="container container--narrow">
-                          <h2 class="title title-section">
-                            Ваши товары и услуги:
+                            Выбранные дата и время доставки:
                           </h2>
                         </div>
                       </header>
-                      <div class="details__content">
-                        <div class="container container--narrow">
-                          <ul class="list details__list">
-                            <li class="details__item">
-                              <div class="item-info">
-                                <div class="item-info__text-block">
-                                  <p class="text text-main">
-                                    Беговая дорожка
-                                  </p>
-                                  <p class="text text-main text-main--accent">
-                                    Orlauf Shrike
-                                  </p>
-                                </div>
-                                <div class="counter counter--readonly item-info__counter-block">
-                                  <div class="counter__buttons-block">
-                                    <button class="button counter__count-button" type="button" data-count="plus">
-                                      <svg width="6" height="4" role="img" focusable="false">
-                                        <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                                      </svg>
-                                    </button>
-                                    <button class="button counter__count-button" type="button" data-count="minus">
-                                      <svg width="6" height="4" role="img" focusable="false">
-                                        <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                  <div class="counter__field-block">
-                                    <input class="input counter__field" readonly type="number" value="1" name="product-name">
-                                  </div>
-                                  <div class="counter__del-block">
-                                    <button class="button counter__del-button" type="button" data-name="del-button">
-                                      <svg width="7" height="7" role="img" focusable="false">
-                                        <use xlink:href="/i/media/stat/sprite.svg#del"></use>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="item-info__price-block">
-                                  <p class="text text-main text-main--accent-adaptive text-main--nobr">
-                                    32 400 Р
-                                  </p>
-                                  <p class="text text-main text-main--del text-main--nobr">
-                                    36 000 Р
-                                  </p>
-                                </div>
-                              </div>
+                      <div class="date__day">
+                        <div class="container">
+                          <div class="date__slider-wrapper">
+                            <div class="date__control" id="date-control">
+                              <button class="button button-slider button-slider--prev button-slider--disabled" type="button">
+                                <svg width="9" height="13" role="img" focusable="false">
+                                  <use xlink:href="/i/media/stat/sprite.svg#simple-arrow-right"></use>
+                                </svg>
+                              </button>
+                              <button class="button button-slider button-slider--next" type="button">
+                                <svg width="9" height="13" role="img" focusable="false">
+                                  <use xlink:href="/i/media/stat/sprite.svg#simple-arrow-right"></use>
+                                </svg>
+                              </button>
+                            </div>
+                            <div class="date__day-list-wrapper">
+                              <ul class="list date__day-list" id="date-slider">
+                                <li>
+                                  <label class="button-radio button-radio--slider">
+                                    <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                      value="19/11/2024">
+                                    <span class="button-radio__content">
+                                      <span class="text-main text-main--accent text-main--medium">
+                                        19 ноя
+                                      </span>
+                                      <span class="text-main text-main--big">
+                                        вс
+                                      </span>
+                                    </span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="button-radio button-radio--slider">
+                                    <input class="button-radio__field visually-hidden" checked type="radio"
+                                      name="date-delivery" value="20/11/2024">
+                                    <span class="button-radio__content">
+                                      <span class="text-main text-main--accent text-main--medium">
+                                        20 ноя
+                                      </span>
+                                      <span class="text-main text-main--big">
+                                        пн
+                                      </span>
+                                    </span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="button-radio button-radio--slider">
+                                    <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                      value="21/11/2024">
+                                    <span class="button-radio__content">
+                                      <span class="text-main text-main--accent text-main--medium">
+                                        21 ноя
+                                      </span>
+                                      <span class="text-main text-main--big">
+                                        вт
+                                      </span>
+                                    </span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="button-radio button-radio--slider">
+                                    <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                      value="22/11/2024">
+                                    <span class="button-radio__content">
+                                      <span class="text-main text-main--accent text-main--medium">
+                                        22 ноя
+                                      </span>
+                                      <span class="text-main text-main--big">
+                                        ср
+                                      </span>
+                                    </span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="button-radio button-radio--slider">
+                                    <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                      value="23/11/2024">
+                                    <span class="button-radio__content">
+                                      <span class="text-main text-main--accent text-main--medium">
+                                        23 ноя
+                                      </span>
+                                      <span class="text-main text-main--big">
+                                        чт
+                                      </span>
+                                    </span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="button-radio button-radio--slider">
+                                    <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                      value="24/11/2024">
+                                    <span class="button-radio__content">
+                                      <span class="text-main text-main--accent text-main--medium">
+                                        24 ноя
+                                      </span>
+                                      <span class="text-main text-main--big">
+                                        пт
+                                      </span>
+                                    </span>
+                                  </label>
+                                </li>
+                                <li>
+                                  <label class="button-radio button-radio--slider">
+                                    <input class="button-radio__field visually-hidden" type="radio" name="date-delivery"
+                                      value="25/11/2024">
+                                    <span class="button-radio__content">
+                                      <span class="text-main text-main--accent text-main--medium">
+                                        25 ноя
+                                      </span>
+                                      <span class="text-main text-main--big">
+                                        сб
+                                      </span>
+                                    </span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="date__time">
+                        <div class="container">
+                          <ul class="list date__time-list">
+                            <li class="date__time-item">
+                              <label class="button-radio">
+                                <input class="button-radio__field visually-hidden" type="radio" checked name="time-delivery"
+                                  value="12:00-16:00">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    12:00 - 16:00
+                                  </span>
+                                </span>
+                              </label>
                             </li>
-                            <li class="details__item">
-                              <div class="item-info">
-                                <div class="item-info__text-block">
-                                  <p class="text text-main">
-                                    Премиальное массажное кресло
-                                  </p>
-                                  <p class="text text-main text-main--accent">
-                                    OTO Titan TT-01 Beige
-                                  </p>
-                                </div>
-                                <div class="counter counter--readonly item-info__counter-block">
-                                  <div class="counter__buttons-block">
-                                    <button class="button counter__count-button" type="button" data-count="plus">
-                                      <svg width="6" height="4" role="img" focusable="false">
-                                        <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                                      </svg>
-                                    </button>
-                                    <button class="button counter__count-button" type="button" data-count="minus">
-                                      <svg width="6" height="4" role="img" focusable="false">
-                                        <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                  <div class="counter__field-block">
-                                    <input class="input counter__field" readonly type="number" value="1" name="product-name">
-                                  </div>
-                                  <div class="counter__del-block">
-                                    <button class="button counter__del-button" type="button" data-name="del-button">
-                                      <svg width="7" height="7" role="img" focusable="false">
-                                        <use xlink:href="/i/media/stat/sprite.svg#del"></use>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="item-info__price-block">
-                                  <p class="text text-main text-main--accent-adaptive text-main--nobr">
-                                    1 649 000 Р
-                                  </p>
-                                  <p class="text text-main text-main--del text-main--nobr">
-                                    2 000 000 Р
-                                  </p>
-                                </div>
-                              </div>
+                            <li class="date__time-item">
+                              <label class="button-radio">
+                                <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
+                                  value="14:00-18:00">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    14:00 - 18:00
+                                  </span>
+                                </span>
+                              </label>
                             </li>
-                            <li class="details__item">
-                              <div class="item-info">
-                                <div class="item-info__text-block">
-                                  <p class="text text-main">
-                                    Расширенная гарантия
-                                  </p>
-                                  <p class="text text-main text-main--accent">
-                                    +1 год
-                                  </p>
-                                </div>
-                                <div class="item-info__image-block">
-                                  <svg class="item-info__icon" width="17" height="18" role="img" focusable="false">
-                                    <use xlink:href="/i/media/stat/sprite.svg#present-icon"></use>
-                                  </svg>
-                                </div>
-                                <div class="counter counter--readonly item-info__counter-block">
-                                  <div class="counter__buttons-block">
-                                    <button class="button counter__count-button" type="button" data-count="plus">
-                                      <svg width="6" height="4" role="img" focusable="false">
-                                        <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                                      </svg>
-                                    </button>
-                                    <button class="button counter__count-button" type="button" data-count="minus">
-                                      <svg width="6" height="4" role="img" focusable="false">
-                                        <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                  <div class="counter__field-block">
-                                    <input class="input counter__field" readonly type="number" value="1" name="product-name">
-                                  </div>
-                                  <div class="counter__del-block">
-                                    <button class="button counter__del-button" type="button" data-name="del-button">
-                                      <svg width="7" height="7" role="img" focusable="false">
-                                        <use xlink:href="/i/media/stat/sprite.svg#del"></use>
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="item-info__price-block">
-                                  <p class="text text-main text-main--accent-adaptive text-main--nobr">
-                                    0 Р
-                                  </p>
-                                  <p class="text text-main text-main--del text-main--nobr">
-                                    4 000 Р
-                                  </p>
-                                </div>
-                              </div>
+                            <li class="date__time-item">
+                              <label class="button-radio">
+                                <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
+                                  value="16:00-20:00">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    16:00 - 20:00
+                                  </span>
+                                </span>
+                              </label>
                             </li>
-                            <li class="details__item">
-                              <div class="item-info">
-                                <div class="item-info__text-block">
-                                  <p class="text text-main text-main--accent">
-                                    Доставка до адреса:
-                                  </p>
-                                </div>
-                                <div class="item-info__price-block">
-                                  <p class="text text-main text-main--accent-adaptive text-main--nobr">
-                                    1 500 Р
-                                  </p>
-                                  <p class="text text-main text-main--del text-main--nobr">
-                                    2 000 Р
-                                  </p>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="details__item">
-                              <div class="item-info">
-                                <div class="item-info__text-block">
-                                  <p class="text text-main text-main--accent">
-                                    Сборка:
-                                  </p>
-                                </div>
-                                <div class="item-info__price-block">
-                                  <p class="text text-main text-main--accent-adaptive text-main--nobr">
-                                    2 500 Р
-                                  </p>
-                                  <p class="text text-main text-main--del text-main--nobr">
-                                    5 000 Р
-                                  </p>
-                                </div>
-                              </div>
+                            <li class="date__time-item">
+                              <label class="button-radio">
+                                <input class="button-radio__field visually-hidden" type="radio" name="time-delivery"
+                                  value="18:00-22:00">
+                                <span class="button-radio__content">
+                                  <span class="text-main text-main--accent text-main--medium">
+                                    18:00 - 22:00
+                                  </span>
+                                </span>
+                              </label>
                             </li>
                           </ul>
                         </div>
                       </div>
-                    </section>
-                  </div>
+                    </div>
+                  </fieldset>
+
+                  <fieldset class="fieldset section discount form-order__discount section section--nopad">
+                    <div class="form-order__discount-wrapper">
+                      <header class="discount__header">
+                        <div class="container">
+                          <h2 class="title title-section">
+                            Примененная скидка = 3 000 Р |  3%
+                          </h2>
+                        </div>
+                      </header>
+                      <div class="discount__content">
+                        <div class="container">
+                          <div class="discount__info-field">
+                            <label class="field-labeled">
+                              <input type="text" class="field-main field-labeled__field" placeholder="FL 0000 0000 00"
+                                id="card-loyality">
+                              <span class="field-labeled__label">
+                                Скидка начислена по карте лояльности:
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <section class="order-content form-order__order-content">
+                    <div class="accordion order-content__accordion">
+                      <div class="accordion__label">
+                        <div class="container">
+                          <div class="order-content__label">
+                            <div class="order-content__label-text-block">
+                              <span class="text-main text-main--middle order-content__text">
+                                Информация о заказе
+                              </span>
+                              <svg class="accordion__icon" width="11" height="9" role="img" focusable="false">
+                                <use xlink:href="/i/media/stat/sprite.svg#arrow-up"></use>
+                              </svg>
+                            </div>
+                            <div class="order-content__label-price-block">
+                              <span class="text-main text-main--nobr order-content__price-rezult">
+                                1 684 400 Р
+                              </span>
+                              <span class="text-main text-main--del">
+                                4 000 000 Р
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion__content">
+                        <section class="details">
+                          <header class="details__header">
+                            <div class="container">
+                              <h2 class="title title-section">
+                                Ваши товары и услуги:
+                              </h2>
+                            </div>
+                          </header>
+                          <div class="details__content">
+                            <div class="container">
+                              <ul class="list details__list">
+                                <li class="details__item">
+                                  <div class="item-info">
+                                    <div class="item-info__text-block">
+                                      <p class="text text-main">
+                                        Беговая дорожка
+                                      </p>
+                                      <p class="text text-main text-main--accent">
+                                        Orlauf Shrike
+                                      </p>
+                                    </div>
+                                    <div class="counter counter--readonly item-info__counter-block">
+                                      <div class="counter__buttons-block">
+                                        <button class="button counter__count-button" type="button" data-count="plus">
+                                          <svg width="6" height="4" role="img" focusable="false">
+                                            <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                                          </svg>
+                                        </button>
+                                        <button class="button counter__count-button" type="button" data-count="minus">
+                                          <svg width="6" height="4" role="img" focusable="false">
+                                            <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                      <div class="counter__field-block">
+                                        <input class="input counter__field" readonly type="number" value="1" name="product-name">
+                                      </div>
+                                      <div class="counter__del-block">
+                                        <button class="button counter__del-button" type="button" data-name="del-button">
+                                          <svg width="7" height="7" role="img" focusable="false">
+                                            <use xlink:href="/i/media/stat/sprite.svg#del"></use>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="item-info__price-block">
+                                      <p class="text text-main text-main--accent-adaptive text-main--nobr">
+                                        32 400 Р
+                                      </p>
+                                      <p class="text text-main text-main--del text-main--nobr">
+                                        36 000 Р
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="details__item">
+                                  <div class="item-info">
+                                    <div class="item-info__text-block">
+                                      <p class="text text-main">
+                                        Премиальное массажное кресло
+                                      </p>
+                                      <p class="text text-main text-main--accent">
+                                        OTO Titan TT-01 Beige
+                                      </p>
+                                    </div>
+                                    <div class="counter counter--readonly item-info__counter-block">
+                                      <div class="counter__buttons-block">
+                                        <button class="button counter__count-button" type="button" data-count="plus">
+                                          <svg width="6" height="4" role="img" focusable="false">
+                                            <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                                          </svg>
+                                        </button>
+                                        <button class="button counter__count-button" type="button" data-count="minus">
+                                          <svg width="6" height="4" role="img" focusable="false">
+                                            <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                      <div class="counter__field-block">
+                                        <input class="input counter__field" readonly type="number" value="1" name="product-name">
+                                      </div>
+                                      <div class="counter__del-block">
+                                        <button class="button counter__del-button" type="button" data-name="del-button">
+                                          <svg width="7" height="7" role="img" focusable="false">
+                                            <use xlink:href="/i/media/stat/sprite.svg#del"></use>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="item-info__price-block">
+                                      <p class="text text-main text-main--accent-adaptive text-main--nobr">
+                                        1 649 000 Р
+                                      </p>
+                                      <p class="text text-main text-main--del text-main--nobr">
+                                        2 000 000 Р
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="details__item">
+                                  <div class="item-info">
+                                    <div class="item-info__text-block">
+                                      <p class="text text-main">
+                                        Расширенная гарантия
+                                      </p>
+                                      <p class="text text-main text-main--accent">
+                                        +1 год
+                                      </p>
+                                    </div>
+                                    <div class="item-info__image-block">
+                                      <svg class="item-info__icon" width="17" height="18" role="img" focusable="false">
+                                        <use xlink:href="/i/media/stat/sprite.svg#present-icon"></use>
+                                      </svg>
+                                    </div>
+                                    <div class="counter counter--readonly item-info__counter-block">
+                                      <div class="counter__buttons-block">
+                                        <button class="button counter__count-button" type="button" data-count="plus">
+                                          <svg width="6" height="4" role="img" focusable="false">
+                                            <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                                          </svg>
+                                        </button>
+                                        <button class="button counter__count-button" type="button" data-count="minus">
+                                          <svg width="6" height="4" role="img" focusable="false">
+                                            <use xlink:href="/i/media/stat/sprite.svg#count-arrow"></use>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                      <div class="counter__field-block">
+                                        <input class="input counter__field" readonly type="number" value="1" name="product-name">
+                                      </div>
+                                      <div class="counter__del-block">
+                                        <button class="button counter__del-button" type="button" data-name="del-button">
+                                          <svg width="7" height="7" role="img" focusable="false">
+                                            <use xlink:href="/i/media/stat/sprite.svg#del"></use>
+                                          </svg>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="item-info__price-block">
+                                      <p class="text text-main text-main--accent-adaptive text-main--nobr">
+                                        0 Р
+                                      </p>
+                                      <p class="text text-main text-main--del text-main--nobr">
+                                        4 000 Р
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="details__item">
+                                  <div class="item-info">
+                                    <div class="item-info__text-block">
+                                      <p class="text text-main text-main--accent">
+                                        Доставка до адреса:
+                                      </p>
+                                    </div>
+                                    <div class="item-info__price-block">
+                                      <p class="text text-main text-main--accent-adaptive text-main--nobr">
+                                        1 500 Р
+                                      </p>
+                                      <p class="text text-main text-main--del text-main--nobr">
+                                        2 000 Р
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="details__item">
+                                  <div class="item-info">
+                                    <div class="item-info__text-block">
+                                      <p class="text text-main text-main--accent">
+                                        Сборка:
+                                      </p>
+                                    </div>
+                                    <div class="item-info__price-block">
+                                      <p class="text text-main text-main--accent-adaptive text-main--nobr">
+                                        2 500 Р
+                                      </p>
+                                      <p class="text text-main text-main--del text-main--nobr">
+                                        5 000 Р
+                                      </p>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+                    </div>
+                  </section>
                 </div>
               </section>
+
+
+
 
               <div class="section">
                 <div class="form-order__title">
