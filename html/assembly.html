@@ -9,9 +9,6 @@
   <link rel="shortcut icon" href="https://www.fitnesslook.ru/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" type="text/css"
     href="https://www.fitnesslook.ru/style/compress/show_aux_page.css?t=1699630948">
-  <link rel="stylesheet" type="text/css" href="https://www.fitnesslook.ru/js/tiny_slider/tiny-slider.css">
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css  ">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
   <link rel="stylesheet" type="text/css" href="@@pathstyle/modules/assembly.css">
 
@@ -60,20 +57,62 @@
           </section>
 
           @@include('./common/cover.html', {
-            "title": "Сборка",
-            "subtitle": "В {$cur_month_e} мы сделали сборку бесплатной для заказов от ХХ 000 Р."
+          "title": "Сборка",
+          "subtitle": "В {$cur_month_e} мы сделали сборку бесплатной для заказов от ХХ 000 Р."
           })
 
-          @@include('./common/navigation-list.html', {
-            "title": "Сборка",
-            "subtitle": "В {$cur_month_e} мы сделали сборку бесплатной для заказов от ХХ 000 Р."
-          })
+          <section class="navigation">
+            <div class="container">
+              <h2 class="visually-hidden">Навигация по странице</h2>
+              <ul class="list navigation__list" id="navigation-in">
+                @@loop('./common/navigation-item.html',[
+                {
+                "title":"Условия сборки",
+                "link":"#conditions",
+                'classExtra':"navigation__list-item--active"
+                },
+                {
+                "title":"Стоимость сборки",
+                "link":"#cost",
+                'classExtra':""
+                },
+                {
+                "title":"Условия возврата",
+                "link":"#refund",
+                'classExtra':""
+                },
+                {
+                "title":"FAQ",
+                "link":"#faq",
+                'classExtra':""
+                }
+                ])
+              </ul>
+            </div>
+          </section>
 
+          <div class="cost">
+            <div class="container">
+              <ul class="list">
+                @@loop('./assembly/cost-item.html',"../json/assembly/cost.json")
+              </ul>
+            </div>
+          </div>
 
-
-
-
-
+          <section class="faq">
+            <div class="container">
+              <div class="faq__title">
+                <h2 class="title title-main">
+                  FAQ
+                </h2>
+              </div>
+              <div class="faq__content-block">
+                <ul class="list faq__list">
+                  @@loop('./common/faq-item.html', "../json/assembly/questions.json")
+                </ul>
+              </div>
+            </div>
+          </section>
 
 
 
@@ -112,7 +151,7 @@
     var unimet = '';
   </script>
 
-  <script src="@@pathjs/modules/assembly.js.js"></script>
+  <script src="@@pathjs/modules/assembly.js"></script>
 </body>
 
 </html>

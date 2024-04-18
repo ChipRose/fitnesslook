@@ -1,0 +1,68 @@
+<li class="accordion cost__item">
+  <div class="accordion__label">
+    <div class="accordion__label-wrapper">
+      <h3 class="title accordion__title">
+        @@title
+      </h3>
+      <span class="accordion__button">
+        <svg class="accordion__icon" width="12" height="9" role="img" focusable="false">
+          <use xlink:href="@@pathi/media/stat/sprite.svg#arrow-up"></use>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div class="accordion__content">
+    <div class="accordion__content-wrapper">
+      <table class="cost__table">
+        <thead>
+          <tr>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              Стоимость заказа
+            </th>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              Стоимость сборки
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost__cell">
+              от @@orderCost.from р.
+            </td>
+            <td class="cost__cell">
+              <span>
+                @@assemblyCost.from.new р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                @@assemblyCost.from.old р.
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cost__cell">
+              до @@orderCost.to р.
+            </td>
+            <td class="cost__cell">
+              <span>
+                @@assemblyCost.to.new р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                @@assemblyCost.to.old р.
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="cost__cell cost__table-title">
+              Время сборки
+            </td>
+            <td class="cost__cell">
+              @@time мин.
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</li>
