@@ -12652,8 +12652,6 @@ const accordionHandler = evt => {
     });
   }
   const closeAccordion = () => {
-    const windowCloseWidth = window.innerWidth;
-    widthFlag = windowCloseWidth === windowWidth;
     parentDiv1?.insertBefore(accordionWrapperElement, flagElement1.nextSibling);
     orderContentElement?.classList.remove('section', 'section--nopad', 'active');
     [...extraBlocks, curentAccordion]?.forEach(block => {
@@ -12664,15 +12662,10 @@ const accordionHandler = evt => {
     });
   };
   const closeAccordionHandler = () => {
-    if (windowWidth !== window.innerWidth) {
-      parentDiv1?.insertBefore(accordionWrapperElement, flagElement1.nextSibling);
-      orderContentElement?.classList.remove('section', 'section--nopad', 'active');
-      [...extraBlocks, curentAccordion]?.forEach(block => {
-        block.classList.remove('active');
-      });
-      [...extraBlocks, currentContent]?.forEach(block => {
-        block.style.maxHeight = 0;
-      });
+    const windowCloseWidth = window.innerWidth;
+    widthFlag = windowCloseWidth === windowWidth;
+    if (!widthFlag) {
+      closeAccordion();
     }
   };
   if (curentAccordion.classList.contains('active')) {
