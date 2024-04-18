@@ -12662,7 +12662,8 @@ const accordionHandler = evt => {
     [...extraBlocks, currentContent]?.forEach(block => {
       block.style.maxHeight = 0;
     });
-    window.removeEventListener('resize', accordionCloseHandler);
+
+    // window.removeEventListener('resize', accordionCloseHandler);
   };
   if (curentAccordion.classList.contains('active')) {
     parentDiv0?.insertBefore(accordionWrapperElement, flagElement0.nextSibling);
@@ -12670,7 +12671,8 @@ const accordionHandler = evt => {
     [...extraBlocks, currentContent]?.forEach(block => {
       block.style.maxHeight = `${block.scrollHeight}px`;
     });
-    window.addEventListener('resize', accordionCloseHandler);
+
+    // window.addEventListener('resize', accordionCloseHandler);
   } else {
     accordionCloseHandler(currentContent);
   }
