@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru" class="page-assembly">
+
+<head>
+
+  <script>var _myt_id = 3025291;</script>
+  <script>var _vkt_id = 1167; var cat_timer, tch_flag, cath_timer;</script>
+  <link rel="icon" href="https://www.fitnesslook.ru/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="https://www.fitnesslook.ru/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css"
+    href="https://www.fitnesslook.ru/style/compress/show_aux_page.css?t=1699630948">
+  <link rel="stylesheet" type="text/css" href="https://www.fitnesslook.ru/js/tiny_slider/tiny-slider.css">
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css  ">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+  <link rel="stylesheet" type="text/css" href="@@pathstyle/modules/assembly.css">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="google-site-verification" content="VBfmotSpstXTbBlS2aAHEgtMjh2SpFBaHVK_RTmUupE">
+  <meta name="yandex-verification" content="06b3e4bab9ac0ee7">
+
+  <script src="https://www.fitnesslook.ru/js/jquery-1.7.1.min.js"></script>
+
+  <title>Услуги и оборудование FitnessLook в Санкт-Петербурге для открытия спортивного зала, фитнес клуба,
+    тренажерного центра</title>
+  <meta name="description"
+    content='📢 Планируете ⌛ открыть спортивный зал, фитнес клуб или тренажерный центр в Санкт-Петербурге? ✅ Или ищете спортивное оборудование для своего бизнеса? ⚡ Мы поможем❗ — страница для ⭐ B2B-клиентов гипермаркета тренажеров FitnessLook'>
+
+</head>
+
+<body onclick="$('.wrap_catf').removeClass('show');$('#catalog_new').removeClass('show');"
+  onmousedown="$('.root_category_ul').hide();">
+
+  @@include('./common/header.html')
+
+  <div class="wmc" id="wmc">
+    <div class="shcat"></div>
+    <div class="wrapper">
+      <div id="main_content_template">
+        <div class="content">
+
+          <a id="top"></a>
+          <section class="page-delivery__main-nav">
+            <h2 class="visually-hidden">Навигация по хлебным крошкам</h2>
+            <div class="container">
+              <ul class="list breadcrumbs">
+                <li class="breadcrubs__item">
+                  <a href="/" class="link breadcrubs__link">
+                    <svg width="15" height="19" role="img" focusable="false">
+                      <use xlink:href="@@pathi/media/stat/sprite.svg#home"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="breadcrubs__item breadcrubs__item--current">
+                  <a class="link breadcrubs__link">Сборка</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          @@include('./common/cover.html', {
+            "title": "Сборка",
+            "subtitle": "В {$cur_month_e} мы сделали сборку бесплатной для заказов от ХХ 000 Р."
+          })
+
+          @@include('./common/navigation-list.html', {
+            "title": "Сборка",
+            "subtitle": "В {$cur_month_e} мы сделали сборку бесплатной для заказов от ХХ 000 Р."
+          })
+
+
+
+
+
+
+
+
+
+          <div class="action page-delivery__action">
+            <div class="container">
+              <a href="#top" id="global-up"
+                class="link button-round button-round--accent button-round--big action__button">
+                UP
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="clear"></div>
+      </div><!-- #wrapper -->
+    </div>
+  </div>
+
+  @@include('./common/footer.html')
+
+  <script>
+    function targetDetYm() {
+      if (typeof (ym) != 'undefined') {
+        ym(35039795, 'reachGoal', 'det_catalog');
+      }
+    }
+    $(function () {
+      DataLocationRun();
+      $('.det_ym').click(targetDetYm);
+
+    });
+  </script>
+
+  <script>
+    checkHideCatalog();
+    var unimet = '';
+  </script>
+
+  <script src="@@pathjs/modules/assembly.js.js"></script>
+</body>
+
+</html>
