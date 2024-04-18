@@ -12651,9 +12651,7 @@ const accordionHandler = evt => {
       block.classList.toggle('active');
     });
   }
-  const accordionCloseHandler = () => {
-    const windowCloseWidth = window.innerWidth;
-    widthFlag = windowCloseWidth === windowWidth;
+  const closeAccordion = () => {
     parentDiv1?.insertBefore(accordionWrapperElement, flagElement1.nextSibling);
     orderContentElement?.classList.remove('section', 'section--nopad', 'active');
     [...extraBlocks, curentAccordion]?.forEach(block => {
@@ -12662,8 +12660,13 @@ const accordionHandler = evt => {
     [...extraBlocks, currentContent]?.forEach(block => {
       block.style.maxHeight = 0;
     });
-
-    // window.removeEventListener('resize', accordionCloseHandler);
+  };
+  const closeAccordionHandler = () => {
+    const windowCloseWidth = window.innerWidth;
+    widthFlag = windowCloseWidth === windowWidth;
+    if (!widthFlag) {
+      closeAccordion();
+    }
   };
   if (curentAccordion.classList.contains('active')) {
     parentDiv0?.insertBefore(accordionWrapperElement, flagElement0.nextSibling);
@@ -12671,10 +12674,10 @@ const accordionHandler = evt => {
     [...extraBlocks, currentContent]?.forEach(block => {
       block.style.maxHeight = `${block.scrollHeight}px`;
     });
-
-    // window.addEventListener('resize', accordionCloseHandler);
+    window.addEventListener('resize', closeAccordionHandler);
   } else {
-    accordionCloseHandler(currentContent);
+    closeAccordion(currentContent);
+    window.removeEventListener('resize', closeAccordionHandler);
   }
 };
 accordions?.forEach(accordion => {
