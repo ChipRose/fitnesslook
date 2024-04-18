@@ -12652,11 +12652,13 @@ const accordionHandler = evt => {
     });
   }
   const closeAccordion = () => {
-    parentDiv1?.insertBefore(accordionWrapperElement, flagElement1.nextSibling);
-    orderContentElement?.classList.remove('section', 'section--nopad', 'active');
     [...extraBlocks, curentAccordion]?.forEach(block => {
       block.classList.remove('active');
     });
+    window.setTimeout(() => {
+      parentDiv1?.insertBefore(accordionWrapperElement, flagElement1.nextSibling);
+    }, 300);
+    orderContentElement?.classList.remove('section', 'section--nopad', 'active');
     [...extraBlocks, currentContent]?.forEach(block => {
       block.style.maxHeight = 0;
     });
