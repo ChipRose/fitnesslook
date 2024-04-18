@@ -1547,6 +1547,20 @@ textarea.field-simple:hover {
   }
 }
 
+.discount.discount--form-start .field-labeled {
+  flex-direction: row;
+  align-items: center;
+}
+.discount.discount--form-start .discount__text-block {
+  margin-bottom: 38px;
+}
+.discount.discount--form-start .field-labeled__label {
+  margin-bottom: 0;
+  font-size: 14px;
+  color: var(--cl-heavy-dark);
+  font-weight: var(--fw-medium);
+}
+
 .details__content {
   margin-bottom: 20px;
 }
