@@ -624,7 +624,7 @@ $max-width: 1180px;
     }
 
     @media (min-width: $tablet-width) {
-    padding: 14px 18px;
+    padding: 20px;
     }
   }
 
@@ -1599,6 +1599,10 @@ textarea.field-simple {
       padding: 29px 0;
     }
   }
+
+  &.active {
+    margin-bottom: 15px;
+  }
 }
 
 
@@ -1619,6 +1623,10 @@ textarea.field-simple {
     @media (min-width:$tablet-width) {
       padding: 29px 0;
     }
+  }
+
+  &.active {
+    margin-bottom: 15px;
   }
 }
 
