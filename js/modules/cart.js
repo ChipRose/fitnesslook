@@ -12633,42 +12633,44 @@ if (controlExtraElement) {
 // Accordion
 
 const accordions = Array.from(document.querySelectorAll('.accordion'));
-const extraBlocks = [document.querySelector('.form-order__date'), document.querySelector('.form-order__discount')];
 const parentDiv0 = document.querySelector('.container-extra__col');
 const flagElement0 = parentDiv0.querySelector('#summary-section');
 const parentDiv1 = flagElement0;
 const flagElement1 = parentDiv0.querySelector('.order-content__common-wrapper');
 const accordionWrapperElement = parentDiv0.querySelector('#accordion-wrapper');
 const orderContentElement = document.querySelector('.order-content');
+const windowWidth = window.innerWidth;
 const accordionHandler = evt => {
   evt.preventDefault();
   const curentAccordion = evt.target.closest('.accordion');
   const currentContent = evt.target.nextElementSibling;
-  curentAccordion.classList.toggle('active');
-  extraBlocks?.forEach(block => {
-    block.classList.toggle('active');
-  });
+  const extraBlocks = [document.querySelector('.form-order__date'), document.querySelector('.form-order__discount')];
+  let widthFlag = true;
+  if (widthFlag) {
+    [...extraBlocks, curentAccordion]?.forEach(block => {
+      block.classList.toggle('active');
+    });
+  }
   const accordionCloseHandler = () => {
+    const windowCloseWidth = window.innerWidth;
+    widthFlag = windowCloseWidth === windowWidth;
     parentDiv1?.insertBefore(accordionWrapperElement, flagElement1.nextSibling);
     orderContentElement?.classList.remove('section', 'section--nopad', 'active');
-    curentAccordion?.classList.remove('active');
-    currentContent.style.maxHeight = '0';
-    extraBlocks?.forEach(block => {
-      block.style.maxHeight = '0';
-      block.style.marginBottom = '0';
+    [...extraBlocks, curentAccordion]?.forEach(block => {
+      block.classList.remove('active');
     });
-    // window.removeEventListener('resize', accordionCloseHandler);
+    [...extraBlocks, currentContent]?.forEach(block => {
+      block.style.maxHeight = 0;
+    });
+    window.removeEventListener('resize', accordionCloseHandler);
   };
   if (curentAccordion.classList.contains('active')) {
     parentDiv0?.insertBefore(accordionWrapperElement, flagElement0.nextSibling);
-    currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
     orderContentElement?.classList.add('section', 'section--nopad', 'active');
-    extraBlocks?.forEach(block => {
+    [...extraBlocks, currentContent]?.forEach(block => {
       block.style.maxHeight = `${block.scrollHeight}px`;
-      block.style.marginBottom = '15px';
     });
-
-    // window.addEventListener('resize', accordionCloseHandler);
+    window.addEventListener('resize', accordionCloseHandler);
   } else {
     accordionCloseHandler(currentContent);
   }

@@ -883,7 +883,7 @@ template {
 }
 @media (min-width: 768px) {
   .button-radio.button-radio--modal .button-radio__content {
-    padding: 14px 18px;
+    padding: 20px;
   }
 }
 .button-radio.button-radio--modal .button-radio__action-block {
@@ -1752,6 +1752,9 @@ textarea.field-simple:hover {
     padding: 29px 0;
   }
 }
+.form-order__date.active {
+  margin-bottom: 15px;
+}
 
 .form-order__discount {
   max-height: 0;
@@ -1770,6 +1773,9 @@ textarea.field-simple:hover {
   .form-order__discount .form-order__discount-wrapper {
     padding: 29px 0;
   }
+}
+.form-order__discount.active {
+  margin-bottom: 15px;
 }
 
 .form-order__order-content {
