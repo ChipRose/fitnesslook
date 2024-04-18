@@ -12614,9 +12614,9 @@ if (phoneInput) {
 
 const controlExtraElement = document.querySelector('.control-extra');
 const handleMenuAppearance = () => {
-  const controlElement = document.querySelector('.cart-page__details') || document.querySelector('.form-order__payment');
+  const controlElement = document.querySelector('.form-start__details') || document.querySelector('.form-order__payment');
   const controlSectionPosition = controlElement?.getBoundingClientRect().top;
-  if (!window.pageYOffset || window.innerWidth >= 1100 || controlSectionPosition < 0) {
+  if (!window.pageYOffset || window.innerWidth > 768 || controlSectionPosition < 0) {
     controlExtraElement.style.display = 'none';
     return;
   }
