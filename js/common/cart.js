@@ -139,7 +139,7 @@ const accordionHandler = (evt) => {
       block.style.maxHeight = 0;
     });
 
-    window.removeEventListener('resize', accordionCloseHandler);
+    // window.removeEventListener('resize', accordionCloseHandler);
   };
 
   if (curentAccordion.classList.contains('active')) {
@@ -150,7 +150,7 @@ const accordionHandler = (evt) => {
       block.style.maxHeight = `${block.scrollHeight}px`;
     });
 
-    window.addEventListener('resize', accordionCloseHandler);
+    // window.addEventListener('resize', accordionCloseHandler);
 
   } else {
     accordionCloseHandler(currentContent);
