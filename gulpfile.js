@@ -246,7 +246,7 @@ export function processScriptPub({ src, title, dest = path.build.js }) {
         prefix: '@@',
 
         context: {
-          path: '../'
+          path: './'
         }
       }))
       .pipe(gulp.dest(dest))
