@@ -546,6 +546,11 @@ p, span {
 .container--extra {
   padding: 0 34px;
 }
+@media (min-width: 768px) {
+  .container--extra {
+    padding: 0 50px;
+  }
+}
 
 .container--full {
   padding: 0 10px;
