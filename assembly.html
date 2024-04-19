@@ -3587,7 +3587,7 @@
         <div class="content">
 
           <a id="top"></a>
-          <section class="page-delivery__main-nav">
+          <section class="page-assembly__main-nav">
             <h2 class="visually-hidden">Навигация по хлебным крошкам</h2>
             <div class="container">
               <ul class="list breadcrumbs">
@@ -3605,7 +3605,8 @@
             </div>
           </section>
 
-          <section class="cover">
+          <div class="page-assembly__cover">
+            <section class="cover">
   <div class="container">
     <div class="cover__wrapper container__narrow">
       <div class="cover__title-block">
@@ -3647,8 +3648,9 @@
   </div>
 </section>
 
+          </div>
 
-          <section class="navigation">
+          <section class="navigation page-assembly__navigation">
             <div class="container">
               <h2 class="visually-hidden">Навигация по странице</h2>
               <ul class="list navigation__list" id="navigation-in">
@@ -3677,8 +3679,57 @@
             </div>
           </section>
 
-          <div class="cost">
+          <a id="conditions"></a>
+          <div class="assembly-conditions page-assembly__assembly-conditions">
             <div class="container">
+              <div class="info-block">
+                <header class="info-block__header">
+                  <h2 class="title title-main">
+                    Сборка специалистами FitnessLook
+                  </h2>
+                </header>
+                <div class="info-block__text-block">
+                  <div class="info-block__title">
+                    <p class="text text-main text-main--strong">
+                      Сборка спортивного оборудования возможна только при доставке компанией Fitnesslook.
+                    </p>
+                  </div>
+                  <div class="columns">
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        Мы заботимся о вашей безопасности, и предлагаем воспользоваться услугами компании Fitnesslook по
+                        сборке вашего спортивного оборудования после покупки.
+                      </p>
+                    </div>
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        Специалист компании Fitnesslook соберет ваш тренажер, проведет инструктаж по эксплуатации, и
+                        настроит его для первой тренировки.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a id="cost"></a>
+          <div class="cost page-assembly__cost">
+            <div class="container">
+              <div class="info-block cost__info-block">
+                <header class="info-block__header">
+                  <h2 class="title title-main">
+                    Стоимость сборки
+                  </h2>
+                </header>
+                <div class="info-block__text-block">
+                  <div class="info-block__title">
+                    <p class="text text-main text-main--strong">
+                      Стоимость сборки зависит от сложности оборудования и суммы заказа.
+                    </p>
+                  </div>
+                </div>
+              </div>
               <ul class="list">
                 <li class="accordion cost__item">
   <div class="accordion__label">
@@ -3699,19 +3750,25 @@
         <thead>
           <tr>
             <th class="cost__cell cost__table-title cost__cell--header">
-              Стоимость заказа
+              <span>
+                Стоимость заказа
+              </span>
             </th>
             <th class="cost__cell cost__table-title cost__cell--header">
-              Стоимость сборки
+              <span>
+                Стоимость сборки
+              </span>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="cost__cell">
-              от 50 000 р.
+              <span>
+                от 50 000 р.
+              </span>
             </td>
-            <td class="cost__cell">
+            <td class="cost__cell cost__cell--price">
               <span>
                 0 р.
               </span>
@@ -3722,9 +3779,11 @@
           </tr>
           <tr>
             <td class="cost__cell">
-              до 50 000 р.
+              <span>
+                до 50 000 р.
+              </span>
             </td>
-            <td class="cost__cell">
+            <td class="cost__cell cost__cell--price">
               <span>
                 2500 р.
               </span>
@@ -3736,11 +3795,415 @@
         </tbody>
         <tfoot>
           <tr>
-            <td class="cost__cell cost__table-title">
-              Время сборки
+            <td class="cost__cell cost__cell--footer cost__table-title">
+              <span>
+                Время сборки
+              </span>
             </td>
+            <td class="cost__cell cost__cell--footer">
+              <span>
+                 30 - 150 мин.
+              </span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</li>
+<li class="accordion cost__item">
+  <div class="accordion__label">
+    <div class="accordion__label-wrapper">
+      <h3 class="title accordion__title">
+        Массажные кресла
+      </h3>
+      <span class="accordion__button">
+        <svg class="accordion__icon" width="12" height="9" role="img" focusable="false">
+          <use xlink:href="/i/media/stat/sprite.svg#arrow-up"></use>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div class="accordion__content">
+    <div class="accordion__content-wrapper">
+      <table class="cost__table">
+        <thead>
+          <tr>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость заказа
+              </span>
+            </th>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость сборки
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td class="cost__cell">
-               30 - 150 мин.
+              <span>
+                от 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                0 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                до 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                2500 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="cost__cell cost__cell--footer cost__table-title">
+              <span>
+                Время сборки
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--footer">
+              <span>
+                 30 - 150 мин.
+              </span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</li>
+<li class="accordion cost__item">
+  <div class="accordion__label">
+    <div class="accordion__label-wrapper">
+      <h3 class="title accordion__title">
+        Батуты
+      </h3>
+      <span class="accordion__button">
+        <svg class="accordion__icon" width="12" height="9" role="img" focusable="false">
+          <use xlink:href="/i/media/stat/sprite.svg#arrow-up"></use>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div class="accordion__content">
+    <div class="accordion__content-wrapper">
+      <table class="cost__table">
+        <thead>
+          <tr>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость заказа
+              </span>
+            </th>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость сборки
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                от 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                0 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                до 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                2500 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="cost__cell cost__cell--footer cost__table-title">
+              <span>
+                Время сборки
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--footer">
+              <span>
+                 30 - 150 мин.
+              </span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</li>
+<li class="accordion cost__item">
+  <div class="accordion__label">
+    <div class="accordion__label-wrapper">
+      <h3 class="title accordion__title">
+        Теннисные столы
+      </h3>
+      <span class="accordion__button">
+        <svg class="accordion__icon" width="12" height="9" role="img" focusable="false">
+          <use xlink:href="/i/media/stat/sprite.svg#arrow-up"></use>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div class="accordion__content">
+    <div class="accordion__content-wrapper">
+      <table class="cost__table">
+        <thead>
+          <tr>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость заказа
+              </span>
+            </th>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость сборки
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                от 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                0 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                до 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                2500 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="cost__cell cost__cell--footer cost__table-title">
+              <span>
+                Время сборки
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--footer">
+              <span>
+                 30 - 150 мин.
+              </span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</li>
+<li class="accordion cost__item">
+  <div class="accordion__label">
+    <div class="accordion__label-wrapper">
+      <h3 class="title accordion__title">
+        Стойки
+      </h3>
+      <span class="accordion__button">
+        <svg class="accordion__icon" width="12" height="9" role="img" focusable="false">
+          <use xlink:href="/i/media/stat/sprite.svg#arrow-up"></use>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div class="accordion__content">
+    <div class="accordion__content-wrapper">
+      <table class="cost__table">
+        <thead>
+          <tr>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость заказа
+              </span>
+            </th>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость сборки
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                от 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                0 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                до 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                2500 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="cost__cell cost__cell--footer cost__table-title">
+              <span>
+                Время сборки
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--footer">
+              <span>
+                 30 - 150 мин.
+              </span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</li>
+<li class="accordion cost__item">
+  <div class="accordion__label">
+    <div class="accordion__label-wrapper">
+      <h3 class="title accordion__title">
+        Детские комплексы
+      </h3>
+      <span class="accordion__button">
+        <svg class="accordion__icon" width="12" height="9" role="img" focusable="false">
+          <use xlink:href="/i/media/stat/sprite.svg#arrow-up"></use>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div class="accordion__content">
+    <div class="accordion__content-wrapper">
+      <table class="cost__table">
+        <thead>
+          <tr>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость заказа
+              </span>
+            </th>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость сборки
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                от 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                0 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                до 50 000 р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                2500 р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                3500 р.
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="cost__cell cost__cell--footer cost__table-title">
+              <span>
+                Время сборки
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--footer">
+              <span>
+                 30 - 150 мин.
+              </span>
             </td>
           </tr>
         </tfoot>
@@ -3753,7 +4216,48 @@
             </div>
           </div>
 
-          <section class="faq">
+          <a id="refund"></a>
+          <div class="refund page-assembly__refund">
+            <div class="container">
+              <div class="info-block refund__info-block">
+                <header class="info-block__header">
+                  <h2 class="title title-main">
+                    Условия возврата
+                  </h2>
+                </header>
+                <div class="info-block__text-block">
+                  <div class="info-block__title">
+                    <p class="text text-main text-main--strong">
+                      При отказе от товара надлежащего качества заказчи обязан возместить 100% стоимости сборки.
+                    </p>
+                  </div>
+                  <div class="columns">
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        При отказе от товара надлежащего качества после его сборки для возврата оборудования потребуется в 100% размере оплатить стоимость его сборки даже в том случае, если при покупке эта услуга стоила 0 рублей и являлась подарком.
+                      </p>
+                      <p class="text text-main">
+                        Ознакомьтесь с условиями на странице возврата товара.
+                      </p>
+                    </div>
+                    <div class="columns__item">
+                      <p class="text text-main">
+                        Кроме того, потребуется оплатить стоимость разборки и упаковки товара. Она считается по такому же тарифу, как и сборка.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="refund__action-block">
+                <a class="link button-simple button-simple--active" href="/pages/garantiya.html">
+                  Гарантия и возврат
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <a id="faq"></a>
+          <section class="faq page-assembly__faq">
             <div class="container">
               <div class="faq__title">
                 <h2 class="title title-main">
@@ -3996,9 +4500,7 @@
             </div>
           </section>
 
-
-
-          <div class="action page-delivery__action">
+          <div class="action page-assembly__action">
             <div class="container">
               <a href="#top" id="global-up"
                 class="link button-round button-round--accent button-round--big action__button">

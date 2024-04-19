@@ -11,6 +11,10 @@
     align-items: center;
     box-sizing: border-box;
     pointer-events: none;
+
+    @media (min-width: $tablet-width) {
+      padding: 30px 68px 30px 87px;
+    }
   }
 
   .accordion__title {
@@ -18,6 +22,11 @@
     font-size: 20px;
     line-height: 110%;
     font-weight: var(--fw-bold);
+
+    @media (min-width: $tablet-width) {
+      font-size: 26px;
+      line-height: 140%;
+    }
   }
 
   .accordion__button {
@@ -37,10 +46,19 @@
 
   .accordion__icon {
     fill: var(--cl-disable);
+    transition: var(--transition-main);
+  }
+
+  &.active .accordion__icon {
+    transform: rotate(180deg);
   }
 
   .accordion__content-wrapper {
     padding: 0 30px 30px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 87px 87px;
+    }
   }
 
   .accordion__content {

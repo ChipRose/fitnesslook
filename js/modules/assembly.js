@@ -6,40 +6,76 @@
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-// Accordion
-
-const accordions = Array.from(document.querySelectorAll('.accordion'));
-const windowWidth = window.innerWidth;
-const accordionHandler = evt => {
-  evt.preventDefault();
-  const curentAccordion = evt.target.closest('.accordion');
-  const currentContent = evt.target.nextElementSibling;
-  let widthFlag = true;
-  if (widthFlag) {
-    curentAccordion.classList.toggle('active');
-  }
-  const closeAccordion = () => {
-    curentAccordion.classList.remove('active');
-    currentContent.style.maxHeight = 0;
-  };
-  const closeAccordionHandler = () => {
-    const windowCloseWidth = window.innerWidth;
-    widthFlag = windowCloseWidth === windowWidth;
-    if (!widthFlag) {
-      closeAccordion();
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   setAccordions: () => (/* binding */ setAccordions)
+/* harmony export */ });
+const setAccordions = selector => {
+  const accordions = Array.from(document.querySelectorAll(selector));
+  const windowWidth = window.innerWidth;
+  const accordionHandler = evt => {
+    evt.preventDefault();
+    const currentAccordion = evt.target.closest(selector);
+    const currentContent = evt.target.nextElementSibling;
+    let widthFlag = true;
+    const closeAccordion = () => {
+      currentAccordion.classList.remove('active');
+      currentContent.style.maxHeight = 0;
+    };
+    if (widthFlag) {
+      currentAccordion.classList.toggle('active');
+    }
+    const closeAccordionHandler = () => {
+      const windowCloseWidth = window.innerWidth;
+      widthFlag = windowCloseWidth === windowWidth;
+      if (!widthFlag) {
+        closeAccordion();
+      }
+    };
+    if (currentAccordion.classList.contains('active')) {
+      currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
+      window.addEventListener('resize', closeAccordionHandler);
+    } else {
+      closeAccordion(currentContent);
+      window.removeEventListener('resize', closeAccordionHandler);
     }
   };
-  if (curentAccordion.classList.contains('active')) {
-    currentContent.style.maxHeight = `${currentContent.scrollHeight}px`;
-    window.addEventListener('resize', closeAccordionHandler);
-  } else {
-    closeAccordion(currentContent);
-    window.removeEventListener('resize', closeAccordionHandler);
+  accordions?.forEach(accordion => {
+    accordion.addEventListener('click', accordionHandler);
+  });
+};
+
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   setNavigation: () => (/* binding */ setNavigation)
+/* harmony export */ });
+const HEADER_HEIGHT = 153;
+const navigationHandle = (element, ...callBacks) => {
+  const elementHref = element.target.href;
+  const elementId = elementHref.substring(elementHref.indexOf('#'));
+  const scrollElement = document.querySelector(elementId).offsetTop;
+  window.scrollTo({
+    top: scrollElement + HEADER_HEIGHT,
+    behavior: 'smooth'
+  });
+  if (callBacks?.length) {
+    callBacks.forEach(cb => {
+      cb();
+    });
   }
 };
-accordions?.forEach(accordion => {
-  accordion.addEventListener('click', accordionHandler);
-});
+const setNavigation = (container, ...callBacks) => {
+  const navigationList = document.querySelector(container);
+  navigationList?.addEventListener('click', evt => {
+    evt.preventDefault();
+    navigationHandle(evt, ...callBacks);
+  });
+};
+
 
 /***/ })
 /******/ 	]);
@@ -69,6 +105,23 @@ accordions?.forEach(accordion => {
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -86,7 +139,12 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assembly_accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _delivery_navigation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 
+
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_1__.setNavigation)('#navigation-in');
+(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_1__.setNavigation)('#global-up');
+(0,_assembly_accordion_js__WEBPACK_IMPORTED_MODULE_0__.setAccordions)('.accordion');
 })();
 
 /******/ })()

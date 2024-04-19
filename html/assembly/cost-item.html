@@ -17,19 +17,25 @@
         <thead>
           <tr>
             <th class="cost__cell cost__table-title cost__cell--header">
-              Стоимость заказа
+              <span>
+                Стоимость заказа
+              </span>
             </th>
             <th class="cost__cell cost__table-title cost__cell--header">
-              Стоимость сборки
+              <span>
+                Стоимость сборки
+              </span>
             </th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td class="cost__cell">
-              от @@orderCost.from р.
+              <span>
+                от @@orderCost.from р.
+              </span>
             </td>
-            <td class="cost__cell">
+            <td class="cost__cell cost__cell--price">
               <span>
                 @@assemblyCost.from.new р.
               </span>
@@ -40,9 +46,11 @@
           </tr>
           <tr>
             <td class="cost__cell">
-              до @@orderCost.to р.
+              <span>
+                до @@orderCost.to р.
+              </span>
             </td>
-            <td class="cost__cell">
+            <td class="cost__cell cost__cell--price">
               <span>
                 @@assemblyCost.to.new р.
               </span>
@@ -54,11 +62,15 @@
         </tbody>
         <tfoot>
           <tr>
-            <td class="cost__cell cost__table-title">
-              Время сборки
+            <td class="cost__cell cost__cell--footer cost__table-title">
+              <span>
+                Время сборки
+              </span>
             </td>
-            <td class="cost__cell">
-              @@time мин.
+            <td class="cost__cell cost__cell--footer">
+              <span>
+                @@time мин.
+              </span>
             </td>
           </tr>
         </tfoot>
