@@ -64,7 +64,7 @@
           </div>
 
           <section class="navigation page-assembly__navigation">
-            <div class="container">
+            <div class="container container--extra">
               <h2 class="visually-hidden">Навигация по странице</h2>
               <ul class="list navigation__list" id="navigation-in">
                 @@loop('./common/navigation-item.html',[
@@ -95,7 +95,7 @@
 
           <a id="conditions"></a>
           <div class="assembly-conditions page-assembly__assembly-conditions">
-            <div class="container">
+            <div class="container container--extra">
               <div class="info-block">
                 <header class="info-block__header">
                   <h2 class="title title-main">
@@ -129,7 +129,7 @@
 
           <a id="cost"></a>
           <div class="cost page-assembly__cost">
-            <div class="container">
+            <div class="container container--extra">
               <div class="info-block cost__info-block">
                 <header class="info-block__header">
                   <h2 class="title title-main">
@@ -144,6 +144,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="container">
               <ul class="list">
                 @@loop('./assembly/cost-item.html',"../json/assembly/cost.json")
               </ul>
@@ -152,7 +154,7 @@
 
           <a id="refund"></a>
           <div class="refund page-assembly__refund">
-            <div class="container">
+            <div class="container container--extra">
               <div class="info-block refund__info-block">
                 <header class="info-block__header">
                   <h2 class="title title-main">
@@ -192,12 +194,14 @@
 
           <a id="faq"></a>
           <section class="faq page-assembly__faq">
-            <div class="container">
+            <div class="container container--extra">
               <div class="faq__title">
                 <h2 class="title title-main">
                   FAQ
                 </h2>
               </div>
+            </div>
+            <div class="container">
               <div class="faq__content-block">
                 <ul class="list faq__list">
                   @@loop('./common/faq-item.html', "../json/assembly/questions.json")
