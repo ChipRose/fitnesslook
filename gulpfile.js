@@ -17,7 +17,7 @@ const PUBLICATION_FOLDER = './build';
 
 const path = {
   src: {
-    html: `${SRC_FOLDER}/html/**/*.html`,
+    html: `${SRC_FOLDER}/html/*.html`,
     css: `${SRC_FOLDER}/style/resource/*.scss`,
     img: `${SRC_FOLDER}/i/media-resource/**/*.{jpg,png}`,
     sprite: `${SRC_FOLDER}/i/media-resource/stat/icons/**/*.svg`,
@@ -69,6 +69,13 @@ export function processStyles() {
     .pipe(plumber())
     .pipe(sass({
     }).on('error', sass.logError))
+    .pipe(fileinclude({
+      prefix: '@@',
+
+      context: {
+        path: '/'
+      }
+    }))
     .pipe(gulp.dest(path.build.css, { sourcemaps: isDevelopment }))
     .pipe(browser.stream());
 }
@@ -206,6 +213,13 @@ export function processStylesPub() {
     .pipe(plumber())
     .pipe(sass({
     }).on('error', sass.logError))
+    .pipe(fileinclude({
+      prefix: '@@',
+
+      context: {
+        path: ''
+      }
+    }))
     .pipe(gulp.dest(path.publication.css, { sourcemaps: isDevelopment }));
 }
 
