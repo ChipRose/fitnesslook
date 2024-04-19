@@ -114,7 +114,7 @@ const windowWidth = window.innerWidth;
 const accordionHandler = (evt) => {
   evt.preventDefault();
   const curentAccordion = evt.target.closest('.accordion');
-  const currentContent = evt.target.nextElementSibling;
+  const currentContent = curentAccordion.querySelector('.accordion__content');
   const extraBlocks = [document.querySelector('.form-order__date'), document.querySelector('.form-order__discount')];
   let widthFlag = true;
 
