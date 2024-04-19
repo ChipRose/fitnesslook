@@ -8,6 +8,14 @@ const setAccordions = (selector) => {
 
     const currentAccordion = evt.target.closest(selector);
     const currentContent = evt.target.nextElementSibling;
+
+    const inactiveAccordion = accordions.filter((accordion) => accordion !== currentAccordion);
+
+    inactiveAccordion.forEach((accordion) => {
+      accordion.classList.remove('active');
+      accordion.querySelector(`${selector}__content`).style.maxHeight = 0;
+    });
+
     let widthFlag = true;
 
     const closeAccordion = () => {
