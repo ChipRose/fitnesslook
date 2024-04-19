@@ -210,13 +210,15 @@ export function processStylesPub() {
 }
 
 export function processAllScriptsPub() {
+  const dest = './build/js/modules/';
+
   return gulp.series(
-    processScript({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js', dest: './build/js/modules/' }),
-    processScript({ src: './js/common/delivery.js', title: 'delivery.js', dest: './build/js/modules/' }),
-    processScript({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js', dest: './build/js/modules/' }),
-    processScript({ src: './js/common/region-delivery.js', title: 'region-delivery.js', dest: './build/js/modules/' }),
-    processScript({ src: './js/common/cart.js', title: 'cart.js', dest: './build/js/modules/' }),
-    processScript({ src: './js/common/assembly.js', title: 'cart.js', dest: './build/js/assembly/' }),
+    processScript({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js', dest }),
+    processScript({ src: './js/common/delivery.js', title: 'delivery.js', dest }),
+    processScript({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js', dest }),
+    processScript({ src: './js/common/region-delivery.js', title: 'region-delivery.js', dest }),
+    processScript({ src: './js/common/cart.js', title: 'cart.js', dest }),
+    processScript({ src: './js/common/assembly.js', title: 'assembly.js', dest }),
   );
 }
 
