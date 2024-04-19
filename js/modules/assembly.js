@@ -15,7 +15,7 @@ const setAccordions = selector => {
   const accordionHandler = evt => {
     evt.preventDefault();
     const currentAccordion = evt.target.closest(selector);
-    const currentContent = evt.target.nextElementSibling;
+    const currentContent = currentAccordion.querySelector(`${selector}__content`);
     const inactiveAccordion = accordions.filter(accordion => accordion !== currentAccordion);
     inactiveAccordion.forEach(accordion => {
       accordion.classList.remove('active');
