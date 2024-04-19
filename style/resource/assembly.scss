@@ -1,0 +1,26 @@
+@import "delivery/variables.scss";
+
+//Global
+@import "global/normalize.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
+@import "global/container.scss";
+
+// Components
+@import "delivery/controls.scss";
+@import "delivery/breadcrumbs.scss";
+@import "delivery/texts.scss";
+@import "delivery/images.scss";
+@import "assembly/navigation.scss";
+@import "assembly/accordion.scss";
+
+// Layout
+@import "delivery/layouts.scss";
+
+// Blocks
+@import "assembly/page-assembly.scss";
+@import "delivery/cover.scss";
+@import "assembly/cost.scss";
+@import "assembly/refund.scss";
+@import "delivery/faq.scss";
+@import "delivery/action.scss";

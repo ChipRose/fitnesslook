@@ -1,0 +1,72 @@
+#wmc {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: var(--fw-light);
+  background: var(--cl-light);
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
+#wmc>.wrapper {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: auto;
+}
+
+
+.page-assembly__main-nav {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.page-assembly__main-nav .container {
+  padding-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+  }
+}
+
+.page-assembly__cover {
+  margin-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.page-assembly__navigation {
+  margin-bottom: 68px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 134px;
+  }
+}
+
+.page-assembly__assembly-conditions {
+  margin-bottom: 64px;
+}
+
+.page-assembly__cost {
+  margin-bottom: 64px;
+
+}
+
+.page-assembly__refund {
+  margin-bottom: 78px;
+}
+
+.page-assembly__faq {
+  margin-bottom: 64px;
+}
+
+.page-assembly__action {
+  margin-bottom: 46px;
+}

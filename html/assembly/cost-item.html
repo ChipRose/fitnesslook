@@ -1,0 +1,80 @@
+<li class="accordion cost__item">
+  <div class="accordion__label">
+    <div class="accordion__label-wrapper">
+      <h3 class="title accordion__title">
+        @@title
+      </h3>
+      <span class="accordion__button">
+        <svg class="accordion__icon" width="12" height="9" role="img" focusable="false">
+          <use xlink:href="@@pathi/media/stat/sprite.svg#arrow-up"></use>
+        </svg>
+      </span>
+    </div>
+  </div>
+  <div class="accordion__content">
+    <div class="accordion__content-wrapper">
+      <table class="cost__table">
+        <thead>
+          <tr>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость заказа
+              </span>
+            </th>
+            <th class="cost__cell cost__table-title cost__cell--header">
+              <span>
+                Стоимость сборки
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                от @@orderCost.from р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                @@assemblyCost.from.new р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                @@assemblyCost.from.old р.
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="cost__cell">
+              <span>
+                до @@orderCost.to р.
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--price">
+              <span>
+                @@assemblyCost.to.new р.
+              </span>
+              <span class="text text-main cost__old-price text-main--del">
+                @@assemblyCost.to.old р.
+              </span>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td class="cost__cell cost__cell--footer cost__table-title">
+              <span>
+                Время сборки
+              </span>
+            </td>
+            <td class="cost__cell cost__cell--footer">
+              <span>
+                @@time мин.
+              </span>
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</li>

@@ -48,13 +48,14 @@ const path = {
   }
 };
 
-
 const sass = gulpSass(dartSass);
 let isDevelopment = true;
 
 export function processMarkup() {
   return gulp.src(path.src.html)
     .pipe(fileinclude({
+      prefix: '@@',
+
       context: {
         path: '/'
       }
@@ -96,6 +97,7 @@ export function processAllScripts() {
     processScript({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js' }),
     processScript({ src: './js/common/region-delivery.js', title: 'region-delivery.js' }),
     processScript({ src: './js/common/cart.js', title: 'cart.js' }),
+    processScript({ src: './js/common/assembly.js', title: 'assembly.js' }),
   );
 }
 
