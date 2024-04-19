@@ -14,7 +14,7 @@
   &::after {
     content: "";
     position: absolute;
-    background: center center / 12px 12px  no-repeat url("/i/media/stat/prof-trains/img/icons/simple-arrow.svg");
+    background: center center / 12px 12px  no-repeat url("@@pathi/media/stat/prof-trains/img/icons/simple-arrow.svg");
     right: 4px;
     width: var(--button-size);
     height: var(--button-size);
@@ -55,7 +55,7 @@
 
   &::after {
     content: "";
-    background: center center / 12px 12px  no-repeat url("/i/media/stat/prof-trains/img/icons/simple-arrow.svg");
+    background: center center / 12px 12px  no-repeat url("@@pathi/media/stat/prof-trains/img/icons/simple-arrow.svg");
     transform-origin: center center;
     transform: translateY(-13px) rotate(180deg);
   }

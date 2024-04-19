@@ -92,6 +92,13 @@ export function processScript({ src, title, dest = path.build.js }) {
         },
       }))
       .pipe(rename(title))
+      .pipe(fileinclude({
+        prefix: '@@',
+
+        context: {
+          path: '/'
+        }
+      }))
       .pipe(gulp.dest(dest))
       .pipe(browser.stream());
   };
@@ -223,16 +230,40 @@ export function processStylesPub() {
     .pipe(gulp.dest(path.publication.css, { sourcemaps: isDevelopment }));
 }
 
+export function processScriptPub({ src, title, dest = path.build.js }) {
+  return function script() {
+    return gulp.src(src)
+      .pipe(webpack({
+        mode: 'none',
+        module: {
+          rules: [
+            { test: /\.js$/i, exclude: '/node_modules/', use: ['babel-loader'] },
+          ],
+        },
+      }))
+      .pipe(rename(title))
+      .pipe(fileinclude({
+        prefix: '@@',
+
+        context: {
+          path: '../'
+        }
+      }))
+      .pipe(gulp.dest(dest))
+      .pipe(browser.stream());
+  };
+}
+
 export function processAllScriptsPub() {
   const dest = './build/js/modules/';
 
   return gulp.series(
-    processScript({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js', dest }),
-    processScript({ src: './js/common/delivery.js', title: 'delivery.js', dest }),
-    processScript({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js', dest }),
-    processScript({ src: './js/common/region-delivery.js', title: 'region-delivery.js', dest }),
-    processScript({ src: './js/common/cart.js', title: 'cart.js', dest }),
-    processScript({ src: './js/common/assembly.js', title: 'assembly.js', dest }),
+    processScriptPub({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js', dest }),
+    processScriptPub({ src: './js/common/delivery.js', title: 'delivery.js', dest }),
+    processScriptPub({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js', dest }),
+    processScriptPub({ src: './js/common/region-delivery.js', title: 'region-delivery.js', dest }),
+    processScriptPub({ src: './js/common/cart.js', title: 'cart.js', dest }),
+    processScriptPub({ src: './js/common/assembly.js', title: 'assembly.js', dest }),
   );
 }
 
