@@ -318,15 +318,15 @@ const options = {
 const lazyElements = [{
   img: document.querySelector('#intro-image'),
   container: document.querySelector('#intro-cover'),
-  video: '/i/media/stat/prof-trains/video/main-cover.mp4',
-  poster: '/i/media/stat/prof-trains/img/intro/poster-desk.jpg',
+  video: '../i/media/stat/prof-trains/video/main-cover.mp4',
+  poster: '../i/media/stat/prof-trains/img/intro/poster-desk.jpg',
   alt: 'Все для фитнес-залов'
 }, {
   img: document.querySelector('#projects-image'),
   container: document.querySelector('#projects-cover'),
-  video: '/i/media/stat/prof-trains/video/projects/projects-cover.mp4',
-  videoDesk: '/i/media/stat/prof-trains/video/projects/projects-cover-desk.mp4',
-  poster: '/i/media/stat/prof-trains/img/projects/poster-desk.jpg',
+  video: '../i/media/stat/prof-trains/video/projects/projects-cover.mp4',
+  videoDesk: '../i/media/stat/prof-trains/video/projects/projects-cover-desk.mp4',
+  poster: '../i/media/stat/prof-trains/img/projects/poster-desk.jpg',
   alt: 'Фитнесс единица',
   loop: true
 }];
