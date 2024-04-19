@@ -217,7 +217,7 @@ export function processStylesPub() {
       prefix: '@@',
 
       context: {
-        path: '../'
+        path: '../../'
       }
     }))
     .pipe(gulp.dest(path.publication.css, { sourcemaps: isDevelopment }));
