@@ -533,6 +533,9 @@ p, span {
     padding: 0 38px;
   }
 }
+.container--extra {
+  padding: 0 34px;
+}
 
 .container--full {
   padding: 0 10px;
@@ -1228,7 +1231,7 @@ p, span {
   cursor: pointer;
 }
 .accordion .accordion__label-wrapper {
-  padding: 30px 21px 30px 30px;
+  padding: 30px 22px 30px 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1274,7 +1277,7 @@ p, span {
   transform: rotate(180deg);
 }
 .accordion .accordion__content-wrapper {
-  padding: 0 30px 30px;
+  padding: 0 24px 30px;
 }
 @media (min-width: 768px) {
   .accordion .accordion__content-wrapper {

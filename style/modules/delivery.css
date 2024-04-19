@@ -533,6 +533,9 @@ p, span {
     padding: 0 38px;
   }
 }
+.container--extra {
+  padding: 0 34px;
+}
 
 .container--full {
   padding: 0 10px;
