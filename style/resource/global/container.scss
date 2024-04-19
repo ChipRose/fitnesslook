@@ -8,6 +8,10 @@
   @media (min-width: $tablet-width) {
     padding: 0 38px;
   }
+
+  &--extra {
+    padding: 0 34px;
+  }
 }
 
 .container--full {
@@ -27,6 +31,8 @@
     margin-left: -32px;
   }
 }
+
+
 
 .container-inner {
   padding: 0 22px;
