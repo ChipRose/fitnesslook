@@ -1051,7 +1051,7 @@ p, span {
 }
 .accordion--decor.accordion .ac-trigger::after {
   content: "";
-  background: center/9px 9px no-repeat url("/i/media/stat/prof-trains/img/icons/double-arrow-up.svg");
+  background: center/9px 9px no-repeat url("../../i/media/stat/prof-trains/img/icons/double-arrow-up.svg");
   width: var(--button-size);
   height: var(--button-size);
   border: 1px solid var(--cl-accent);
@@ -1067,7 +1067,7 @@ p, span {
 }
 .accordion--decor.accordion .ac.is-active > .ac-header .ac-trigger::after {
   content: "";
-  background: center/9px 9px no-repeat url("/i/media/stat/prof-trains/img/icons/double-arrow-up.svg");
+  background: center/9px 9px no-repeat url("../../i/media/stat/prof-trains/img/icons/double-arrow-up.svg");
   transform-origin: center center;
   transform: translateY(-13px) rotate(180deg);
 }
