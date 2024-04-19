@@ -11,6 +11,10 @@
 
   &--extra {
     padding: 0 34px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 50px;
+    }
   }
 }
 
