@@ -64,8 +64,9 @@
             <div class="container">
               @@include('./common/cover.html', {
                 "title": "Доставка <br> и оплата",
-                "subtitle": "В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class=\"nobr\">{$pod_info.sum_dostavka|number_format:0:\",\":\"'\"} ₽.</span>"
-                })
+                "subtitle": "В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class=\"nobr\">{$pod_info.sum_dostavka|number_format:0:\",\":\"'\"} ₽.</span>",
+                "imageDirectory":"@@pathi/media/stat/delivery/cover/"
+              })
             </div>
           </section>
 
