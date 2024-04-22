@@ -2,10 +2,8 @@ import Accordion from 'accordion-js';
 import { settingAccordionAdaptive, closeAllAccordions } from './region-delivery/accordion.js';
 import { getData } from './region-delivery/api.js';
 import setPopup from './region-delivery/popup.js';
-// import { initMap } from './region-delivery/map.js';
+import { setAccordions } from './util/accordion.js';
 import './region-delivery/modal.js';
-import { renderQuestionsList } from './region-delivery/faq.js';
-import questions from '../../json/region-delivery/questions.json';
 import { setFormSubmit, sendForm, setSuccessState, setErrorState } from './region-delivery/form.js';
 import { renderCitiesDelivery } from './region-delivery/regions.js';
 import { setNavigation } from './region-delivery/navigation.js';
@@ -17,10 +15,6 @@ getData((regions) => {
 
 setFormSubmit(sendForm(setSuccessState, setErrorState));
 
-renderQuestionsList(questions);
-
-// eslint-disable-next-line
-// initMap();
 setPopup();
 
 // Sliders
@@ -41,11 +35,7 @@ if (document.querySelector('#pickup-slider') && document.querySelector('#pickup-
 const accordionDelivery = new Accordion(Array.from(document.querySelectorAll('.accordion--delivery')));
 settingAccordionAdaptive(accordionDelivery);
 
-const accordionFAQ = new Accordion(Array.from(document.querySelectorAll('.accordion--faq')), {
-  duration: 100
-});
-
-closeAllAccordions(accordionFAQ);
+setAccordions();
 
 // Navigation
 

@@ -8,24 +8,26 @@
 
 // Components
 @import "delivery/controls.scss";
-@import "delivery/breadcrumbs.scss";
 @import "delivery/texts.scss";
 @import "region-delivery/images.scss";
 @import "delivery/paper.scss";
 @import "region-delivery/accordion.scss";
 @import "region-delivery/sliders.scss";
+@import "common/breadcrumbs.scss";
+@import "common/accordion-simple.scss";
 
 // Layout
 @import "delivery/layouts.scss";
 
 // Blocks
-@import "delivery/page-delivery.scss";
 @import "common/cover.scss";
 @import "common/navigation.scss";
+@import "common/faq.scss";
+@import "common/action.scss";
+@import "delivery/page-delivery.scss";
 @import "region-delivery/receiving.scss";
 @import "delivery/cost.scss";
 @import "delivery/payment.scss";
 @import "delivery/delivery-regions.scss";
 @import "delivery/form-communicate.scss";
-@import "delivery/faq.scss";
-@import "delivery/action.scss";
+
