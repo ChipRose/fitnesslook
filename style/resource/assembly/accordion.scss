@@ -6,7 +6,7 @@
   cursor: pointer;
 
   .accordion__label-wrapper {
-    padding: 30px 22px 30px 24px;
+    padding: 32px 22px 32px 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +14,7 @@
     pointer-events: none;
 
     @media (min-width: $tablet-width) {
-      padding: 30px 68px 30px 87px;
+      padding: 46px 30px 46px 39px;
     }
   }
 
@@ -55,10 +55,10 @@
   }
 
   .accordion__content-wrapper {
-    padding: 0 24px 30px;
+    padding: 0 32px 35px;
 
     @media (min-width: $tablet-width) {
-      padding: 0 87px 87px;
+      padding: 0 39px 45px;
     }
   }
 

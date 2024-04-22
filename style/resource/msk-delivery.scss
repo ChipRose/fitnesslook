@@ -20,7 +20,8 @@
 
 // Blocks
 @import "delivery/page-delivery.scss";
-@import "delivery/cover.scss";
+@import "common/cover.scss";
+@import "common/navigation.scss";
 @import "msk-delivery/receiving.scss";
 @import "delivery/cost.scss";
 @import "delivery/payment.scss";

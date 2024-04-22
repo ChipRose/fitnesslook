@@ -56,46 +56,50 @@
             </div>
           </section>
 
-          <div class="page-assembly__cover">
-            @@include('./common/cover.html', {
-            "title": "Сборка",
-            "subtitle": "В {$cur_month_e} мы сделали сборку бесплатной для заказов от ХХ 000 Р."
-            })
-          </div>
+          <section class="page-assembly__cover">
+            <div class="container">
+              @@include('./common/cover.html', {
+              "title": "Сборка",
+              "subtitle": "В {$cur_month_e} мы сделали сборку бесплатной для заказов от ХХ 000 Р."
+              })
+            </div>
+          </section>
 
-          <section class="navigation page-assembly__navigation">
-            <div class="container container--extra">
-              <h2 class="visually-hidden">Навигация по странице</h2>
-              <ul class="list navigation__list" id="navigation-in">
-                @@loop('./common/navigation-item.html',[
-                {
-                "title":"Условия сборки",
-                "link":"#conditions",
-                'classExtra':"navigation__list-item--active"
-                },
-                {
-                "title":"Стоимость сборки",
-                "link":"#cost",
-                'classExtra':""
-                },
-                {
-                "title":"Условия возврата",
-                "link":"#refund",
-                'classExtra':""
-                },
-                {
-                "title":"FAQ",
-                "link":"#faq",
-                'classExtra':""
-                }
-                ])
-              </ul>
+          <section class="page-assembly__navigation">
+            <div class="container">
+              <div class="navigation">
+                <h2 class="visually-hidden">Навигация по странице</h2>
+                <ul class="list navigation__list" id="navigation-in">
+                  @@loop('./common/navigation-item.html',[
+                  {
+                  "title":"Условия сборки",
+                  "link":"#conditions",
+                  "classExtra":"navigation__list-item--active"
+                  },
+                  {
+                  "title":"Стоимость сборки",
+                  "link":"#cost",
+                  "classExtra":""
+                  },
+                  {
+                  "title":"Условия возврата",
+                  "link":"#refund",
+                  "classExtra":""
+                  },
+                  {
+                  "title":"FAQ",
+                  "link":"#faq",
+                  "classExtra":""
+                  }
+                  ])
+                </ul>
+              </div>
             </div>
           </section>
 
           <a id="conditions"></a>
-          <div class="assembly-conditions page-assembly__assembly-conditions">
-            <div class="container container--extra">
+          <section class="assembly-conditions page-assembly__assembly-conditions">
+            <div class="container">
               <div class="info-block">
                 <header class="info-block__header">
                   <h2 class="title title-main">
@@ -125,11 +129,11 @@
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           <a id="cost"></a>
-          <div class="cost page-assembly__cost">
-            <div class="container container--extra">
+          <section class="cost page-assembly__cost">
+            <div class="container">
               <div class="info-block cost__info-block">
                 <header class="info-block__header">
                   <h2 class="title title-main">
@@ -150,11 +154,11 @@
                 @@loop('./assembly/cost-item.html',"../json/assembly/cost.json")
               </ul>
             </div>
-          </div>
+          </section>
 
           <a id="refund"></a>
-          <div class="refund page-assembly__refund">
-            <div class="container container--extra">
+          <section class="refund page-assembly__refund">
+            <div class="container">
               <div class="info-block refund__info-block">
                 <header class="info-block__header">
                   <h2 class="title title-main">
@@ -164,13 +168,13 @@
                 <div class="info-block__text-block">
                   <div class="info-block__title">
                     <p class="text text-main text-main--strong">
-                      При отказе от товара надлежащего качества заказчи обязан возместить 100% стоимости сборки.
+                      При отказе от товара надлежащего качества заказчик обязан возместить 100% стоимости сборки.
                     </p>
                   </div>
                   <div class="columns">
                     <div class="columns__item">
                       <p class="text text-main">
-                        При отказе от товара надлежащего качества после его сборки для возврата оборудования потребуется в 100% размере оплатить стоимость его сборки даже в том случае, если при покупке эта услуга стоила 0 рублей и являлась подарком.
+                        При отказе от товара надлежащего качества после его сборки для возврата оборудования потребуется в 100% размере оплатить стоимость его сборки даже в том случае, если при покупке эта услуга стоила <span class="nobr">0 рублей</span> и являлась подарком.
                       </p>
                       <p class="text text-main">
                         Ознакомьтесь с условиями на странице возврата товара.
@@ -185,27 +189,27 @@
                 </div>
               </div>
               <div class="refund__action-block">
-                <a class="link button-simple button-simple--active" href="/pages/garantiya.html">
+                <a class="link button-main button-main--active" href="/pages/garantiya.html">
                   Гарантия и возврат
                 </a>
               </div>
             </div>
-          </div>
+          </section>
 
           <a id="faq"></a>
-          <section class="faq page-assembly__faq">
-            <div class="container container--extra">
-              <div class="faq__title">
-                <h2 class="title title-main">
-                  FAQ
-                </h2>
-              </div>
-            </div>
+          <section class="page-assembly__faq">
             <div class="container">
-              <div class="faq__content-block">
-                <ul class="list faq__list">
-                  @@loop('./common/faq-item.html', "../json/assembly/questions.json")
-                </ul>
+              <div class="faq">
+                <div class="faq__title">
+                  <h2 class="title title-main">
+                    FAQ
+                  </h2>
+                </div>
+                <div class="faq__content-block">
+                  <ul class="list faq__list">
+                    @@loop('./common/faq-item.html', "../json/assembly/questions.json")
+                  </ul>
+                </div>
               </div>
             </div>
           </section>

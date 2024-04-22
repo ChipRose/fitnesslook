@@ -59,32 +59,49 @@
             </div>
           </section>
 
-          <section class="cover page-delivery__cover">
-            @@include('./common/cover.html', {
-              "title": "Доставка <br> и оплата",
-              "subtitle": "В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class='nobr'>25'000 ₽.</span>"
-              })
+          <section class="page-delivery__cover">
+            <div class="container">
+              @@include('./common/cover.html', {
+                "title": "Доставка <br> и оплата",
+                "subtitle": "В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class='nobr'>25'000 ₽.</span>"
+                })
+            </div>
           </section>
 
-          <section class="navigation page-delivery__navigation">
+          <section class="page-delivery__navigation">
             <div class="container">
               <h2 class="visually-hidden">Навигация по странице</h2>
-              <div class="button-block" id="navigation-in">
-                <a href="#receiving-type" class="link button-main button-block__item button-main--active">
-                  Способы получения
-                </a>
-                <a href="#cost-delivery" class="link button-main  button-block__item">
-                  Стоимость доставки
-                </a>
-                <a href="#payment" class="link button-main  button-block__item">
-                  Способы оплаты
-                </a>
-                <a href="#regions" class="link button-main  button-block__item">
-                  Доставка в регионы
-                </a>
-                <a href="#faq" class="link button-main button-block__item">
-                  FAQ
-                </a>
+              <div class="navigation">
+                <h2 class="visually-hidden">Навигация по странице</h2>
+                <ul class="list navigation__list" id="navigation-in">
+                  @@loop('./common/navigation-item.html',[
+                  {
+                  "title":"Способы получения",
+                  "link":"#receiving-type",
+                  "classExtra":"navigation__list-item--active"
+                  },
+                  {
+                  "title":"Стоимость доставки",
+                  "link":"#cost-delivery",
+                  "classExtra":""
+                  },
+                  {
+                  "title":"Способы оплаты",
+                  "link":"#payment",
+                  "classExtra":""
+                  },
+                  {
+                  "title":"Доставка в регионы",
+                  "link":"#regions",
+                  "classExtra":""
+                  },
+                  {
+                  "title":"FAQ",
+                  "link":"#faq",
+                  "classExtra":""
+                  }
+                  ])
+                </ul>
               </div>
             </div>
           </section>
