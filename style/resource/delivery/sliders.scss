@@ -18,6 +18,14 @@
   }
 }
 
+.slider-main__extra-title {
+  margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
+  }
+}
+
 .slider-main #slider-delivery-mw {
   overflow: visible;
 }
@@ -48,4 +56,8 @@
 
 .slider-main__table-block {
   margin-bottom: 50px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }

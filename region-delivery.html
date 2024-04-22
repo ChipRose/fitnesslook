@@ -3611,47 +3611,39 @@
 
           <section class="page-delivery__cover">
             <div class="container">
-              <section class="cover">
-  <div class="container">
-    <div class="cover__wrapper container__narrow">
-      <div class="cover__title-block">
-        <h1 class="title title-major cover__title">
-          Доставка <br> и оплата
-        </h1>
-      </div>
-      <div class="cover__content">
-        <header class="cover__header">
-          <p class="text subtitle cover__subtitle">
-            В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class="nobr">{$pod_info.sum_dostavka|number_format:0:",":"'"} ₽.</span>
-          </p>
-          <button class="button button-main button-main--active cover__button cover__button--hidden">
-            Рассчитать стоимость доставки
-          </button>
-        </header>
-        <div class="image-block cover__image-block">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="/i/media/stat/delivery/cover/cover-desk.webp 1x, /i/media/stat/delivery/cover/cover-desk@2x.webp 2x">
-            <source type="image/webp"
-              srcset="/i/media/stat/delivery/cover/cover.webp 1x, /i/media/stat/delivery/cover/cover@2x.webp 2x">
-            <source media="(min-width: 768px)"
-              srcset="/i/media/stat/delivery/cover/cover-desk.jpg 1x, /i/media/stat/delivery/cover/cover-desk@2x.jpg 2x">
-            <img src="/i/media/stat/delivery/cover/cover.jpg"
-              srcset="/i/media/stat/delivery/cover/cover@2x.jpg 2x" alt="Велотренажер">
-          </picture>
-        </div>
-      </div>
-      <div class="image-block cover__extra-image-block">
+              <div class="cover">
+  <div class="cover__wrapper container__narrow">
+    <div class="cover__title-block">
+      <h1 class="title title-major cover__title">
+        Доставка <br> и оплата
+      </h1>
+    </div>
+    <div class="cover__content">
+      <header class="cover__header">
+        <p class="text subtitle cover__subtitle">
+          В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class="nobr">{$pod_info.sum_dostavka|number_format:0:",":"'"} ₽.</span>
+        </p>
+        <button class="button button-main button-main--active cover__button">
+          Рассчитать стоимость доставки
+        </button>
+      </header>
+      <div class="image-block cover__image-block">
         <picture>
-          <source type="image/webp"
-            srcset="/i/media/stat/delivery/cover/cover-extra-desk.webp 1x, /i/media/stat/delivery/cover/cover-extra-desk@2x.webp 2x">
-          <img src="/i/media/stat/delivery/cover/cover-extra-desk.jpg"
-            srcset="/i/media/stat/delivery/cover/cover-extra-desk@2x.jpg 2x" alt="Беговая дорожка">
+          <source type="image/webp" media="(min-width: 768px)" srcset="/i/media/stat/delivery/cover/cover-desk.webp 1x, /i/media/stat/delivery/cover/cover-desk@2x.webp 2x">
+          <source type="image/webp" srcset="/i/media/stat/delivery/cover/cover.webp 1x, /i/media/stat/delivery/cover/cover@2x.webp 2x">
+          <source media="(min-width: 768px)" srcset="/i/media/stat/delivery/cover/cover-desk.jpg 1x, /i/media/stat/delivery/cover/cover-desk@2x.jpg 2x">
+          <img src="/i/media/stat/delivery/cover/cover.jpg" srcset="/i/media/stat/delivery/cover/cover@2x.jpg 2x" alt="Велотренажер">
         </picture>
       </div>
     </div>
+    <div class="image-block cover__extra-image-block">
+      <picture>
+        <source type="image/webp" srcset="/i/media/stat/delivery/cover/cover-extra-desk.webp 1x, /i/media/stat/delivery/cover/cover-extra-desk@2x.webp 2x">
+        <img src="/i/media/stat/delivery/cover/cover-extra-desk.jpg" srcset="/i/media/stat/delivery/cover/cover-extra-desk@2x.jpg 2x" alt="Беговая дорожка">
+      </picture>
+    </div>
   </div>
-</section>
+</div>
 
             </div>
           </section>

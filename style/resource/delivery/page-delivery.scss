@@ -1,22 +1,3 @@
-.page-delivery #wmc {
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 140%;
-  font-weight: var(--fw-light);
-  background: var(--cl-light);
-
-  @media (min-width: $tablet-width) {
-    font-size: 18px;
-  }
-}
-
-.page-delivery #wmc>.wrapper {
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  min-width: auto;
-}
-
 .page-delivery__main-nav {
   margin-bottom: 30px;
 

@@ -152,29 +152,3 @@
     padding: 46px 26px 68px;
   }
 }
-
-.accordion.accordion--faq {
-  .title-secondary {
-    font-size: 18px;
-    color: var(--cl-dark);
-    font-weight: var(--fw-bold);
-
-    @media (min-width: $tablet-width) {
-      font-size: 26px;
-    }
-  }
-
-  .ac-trigger {
-    &::after {
-      background: center center/ 15px 8px no-repeat url("/i/media/stat/icons/simple-arrow-neutral.svg");
-    }
-  }
-
-  .ac-header {
-    padding-left: 39px;
-  }
-
-  .accordion__text-block {
-    padding: 0 39px;
-  }
-}
