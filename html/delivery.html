@@ -59,11 +59,13 @@
             </div>
           </section>
 
-          <section class="cover page-delivery__cover">
-            @@include('./common/cover.html', {
-              "title": "Доставка <br> и оплата",
-              "subtitle": "В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class='nobr'>25'000 ₽.</span>"
-              })
+          <section class="page-delivery__cover">
+            <div class="container">
+              @@include('./common/cover.html', {
+                "title": "Доставка <br> и оплата",
+                "subtitle": "В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class='nobr'>25'000 ₽.</span>"
+                })
+            </div>
           </section>
 
           <section class="navigation page-delivery__navigation">
