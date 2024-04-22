@@ -9,7 +9,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   setAccordions: () => (/* binding */ setAccordions)
 /* harmony export */ });
-const setAccordions = selector => {
+const setAccordions = (selector = '.accordion-simple') => {
   const accordions = Array.from(document.querySelectorAll(selector));
   const windowWidth = window.innerWidth;
   const accordionHandler = evt => {
@@ -143,13 +143,13 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _assembly_accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _util_accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _delivery_navigation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 
 
 (0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_1__.setNavigation)('#navigation-in');
 (0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_1__.setNavigation)('#global-up');
-(0,_assembly_accordion_js__WEBPACK_IMPORTED_MODULE_0__.setAccordions)('.accordion');
+(0,_util_accordion_js__WEBPACK_IMPORTED_MODULE_0__.setAccordions)('.accordion-simple');
 })();
 
 /******/ })()
