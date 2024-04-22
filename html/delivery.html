@@ -1249,13 +1249,20 @@
           </section>
 
           <a id="faq"></a>
-          <section class="faq page-delivery__faq">
+          <section class="page-delivery__faq">
             <div class="container">
-              <h2 class="title title-main faq__title">
-                FAQ
-              </h2>
-              <ul class="list faq__list container__narrow" id="faq-list">
-              </ul>
+              <div class="faq">
+                <div class="faq__title">
+                  <h2 class="title title-main">
+                    FAQ
+                  </h2>
+                </div>
+                <div class="faq__content-block">
+                  <ul class="list faq__list">
+                    @@loop('./common/faq-item.html', '../json/delivery/questions.json')
+                  </ul>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -1304,24 +1311,6 @@
             <button type="button"
               class="button button-main button-main--active button-main--center button-close">Попробовать снова</button>
           </div>
-        </template>
-
-        <!-- Question -->
-        <template id="question">
-          <li class="accordion accordion--faq faq__item">
-            <div class="ac">
-              <h3 class="title ac-header">
-                <button class="button ac-trigger">
-                  <span class="text title-secondary">
-                  </span>
-                </button>
-              </h3>
-              <div class="ac-panel">
-                <div class="accordion__text-block">
-                </div>
-              </div>
-            </div>
-          </li>
         </template>
 
         <div class="clear"></div>

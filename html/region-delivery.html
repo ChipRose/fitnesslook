@@ -948,13 +948,20 @@
           </section>
 
           <a id="faq"></a>
-          <section class="faq page-delivery__faq">
+          <section class="page-delivery__faq">
             <div class="container">
-              <h2 class="title title-main faq__title">
-                FAQ
-              </h2>
-              <ul class="list faq__list container__narrow" id="faq-list">
-              </ul>
+              <div class="faq">
+                <div class="faq__title">
+                  <h2 class="title title-main">
+                    FAQ
+                  </h2>
+                </div>
+                <div class="faq__content-block">
+                  <ul class="list faq__list">
+                    @@loop('./common/faq-item.html', '../json/region-delivery/questions.json')
+                  </ul>
+                </div>
+              </div>
             </div>
           </section>
 

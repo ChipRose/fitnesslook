@@ -1,5 +1,5 @@
 
-const setAccordions = (selector) => {
+const setAccordions = (selector = '.accordion-simple') => {
   const accordions = Array.from(document.querySelectorAll(selector));
   const windowWidth = window.innerWidth;
 

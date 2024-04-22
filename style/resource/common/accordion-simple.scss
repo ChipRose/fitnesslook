@@ -1,11 +1,11 @@
-.accordion {
+.accordion-simple {
   border-radius: 30px;
   box-shadow: var(--shadow-basic);
   overflow: hidden;
   background: var(--cl-contrast);
   cursor: pointer;
 
-  .accordion__label-wrapper {
+  .accordion-simple__label-wrapper {
     padding: 32px 22px 32px 32px;
     display: flex;
     justify-content: space-between;
@@ -18,7 +18,7 @@
     }
   }
 
-  .accordion__title {
+  .accordion-simple__title {
     margin-right: 30px;
     font-size: 20px;
     line-height: 110%;
@@ -30,7 +30,7 @@
     }
   }
 
-  .accordion__button {
+  .accordion-simple__button {
     flex: 0 0 37px;
     padding: 11px;
     width: 37px;
@@ -45,16 +45,16 @@
     transition: var(--transition-main);
   }
 
-  .accordion__icon {
+  .accordion-simple__icon {
     fill: var(--cl-disable);
     transition: var(--transition-main);
   }
 
-  &.active .accordion__icon {
+  &.active .accordion-simple__icon {
     transform: rotate(180deg);
   }
 
-  .accordion__content-wrapper {
+  .accordion-simple__content-wrapper {
     padding: 0 32px 35px;
 
     @media (min-width: $tablet-width) {
@@ -62,7 +62,7 @@
     }
   }
 
-  .accordion__content {
+  .accordion-simple__content {
     position: relative;
     overflow: hidden;
     max-height: 0;
