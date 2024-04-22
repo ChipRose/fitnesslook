@@ -1,4 +1,4 @@
-@import "delivery/variables.scss";
+@import "common/variables.scss";
 
 //Global
 @import "global/normalize.scss";
@@ -20,7 +20,7 @@
 @import "common/cover.scss";
 @import "common/navigation.scss";
 @import "common/faq.scss";
+@import "common/action.scss";
 @import "assembly/page-assembly.scss";
 @import "assembly/cost.scss";
 @import "assembly/refund.scss";
-@import "common/action.scss";

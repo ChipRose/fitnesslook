@@ -7,11 +7,9 @@
 @import "global/container.scss";
 
 // Components
-@import "delivery/controls.scss";
 @import "delivery/texts.scss";
 @import "delivery/images.scss";
-@import "delivery/accordion.scss";
-@import "delivery/sliders.scss";
+@import "common/controls.scss";
 @import "common/breadcrumbs.scss";
 @import "common/accordion-simple.scss";
 
@@ -23,10 +21,3 @@
 @import "common/navigation.scss";
 @import "common/faq.scss";
 @import "common/action.scss";
-@import "delivery/page-delivery.scss";
-@import "region-delivery/receiving.scss";
-@import "delivery/cost.scss";
-@import "delivery/payment.scss";
-@import "delivery/delivery-regions.scss";
-@import "delivery/form-communicate.scss";
-
