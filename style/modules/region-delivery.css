@@ -385,6 +385,26 @@ template {
 }
 
 /* stylelint-enable */
+#wmc {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: var(--fw-light);
+  background: var(--cl-light);
+}
+@media (min-width: 768px) {
+  #wmc {
+    font-size: 18px;
+  }
+}
+
+#wmc > .wrapper {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: auto;
+}
+
 .list {
   padding: 0;
   margin: 0;
@@ -1119,7 +1139,7 @@ p, span {
 
 .image-pins.image-pins--rowing .image-pins__item:nth-child(1) {
   top: 40%;
-  left: 40%;
+  left: 35%;
 }
 
 .image-pins.image-pins--armchair .image-pins__item:nth-child(1) {
@@ -1143,13 +1163,6 @@ p, span {
   width: 18px;
   height: auto;
   fill: var(--cl-contrast);
-}
-
-.paper {
-  box-sizing: border-box;
-  background: var(--cl-contrast);
-  border-radius: var(--radius-main);
-  box-shadow: var(--shadow-main);
 }
 
 .accordion {
@@ -1276,6 +1289,7 @@ p, span {
   text-align: center;
   font-weight: var(--fw-medium);
   text-transform: uppercase;
+  box-sizing: border-box;
 }
 @media (min-width: 768px) {
   .accordion__time-item {
@@ -1306,36 +1320,6 @@ p, span {
 @media (min-width: 768px) {
   .accordion__paper {
     padding: 46px 26px 68px;
-  }
-}
-
-.accordion.accordion--faq .title-secondary {
-  font-size: 18px;
-  color: var(--cl-dark);
-  font-weight: var(--fw-bold);
-}
-@media (min-width: 768px) {
-  .accordion.accordion--faq .title-secondary {
-    font-size: 26px;
-  }
-}
-.accordion.accordion--faq .ac-trigger::after {
-  background: center center/15px 8px no-repeat url("/i/media/stat/icons/simple-arrow-neutral.svg");
-}
-.accordion.accordion--faq .ac-header {
-  padding-left: 22px;
-}
-@media (min-width: 768px) {
-  .accordion.accordion--faq .ac-header {
-    padding-left: 39px;
-  }
-}
-.accordion.accordion--faq .accordion__text-block {
-  padding: 0 22px;
-}
-@media (min-width: 768px) {
-  .accordion.accordion--faq .accordion__text-block {
-    padding: 0 39px;
   }
 }
 
@@ -1821,26 +1805,6 @@ p, span {
 
 .action__button {
   margin-left: auto;
-}
-
-.page-delivery #wmc {
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 140%;
-  font-weight: var(--fw-light);
-  background: var(--cl-light);
-}
-@media (min-width: 768px) {
-  .page-delivery #wmc {
-    font-size: 18px;
-  }
-}
-
-.page-delivery #wmc > .wrapper {
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  min-width: auto;
 }
 
 .page-delivery__main-nav {

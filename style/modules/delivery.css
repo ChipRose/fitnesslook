@@ -385,6 +385,26 @@ template {
 }
 
 /* stylelint-enable */
+#wmc {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: var(--fw-light);
+  background: var(--cl-light);
+}
+@media (min-width: 768px) {
+  #wmc {
+    font-size: 18px;
+  }
+}
+
+#wmc > .wrapper {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: auto;
+}
+
 .list {
   padding: 0;
   margin: 0;
@@ -1145,13 +1165,6 @@ p, span {
   fill: var(--cl-contrast);
 }
 
-.paper {
-  box-sizing: border-box;
-  background: var(--cl-contrast);
-  border-radius: var(--radius-main);
-  box-shadow: var(--shadow-main);
-}
-
 .accordion {
   box-sizing: border-box;
   background: var(--cl-contrast);
@@ -1310,26 +1323,6 @@ p, span {
   }
 }
 
-.accordion.accordion--faq .title-secondary {
-  font-size: 18px;
-  color: var(--cl-dark);
-  font-weight: var(--fw-bold);
-}
-@media (min-width: 768px) {
-  .accordion.accordion--faq .title-secondary {
-    font-size: 26px;
-  }
-}
-.accordion.accordion--faq .ac-trigger::after {
-  background: center center/15px 8px no-repeat url("/i/media/stat/icons/simple-arrow-neutral.svg");
-}
-.accordion.accordion--faq .ac-header {
-  padding-left: 39px;
-}
-.accordion.accordion--faq .accordion__text-block {
-  padding: 0 39px;
-}
-
 .slider-main__header {
   padding-bottom: 60px;
   margin-bottom: 38px;
@@ -1351,6 +1344,15 @@ p, span {
 @media (min-width: 768px) {
   .slider-main__title {
     margin-bottom: 60px;
+  }
+}
+
+.slider-main__extra-title {
+  margin-bottom: 33px;
+}
+@media (min-width: 768px) {
+  .slider-main__extra-title {
+    margin-bottom: 44px;
   }
 }
 
@@ -1385,6 +1387,9 @@ p, span {
 
 .slider-main__table-block {
   margin-bottom: 50px;
+}
+.slider-main__table-block:last-child {
+  margin-bottom: 0;
 }
 
 .breadcrumbs {
@@ -1800,26 +1805,6 @@ p, span {
 
 .action__button {
   margin-left: auto;
-}
-
-.page-delivery #wmc {
-  font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 140%;
-  font-weight: var(--fw-light);
-  background: var(--cl-light);
-}
-@media (min-width: 768px) {
-  .page-delivery #wmc {
-    font-size: 18px;
-  }
-}
-
-.page-delivery #wmc > .wrapper {
-  padding: 0;
-  width: 100%;
-  max-width: 100%;
-  min-width: auto;
 }
 
 .page-delivery__main-nav {
