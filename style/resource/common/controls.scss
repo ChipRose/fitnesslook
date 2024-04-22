@@ -1,0 +1,114 @@
+// Main button
+//--default - white with shadow
+//--active - black
+//--center - centered button
+//--hover - with biger shadow
+
+.button-main {
+  padding: 8px 20px;
+  display: block;
+  width: fit-content;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0.02rem;
+  font-weight: var(--fw-medium);
+  background: var(--cl-contrast);
+  box-shadow: var(--shadow-main);
+  color: var(--cl-heavy-dark);
+  border-radius: 40px;
+  transition: var(--transition-main);
+
+  &:active {
+    background: var(--cl-heavy-dark);
+    color: var(--cl-contrast);
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-main-hover);
+  }
+}
+
+.button-main.button-main--active {
+  background: var(--cl-heavy-dark);
+  color: var(--cl-contrast);
+}
+
+.button-main.button-main--center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Round button
+//--default - white with shadow
+//--accent - violet
+//--big - size is bigger
+
+
+.button-round {
+  padding: 11px;
+  width: 37px;
+  height: 37px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: var(--fw-medium);
+  color: var(--cl-accent);
+  background: var(--cl-contrast);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: var(--shadow-middle);
+  vertical-align: middle;
+  line-height: 150%;
+  transition: var(--transition-main);
+
+  &--simple {
+    color: var(--cl-disable);
+    font-size: var(--fz-medium);
+    font-weight: var(--fw-regular);
+  }
+
+  &--slider {
+    background: var(--cl-transparent-contrast);
+    box-shadow: none;
+
+
+    svg {
+      fill: var(--cl-contrast);
+    }
+  }
+
+  &--slider-prev {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    box-shadow: var(--shadow-main-hover);
+  }
+
+  .button-round__icon {
+    fill: var(--cl-accent);
+    pointer-events: none;
+  }
+}
+
+.button-round.button-round--big {
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  font-weight: var(--fw-medium);
+
+  @media (min-width: $tablet-width) {
+    width: 90px;
+    height: 90px;
+    font-size: 26px;
+    line-height: 100%;
+    vertical-align: middle;
+  }
+}
+
+.button-round.button-round--accent {
+  background: var(--cl-accent);
+  color: var(--cl-contrast);
+}
