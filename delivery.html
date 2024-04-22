@@ -3608,70 +3608,84 @@
             </div>
           </section>
 
-          <section class="cover page-delivery__cover">
-            <section class="cover">
-  <div class="container">
-    <div class="cover__wrapper container__narrow">
-      <div class="cover__title-block">
-        <h1 class="title title-major cover__title">
-          Доставка <br> и оплата
-        </h1>
-      </div>
-      <div class="cover__content">
-        <header class="cover__header">
-          <p class="text subtitle cover__subtitle">
-            В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class='nobr'>25'000 ₽.</span>
-          </p>
-          <button class="button button-main button-main--active cover__button cover__button--hidden">
-            Рассчитать стоимость доставки
-          </button>
-        </header>
-        <div class="image-block cover__image-block">
-          <picture>
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="i/media/stat/delivery/cover/cover-desk.webp 1x, i/media/stat/delivery/cover/cover-desk@2x.webp 2x">
-            <source type="image/webp"
-              srcset="i/media/stat/delivery/cover/cover.webp 1x, i/media/stat/delivery/cover/cover@2x.webp 2x">
-            <source media="(min-width: 768px)"
-              srcset="i/media/stat/delivery/cover/cover-desk.jpg 1x, i/media/stat/delivery/cover/cover-desk@2x.jpg 2x">
-            <img src="i/media/stat/delivery/cover/cover.jpg"
-              srcset="i/media/stat/delivery/cover/cover@2x.jpg 2x" alt="Велотренажер">
-          </picture>
-        </div>
-      </div>
-      <div class="image-block cover__extra-image-block">
+          <section class="page-delivery__cover">
+            <div class="container">
+              <div class="cover">
+  <div class="cover__wrapper container__narrow">
+    <div class="cover__title-block">
+      <h1 class=" cover__title">
+        Доставка <br> и оплата
+      </h1>
+    </div>
+    <div class="cover__content">
+      <header class="cover__header">
+        <p class="cover__subtitle">
+          В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class='nobr'>25'000 ₽.</span>
+        </p>
+        <button class="button button-main button-main--active cover__button">
+          Рассчитать стоимость доставки
+        </button>
+      </header>
+      <div class="cover__image-block">
         <picture>
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="i/media/stat/delivery/cover/cover-desk.webp 1x, i/media/stat/delivery/cover/cover-desk@2x.webp 2x">
           <source type="image/webp"
-            srcset="i/media/stat/delivery/cover/cover-extra-desk.webp 1x, i/media/stat/delivery/cover/cover-extra-desk@2x.webp 2x">
-          <img src="i/media/stat/delivery/cover/cover-extra-desk.jpg"
-            srcset="i/media/stat/delivery/cover/cover-extra-desk@2x.jpg 2x" alt="Беговая дорожка">
+            srcset="i/media/stat/delivery/cover/cover.webp 1x, i/media/stat/delivery/cover/cover@2x.webp 2x">
+          <source media="(min-width: 768px)"
+            srcset="i/media/stat/delivery/cover/cover-desk.jpg 1x, i/media/stat/delivery/cover/cover-desk@2x.jpg 2x">
+          <img src="i/media/stat/delivery/cover/cover.jpg"
+            srcset="i/media/stat/delivery/cover/cover@2x.jpg 2x" alt="Велотренажер">
         </picture>
       </div>
     </div>
+    <div class="cover__extra-image-block">
+      <picture>
+        <source type="image/webp"
+          srcset="i/media/stat/delivery/cover/cover-extra-desk.webp 1x, i/media/stat/delivery/cover/cover-extra-desk@2x.webp 2x">
+        <img src="i/media/stat/delivery/cover/cover-extra-desk.jpg"
+          srcset="i/media/stat/delivery/cover/cover-extra-desk@2x.jpg 2x" alt="Беговая дорожка">
+      </picture>
+    </div>
   </div>
-</section>
+</div>
 
+            </div>
           </section>
 
-          <section class="navigation page-delivery__navigation">
+          <section class="page-delivery__navigation">
             <div class="container">
               <h2 class="visually-hidden">Навигация по странице</h2>
-              <div class="button-block" id="navigation-in">
-                <a href="#receiving-type" class="link button-main button-block__item button-main--active">
-                  Способы получения
-                </a>
-                <a href="#cost-delivery" class="link button-main  button-block__item">
-                  Стоимость доставки
-                </a>
-                <a href="#payment" class="link button-main  button-block__item">
-                  Способы оплаты
-                </a>
-                <a href="#regions" class="link button-main  button-block__item">
-                  Доставка в регионы
-                </a>
-                <a href="#faq" class="link button-main button-block__item">
-                  FAQ
-                </a>
+              <div class="navigation">
+                <h2 class="visually-hidden">Навигация по странице</h2>
+                <ul class="list navigation__list" id="navigation-in">
+                  <li class="navigation__list-item navigation__list-item--active">
+  <a href=#receiving-type class="link button-main">
+    Способы получения
+  </a>
+</li>
+<li class="navigation__list-item ">
+  <a href=#cost-delivery class="link button-main">
+    Стоимость доставки
+  </a>
+</li>
+<li class="navigation__list-item ">
+  <a href=#payment class="link button-main">
+    Способы оплаты
+  </a>
+</li>
+<li class="navigation__list-item ">
+  <a href=#regions class="link button-main">
+    Доставка в регионы
+  </a>
+</li>
+<li class="navigation__list-item ">
+  <a href=#faq class="link button-main">
+    FAQ
+  </a>
+</li>
+
+                </ul>
               </div>
             </div>
           </section>

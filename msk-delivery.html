@@ -7,8 +7,7 @@
   <script>var _vkt_id = 1167; var cat_timer, tch_flag, cath_timer;</script>
   <link rel="icon" href="https://www.fitnesslook.ru/favicon.ico" type="image/x-icon">
   <link rel="shortcut icon" href="https://www.fitnesslook.ru/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css"
-    href="https://www.fitnesslook.ru/style/compress/show_aux_page.css?t=1699630948">
+  <link rel="stylesheet" type="text/css" href="https://www.fitnesslook.ru/style/compress/show_aux_page.css?t=1699630948">
   <link rel="stylesheet" type="text/css" href="https://www.fitnesslook.ru/js/tiny_slider/tiny-slider.css">
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css  ">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
@@ -24,13 +23,11 @@
 
   <title>Услуги и оборудование FitnessLook в Санкт-Петербурге для открытия спортивного зала, фитнес клуба,
     тренажерного центра</title>
-  <meta name="description"
-    content='📢 Планируете ⌛ открыть спортивный зал, фитнес клуб или тренажерный центр в Санкт-Петербурге? ✅ Или ищете спортивное оборудование для своего бизнеса? ⚡ Мы поможем❗ — страница для ⭐ B2B-клиентов гипермаркета тренажеров FitnessLook'>
+  <meta name="description" content='📢 Планируете ⌛ открыть спортивный зал, фитнес клуб или тренажерный центр в Санкт-Петербурге? ✅ Или ищете спортивное оборудование для своего бизнеса? ⚡ Мы поможем❗ — страница для ⭐ B2B-клиентов гипермаркета тренажеров FitnessLook'>
 
 </head>
 
-<body onclick="$('.wrap_catf').removeClass('show');$('#catalog_new').removeClass('show');"
-  onmousedown="$('.root_category_ul').hide();">
+<body onclick="$('.wrap_catf').removeClass('show');$('#catalog_new').removeClass('show');" onmousedown="$('.root_category_ul').hide();">
 
   <div class="head_v2_wrap">
   <div class="wrapper">
@@ -3607,68 +3604,83 @@
             </div>
           </section>
 
-          <section class="cover page-delivery__cover">
+          <section class="page-delivery__cover">
             <div class="container">
-              <div class="cover__wrapper container__narrow">
-                <div class="cover__title-block">
-                  <h1 class="title title-major cover__title">
-                    Доставка <br> и оплата
-                  </h1>
-                </div>
-                <div class="cover__content">
-                  <header class="cover__header">
-                    <p class="text subtitle cover__subtitle">
-                      В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span
-                        class="nobr">{$pod_info.sum_dostavka|number_format:0:",":"'"} ₽.</span>
-                    </p>
-                    <button class="button button-main button-main--active cover__button cover__button--hidden">
-                      Рассчитать стоимость доставки
-                    </button>
-                  </header>
-                  <div class="image-block cover__image-block">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 768px)"
-                        srcset="i/media/stat/msk-delivery/cover/cover-desk.webp 1x, /i/media/stat/msk-delivery/cover/cover-desk@2x.webp 2x">
-                      <source type="image/webp"
-                        srcset="i/media/stat/msk-delivery/cover/cover.webp 1x, /i/media/stat/msk-delivery/cover/cover@2x.webp 2x">
-                      <source media="(min-width: 768px)"
-                        srcset="i/media/stat/msk-delivery/cover/cover-desk.jpg 1x, /i/media/stat/msk-delivery/cover/cover-desk@2x.jpg 2x">
-                      <img src="i/media/stat/msk-delivery/cover/cover.jpg"
-                        srcset="i/media/stat/msk-delivery/cover/cover@2x.jpg 2x" alt="Велотренажер">
-                    </picture>
-                  </div>
-                </div>
-                <div class="image-block cover__extra-image-block">
-                  <picture>
-                    <source type="image/webp"
-                      srcset="i/media/stat/msk-delivery/cover/cover-extra-desk.webp 1x, /i/media/stat/msk-delivery/cover/cover-extra-desk@2x.webp 2x">
-                    <img src="i/media/stat/msk-delivery/cover/cover-extra-desk.jpg"
-                      srcset="i/media/stat/msk-delivery/cover/cover-extra-desk@2x.jpg 2x" alt="Беговая дорожка">
-                  </picture>
-                </div>
-              </div>
+              <div class="cover">
+  <div class="cover__wrapper container__narrow">
+    <div class="cover__title-block">
+      <h1 class=" cover__title">
+        Доставка <br> и оплата
+      </h1>
+    </div>
+    <div class="cover__content">
+      <header class="cover__header">
+        <p class="cover__subtitle">
+          В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class="nobr">{$pod_info.sum_dostavka|number_format:0:",":"'"} ₽.</span>
+        </p>
+        <button class="button button-main button-main--active cover__button">
+          Рассчитать стоимость доставки
+        </button>
+      </header>
+      <div class="cover__image-block">
+        <picture>
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="i/media/stat/delivery/cover/cover-desk.webp 1x, i/media/stat/delivery/cover/cover-desk@2x.webp 2x">
+          <source type="image/webp"
+            srcset="i/media/stat/delivery/cover/cover.webp 1x, i/media/stat/delivery/cover/cover@2x.webp 2x">
+          <source media="(min-width: 768px)"
+            srcset="i/media/stat/delivery/cover/cover-desk.jpg 1x, i/media/stat/delivery/cover/cover-desk@2x.jpg 2x">
+          <img src="i/media/stat/delivery/cover/cover.jpg"
+            srcset="i/media/stat/delivery/cover/cover@2x.jpg 2x" alt="Велотренажер">
+        </picture>
+      </div>
+    </div>
+    <div class="cover__extra-image-block">
+      <picture>
+        <source type="image/webp"
+          srcset="i/media/stat/delivery/cover/cover-extra-desk.webp 1x, i/media/stat/delivery/cover/cover-extra-desk@2x.webp 2x">
+        <img src="i/media/stat/delivery/cover/cover-extra-desk.jpg"
+          srcset="i/media/stat/delivery/cover/cover-extra-desk@2x.jpg 2x" alt="Беговая дорожка">
+      </picture>
+    </div>
+  </div>
+</div>
+
             </div>
           </section>
 
-          <section class="navigation page-delivery__navigation">
+          <section class="page-delivery__navigation">
             <div class="container">
-              <h2 class="visually-hidden">Навигация по странице</h2>
-              <div class="button-block" id="navigation-in">
-                <a href="#receiving-type" class="link button-main button-block__item button-main--active">
-                  Способы получения
-                </a>
-                <a href="#cost-delivery" class="link button-main  button-block__item">
-                  Стоимость доставки
-                </a>
-                <a href="#payment" class="link button-main  button-block__item">
-                  Способы оплаты
-                </a>
-                <a href="#regions" class="link button-main  button-block__item">
-                  Доставка в регионы
-                </a>
-                <a href="#faq" class="link button-main button-block__item">
-                  FAQ
-                </a>
+              <div class="navigation">
+                <h2 class="visually-hidden">Навигация по странице</h2>
+                <ul class="list navigation__list" id="navigation-in">
+                  <li class="navigation__list-item navigation__list-item--active">
+  <a href=#receiving-type class="link button-main">
+    Способы получения
+  </a>
+</li>
+<li class="navigation__list-item ">
+  <a href=#cost-delivery class="link button-main">
+    Стоимость доставки
+  </a>
+</li>
+<li class="navigation__list-item ">
+  <a href=#payment class="link button-main">
+    Способы оплаты
+  </a>
+</li>
+<li class="navigation__list-item ">
+  <a href=#regions class="link button-main">
+    Доставка в регионы
+  </a>
+</li>
+<li class="navigation__list-item ">
+  <a href=#faq class="link button-main">
+    FAQ
+  </a>
+</li>
+
+                </ul>
               </div>
             </div>
           </section>
@@ -3718,8 +3730,7 @@
                   Как получить свой заказ
                 </h2>
                 <div class="button-block" id="slider-delivery-type-buttons">
-                  <button class="button button-main button-main--active button-block__item"
-                    value="delivery">Доставка</button>
+                  <button class="button button-main button-main--active button-block__item" value="delivery">Доставка</button>
                   <button class="button button-main  button-block__item" value="pickup">Самовывоз</button>
                 </div>
               </header>
@@ -3737,8 +3748,7 @@
                     <div class="receiving-type__wrapper container__narrow">
                       <div class="receiving-type__col receiving-type__col--1">
                         <div class="receiving-type__info-block">
-                          <div
-                            class="receiving-type__info-image-block image-pins image-pins-block image-pins--treadmill receiving-type--center">
+                          <div class="receiving-type__info-image-block image-pins image-pins-block image-pins--treadmill receiving-type--center">
                             <div class="button-popup image-pins__item">
                               <button class="button button-popup__button" type="button">
                                 <svg class="button-popup__icon" width="18" height="17" role="img" focusable="false">
@@ -3776,10 +3786,8 @@
                               </div>
                             </div>
                             <picture>
-                              <source type="image/webp"
-                                srcset="i/media/stat/msk-delivery/receiving/treadmill.webp 1x, /i/media/stat/msk-delivery/receiving/treadmill@2x.webp 2x">
-                              <img src="i/media/stat/msk-delivery/receiving/treadmill.png"
-                                srcset="i/media/stat/msk-delivery/receiving/treadmill@2x.png 2x" alt="Беговая дорожка">
+                              <source type="image/webp" srcset="i/media/stat/msk-delivery/receiving/treadmill.webp 1x, /i/media/stat/msk-delivery/receiving/treadmill@2x.webp 2x">
+                              <img src="i/media/stat/msk-delivery/receiving/treadmill.png" srcset="i/media/stat/msk-delivery/receiving/treadmill@2x.png 2x" alt="Беговая дорожка">
                             </picture>
                           </div>
                           <div class="accordion accordion--adaptive accordion--delivery">
@@ -3806,12 +3814,10 @@
                           </div>
                         </div>
                         <div class="receiving-type__info-block">
-                          <div
-                            class="receiving-type__info-image-block image-pins image-pins-block image-pins--armchair receiving-type--center">
+                          <div class="receiving-type__info-image-block image-pins image-pins-block image-pins--armchair receiving-type--center">
                             <div class="button-popup image-pins__item">
                               <button class="button button-popup__button" type="button">
-                                <svg class="button-popup__icon button-popup__icon--time" width="10" height="20"
-                                  role="img" focusable="false">
+                                <svg class="button-popup__icon button-popup__icon--time" width="10" height="20" role="img" focusable="false">
                                   <use xlink:href="i/media/stat/sprite.svg#time-icon"></use>
                                 </svg>
                               </button>
@@ -3822,10 +3828,8 @@
                               </div>
                             </div>
                             <picture>
-                              <source type="image/webp"
-                                srcset="i/media/stat/msk-delivery/receiving/armchair.webp 1x, /i/media/stat/msk-delivery/receiving/armchair@2x.webp 2x">
-                              <img src="i/media/stat/msk-delivery/receiving/armchair.png"
-                                srcset="i/media/stat/msk-delivery/receiving/armchair@2x.png 2x" alt="Массажное кресло">
+                              <source type="image/webp" srcset="i/media/stat/msk-delivery/receiving/armchair.webp 1x, /i/media/stat/msk-delivery/receiving/armchair@2x.webp 2x">
+                              <img src="i/media/stat/msk-delivery/receiving/armchair.png" srcset="i/media/stat/msk-delivery/receiving/armchair@2x.png 2x" alt="Массажное кресло">
                             </picture>
                           </div>
                           <div class="accordion accordion--adaptive accordion--delivery">
@@ -3843,8 +3847,7 @@
                                     Для удобства вы можете выбрать 6-ти часовой временной интервал доставки.
                                   </p>
                                   <p class="text text-main">
-                                    Для доставки товаров на следующий день, необходимо оформить заказ <span
-                                      class="text-main text-main--medium">до 17:00</span> текущего дня.
+                                    Для доставки товаров на следующий день, необходимо оформить заказ <span class="text-main text-main--medium">до 17:00</span> текущего дня.
                                   </p>
                                 </div>
                                 <ul class="list accordion__schedule">
@@ -3858,8 +3861,7 @@
                       </div>
                       <div class="receiving-type__col receiving-type__col--2">
                         <div class="receiving-type__info-block">
-                          <div
-                            class="receiving-type__info-image-block image-pins image-pins-block image-pins--ellipsoid receiving-type--center">
+                          <div class="receiving-type__info-image-block image-pins image-pins-block image-pins--ellipsoid receiving-type--center">
                             <div class="button-popup image-pins__item">
                               <button class="button button-popup__button" type="button">
                                 <svg class="button-popup__icon" width="18" height="23" role="img" focusable="false">
@@ -3883,7 +3885,7 @@
                               </button>
                               <div class="button-popup__modal">
                                 <p class="text">
-                                Заберем обратно при неисправностях
+                                  Заберем обратно при неисправностях
                                 </p>
                               </div>
                             </div>
@@ -3915,11 +3917,8 @@
                               </div>
                             </div>
                             <picture>
-                              <source type="image/webp"
-                                srcset="i/media/stat/msk-delivery/receiving/ellipsoid.webp 1x, /i/media/stat/msk-delivery/receiving/ellipsoid@2x.webp 2x">
-                              <img src="i/media/stat/msk-delivery/receiving/ellipsoid.png"
-                                srcset="i/media/stat/msk-delivery/receiving/ellipsoid@2x.png 2x"
-                                alt="Эллиптический тренажер">
+                              <source type="image/webp" srcset="i/media/stat/msk-delivery/receiving/ellipsoid.webp 1x, /i/media/stat/msk-delivery/receiving/ellipsoid@2x.webp 2x">
+                              <img src="i/media/stat/msk-delivery/receiving/ellipsoid.png" srcset="i/media/stat/msk-delivery/receiving/ellipsoid@2x.png 2x" alt="Эллиптический тренажер">
                             </picture>
                           </div>
                           <div class="accordion accordion--adaptive accordion--delivery">
@@ -3961,8 +3960,7 @@
                                     </p>
                                   </div>
                                   <div class="accordion__action-block">
-                                    <a class="link button-action" href="/pages/sborka-trenazherov-i-oborudovaniya.html"
-                                      target="_blank">
+                                    <a class="link button-action" href="/pages/sborka-trenazherov-i-oborudovaniya.html" target="_blank">
                                       Сборка
                                     </a>
                                   </div>
@@ -3972,8 +3970,7 @@
                           </div>
                         </div>
                         <div class="receiving-type__info-block">
-                          <div
-                            class="receiving-type__info-image-block image-pins image-pins-block image-pins--rowing receiving-type--center">
+                          <div class="receiving-type__info-image-block image-pins image-pins-block image-pins--rowing receiving-type--center">
                             <div class="button-popup image-pins__item">
                               <button class="button button-popup__button" type="button">
                                 <svg class="button-popup__icon" width="14" height="23" role="img" focusable="false">
@@ -3990,10 +3987,8 @@
                               </div>
                             </div>
                             <picture>
-                              <source type="image/webp"
-                                srcset="i/media/stat/msk-delivery/receiving/rowing.webp 1x, /i/media/stat/msk-delivery/receiving/rowing@2x.webp 2x">
-                              <img src="i/media/stat/msk-delivery/receiving/rowing.png"
-                                srcset="i/media/stat/msk-delivery/receiving/rowing@2x.png 2x" alt="Гребной тренажер">
+                              <source type="image/webp" srcset="i/media/stat/msk-delivery/receiving/rowing.webp 1x, /i/media/stat/msk-delivery/receiving/rowing@2x.webp 2x">
+                              <img src="i/media/stat/msk-delivery/receiving/rowing.png" srcset="i/media/stat/msk-delivery/receiving/rowing@2x.png 2x" alt="Гребной тренажер">
                             </picture>
                           </div>
                           <div class="accordion accordion--adaptive accordion--delivery">
@@ -4013,8 +4008,7 @@
                                     вам
                                     заказанный товар до подъезда или входной двери квартиры, после чего уедут. </p>
                                   <p class="text text-main">
-                                    Фактически, наша опция доставки — это тренажер (или другой товар) <span
-                                      class="text-main text-main--medium">под ключ</span>, который после заказа окажется
+                                    Фактически, наша опция доставки — это тренажер (или другой товар) <span class="text-main text-main--medium">под ключ</span>, который после заказа окажется
                                     у
                                     вас в
                                     собранном и <span class="text-main text-main--medium">готовом к использованию
@@ -4039,11 +4033,8 @@
                     <div class="receiving-type__pickup-block container__narrow">
                       <div class="receiving-type__map-block" id="map">
                         <picture>
-                          <source type="image/webp"
-                            srcset="i/media/stat/msk-delivery/receiving/map.webp 1x, /i/media/stat/msk-delivery/receiving/map@2x.webp 2x">
-                          <img src="i/media/stat/msk-delivery/receiving/map.jpg"
-                            srcset="i/media/stat/msk-delivery/receiving/map@2x.jpg 2x"
-                            alt="ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж">
+                          <source type="image/webp" srcset="i/media/stat/msk-delivery/receiving/map.webp 1x, /i/media/stat/msk-delivery/receiving/map@2x.webp 2x">
+                          <img src="i/media/stat/msk-delivery/receiving/map.jpg" srcset="i/media/stat/msk-delivery/receiving/map@2x.jpg 2x" alt="ул. Полевая Сабировская, д. 54, лит. А, секция 304, 3-ий этаж">
                         </picture>
                       </div>
                       <div class="accordion accordion--adaptive accordion--delivery">
@@ -4067,8 +4058,7 @@
                               </p>
                             </div>
                             <address class="accordion-address">
-                              <p
-                                class="text text-main text-main--important text-main--accent text-main--medium receiving-type__extra-title">
+                              <p class="text text-main text-main--important text-main--accent text-main--medium receiving-type__extra-title">
                                 МЦ Империя
                               </p>
                               <div class="address__text-block">
@@ -4104,33 +4094,24 @@
                           <li class="receiving-type__pickup-item">
                             <div class="image-block">
                               <picture>
-                                <source type="image/webp"
-                                  srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-0.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-0@2x.webp 2x">
-                                <img src="i/media/stat/msk-delivery/receiving/delivery-slider/slide-0.jpg"
-                                  srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-0@2x.jpg 2x"
-                                  alt="МЦ Империя">
+                                <source type="image/webp" srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-0.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-0@2x.webp 2x">
+                                <img src="i/media/stat/msk-delivery/receiving/delivery-slider/slide-0.jpg" srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-0@2x.jpg 2x" alt="МЦ Империя">
                               </picture>
                             </div>
                           </li>
                           <li class="receiving-type__pickup-item">
                             <div class="image-block">
                               <picture>
-                                <source type="image/webp"
-                                  srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-1.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-1@2x.webp 2x">
-                                <img src="i/media/stat/msk-delivery/receiving/delivery-slider/slide-1.jpg"
-                                  srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-1@2x.jpg 2x"
-                                  alt="МЦ Империя">
+                                <source type="image/webp" srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-1.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-1@2x.webp 2x">
+                                <img src="i/media/stat/msk-delivery/receiving/delivery-slider/slide-1.jpg" srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-1@2x.jpg 2x" alt="МЦ Империя">
                               </picture>
                             </div>
                           </li>
                           <li class="receiving-type__pickup-item">
                             <div class="image-block">
                               <picture>
-                                <source type="image/webp"
-                                  srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-2.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-2@2x.webp 2x">
-                                <img src="i/media/stat/msk-delivery/receiving/delivery-slider/slide-2.jpg"
-                                  srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-2@2x.jpg 2x"
-                                  alt="МЦ Империя">
+                                <source type="image/webp" srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-2.webp 1x, /i/media/stat/msk-delivery/receiving/delivery-slider/slide-2@2x.webp 2x">
+                                <img src="i/media/stat/msk-delivery/receiving/delivery-slider/slide-2.jpg" srcset="i/media/stat/msk-delivery/receiving/delivery-slider/slide-2@2x.jpg 2x" alt="МЦ Империя">
                               </picture>
                             </div>
                           </li>
@@ -4622,8 +4603,7 @@
                       <li class="button-modal__item">
                         <div class="button-modal__container">
                           <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button"
-                              data-fancybox data-src="#dialog-content-credit">
+                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-credit">
                               ?
                               <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                             </button>
@@ -4660,8 +4640,7 @@
                               Подайте заявку и получите ответ в течение пары минут!
                             </p>
                             <p class="text text-main">
-                              <a href="/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html"
-                                class="link link-main" target="_blank">
+                              <a href="/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html" class="link link-main" target="_blank">
                                 Подробная информация
                               </a> об этом способе оплаты.
                             </p>
@@ -4671,8 +4650,7 @@
                       <li class="button-modal__item">
                         <div class="button-modal__container">
                           <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button"
-                              data-fancybox data-src="#dialog-content-halva">
+                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-halva">
                               ?
                               <span class="visually-hidden">Посмотреть дополнительную информацию</span>
                             </button>
@@ -4715,7 +4693,8 @@
                 </ul>
                 <div class="payment__alert">
                   <p class="text">
-                    * Внимание! Приобретение в рассрочку является акцией магазина. Скидки, подарки и акции не суммируются.
+                    * Внимание! Приобретение в рассрочку является акцией магазина. Скидки, подарки и акции не
+                    суммируются.
                   </p>
                 </div>
               </div>
@@ -4745,8 +4724,7 @@
               <h2 class="title title-main delivery-regions__title-form">
                 Стоимость доставки в регионы
               </h2>
-              <form action="" autocomplete="off" class="form-communicate__form" id="form-delivery"
-                name="delivery-regions">
+              <form action="" autocomplete="off" class="form-communicate__form" id="form-delivery" name="delivery-regions">
                 <div class="form-communicate__intro-block">
                   <div class="form-communicate__intro__item">
                     <p class="text text-main">
@@ -4757,22 +4735,19 @@
                 </div>
                 <fieldset class="fieldset form-communicate__fieldset">
                   <label class="form-communicate__label">
-                    <input class="input field-main form-communicate__field" type="text" required placeholder="Ваше имя"
-                      name="name" id="name-field">
+                    <input class="input field-main form-communicate__field" type="text" required placeholder="Ваше имя" name="name" id="name-field">
                     <span class="visually-hidden">
                       Ваше имя
                     </span>
                   </label>
                   <label class="form-communicate__label">
-                    <input class="input field-main form-communicate__field" type="text" required
-                      placeholder="Ваш телефон" name="phone" id="phone-field">
+                    <input class="input field-main form-communicate__field" type="text" required placeholder="Ваш телефон" name="phone" id="phone-field">
                     <span class="visually-hidden">
                       Ваш телефон
                     </span>
                   </label>
                   <label class="form-communicate__label">
-                    <input class="input field-main form-communicate__field" type="text" required
-                      placeholder="Город доставки" name="city" id="region-field">
+                    <input class="input field-main form-communicate__field" type="text" required placeholder="Город доставки" name="city" id="region-field">
                     <span class="visually-hidden">
                       Город доставки
                     </span>
@@ -4798,8 +4773,7 @@
 
           <div class="action page-delivery__action">
             <div class="container">
-              <a href="#top" id="global-up"
-                class="link button-round button-round--accent button-round--big action__button">
+              <a href="#top" id="global-up" class="link button-round button-round--accent button-round--big action__button">
                 UP
               </a>
             </div>
@@ -4838,8 +4812,7 @@
                 Произошла ошибка при отправке.
               </p>
             </div>
-            <button type="button"
-              class="button button-main button-main--active button-main--center button-close">Попробовать снова</button>
+            <button type="button" class="button button-main button-main--active button-main--center button-close">Попробовать снова</button>
           </div>
         </template>
 
