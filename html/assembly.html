@@ -65,33 +65,35 @@
             </div>
           </section>
 
-          <section class="navigation page-assembly__navigation">
+          <section class="page-assembly__navigation">
             <div class="container container--extra">
-              <h2 class="visually-hidden">Навигация по странице</h2>
-              <ul class="list navigation__list" id="navigation-in">
-                @@loop('./common/navigation-item.html',[
-                {
-                "title":"Условия сборки",
-                "link":"#conditions",
-                'classExtra':"navigation__list-item--active"
-                },
-                {
-                "title":"Стоимость сборки",
-                "link":"#cost",
-                'classExtra':""
-                },
-                {
-                "title":"Условия возврата",
-                "link":"#refund",
-                'classExtra':""
-                },
-                {
-                "title":"FAQ",
-                "link":"#faq",
-                'classExtra':""
-                }
-                ])
-              </ul>
+              <div class="navigation">
+                <h2 class="visually-hidden">Навигация по странице</h2>
+                <ul class="list navigation__list" id="navigation-in">
+                  @@loop('./common/navigation-item.html',[
+                  {
+                  "title":"Условия сборки",
+                  "link":"#conditions",
+                  'classExtra':"navigation__list-item--active"
+                  },
+                  {
+                  "title":"Стоимость сборки",
+                  "link":"#cost",
+                  'classExtra':""
+                  },
+                  {
+                  "title":"Условия возврата",
+                  "link":"#refund",
+                  'classExtra':""
+                  },
+                  {
+                  "title":"FAQ",
+                  "link":"#faq",
+                  'classExtra':""
+                  }
+                  ])
+                </ul>
+              </div>
             </div>
           </section>
 

@@ -11,7 +11,6 @@
 @import "delivery/breadcrumbs.scss";
 @import "delivery/texts.scss";
 @import "delivery/images.scss";
-@import "assembly/navigation.scss";
 @import "assembly/accordion.scss";
 
 // Layout
@@ -20,6 +19,7 @@
 // Blocks
 @import "assembly/page-assembly.scss";
 @import "common/cover.scss";
+@import "common/navigation.scss";
 @import "assembly/cost.scss";
 @import "assembly/refund.scss";
 @import "delivery/faq.scss";
