@@ -132,13 +132,19 @@
           <section>
             <div class="container">
               <ul class="list">
-                @@loop('./guarantee/guarantee-item.html',[
+                @@loop('./common/accordion-item.html',[
                 {
-                "count":"01",
-                "title":"Условия сборки",
+                "title":"<span>01</span><span>Назначение визита</span>",
                 "text":"Найдите товарный чек, на котором указан номер заказа, который начинается на FL.",
+                "classMain":"guarantee__item",
                 "classExtra":"accordion-simple--mobonly"
-                }
+                },
+                {
+                "title":"<span>02</span><span>Диагностика и ремонт</span>",
+                "text":"<p class=\"text text-main\">Обратитесь в отдел гарантии.</p><p class=\"text text-main\">Сообщите номер товарного чека и расскажите о возникшей проблеме.</p>",
+                "classMain":"guarantee__item",
+                "classExtra":"accordion-simple--mobonly"
+                },
                 ])
               </ul>
             </div>
