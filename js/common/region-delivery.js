@@ -6,7 +6,7 @@ import { setAccordions } from './util/accordion.js';
 import './region-delivery/modal.js';
 import { setFormSubmit, sendForm, setSuccessState, setErrorState } from './region-delivery/form.js';
 import { renderCitiesDelivery } from './region-delivery/regions.js';
-import { setNavigation } from './region-delivery/navigation.js';
+import { setNavigation } from './util/navigation.js';
 import { setSlider, setSimpleSlider } from './region-delivery/slider.js';
 
 getData((regions) => {

@@ -462,27 +462,31 @@ __webpack_require__.r(__webpack_exports__);
 const setAccordions = (selector = '.accordion-simple') => {
   const accordions = Array.from(document.querySelectorAll(selector));
   const windowWidth = window.innerWidth;
+  const accordionContentSelector = `${selector}__content`;
+  const accordionAdaptiveSelector = `${selector}--mobonly`.substring(1);
   const accordionHandler = evt => {
     evt.preventDefault();
     const currentAccordion = evt.target.closest(selector);
-    const currentContent = currentAccordion.querySelector(`${selector}__content`);
-    const inactiveAccordion = accordions.filter(accordion => accordion !== currentAccordion);
+    const currentContent = currentAccordion.querySelector(accordionContentSelector);
+    const inactiveAccordion = accordions.filter(accordion => accordion !== currentAccordion && !accordion.classList.contains('open-desk'));
     inactiveAccordion.forEach(accordion => {
       accordion.classList.remove('active');
-      accordion.querySelector(`${selector}__content`).style.maxHeight = 0;
+      accordion.querySelector(accordionContentSelector).style.maxHeight = 0;
     });
-    let widthFlag = true;
+    let widthChangeFlag = true;
     const closeAccordion = () => {
-      currentAccordion.classList.remove('active');
-      currentContent.style.maxHeight = 0;
+      if (!currentAccordion.classList.contains('open-desk')) {
+        currentAccordion.classList.remove('active');
+        currentContent.style.maxHeight = 0;
+      }
     };
-    if (widthFlag) {
+    if (widthChangeFlag) {
       currentAccordion.classList.toggle('active');
     }
     const closeAccordionHandler = () => {
       const windowCloseWidth = window.innerWidth;
-      widthFlag = windowCloseWidth === windowWidth;
-      if (!widthFlag) {
+      widthChangeFlag = windowCloseWidth === windowWidth;
+      if (!widthChangeFlag) {
         closeAccordion();
       }
     };
@@ -494,8 +498,34 @@ const setAccordions = (selector = '.accordion-simple') => {
       window.removeEventListener('resize', closeAccordionHandler);
     }
   };
+  const setAccordionsListener = (accordion, destroyAccordionFlag) => {
+    const accordionContent = accordion.querySelector(accordionContentSelector);
+    if (accordion.classList.contains(accordionAdaptiveSelector)) {
+      if (destroyAccordionFlag) {
+        accordion.removeEventListener('click', accordionHandler);
+        accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`;
+        accordion.classList.add('open-desk');
+      } else {
+        accordion.addEventListener('click', accordionHandler);
+        accordionContent.style.maxHeight = 0;
+        accordion.classList.remove('open-desk');
+      }
+    } else {
+      accordion.addEventListener('click', accordionHandler);
+    }
+  };
   accordions?.forEach(accordion => {
-    accordion.addEventListener('click', accordionHandler);
+    setAccordionsListener(accordion);
+  });
+  const windowChangeDeskWidthFlag = window.innerWidth > 767;
+  accordions?.forEach(accordion => {
+    setAccordionsListener(accordion, windowChangeDeskWidthFlag);
+  });
+  window.addEventListener('resize', () => {
+    const destroyAccordionFlag = window.innerWidth > 767;
+    accordions?.forEach(accordion => {
+      setAccordionsListener(accordion, destroyAccordionFlag);
+    });
   });
 };
 
@@ -13388,7 +13418,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _delivery_modal_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(7);
 /* harmony import */ var _delivery_form_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9);
 /* harmony import */ var _delivery_regions_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(39);
-/* harmony import */ var _delivery_navigation_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(40);
+/* harmony import */ var _util_navigation_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(40);
 /* harmony import */ var _delivery_slider_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(41);
 
 
@@ -13464,12 +13494,12 @@ window.addEventListener('resize', changeAdvOrder);
 
 // Navigation
 
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#navigation-in');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#cost-regions');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#global-up');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#receiving-up');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#regions-list-button');
-(0,_delivery_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#receiving-close-up', () => (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionDelivery));
+(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#navigation-in');
+(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#cost-regions');
+(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#global-up');
+(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#receiving-up');
+(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#regions-list-button');
+(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_9__.setNavigation)('#receiving-close-up', () => (0,_delivery_accordion_js__WEBPACK_IMPORTED_MODULE_1__.closeAllAccordions)(accordionDelivery));
 })();
 
 /******/ })()
