@@ -129,21 +129,27 @@
             </div>
           </section>
 
-          <section>
+          <section >
             <div class="container">
-              <ul class="list">
+              <ul class="list guarantee-list">
                 @@loop('./common/accordion-item.html',[
                 {
-                "title":"<span>01</span><span>Назначение визита</span>",
-                "text":"Найдите товарный чек, на котором указан номер заказа, который начинается на FL.",
-                "classMain":"guarantee__item",
-                "classExtra":"accordion-simple--mobonly"
+                "title":"<span class=\"accordion-simple__counter\">01</span><span>Назначение визита</span>",
+                "text":"<p class=\"text\">Найдите товарный чек, на котором указан номер заказа, который начинается на FL.</p>",
+                "classMain":"guarantee-list__item",
+                "classExtra":"accordion-simple--extra accordion-simple--mobonly"
                 },
                 {
-                "title":"<span>02</span><span>Диагностика и ремонт</span>",
-                "text":"<p class=\"text text-main\">Обратитесь в отдел гарантии.</p><p class=\"text text-main\">Сообщите номер товарного чека и расскажите о возникшей проблеме.</p>",
-                "classMain":"guarantee__item",
-                "classExtra":"accordion-simple--mobonly"
+                "title":"<span class=\"accordion-simple__counter\">02</span><span>Диагностика и ремонт</span>",
+                "text":"<p class=\"text\">Обратитесь в отдел гарантии.</p><p class=\"text\">Сообщите номер товарного чека и расскажите о возникшей проблеме.</p>",
+                "classMain":"guarantee-list__item",
+                "classExtra":"accordion-simple--extra accordion-simple--action accordion-simple--mobonly"
+                },
+                {
+                "title":"<span class=\"accordion-simple__counter\">02</span><span>Диагностика и ремонт</span>",
+                "text":"<p class=\"text\">Обратитесь в отдел гарантии.</p><p class=\"text\">Сообщите номер товарного чека и расскажите о возникшей проблеме.</p>",
+                "classMain":"guarantee-list__item",
+                "classExtra":"accordion-simple--extra accordion-simple--mobonly"
                 },
                 ])
               </ul>

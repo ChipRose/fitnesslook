@@ -1,0 +1,10 @@
+.guarantee-list {
+  @media (min-width:$tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.guarantee-list__item {
+  flex: 0 0 33%;
+}
