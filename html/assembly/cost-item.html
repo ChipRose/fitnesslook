@@ -18,12 +18,12 @@
           <tr>
             <th class="cost__cell cost__table-title cost__cell--header">
               <span>
-                Стоимость заказа
+                @@table.title1
               </span>
             </th>
             <th class="cost__cell cost__table-title cost__cell--header">
               <span>
-                Стоимость сборки
+                @@table.title2
               </span>
             </th>
           </tr>
@@ -32,30 +32,30 @@
           <tr>
             <td class="cost__cell">
               <span>
-                от @@orderCost.from р.
+                @@firstColumn.from
               </span>
             </td>
             <td class="cost__cell cost__cell--price">
               <span>
-                @@assemblyCost.from.new р.
+                @@assemblyCost.from.new
               </span>
               <span class="text text-main cost__old-price text-main--del">
-                @@assemblyCost.from.old р.
+                @@assemblyCost.from.old
               </span>
             </td>
           </tr>
           <tr>
             <td class="cost__cell">
               <span>
-                до @@orderCost.to р.
+                @@firstColumn.to
               </span>
             </td>
             <td class="cost__cell cost__cell--price">
               <span>
-                @@assemblyCost.to.new р.
+                @@assemblyCost.to.new
               </span>
               <span class="text text-main cost__old-price text-main--del">
-                @@assemblyCost.to.old р.
+                @@assemblyCost.to.old
               </span>
             </td>
           </tr>

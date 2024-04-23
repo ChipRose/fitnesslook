@@ -21,7 +21,8 @@ const path = {
     css: `${SRC_FOLDER}/style/resource/*.scss`,
     img: `${SRC_FOLDER}/i/media-resource/**/*.{jpg,png}`,
     sprite: `${SRC_FOLDER}/i/media-resource/stat/icons/**/*.svg`,
-    assets: `${SRC_FOLDER}/i/media-resource/**/*`
+    assets: `${SRC_FOLDER}/i/media-resource/**/*`,
+    json: `${SRC_FOLDER}/json/**/*.json`
   },
   build: {
     html: `${PROJECT_FOLDER}/`,
@@ -164,7 +165,7 @@ function reloadServer(done) {
 function watchFiles() {
   gulp.watch(path.watch.css, gulp.series(processStyles));
   gulp.watch(path.watch.assets, gulp.series(copyAssets, createWebp));
-  gulp.watch(path.watch.json, gulp.series(copyAssets));
+  gulp.watch(path.watch.json, gulp.series(reloadServer));
   gulp.watch(path.watch.js, gulp.series(processAllScripts()));
   gulp.watch(path.watch.html, gulp.series(processMarkup, reloadServer));
 }
