@@ -270,9 +270,16 @@ export function processAllScriptsPub() {
 
 export function copyAssetsPub() {
   return gulp.src([
-    './i/media-resource/**/*',
+    './i/media-resource/**/*'
   ], { base: 'i/media-resource' })
     .pipe(gulp.dest('./build/i/media'));
+}
+
+export function copyFontsPub() {
+  return gulp.src([
+    './i/font/**/*',
+  ], { base: 'i/font' })
+    .pipe(gulp.dest('./build/i/font'));
 }
 
 export function createStackPub() {
@@ -295,6 +302,7 @@ function compileProjectPub(done) {
     processStylesPub,
     processAllScriptsPub(),
     copyAssetsPub,
+    copyFontsPub,
     createStackPub,
     createWebpPub
   )(done);

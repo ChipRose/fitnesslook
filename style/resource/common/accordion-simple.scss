@@ -47,11 +47,12 @@
 
   .accordion-simple__icon {
     fill: var(--cl-disable);
+    transform: rotate(180deg);
     transition: var(--transition-main);
   }
 
   &.active .accordion-simple__icon {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
   }
 
   .accordion-simple__content-wrapper {

@@ -29,7 +29,7 @@
     },
     "firstColumn": {
       "from": "Стандартный",
-      "to": "При заказе < 20'000 ₽"
+      "to": "При заказе <span class='nobr'>< 20'000 ₽</span>"
     },
     "assemblyCost": {
       "from": {
