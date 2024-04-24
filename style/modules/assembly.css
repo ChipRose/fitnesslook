@@ -508,35 +508,35 @@ p, span {
 
 @font-face {
   font-family: "Helvetica";
-  src: url("../../../../i/font/helvetica-regular.woff2") format("woff2"), url("../../../../i/font/helvetica-regular.woff") format("woff");
+  src: url("../../i/font/helvetica-regular.woff2") format("woff2"), url("../../i/font/helvetica-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Helvetica";
-  src: url("../../../../i/font/helvetica-medium.woff2") format("woff2"), url("../../../../i/font/helvetica-medium.woff") format("woff");
+  src: url("../../i/font/helvetica-medium.woff2") format("woff2"), url("../../i/font/helvetica-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Helvetica";
-  src: url("../../../../i/font/helvetica-light.woff2") format("woff2"), url("../../../../i/font/helvetica-light.woff") format("woff");
+  src: url("../../i/font/helvetica-light.woff2") format("woff2"), url("../../i/font/helvetica-light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Helvetica";
-  src: url("../../../../i/font/helvetica-bold.woff2") format("woff2"), url("../../../../i/font/helvetica-bold.woff") format("woff");
+  src: url("../../i/font/helvetica-bold.woff2") format("woff2"), url("../../i/font/helvetica-bold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Natasha";
-  src: url("../../../../i/font/natasha-regular.woff2") format("woff2"), url("../../../../i/font/natasha-regular.woff") format("woff");
+  src: url("../../i/font/natasha-regular.woff2") format("woff2"), url("../../i/font/natasha-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -1011,10 +1011,11 @@ p, span {
 }
 .accordion-simple .accordion-simple__icon {
   fill: var(--cl-disable);
+  transform: rotate(180deg);
   transition: var(--transition-main);
 }
 .accordion-simple.active .accordion-simple__icon {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
 }
 .accordion-simple .accordion-simple__content-wrapper {
   padding: 0 32px 35px;
