@@ -1497,7 +1497,6 @@ span {
 }
 .accordion-simple .accordion-simple__icon {
   fill: var(--cl-disable);
-  transform: rotate(180deg);
   transition: var(--transition-main);
 }
 .accordion-simple .accordion-simple__button--action {
