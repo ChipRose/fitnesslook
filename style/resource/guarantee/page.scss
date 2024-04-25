@@ -1,0 +1,15 @@
+.page-guarantee__guarantee {
+  margin-bottom: 64px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 130px;
+  }
+}
+
+.page-guarantee__service {
+  margin-bottom: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 175px;
+  }
+}

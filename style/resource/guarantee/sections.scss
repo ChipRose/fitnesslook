@@ -1,0 +1,9 @@
+// Service
+
+.service__title-block {
+  margin-bottom: 64px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
+}

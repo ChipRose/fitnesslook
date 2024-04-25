@@ -1,8 +1,12 @@
-// Main button
-//--default - white with shadow
-//--active - black
-//--center - centered button
-//--hover - with biger shadow
+/**
+* @section controls
+* Main button
+* @tag a, button
+* --default - white with shadow
+* --active - black background, white text
+* --center - centered button
+* --hover - with biger shadow
+*/
 
 .button-main {
   padding: 8px 20px;
@@ -39,10 +43,14 @@
   margin-left: auto;
 }
 
-// Round button
-//--default - white with shadow
-//--accent - violet
-//--big - size is bigger
+/**
+* @section controls
+* Round button
+* @tag a, button
+* --default - white with shadow
+* --accent - violet
+* --big - size is bigger
+*/
 
 
 .button-round {
@@ -62,26 +70,6 @@
   vertical-align: middle;
   line-height: 150%;
   transition: var(--transition-main);
-
-  &--simple {
-    color: var(--cl-disable);
-    font-size: var(--fz-medium);
-    font-weight: var(--fw-regular);
-  }
-
-  &--slider {
-    background: var(--cl-transparent-contrast);
-    box-shadow: none;
-
-
-    svg {
-      fill: var(--cl-contrast);
-    }
-  }
-
-  &--slider-prev {
-    transform: rotate(180deg);
-  }
 
   &:hover {
     box-shadow: var(--shadow-main-hover);
