@@ -13,15 +13,15 @@
   </div>
   <div class="accordion-simple__content">
     <div class="accordion-simple__content-wrapper">
-      <table class="cost__table">
+      <table class="cost-table">
         <thead>
           <tr>
-            <th class="cost__cell cost__table-title cost__cell--header">
+            <th class="cost-table__cell cost-table__cell--title cost-table__cell--header">
               <span>
                 Стоимость заказа
               </span>
             </th>
-            <th class="cost__cell cost__table-title cost__cell--header">
+            <th class="cost-table__cell cost-table__cell--title cost-table__cell--header">
               <span>
                 Стоимость сборки
               </span>
@@ -30,31 +30,31 @@
         </thead>
         <tbody>
           <tr>
-            <td class="cost__cell">
+            <td class="cost-table__cell">
               <span>
                 от @@orderCost.from р.
               </span>
             </td>
-            <td class="cost__cell cost__cell--price">
+            <td class="cost-table__cell cost-table__cell--price">
               <span>
                 @@assemblyCost.from.new р.
               </span>
-              <span class="text text-main cost__old-price text-main--del">
+              <span class="text text-main cost-table__old-price text-main--del">
                 @@assemblyCost.from.old р.
               </span>
             </td>
           </tr>
           <tr>
-            <td class="cost__cell">
+            <td class="cost-table__cell">
               <span>
                 до @@orderCost.to р.
               </span>
             </td>
-            <td class="cost__cell cost__cell--price">
+            <td class="cost-table__cell cost-table__cell--price">
               <span>
                 @@assemblyCost.to.new р.
               </span>
-              <span class="text text-main cost__old-price text-main--del">
+              <span class="text text-main cost-table__old-price text-main--del">
                 @@assemblyCost.to.old р.
               </span>
             </td>
@@ -62,14 +62,14 @@
         </tbody>
         <tfoot>
           <tr>
-            <td class="cost__cell cost__cell--footer cost__table-title">
+            <td class="cost-table__cell cost-table__cell--footer cost-table__cell--title">
               <span>
                 Время сборки
               </span>
             </td>
-            <td class="cost__cell cost__cell--footer">
+            <td class="cost-table__cell cost-table__cell--footer">
               <span>
-                @@time мин.
+                @@time мин
               </span>
             </td>
           </tr>

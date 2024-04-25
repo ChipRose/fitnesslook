@@ -86,6 +86,42 @@ const setAccordions = (selector = '.accordion-simple') => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   setSimpleSlider: () => (/* binding */ setSimpleSlider)
+/* harmony export */ });
+const setSimpleSlider = (buttonsSelector, container, activeSlide = 0) => {
+  const sliderButtons = document.querySelector(buttonsSelector);
+  const slideContainer = document.querySelector(container);
+  const children = Array.from(slideContainer.children);
+  const buttons = Array.from(sliderButtons.children);
+  buttons?.forEach(element => element.classList.remove('button-main--active'));
+  children?.forEach(element => {
+    element.style.display = 'none';
+  });
+  children[activeSlide].style.display = 'block';
+  buttons[activeSlide].classList.add('button-main--active');
+  sliderButtons.addEventListener('click', evt => {
+    const item = slideContainer.querySelector(`#${evt.target.value}`);
+    buttons?.forEach(element => {
+      if (element.value === evt.target.value) {
+        element.classList.add('button-main--active');
+      } else {
+        element.classList.remove('button-main--active');
+      }
+    });
+    children?.forEach(element => {
+      element.style.display = 'none';
+    });
+    item.style.display = 'block';
+  });
+};
+
+
+/***/ }),
+/* 3 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   setNavigation: () => (/* binding */ setNavigation)
 /* harmony export */ });
 const HEADER_HEIGHT = 153;
@@ -174,12 +210,15 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_accordion_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _util_navigation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _util_sliders_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _util_navigation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 
 
-(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_1__.setNavigation)('#navigation-in');
-(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_1__.setNavigation)('#global-up');
+
+(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_2__.setNavigation)('#navigation-in');
+(0,_util_navigation_js__WEBPACK_IMPORTED_MODULE_2__.setNavigation)('#global-up');
 (0,_util_accordion_js__WEBPACK_IMPORTED_MODULE_0__.setAccordions)('.accordion-simple');
+(0,_util_sliders_js__WEBPACK_IMPORTED_MODULE_1__.setSimpleSlider)('#request-slider-buttons', '#request-slider');
 })();
 
 /******/ })()

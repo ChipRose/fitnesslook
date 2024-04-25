@@ -7,3 +7,19 @@
     margin-bottom: 52px;
   }
 }
+
+// Complaint
+
+.complaint__text-block {
+  margin-bottom: 36px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+  }
+}
+
+.complaint__action-block {
+  display: flex;
+  justify-content: center;
+}

@@ -9,6 +9,7 @@
     "title": "<span class=\"accordion-simple__counter\">02</span><span>Диагностика и ремонт</span>",
     "text": "<p class=\"text\">Обратитесь в отдел гарантии.</p><p class=\"text\">Сообщите номер товарного чека и расскажите о возникшей проблеме.</p>",
     "classMain": "guarantee-list__item",
+    "tel":"8-999-063-51-40",
     "classExtra": "accordion-simple--extra accordion-simple--action accordion-simple--mobonly"
   },
   {
