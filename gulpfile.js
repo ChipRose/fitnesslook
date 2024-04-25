@@ -21,7 +21,8 @@ const path = {
     css: `${SRC_FOLDER}/style/resource/*.scss`,
     img: `${SRC_FOLDER}/i/media-resource/**/*.{jpg,png}`,
     sprite: `${SRC_FOLDER}/i/media-resource/stat/icons/**/*.svg`,
-    assets: `${SRC_FOLDER}/i/media-resource/**/*`
+    assets: `${SRC_FOLDER}/i/media-resource/**/*`,
+    json: `${SRC_FOLDER}/json/**/*.json`
   },
   build: {
     html: `${PROJECT_FOLDER}/`,
@@ -171,7 +172,7 @@ function reloadServer(done) {
 function watchFiles() {
   gulp.watch(path.watch.css, gulp.series(processStyles));
   gulp.watch(path.watch.assets, gulp.series(copyAssets, createWebp));
-  gulp.watch(path.watch.json, gulp.series(copyAssets));
+  gulp.watch(path.watch.json, gulp.series(reloadServer));
   gulp.watch(path.watch.js, gulp.series(processAllScripts()));
   gulp.watch(path.watch.html, gulp.series(processMarkup, reloadServer));
 }
@@ -282,9 +283,16 @@ export function processAllScriptsPub() {
 
 export function copyAssetsPub() {
   return gulp.src([
-    './i/media-resource/**/*',
+    './i/media-resource/**/*'
   ], { base: 'i/media-resource' })
     .pipe(gulp.dest('./build/i/media'));
+}
+
+export function copyFontsPub() {
+  return gulp.src([
+    './i/font/**/*',
+  ], { base: 'i/font' })
+    .pipe(gulp.dest('./build/i/font'));
 }
 
 export function createStackPub() {
@@ -307,6 +315,7 @@ function compileProjectPub(done) {
     processStylesPub,
     processAllScriptsPub(),
     copyAssetsPub,
+    copyFontsPub,
     createStackPub,
     createWebpPub
   )(done);
