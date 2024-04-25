@@ -106,13 +106,20 @@ export function processScript({ src, title, dest = path.build.js }) {
 }
 
 export function processAllScripts() {
+  const jsPaths = [
+    { title: 'prof-trainers.js' },
+    { title: 'delivery.js' },
+    { title: 'msk-delivery.js' },
+    { title: 'region-delivery.js' },
+    { title: 'cart.js' },
+    { title: 'assembly.js' },
+    { title: 'guarantee.js' }
+  ];
+
   return gulp.series(
-    processScript({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js' }),
-    processScript({ src: './js/common/delivery.js', title: 'delivery.js' }),
-    processScript({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js' }),
-    processScript({ src: './js/common/region-delivery.js', title: 'region-delivery.js' }),
-    processScript({ src: './js/common/cart.js', title: 'cart.js' }),
-    processScript({ src: './js/common/assembly.js', title: 'assembly.js' }),
+    jsPaths.map(({ title }) => (
+      processScriptPub({ src: `./js/common/${title}`, title })
+    ))
   );
 }
 
@@ -257,14 +264,20 @@ export function processScriptPub({ src, title, dest = path.build.js }) {
 
 export function processAllScriptsPub() {
   const dest = './build/js/modules/';
+  const jsPaths = [
+    { title: 'prof-trainers.js' },
+    { title: 'delivery.js' },
+    { title: 'msk-delivery.js' },
+    { title: 'region-delivery.js' },
+    { title: 'cart.js' },
+    { title: 'assembly.js' },
+    { title: 'guarantee.js' }
+  ];
 
   return gulp.series(
-    processScriptPub({ src: './js/common/prof-trainers.js', title: 'prof-trainers.js', dest }),
-    processScriptPub({ src: './js/common/delivery.js', title: 'delivery.js', dest }),
-    processScriptPub({ src: './js/common/msk-delivery.js', title: 'msk-delivery.js', dest }),
-    processScriptPub({ src: './js/common/region-delivery.js', title: 'region-delivery.js', dest }),
-    processScriptPub({ src: './js/common/cart.js', title: 'cart.js', dest }),
-    processScriptPub({ src: './js/common/assembly.js', title: 'assembly.js', dest }),
+    jsPaths.map(({ title }) => (
+      processScriptPub({ src: `./js/common/${title}`, title, dest })
+    ))
   );
 }
 

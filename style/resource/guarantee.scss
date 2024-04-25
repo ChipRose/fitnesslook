@@ -7,17 +7,19 @@
 @import "global/container.scss";
 
 // Components
-@import "delivery/texts.scss";
-@import "delivery/images.scss";
+@import "common/texts.scss";
 @import "common/controls.scss";
 @import "common/breadcrumbs.scss";
 @import "common/accordion-simple.scss";
 
 // Layout
-@import "delivery/layouts.scss";
+@import "common/layouts.scss";
 
 // Blocks
 @import "common/cover.scss";
 @import "common/navigation.scss";
 @import "common/faq.scss";
 @import "common/action.scss";
+@import "guarantee/blocks.scss";
+@import "guarantee/sections.scss";
+@import "guarantee/page.scss";

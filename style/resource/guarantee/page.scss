@@ -1,0 +1,63 @@
+.page-guarantee__main-nav {
+  margin: 16px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 21px 0;
+  }
+}
+
+.page-guarantee__cover {
+  margin-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 21px;
+  }
+}
+
+.page-guarantee__navigation {
+  margin-bottom: 50px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 93px;
+  }
+}
+
+.page-guarantee__request {
+  margin-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 130px;
+  }
+}
+
+.page-guarantee__guarantee {
+  margin-bottom: 64px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 130px;
+  }
+}
+
+.page-guarantee__service {
+  margin-bottom: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 175px;
+  }
+}
+
+.page-guarantee__complaint {
+  margin-bottom: 89px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 212px;
+  }
+}
+
+.page-guarantee__rejection {
+  margin-bottom: 81px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 182px;
+  }
+}

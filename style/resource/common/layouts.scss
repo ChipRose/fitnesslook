@@ -1,7 +1,4 @@
-/**
-* @section layouts
-* Buttons block
-*/
+// Buttons block
 
 .button-block {
   margin: -6px;
@@ -20,6 +17,7 @@
     }
   }
 }
+
 
 // Main table
 
@@ -55,6 +53,7 @@
   }
 }
 
+
 // Line table
 
 .table-line {
@@ -84,10 +83,8 @@
   }
 }
 
-/**
-* @section layouts
-* Columns
-*/
+
+//Columns
 
 .columns {
   @media (min-width:$tablet-width) {
@@ -111,7 +108,7 @@
 }
 
 /**
-* @section layouts
+* @section layout
 * Info block
 */
 
@@ -131,6 +128,14 @@
       content: "";
 
       @include decoration;
+    }
+  }
+
+  .info-block__buttons {
+    margin-bottom: 47px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 56px;
     }
   }
 

@@ -1,31 +1,45 @@
-// Main button
-//--default - white with shadow
-//--active - black
-//--center - centered button
-//--hover - with biger shadow
-
-.button-main {
-  padding: 8px 20px;
+@mixin button {
   display: block;
   width: fit-content;
   box-sizing: border-box;
-  font-size: 16px;
-  line-height: 130%;
+
   letter-spacing: 0.02rem;
   font-weight: var(--fw-medium);
-  background: var(--cl-contrast);
   box-shadow: var(--shadow-main);
-  color: var(--cl-heavy-dark);
-  border-radius: 40px;
+  border-radius: 30px;
   transition: var(--transition-main);
+
+  &:hover {
+    box-shadow: var(--shadow-main-hover);
+  }
+}
+
+/**
+* @section controls
+* Main button
+* @tag a, button
+* --default - white with shadow
+* --active - black background, white text
+* --center - centered button
+* :hover - with biger shadow
+*/
+
+.button-main {
+  @include button;
+
+  padding: 8px 20px;
+  background: var(--cl-contrast);
+  color: var(--cl-heavy-dark);
+  font-size: 16px;
+  line-height: 130%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 
   &:active {
     background: var(--cl-heavy-dark);
     color: var(--cl-contrast);
-  }
-
-  &:hover {
-    box-shadow: var(--shadow-main-hover);
   }
 }
 
@@ -39,11 +53,54 @@
   margin-left: auto;
 }
 
-// Round button
-//--default - white with shadow
-//--accent - violet
-//--big - size is bigger
+/**
+* @section controls
+* Action button
+* @tag a, button
+* --default - violet with shadow
+* :hover - with biger shadow
+*/
 
+.button-action {
+  @include button;
+
+  padding: 15px 20px;
+  background: var(--cl-accent);
+  color: var(--cl-contrast);
+  font-size: 18px;
+  line-height: 120%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .button-action__text {
+    margin-right: 15px;
+  }
+
+  .button-action__icon {
+    fill: var(--cl-contrast);
+
+    @media (min-width: $tablet-width) {
+      width: 17px;
+      height: 12px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 29px 35px;
+    font-size: 32px;
+    line-height: 130%;
+  }
+}
+
+/**
+* @section controls
+* Round button
+* @tag a, button
+* --default - white with shadow
+* --accent - violet
+* --big - size is bigger
+*/
 
 .button-round {
   padding: 11px;
@@ -62,26 +119,6 @@
   vertical-align: middle;
   line-height: 150%;
   transition: var(--transition-main);
-
-  &--simple {
-    color: var(--cl-disable);
-    font-size: var(--fz-medium);
-    font-weight: var(--fw-regular);
-  }
-
-  &--slider {
-    background: var(--cl-transparent-contrast);
-    box-shadow: none;
-
-
-    svg {
-      fill: var(--cl-contrast);
-    }
-  }
-
-  &--slider-prev {
-    transform: rotate(180deg);
-  }
 
   &:hover {
     box-shadow: var(--shadow-main-hover);

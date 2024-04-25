@@ -13,15 +13,15 @@
   </div>
   <div class="accordion-simple__content">
     <div class="accordion-simple__content-wrapper">
-      <table class="cost__table">
+      <table class="cost-table">
         <thead>
           <tr>
-            <th class="cost__cell cost__table-title cost__cell--header">
+            <th class="cost-table__cell cost-table__cell--title cost-table__cell--header">
               <span>
                 @@table.title1
               </span>
             </th>
-            <th class="cost__cell cost__table-title cost__cell--header">
+            <th class="cost-table__cell cost-table__cell--title cost-table__cell--header">
               <span>
                 @@table.title2
               </span>
@@ -30,27 +30,28 @@
         </thead>
         <tbody>
           <tr>
-            <td class="cost__cell">
+            <td class="cost-table__cell">
               <span>
                 @@firstColumn.from
               </span>
             </td>
-            <td class="cost__cell cost__cell--price">
+            <td class="cost-table__cell cost-table__cell--price">
               <span>
                 @@assemblyCost.from.new
               </span>
               <span class="text text-main cost__old-price text-main--del">
                 @@assemblyCost.from.old
+
               </span>
             </td>
           </tr>
           <tr>
-            <td class="cost__cell">
+            <td class="cost-table__cell">
               <span>
                 @@firstColumn.to
               </span>
             </td>
-            <td class="cost__cell cost__cell--price">
+            <td class="cost-table__cell cost-table__cell--price">
               <span>
                 @@assemblyCost.to.new
               </span>
@@ -62,12 +63,12 @@
         </tbody>
         <tfoot>
           <tr>
-            <td class="cost__cell cost__cell--footer cost__table-title">
+            <td class="cost-table__cell cost-table__cell--footer cost-table__cell--title">
               <span>
                 Время сборки
               </span>
             </td>
-            <td class="cost__cell cost__cell--footer">
+            <td class="cost-table__cell cost-table__cell--footer">
               <span>
                 @@time мин
               </span>

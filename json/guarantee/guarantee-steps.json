@@ -1,0 +1,39 @@
+[
+  {
+    "title": "<span class=\"accordion-simple__counter\">01</span><span>Первый шаг</span>",
+    "text": "<p class=\"text\">Найдите товарный чек, на котором указан номер заказа, который начинается на FL.</p>",
+    "classMain": "guarantee-list__item",
+    "classExtra": "accordion-simple--extra accordion-simple--mobonly"
+  },
+  {
+    "title": "<span class=\"accordion-simple__counter\">02</span><span>Диагностика и ремонт</span>",
+    "text": "<p class=\"text\">Обратитесь в отдел гарантии.</p><p class=\"text\">Сообщите номер товарного чека и расскажите о возникшей проблеме.</p>",
+    "classMain": "guarantee-list__item",
+    "tel":"8-999-063-51-40",
+    "classExtra": "accordion-simple--extra accordion-simple--action accordion-simple--mobonly"
+  },
+  {
+    "title": "<span class=\"accordion-simple__counter\">02</span><span>Диагностика и ремонт</span>",
+    "text": "<p class=\"text\">Обратитесь в отдел гарантии.</p><p class=\"text\">Сообщите номер товарного чека и расскажите о возникшей проблеме.</p>",
+    "classMain": "guarantee-list__item",
+    "classExtra": "accordion-simple--extra accordion-simple--mobonly"
+  },
+  {
+    "title": "<span class=\"accordion-simple__counter\">04</span><span>Назначение визита</span>",
+    "text": "<p class=\"text\">В течение 1-2 рабочих дней с вами свяжется сервисная служба и назначит визит для устранения поломки.</p>",
+    "classMain": "guarantee-list__item",
+    "classExtra": "accordion-simple--extra accordion-simple--mobonly"
+  },
+  {
+    "title": "<span class=\"accordion-simple__counter\">05</span><span>Диагностика и ремонт</span>",
+    "text": "<p class=\"text\">Для диагностики и ремонта товара к Вам приедет технический специалист, который устранит недостаток на месте.</p>",
+    "classMain": "guarantee-list__item",
+    "classExtra": "accordion-simple--extra accordion-simple--mobonly"
+  },
+  {
+    "title": "<span class=\"accordion-simple__counter\">06</span><span>Начинайте тренировку!</span>",
+    "text": "<p class=\"text\">Учитывайте рекомендации технического специалиста. Это продлит срок службы вашего тренажера.</p>",
+    "classMain": "guarantee-list__item",
+    "classExtra": "accordion-simple--extra accordion-simple--mobonly"
+  }
+]
