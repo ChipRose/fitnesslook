@@ -435,7 +435,8 @@ template {
   font-weight: 300;
 }
 
-p, span {
+p,
+span {
   overflow-wrap: break-word;
 }
 
@@ -514,6 +515,20 @@ p, span {
 
 .fancybox__container {
   --fancybox-bg: rgba(0, 0, 0, 0.2);
+}
+
+.image-block {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: var(--cl-transparent-neutral);
+}
+.image-block img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 @font-face {

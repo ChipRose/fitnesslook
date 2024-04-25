@@ -425,7 +425,8 @@ template {
   font-weight: 300;
 }
 
-p, span {
+p,
+span {
   overflow-wrap: break-word;
 }
 
@@ -504,6 +505,20 @@ p, span {
 
 .fancybox__container {
   --fancybox-bg: rgba(0, 0, 0, 0.2);
+}
+
+.image-block {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: var(--cl-transparent-neutral);
+}
+.image-block img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 @font-face {
@@ -1427,6 +1442,13 @@ p, span {
   cursor: default;
 }
 
+/**
+* @section accordion
+* Simple accordion
+* --mobonly - active onli in mobile version
+* --extra - extra view
+* --action - with action button
+*/
 .accordion-simple {
   border-radius: 30px;
   box-shadow: var(--shadow-basic);
@@ -1440,7 +1462,6 @@ p, span {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  pointer-events: none;
 }
 @media (min-width: 768px) {
   .accordion-simple .accordion-simple__label-wrapper {
@@ -1461,7 +1482,7 @@ p, span {
 }
 .accordion-simple .accordion-simple__button {
   flex: 0 0 37px;
-  padding: 11px;
+  padding: 5px;
   width: 37px;
   height: 37px;
   box-sizing: border-box;
@@ -1472,13 +1493,20 @@ p, span {
   border-radius: 50%;
   box-shadow: var(--shadow-basic);
   transition: var(--transition-main);
+  cursor: pointer;
 }
 .accordion-simple .accordion-simple__icon {
   fill: var(--cl-disable);
   transform: rotate(180deg);
   transition: var(--transition-main);
 }
-.accordion-simple.active .accordion-simple__icon {
+.accordion-simple .accordion-simple__button--action {
+  display: none;
+}
+.accordion-simple .accordion-simple__button--toggler {
+  transform: rotate(180deg);
+}
+.accordion-simple.active .accordion-simple__button--toggler {
   transform: rotate(0deg);
 }
 .accordion-simple .accordion-simple__content-wrapper {
@@ -1495,7 +1523,83 @@ p, span {
   max-height: 0;
   transition: var(--transition-main);
 }
+.accordion-simple.open-desk .accordion-simple__button--toggler {
+  display: none;
+}
 
+.accordion-simple.accordion-simple--extra .accordion-simple__label-wrapper {
+  padding: 27px 30px 50px;
+  flex-direction: column;
+  align-items: stretch;
+}
+.accordion-simple.accordion-simple--extra .accordion-simple__title {
+  margin-right: 0;
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  max-width: 182px;
+  font-size: 18px;
+  line-height: 140%;
+}
+@media (min-width: 768px) {
+  .accordion-simple.accordion-simple--extra .accordion-simple__title {
+    font-size: 22px;
+  }
+}
+.accordion-simple.accordion-simple--extra .accordion-simple__counter {
+  margin-bottom: 12px;
+  font-size: 28px;
+}
+@media (min-width: 768px) {
+  .accordion-simple.accordion-simple--extra .accordion-simple__counter {
+    font-size: 32px;
+  }
+}
+.accordion-simple.accordion-simple--extra .accordion-simple__buttons-block {
+  display: flex;
+  margin: -10px -10px 0;
+  order: 1;
+  align-self: end;
+  min-height: 37px;
+}
+.accordion-simple.accordion-simple--extra .accordion-simple__button {
+  margin: 10px;
+}
+.accordion-simple.accordion-simple--extra .accordion-simple__content-wrapper {
+  padding: 22px 30px 40px;
+  position: relative;
+}
+.accordion-simple.accordion-simple--extra .accordion-simple__content-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 1px;
+  background: var(--cl-dark);
+}
+.accordion-simple.accordion-simple--extra .accordion-simple__content-wrapper p {
+  margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: var(--fw-regular);
+  line-height: 140%;
+}
+@media (min-width: 768px) {
+  .accordion-simple.accordion-simple--extra .accordion-simple__content-wrapper p {
+    font-size: 18px;
+  }
+}
+.accordion-simple.accordion-simple--extra .accordion-simple__content-wrapper p:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-simple.accordion-simple--action .accordion-simple__button--action {
+  display: block;
+}
+
+/**
+* @section layouts
+* Buttons block
+*/
 .button-block {
   margin: -6px;
   display: flex;
@@ -1567,6 +1671,10 @@ p, span {
   margin-bottom: 0;
 }
 
+/**
+* @section layouts
+* Columns
+*/
 @media (min-width: 768px) {
   .columns {
     margin: -75px;
@@ -1587,6 +1695,10 @@ p, span {
   margin-bottom: 0;
 }
 
+/**
+* @section layouts
+* Info block
+*/
 .info-block .info-block__header {
   padding-bottom: 43px;
   margin-bottom: 22px;
@@ -1639,7 +1751,7 @@ p, span {
 }
 @media (min-width: 768px) {
   .cover .cover__title {
-    padding-right: 108px;
+    padding-right: 60px;
     position: relative;
     font-size: 52px;
   }
