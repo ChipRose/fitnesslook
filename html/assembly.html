@@ -57,7 +57,7 @@
             <div class="container">
               @@include('./common/cover.html', {
               "title": "Сборка",
-              "subtitle": "Соберем как себе! Супер-предложение для покупателей FitnessLook",
+              "subtitle": "Соберем как себе! <span class=\"nobr\">Супер-предложение</span> для покупателей FitnessLook",
               "imageDirectory":"@@pathi/media/stat/assembly/cover/",
               "alt1":"Беговая дорожка Orlauf",
               "alt2":"Гребной тренажер Orlauf"
@@ -207,7 +207,7 @@
                 </div>
                 <div class="faq__content-block">
                   <ul class="list faq__list">
-                    @@loop('./common/faq-item.html', '../json/assembly/questions.json')
+                    @@loop('./common/accordion-item.html', '../json/assembly/questions.json')
                   </ul>
                 </div>
               </div>

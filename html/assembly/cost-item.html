@@ -4,7 +4,7 @@
       <h3 class="title accordion-simple__title">
         @@title
       </h3>
-      <span class="accordion-simple__button">
+      <span class="accordion-simple__button accordion-simple__button--toggler">
         <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
           <use xlink:href="@@pathi/media/stat/sprite.svg#arrow-up"></use>
         </svg>
@@ -39,9 +39,8 @@
               <span>
                 @@assemblyCost.from.new
               </span>
-              <span class="text text-main cost__old-price text-main--del">
+              <span class="text text-main cost-table__old-price text-main--del">
                 @@assemblyCost.from.old
-
               </span>
             </td>
           </tr>
@@ -55,7 +54,7 @@
               <span>
                 @@assemblyCost.to.new
               </span>
-              <span class="text text-main cost__old-price text-main--del">
+              <span class="text text-main cost-table__old-price text-main--del">
                 @@assemblyCost.to.old
               </span>
             </td>
