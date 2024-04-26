@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css  ">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
-  <link rel="stylesheet" type="text/css" href="@@pathstyle/modules/region-delivery.css">
+  <link rel="stylesheet" type="text/css" href="@@pathstyle/modules/delivery.css">
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -190,7 +190,7 @@
                             <div class="ac">
                               <h3 class="title ac-header">
                                 <button class="button ac-trigger">
-                                  <span class="text title-secondary">
+                                  <span class="text subtitle">
                                     Безопасная доставка
                                   </span>
                                 </button>
@@ -246,7 +246,7 @@
                             <div class="ac">
                               <h3 class="title ac-header">
                                 <button class="button ac-trigger">
-                                  <span class="text title-secondary">
+                                  <span class="text subtitle">
                                     Сроки доставки
                                   </span>
                                 </button>
@@ -271,7 +271,7 @@
                             <div class="ac">
                               <h3 class="title ac-header">
                                 <button class="button ac-trigger">
-                                  <span class="text title-secondary">
+                                  <span class="text subtitle">
                                     Важно!
                                   </span>
                                 </button>
@@ -309,7 +309,7 @@
                         <div class="ac">
                           <h3 class="title ac-header">
                             <button class="button ac-trigger">
-                              <span class="text title-secondary">
+                              <span class="text subtitle">
                                 Условия доставки
                               </span>
                             </button>
@@ -336,7 +336,7 @@
 
                     <a id="schedule"></a>
                     <div class="receiving-type__pickup-block container__narrow">
-                      <div class="receiving-type__pickup-slider-block">
+                      <div class="receiving-type__pickup-slider-block receiving-type__pickup-slider-block--deskonly">
                         <div class="image-block receiving-type__pickup-slider">
                           <picture>
                             <source type="image/webp" srcset="@@pathi/media/stat/region-delivery/receiving/delivery-slider/slide-0.webp 1x, /i/media/stat/region-delivery/receiving/delivery-slider/slide-0@2x.webp 2x">
@@ -348,7 +348,7 @@
                         <div class="ac">
                           <h3 class="title ac-header">
                             <button class="button ac-trigger">
-                              <span class="text title-secondary">
+                              <span class="text subtitle">
                                 Сроки доставки
                               </span>
                             </button>
@@ -440,7 +440,7 @@
                         </p>
                       </div>
                     </div>
-                    <h2 class="title title-extra-info slider-main__extra-title">
+                    <h2 class="title title-secondary slider-main__extra-title">
                       Самовывоз из терминала ТК
                     </h2>
                     <table class="table table-main slider-main__table-block">
@@ -502,7 +502,7 @@
                         </tr>
                       </tbody>
                     </table>
-                    <h2 class="title title-extra-info slider-main__extra-title">
+                    <h2 class="title title-secondary slider-main__extra-title">
                       Доставка до адреса
                     </h2>
                     <table class="table table-main slider-main__table-block">
@@ -586,7 +586,7 @@
                         </p>
                       </div>
                     </div>
-                    <h2 class="title title-extra-info slider-main__extra-title">
+                    <h2 class="title title-secondary slider-main__extra-title">
                       Самовывоз из терминала ТК
                     </h2>
                     <table class="table table-main slider-main__table-block">
@@ -655,213 +655,9 @@
           </section>
 
           <a id="payment"></a>
-          <section class="payment page-delivery__payment">
+          <section class="page-delivery__payment">
             <div class="container">
-              <div class="payment__content container__narrow">
-                <h2 class="title title-main payment__title">
-                  Оплата:
-                </h2>
-                <ul class="list payment__variant-list">
-                  <li class="payment__variant-item">
-                    <h3 class="title title-extra payment__title-extra">
-                      При получении товара:
-                    </h3>
-                    <ul class="list button-modal">
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#walet-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">наличными</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#card-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">банковской картой</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="payment__variant-item">
-                    <h3 class="title title-extra payment__title-extra">
-                      Online:
-                    </h3>
-                    <ul class="list button-modal">
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#card-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                банковской картой / оnline сервисами
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="40" height="40" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#qr-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                по QR-коду
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#building-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">банковским переводом</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="payment__variant-item">
-                    <h3 class="title title-extra payment__title-extra">
-                      Другие способы:
-                    </h3>
-                    <ul class="list button-modal">
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-credit">
-                              ?
-                              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                            </button>
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="49" height="47" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#rubles-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                рассрочка / кредит*
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="button-modal__modal" tabindex="-1" id="dialog-content-credit">
-                          <header class="button-modal__header">
-                            <h3 class="title title-extra">
-                              Оплата в рассрочку или кредит
-                            </h3>
-                          </header>
-                          <div class="button-modal__content-block">
-                            <p class="text text-main ">
-                              Наши ключевые партнеры:
-                              <span class="text-main text-main--strong">
-                                АО "ТИНЬКОФФ БАНК"
-                              </span>
-                              и
-                              <span class="text-main text-main--strong">
-                                ПАО "ПОЧТА БАНК".
-                              </span>
-                              Подайте заявку и получите ответ в течение пары минут!
-                            </p>
-                            <p class="text text-main">
-                              <a href="/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html" class="link link-main" target="_blank">
-                                Подробная информация
-                              </a> об этом способе оплаты.
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-halva">
-                              ?
-                              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                            </button>
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="81" height="17" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#halva-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                только <br> online-оплата*
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="button-modal__modal" tabindex="-1" id="dialog-content-halva">
-                          <header class="button-modal__header">
-                            <h3 class="title title-extra">
-                              Оплата в рассрочку картой “Халва”
-                            </h3>
-                          </header>
-                          <div class="button-modal__content-block">
-                            <p class="text text-main ">
-                              Обаладателям карты «Халва» доступны супер-выгодные условия покупки наших товаров в
-                              рассрочку
-                              0%, без комиссий и переплат, поскольку гипермаркет FitnessLook является партнером ПАО
-                              «Совкомбанк».
-                            </p>
-                            <p class="text text-main">
-                              Способ доступен при online-оплаты картой «Халва», рассрочка активируется в личном кабинете
-                              банка.
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-                <div class="payment__alert">
-                  <p class="text">
-                    * Внимание! Приобретение в рассрочку является акцией магазина. Скидки, подарки и акции не суммируются.
-                  </p>
-                </div>
-              </div>
+              @@include('./common/payment.html')
             </div>
           </section>
 
@@ -875,7 +671,7 @@
                 <!-- Regions list -->
               </ul>
               <div class="delivery-regions__exception-block">
-                <button type="button" class="button button-simple button-simple--active" id="button-new-location">
+                <button type="button" class="button button-main button-main--active" id="button-new-location">
                   Моего города нет в списке
                 </button>
               </div>
@@ -917,7 +713,7 @@
                     </span>
                   </label>
                 </fieldset>
-                <button class="button button-simple button-simple--active form-communicate__button" type="submit">
+                <button class="button button-main button-main--active form-communicate__button" type="submit">
                   Узнать про доставку
                 </button>
               </form>
@@ -935,7 +731,7 @@
                 </div>
                 <div class="faq__content-block">
                   <ul class="list faq__list">
-                    @@loop('./common/faq-item.html', '../json/region-delivery/questions.json')
+                    @@loop('./common/accordion-item.html', '../json/region-delivery/questions.json')
                   </ul>
                 </div>
               </div>
@@ -956,7 +752,7 @@
         <!-- Regions item template -->
         <template id="regions-item">
           <li class="delivery-region__item">
-            <a href="" target="_blank" class="link button-simple nobr"></a>
+            <a href="" target="_blank" class="link button-main nobr"></a>
           </li>
         </template>
 
@@ -989,23 +785,6 @@
           </div>
         </template>
 
-        <!-- Question -->
-        <template id="question">
-          <li class="accordion accordion--faq faq__item">
-            <div class="ac">
-              <h3 class="title ac-header">
-                <button class="button ac-trigger">
-                  <span class="text title-secondary">
-                  </span>
-                </button>
-              </h3>
-              <div class="ac-panel">
-                <div class="accordion__text-block">
-                </div>
-              </div>
-            </div>
-          </li>
-        </template>
 
         <div class="clear"></div>
       </div><!-- #wrapper -->

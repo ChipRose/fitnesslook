@@ -93,11 +93,24 @@
   }
 }
 
+.button-action.button-action--simple {
+  padding: 13px 30px;
+  font-size: 14px;
+  line-height: 130%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
 /**
 * @section controls
 * Round button
 * @tag a, button
 * --default - white with shadow
+* --simple - grey text
+* --transparent - white transparent bg
+* --rotate - rotate 180deg
 * --accent - violet
 * --big - size is bigger
 */
@@ -130,6 +143,12 @@
   }
 }
 
+.button-round.button-round--simple {
+  color: var(--cl-disable);
+  font-size: 18px;
+  font-weight: var(--fw-regular);
+}
+
 .button-round.button-round--big {
   width: 60px;
   height: 60px;
@@ -148,4 +167,196 @@
 .button-round.button-round--accent {
   background: var(--cl-accent);
   color: var(--cl-contrast);
+}
+
+.button-round.button-round--transparent {
+  background: var(--cl-transparent-contrast);
+  box-shadow: none;
+
+  svg {
+    fill: var(--cl-contrast);
+  }
+}
+
+.button-round.button-round--rotate {
+  transform: rotate(180deg);
+}
+
+/**
+* @section controls
+* Modal button
+*/
+
+.button-modal {
+  @include paper;
+
+  padding: 0 8px 15px;
+  min-height: 100px;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.button-modal__content-block {
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.button-modal__image-block {
+  margin-bottom: 11px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  @media (min-width:$tablet-width) {
+    margin-bottom: 38px;
+  }
+}
+
+.button-modal__text-block {
+  text-align: center;
+  line-height: 120%;
+  font-size: 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.button-modal__icon {
+  fill: var(--cl-dark);
+}
+
+.button-modal__action-block {
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+.button-modal__button {
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-left: auto;
+}
+
+.button-modal__modal {
+  padding: 30px;
+  width: 80%;
+  max-width: 352px;
+  border-radius: 20px;
+  background: var(--cl-middle);
+  display: none;
+}
+
+.button-modal__header {
+  margin-bottom: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-modal__header h3 {
+  width: 50%;
+}
+
+/**
+* Modal button
+*/
+
+
+.button-popup {
+  width: fit-content;
+  display: flex;
+  position: relative;
+
+  .button-popup__button {
+    padding: var(--indent-basic);
+    width: var(--popup-size);
+    height: var(--popup-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: var(--cl-accent);
+    border-radius: 50%;
+  }
+
+  .button-popup__icon {
+    fill: var(--cl-contrast);
+
+    &--time {
+      transform: translate(3px, -2px);
+    }
+  }
+
+  .button-popup__modal {
+    padding: 6px 12px;
+    height: fit-content;
+    background: var(--cl-accent);
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 120%;
+    align-items: center;
+    border-radius: var(--radius-small);
+    color: var(--cl-contrast);
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    font-weight: var(--fw-regular);
+    pointer-events: none;
+    opacity: 0;
+    font-size: 14px;
+    line-height: 1.2;
+    vertical-align: middle;
+  }
+}
+
+/**
+* Table button
+*/
+
+.button-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--prev {
+    display: none;
+    transform-origin: center center;
+    transform: rotate(180deg);
+  }
+
+  .button-table__icon {
+    fill: var(--cl-accent);
+  }
+}
+
+/**
+* Input
+*/
+
+.input.field-main {
+  padding: 12px 29px;
+  box-shadow: var(--shadow-inset);
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 20px;
+
+  &::placeholder {
+    color: var(--cl-disable);
+    opacity: 0.5;
+  }
+
+  &:focus-within {
+    outline: none;
+    border: 1px solid var(--cl-dark);
+    box-sizing: border-box;
+  }
 }

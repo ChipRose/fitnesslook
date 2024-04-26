@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css  ">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
-  <link rel="stylesheet" type="text/css" href="@@pathstyle/modules/msk-delivery.css">
+  <link rel="stylesheet" type="text/css" href="@@pathstyle/modules/delivery.css">
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -106,27 +106,31 @@
 
           <section class="receiving page-delivery__receiving">
             <div class="container">
-              <h2 class="title title-main receiving__title">
-                Снижаем стоимость доставки до 0 ₽
-              </h2>
-              <div class="receiving__wrapper">
-                <div class="receiving__text-block">
-                  <p class="text text-main text-main--strong receiving__text-intro">
-                    Доставка до дома — самый быстрый и популярный способ получения заказов у покупателей FitnessLook
-                    из Москвы*
-                  </p>
-                  <p class="text text-main receiving__subtitle">
-                    Хорошие новости!
-                  </p>
-                  <div class="receiving__content">
-                    <div class="receiving__content-item">
+              <div class="info-block">
+                <header class="info-block__header">
+                  <h2 class="title title-main">
+                    Снижаем стоимость доставки до 0 ₽
+                  </h2>
+                </header>
+                <div class="info-block__text-block">
+                  <div class="info-block__title">
+                    <p class="text text-main text-main--strong">
+                      Доставка до дома — самый быстрый и популярный способ получения заказов у покупателей FitnessLook
+                      из Москвы*
+                    </p>
+                    <p class="text text-main receiving__subtitle">
+                      Хорошие новости!
+                    </p>
+                  </div>
+                  <div class="columns">
+                    <div class="columns__item">
                       <p class="text text-main receiving__text">
                         Весь {$cur_month} эта опция является приятным подарком, за который не потребуется доплачивать,
                         для 95% заказов. Кроме того, мы запустили акцию и снизили цену на доставку для товаров, не
                         попадающих под условия бесплатной доставки.
                       </p>
                     </div>
-                    <div class="receiving__content-item">
+                    <div class="columns__item">
                       <p class="text text-main ">
                         *Если вас интересует способ получения заказа в другом регионе, найдите и выберите его в
                         <a href="#regions" class="link link-main" id="regions-list-button">
@@ -379,7 +383,7 @@
                                     </p>
                                   </div>
                                   <div class="accordion__action-block">
-                                    <a class="link button-action" href="/pages/sborka-trenazherov-i-oborudovaniya.html" target="_blank">
+                                    <a class="link button-action button-action--simple" href="/pages/sborka-trenazherov-i-oborudovaniya.html" target="_blank">
                                       Сборка
                                     </a>
                                   </div>
@@ -688,7 +692,7 @@
                     </table>
                     <div class="cost-lifting">
                       <header class="cost-lifting__header">
-                        <h2 class="title title-extra-info cost-lifting__title">
+                        <h2 class="title title-secondary cost-lifting__title">
                           Подъем на этаж*
                         </h2>
                         <div class="button-block" id="slider-cost-lifting-buttons">
@@ -910,213 +914,9 @@
           </section>
 
           <a id="payment"></a>
-          <section class="payment page-delivery__payment">
+          <section class="page-delivery__payment">
             <div class="container">
-              <div class="payment__content container__narrow">
-                <h2 class="title title-main payment__title">
-                  Оплата:
-                </h2>
-                <ul class="list payment__variant-list">
-                  <li class="payment__variant-item">
-                    <h3 class="title title-extra payment__title-extra">
-                      При получении товара:
-                    </h3>
-                    <ul class="list button-modal">
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#walet-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">наличными</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#card-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">банковской картой</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="payment__variant-item">
-                    <h3 class="title title-extra payment__title-extra">
-                      Online:
-                    </h3>
-                    <ul class="list button-modal">
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#card-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">банковской картой / оnline сервисами
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="40" height="40" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#qr-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                по QR-коду
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#building-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">банковским переводом</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="payment__variant-item">
-                    <h3 class="title title-extra payment__title-extra">
-                      Другие способы:
-                    </h3>
-                    <ul class="list button-modal">
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-credit">
-                              ?
-                              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                            </button>
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="49" height="47" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#rubles-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                рассрочка / кредит*
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="button-modal__modal" tabindex="-1" id="dialog-content-credit">
-                          <header class="button-modal__header">
-                            <h3 class="title title-extra">
-                              Оплата в рассрочку или кредит
-                            </h3>
-                          </header>
-                          <div class="button-modal__content-block">
-                            <p class="text text-main ">
-                              Наши ключевые партнеры:
-                              <span class="text-main text-main--strong">
-                                АО "ТИНЬКОФФ БАНК"
-                              </span>
-                              и
-                              <span class="text-main text-main--strong">
-                                ПАО "ПОЧТА БАНК".
-                              </span>
-                              Подайте заявку и получите ответ в течение пары минут!
-                            </p>
-                            <p class="text text-main">
-                              <a href="/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html" class="link link-main" target="_blank">
-                                Подробная информация
-                              </a> об этом способе оплаты.
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-halva">
-                              ?
-                              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                            </button>
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="81" height="17" role="img" focusable="false">
-                                <use xlink:href="@@pathi/media/stat/sprite.svg#halva-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                только <br> online-оплата*
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="button-modal__modal" tabindex="-1" id="dialog-content-halva">
-                          <header class="button-modal__header">
-                            <h3 class="title title-extra">
-                              Оплата в рассрочку картой “Халва”
-                            </h3>
-                          </header>
-                          <div class="button-modal__content-block">
-                            <p class="text text-main ">
-                              Обаладателям карты «Халва» доступны супер-выгодные условия покупки наших товаров в
-                              рассрочку
-                              0%, без комиссий и переплат, поскольку гипермаркет FitnessLook является партнером ПАО
-                              «Совкомбанк».
-                            </p>
-                            <p class="text text-main">
-                              Способ доступен при online-оплаты картой «Халва», рассрочка активируется в личном кабинете
-                              банка.
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-                <div class="payment__alert">
-                  <p class="text">
-                    * Внимание! Приобретение в рассрочку является акцией магазина. Скидки, подарки и акции не
-                    суммируются.
-                  </p>
-                </div>
-              </div>
+              @@include('./common/payment.html')
             </div>
           </section>
 
@@ -1130,7 +930,7 @@
                 <!-- Regions list -->
               </ul>
               <div class="delivery-regions__exception-block">
-                <button type="button" class="button button-simple button-simple--active" id="button-new-location">
+                <button type="button" class="button button-main button-main--active" id="button-new-location">
                   Моего города нет в списке
                 </button>
               </div>
@@ -1172,7 +972,7 @@
                     </span>
                   </label>
                 </fieldset>
-                <button class="button button-simple button-simple--active form-communicate__button" type="submit">
+                <button class="button button-main button-main--active form-communicate__button" type="submit">
                   Узнать про доставку
                 </button>
               </form>
@@ -1188,11 +988,9 @@
                     FAQ
                   </h2>
                 </div>
-                <div class="faq__content-block">
-                  <ul class="list faq__list">
-                    @@loop('./common/faq-item.html', '../json/msk-delivery/questions.json')
-                  </ul>
-                </div>
+                <ul class="list faq__list">
+                  @@loop('./common/accordion-item.html', '../json/msk-delivery/questions.json')
+                </ul>
               </div>
             </div>
           </section>
@@ -1211,7 +1009,7 @@
         <!-- Regions item template -->
         <template id="regions-item">
           <li class="delivery-region__item">
-            <a href="" target="_blank" class="link button-simple nobr"></a>
+            <a href="" target="_blank" class="link button-main nobr"></a>
           </li>
         </template>
 

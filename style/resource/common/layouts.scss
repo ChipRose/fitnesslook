@@ -1,4 +1,7 @@
-// Buttons block
+/**
+* @section layouts
+* Buttons block
+*/
 
 .button-block {
   margin: -6px;
@@ -83,8 +86,10 @@
   }
 }
 
-
-//Columns
+/**
+* @section layouts
+* Columns
+*/
 
 .columns {
   @media (min-width:$tablet-width) {
@@ -143,7 +148,7 @@
     margin-bottom: 22px;
 
     @media (min-width: $tablet-width) {
-      max-width: 50%;
+      max-width: calc(50% - 75px);
       margin-bottom: 62px;
     }
 
