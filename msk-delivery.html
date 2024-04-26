@@ -12,7 +12,7 @@
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css  ">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
-  <link rel="stylesheet" type="text/css" href="style/modules/msk-delivery.css">
+  <link rel="stylesheet" type="text/css" href="style/modules/delivery.css">
 
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -3615,7 +3615,7 @@
     </div>
     <div class="cover__content">
       <header class="cover__header">
-        <p class="text subtitle cover__subtitle">
+        <p class="text cover__subtitle">
           В {$cur_month_e} мы сделали доставку бесплатной для заказов от <span class="nobr">{$pod_info.sum_dostavka|number_format:0:",":"'"} ₽.</span>
         </p>
         <button class="button button-main button-main--active cover__button">
@@ -3681,27 +3681,31 @@
 
           <section class="receiving page-delivery__receiving">
             <div class="container">
-              <h2 class="title title-main receiving__title">
-                Снижаем стоимость доставки до 0 ₽
-              </h2>
-              <div class="receiving__wrapper">
-                <div class="receiving__text-block">
-                  <p class="text text-main text-main--strong receiving__text-intro">
-                    Доставка до дома — самый быстрый и популярный способ получения заказов у покупателей FitnessLook
-                    из Москвы*
-                  </p>
-                  <p class="text text-main receiving__subtitle">
-                    Хорошие новости!
-                  </p>
-                  <div class="receiving__content">
-                    <div class="receiving__content-item">
+              <div class="info-block">
+                <header class="info-block__header">
+                  <h2 class="title title-main">
+                    Снижаем стоимость доставки до 0 ₽
+                  </h2>
+                </header>
+                <div class="info-block__text-block">
+                  <div class="info-block__title">
+                    <p class="text text-main text-main--strong">
+                      Доставка до дома — самый быстрый и популярный способ получения заказов у покупателей FitnessLook
+                      из Москвы*
+                    </p>
+                    <p class="text text-main receiving__subtitle">
+                      Хорошие новости!
+                    </p>
+                  </div>
+                  <div class="columns">
+                    <div class="columns__item">
                       <p class="text text-main receiving__text">
                         Весь {$cur_month} эта опция является приятным подарком, за который не потребуется доплачивать,
                         для 95% заказов. Кроме того, мы запустили акцию и снизили цену на доставку для товаров, не
                         попадающих под условия бесплатной доставки.
                       </p>
                     </div>
-                    <div class="receiving__content-item">
+                    <div class="columns__item">
                       <p class="text text-main ">
                         *Если вас интересует способ получения заказа в другом регионе, найдите и выберите его в
                         <a href="#regions" class="link link-main" id="regions-list-button">
@@ -3954,7 +3958,7 @@
                                     </p>
                                   </div>
                                   <div class="accordion__action-block">
-                                    <a class="link button-action" href="/pages/sborka-trenazherov-i-oborudovaniya.html" target="_blank">
+                                    <a class="link button-action button-action--simple" href="/pages/sborka-trenazherov-i-oborudovaniya.html" target="_blank">
                                       Сборка
                                     </a>
                                   </div>
@@ -4263,7 +4267,7 @@
                     </table>
                     <div class="cost-lifting">
                       <header class="cost-lifting__header">
-                        <h2 class="title title-extra-info cost-lifting__title">
+                        <h2 class="title title-secondary cost-lifting__title">
                           Подъем на этаж*
                         </h2>
                         <div class="button-block" id="slider-cost-lifting-buttons">
@@ -4485,213 +4489,215 @@
           </section>
 
           <a id="payment"></a>
-          <section class="payment page-delivery__payment">
+          <section class="page-delivery__payment">
             <div class="container">
-              <div class="payment__content container__narrow">
-                <h2 class="title title-main payment__title">
-                  Оплата:
-                </h2>
-                <ul class="list payment__variant-list">
-                  <li class="payment__variant-item">
-                    <h3 class="title title-extra payment__title-extra">
-                      При получении товара:
-                    </h3>
-                    <ul class="list button-modal">
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
-                                <use xlink:href="i/media/stat/sprite.svg#walet-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">наличными</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
-                                <use xlink:href="i/media/stat/sprite.svg#card-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">банковской картой</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="payment__variant-item">
-                    <h3 class="title title-extra payment__title-extra">
-                      Online:
-                    </h3>
-                    <ul class="list button-modal">
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
-                                <use xlink:href="i/media/stat/sprite.svg#card-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">банковской картой / оnline сервисами
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="40" height="40" role="img" focusable="false">
-                                <use xlink:href="i/media/stat/sprite.svg#qr-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                по QR-коду
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
-                                <use xlink:href="i/media/stat/sprite.svg#building-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">банковским переводом</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="payment__variant-item">
-                    <h3 class="title title-extra payment__title-extra">
-                      Другие способы:
-                    </h3>
-                    <ul class="list button-modal">
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-credit">
-                              ?
-                              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                            </button>
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="49" height="47" role="img" focusable="false">
-                                <use xlink:href="i/media/stat/sprite.svg#rubles-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                рассрочка / кредит*
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="button-modal__modal" tabindex="-1" id="dialog-content-credit">
-                          <header class="button-modal__header">
-                            <h3 class="title title-extra">
-                              Оплата в рассрочку или кредит
-                            </h3>
-                          </header>
-                          <div class="button-modal__content-block">
-                            <p class="text text-main ">
-                              Наши ключевые партнеры:
-                              <span class="text-main text-main--strong">
-                                АО "ТИНЬКОФФ БАНК"
-                              </span>
-                              и
-                              <span class="text-main text-main--strong">
-                                ПАО "ПОЧТА БАНК".
-                              </span>
-                              Подайте заявку и получите ответ в течение пары минут!
-                            </p>
-                            <p class="text text-main">
-                              <a href="/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html" class="link link-main" target="_blank">
-                                Подробная информация
-                              </a> об этом способе оплаты.
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="button-modal__item">
-                        <div class="button-modal__container">
-                          <div class="button-modal__action-block">
-                            <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-halva">
-                              ?
-                              <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                            </button>
-                          </div>
-                          <div class="button-modal__content-block">
-                            <div class="button-modal__image-block">
-                              <svg class="button-modal__icon" width="81" height="17" role="img" focusable="false">
-                                <use xlink:href="i/media/stat/sprite.svg#halva-icon"></use>
-                              </svg>
-                            </div>
-                            <div class="button-modal__text-block">
-                              <p class="text title-simple">
-                                только <br> online-оплата*
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="button-modal__modal" tabindex="-1" id="dialog-content-halva">
-                          <header class="button-modal__header">
-                            <h3 class="title title-extra">
-                              Оплата в рассрочку картой “Халва”
-                            </h3>
-                          </header>
-                          <div class="button-modal__content-block">
-                            <p class="text text-main ">
-                              Обаладателям карты «Халва» доступны супер-выгодные условия покупки наших товаров в
-                              рассрочку
-                              0%, без комиссий и переплат, поскольку гипермаркет FitnessLook является партнером ПАО
-                              «Совкомбанк».
-                            </p>
-                            <p class="text text-main">
-                              Способ доступен при online-оплаты картой «Халва», рассрочка активируется в личном кабинете
-                              банка.
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-                <div class="payment__alert">
-                  <p class="text">
-                    * Внимание! Приобретение в рассрочку является акцией магазина. Скидки, подарки и акции не
-                    суммируются.
+              <div class="payment">
+  <div class="payment__content container__narrow">
+    <h2 class="title title-main payment__title">
+      Оплата:
+    </h2>
+    <ul class="list payment__variant-list">
+      <li class="payment__variant-item">
+        <h3 class="title subtitle-secondary payment__title-extra">
+          При получении товара:
+        </h3>
+        <ul class="list payment__type-list">
+          <li class="payment__type-item">
+            <div class="button-modal">
+              <div class="button-modal__action-block">
+              </div>
+              <div class="button-modal__content-block">
+                <div class="button-modal__image-block">
+                  <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
+                    <use xlink:href="i/media/stat/sprite.svg#walet-icon"></use>
+                  </svg>
+                </div>
+                <div class="button-modal__text-block">
+                  <p class="text">наличными</p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="payment__type-item">
+            <div class="button-modal">
+              <div class="button-modal__action-block">
+              </div>
+              <div class="button-modal__content-block">
+                <div class="button-modal__image-block">
+                  <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
+                    <use xlink:href="i/media/stat/sprite.svg#card-icon"></use>
+                  </svg>
+                </div>
+                <div class="button-modal__text-block">
+                  <p class="text">банковской картой</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="payment__variant-item">
+        <h3 class="title subtitle-secondary payment__title-extra">
+          Online:
+        </h3>
+        <ul class="list payment__type-list">
+          <li class="payment__type-item">
+            <div class="button-modal">
+              <div class="button-modal__action-block">
+              </div>
+              <div class="button-modal__content-block">
+                <div class="button-modal__image-block">
+                  <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
+                    <use xlink:href="i/media/stat/sprite.svg#card-icon"></use>
+                  </svg>
+                </div>
+                <div class="button-modal__text-block">
+                  <p class="text">банковской картой / оnline сервисами
                   </p>
                 </div>
               </div>
+            </div>
+          </li>
+          <li class="payment__type-item">
+            <div class="button-modal">
+              <div class="button-modal__action-block">
+              </div>
+              <div class="button-modal__content-block">
+                <div class="button-modal__image-block">
+                  <svg class="button-modal__icon" width="40" height="40" role="img" focusable="false">
+                    <use xlink:href="i/media/stat/sprite.svg#qr-icon"></use>
+                  </svg>
+                </div>
+                <div class="button-modal__text-block">
+                  <p class="text">
+                    по QR-коду
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="payment__type-item">
+            <div class="button-modal">
+              <div class="button-modal__action-block">
+              </div>
+              <div class="button-modal__content-block">
+                <div class="button-modal__image-block">
+                  <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
+                    <use xlink:href="i/media/stat/sprite.svg#building-icon"></use>
+                  </svg>
+                </div>
+                <div class="button-modal__text-block">
+                  <p class="text">банковским переводом</p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="payment__variant-item">
+        <h3 class="title subtitle-secondary payment__title-extra">
+          Другие способы:
+        </h3>
+        <ul class="list payment__type-list">
+          <li class="payment__type-item">
+            <div class="button-modal">
+              <div class="button-modal__action-block">
+                <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-credit">
+                  ?
+                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                </button>
+              </div>
+              <div class="button-modal__content-block">
+                <div class="button-modal__image-block">
+                  <svg class="button-modal__icon" width="49" height="47" role="img" focusable="false">
+                    <use xlink:href="i/media/stat/sprite.svg#rubles-icon"></use>
+                  </svg>
+                </div>
+                <div class="button-modal__text-block">
+                  <p class="text">
+                    рассрочка / кредит*
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="button-modal__modal" tabindex="-1" id="dialog-content-credit">
+              <header class="button-modal__header">
+                <h3 class="title subtitle-secondary">
+                  Оплата в рассрочку или кредит
+                </h3>
+              </header>
+              <div class="button-modal__content-block">
+                <p class="text text-main ">
+                  Наши ключевые партнеры:
+                  <span class="text-main text-main--strong">
+                    АО "ТИНЬКОФФ БАНК"
+                  </span>
+                  и
+                  <span class="text-main text-main--strong">
+                    ПАО "ПОЧТА БАНК".
+                  </span>
+                  Подайте заявку и получите ответ в течение пары минут!
+                </p>
+                <p class="text text-main">
+                  <a href="/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html" class="link link-main" target="_blank">
+                    Подробная информация
+                  </a> об этом способе оплаты.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="payment__type-item">
+            <div class="button-modal">
+              <div class="button-modal__action-block">
+                <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-halva">
+                  ?
+                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                </button>
+              </div>
+              <div class="button-modal__content-block">
+                <div class="button-modal__image-block">
+                  <svg class="button-modal__icon" width="81" height="17" role="img" focusable="false">
+                    <use xlink:href="i/media/stat/sprite.svg#halva-icon"></use>
+                  </svg>
+                </div>
+                <div class="button-modal__text-block">
+                  <p class="text">
+                    только <br> online-оплата*
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="button-modal__modal" tabindex="-1" id="dialog-content-halva">
+              <header class="button-modal__header">
+                <h3 class="title subtitle-secondary">
+                  Оплата в рассрочку картой “Халва”
+                </h3>
+              </header>
+              <div class="button-modal__content-block">
+                <p class="text text-main ">
+                  Обаладателям карты «Халва» доступны супер-выгодные условия покупки наших товаров в
+                  рассрочку
+                  0%, без комиссий и переплат, поскольку гипермаркет FitnessLook является партнером ПАО
+                  «Совкомбанк».
+                </p>
+                <p class="text text-main">
+                  Способ доступен при online-оплаты картой «Халва», рассрочка активируется в личном кабинете
+                  банка.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <div class="payment__alert">
+      <p class="text">
+        * Внимание! Приобретение в рассрочку является акцией магазина. Скидки, подарки и акции не суммируются.
+      </p>
+    </div>
+  </div>
+</div>
+
             </div>
           </section>
 
@@ -4705,7 +4711,7 @@
                 <!-- Regions list -->
               </ul>
               <div class="delivery-regions__exception-block">
-                <button type="button" class="button button-simple button-simple--active" id="button-new-location">
+                <button type="button" class="button button-main button-main--active" id="button-new-location">
                   Моего города нет в списке
                 </button>
               </div>
@@ -4747,7 +4753,7 @@
                     </span>
                   </label>
                 </fieldset>
-                <button class="button button-simple button-simple--active form-communicate__button" type="submit">
+                <button class="button button-main button-main--active form-communicate__button" type="submit">
                   Узнать про доставку
                 </button>
               </form>
@@ -4763,18 +4769,24 @@
                     FAQ
                   </h2>
                 </div>
-                <div class="faq__content-block">
-                  <ul class="list faq__list">
-                    <li class="accordion-simple accordion-simple--faq faq__item">
+                <ul class="list faq__list">
+                  <li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Нужно ли предварительно делать заказ для самовывоза?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4784,16 +4796,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Есть ли доставка вечером после работы или в выходные?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4803,16 +4822,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Доставка будет до подъезда или до квартиры?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4822,16 +4848,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Живу в Московской области, как будет считаться доставка?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4841,16 +4874,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Сборка при доставке или мастер приедет потом / в другой день?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4860,16 +4900,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Хочу вернуть товар надлежащего качества, что для этого нужно?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4879,16 +4926,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Может ли принять мой заказ другой человек?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4898,16 +4952,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Я получу полный комплект документов при любом способе доставки / оплаты?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4917,16 +4978,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Могу ли я оплатить заказ при получении?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4936,16 +5004,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Можно ли оплатить заказ по QR-коду/СБП?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4955,16 +5030,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Я хочу оплатить от организации, как это сделать?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4974,16 +5056,23 @@
     </div>
   </div>
 </li>
-<li class="accordion-simple accordion-simple--faq faq__item">
+<li class="accordion-simple  faq__item">
   <div class="accordion-simple__label">
     <div class="accordion-simple__label-wrapper">
       <h3 class="title accordion-simple__title">
         Как оформить рассрочку или кредит, кто предоставляет услугу?
       </h3>
-      <span class="accordion-simple__button">
-        <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
-          <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
-        </svg>
+      <span class="accordion-simple__buttons-block">
+        <a href="tel:@@tel" class="link accordion-simple__button accordion-simple__button--action">
+          <svg class="accordion-simple__icon" width="30" height="30" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#phone-icon"></use>
+          </svg>
+        </a>
+        <button class="button accordion-simple__button accordion-simple__button--toggler" type="button">
+          <svg class="accordion-simple__icon" width="12" height="9" role="img" focusable="false">
+            <use xlink:href="i/media/stat/sprite.svg#arrow-up"></use>
+          </svg>
+        </button>
       </span>
     </div>
   </div>
@@ -4994,8 +5083,7 @@
   </div>
 </li>
 
-                  </ul>
-                </div>
+                </ul>
               </div>
             </div>
           </section>
@@ -5014,7 +5102,7 @@
         <!-- Regions item template -->
         <template id="regions-item">
           <li class="delivery-region__item">
-            <a href="" target="_blank" class="link button-simple nobr"></a>
+            <a href="" target="_blank" class="link button-main nobr"></a>
           </li>
         </template>
 

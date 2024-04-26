@@ -637,6 +637,56 @@ span {
 
 /**
 * @section texts
+* Ttile secondary
+* @tag h2
+*/
+.title-secondary {
+  color: var(--cl-accent);
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .title-secondary {
+    font-size: 22px;
+  }
+}
+
+/**
+* @section texts
+* Subtitle
+* @tag h3
+*/
+.subtitle-secondary {
+  font-size: 14px;
+  line-height: 130%;
+  font-weight: var(--fw-medium);
+}
+@media (min-width: 768px) {
+  .subtitle-secondary {
+    font-size: 18px;
+  }
+}
+
+.subtitle {
+  font-size: 22px;
+  line-height: 140%;
+  vertical-align: middle;
+  font-weight: var(--fw-regular);
+  color: var(--cl-accent);
+}
+.subtitle--basic {
+  font-size: 20px;
+  color: var(--cl-dark);
+  font-weight: var(--fw-regular);
+}
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 28px;
+  }
+}
+
+/**
+* @section texts
 * Main text
 * @tag p, span
 * --accent - violet text
@@ -805,11 +855,25 @@ span {
   }
 }
 
+.button-action.button-action--simple {
+  padding: 13px 30px;
+  font-size: 14px;
+  line-height: 130%;
+}
+@media (min-width: 768px) {
+  .button-action.button-action--simple {
+    font-size: 18px;
+  }
+}
+
 /**
 * @section controls
 * Round button
 * @tag a, button
 * --default - white with shadow
+* --simple - grey text
+* --transparent - white transparent bg
+* --rotate - rotate 180deg
 * --accent - violet
 * --big - size is bigger
 */
@@ -839,6 +903,12 @@ span {
   pointer-events: none;
 }
 
+.button-round.button-round--simple {
+  color: var(--cl-disable);
+  font-size: 18px;
+  font-weight: var(--fw-regular);
+}
+
 .button-round.button-round--big {
   width: 60px;
   height: 60px;
@@ -858,6 +928,187 @@ span {
 .button-round.button-round--accent {
   background: var(--cl-accent);
   color: var(--cl-contrast);
+}
+
+.button-round.button-round--transparent {
+  background: var(--cl-transparent-contrast);
+  box-shadow: none;
+}
+.button-round.button-round--transparent svg {
+  fill: var(--cl-contrast);
+}
+
+.button-round.button-round--rotate {
+  transform: rotate(180deg);
+}
+
+/**
+* @section controls
+* Modal button
+*/
+.button-modal {
+  box-sizing: border-box;
+  background: var(--cl-contrast);
+  box-shadow: var(--shadow-main);
+  padding: 0 8px 15px;
+  min-height: 100px;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .button-modal__content-block {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.button-modal__image-block {
+  margin-bottom: 11px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+@media (min-width: 768px) {
+  .button-modal__image-block {
+    margin-bottom: 38px;
+  }
+}
+
+.button-modal__text-block {
+  text-align: center;
+  line-height: 120%;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .button-modal__text-block {
+    font-size: 16px;
+  }
+}
+
+.button-modal__icon {
+  fill: var(--cl-dark);
+}
+
+.button-modal__action-block {
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+.button-modal__button {
+  margin-top: 4px;
+  margin-right: 4px;
+  margin-left: auto;
+}
+
+.button-modal__modal {
+  padding: 30px;
+  width: 80%;
+  max-width: 352px;
+  border-radius: 20px;
+  background: var(--cl-middle);
+  display: none;
+}
+
+.button-modal__header {
+  margin-bottom: 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-modal__header h3 {
+  width: 50%;
+}
+
+/**
+* Modal button
+*/
+.button-popup {
+  width: fit-content;
+  display: flex;
+  position: relative;
+}
+.button-popup .button-popup__button {
+  padding: var(--indent-basic);
+  width: var(--popup-size);
+  height: var(--popup-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: var(--cl-accent);
+  border-radius: 50%;
+}
+.button-popup .button-popup__icon {
+  fill: var(--cl-contrast);
+}
+.button-popup .button-popup__icon--time {
+  transform: translate(3px, -2px);
+}
+.button-popup .button-popup__modal {
+  padding: 6px 12px;
+  height: fit-content;
+  background: var(--cl-accent);
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 120%;
+  align-items: center;
+  border-radius: var(--radius-small);
+  color: var(--cl-contrast);
+  overflow: hidden;
+  transition: all 0.2s ease-in;
+  font-weight: var(--fw-regular);
+  pointer-events: none;
+  opacity: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  vertical-align: middle;
+}
+
+/**
+* Table button
+*/
+.button-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-table--prev {
+  display: none;
+  transform-origin: center center;
+  transform: rotate(180deg);
+}
+.button-table .button-table__icon {
+  fill: var(--cl-accent);
+}
+
+/**
+* Input
+*/
+.input.field-main {
+  padding: 12px 29px;
+  box-shadow: var(--shadow-inset);
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 20px;
+}
+.input.field-main::placeholder {
+  color: var(--cl-disable);
+  opacity: 0.5;
+}
+.input.field-main:focus-within {
+  outline: none;
+  border: 1px solid var(--cl-dark);
+  box-sizing: border-box;
 }
 
 .breadcrumbs {
@@ -1048,6 +1299,10 @@ span {
   display: block;
 }
 
+/**
+* @section layouts
+* Buttons block
+*/
 .button-block {
   margin: -6px;
   display: flex;
@@ -1119,6 +1374,10 @@ span {
   margin-bottom: 0;
 }
 
+/**
+* @section layouts
+* Columns
+*/
 @media (min-width: 768px) {
   .columns {
     margin: -75px;
@@ -1177,7 +1436,7 @@ span {
 }
 @media (min-width: 768px) {
   .info-block .info-block__title {
-    max-width: 50%;
+    max-width: calc(50% - 75px);
     margin-bottom: 62px;
   }
 }
