@@ -4,43 +4,31 @@
       Оплата:
     </h2>
     <ul class="list payment__variant-list">
-      <!-- <li class="payment__variant-item">
+       <li class="payment__variant-item">
         <h3 class="title subtitle-secondary payment__title-extra">
           При получении товара:
         </h3>
         <ul class="list payment__type-list">
-          <li class="payment__type-item">
-            <div class="button-modal">
-              <div class="button-modal__action-block">
-              </div>
-              <div class="button-modal__content-block">
-                <div class="button-modal__image-block">
-                  <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
-                    <use xlink:href="@@pathi/media/stat/sprite.svg#walet-icon"></use>
-                  </svg>
-                </div>
-                <div class="button-modal__text-block">
-                  <p class="text">наличными</p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="payment__type-item">
-            <div class="button-modal">
-              <div class="button-modal__action-block">
-              </div>
-              <div class="button-modal__content-block">
-                <div class="button-modal__image-block">
-                  <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
-                    <use xlink:href="@@pathi/media/stat/sprite.svg#card-icon"></use>
-                  </svg>
-                </div>
-                <div class="button-modal__text-block">
-                  <p class="text">банковской картой</p>
-                </div>
-              </div>
-            </div>
-          </li>
+          @@loop('./payment-simple-item.html', [
+          {
+            "id":"",
+            "extraClass":"payment-item--small-icon",
+            "icon":"walet-icon",
+            "iconWidth":"42",
+            "iconHeight":"29",
+            "title":"наличными",
+            "modalContent":""
+          },
+          {
+            "id":"",
+            "extraClass":"payment-item--small-icon",
+            "icon":"card-icon",
+            "iconWidth":"40",
+            "iconHeight":"22",
+            "title":"банковской картой",
+            "modalContent":""
+          },
+          ])
         </ul>
       </li>
       <li class="payment__variant-item">
@@ -48,59 +36,37 @@
           Online:
         </h3>
         <ul class="list payment__type-list">
-          <li class="payment__type-item">
-            <div class="button-modal">
-              <div class="button-modal__action-block">
-              </div>
-              <div class="button-modal__content-block">
-                <div class="button-modal__image-block">
-                  <svg class="button-modal__icon" width="40" height="22" role="img" focusable="false">
-                    <use xlink:href="@@pathi/media/stat/sprite.svg#card-icon"></use>
-                  </svg>
-                </div>
-                <div class="button-modal__text-block">
-                  <p class="text">банковской картой / оnline сервисами
-                  </p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="payment__type-item">
-            <div class="button-modal">
-              <div class="button-modal__action-block">
-              </div>
-              <div class="button-modal__content-block">
-                <div class="button-modal__image-block">
-                  <svg class="button-modal__icon" width="40" height="40" role="img" focusable="false">
-                    <use xlink:href="@@pathi/media/stat/sprite.svg#qr-icon"></use>
-                  </svg>
-                </div>
-                <div class="button-modal__text-block">
-                  <p class="text">
-                    по QR-коду
-                  </p>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="payment__type-item">
-            <div class="button-modal">
-              <div class="button-modal__action-block">
-              </div>
-              <div class="button-modal__content-block">
-                <div class="button-modal__image-block">
-                  <svg class="button-modal__icon" width="42" height="29" role="img" focusable="false">
-                    <use xlink:href="@@pathi/media/stat/sprite.svg#building-icon"></use>
-                  </svg>
-                </div>
-                <div class="button-modal__text-block">
-                  <p class="text">банковским переводом</p>
-                </div>
-              </div>
-            </div>
-          </li>
+          @@loop('./payment-simple-item.html', [
+          {
+            "id":"",
+            "extraClass":"payment-item--small-icon",
+            "icon":"card-icon",
+            "iconWidth":"40",
+            "iconHeight":"22",
+            "title":"банковской картой / оnline сервисами",
+            "modalContent":""
+          },
+          {
+            "id":"",
+            "extraClass":"",
+            "icon":"qr-icon",
+            "iconWidth":"40",
+            "iconHeight":"40",
+            "title":"по QR-коду",
+            "modalContent":""
+          },
+          {
+            "id":"",
+            "extraClass":"payment-item--small-icon",
+            "icon":"building-icon",
+            "iconWidth":"42",
+            "iconHeight":"29",
+            "title":"банковским переводом",
+            "modalContent":""
+          },
+          ])
         </ul>
-      </li> -->
+      </li>
       <li class="payment__variant-item">
         <h3 class="title subtitle-secondary payment__title-extra">
           Другие способы:

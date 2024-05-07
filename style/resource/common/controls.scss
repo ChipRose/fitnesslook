@@ -231,16 +231,20 @@
     @media (min-width:$tablet-width) {
       margin-bottom: 38px;
       width: 148px;
-      height: 60px;
+      height: 55px;
     }
   }
 
   .payment-item__icon {
     fill: var(--cl-dark);
-    width: 100%;
+    max-width: 100%;
     height: auto;
     max-height: 100%;
     object-fit: contain;
+
+    @media (min-width:$tablet-width) {
+      width: 100%;
+    }
   }
 
   .payment-item__text-block {
@@ -266,6 +270,15 @@
     @media (min-width: $tablet-width) {
       margin-top: 15px;
       margin-right: 15px;
+    }
+  }
+}
+
+.payment-item.payment-item--small-icon {
+  .payment-item__icon {
+    @media (min-width:$tablet-width) {
+      width: 100%;
+      max-width: 50px;
     }
   }
 }
