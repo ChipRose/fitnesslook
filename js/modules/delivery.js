@@ -454,7 +454,7 @@ const initMap = () => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
 
-const buttonsModal = document.querySelectorAll('.button-modal__button');
+const buttonsModal = document.querySelectorAll('.payment-item__button');
 buttonsModal.forEach(button => {
   button?.addEventListener('click', () => {
     _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox.bind('[data-fancybox]', {});

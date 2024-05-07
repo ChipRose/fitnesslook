@@ -4497,7 +4497,7 @@
       Оплата:
     </h2>
     <ul class="list payment__variant-list">
-      <li class="payment__variant-item">
+      <!-- <li class="payment__variant-item">
         <h3 class="title subtitle-secondary payment__title-extra">
           При получении товара:
         </h3>
@@ -4593,100 +4593,67 @@
             </div>
           </li>
         </ul>
-      </li>
+      </li> -->
       <li class="payment__variant-item">
         <h3 class="title subtitle-secondary payment__title-extra">
           Другие способы:
         </h3>
         <ul class="list payment__type-list">
-          <li class="payment__type-item">
-            <div class="button-modal">
-              <div class="button-modal__action-block">
-                <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-credit">
-                  ?
-                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                </button>
-              </div>
-              <div class="button-modal__content-block">
-                <div class="button-modal__image-block">
-                  <svg class="button-modal__icon" width="49" height="47" role="img" focusable="false">
-                    <use xlink:href="/i/media/stat/sprite.svg#rubles-icon"></use>
-                  </svg>
-                </div>
-                <div class="button-modal__text-block">
-                  <p class="text">
-                    рассрочка / кредит*
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="button-modal__modal" tabindex="-1" id="dialog-content-credit">
-              <header class="button-modal__header">
-                <h3 class="title subtitle-secondary">
-                  Оплата в рассрочку или кредит
-                </h3>
-              </header>
-              <div class="button-modal__content-block">
-                <p class="text text-main ">
-                  Наши ключевые партнеры:
-                  <span class="text-main text-main--strong">
-                    АО "ТИНЬКОФФ БАНК"
-                  </span>
-                  и
-                  <span class="text-main text-main--strong">
-                    ПАО "ПОЧТА БАНК".
-                  </span>
-                  Подайте заявку и получите ответ в течение пары минут!
-                </p>
-                <p class="text text-main">
-                  <a href="/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html" class="link link-main" target="_blank">
-                    Подробная информация
-                  </a> об этом способе оплаты.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="payment__type-item">
-            <div class="button-modal">
-              <div class="button-modal__action-block">
-                <button type="button" class="button button-round button-round--simple button-modal__button" data-fancybox data-src="#dialog-content-halva">
-                  ?
-                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                </button>
-              </div>
-              <div class="button-modal__content-block">
-                <div class="button-modal__image-block">
-                  <svg class="button-modal__icon" width="81" height="17" role="img" focusable="false">
-                    <use xlink:href="/i/media/stat/sprite.svg#halva-icon"></use>
-                  </svg>
-                </div>
-                <div class="button-modal__text-block">
-                  <p class="text">
-                    только <br> online-оплата*
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="button-modal__modal" tabindex="-1" id="dialog-content-halva">
-              <header class="button-modal__header">
-                <h3 class="title subtitle-secondary">
-                  Оплата в рассрочку картой “Халва”
-                </h3>
-              </header>
-              <div class="button-modal__content-block">
-                <p class="text text-main ">
-                  Обаладателям карты «Халва» доступны супер-выгодные условия покупки наших товаров в
-                  рассрочку
-                  0%, без комиссий и переплат, поскольку гипермаркет FitnessLook является партнером ПАО
-                  «Совкомбанк».
-                </p>
-                <p class="text text-main">
-                  Способ доступен при online-оплаты картой «Халва», рассрочка активируется в личном кабинете
-                  банка.
-                </p>
-              </div>
-            </div>
-          </li>
+            <li class="payment__type-item">
+  <div class="payment-item payment-item--info">
+    <div class="payment-item__content">
+      <div class="payment-item__action-block">
+        <button type="button" class="button button-round button-round--simple payment-item__button" data-fancybox data-src="#dialog-content-credit">
+          ?
+          <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+        </button>
+      </div>
+      <div class="payment-item__description-block">
+        <div class="payment-item__image-block">
+          <svg class="payment-item__icon" role="img" width="47" height="45" focusable="false">
+            <use xlink:href="/i/media/stat/sprite.svg#rubles-icon"></use>
+          </svg>
+        </div>
+        <div class="payment-item__text-block">
+          <p class="text text text-main">
+            рассрочка / кредит*
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="payment-item__modal" tabindex="-1" id="dialog-content-credit">
+      <header><h3 class="title subtitle-secondary">Оплата в рассрочку или кредит</h3></header><div><p class="text text-main">Наши ключевые партнеры: <span class="text-main text-main--strong">АО "ТИНЬКОФФ БАНК"</span> и <span class="text-main text-main--strong"> ПАО "ПОЧТА БАНК".</span> Подайте заявку и получите ответ в течение пары минут!</p><p class="text text-main"><a href="/pages/pokupka_trenajerov_i_sport_oborudovaniya_v_kredit_v_spb.html" class="link link-main" target="_blank">Подробная информация</a> об этом способе оплаты.</p></div>
+    </div>
+  </div>
+</li>
+<li class="payment__type-item">
+  <div class="payment-item payment-item--info">
+    <div class="payment-item__content">
+      <div class="payment-item__action-block">
+        <button type="button" class="button button-round button-round--simple payment-item__button" data-fancybox data-src="#dialog-content-halva">
+          ?
+          <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+        </button>
+      </div>
+      <div class="payment-item__description-block">
+        <div class="payment-item__image-block">
+          <svg class="payment-item__icon" role="img" width="81" height="17" focusable="false">
+            <use xlink:href="/i/media/stat/sprite.svg#halva-icon"></use>
+          </svg>
+        </div>
+        <div class="payment-item__text-block">
+          <p class="text text text-main">
+            только <br> online-оплата*
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="payment-item__modal" tabindex="-1" id="dialog-content-halva">
+      <header><h3 class="title subtitle-secondary">Оплата в рассрочку картой "Халва"</h3></header><div><p class="text text-main">Обаладателям карты "Халва" доступны супер-выгодные условия покупки наших товаров в рассрочку 0%, без комиссий и переплат, поскольку гипермаркет FitnessLook является партнером ПАО «Совкомбанк». </p><p class="text text-main"> Способ доступен при online-оплаты картой "Халва", рассрочка активируется в личном кабинете банка.</p></div>
+    </div>
+  </div>
+</li>
+
         </ul>
       </li>
     </ul>
