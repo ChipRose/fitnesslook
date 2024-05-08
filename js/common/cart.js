@@ -100,7 +100,7 @@ if (controlExtraElement) {
 
 // Accordion
 
-const accordions = Array.from(document.querySelectorAll('.accordion'));
+const accordions = Array.from(document.querySelectorAll('.accordion__label'));
 
 const parentDiv0 = document.querySelector('.container-extra__col');
 const flagElement0 = parentDiv0.querySelector('#summary-section');
@@ -115,7 +115,7 @@ const accordionHandler = (evt) => {
   evt.preventDefault();
   const curentAccordion = evt.target.closest('.accordion');
   const currentContent = curentAccordion.querySelector('.accordion__content');
-  const extraBlocks = [document.querySelector('.form-order__date'), document.querySelector('.form-order__discount')];
+  const extraBlocks = [document.querySelector('.form-order__date'), document.querySelector('.form-order__discount')].filter((block)=>block);
   let widthFlag = true;
 
   if (widthFlag) {
