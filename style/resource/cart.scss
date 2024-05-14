@@ -1740,6 +1740,10 @@ textarea.field-simple {
   &:nth-child(3n) {
     flex-grow: 0;
   }
+
+  &:last-child {
+    flex-grow: 0;
+  }
 }
 
 .payment__title-block {
