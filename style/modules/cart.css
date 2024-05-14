@@ -1882,6 +1882,9 @@ textarea.field-simple:hover {
 .payment__item:nth-child(3n) {
   flex-grow: 0;
 }
+.payment__item:last-child {
+  flex-grow: 0;
+}
 
 .payment__title-block {
   margin-bottom: 10px;
