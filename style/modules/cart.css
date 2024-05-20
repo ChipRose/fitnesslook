@@ -1645,7 +1645,7 @@ textarea.field-simple:hover {
   box-sizing: border-box;
   position: fixed;
   z-index: 30;
-  bottom: 44px;
+  bottom: 0;
   left: 0;
   display: none;
 }
@@ -1878,9 +1878,6 @@ textarea.field-simple:hover {
   max-width: 320px;
   min-height: 98px;
   flex: 1 0 calc(50% - 8px);
-}
-.payment__item:nth-child(3n) {
-  flex-grow: 0;
 }
 .payment__item:last-child {
   flex-grow: 0;
