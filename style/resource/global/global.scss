@@ -5,7 +5,7 @@
   font-weight: var(--fw-light);
   background: var(--cl-light);
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: 320px) {
     font-size: 18px;
   }
 }
@@ -27,8 +27,13 @@
   padding: 0;
   margin: 0;
   border: none;
+  outline: none;
   background: none;
   cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .title {

@@ -113,7 +113,8 @@ export function processAllScripts() {
     { title: 'region-delivery.js' },
     { title: 'cart.js' },
     { title: 'assembly.js' },
-    { title: 'guarantee.js' }
+    { title: 'guarantee.js' },
+    { title: 'sertificate.js' },
   ];
 
   return gulp.series(
