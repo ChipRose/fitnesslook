@@ -392,7 +392,7 @@ template {
   font-weight: var(--fw-light);
   background: var(--cl-light);
 }
-@media (min-width: 768px) {
+@media (min-width: 320px) {
   #wmc {
     font-size: 18px;
   }
@@ -415,8 +415,13 @@ template {
   padding: 0;
   margin: 0;
   border: none;
+  outline: none;
   background: none;
   cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
 }
 
 .title {
