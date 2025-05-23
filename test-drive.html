@@ -23,6 +23,7 @@
       type="text/css"
       href="https://www.fitnesslook.ru/style/compress/show_aux_page.css?t=1699630948"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-datetimepicker@2.5.21/jquery.datetimepicker.min.css">
     <link
       rel="stylesheet"
       type="text/css"
@@ -73,7 +74,9 @@
   </head>
 
   <body>
-    <div class="test-drive" id="test-drive">
+    <div id="main_content_template">
+
+      <div class="test-drive" id="test-drive">
       <div class="container">
         <div class="paper">
           <div class="test-drive__container-desk">
@@ -262,7 +265,7 @@
                     <input
                       class="input"
                       required
-                      placeholder="Ваше имя"
+                      placeholder="ФИО"
                       title="Введите имя"
                       name="name"
                     />
@@ -272,7 +275,7 @@
                     <input
                       class="input"
                       required
-                      placeholder="Ваш телефон"
+                      placeholder="Контактный телефон"
                       title="Введите телефон"
                       name="phone"
                     />
@@ -280,12 +283,13 @@
                   </div>
                   <div class="field test-drive-form__item">
                     <div class="select">
-                      <div class="select__field">
-                        <span class="select__value">Выберите вариант</span>
+                      <input class="visually-hidden" name="product" required value="">
+                      <div class="select__field" data-name="product">
+                        <span class="select__value">Интересующее оборудование</span>
                           <svg
                             class="select__arrow"
-                            width="24"
-                            height="24"
+                            width="16"
+                            height="16"
                             role="img"
                             focusable="false"
                           >
@@ -293,13 +297,12 @@
                           </svg>
                       </div>
                       <ul class="select__list">
-                        <li data-value="1">Вариант 1</li>
-                        <li data-value="2">Вариант 2</li>
-                        <li data-value="3">Вариант 3</li>
+                        <li data-value="Кардиотренажеры">Кардиотренажеры</li>
+                        <li data-value="Массажные кресла">Массажные кресла</li>
                       </ul>
                     </div>
                   <input
-                    class="visually-hidden"
+                    type="hidden"
                     type="text"
                     name="go_lid"
                     value="{$current_url}"
@@ -313,6 +316,7 @@
                     <input
                       class="input time-field__field"
                       required
+                      autocomplete="off"
                       placeholder="Выберите дату"
                       title="Выберите дату"
                       name="date"
@@ -331,6 +335,7 @@
                     <input
                       class="input time-field__field"
                       required
+                      autocomplete="off"
                       placeholder="Выберите время"
                       title="Выберите время"
                       name="time"
@@ -348,13 +353,13 @@
                 </fieldset>
               </legend>
 
-
               <button
-                class="test-drive-form__button button-sertificate"
+                class="test-drive-form__button button-main"
                 type="submit"
               >
                 Записаться на Тест-драйв
               </button>
+
               <small class="test-drive-form__policy-text">
                 Нажимая на кнопку вы соглашаетесь с
                 <a href="/pages/politika_konfidencialjnosti_fitnesslook_ru.html"
@@ -433,28 +438,42 @@
           </section>
         </div>
       </div>
-    </div>
-    <div class="modal-success" id="modal-success">
+      </div>
+
+      <dialog class="modal" id="modal-success">
       <button
         type="button"
-        class="button close-modal-button"
-        id="close-modal-success"
+        data-id="close-modal"
+        class="close-modal-button"
       ></button>
-      <div class="modal-success__header">
-        <h2 class="title modal-success__header-line">Спасибо</h2>
-        <h2
-          class="title modal-success__header-line modal-success__header-line--second"
-        >
-          за ваш заказ
-        </h2>
+      <div class="modal__icon-block">
+        <img src="i/media/stat/test-drive/done.svg"  width="67" height="auto" alt="">
       </div>
-      <div class="modal-success__text-block">
-        <p class="modal-success__text">
-          Ваш заказ <span class="bname"></span> успешно оформлен.<br />
-          Номер вашего заказа - <span class="id-order" id="id-order"></span>.
+        <h2 class="modal-title modal__title">Ваш промокод успешно активирован!</h2>
+      <div class="modal__text-block">
+        <p>
+          Скидки уже применены ко всем товарам на сайте. Теперь при оформлении заказа вы автоматически получите указанную скидку на все позиции в корзине. Приятных покупок!
         </p>
-        <p>Менеджер свяжется с вами в ближайшее время.</p>
       </div>
+      <button class="button-main" type="button" data-id="close-modal">
+        Спасибо
+      </button>
+      </dialog>
+
+      <dialog class="modal" id="modal-error">
+      <button
+        type="button"
+        data-id="close-modal"
+        class="close-modal-button"
+      ></button>
+
+        <h2 class="modal-title modal__title">Что то пошло не так </h2>
+      <div class="modal__text-block">
+        <p>
+          Повторите попытку позже
+        </p>
+      </div>
+      </dialog>
     </div>
     <script src="js/modules/test-drive.js"></script>
   </body>
