@@ -352,6 +352,7 @@ span {
   z-index: 1;
   transform: translateY(-50%);
   fill: var(--cl-dark);
+  transition: var(--transition-main);
 }
 .select .select__list {
   margin: 0;
@@ -362,7 +363,7 @@ span {
   left: 0;
   right: 0;
   height: fit-content;
-  border: 1px solid #ccc;
+  border: 1px solid var(--cl-grey-light);
   background: var(--cl-light);
   display: none;
   z-index: 10;
@@ -373,11 +374,14 @@ span {
   cursor: pointer;
 }
 .select .select__list li:hover {
-  background-color: #f0f0f0;
+  background-color: var(--cl-bg-grey);
 }
 
 .select.open .select__list {
   display: block;
+}
+.select.open .select__arrow {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .button-main {
@@ -401,9 +405,6 @@ span {
   background: var(--cl-bg-grey);
   color: var(--cl-dark);
   font-family: "Roboto", "Arial", sans-serif;
-}
-.test-drive__container-desk {
-  padding: 0 20px;
 }
 @media screen and (min-width: 1000px) {
   .test-drive__container-desk {
@@ -589,6 +590,7 @@ span {
 }
 
 .test-drive-form__legend {
+  padding: 0;
   margin-bottom: 16px;
 }
 
