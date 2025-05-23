@@ -1,0 +1,72 @@
+.page-delivery__main-nav {
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.page-delivery__main-nav .container {
+  padding-top: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+  }
+}
+
+.page-delivery__cover {
+  margin-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.page-delivery__navigation {
+  margin-bottom: 68px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 134px;
+  }
+}
+
+.page-delivery__receiving {
+  margin-bottom: 89px;
+}
+
+.page-delivery__receiving-type {
+  margin-bottom: 52px;
+}
+
+.page-delivery__cost-delivery {
+  margin-bottom: 60px;
+}
+
+.page-delivery__cost-lifting {
+  margin-bottom: 46px;
+}
+
+.page-delivery__payment {
+  margin-bottom: 60px;
+}
+
+.page-delivery__delivery-regions {
+  margin-bottom: 53px;
+}
+
+.page-delivery__form-communicate {
+  margin-bottom: 46px;
+
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 93px;
+  }
+}
+
+.page-delivery__faq {
+  margin-bottom: 22px;
+}
+
+.page-delivery__action {
+  margin-bottom: 46px;
+}

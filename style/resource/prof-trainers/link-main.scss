@@ -1,0 +1,12 @@
+.link-main {
+  color: var(--cl-accent);
+  transition: var(--transition-main);
+
+  &--bold {
+    font-weight: 800;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

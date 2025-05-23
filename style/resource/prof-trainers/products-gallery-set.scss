@@ -1,0 +1,33 @@
+.product-gallery-set {
+  @media (min-width: $tablet-width) {
+
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: 30% 70%;
+    position: relative;
+  }
+}
+
+.product-gallery-set__title {
+  margin-bottom: var(--indent-main);
+}
+
+.product-gallery-set__cover {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+
+.product-gallery-set__content {
+  @media (min-width: $tablet-width) {
+    margin-left: var(--indent-basic);
+    position: relative;
+    max-width: 100%;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+}

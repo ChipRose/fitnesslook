@@ -1,0 +1,64 @@
+@import "global/global-variables.scss";
+
+//Global
+// @import "global/normalize.scss";
+@import "global/global.scss";
+@import "global/fonts.scss";
+@import "global/container.scss";
+
+// Components
+@import "prof-trainers/controls.scss";
+@import "prof-trainers/text.scss";
+@import "prof-trainers/link-main.scss";
+@import "prof-trainers/image-block.scss";
+@import "prof-trainers/accordion.scss";
+@import "prof-trainers/decorative-icon.scss";
+@import "prof-trainers/img-sticker.scss";
+@import "prof-trainers/img-logo.scss";
+@import "prof-trainers/img-round-sticker.scss";
+@import "prof-trainers/img-cover.scss";
+@import "prof-trainers/model.scss";
+@import "prof-trainers/slider-projects-pagination.scss";
+@import "prof-trainers/price.scss";
+@import "prof-trainers/buttons-block.scss";
+@import "prof-trainers/slider-with-button.scss";
+@import "prof-trainers/info-slider.scss";
+
+//Blocks
+@import "prof-trainers/page-prof-trainers.scss";
+@import "prof-trainers/wrapper.scss";
+@import "prof-trainers/section.scss";
+@import "prof-trainers/intro.scss";
+@import "prof-trainers/intro-list.scss";
+@import "prof-trainers/slider-intro.scss";
+@import "prof-trainers/slider-best.scss";
+@import "prof-trainers/contact.scss";
+@import "prof-trainers/about.scss";
+@import "prof-trainers/contact-block.scss";
+@import "prof-trainers/best.scss";
+@import "prof-trainers/questions.scss";
+@import "prof-trainers/questions-block.scss";
+@import "prof-trainers/slider-questions.scss";
+@import "prof-trainers/slider-why.scss";
+@import "prof-trainers/why.scss";
+@import "prof-trainers/projects.scss";
+@import "prof-trainers/projects-detail.scss";
+@import "prof-trainers/slider-projects.scss";
+@import "prof-trainers/project-full.scss";
+@import "prof-trainers/project-content.scss";
+@import "prof-trainers/trainers.scss";
+@import "prof-trainers/products-gallery.scss";
+@import "prof-trainers/products-gallery-set.scss";
+@import "prof-trainers/product-card.scss";
+@import "prof-trainers/price-block.scss";
+@import "prof-trainers/decoration-block.scss";
+@import "prof-trainers/about-advantages.scss";
+@import "prof-trainers/slider-mob-order.scss";
+@import "prof-trainers/garantee.scss";
+@import "prof-trainers/garantee-list.scss";
+@import "prof-trainers/garantee-panel.scss";
+@import "prof-trainers/garantee-content.scss";
+
+// Layout
+@import "prof-trainers/advantages.scss";
+@import "prof-trainers/columns.scss";

@@ -1,0 +1,1052 @@
+[
+  {
+    "projectId": "СК СПБХЛ  |  001  |  САНКТ - ПЕТЕРБУРГ",
+    "file": "/i/media/stat/prof-trains/docs/001.pdf",
+    "content": [
+      {
+        "type": "Кардиотренажеры",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Беговая дорожка",
+            "model": "Matrix Performance Touch XL",
+            "name": "Х2",
+            "link": "/trenajery/begovye-dorojki/matrix-performance-touch-xl.html"
+          },
+          {
+            "title": "Эллиптический тренажер",
+            "model": "Matrix Performance Ascent Trainer Touch",
+            "name": "Х1",
+            "link": "/trenajery/ellepticheskie/matrix-performance-ascent-trainer-touch.html"
+          },
+          {
+            "title": "Велотренажер",
+            "model": "Matrix Performance Upright Touch",
+            "name": "Х1",
+            "link": "/trenajery/velotrenajery/matrix-performance-upright-touch.html"
+          },
+          {
+            "title": "Гребной тренажер",
+            "model": "Matrix RXP-WFRF",
+            "name": "Х1",
+            "link": "/trenajery/grebnye/matrix-rxp-wfrf.html"
+          },
+          {
+            "title": "Лестница-эскалатор",
+            "model": "Matrix Performance Touch XL",
+            "name": "Х1",
+            "link": "/trenajery/steppery/matrix-performance-touch-xl-performance-touch-xl.html"
+          }
+        ]
+      },
+      {
+        "type": "Силовое оборудование",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Грузоблочный тренажер",
+            "model": "Matrix Aura G3-MSFT300 Functional Trainer",
+            "name": "Х2",
+            "link": "/trenajery/silovye/muljtistancii/matrix-msft-300-functional-trainer.html"
+          },
+          {
+            "model": "Matrix Ultra Base G7-S13BH",
+            "name": "Х2",
+            "link": "/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s13bh.html"
+          },
+          {
+            "model": "Matrix Ultra Base G7-S33BH",
+            "name": "Х2",
+            "link": "/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s33bh.html"
+          },
+          {
+            "model": "Matrix Ultra Base G7-S70BH",
+            "name": "Х2",
+            "link": "/trenajery/silovye/gruzoblochnye/matrix-ultra-base-g7-s70bh.html"
+          },
+          {
+            "title": "Стойка турник брусья-пресс",
+            "model": "Matrix Magnum MG-A63C",
+            "name": "Х2",
+            "link": "/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/matrix-mg-a63c.html"
+          },
+          {
+            "title": "Машина Смита",
+            "model": "Matrix Magnum MG-PL62",
+            "name": "Х2",
+            "link": "/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/matrix-magnum-mg-pl62.html"
+          },
+          {
+            "title": "Гиперэкстензия",
+            "model": "Matrix MG-A52",
+            "name": "Х2",
+            "link": "/trenajery/silovye/dlya-spiny/giperekstenzii/matrix-mg-a52.html"
+          },
+          {
+            "title": "Силовая скамья",
+            "model": "Matrix Magnum MG-A61",
+            "name": "Х2",
+            "link": "/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a61.html"
+          },
+          {
+            "model": "Matrix Magnum MG-A82",
+            "name": "Х2",
+            "link": "/trenajery/silovye/skamji/dlya-zhima/matrix-magnum-mg-a82.html"
+          }
+        ]
+      },
+      {
+        "type": "Железо",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#iron-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Гантельный ряд",
+            "model": "Ziva ZVO-DBPU1584-GY 10 пар",
+            "name": "Х1",
+            "link": "/jelezo/ganteli/ryady/protrain-1-40-kg-rj0946.html"
+          },
+          {
+            "model": "Ziva XP Urethane Dumbbell Set (5 pairs) 22-30 kg ZXP-DBPU8605",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/bronze-gym-br-1027-15-par.html"
+          },
+          {
+            "model": "Ziva XP Urethane 12-20кг ZXP-DBPU8604",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/livepro-lp8860-10-par.html"
+          },
+          {
+            "title": "Диск для штанги с посадочным диаметром 50 мм.",
+            "model": "Ziva с уретановым покрытием, 1.25 кг. ZVO-DCPU1618-GY",
+            "name": "Х2",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/svensson-industrial-x-force-1011.html"
+          },
+          {
+            "model": "Ziva с уретановым покрытием, 2.5 кг. ZVO-DCPU1618-GY",
+            "name": "Х2",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-10-d-50-mm.html"
+          },
+          {
+            "model": "Ziva с уретановым покрытием, 5 кг. ZVO-DCPU1618-GY",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-15-d-50-mm.html"
+          },
+          {
+            "model": "Ziva с уретановым покрытием, 10 кг. ZVO-DCPU1618-GY",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-20-d-50-mm.html"
+          },
+          {
+            "model": "Ziva с уретановым покрытием, 15 кг. ZVO-DCPU1618-GY",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"
+          },
+          {
+            "model": "Ziva с уретановым покрытием, 20 кг. ZVO-DCPU1618-GY",
+            "name": "Х2",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"
+          },
+          {
+            "model": "Ziva с уретановым покрытием, 25 кг. ZVO-DCPU1618-GY",
+            "name": "Х2",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"
+          },
+          {
+            "title": "Замок для грифа",
+            "model": "Замок для грифа Ziva ZXP-OBCC0436-BK",
+            "name": "Х2",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-diskov-blinov/hasttings-digger-hd021-4.html"
+          },
+          {
+            "title": "Стойка для гантелей",
+            "model": "Ziva ZST-VS10- 5396-BK 10 пар",
+            "name": "Х1",
+            "link": "/jelezo/zamki-dlya-grifa/bronze-gym-zamki-klipsa-bg-pa-br-cl001.html"
+          },
+          {
+            "model": "Matrix MG-A510 10 пар",
+            "name": "Х1",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-1-25-d-50-mm.html"
+          }
+        ]
+      },
+      {
+        "type": "Фитнес оборудование",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Мат для йоги",
+            "model": "Ziva ZSL-TDYM0251-BK",
+            "name": "Х2",
+            "link": "/trenajery/begovye-dorojki/marin-endurance-led.html"
+          },
+          {
+            "title": "Ролик миофасцальный",
+            "model": "Ziva ZXP-DFRL0274",
+            "name": "Х1",
+            "link": "/trenajery/ellepticheskie/matrix-endurance-led.html"
+          },
+          {
+            "title": "Фитбол",
+            "model": "Ziva Фитбол 65 ZVO-ABCB9292-BK",
+            "name": "Х1",
+            "link": "/trenajery/ellepticheskie/matrix-performance-elliptical-led.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "projectId": "СКА «АРЕНА»  |  002  |  САНКТ - ПЕТЕРБУРГ",
+    "file": "/i/media/stat/prof-trains/docs/002.pdf",
+    "content": [
+      {
+        "type": "Кардиотренажеры",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Велотренажер",
+            "model": "WattBike Pro",
+            "name": "Х4",
+            "link": "/trenajery/velotrenajery/wattbike-pro.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "projectId": "ФИТНЕС - СТУДИЯ  |  003  |  КРАСНОДАР",
+    "file": "/i/media/stat/prof-trains/docs/003.pdf",
+    "content": [
+      {
+        "type": "Кардиотренажеры",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Беговая дорожка",
+            "model": "Matrix Endurance LED",
+            "name": "Х4",
+            "link": "/trenajery/begovye-dorojki/marin-endurance-led.html"
+          },
+          {
+            "title": "Велотренажер",
+            "model": "Matrix Endurance LED",
+            "name": "Х5",
+            "link": "/trenajery/ellepticheskie/matrix-endurance-led.html"
+          },
+          {
+            "title": "Эллиптический тренажер",
+            "model": "Matrix Performance LED",
+            "name": "Х4",
+            "link": "/trenajery/ellepticheskie/matrix-performance-elliptical-led.html"
+          },
+          {
+            "title": "Степпер",
+            "model": "VictoryFit VF-ST800",
+            "name": "Х1",
+            "link": "/trenajery/steppery/victoryfit-vf-st800.html"
+          },
+          {
+            "title": "Гребной тренажер",
+            "model": "Matrix Rower New",
+            "name": "Х4",
+            "link": "/trenajery/grebnye/matrix-rower.html"
+          }
+        ]
+      },
+      {
+        "type": "Мультистанции",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Мультистанция 4-х позиционная",
+            "model": "Hasttings 4-х позиционная Digger HD023-1",
+            "name": "Х1",
+            "link": "/trenajery/silovye/muljtistancii/hasttings-4-h-pozicionnaya-digger-hd023-1.html"
+          },
+          {
+            "title": "Мультистанция 5-ти позиционная",
+            "model": "Hasttings Digger HD023-1 + HD024-1 + HD023OPT-1",
+            "name": "Х1",
+            "link": "/trenajery/silovye/muljtistancii/hasttings-digger-hd023-1-hd024-1-hd023opt-1.html"
+          }
+        ]
+      },
+      {
+        "type": "Силовое оборудование",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Силовая скамья",
+            "model": "Bronze Gym BR-1004",
+            "name": "Х2",
+            "link": "/trenajery/silovye/skamji/dlya-zhima/bronze-gym-br-1004.html"
+          },
+          {
+            "title": "Машина Смита",
+            "model": "AnyFit PEB201",
+            "name": "Х2",
+            "link": "/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/anyfit-peb201.html"
+          },
+          {
+            "title": "Силовая скамья для жима (со стойками)",
+            "model": "Hasttings Digger HD004-4",
+            "name": "Х2",
+            "link": "/trenajery/silovye/skamji/dlya-zhima/so-stojkoj/hasttings-digger-hd004-4-skamjya-dlya-jima-gorizontaljnaya.html"
+          }
+        ]
+      },
+      {
+        "type": "Железо",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#iron-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Набор гексагональных гантелей",
+            "model": "Protrain 1-40 кг RJ0946",
+            "name": "Х1",
+            "link": "/jelezo/ganteli/ryady/protrain-1-40-kg-rj0946.html"
+          },
+          {
+            "title": "Стойка для гантелей",
+            "model": "Bronze Gym BR-1027 15 пар",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/bronze-gym-br-1027-15-par.html"
+          },
+          {
+            "model": "Livepro LP8860 (10 пар)",
+            "name": "Х2",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/livepro-lp8860-10-par.html"
+          },
+          {
+            "title": "Стойка для грифов",
+            "model": "Svensson Industrial X Force 1011",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/svensson-industrial-x-force-1011.html"
+          },
+          {
+            "title": "Стойка для дисков",
+            "model": "Hasttings Digger HD021-4",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-diskov-blinov/hasttings-digger-hd021-4.html"
+          },
+          {
+            "title": "Замок для грифа",
+            "model": "Bronze Gym клипса",
+            "name": "Х4",
+            "link": "/jelezo/zamki-dlya-grifa/bronze-gym-zamki-klipsa-bg-pa-br-cl001.html"
+          },
+          {
+            "title": "Диск для штанги",
+            "model": "Protrain DB6092-1,25 (д=50 мм)",
+            "name": "Х6",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-1-25-d-50-mm.html"
+          },
+          {
+            "model": "Protrain DB6092-2,5 (д=50 мм)",
+            "name": "Х6",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-2-5-d-50-mm.html"
+          },
+          {
+            "model": "Protrain DB6092-5 (д=50 мм)",
+            "name": "Х16",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-5-d-50-mm.html"
+          },
+          {
+            "model": "Protrain DB6092-10 (д=50 мм)",
+            "name": "Х10",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-10-d-50-mm.html"
+          },
+          {
+            "model": "Protrain DB6092-15 (д=50 мм)",
+            "name": "Х10",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-15-d-50-mm.html"
+          },
+          {
+            "model": "Protrain DB6092-20 (д=50 мм)",
+            "name": "Х10",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-20-d-50-mm.html"
+          },
+          {
+            "model": "Protrain DB6092-25 (д=50 мм)",
+            "name": "Х10",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/protrain-db6092-25-d-50-mm.html"
+          },
+          {
+            "title": "W-образный гриф для штанги",
+            "model": "Bronze Gym олимпийский 120 см",
+            "name": "Х1",
+            "link": "/dlya-shtangi/izognutye/w-obraznye/bronze-gym-olimpijskij-w-obraznyj-120-sm.html"
+          },
+          {
+            "title": "Z-образный гриф для штанги",
+            "model": "Bronze Gym олимпийский 120 см",
+            "name": "Х1",
+            "link": "/dlya-shtangi/izognutye/z-obraznye/bronze-gym-olimpijskij-ez-obraznyj-120-sm.html"
+          },
+          {
+            "title": "Прямой гриф для штанги",
+            "model": "Bronze Gym олимпийский 220 см BG-PA-BR-S001",
+            "name": "Х2",
+            "link": "/grify/dlya-shtangi/pryamye/bronze-gym-grif-olimpijskij-pryamoj.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "projectId": "ЛХК «ТЕРРИТОРИЯ ЛЬДА»  |  004  |  АМУРСК",
+    "file": "/i/media/stat/prof-trains/docs/004.pdf",
+    "content": [
+      {
+        "type": "Силовое оборудование",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Грузоблочный тренажер",
+            "model": "Hasttings Digger HD016-1 жим ногами",
+            "name": "Х1",
+            "link": "/trenajery/silovye/gruzoblochnye/hasttings-digger-hd016-1.html"
+          },
+          {
+            "model": "Hasttings Digger HD037-1 сгибание-разгибание ног",
+            "name": "Х1",
+            "link": "/trenajery/silovye/gruzoblochnye/hasttings-digger-hd033-1.html"
+          },
+          {
+            "model": "Body Solid ProClub - вертикальная/горизонтальная тяги SLM-300G",
+            "name": "Х1",
+            "link": "/trenajery/silovye/gruzoblochnye/body-solid-vertikaljno-gorizontaljnaya-tyaga-body-solid-proclub-slm-300g.html"
+          },
+          {
+            "title": "Тренажер кроссовер",
+            "model": "Hasttings Digger HD022-1",
+            "name": "Х1",
+            "link": "/trenajery/silovye/krossovery/hasttings-digger-hd022-1-krossover.html"
+          },
+          {
+            "title": "Гиперэкстензия",
+            "model": "Hasttings Digger HD010-4",
+            "name": "Х1",
+            "link": "/trenajery/silovye/dlya-spiny/giperekstenzii/hasttings-digger-hd010-4.html"
+          },
+          {
+            "title": "Машина Смита",
+            "model": "Hasttings Digger HD030-4",
+            "name": "Х1",
+            "link": "/trenajery/silovye/stancii-dlya-prisedanij-i-jima/mashiny-smitta/hasttings-digger-hd030-4.html"
+          },
+          {
+            "title": "Силовая скамья",
+            "model": "DFC DCH319",
+            "name": "Х1",
+            "link": "/trenajery/silovye/skamji/dlya-zhima/dfc-dch319.html"
+          },
+          {
+            "title": "Силовая скамья для жима",
+            "model": "Body Solid GFI-21",
+            "name": "Х1",
+            "link": "/trenajery/silovye/skamji/dlya-zhima/body-solid-reguliruemaya-skamjya-body-solid-gfi-21.html"
+          },
+          {
+            "title": "Тренажер на свободных весах",
+            "model": "Body Craft F660 - жим ногами/гакк-машина",
+            "name": "Х1",
+            "link": "/trenajery/silovye/na-svobodnyh-vesah/body-craft-jim-nogami-body-craft-f660.html"
+          },
+          {
+            "title": "Стойка для штанги",
+            "model": "DFC DSST12",
+            "name": "Х1",
+            "link": "/trenajery/silovye/stancii-dlya-prisedanij-i-jima/stojki/dfc-dsst12.html"
+          }
+        ]
+      },
+      {
+        "type": "Железо",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#iron-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Гантель",
+            "model": "MB Barbell Atlet",
+            "name": "Х1",
+            "link": "/jelezo/ganteli/razbornye/barbell-atlet-29-kg.html"
+          },
+          {
+            "title": "Диск для штанги",
+            "model": "MB Barbell Atlet 50 мм - 1.25 кг",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-15-kg-7206764.html"
+          },
+          {
+            "model": "MB Barbell Atlet 50 мм - 2.5 кг",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-2-5-kg.html"
+          },
+          {
+            "model": "MB Barbell Atlet 50 мм - 5 кг",
+            "name": "Х8",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-5-kg.html"
+          },
+          {
+            "model": "MB Barbell Atlet 50 мм - 10 кг",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-5-kg-7206761.html"
+          },
+          {
+            "model": "MB Barbell Atlet 50 мм - 15 кг",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-15-kg.html"
+          },
+          {
+            "model": "MB Barbell Atlet 50 мм - 20 кг",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-20-kg-chernyj-50-mm.html"
+          },
+          {
+            "model": "MB Barbell Atlet 50 мм - 25 кг",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/mb-barbell-atlet-50-mm-20-kg.html"
+          },
+          {
+            "title": "Гриф для штанги",
+            "model": "MB Barbell W-образный - 50 мм - 1270 мм",
+            "name": "Х1",
+            "link": "/dlya-shtangi/izognutye/w-obraznye/mb-barbell-w-obraznyj-50-mm-1270-mm.html"
+          },
+          {
+            "model": "MB Barbell прямой - 50 мм - 1400 мм",
+            "name": "Х1",
+            "link": "/grify/dlya-shtangi/pryamye/mb-barbell-50-mm-1400-mm.html"
+          },
+          {
+            "model": "MB Barbell прямой 50 мм - 2200 мм",
+            "name": "Х1",
+            "link": "/grify/dlya-shtangi/pryamye/mb-barbell-50-mm-2200-mm.html"
+          },
+          {
+            "title": "Стойка для бодибаров",
+            "model": "Original FitTools горизонтальная FT-BBR-HT",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/original-fit-tools-gorizontaljnaya.html"
+          }
+        ]
+      },
+      {
+        "type": "Фитнес оборудование",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Мат для йоги",
+            "model": "Original FitTools 6 мм двухслойный перфорированный голубой FT-YGM6-3DT-SKYBLUE",
+            "name": "Х30",
+            "link": "/fitnes-joga-pilates/kovriki-i-maty/original-fittools-6-mm-dvuhslojnyj-perforirovannyj-goluboj.html"
+          },
+          {
+            "title": "Блок для йоги",
+            "model": "AeroFit - прямоугольник",
+            "name": "Х40",
+            "link": "/fitnes-joga-pilates/tovary-dlya-jogi/aerofit-ft-ygk-469.html"
+          },
+          {
+            "title": "Бодибар",
+            "model": "Smith Strength 1 кг. оранжевый",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-1-kg-oranjevyj.html"
+          },
+          {
+            "model": "Smith Strength 2 кг. желтый",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-2-kg-jeltyj.html"
+          },
+          {
+            "model": "Smith Strength 3 кг. зеленый",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-3-kg-zelenyj.html"
+          },
+          {
+            "model": "Smith Strength 4 кг. красный",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-4-kg-krasnyj.html"
+          },
+          {
+            "model": "Smith Strength 5 кг. голубой",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-5-kg-goluboj.html"
+          },
+          {
+            "model": "Smith Strength 6 кг. фиолетовый",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-6-kg-fioletovyj.html"
+          },
+          {
+            "model": "Smith Strength 7 кг. светло-оранжевый",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-7-kg-svetlo-oranjevyj.html"
+          },
+          {
+            "model": "Smith Strength 8 кг. розовый",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-8-kg-rozovyj.html"
+          },
+          {
+            "model": "Smith Strength 9 кг. синий",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-9-kg-sinij.html"
+          },
+          {
+            "model": "Smith Strength 10 кг. серый",
+            "name": "Х5",
+            "link": "/fitnes-joga-pilates/bodibary/smith-strength-10-kg-seryj.html"
+          },
+          {
+            "title": "Виниловая гантель",
+            "model": "Profi Fit 3 кг. PF-VDB-3",
+            "name": "Х20",
+            "link": "/fitnes-joga-pilates/ganteli/profi-fit-3-kg-7206402.html"
+          },
+          {
+            "model": "Profi Fit 4 кг. PF-VDB-4",
+            "name": "Х20",
+            "link": "/fitnes-joga-pilates/ganteli/profi-fit-4-kg-7206403.html"
+          },
+          {
+            "title": "Гантель для фитнеса",
+            "model": "Profi Fit неопреновая 0.5 кг., фиолетовая",
+            "name": "Х20",
+            "link": "/fitnes-joga-pilates/ganteli/profi-fit-neoprenovaya-0-5-kg.html"
+          },
+          {
+            "model": "Profi Fit неопреновая 2 кг., оранжевая",
+            "name": "Х20",
+            "link": "/fitnes-joga-pilates/ganteli/profi-fit-neoprenovaya-2-kg-oranjevaya.html"
+          },
+          {
+            "title": "Неопреновая гантель",
+            "model": "Profi Fit 1 кг.",
+            "name": "Х20",
+            "link": "/fitnes-joga-pilates/ganteli/profi-fit-1-kg-7206400.html"
+          },
+          {
+            "model": "Profi Fit 5 кг.",
+            "name": "Х20",
+            "link": "/fitnes-joga-pilates/ganteli/profi-fit-5-kg.html"
+          },
+          {
+            "title": "Стойка для гантелей",
+            "model": "Body Solid GDR-500",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/ganteli/body-solid-gdr-500.html"
+          },
+          {
+            "title": "Ремень для йоги",
+            "model": "Reebok эластичный голубой",
+            "name": "Х20",
+            "link": "/fitnes-joga-pilates/tovary-dlya-jogi/reebok-remenj-dlya-jogi-reebok-rayg-10023cy.html"
+          },
+          {
+            "title": "Фитбол",
+            "model": "Inex 55 см. красный",
+            "name": "Х6",
+            "link": "/fitnes-joga-pilates/myachi/inex-55-sm-krasnyj.html"
+          },
+          {
+            "model": "Inex 65 см. голубой",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/myachi/inex-65-sm-krasnyj-7207560.html"
+          },
+          {
+            "title": "Степ-платформа",
+            "model": "Original FitTools 3-х уровневая 1810LW",
+            "name": "Х10",
+            "link": "/fitnes-joga-pilates/step-platformy/original-fittools-3-h-urovnevaya-1810lw.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "projectId": "ЧАСТНЫЙ ЗАЛ  |  005  |  ПУШКИН",
+    "file": "/i/media/stat/prof-trains/docs/005.pdf",
+    "content": [
+      {
+        "type": "Кардиотренажеры",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Беговая дорожка",
+            "model": "Matrix TF50XIR",
+            "name": "Х2",
+            "link": "/trenajery/begovye-dorojki/matrix-tf50xir.html"
+          },
+          {
+            "title": "Эллиптический тренажер",
+            "model": "Matrix A50XIR",
+            "name": "Х1",
+            "link": "/trenajery/ellepticheskie/matrix-a50xir.html"
+          }
+        ]
+      },
+      {
+        "type": "Силовое оборудование",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#barbell-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Грузоблочный тренажер",
+            "model": "Hasttings Digger HD001-1 Жим от груди",
+            "name": "Х1",
+            "link": "/trenajery/silovye/gruzoblochnye/hasttings-hd001-1-jim-ot-grudi-digger.html"
+          },
+          {
+            "model": "Hasttings Digger HD012-1 - гребная тяга",
+            "name": "Х1",
+            "link": "/trenajery/silovye/gruzoblochnye/hasttings-digger-hd012-1-grebnaya-tyaga.html"
+          },
+          {
+            "model": "Hasttings Digger HD020-1 - Сведение/разведение ног",
+            "name": "Х1",
+            "link": "/trenajery/silovye/gruzoblochnye/hasttings-digger-hd020-1-cvedenie-razvedenie-nog.html"
+          },
+          {
+            "title": "Гравитрон",
+            "model": "Hasttings Digger HD008-1",
+            "name": "Х1",
+            "link": "/trenajery/silovye/gruzoblochnye/hasttings-digger-hd008-1-gravitron.html"
+          },
+          {
+            "title": "Гиперэкстензия",
+            "model": "Hasttings Digger HD010-4",
+            "name": "Х1",
+            "link": "/index.php?searchstring=Hasttings+Digger+HD010-4"
+          },
+          {
+            "title": "Тренажер кроссовер",
+            "model": "Hasttings Digger HD021-1",
+            "name": "Х1",
+            "link": "/trenajery/silovye/krossovery/hasttings-digger-hd021-1.html"
+          },
+          {
+            "title": "Силовая скамья для жима",
+            "model": "Hasttings Digger HD016-4",
+            "name": "Х1",
+            "link": "/trenajery/silovye/skamji/dlya-zhima/hasttings-digger-hd016-4.html"
+          },
+          {
+            "title": "Скамья для пресса",
+            "model": "Hasttings Digger HD025-4",
+            "name": "Х1",
+            "link": "/trenajery/silovye/skamji/dlya-pressa/hasttings-digger-hd025-4.html"
+          },
+          {
+            "title": "Скамья Скотта",
+            "model": "Hasttings Digger HD020-4",
+            "name": "Х1",
+            "link": "/trenajery/silovye/skamji/skotta/hasttings-digger-hd020-4.html"
+          },
+          {
+            "title": "Силовая рама",
+            "model": "Hasttings Digger HD020-5",
+            "name": "Х1",
+            "link": "/trenajery/silovye/stancii-dlya-prisedanij-i-jima/ramy/hasttings-digger-hd020-5.html"
+          },
+          {
+            "title": "Ручка для тренажера",
+            "model": "Oxygen PR01 - канатная для трицепса с двойным хватом",
+            "name": "Х1",
+            "link": "/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-kanat-dlya-tricepsa-s-dvojnym-hvatom-evro-klassik-pr01.html"
+          },
+          {
+            "model": "Oxygen PR02 - канатная для трицепса с одиночным хватом",
+            "name": "Х1",
+            "link": "/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-kanat-dlya-tricepsa-s-odinochnym-hvatom-evro-klassik-pr02.html"
+          },
+          {
+            "model": "Oxygen RHMA-01 - для тяги волнообразная",
+            "name": "Х1",
+            "link": "/trenajery/silovye/opcii-i-aksessuary/ruchki/evro-klassik-grif-dlya-tyagi-volnoobraznyj-evro-klassik-rhma-1.html"
+          },
+          {
+            "model": "Oxygen RHMA-02 - для тяги прямая",
+            "name": "Х1",
+            "link": "/trenajery/silovye/opcii-i-aksessuary/ruchki/evro-klassik-grif-dlya-tyagi-pryamoj-evro-klassik-rhma-2.html"
+          },
+          {
+            "model": "Oxygen RHMA-06 - для тяги с параллельным хватом",
+            "name": "Х1",
+            "link": "/trenajery/silovye/opcii-i-aksessuary/ruchki/evro-klassik-grif-dlya-tyagi-s-paralleljnym-hvatom-evro-klassik-rhma-06.html"
+          },
+          {
+            "model": "Oxygen RHMA-07 - V-образная для бицепса",
+            "name": "Х1",
+            "link": "/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-hvat-v-obraznyj-dlya-bicepsa-evro-klassik-rhma-07.html"
+          },
+          {
+            "model": "Oxygen RHMA-09 - для узкого хвата",
+            "name": "Х1",
+            "link": "/trenajery/silovye/opcii-i-aksessuary/ruchki/oxygen-rukoyatj-dlya-uzkogo-hvata-evro-klassik-rhma-09.html"
+          },
+          {
+            "model": "Oxygen RHMA-12",
+            "name": "Х2",
+            "link": "/trenajery/silovye/opcii-i-aksessuary/ruchki/aerofit-g-brg-09-pu.html"
+          }
+        ]
+      },
+      {
+        "type": "Железо",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#iron-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Гантельный ряд",
+            "model": "Protrain DB 6101 1-30 кг",
+            "name": "Х1",
+            "link": "/jelezo/ganteli/ryady/db-6101-1-30kg.html"
+          },
+          {
+            "title": "Гиря",
+            "model": "Profi Fit обрезиненная 16 кг.",
+            "name": "Х1",
+            "link": "/jelezo/giri/profi-fit-obrezinennaya-16-kg.html"
+          },
+          {
+            "model": "Profi Fit обрезиненная 24 кг.",
+            "name": "Х1",
+            "link": "/jelezo/giri/profi-fit-obrezinennaya-24-kg.html"
+          },
+          {
+            "title": "Диск для штанги",
+            "model": "Profi Fit обрезиненный Fassion D-51 1.25 кг.",
+            "name": "Х2",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-1-25-kg.html"
+          },
+          {
+            "model": "Profi Fit обрезиненный Fassion D-51 2.5 кг.",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-2-5-kg.html"
+          },
+          {
+            "model": "Profi Fit обрезиненный Fassion D-51 5 кг.",
+            "name": "Х6",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-5-kg.html"
+          },
+          {
+            "model": "Profi Fit обрезиненный Fassion D-51 10 кг.",
+            "name": "Х6",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-10-kg.html"
+          },
+          {
+            "model": "Profi Fit обрезиненный Fassion D-51 20 кг.",
+            "name": "Х4",
+            "link": "/jelezo/diski-dlya-shtangi/50-mm/profi-fit-obrezinennyj-fassion-d-51-20-kg.html"
+          },
+          {
+            "title": "Гриф для штанги",
+            "model": "Body Solid W-образный - 50 мм OB47",
+            "name": "Х1",
+            "link": "/dlya-shtangi/izognutye/w-obraznye/body-solid-w-obraznyj-50-mm-ob47.html"
+          },
+          {
+            "model": "Body Solid OB86",
+            "name": "Х1",
+            "link": "/grify/dlya-shtangi/pryamye/body-solid-ob86.html"
+          },
+          {
+            "model": "MB Barbell прямой - 50 мм - 1400 мм",
+            "name": "Х1",
+            "link": "/grify/dlya-shtangi/pryamye/mb-barbell-50-mm-1400-mm.html"
+          },
+          {
+            "title": "Стойка для грифов",
+            "model": "Profi Fit 8 шт.",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-grifov/body-solid-8-sht.html"
+          },
+          {
+            "title": "Стойка для гантелей",
+            "model": "Profi Fit RUS15500",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-gantelej/profi-fit-rus15500.html"
+          },
+          {
+            "title": "Стойка для дисков (блинов)",
+            "model": "Profi Fit RUS 1230, нагрузка до 900кг",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/dlya-diskov-blinov/profi-fit-rus-1230-nagruzka-do-900kg.html"
+          },
+          {
+            "title": "Стойка для медболов",
+            "model": "Protrain TA C 7001",
+            "name": "Х1",
+            "link": "/jelezo/podstavki-i-stojki-hraneniya/protrain-ta-c-7001.html"
+          },
+          {
+            "title": "Замок для грифа",
+            "model": "Body Solid алюминиевый (пара) D50 мм",
+            "name": "Х1",
+            "link": "/jelezo/zamki-dlya-grifa/body-solid-alyuminievyj-para-d50-mm.html"
+          },
+          {
+            "title": "Смягчающая накладка на гриф",
+            "model": "Original FitTools FT-PAD-BLK",
+            "name": "Х1",
+            "link": "/jelezo/grify/original-fit-tools-ft-pad-blk.html"
+          }
+        ]
+      },
+      {
+        "type": "Фитнес оборудование",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Коврик для йоги и фитнеса",
+            "model": "Reebok синий",
+            "name": "Х3",
+            "link": "/fitnes-joga-pilates/kovriki-i-maty/reebok-sinij.html"
+          },
+          {
+            "title": "Блок для йоги",
+            "model": "Profi Fit черный",
+            "name": "Х6",
+            "link": "/fitnes-joga-pilates/tovary-dlya-jogi/profi-fit-chernyj.html"
+          },
+          {
+            "title": "Фитбол",
+            "model": "AeroFit - 75 см",
+            "name": "Х3",
+            "link": "/fitnes-joga-pilates/myachi/aerofit-ft-abgb-75.html"
+          },
+          {
+            "title": "Набор эластичных лент",
+            "model": "Adidas",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/espandery/adidas-nabor-elastichnyh-lent-adidas-adtb-10604.html"
+          },
+          {
+            "title": "Набор эспандеров",
+            "model": "Original FitTools 6 широких мини-эспандеров",
+            "name": "Х2",
+            "link": "/fitnes-joga-pilates/espandery/nabory/original-fittools-6-shirokih-mini-espanderov.html"
+          },
+          {
+            "title": "Медбол",
+            "model": "StarFit 1 кг. Pro GB-702 красный",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/medbolly/starfit-1-kg-pro-krasnyj.html"
+          },
+          {
+            "model": "StarFit 2 кг. PRO GB-702, оранжевый",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/medbolly/starfit-2-kg-pro-gb-702-oranjevyj.html"
+          },
+          {
+            "model": "StarFit 3 кг Pro GB-702 желтый",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/medbolly/starfit-2-kg-pro-jeltyj.html"
+          },
+          {
+            "model": "StarFit PRO GB-702, 4 кг зеленый",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/medbolly/starfit-pro-gb-702-4-kg-zelenyj.html"
+          },
+          {
+            "model": "StarFit 5 кг Pro GB-702 синий",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/medbolly/starfit-5-kg-pro-sinij.html"
+          },
+          {
+            "title": "Утяжелитель",
+            "model": "Inex 1 кг. красный (пара)",
+            "name": "Х2",
+            "link": "/fitnes-joga-pilates/utyajeliteli/mb-barbell-1-kg-krasnyj-para.html"
+          },
+          {
+            "model": "Утяжелитель StarFit WT-501, 2 кг ",
+            "name": "Х2",
+            "link": "/fitnes-joga-pilates/utyajeliteli/starfit-wt-501-2-kg.html"
+          },
+          {
+            "title": "Скакалка",
+            "model": "Reebok 3 м, серый/синий",
+            "name": "Х3",
+            "link": "/fitnes-joga-pilates/skakalki/reebok-3-m-seryj-sinij.html"
+          },
+          {
+            "title": "Степ-платформа",
+            "model": "Club Step Original, PFCSO",
+            "name": "Х3",
+            "link": "/fitnes-joga-pilates/step-platformy/club-step-original-pfcso.html"
+          },
+          {
+            "title": "Ролик для пресса",
+            "model": "Adidas ADAC-11404",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/prochie-tovary/adidas-adac-11404.html"
+          },
+          {
+            "title": "Трубчатый эспандер",
+            "model": "Reebok RSTB-16070 №1",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/espandery/trubchatye/reebok-rstb-16070.html"
+          },
+          {
+            "model": "Reebok RSTB-16072 №3",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/espandery/trubchatye/reebok-rstb-16072.html"
+          },
+          {
+            "model": "Reebok RSTB-16074 №5",
+            "name": "Х1",
+            "link": "/fitnes-joga-pilates/espandery/trubchatye/reebok-rstb-16074-5.html"
+          }
+        ]
+      },
+      {
+        "type": "Шведские стенки",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Шведская стенка",
+            "model": "ES Гибрид-Т45-БП45-ДВ",
+            "name": "Х1",
+            "link": "/shvedskie-stenki/kombinirovannye/es-gibrid-t45-bp45-dv.html"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "projectId": "ЧАСТНЫЙ ЗАЛ  |  006  |  САНКТ - ПЕТЕРБУРГ",
+    "file": "/i/media/stat/prof-trains/docs/006.pdf",
+    "content": [
+      {
+        "type": "Кардиотренажеры",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Реабилитационная беговая дорожка",
+            "model": "Spirit Fitness [LW1000] LW1000",
+            "name": "Х1",
+            "link": "/index.php?searchstring=Spirit+Fitness+%5BLW1000%5D+LW1000"
+          },
+          {
+            "title": "Стойка турник брусья-пресс",
+            "model": "Inspire VKR B",
+            "name": "Х1",
+            "link": "/trenajery/silovye/so-svoim-vesom/turnik-brusjya-press/inspire-vkr-b.html"
+          }
+        ]
+      },
+      {
+        "type": "Силовое оборудование",
+        "icon": "<svg  width='28' height='22' role='img' focusable='false'><use class='accordion__icon' xlink:href='/i/media/stat/sprite.svg#treadmill-icon'></use></svg>",
+        "trainers": [
+          {
+            "title": "Грузоблочный тренажер",
+            "model": "Hasttings Digger HD001-1 Жим от груди",
+            "name": "Х1",
+            "link": "/trenajery/silovye/gruzoblochnye/hasttings-hd001-1-jim-ot-grudi-digger.html"
+          }
+        ]
+      }
+    ]
+  }
+]

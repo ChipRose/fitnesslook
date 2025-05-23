@@ -1,0 +1,83 @@
+{
+  "name": "fitnesslook",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^2.0.8",
+    "autoprefixer": "10.4.13",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^9.1.3",
+    "babel-preset-latest": "^6.24.1",
+    "browser-sync": "2.27.10",
+    "css-loader": "^6.8.1",
+    "del": "7.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.6.2",
+    "eslint-plugin-promise": "^6.1.1",
+    "gulp": "4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-html-bemlinter": "2.1.2",
+    "gulp-if": "3.0.0",
+    "gulp-imagemin": "^9.0.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-postcss": "9.0.1",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
+    "gulp-stacksvg": "1.0.6",
+    "gulp-svgmin": "4.1.0",
+    "gulp-terser": "2.1.0",
+    "gulp-w3c-html-validator": "5.1.3",
+    "gulp-webp": "^5.0.0",
+    "node-normalize-scss": "^8.1.2",
+    "postcss": "8.4.19",
+    "postcss-csso": "6.0.1",
+    "postcss-scss": "4.0.5",
+    "postcss-url": "10.1.3",
+    "sass": "1.56.1",
+    "style-loader": "^3.3.3",
+    "stylelint": "^16.2.1",
+    "stylelint-config-htmlacademy": "^4.0.5",
+    "webpack": "^5.89.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "scripts": {
+    "eslinter": "eslint \"js/common/**/*.js\"",
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"style/resource/**/*.scss\"",
+    "w3c": "gulp validateMarkup --silent",
+    "bemlinter": "gulp lintBem --silent",
+    "test": "npm run w3c && bemlinter && npm run editorconfig && npm run eslinter && npm run stylelint",
+    "start": "gulp runDev",
+    "build": "gulp buildProd",
+    "deploy": "gulp PubProd",
+    "preview": "gulp buildProd && gulp startServer"
+  },
+  "editorconfig-cli": [
+    "./*.html",
+    "./json/**/*.json",
+    "./i/media-resource/stat/icons/**/*.svg",
+    "./js/common/**/*.js",
+    "./style/resource/**/*.{scss}"
+  ],
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not op_mini all",
+    "not < 0.25%"
+  ],
+  "engines": {
+    "node": "20.9.0"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^5.0.33",
+    "accordion-js": "^3.3.4",
+    "eslint-config-htmlacademy": "^10.0.1",
+    "imask": "^7.3.0",
+    "jquery": "^3.7.1",
+    "jquery-datetimepicker": "^2.5.21",
+    "tiny-slider": "^2.9.4"
+  }
+}

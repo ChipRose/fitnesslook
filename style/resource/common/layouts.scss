@@ -1,0 +1,159 @@
+/**
+* @section layouts
+* Buttons block
+*/
+
+.button-block {
+  margin: -6px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    margin: -19px;
+  }
+
+  .button-block__item {
+    margin: 6px;
+
+    @media (min-width: $tablet-width) {
+      margin: 19px;
+    }
+  }
+}
+
+
+// Main table
+
+.table-main {
+  width: 100%;
+  border-collapse: collapse;
+
+  .table-main__cell {
+    padding: 10px;
+    font-weight: var(--fw-medium);
+    vertical-align: top;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    &--header {
+      padding: 15px 10px;
+      color: var(--cl-accent);
+    }
+
+    &--nomob {
+      display: none;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+      }
+    }
+  }
+}
+
+
+// Line table
+
+.table-line {
+  display: flex;
+
+  .table-line__header-column {
+    margin-right: 25px;
+    flex: 0 0 max-content;
+
+    .table-line__row {
+      color: var(--cl-accent);
+    }
+  }
+
+  .table-line__row {
+    padding: 18px 0;
+    font-size: 14px;
+    font-weight: var(--fw-bold);
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/**
+* @section layouts
+* Columns
+*/
+
+.columns {
+  @media (min-width:$tablet-width) {
+    margin: -75px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .columns__item {
+    margin-bottom: 32px;
+
+    @media (min-width:$tablet-width) {
+      margin: 75px;
+      flex: 0 1 calc(50% - 75px);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/**
+* @section layout
+* Info block
+*/
+
+.info-block {
+  .info-block__header {
+    padding-bottom: 43px;
+    margin-bottom: 22px;
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 55px;
+      margin-bottom: 26px;
+      max-width: 700px;
+    }
+
+    &::after {
+      content: "";
+
+      @include decoration;
+    }
+  }
+
+  .info-block__buttons {
+    margin-bottom: 47px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 56px;
+    }
+  }
+
+  .info-block__title {
+    margin-bottom: 22px;
+
+    @media (min-width: $tablet-width) {
+      max-width: calc(50% - 75px);
+      margin-bottom: 62px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

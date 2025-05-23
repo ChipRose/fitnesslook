@@ -1,0 +1,169 @@
+#wmc {
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 140%;
+  font-weight: var(--fw-light);
+  background: var(--cl-light);
+
+  @media (min-width: 320px) {
+    font-size: 18px;
+  }
+}
+
+#wmc>.wrapper {
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  min-width: auto;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.title {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+
+p,
+span {
+  overflow-wrap: break-word;
+}
+
+.text {
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.input,
+.input[type="text"],
+.input[type="password"] {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  overflow: hidden;
+}
+
+@mixin decoration {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 85px;
+  background: var(--cl-dark);
+}
+
+@mixin paper {
+  box-sizing: border-box;
+  background: var(--cl-contrast);
+  box-shadow: var(--shadow-main);
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.ruble {
+  position: relative;
+
+  &::after {
+    content: "\20BD";
+    position: absolute;
+    color: inherit;
+    left: 0;
+    top: 63%;
+  }
+}
+
+.content--lock {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 90;
+  }
+}
+
+.body-lock {
+  overflow-y: hidden;
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 90;
+  }
+}
+
+
+.fancybox__container {
+  --fancybox-bg: rgba(0, 0, 0, 0.2);
+}
+
+.image-block {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: var(--cl-transparent-neutral);
+
+  img {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}

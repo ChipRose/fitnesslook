@@ -1,0 +1,10 @@
+.price-block {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+
+.price-block__old {
+  margin-right: var(--indent-main);
+}

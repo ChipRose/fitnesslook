@@ -1,0 +1,218 @@
+.button-accordion {
+  padding: var(--indent-basic);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  transform: rotate(180deg);
+  transition: var(--transition-main);
+
+  svg {
+    fill: var(--cl-accent);
+  }
+}
+
+.active-accordion {
+  transform: rotate(0deg);
+}
+
+.button-basic {
+  display: block;
+  width: fit-content;
+  padding: var(--indent-small) var(--indent-main);
+  border: 1px solid var(--cl-accent);
+  min-width: 90px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: var(--lh-main);
+  color: var(--cl-accent);
+  border-radius: var(--radius-basic);
+  transition: var(--transition-main);
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
+
+  &:hover,
+  &:active {
+    color: var(--cl-contrast);
+    background: var(--cl-accent);
+    cursor: pointer;
+  }
+
+  &--accent {
+    color: var(--cl-contrast);
+    background: var(--cl-accent);
+  }
+
+  &--active {
+    background: var(--cl-accent);
+    color: var(--cl-contrast);
+  }
+}
+
+.button-basic.tns-nav-active {
+  background: var(--cl-accent);
+  color: var(--cl-contrast);
+}
+
+.button-link {
+  display: block;
+  width: fit-content;
+  position: relative;
+  transition: var(--transition-main);
+  color: var(--cl-main);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  @media (min-width: $tablet-width) {
+    font-size: 15px;
+  }
+
+  &--center {
+    margin: 0 auto;
+  }
+
+  &--accent {
+    color: var(--cl-accent);
+  }
+
+  &--arrow {
+    padding: 0 25px 0 0;
+    vertical-align: middle;
+
+    &::after {
+      content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTUiIHZpZXdCb3g9IjAgMCAxNiAxNSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik04LjAwMDE5IDBDOC41NTI0OCAwIDkuMDAwMTkgMC40NDc3MTUgOS4wMDAxOSAxVjExLjA4NThMMTMuNjU3IDYuNDI4OTNDMTQuMDQ3NiA2LjAzODQxIDE0LjY4MDcgNi4wMzg0MSAxNS4wNzEzIDYuNDI4OTNDMTUuNDYxOCA2LjgxOTQ2IDE1LjQ2MTggNy40NTI2MiAxNS4wNzEzIDcuODQzMTVMOC43MDczIDE0LjIwNzFDOC4zMTY3NyAxNC41OTc2IDcuNjgzNjEgMTQuNTk3NiA3LjI5MzA4IDE0LjIwNzFMMC45MjkxMjQgNy44NDMxNUMwLjUzODU5OSA3LjQ1MjYyIDAuNTM4NTk5IDYuODE5NDYgMC45MjkxMjQgNi40Mjg5M0MxLjMxOTY1IDYuMDM4NDEgMS45NTI4MSA2LjAzODQxIDIuMzQzMzQgNi40Mjg5M0w3LjAwMDE5IDExLjA4NThWMUM3LjAwMDE5IDAuNDQ3NzE1IDcuNDQ3OTEgMCA4LjAwMDE5IDBaIiBmaWxsPSIjQUI3NkI0Ii8+Cjwvc3ZnPgo=");
+      position: absolute;
+      right: 0;
+
+      @media (min-width: $tablet-width) {
+        top: 2px;
+      }
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.button-simple-slider {
+  width: var(--button-size);
+  height: var(--button-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.button-simple-slider__icon {
+  pointer-events: none;
+  fill: var(--cl-accent);
+}
+
+.button-simple-slider--prev {
+  transform: rotate(180deg);
+}
+
+.button-slider {
+  width: var(--button-size);
+  height: var(--button-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--cl-accent);
+  border-radius: 50%;
+  transition: var(--transition-main);
+  background: var(--cl-contrast);
+
+  svg {
+    pointer-events: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: var(--cl-accent);
+
+    .button-slider__icon {
+      fill: var(--cl-contrast);
+    }
+  }
+}
+
+.button-slider__icon {
+  fill: var(--cl-accent);
+}
+
+.button-slider--prev {
+  .button-slider__icon {
+    transform: rotate(180deg);
+  }
+}
+
+.button-slider--disable {
+  display: none;
+}
+
+.button-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background: var(--cl-accent);
+  border-radius: 50%;
+  transition: var(--transition-main);
+
+  svg {
+    width: 28px;
+    height: auto;
+    fill: var(--cl-contrast);
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.button-social--connect {
+  svg {
+    width: 22px;
+  }
+}
+
+.button-round {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--cl-accent);
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: var(--cl-accent);
+  font-weight: 600;
+  font-size: 10px;
+
+  @media (min-width: $tablet-width) {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  svg {
+    width: 8px;
+    height: 12px;
+    fill: var(--cl-accent);
+    pointer-events: none;
+
+    @media (min-width: $tablet-width) {
+      width: 11px;
+      height: 20px;
+    }
+  }
+}

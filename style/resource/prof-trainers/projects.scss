@@ -1,0 +1,40 @@
+.projects__title-block {
+  margin-bottom: var(--indent-big);
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: var(--indent-huge);
+    position: relative;
+  }
+}
+
+.projects__logo {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-40%);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 250px;
+    height: auto;
+  }
+}
+
+.projects__image-block {
+  margin-bottom: var(--indent-big);
+}
+
+.projects__decoration {
+  margin-bottom: var(--indent-big);
+  fill: var(--cl-dark);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

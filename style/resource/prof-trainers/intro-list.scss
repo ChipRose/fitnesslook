@@ -1,0 +1,9 @@
+.intro-list .intro-list__button {
+  @media (min-width: $tablet-width) {
+    pointer-events: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}

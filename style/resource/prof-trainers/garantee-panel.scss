@@ -1,0 +1,19 @@
+.garantee-panel {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.garantee-panel__item {
+  @media (min-width: $tablet-width) {
+    margin-right: var(--indent-main);
+    flex: 0 0 calc(50% - var(--indent-main));
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

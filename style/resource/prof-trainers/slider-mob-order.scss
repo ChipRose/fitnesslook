@@ -1,0 +1,14 @@
+.slider-mob-order {
+  @media (min-width: $tablet-width) {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.slider-mob-order__buttons {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}

@@ -1,0 +1,100 @@
+// Communicate form
+
+.form-communicate {
+  display: none;
+
+  &--open {
+    margin-top: 60px;
+    display: block;
+  }
+}
+
+.form-communicate__fieldset {
+  margin: 0 auto 20px;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 52px;
+  }
+}
+
+.form-communicate__field {
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.form-communicate__label {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form-communicate__button {
+  margin: 0 auto;
+}
+
+.form-communicate__intro-block {
+  margin-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    margin: -46px -46px 65px;
+    display: flex;
+  }
+}
+
+.form-communicate__intro__item {
+  margin-bottom: 56px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 46px;
+    flex: 0 0 calc(50% - 2 * 46px);
+  }
+}
+
+// Success modal
+
+.message {
+  @include paper;
+  padding: 20px;
+  width: 50%;
+  min-width: 240px;
+  max-width: 350px;
+  border-radius: 20px;
+  position: fixed;
+  height: fit-content;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+}
+
+.message__title {
+  padding: 20px 0;
+}
+
+.message__close-button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+.message__text-block {
+  margin-bottom: 46px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
