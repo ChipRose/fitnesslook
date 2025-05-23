@@ -115,6 +115,7 @@ export function processAllScripts() {
     { title: 'assembly.js' },
     { title: 'guarantee.js' },
     { title: 'sertificate.js' },
+    { title: 'test-drive.js' },
   ];
 
   return gulp.series(
