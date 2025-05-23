@@ -125,11 +125,12 @@ $(document).ready(() => {
   //SELECT
 
   document.querySelectorAll('.select').forEach((select) => {
-    const selected = select.querySelector('.select__field');
+    const selectEl = select.querySelector('.select__field');
+    const selectField = select.querySelector('.select__value');
     const options = select.querySelector('.select__list');
     const inputHidden = select.querySelector('input');
 
-    selected.addEventListener('click', () => {
+    selectEl.addEventListener('click', () => {
       document.querySelectorAll('.select.open').forEach((el) => {
         if (el !== select) {
           el.classList.remove('open');
@@ -140,8 +141,8 @@ $(document).ready(() => {
 
     options.querySelectorAll('li').forEach((option) => {
       option.addEventListener('click', () => {
-        selected.textContent = option.textContent;
-        selected.dataset.value = option.dataset.value;
+        selectField.textContent = option.textContent;
+        selectField.dataset.value = option.dataset.value;
         inputHidden.value = option.dataset.value;
         inputHidden.setCustomValidity('');
         select.classList.remove('open');
@@ -165,8 +166,8 @@ $(document).ready(() => {
       });
 
       form.addEventListener('reset', () => {
-        selected.textContent = selected.dataset.placeholder || 'Выберите';
-        delete selected.dataset.value;
+        selectEl.textContent = selectEl.dataset.placeholder || 'Выберите';
+        delete selectEl.dataset.value;
         inputHidden.value = '';
         inputHidden.setCustomValidity('');
       });
