@@ -217,6 +217,8 @@ function deleteFoldersPub() {
 export function processMarkupPub() {
   return gulp.src(path.src.html)
     .pipe(fileinclude({
+      prefix: '@@',
+
       context: {
         path: ''
       }
