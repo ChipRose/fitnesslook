@@ -275,7 +275,8 @@ export function processAllScriptsPub() {
     { title: 'region-delivery.js' },
     { title: 'cart.js' },
     { title: 'assembly.js' },
-    { title: 'guarantee.js' }
+    { title: 'guarantee.js' },
+    { title: 'test-drive.js' }
   ];
 
   return gulp.series(
