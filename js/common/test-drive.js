@@ -1,6 +1,19 @@
 import $ from 'jquery';
 
+import 'jquery-datetimepicker';
+
 $(document).ready(() => {
+  const modalSuccess = document.querySelector('#modal-success');
+  const modalError = document.querySelector('#modal-error');
+
+  const closeSuccessButtons = modalSuccess.querySelectorAll('button[data-id="close-modal"]');
+  const closeErrorButton = modalError.querySelector('button[data-id="close-modal"]');
+
+  const body = document.querySelector('body');
+
+  const categoryButtons = document.querySelectorAll('.buttons-circle__button');
+
+  //TABS
   const handleTabClick = function () {
     const tabId = $(this).data('tab');
 
@@ -26,21 +39,36 @@ $(document).ready(() => {
 
   $('.tab-menu__item').on('click', handleTabClick);
 
-  // Функция для открытия модального окна
+  //FORM
+
+  const openModalSuccess = () => {
+    modalSuccess.show();
+    body.classList.add('body-lock');
+  };
+
+  const closeModalSuccess = () => {
+    modalSuccess.close();
+    body.classList.remove('body-lock');
+  };
+
+  const openModalError = () => {
+    modalError.show();
+    body.classList.add('body-lock');
+  };
+
+  const closeModalError = () => {
+    modalError.close();
+    body.classList.remove('body-lock');
+  };
+
   const onSuccess = () => {
-    $('#modal-success').addClass('open');
-    $('body').addClass('lock');
-    $('.main_content').addClass('bg-dark');
+    openModalSuccess();
   };
 
-  // Функция для закрытия модального окна
-  const closeModal = () => {
-    $('#modal-success').removeClass('open');
-    $('body').removeClass('lock');
-    $('.main_content').removeClass('bg-dark');
+  const onError = () => {
+    openModalError();
   };
 
-  // Обработка формы
   $('#form-sertificate').on('submit', (event) => {
     event.preventDefault();
 
@@ -48,48 +76,61 @@ $(document).ready(() => {
 
     $.ajax({
       type: 'POST',
-      url: '/callme.php', // Укажите правильный URL для отправки
+      url: '/callme.php',
       data: formData,
-      success: (response) => {
-        $('#form-sertificate')[0].reset(); // Очищаем форму
-        onSuccess(); // Показываем модальное окно
-
-        $('#id_order').text(JSON.parse(response).id);
+      success: () => {
+        $('#form-sertificate')[0].reset();
+        onSuccess();
       },
       error: () => {
-        // alert('Произошла ошибка при отправке данных.');
+        onError();
       },
     });
   });
 
-  // Закрытие модального окна по кнопке
-  $(document).on('click', '.close-modal-success', () => {
-    closeModal();
+  //MODAL
+
+  closeSuccessButtons.forEach((button) => {
+    button.addEventListener('click', closeModalSuccess);
   });
 
-  // Закрытие модального окна при клике вне его области
+  closeErrorButton.addEventListener('click', closeModalError);
+
   $(document).on('click', (event) => {
     if (
       $(event.target).closest('#modal-success').length === 0 &&
-      $('#modal-success').hasClass('open')
+      modalSuccess.open
     ) {
-      closeModal(); // Закрываем окно, если клик был вне его содержимого
+      closeModalSuccess();
     }
   });
 
-  // Убираем всплытие события при клике на модальном окне или его содержимом
-  $(document).on('click', '#modal-success', (event) => {
-    event.stopPropagation(); // Предотвращаем закрытие модального окна при клике на нем
+  $(document).on('click', (event) => {
+    if (
+      $(event.target).closest('#modal-error').length === 0 &&
+      modalError.open
+    ) {
+      closeModalError();
+    }
   });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+  $(document).on('click', '#modal-success', (event) => {
+    event.stopPropagation();
+  });
+
+  $(document).on('click', '#modal-error', (event) => {
+    event.stopPropagation();
+  });
+
+  //SELECT
+
   document.querySelectorAll('.select').forEach((select) => {
     const selected = select.querySelector('.select__field');
     const options = select.querySelector('.select__list');
+    const inputHidden = select.querySelector('input');
 
     selected.addEventListener('click', () => {
-      document.querySelectorAll('.custom-select.open').forEach((el) => {
+      document.querySelectorAll('.select.open').forEach((el) => {
         if (el !== select) {
           el.classList.remove('open');
         }
@@ -101,16 +142,78 @@ document.addEventListener('DOMContentLoaded', () => {
       option.addEventListener('click', () => {
         selected.textContent = option.textContent;
         selected.dataset.value = option.dataset.value;
+        inputHidden.value = option.dataset.value;
+        inputHidden.setCustomValidity('');
         select.classList.remove('open');
       });
     });
 
-    document.addEventListener('click', (e) => {
-      if (!select.contains(e.target)) {
+    document.addEventListener('click', (evt) => {
+      if (!select.contains(evt.target)) {
         select.classList.remove('open');
       }
+    });
+
+    const form = select.closest('form');
+    if (form) {
+      form.addEventListener('submit', (evt) => {
+        if (!inputHidden.value) {
+          evt.preventDefault();
+          inputHidden.setCustomValidity('Пожалуйста, выберите значение');
+          inputHidden.reportValidity();
+        }
+      });
+
+      form.addEventListener('reset', () => {
+        selected.textContent = selected.dataset.placeholder || 'Выберите';
+        delete selected.dataset.value;
+        inputHidden.value = '';
+        inputHidden.setCustomValidity('');
+      });
+    }
+  });
+
+  //DATE
+
+  $.datetimepicker.setLocale('ru');
+  $('input[name="date"]').datetimepicker({
+    format: 'd-m-Y',
+    timepicker: false,
+    lang: 'ru',
+    scrollMonth: false,
+    scrollInput: false,
+  });
+  $('input[name="time"]').datetimepicker({
+    format: 'H:i',
+    datepicker: false,
+    step: 30,
+    minTime: '11:00',
+    maxTime: '20:00',
+    lang: 'ru',
+    scrollMonth: false,
+    scrollInput: false,
+  });
+
+  //CATEGORY BUTTONS
+
+  const handleCategoryClick = (evt) => {
+    evt.preventDefault();
+
+    const url = evt.target.closest('[data-url]').dataset.url;
+
+    if (!url) {
+      return;
+    }
+
+    window.open(url, '_blank');
+
+  };
+
+  categoryButtons.forEach((button) => {
+    button.addEventListener('click', (evt) => {
+      handleCategoryClick(evt);
     });
   });
 });
 
-export default {}; // Экспортируем пустой объект, если ничего явно не нужно экспортировать
+export default {};

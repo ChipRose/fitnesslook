@@ -1,6 +1,6 @@
-@use "./sertificate/variables.scss" as *;
-@use "./global/global.scss";
-@use "./sertificate/blocks.scss";
+@use "./sertificate/variables" as *;
+@use "./global/global";
+@use "./sertificate/blocks";
 
 .title-main {
   margin: 0;
@@ -20,7 +20,7 @@
   font-size: 14px;
   line-height: 142%;
 
-  strong{
+  strong {
     display: block;
     font-weight: 400;
   }
@@ -125,7 +125,7 @@
 
 //BUTTON
 
-.button-sertificate {
+.button-main {
   padding: 16px;
   width: 100%;
   box-sizing: border-box;
@@ -272,6 +272,7 @@
 }
 
 .buttons-circle__icon {
+  pointer-events: none;
   fill: var(--cl-dark);
 }
 
@@ -306,7 +307,6 @@
 }
 
 .test-drive-form__fieldset.test-drive-form__fieldset--row {
-
   @media screen and (min-width: $desktopWidth) {
     display: flex;
     gap: 8px;
@@ -437,61 +437,57 @@
 
 //MODAL
 
-.modal-success {
-  padding: 20px;
+.modal {
+  padding: 45px;
+  width: 95%;
+  max-width: 700px;
+  box-sizing: border-box;
   position: fixed;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   border-radius: 16px;
   background: var(--cl-light);
-  display: none;
   z-index: 100;
+  border: none;
 }
 
-.modal-success.open {
-  display: block;
+.modal__icon-block {
+  margin-bottom: 16px;
+  text-align: center;
 }
 
-.id-order {
-  font-size: 20px;
-  color: var(--cl-success);
-}
-
-.modal-success__header {
-  margin-bottom: 20px;
+.modal-title {
   font-family: "Roboto", "Arial", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 110%;
 }
 
-.modal-success__header-line {
-  font-weight: 500;
+.modal__title {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.modal-success__header-line--second {
-  padding-left: 30px;
-  color: var(--cl-accent);
-}
-
-.modal-success__text-block {
+.modal__text-block {
+  margin-bottom: 16px;
+  text-align: center;
   color: var(--cl-haze);
-}
 
-.modal-success__text {
-  margin-bottom: 8px;
+  p {
+    margin: 0 0 8px;
 
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
 .close-modal-button {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   position: absolute;
   right: 16px;
   top: 16px;
+  border: none;
   background: url("/i/media/stat/icons/close-icon.svg") no-repeat center center;
   cursor: pointer;
   transition: all 0.3s;
