@@ -110,6 +110,7 @@ export function processAllScripts() {
     { title: 'prof-trainers.js' },
     { title: 'delivery.js' },
     { title: 'msk-delivery.js' },
+    { title: 'kazan-delivery.js' },
     { title: 'region-delivery.js' },
     { title: 'cart.js' },
     { title: 'assembly.js' },
