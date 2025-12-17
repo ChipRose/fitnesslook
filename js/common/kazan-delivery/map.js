@@ -7,8 +7,8 @@ const ANCOR = {
   iconImageOffset: [-25, -25]
 };
 const BALOON = {
-  balloonContent: '<strong>ТРЦ "Парк Хаус"</strong><p class="text text-main">До 21:00</p>',
-  iconCaption: 'До 21:00'
+  balloonContent: '<strong>ТРЦ "Парк Хаус"</strong><p class="text text-main">До 22:00</p>',
+  iconCaption: 'До 22:00'
 };
 
 const map = document.querySelector('#map');
