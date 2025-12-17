@@ -3,6 +3,8 @@ import { settingAccordionAdaptive, closeAllAccordions } from './delivery/accordi
 import { getData } from './delivery/api.js';
 import setPopup from './delivery/popup.js';
 import initMap from './kazan-delivery/map.js';
+import {questions} from '../json/kazan-delivery/questions.json';
+import { renderQuestionsList } from './delivery/faq.js';
 import { setAccordions } from './util/accordion.js';
 import './delivery/modal.js';
 import { setFormSubmit, sendForm, setSuccessState, setErrorState } from './delivery/form.js';
@@ -77,6 +79,11 @@ const changeAdvOrder = () => {
     flag = true;
   }
 };
+
+//FAQ
+
+renderQuestionsList(questions);
+
 
 changeAdvOrder();
 
